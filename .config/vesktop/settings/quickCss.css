@@ -1,0 +1,141 @@
+/* @import url('https://refact0r.github.io/midnight-discord/midnight.css'); */
+
+/* customize things here */
+:root {
+    --accent-color: var(--cat-sky);
+    --font: "Geist";
+    --font-code: "GeistMono NFM";
+}
+
+/* catppuccin color palette */
+:root {
+	--cat-rosewater: #f5e0dc;
+	--cat-flamingo: #f2cdcd;
+	--cat-pink: #f5c2e7;
+	--cat-mauve: #cba6f7;
+	--cat-red: #f38ba8;
+	--cat-maroon: #eba0ac;
+	--cat-peach: #fab387;
+	--cat-yellow: #f9e2af;
+	--cat-green: #a6e3a1;
+	--cat-teal: #94e2d5;
+	--cat-sky: #89dceb;
+	--cat-sapphire: #74c7ec;
+	--cat-blue: #89b4fa;
+	--cat-lavender: #b4befe;
+    --cat-none: #cdd6f4;
+}
+
+:root {
+    --font-primary: var(--font) !important;
+    --font-display: var(--font) !important;
+
+    --roundness-xl: 6px; /* roundness of big panel outer corners */
+	--roundness-l: 6px; /* popout panels */
+	--roundness-m: 6px; /* smaller panels, images, embeds */
+	--roundness-s: 6px; /* members, settings inputs */
+	--roundness-xs: 6px; /* channels, buttons */
+	--roundness-xxs: 6px; /* searchbar, small elements */
+
+}
+
+div {
+  font-family: var(--font) !important;
+}
+
+.colorDanger_d90b3d, .colorDanger_d90b3d .checkbox_d90b3d, .colorDanger_d90b3d .radioSelection_d90b3d {
+	color: var(--cat-red) !important; 
+}
+.focused_d90b3d {
+	color: #11111b !important;
+}
+
+/* catppuccin icon */
+.childWrapper_f90abb:has(> svg:not(.favoriteIcon_dcc7a4)) {
+	background: url('https://0x0.st/X3ig.png');
+	background-color: transparent !important;
+	background-size: cover;
+}
+
+[data-tab-id=ADD_FRIEND]{
+    background-color: var(--background-color) !important;
+    color: var(--interactive-normal) !important;
+}
+[data-tab-id=ADD_FRIEND]:hover{
+    background-color: var(--background-modifier-hover) !important;
+    color: var(--interactive-hover) !important;
+}
+[data-tab-id=ADD_FRIEND][aria-selected=true]{
+    background-color: var(--background-modifier-selected) !important;
+    color: var(--interactive-active) !important;
+}
+[data-tab-id=ADD_FRIEND][aria-selected=true]:hover{
+    background-color: var(--background-modifier-hover) !important;
+    color: var(--interactive-active) !important;
+}
+
+
+
+
+
+/*--- Channel List Outer Circle Icon Recolor ---*/
+.icon_d8bfb3:has(path[d^="M19.61 18.25a1.08"]) path[d^="M19.61 18.25a1.08"] {
+    color: var(--accent-color) !important;
+}
+
+/*--- Channel List Outer Circle Icon Recolor(Locked Stage) ---*/
+.icon_d8bfb3:has(path[d^="M21.92 14.08c.32"]) path[d^="M21.92 14.08c.32"]{
+    color: var(--accent-color) !important;
+}
+
+/*--- Chat Icon Recolor ---*/
+.icon_fc4f04 path[d^="M19.61 18.25a1.08"] {
+    fill: var(--accent-color) !important;
+}
+
+/*---Lock Icon Channel List Recolor---*/
+.icon_d8bfb3:has(path[d^="M16 4h.5v"]) path[d^="M16 4h.5v"] {
+    fill: var(--accent-color)!important;
+    border: 1px solid var(--accent-color) !important; }
+
+/*---Stages Lock Icon Channel List Recolor (since they use a differnt lock for some reason)----*/
+.icon_d8bfb3:has(path[d^="M16.5 18H16a1"]) path[d^="M16.5 18H16a1"] {
+    fill : var(--accent-color) !important;
+    border: 1px solid var(--accent-color) !important;
+}
+
+/*--- Chat Lock Icon Recolor ---*/
+.icon_fc4f04 path[d^="M16 4h.5v"] {
+    fill: var(--accent-color) !important;
+}
+
+/*--- Lock Icon Message Bar Channels ---*/
+.icon_bcc24e path[d^="M16 4h.5v"] {
+    fill: var(--accent-color) !important;
+}
+
+/*--- Lock Thread Icon Message Bar Icon Recolor ---*/
+.icon_bcc24e path[d^="M16 18h.5v"] {
+    fill: var(--accent-color) !important;
+}
+
+/*--- Channel List Icon Recolor ---*/
+.icon_d8bfb3:has(path[d^="M18.5 23c.88"]) path[d^="M18.5 23c.88"] {
+    color: var(--accent-color) !important;
+    border: 1px solid --accent-color !important;
+}
+
+/*--- Chat Icon Recolor ---*/
+.icon_fc4f04 path[d^="M18.5 23c.88"] {
+    fill: var(--accent-color) !important;
+}
+
+/*--- Channels&Roles Message bar Channels ---*/
+.icon_bcc24e path[d^="M18.5 23c.88" ] {
+    fill: var(--accent-color) !important;
+}
+
+/* Hide New Member Badge */
+.newMemberBadge_ed263a {
+  display: none;
+}

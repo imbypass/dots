@@ -1,0 +1,20 @@
+{
+    "discordBranch": "stable",
+    "minimizeToTray": true,
+    "arRPC": true,
+    "splashColor": "rgb(166, 173, 201)",
+    "splashBackground": "rgb(30, 30, 46)",
+    "customTitleBar": false,
+    "staticTitle": true,
+    "splashTheming": true,
+    "clickTrayToShowHide": true,
+    "disableMinSize": true,
+    "openLinksWithElectron": false,
+    "spellCheckLanguages": [
+        "en-US",
+        "en"
+    ],
+    "enableMenu": false,
+    "disableSmoothScroll": true,
+    "hardwareAcceleration": false
+}
