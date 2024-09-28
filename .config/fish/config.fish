@@ -33,6 +33,7 @@ alias clear_orphans="pacman -Qdtq | sudo pacman -Rns -"
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 # Custom system aliases
+alias cl="clear"
 alias !="sudo "
 alias tree="eza -l --tree --icons"
 alias l="ls"
@@ -41,7 +42,7 @@ alias lsa="eza -la --icons --grid"
 alias cat="bat -p"
 alias nano="nvim"
 alias py3="python3"
-alias vim="nvim"       
+alias vim="nvim"
 alias vps="ssh root@imbypass.pw"
 
 # Custom ricing aliases

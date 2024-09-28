@@ -1,5 +1,4 @@
 # CANT FORGET THE RICING
-fastfetch
 fish
 
 # Environment Exports
