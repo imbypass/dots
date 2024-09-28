@@ -59,7 +59,7 @@ alias fx="hyprshade toggle vibrance"
 # Custom PATH environment
 fish_add_path /home/bypass/.spicetify
 fish_add_path /home/bypass/local/bin
-fish_add_path /home/bypass/dotfiles/scripts
+fish_add_path /home/bypass/.config/scripts
 
 export PYENV_ROOT="$HOME/.pyenv"
 fish_add_path $PYENV_ROOT/bin
