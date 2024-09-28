@@ -1,10 +1,5 @@
 # CANT FORGET THE RICING
-#if [[ $NVIM == "" ]]; then
-#  fastfetch -c ~/.config/fastfetch/smol.jsonc
-#else
-#  fastfetch -c ~/.config/fastfetch/smol.jsonc 
-#fi
-
+fastfetch
 fish
 
 # P10k init
@@ -75,3 +70,5 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/zsh-theme-powerlevel9k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p9k.zsh ]] || source ~/.p10k.zsh
 source /usr/share/nvm/init-nvm.sh
+
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'

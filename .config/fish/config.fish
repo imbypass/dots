@@ -1,4 +1,4 @@
-fastfetch -c ~/.config/fastfetch/smol.jsonc
+fastfetch
 
 function fish_prompt -d "Write out the prompt"
   printf '%s@%s %s%s%s > ' $USER $hostname \
@@ -27,6 +27,7 @@ export EDITOR='nvim'
 export VISUAL='qview'
 
 # Custom miscellaneous aliases
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias free_cache="echo 3 | sudo tee /proc/sys/vm/drop_caches"
 alias clear_orphans="pacman -Qdtq | sudo pacman -Rns -"
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
