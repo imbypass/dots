@@ -2,11 +2,6 @@
 fastfetch
 fish
 
-# P10k init
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Environment Exports
 export ZSH="$HOME/.oh-my-zsh"
 export HYPRSHOT_DIR="$HOME/Pictures/Screenshots/"
@@ -67,8 +62,6 @@ export PATH=$PATH:/home/bypass/.local/bin
 
 # ZSH plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh-theme-powerlevel9k/powerlevel10k.zsh-theme
-[[ ! -f ~/.p9k.zsh ]] || source ~/.p10k.zsh
 source /usr/share/nvm/init-nvm.sh
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
