@@ -2,7 +2,7 @@
 
 /* customize things here */
 :root {
-    --accent-color: var(--cat-sky);
+    --accent-color: var(--cat-peach);
     --font: "Geist";
     --font-code: "GeistMono NFM";
 }
@@ -73,10 +73,6 @@ div {
     background-color: var(--background-modifier-hover) !important;
     color: var(--interactive-active) !important;
 }
-
-
-
-
 
 /*--- Channel List Outer Circle Icon Recolor ---*/
 .icon_d8bfb3:has(path[d^="M19.61 18.25a1.08"]) path[d^="M19.61 18.25a1.08"] {

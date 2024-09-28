@@ -1,5 +1,5 @@
 # CANT FORGET THE RICING
-fish
+# fish
 
 # Environment Exports
 export ZSH="$HOME/.oh-my-zsh"
@@ -64,3 +64,5 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/nvm/init-nvm.sh
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+fish
