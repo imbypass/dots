@@ -1,0 +1,113 @@
+@import url('/home/bypass/.cache/wal/colors-waybar.css');
+
+* {
+    font-family: "Geist";
+    font-size: 12.5px;
+    font-weight: bold;
+}
+
+window#waybar {
+    background: @background;
+    color: @foreground;
+    border: 0px solid @foreground;
+    border-radius: 0; /* 5px; */
+    border-width: 0px 0px 2px 0px;
+    opacity: 1.0;
+}
+
+tooltip {
+    background: @background;
+    opacity: 0.8;
+    border-radius: 8px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: @foreground;
+    padding: 0;
+    color: @foreground;
+}
+
+#workspaces {
+	padding-left: 5px;
+}
+#workspaces button {
+    color: #717899;
+    margin: 0;
+    padding: 4px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+#workspaces button.active {
+    color: @color4;
+}
+#workspaces button.focused {
+    color: @color2;
+}
+#workspaces button.urgent {
+    color: @color1;
+}
+#workspaces button:hover {
+    color: @color4;
+    background: rgba(0,0,0,0);
+}
+
+#clock {
+    color: @color3;
+    padding-left: 8px;
+}
+
+#custom-logo {
+	padding-left: 15px;
+	padding-right: 5px;
+	color: #009FF5;
+}
+#custom-spotify {
+	margin-left: 15px;
+	color: @foreground;
+}
+#custom-pacman {
+	padding-left: 5px;
+	padding-right: 15px;
+}
+#window {
+	padding-left: 15px;
+	padding-right: 15px;
+	color: @color4
+}
+
+#network,
+#bluetooth,
+#cpu,
+#memory,
+#pulseaudio,
+#pulseaudio.microphone {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#network {
+	color: #cdcdcd;
+}
+#bluetooth {
+    color: @color5;
+} 
+#cpu {
+    color: @color4;
+}
+#memory {
+    color: @color5;
+}
+#pulseaudio {
+    color: @color1;
+}
+#pulseaudio.microphone {
+    color: @color11;
+}
+
+#tray {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#clock {
+	padding-right: 15px;
+}
