@@ -1,30 +1,56 @@
 * {
-    bg-col:  #1e1e2e;
-    bg-col-light: #1e1e2e;
-    border-col: #1e1e2e;
-    selected-col: #1e1e2e;
-    blue: #89b4fa;
-    fg-col: #cdd6f4;
-    fg-col2: #94e2d5;
-    grey: #6c7086;
+  accent-color: @cat-mauve;
 
-    width: 400;
-    font2: "Maple Mono NF 14";
-    font2: "Google Sans Display Medium 14";
-    font: "Geist Medium 14";
+  cat-rosewater: #f5e0dc;
+  cat-flamingo: #f2cdcd;
+  cat-pink: #f5c2e7;
+  cat-mauve: #cba6f7;
+  cat-red: #f38ba8;
+  cat-maroon: #eba0ac;
+  cat-peach: #fab387;
+  cat-yellow: #f9e2af;
+  cat-green: #a6e3a1;
+  cat-teal: #94e2d5;
+  cat-sky: #89dceb;
+  cat-sapphire: #74c7ec;
+  cat-blue: #89b4fa;
+  cat-lavender: #b4befe;
+
+  cat-text: #cdd6f4;
+  cat-subtext1: #bac2de;
+  cat-subtext0: #a6adc8;
+  cat-overlay2: #9399b2;
+  cat-overlay1: #7f849c;
+  cat-overlay0: #6c7086;
+  cat-surface2: #585b70;
+  cat-surface1: #45475a;
+  cat-surface0: #313244;
+  cat-base: #1e1e2e;
+  cat-mantle: #181825;
+  cat-crust: #11111b;
+
+  bg-col:  @cat-base;
+  bg-col-light: @cat-base;
+  border-col: @cat-base;
+  selected-col: @cat-base;
+  fg-col: @cat-text;
+  fg-col2: @accent-color;
+
+  width: 400;
+  font: "Geist Medium 14";
 }
 
-element-text, element-icon , mode-switcher {
-    background-color: inherit;
-    text-color:       inherit;
+element-text, element-icon, mode-switcher {
+  background-color: inherit;
+  text-color:       inherit;
 }
 
 window {
-    height: 360px;
-    border: 2px;
-    border-color: #cdd6f4;
-    border-radius: 10px;
-    background-color: @bg-col;
+  height: 360px;
+  border: 2px;
+  border-color: @accent-color;
+  border-radius: 10px;
+  background-color: @bg-col;
 }
 
 mainbox {
@@ -39,7 +65,7 @@ inputbar {
 }
 
 prompt {
-    background-color: @blue;
+    background-color: @accent-color;
     padding: 6px;
     text-color: @bg-col;
     border-radius: 3px;
@@ -79,7 +105,7 @@ element-icon {
 
 element selected {
     background-color: @selected-col;
-    text-color: @blue;
+    text-color: @accent-color;
 }
 
 mode-switcher {
@@ -89,7 +115,7 @@ mode-switcher {
 button {
     padding: 10px;
     background-color: @bg-col-light;
-    text-color: @grey;
+    text-color: @cat-text;
     vertical-align: 0.5; 
     horizontal-align: 0.5;
     font-weight: 300;
@@ -97,7 +123,7 @@ button {
 
 button selected {
   background-color: @bg-col;
-  text-color: @blue;
+  text-color: @accent-color;
   font-weight: 700;
 }
 
@@ -111,7 +137,7 @@ message {
 textbox {
     padding: 6px;
     margin: 20px 0px 0px 20px;
-    text-color: @blue;
+    text-color: @accent-color;
     background-color: @bg-col-light;
 }
 
