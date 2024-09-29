@@ -568,7 +568,8 @@
         "BetterSettings": {
             "enabled": true,
             "disableFade": true,
-            "eagerLoad": true
+            "eagerLoad": true,
+            "organizeMenu": true
         },
         "OverrideForumDefaults": {
             "enabled": false
@@ -718,7 +719,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1727553982409
+        "settingsSyncVersion": 1727623086162
     },
     "notifyAboutUpdates": true
 }
