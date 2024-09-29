@@ -23,6 +23,7 @@ export GTK_THEME=ZorinGrey-Dark
 export GTK2_RC_FILES=/usr/share/themes/ZorinGrey-Dark/gtk-2.0/gtkrc
 export QT_STYLE_OVERRIDE=ZorinGrey-Dark
 export MICRO_TRUECOLOR=1
+export SHELL='fish'
 export EDITOR='nvim'
 export VISUAL='qview'
 
