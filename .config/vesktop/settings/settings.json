@@ -719,7 +719,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1727623086162
+        "settingsSyncVersion": 1727632961875
     },
     "notifyAboutUpdates": true
 }

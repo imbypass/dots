@@ -21,10 +21,10 @@
 	--panel-roundness: 4px; /* corner roundness of panels. ONLY WORKS IF unrounding.css IS REMOVED (see above). */
 
 	/* background colors */
-	--bg-0: #1e1e2e; /* main background color. */
-	--bg-1: #1e1e2e; /* background color for secondary elements like code blocks, embeds, etc. */
-	--bg-2: #ffffff0a; /* color of neutral buttons. */
-	--bg-3: #ffffff0a; /* color of neutral buttons when hovered. */
+	--bg-0: #181825; /* main background color. */
+	--bg-1: #181825; /* background color for secondary elements like code blocks, embeds, etc. */
+	--bg-2: #11111b; /* color of neutral buttons. */
+	--bg-3: #11111b; /* color of neutral buttons when hovered. */
 
 	/* state modifiers */
 	--hover: color-mix(in oklch, var(--txt-3), transparent 80%); /* color of hovered elements. */
@@ -65,15 +65,15 @@
 	--reply-hover-overlay: var(--hover); /* overlay color of message you are replying to when hovered. */
 
 	/* color shades */
-	--pink: #f9e2af;
-	--pink-1: #f9e2af;
-	--pink-2: #f9e2af;
-	--purple: #89b4fa;
-	--purple-1: #89b4fa;
-	--purple-2: #89b4fa;
-	--cyan: #f5c2e7;
-	--yellow: #94e2d5;
-	--green: #bac2de;
-	--green-1: #bac2de;
-	--green-2: #bac2de;
+	--pink: var(--accent-color);
+	--pink-1: var(--accent-color);
+	--pink-2: var(--accent-color);
+	--purple: var(--accent-color);
+	--purple-1: var(--accent-color);
+	--purple-2: var(--accent-color);
+	--cyan: var(--accent-color);
+	--yellow: var(--accent-color);
+	--green: var(--accent-color);
+	--green-1: var(--accent-color);
+	--green-2: var(--accent-color);
 }
