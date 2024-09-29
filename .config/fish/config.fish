@@ -29,13 +29,10 @@ export VISUAL='qview'
 
 # Custom miscellaneous aliases
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias free_cache="echo 3 | sudo tee /proc/sys/vm/drop_caches"
-alias clear_orphans="pacman -Qdtq | sudo pacman -Rns -"
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 # Custom system aliases
 alias cl="clear"
-alias !="sudo "
 alias tree="eza -l --tree --icons"
 alias l="ls"
 alias ls="eza --icons --grid"
@@ -48,7 +45,6 @@ alias vps="ssh root@imbypass.pw"
 
 # Custom ricing aliases
 alias clock="tty-clock -t -c -b -B"
-alias neofetch="fastfetch"
 alias whereami="hostnamectl hostname"
 alias icat="kitty +kitten icat"
 alias icons="papirus-folders -t Papirus-Dark -C "

@@ -1,6 +1,9 @@
 #!/bin/zsh
 
-BDE_VERSION="1.14"
+# I'm sure there are better ways of doing this, but I REALLY don't work with bash/zsh scripts often.
+# This just seemed like a more convenient way to execute some of the common shit that I do on my PC.
+
+BDE_VERSION="1.16"
 BLK="\e[1;30m"
 RED="\e[1;31m"
 GRN="\e[1;32m"
@@ -19,7 +22,6 @@ ascii_logo () {
     echo $BLU" |_.__/ \__, | .__/ \__,_|___/___/"$YLW"____/|_____|"
     echo $BLU"        |___/|_|                              "
     echo ""
-	
 }
 
 options_check() {
@@ -44,19 +46,21 @@ options_check() {
 }
 
 help_prompt() {
-	ascii_logo $1
-   	echo $YLW" Usage:$WHT bde [OPTIONS] COMMAND [ARGS]...\n"
-   	echo "   bde: the bypassDE utility toolkit\n"
-   	echo $YLW" Options$WHT:"
-   	echo "  $GRN --version$WHT$BRK Show the version and exit"
-   	echo "  $GRN --help$WHT$BRK Show this help prompt"
-   	echo $YLW"\n Commands$WHT:"
-   	echo "  $GRN fonts$WHT$BRK Display all installed fonts"
-   	echo "  $GRN gamemode$WHT$BRK Toggle gamemode for Hyprland"
-   	echo "  $GRN hyprfloat$WHT$BRK Toggle floating windows in Hyprland"
-   	echo "  $GRN init$WHT$BRK$BRK Initialize various bypassDE components"
-   	echo "  $GRN wallpaper$WHT$BRK Change the system wallpaper"
-   	echo "  $GRN reload$WHT$BRK Reload various bypassDE components"
+  ascii_logo $1
+  echo $YLW" Usage:$WHT bde [OPTIONS] COMMAND [ARGS]...\n"
+  echo "   bde: the bypassDE utility toolkit\n"
+  echo $YLW" Options$WHT:"
+  echo "  $GRN --version$WHT$BRK Show the version and exit"
+  echo "  $GRN --help$WHT$BRK Show this help prompt"
+  echo $YLW"\n Commands$WHT:"
+  echo "  $GRN freecache$WHT$BRK Free up cached RAM"
+  echo "  $GRN fonts$WHT$BRK Display all installed fonts"
+  echo "  $GRN gamemode$WHT$BRK Toggle gamemode for Hyprland"
+  echo "  $GRN hyprfloat$WHT$BRK Toggle floating windows in Hyprland"
+  echo "  $GRN init$WHT$BRK$BRK Initialize various bypassDE components"
+  echo "  $GRN wallpaper$WHT$BRK Change the system wallpaper"
+  echo "  $GRN reload$WHT$BRK Reload various bypassDE components"
+  echo "  $GRN removeorphans$WHT Remove orphaned packages"
 }
 
 reload_prompt() {
@@ -88,36 +92,34 @@ reload_prompt() {
 }
 
 reload_waybar() {
-   	echo $BLU"::$WHT Reloading waybar.."
-	killall waybar > /dev/null
-	waybar > /dev/null & disown
+  echo $BLU"::$WHT Reloading waybar.."
+  killall waybar > /dev/null
+  waybar > /dev/null & disown
 }
 
 reload_mako() {
-   	echo $BLU"::$WHT Reloading mako daemon.."
-	makoctl reload > /dev/null
+  echo $BLU"::$WHT Reloading mako daemon.."
+  makoctl reload > /dev/null
 }
 
 reload_hypr() {
-   	echo $BLU"::$WHT Reloading Hyprland daemon.."
-	hyprctl reload > /dev/null
+  echo $BLU"::$WHT Reloading Hyprland daemon.."
+  hyprctl reload > /dev/null
 }
 
 init_prompt() {
-
-	case "$1" in
-   		"xdg")
-	    	init_xdg ;;
-   		"wp")
-	    	init_wp ;;
-   		"")
-        ascii_logo $1
-		   	echo $WHT
-		   	echo $YLW" Usage:$WHT bde init COMMAND [ARGS]...\n"
-		   	echo "  $GRN init$CYN wp$WHT - Initialize wallpaper engine"
-		   	echo "  $GRN init$CYN xdg$WHT - Initialize xdg-desktop-portal"
-   		;;
-   	esac
+	case "$1" in 
+    "xdg")
+      init_xdg ;;
+    "wp")
+      init_wp ;;
+    "")
+      ascii_logo $1
+      echo $YLW" Usage:$WHT bde init COMMAND [ARGS]...\n"
+      echo "  $GRN init$CYN wp$WHT - Initialize wallpaper engine"
+      echo "  $GRN init$CYN xdg$WHT - Initialize xdg-desktop-portal"
+      ;;
+  esac
 }
 
 init_wp() {
@@ -166,6 +168,15 @@ search_fonts() {
    	    uniq
 }
 
+free_cache() {
+  echo $BLU"::$WHT Freeing cached RAM..."
+  echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null
+}
+
+remove_orphans() {
+  echo $BLU"::$WHT Removing orphaned packages.."
+  pacman -Qdtq | sudo pacman -Rns - > /dev/null
+}
 
 toggle_gamemode() {
    	echo $BLU"::$WHT Toggling game mode..."
@@ -213,10 +224,20 @@ case "$1" in
     	search_fonts ;;
     "fs")
     	search_fonts ;;
+    "freecache")
+      free_cache ;;
+    "fc")
+      free_cache ;;
     "reload")
     	reload_prompt $2 ;;
     "rl")
     	reload_prompt $2 ;;
+    "removeorphans")
+      remove_orphans ;;
+    "remo")
+      remove_orphans ;;
+    "rm")
+      remove_orphans ;;
     "hyprfloat")
     	toggle_floatwindows ;;
     "hypr")
