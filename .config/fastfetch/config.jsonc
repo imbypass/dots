@@ -1,0 +1,69 @@
+ //   _____ _____ _____ _____ _____ _____ _____ _____ _____ 
+//  |   __|  _  |   __|_   _|   __|   __|_   _|     |  |  |
+//  |   __|     |__   | | | |   __|   __| | | |   --|     |
+//  |__|  |__|__|_____| |_| |__|  |_____| |_| |_____|__|__|  HYPRLAND
+//
+//  by Bina
+
+
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "color": {
+          "1": "31",
+          "2": "33",
+        },
+        "height": 18,
+        "padding": {
+            "top": 1,
+            "left": 1,
+            "right": 3,
+        },
+        "type": "small",
+    },
+    "display": {
+        "separator": " "
+    },
+    "modules": [
+        "break",
+        {
+            "type": "title",
+            "keyWidth": 10,
+            "keyColor": "32",
+        },
+        {
+            "type": "os",
+            "key": "os\t ",
+            "keyColor": "31",
+        },
+        {
+            "type": "host",
+            "key": "host\t ",
+            "keyColor": "32",
+        },
+        {
+            "type": "kernel",
+            "key": "kernel ",
+            "keyColor": "33",
+        },
+        {
+            "type": "uptime",
+            "key": "uptime ",
+            "keyColor": "34",
+        },
+        {
+            "type": "packages",
+            "format": "{}",
+            "key": "pkgs\t ",
+            "keyColor": "35",
+        },
+        {
+            "type": "memory",
+            "format": "{} / {}",
+            "key": "memory ",
+            "keyColor": "37",
+        },
+        "break",
+    ]
+}
+
