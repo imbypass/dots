@@ -1,5 +1,5 @@
 * {
-  accent-color: @cat-mauve;
+  accent-color: @cat-sapphire;
 
   cat-rosewater: #f5e0dc;
   cat-flamingo: #f2cdcd;

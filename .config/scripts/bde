@@ -66,10 +66,14 @@ help_prompt() {
 reload_prompt() {
 	case "$1" in
    		"all")
-	    	reload_waybar
+	      reload_nwgdock
+        reload_waybar
 	    	reload_mako
 	    	reload_hypr
    		;;
+      "dock")
+        reload_nwgdock
+      ;;
    		"waybar")
 	    	reload_waybar
    		;;
@@ -84,11 +88,18 @@ reload_prompt() {
 		   	echo $WHT
 		   	echo $YLW" Usage:$WHT bde reload COMMAND [ARGS]...\n"
 		   	echo "  $GRN reload$CYN all$WHT - Reload the entire environment"
+		   	echo "  $GRN reload$CYN dock$WHT - Reload the nwg-dock-hyprland config"
 		   	echo "  $GRN reload$CYN waybar$WHT - Reload the waybar config"
 		   	echo "  $GRN reload$CYN mako$WHT - Reload the mako daemon"
 		   	echo "  $GRN reload$CYN hypr$WHT - Reload the Hyprland config"
    		;;
    	esac
+}
+
+reload_nwgdock() {
+  echo $BLU"::$WHT Reloading nwg-dock-hyprland.."
+  killall -9 nwg-dock-hyprland > /dev/null
+  nwg-dock-hyprland -r -mb 15 -mt 10 -i 36 -x -nolauncher > ~/.cache/nwg-dock.log & disown
 }
 
 reload_waybar() {
@@ -124,10 +135,10 @@ init_prompt() {
 
 init_wp() {
 	echo $YLW" =>$WHT Initializing swww..."
-	swww-daemon > /dev/null
-	swww-daemon --format xrgb > /dev/null
+	swww-daemon > /dev/null & disown
+	swww-daemon --format xrgb > /dev/null & disown
 	sleep 0.5
-	python -O ~/dotfiles/scripts/set-wallpaper.py -P > /dev/null
+	python -O ~/dotfiles/scripts/set-wallpaper.py -P > /dev/null & disown 
 }
 
 init_xdg() {
@@ -153,7 +164,7 @@ set_wallpaper() {
 	    echo $RED"::$WHT No wallpaper provided. Exiting..."
 	else
 	    echo $BLU"::$WHT Changing wallpaper to: $1..."
-	   	python -O ~/dotfiles/scripts/set-wallpaper.py -I $1 > /dev/null
+	   	python -O ~/dotfiles/scripts/set-wallpaper.py -I $1 > /dev/null &
 	fi
 }
 

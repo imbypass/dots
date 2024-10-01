@@ -132,7 +132,7 @@
             "enabled": true,
             "hideButton": false,
             "replaceElements": 0,
-            "dearrowByDefault": true
+            "dearrowByDefault": false
         },
         "Decor": {
             "enabled": false
@@ -719,7 +719,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1727632961875
+        "settingsSyncVersion": 1727785797376
     },
     "notifyAboutUpdates": true
 }

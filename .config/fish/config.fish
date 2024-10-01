@@ -9,6 +9,17 @@ if status is-interactive
   set fish_greeting
 end
 
+bind \e\e 'begin; set -l buf (commandline); commandline -r "sudo "$buf; end'
+
+# Custom PATH environment
+fish_add_path /home/bypass/.spicetify
+fish_add_path /home/bypass/local/bin
+fish_add_path /home/bypass/.config/scripts
+fish_add_path /home/linuxbrew/.linuxbrew/bin
+
+export PYENV_ROOT="$HOME/.pyenv"
+fish_add_path $PYENV_ROOT/bin
+
 starship init fish | source
 zoxide init fish --cmd cd | source
 thefuck --alias | source
@@ -54,10 +65,3 @@ alias fx_off="hyprshade off"
 alias fx_on="hyprshade on vibrance"
 alias fx="hyprshade toggle vibrance"
 
-# Custom PATH environment
-fish_add_path /home/bypass/.spicetify
-fish_add_path /home/bypass/local/bin
-fish_add_path /home/bypass/.config/scripts
-
-export PYENV_ROOT="$HOME/.pyenv"
-fish_add_path $PYENV_ROOT/bin

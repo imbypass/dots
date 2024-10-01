@@ -1,9 +1,6 @@
-/* @import url('https://refact0r.github.io/midnight-discord/midnight.css'); */
-
-/* customize things here */
 :root {
     --accent-color: var(--cat-sapphire);
-    --font: "Geist";
+    --font: "Geist Medium";
     --font-code: "GeistMono NFM";
 }
 
@@ -36,7 +33,6 @@
 	--roundness-s: 6px; /* members, settings inputs */
 	--roundness-xs: 6px; /* channels, buttons */
 	--roundness-xxs: 6px; /* searchbar, small elements */
-
 }
 
 div {
