@@ -1,13 +1,5 @@
 fastfetch
-
-function fish_prompt -d "Write out the prompt"
-  printf '%s@%s %s%s%s > ' $USER $hostname \
-    (set_color $fish_color_cwd) (prompt_pwd) (set_color normal)
-end
-
-if status is-interactive
-  set fish_greeting
-end
+set fish_greeting
 
 bind \e\e 'begin; set -l buf (commandline); commandline -r "sudo "$buf; end'
 
@@ -17,26 +9,26 @@ fish_add_path /home/bypass/local/bin
 fish_add_path /home/bypass/.config/scripts
 fish_add_path /home/linuxbrew/.linuxbrew/bin
 
-export PYENV_ROOT="$HOME/.pyenv"
+set -x PYENV_ROOT "$HOME/.pyenv"
 fish_add_path $PYENV_ROOT/bin
 
-starship init fish | source
+# starship init fish | source
 zoxide init fish --cmd cd | source
-thefuck --alias | source
+# thefuck --alias | source
 pyenv init - | source
 /home/linuxbrew/.linuxbrew/bin/brew shellenv | source
 
-export ZSH="$HOME/.oh-my-zsh"
-export HYPRSHOT_DIR="$HOME/Pictures/Screenshots/"
-export ELECTRON_OZONE_PLATFORM_HINT="wayland"
-export MOZ_ENABLE_WAYLAND=0
-export GTK_THEME=ZorinGrey-Dark
-export GTK2_RC_FILES=/usr/share/themes/ZorinGrey-Dark/gtk-2.0/gtkrc
-export QT_STYLE_OVERRIDE=ZorinGrey-Dark
-export MICRO_TRUECOLOR=1
-export SHELL='fish'
-export EDITOR='nvim'
-export VISUAL='qview'
+set -x ZSH "$HOME/.oh-my-zsh"
+set -x HYPRSHOT_DIR "$HOME/Pictures/Screenshots/"
+set -x ELECTRON_OZONE_PLATFORM_HINT "wayland"
+set -x MOZ_ENABLE_WAYLAND 0
+set -x GTK_THEME ZorinGrey-Dark
+set -x GTK2_RC_FILES /usr/share/themes/ZorinGrey-Dark/gtk-2.0/gtkrc
+set -x QT_STYLE_OVERRIDE ZorinGrey-Dark
+set -x MICRO_TRUECOLOR 1
+set -x SHELL 'fish'
+set -x EDITOR 'nvim'
+set -x VISUAL 'qview'
 
 # Custom miscellaneous aliases
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'

@@ -19,14 +19,10 @@
     
     "modules-left": [
     	"custom/pacman",
-    	"custom/logo",
     	"hyprland/workspaces"
     ],
     "modules-center": [
     ],
-    // "hyprland/window"
-    // "cpu",
-    // "memory",
     "modules-right": [
     	"tray",
     	"memory",
