@@ -9,9 +9,6 @@ fish_add_path /home/bypass/local/bin
 fish_add_path /home/bypass/.config/scripts
 fish_add_path /home/linuxbrew/.linuxbrew/bin
 
-set -x PYENV_ROOT "$HOME/.pyenv"
-fish_add_path $PYENV_ROOT/bin
-
 # starship init fish | source
 zoxide init fish --cmd cd | source
 # thefuck --alias | source
@@ -29,6 +26,7 @@ set -x MICRO_TRUECOLOR 1
 set -x SHELL 'fish'
 set -x EDITOR 'nvim'
 set -x VISUAL 'qview'
+set -x ANI_CLI_MODE 'dub'
 
 # Custom miscellaneous aliases
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -45,6 +43,7 @@ alias nano="nvim"
 alias py3="python3"
 alias vim="nvim"
 alias vps="ssh root@imbypass.pw"
+alias ani="ani-cli --dub --skip"
 
 # Custom ricing aliases
 alias clock="tty-clock -t -c -b -B"
