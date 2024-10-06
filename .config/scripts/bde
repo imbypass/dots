@@ -158,12 +158,22 @@ init_xdg() {
 	sleep 1
 }
 
+wallpaper_prompt() {
+  ls ~/Pictures/Wallpapers/catppuccin | \
+  fzf --preview="~/.config/scripts/bde wp ~/Pictures/Wallpapers/catppuccin/{}" | \
+  xargs -I {} ~/.config/scripts/bde wp ~/Pictures/Wallpapers/catppuccin/{}
+}
 
 set_wallpaper() {
+  echo $2
 	if [[ $1 == "" ]]; then
-	    echo $RED"::$WHT No wallpaper provided. Exiting..."
+	    # echo $RED"::$WHT No wallpaper provided. Exiting..."
+      wallpaper_prompt
 	else
-	    echo $BLU"::$WHT Changing wallpaper to: $1..."
+	    if [[ $- == *i* ]]
+      then
+        echo $BLU"::$WHT Changing wallpaper to: $1..."
+      fi
 	   	python -O ~/dotfiles/scripts/set-wallpaper.py -I $1 > /dev/null &
 	fi
 }
