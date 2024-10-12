@@ -15,12 +15,12 @@ WHT="\e[1;37m"
 BRK="\t"
 
 ascii_logo () {
-    echo $BLU"  _                              $YLW ____  _____ "
-    echo $BLU" | |__  _   _ _ __   __ _ ___ ___$YLW|  _ \| ____|"
-    echo $BLU" | '_ \| | | | '_ \ / _\` / __/ __$YLW| | | |  _|  "
-    echo $BLU" | |_) | |_| | |_) | (_| \__ \__ \ $YLW|_| | |___ "
-    echo $BLU" |_.__/ \__, | .__/ \__,_|___/___/"$YLW"____/|_____|"
-    echo $BLU"        |___/|_|                              "
+    #echo $BLU"  _                              $YLW ____  _____ "
+    #echo $BLU" | |__  _   _ _ __   __ _ ___ ___$YLW|  _ \| ____|"
+    #echo $BLU" | '_ \| | | | '_ \ / _\` / __/ __$YLW| | | |  _|  "
+    #echo $BLU" | |_) | |_| | |_) | (_| \__ \__ \ $YLW|_| | |___ "
+    #echo $BLU" |_.__/ \__, | .__/ \__,_|___/___/"$YLW"____/|_____|"
+    #echo $BLU"        |___/|_|                              "
     echo ""
 }
 
@@ -61,6 +61,7 @@ help_prompt() {
   echo "  $GRN wallpaper$WHT$BRK Change the system wallpaper"
   echo "  $GRN reload$WHT$BRK Reload various bypassDE components"
   echo "  $GRN removeorphans$WHT Remove orphaned packages"
+  echo "  $GRN upload$WHT$BRK Upload a file to remote hosting"
 }
 
 reload_prompt() {
@@ -138,7 +139,7 @@ init_wp() {
 	swww-daemon > /dev/null & disown
 	swww-daemon --format xrgb > /dev/null & disown
 	sleep 0.5
-	python -O ~/dotfiles/scripts/set-wallpaper.py -P > /dev/null & disown 
+	python -O ~/.config/scripts/set-wallpaper.py -P > /dev/null & disown 
 }
 
 init_xdg() {
@@ -165,7 +166,6 @@ wallpaper_prompt() {
 }
 
 set_wallpaper() {
-  echo $2
 	if [[ $1 == "" ]]; then
 	    # echo $RED"::$WHT No wallpaper provided. Exiting..."
       wallpaper_prompt
@@ -174,10 +174,17 @@ set_wallpaper() {
       then
         echo $BLU"::$WHT Changing wallpaper to: $1..."
       fi
-	   	python -O ~/dotfiles/scripts/set-wallpaper.py -I $1 > /dev/null &
+	   	python -O ~/.config/scripts/set-wallpaper.py -I $1 > /dev/null &
 	fi
 }
 
+file_upload() {
+  curl -X POST -F "fileToUpload=@$1" https://imbypass.pw/upload
+}
+
+search_steamapps() {
+  for id in $(ls ~/.local/share/Steam/steamapps/compatdata); do echo "$id: $(curl -s "https://store.steampowered.com/app/$id/" | grep -oP '(?<=<title>)[^<]*' )"; done
+}
 
 search_fonts() {
    	echo $BLU"::$WHT Listing installed fonts.."
@@ -245,6 +252,10 @@ case "$1" in
     	search_fonts ;;
     "fs")
     	search_fonts ;;
+    "steamapps")
+      search_steamapps ;;
+    "ss")
+      search_steamapps ;;
     "freecache")
       free_cache ;;
     "fc")
@@ -267,6 +278,10 @@ case "$1" in
     	toggle_floatwindows ;;
     "init")
     	init_prompt $2 ;;
+    "upload")
+      file_upload $2 ;;
+    "up")
+      file_upload $2 ;;
     "")
 		echo $RED"::" $WHT"No command given. Exiting..." ;;
 	*)

@@ -27,9 +27,10 @@ audio/mpeg=vlc.desktop;
 video/mp4=vlc.desktop;
 image/jpeg=userapp-qview-E3XYT2.desktop;
 image/x-dds=userapp-qview-E3XYT2.desktop;
-image/png=userapp-qview-E3XYT2.desktop;
+image/png=code-oss.desktop;nvim.desktop;userapp-qview-E3XYT2.desktop;
 inode/directory=code-oss.desktop;
 video/x-matroska=vlc.desktop;
+audio/flac=deadbeef.desktop;mpv.desktop;qmmp.desktop;io.bassi.Amberol.desktop;
 
 [Default Applications]
 text/x-csrc=code-oss.desktop
@@ -58,3 +59,6 @@ x-scheme-handler/discord-562286213059444737=lunarclient.desktop
 x-scheme-handler/discord-418076578333851669=discord-418076578333851669.desktop
 image/x-dds=userapp-qview-E3XYT2.desktop
 video/x-matroska=vlc.desktop
+image/png=userapp-qview-E3XYT2.desktop
+audio/flac=deadbeef.desktop
+x-scheme-handler/wago-app=wago-app.desktop

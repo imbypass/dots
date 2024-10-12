@@ -49,7 +49,7 @@ window {
   height: 360px;
   border: 2px;
   border-color: @accent-color;
-  border-radius: 10px;
+  border-radius: 4px;
   background-color: @bg-col;
 }
 
