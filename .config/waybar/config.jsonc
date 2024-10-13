@@ -18,7 +18,6 @@
     },
     
     "modules-left": [
-    	"custom/pacman",
     	"hyprland/workspaces"
     ],
     "modules-center": [
@@ -28,6 +27,7 @@
     	"memory",
     	"pulseaudio",
     	"clock",
+      "custom/notification"
     ],
 
 
@@ -87,6 +87,27 @@
         "exec" : "$HOME/.config/waybar/scripts/waybar-wttr.py",
         "return-type" : "json"
     },
+
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󰂚<span foreground='#F38BA8'><sup></sup></span>",
+      "none": "󰂚",
+      "dnd-notification": "<span foreground='#F38BA8'><sup></sup></span>",
+      "dnd-none": "󰂛",
+      "inhibited-notification": "󰂚<span foreground='#F38BA8'><sup></sup></span>",
+      "inhibited-none": "󰂚",
+      "dnd-inhibited-notification": "󰂛<span foreground='#F38BA8'><sup></sup></span>",
+      "dnd-inhibited-none": "󰂛"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
     
     "custom/spotify": {
     	"tooltip": false,

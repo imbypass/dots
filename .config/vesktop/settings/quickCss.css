@@ -1,5 +1,5 @@
 :root {
-    --accent-color: var(--cat-sapphire);
+    --accent-color: var(--cat-blue);
     --font: "Geist";
     --font-code: "GeistMono NF";
 }
@@ -130,4 +130,12 @@ div {
 /* Hide New Member Badge */
 .newMemberBadge_ed263a {
   display: none;
+}
+
+.newTopicsBarContainer_cf58b5, .newTopicsBarText_cf58b5, newTopicsBarIcon_cf58b5, .barButtonBase_cf58b5 {
+    color: #313244;
+}
+
+.summariesBetaTag_cf58b5 {
+    color: #1e1e2e;
 }

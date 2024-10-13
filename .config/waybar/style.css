@@ -68,6 +68,10 @@ tooltip {
 	padding-left: 5px;
 	padding-right: 15px;
 }
+#custom-notification {
+  padding-right: 18px;
+  color: #ededed;
+}
 #window {
 	padding-left: 15px;
 	padding-right: 15px;
