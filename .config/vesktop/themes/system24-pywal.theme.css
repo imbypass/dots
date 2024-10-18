@@ -1,24 +1,27 @@
 /**
- * @name system24 (pywal)
+ * @name system24 (catppuccin mocha)
  * @description A tui-style discord theme. Built to work with pywal.
- * @author bypass_
+ * @author refact0r
  * @version 1.0.0
 */
 
 /* import theme modules */
-@import url('https://refact0r.github.io/system24/src/main.css'); /* main theme css. DO NOT REMOVE */
-@import url('https://refact0r.github.io/system24/src/unrounding.css'); /* gets rid of all rounded corners. remove if you want rounded corners. */
+ /* main theme css. DO NOT REMOVE */
+@import url('https://refact0r.github.io/system24/src/main.css');
+/* gets rid of all rounded corners. remove if you want rounded corners. */
+/* @import url('https://refact0r.github.io/system24/src/unrounding.css'); */
+
 
 /* customize things here */
 :root {
 	--font: 'JetBrains Mono'; /* UI font name. it must be installed on your system. */
-	letter-spacing: -0.05ch; /* decreases letter spacing for better readability. */
-	font-weight: 700; /* UI font weight. */
 	--label-font-weight: 700; /* font weight for panel labels. */
 	--corner-text: 'archbtw'; /* custom text to display in the corner. only works on windows. */
 	--pad: 10px; /* padding between panels. */
 	--txt-pad: 10px; /* padding inside panels to prevent labels from clipping */
 	--panel-roundness: 4px; /* corner roundness of panels. ONLY WORKS IF unrounding.css IS REMOVED (see above). */
+	letter-spacing: -0.05ch; /* decreases letter spacing for better readability. */
+	font-weight: 700; /* UI font weight. */
 
 	/* background colors */
 	--bg-0: #181825; /* main background color. */

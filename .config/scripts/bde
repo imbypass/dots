@@ -1,79 +1,21 @@
-#!/bin/zsh
+# bash
 
 # I'm sure there are better ways of doing this, but I REALLY don't work with bash/zsh scripts often.
 # This just seemed like a more convenient way to execute some of the common shit that I do on my PC.
+echo -ne "\033]0;bypassDE Configuration\007"
 
-BDE_VERSION="1.16"
-BLK="\e[1;30m"
-RED="\e[1;31m"
-GRN="\e[1;32m"
-YLW="\e[1;33m"
-BLU="\e[1;34m"
-PNK="\e[1;35m"
-CYN="\e[1;36m"
-WHT="\e[1;37m"
-BRK="\t"
-
-ascii_logo () {
-    #echo $BLU"  _                              $YLW ____  _____ "
-    #echo $BLU" | |__  _   _ _ __   __ _ ___ ___$YLW|  _ \| ____|"
-    #echo $BLU" | '_ \| | | | '_ \ / _\` / __/ __$YLW| | | |  _|  "
-    #echo $BLU" | |_) | |_| | |_) | (_| \__ \__ \ $YLW|_| | |___ "
-    #echo $BLU" |_.__/ \__, | .__/ \__,_|___/___/"$YLW"____/|_____|"
-    #echo $BLU"        |___/|_|                              "
-    echo ""
-}
-
-options_check() {
-	case "$1" in
-   		"--version")
-	    	echo $BDE_VERSION
-	    	exit
-   		;;
-   		"-v")
-	    	echo $BDE_VERSION
-	    	exit
-   		;;
-   		"--help")
-	    	help_prompt
-	    	exit
-   		;;
-   		"-h")
-	    	help_prompt
-	    	exit
-   		;;
-   	esac
-}
-
-help_prompt() {
-  ascii_logo $1
-  echo $YLW" Usage:$WHT bde [OPTIONS] COMMAND [ARGS]...\n"
-  echo "   bde: the bypassDE utility toolkit\n"
-  echo $YLW" Options$WHT:"
-  echo "  $GRN --version$WHT$BRK Show the version and exit"
-  echo "  $GRN --help$WHT$BRK Show this help prompt"
-  echo $YLW"\n Commands$WHT:"
-  echo "  $GRN freecache$WHT$BRK Free up cached RAM"
-  echo "  $GRN fonts$WHT$BRK Display all installed fonts"
-  echo "  $GRN gamemode$WHT$BRK Toggle gamemode for Hyprland"
-  echo "  $GRN hyprfloat$WHT$BRK Toggle floating windows in Hyprland"
-  echo "  $GRN init$WHT$BRK$BRK Initialize various bypassDE components"
-  echo "  $GRN wallpaper$WHT$BRK Change the system wallpaper"
-  echo "  $GRN reload$WHT$BRK Reload various bypassDE components"
-  echo "  $GRN removeorphans$WHT Remove orphaned packages"
-  echo "  $GRN upload$WHT$BRK Upload a file to remote hosting"
-}
+BDE_VERSION="1.21"
 
 reload_prompt() {
 	case "$1" in
    		"all")
-	      reload_nwgdock
-        reload_waybar
-	    	reload_mako
-	    	reload_hypr
+			reload_nwgdock
+			reload_waybar
+			reload_hypr
+      reload_swaync
    		;;
       "dock")
-        reload_nwgdock
+			reload_nwgdock
       ;;
    		"waybar")
 	    	reload_waybar
@@ -83,40 +25,38 @@ reload_prompt() {
    		;;
    		"hypr")
 	    	reload_hypr
-   		;;
-   		"")
-        ascii_logo $1
-		   	echo $WHT
-		   	echo $YLW" Usage:$WHT bde reload COMMAND [ARGS]...\n"
-		   	echo "  $GRN reload$CYN all$WHT - Reload the entire environment"
-		   	echo "  $GRN reload$CYN dock$WHT - Reload the nwg-dock-hyprland config"
-		   	echo "  $GRN reload$CYN waybar$WHT - Reload the waybar config"
-		   	echo "  $GRN reload$CYN mako$WHT - Reload the mako daemon"
-		   	echo "  $GRN reload$CYN hypr$WHT - Reload the Hyprland config"
-   		;;
-   	esac
+     		;;
+      "sway")
+        reload_swaync
+      ;;
+  esac
 }
 
 reload_nwgdock() {
-  echo $BLU"::$WHT Reloading nwg-dock-hyprland.."
+  echo ":: Reloading nwg-dock-hyprland.."
   killall -9 nwg-dock-hyprland > /dev/null
   nwg-dock-hyprland -r -mb 15 -mt 10 -i 36 -x -nolauncher > ~/.cache/nwg-dock.log & disown
 }
 
 reload_waybar() {
-  echo $BLU"::$WHT Reloading waybar.."
+  echo ":: Reloading waybar.."
   killall waybar > /dev/null
   waybar > /dev/null & disown
 }
 
 reload_mako() {
-  echo $BLU"::$WHT Reloading mako daemon.."
+  echo ":: Reloading mako.."
   makoctl reload > /dev/null
 }
 
 reload_hypr() {
-  echo $BLU"::$WHT Reloading Hyprland daemon.."
+  echo ":: Reloading hyprland.."
   hyprctl reload > /dev/null
+}
+
+reload_swaync() {
+  echo ":: Reloading swaync.."
+  swaync-client -rs > /dev/null
 }
 
 init_prompt() {
@@ -125,17 +65,11 @@ init_prompt() {
       init_xdg ;;
     "wp")
       init_wp ;;
-    "")
-      ascii_logo $1
-      echo $YLW" Usage:$WHT bde init COMMAND [ARGS]...\n"
-      echo "  $GRN init$CYN wp$WHT - Initialize wallpaper engine"
-      echo "  $GRN init$CYN xdg$WHT - Initialize xdg-desktop-portal"
-      ;;
   esac
 }
 
 init_wp() {
-	echo $YLW" =>$WHT Initializing swww..."
+	echo " => Initializing swww..."
 	swww-daemon > /dev/null & disown
 	swww-daemon --format xrgb > /dev/null & disown
 	sleep 0.5
@@ -143,7 +77,7 @@ init_wp() {
 }
 
 init_xdg() {
-	echo $YLW" =>$WHT Initializing xdg-desktop-portal..."
+	echo " => Initializing xdg-desktop-portal..."
 	sleep 1
 	killall xdg-desktop-portal-hyprland > /dev/null
 	killall xdg-desktop-portal-gnome > /dev/null
@@ -167,12 +101,12 @@ wallpaper_prompt() {
 
 set_wallpaper() {
 	if [[ $1 == "" ]]; then
-	    # echo $RED"::$WHT No wallpaper provided. Exiting..."
+	    # echo $RED":: No wallpaper provided. Exiting..."
       wallpaper_prompt
 	else
 	    if [[ $- == *i* ]]
       then
-        echo $BLU"::$WHT Changing wallpaper to: $1..."
+        echo ":: Changing wallpaper to: $1..."
       fi
 	   	python -O ~/.config/scripts/set-wallpaper.py -I $1 > /dev/null &
 	fi
@@ -187,7 +121,7 @@ search_steamapps() {
 }
 
 search_fonts() {
-   	echo $BLU"::$WHT Listing installed fonts.."
+   	echo ":: Listing installed fonts.."
    	fc-list |
    	    grep -ioE ": [^:]*$1[^:]+:" |
    	    sed -E 's/(^: |:)//g' |
@@ -197,17 +131,17 @@ search_fonts() {
 }
 
 free_cache() {
-  echo $BLU"::$WHT Freeing cached RAM..."
+  echo ":: Freeing cached RAM..."
   echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null
 }
 
 remove_orphans() {
-  echo $BLU"::$WHT Removing orphaned packages.."
+  echo ":: Removing orphaned packages.."
   pacman -Qdtq | sudo pacman -Rns - > /dev/null
 }
 
 toggle_gamemode() {
-   	echo $BLU"::$WHT Toggling game mode..."
+   	echo ":: Toggling game mode..."
 	HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
 	if [ "$HYPRGAMEMODE" = 1 ] ; then
 	    hyprctl --batch "\
@@ -224,7 +158,7 @@ toggle_gamemode() {
 }
 
 toggle_floatwindows() {
-   	echo $BLU"::$WHT Toggling all floating windows..."
+   	echo ":: Toggling all floating windows..."
    	hyprctl dispatch workspaceopt allfloat > /dev/null
 }
 
@@ -233,57 +167,71 @@ display_version() {
 	echo $BDE_VERSION;
 }
 
+function exect() {
+  $@
+}
 
-options_check $1
-case "$1" in
-    "gamemode")
-    	toggle_gamemode ;;
-    "game")
-    	toggle_gamemode ;;
-    "gm")
-    	toggle_gamemode ;;
-    "wallpaper")
-    	set_wallpaper $2 ;;
-    "wall")
-    	set_wallpaper $2 ;;
-    "wp")
-    	set_wallpaper $2 ;;
-    "fonts")
-    	search_fonts ;;
-    "fs")
-    	search_fonts ;;
-    "steamapps")
-      search_steamapps ;;
-    "ss")
-      search_steamapps ;;
-    "freecache")
-      free_cache ;;
-    "fc")
-      free_cache ;;
-    "reload")
-    	reload_prompt $2 ;;
-    "rl")
-    	reload_prompt $2 ;;
-    "removeorphans")
-      remove_orphans ;;
-    "remo")
-      remove_orphans ;;
-    "rm")
-      remove_orphans ;;
-    "hyprfloat")
-    	toggle_floatwindows ;;
-    "hypr")
-    	toggle_floatwindows ;;
-    "hf")
-    	toggle_floatwindows ;;
-    "init")
-    	init_prompt $2 ;;
-    "upload")
-      file_upload $2 ;;
-    "up")
-      file_upload $2 ;;
-    "")
-		echo $RED"::" $WHT"No command given. Exiting..." ;;
-	*)
-		echo $RED"::" $WHT"Invalid command! Use$GRN bde$YLW --help$WHT to see available commands." ;;  	
-esac
+function ui(){
+  DEFAULT_ICON="󰘳"
+
+  apps=(
+    "󰑓;Reload Environment;bde rl"
+  	"󱎓;Toggle Game Mode;bde gamemode"
+  	"󱧙;Remove Orphans;bde removeorphans"
+    "󰍛;Clear Cached RAM;bde freecache"
+    "󰋩;Change Wallpaper;bde wp"
+  )
+
+  fzf_result=$(printf "%s\n" "${apps[@]}" | awk -F ';' '{print $1" "$2}' | fzf --reverse)
+  [[ -z $fzf_result ]] && exit 0
+  fzf_result=${fzf_result/ /;}
+  line=$(printf "%s\n" "${apps[@]}" | grep "$fzf_result")
+  command=$(echo "$line" | sed 's/^[^;]*;//;s/^[^;]*;//')
+
+  exect "$command"
+  exit 0
+}
+
+[[ $1 == "" ]] && ui
+
+if [[ $1 == "rl" ]];then
+  reload_prompt "all"
+
+elif [[ $1 == "wp" ]];then
+	set_wallpaper $2
+
+elif [[ $1 == "freecache" ]];then
+	free_cache
+
+elif [[ $1 == "gamemode" ]];then
+	toggle_gamemode
+
+elif [[ $1 == "removeorphans" ]];then
+	remove_orphans
+
+elif [[ $1 == "steamapps" ]];then
+	search_steamapps
+
+elif [[ $1 == "fonts" ]];then
+	search_fonts
+
+elif [[ $1 == "init" ]];then
+	init_prompt $2
+
+elif [[ $1 == "up" ]];then
+	file_upload $2
+
+elif [[ $1 == "hf" ]];then
+	toggle_floatwindows
+
+elif [[ $1 == "loop" ]];then
+  while true; do
+    bde
+    echo "Press enter to continue, e to exit" 
+    read -n 1 REPLY
+    clear
+    [[ $REPLY == "e" ]] && exit 0
+  done
+else
+  echo "Unknown argument"
+fi

@@ -62,7 +62,7 @@
 
 	// === [ LEFT MODULES ] === //
     "clock": {
-        "format": "   <span color=\"#E0DDF9\">{:%I:%M %p}</span>",
+        "format": "  <span color=\"#E0DDF9\">{:%I:%M %p}</span>",
         "tooltip-format": "{:%a, %b %e, %Y}"
     },
     
@@ -138,7 +138,7 @@
     },
 	
 	"memory": {
-		"format": "   <span color=\"#E0DDF9\">{}%</span>",
+		"format": "  <span color=\"#E0DDF9\">{}%</span>",
 		"tooltip": "false",
 		"on-click": "kitty btop",
 	},
@@ -150,9 +150,9 @@
 	},
 
     "pulseaudio": {
-        "format": "{icon}   <span color=\"#E0DDF9\">{volume}%</span>",
+        "format": "{icon}  <span color=\"#E0DDF9\">{volume}%</span>",
         "tooltip": false,
-        "format-muted": "   Muted",
+        "format-muted": "  Muted",
         "on-click": "pavucontrol",
         "on-scroll-up": "pamixer -i 5",
         "on-scroll-down": "pamixer -d 5",
