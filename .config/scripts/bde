@@ -8,24 +8,30 @@ BDE_VERSION="1.21"
 
 reload_prompt() {
 	case "$1" in
-   		"all")
-			reload_nwgdock
-			reload_waybar
-			reload_hypr
-      reload_swaync
-   		;;
-      "dock")
-			reload_nwgdock
+      "")
+        reload_nwgdock
+        reload_waybar
+        reload_hypr
+        reload_swaync
       ;;
-   		"waybar")
-	    	reload_waybar
-   		;;
-   		"mako")
-	    	reload_mako
-   		;;
-   		"hypr")
-	    	reload_hypr
-     		;;
+      "all")
+        reload_nwgdock
+        reload_waybar
+        reload_hypr
+        reload_swaync
+      ;;
+      "dock")
+        reload_nwgdock
+      ;;
+      "waybar")
+        reload_waybar
+      ;;
+      "mako")
+        reload_mako
+      ;;
+      "hypr")
+        reload_hypr
+      ;;
       "sway")
         reload_swaync
       ;;
@@ -94,6 +100,7 @@ init_xdg() {
 }
 
 wallpaper_prompt() {
+  echo -ne "\033]0;Wallpaper Chooser\007"
   ls ~/Pictures/Wallpapers/catppuccin | \
   fzf --preview="~/.config/scripts/bde wp ~/Pictures/Wallpapers/catppuccin/{}" | \
   xargs -I {} ~/.config/scripts/bde wp ~/Pictures/Wallpapers/catppuccin/{}
@@ -117,17 +124,25 @@ file_upload() {
 }
 
 search_steamapps() {
-  for id in $(ls ~/.local/share/Steam/steamapps/compatdata); do sudo echo "$id: $(curl -s "https://store.steampowered.com/app/$id/" | grep -oP '(?<=<title>)[^<]*' )"; done
+  echo -ne "\033]0;Installed Steam Games\007"
+  for id in $(ls ~/.local/share/Steam/steamapps/compatdata); do echo "$id: $(curl -s "https://store.steampowered.com/app/$id/" | grep -oP '(?<=<title>)[^<]*' )"; done
+    echo ""
+    echo "Press any key to exit.."
+    read ext
 }
 
 search_fonts() {
-   	echo ":: Listing installed fonts.."
-    sudo fc-list |
+  echo -ne "\033]0;Installed System Fonts\007"
+  echo ":: Listing installed fonts.."
+  fc-list |
    	    grep -ioE ": [^:]*$1[^:]+:" |
    	    sed -E 's/(^: |:)//g' |
    	    tr , \\n |
    	    sort |
    	    uniq
+  echo ""
+  echo "Press any key to exit.."
+  read ext
 }
 
 free_cache() {
@@ -136,8 +151,12 @@ free_cache() {
 }
 
 remove_orphans() {
+  echo -ne "\033]0;Removing orphaned packages..\007"
   echo ":: Removing orphaned packages.."
   pacman -Qdtq | sudo pacman -Rns - > /dev/null
+  echo ""
+  echo "Press any key to exit.."
+  read ext
 }
 
 toggle_gamemode() {
@@ -160,10 +179,6 @@ toggle_gamemode() {
 toggle_floatwindows() {
    	echo ":: Toggling all floating windows..."
    	hyprctl dispatch workspaceopt allfloat > /dev/null
-}
-
-show_launcher() {
-  foot -T "launcher" -d none bash -c "fzf $* < /proc/$$/fd/0 > /proc/$$/fd/1"
 }
 
 display_version() {
@@ -238,7 +253,7 @@ elif [[ $1 == "gm" ]];then
 elif [[ $1 == "clean" ]];then
 	remove_orphans
 
-elif [[ $1 == "steamapps" ]];then
+elif [[ $1 == "steam" ]];then
 	search_steamapps
 
 elif [[ $1 == "fonts" ]];then
