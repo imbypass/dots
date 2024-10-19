@@ -117,12 +117,12 @@ file_upload() {
 }
 
 search_steamapps() {
-  for id in $(ls ~/.local/share/Steam/steamapps/compatdata); do echo "$id: $(curl -s "https://store.steampowered.com/app/$id/" | grep -oP '(?<=<title>)[^<]*' )"; done
+  for id in $(ls ~/.local/share/Steam/steamapps/compatdata); do sudo echo "$id: $(curl -s "https://store.steampowered.com/app/$id/" | grep -oP '(?<=<title>)[^<]*' )"; done
 }
 
 search_fonts() {
    	echo ":: Listing installed fonts.."
-   	fc-list |
+    sudo fc-list |
    	    grep -ioE ": [^:]*$1[^:]+:" |
    	    sed -E 's/(^: |:)//g' |
    	    tr , \\n |
@@ -174,9 +174,7 @@ function exect() {
   $@
 }
 
-function ui(){
-  DEFAULT_ICON="󰘳"
-
+function ui_fzf(){
   apps=(
     ";Reload Environment;bde rl all"
     ";Clear Cached RAM;bde ram"
@@ -196,6 +194,27 @@ function ui(){
 
   exect "$command"
   exit 0
+}
+
+function ui() {
+  CHOSEN=$(printf "reload environment\nclear cached ram\nremove orphans\nlist steam games\nlist installed fonts\ntoggle floating windows\ntoggle game mode\nchange wallpaper" | rofi_cmd)
+
+  case "$CHOSEN" in
+      "reload environment") ~/.config/scripts/bde rl all ;;
+      "clear cached ram") foot ~/.config/scripts/bde ram ;;
+      "remove orphans") foot ~/.config/scripts/bde clean ;;
+      "list steam games") foot ~/.config/scripts/bde steam ;;
+      "list installed fonts") foot ~/.config/scripts/bde fonts ;;
+      "toggle floating windows") ~/.config/scripts/bde hf ;;
+      "toggle game mode") ~/.config/scripts/bde gm ;;
+      "change wallpaper") foot ~/.config/scripts/bde wp ;;
+      *) exit 1 ;;
+  esac
+}
+
+rofi_cmd() {
+    rofi -theme-str "listview {columns: 1; lines: 8;}" \
+        -dmenu -p "configuration" -mesg "bypassde" -markup-rows
 }
 
 [[ $1 == "" ]] && ui
