@@ -162,6 +162,9 @@ toggle_floatwindows() {
    	hyprctl dispatch workspaceopt allfloat > /dev/null
 }
 
+show_launcher() {
+  foot -T "launcher" -d none bash -c "fzf $* < /proc/$$/fd/0 > /proc/$$/fd/1"
+}
 
 display_version() {
 	echo $BDE_VERSION;
@@ -175,11 +178,14 @@ function ui(){
   DEFAULT_ICON="󰘳"
 
   apps=(
-    "󰑓;Reload Environment;bde rl"
-  	"󱎓;Toggle Game Mode;bde gamemode"
-  	"󱧙;Remove Orphans;bde removeorphans"
-    "󰍛;Clear Cached RAM;bde freecache"
-    "󰋩;Change Wallpaper;bde wp"
+    ";Reload Environment;bde rl all"
+    ";Clear Cached RAM;bde ram"
+  	";Remove Orphans;bde clean"
+    "󰸳;List Steam Games;bde steam"
+    ";List Installed Fonts;bde fonts"
+    ";Toggle Floating Windows;bde hf"
+    "󱎓;Toggle Game Mode;bde gm"
+    "󰸉;Change Wallpaper;bde wp"
   )
 
   fzf_result=$(printf "%s\n" "${apps[@]}" | awk -F ';' '{print $1" "$2}' | fzf --reverse)
@@ -194,19 +200,23 @@ function ui(){
 
 [[ $1 == "" ]] && ui
 
+
 if [[ $1 == "rl" ]];then
-  reload_prompt "all"
+  reload_prompt $2
+
+elif [[ $1 == "apps" ]];then
+  show_launcher
 
 elif [[ $1 == "wp" ]];then
 	set_wallpaper $2
 
-elif [[ $1 == "freecache" ]];then
+elif [[ $1 == "ram" ]];then
 	free_cache
 
-elif [[ $1 == "gamemode" ]];then
+elif [[ $1 == "gm" ]];then
 	toggle_gamemode
 
-elif [[ $1 == "removeorphans" ]];then
+elif [[ $1 == "clean" ]];then
 	remove_orphans
 
 elif [[ $1 == "steamapps" ]];then
