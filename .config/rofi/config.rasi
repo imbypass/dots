@@ -1,13 +1,13 @@
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "drun";
-    show-icons:                 false;
-    display-drun:               "apps";
-    display-run:                "";
-    display-filebrowser:        "";
-    display-window:             "";
-	drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
-	window-format:              "{w} · {c} · {t}";
+  modi:                       "drun";
+  show-icons:                 false;
+  display-drun:               "apps";
+  display-run:                "";
+  display-filebrowser:        "";
+  display-window:             "";
+  drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+  window-format:              "{w} · {c} · {t}";
 }
 
 /*****----- Global Properties -----*****/
@@ -38,6 +38,8 @@ configuration {
     alternate-urgent-foreground: var(background);
     alternate-active-background: var(active);
     alternate-active-foreground: var(background);
+    lowercase: true;
+    text-style: lowercase;
 }
 
 /*****----- Main Window -----*****/
