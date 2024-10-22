@@ -9,16 +9,18 @@ BDE_VERSION="1.21"
 reload_prompt() {
 	case "$1" in
       "")
-        reload_nwgdock
-        reload_waybar
+        # reload_nwgdock
+        # reload_waybar
         reload_hypr
-        reload_swaync
+        # reload_swaync
+        reload_hyprpanel
       ;;
       "all")
-        reload_nwgdock
-        reload_waybar
+        # reload_nwgdock
+        # reload_waybar
         reload_hypr
-        reload_swaync
+        # reload_swaync
+        reload_hyprpanel
       ;;
       "dock")
         reload_nwgdock
@@ -63,6 +65,12 @@ reload_hypr() {
 reload_swaync() {
   echo ":: Reloading swaync.."
   swaync-client -rs > /dev/null
+}
+
+reload_hyprpanel() {
+  echo ":: Reloading HyprPanel.."
+  killall -9 ags > /dev/null
+  ags > /dev/null & disown
 }
 
 init_prompt() {
