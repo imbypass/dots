@@ -1,6 +1,6 @@
 :root {
-    --accent-color: var(--cat-blue);
-    --font: "GeistMono NF";
+    --accent-color: var(--cat-sky);
+    --font: "Geist";
     --font-code: "GeistMono NF";
 }
 
@@ -21,6 +21,7 @@
 	--cat-blue: #89b4fa;
 	--cat-lavender: #b4befe;
     --cat-none: #cdd6f4;
+    --cat-crust: #11111b;
 }
 
 :root {
@@ -43,7 +44,7 @@ div {
 	color: var(--cat-red) !important; 
 }
 .focused_d90b3d {
-	color: #11111b !important;
+	color: var(--cat-crust) !important;
 }
 
 /* catppuccin icon */

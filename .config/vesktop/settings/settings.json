@@ -405,7 +405,7 @@
             "mode": 2
         },
         "ShikiCodeblocks": {
-            "enabled": true,
+            "enabled": false,
             "useDevIcon": "GREYSCALE",
             "theme": "https://raw.githubusercontent.com/shikijs/shiki/0b28ad8ccfbf2615f2d9d38ea8255416b8ac3043/packages/shiki/themes/dark-plus.json"
         },
@@ -719,7 +719,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1729554633796
+        "settingsSyncVersion": 1729726259222
     },
     "notifyAboutUpdates": true
 }

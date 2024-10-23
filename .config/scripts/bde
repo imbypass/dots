@@ -135,7 +135,7 @@ search_steamapps() {
   echo -ne "\033]0;Installed Steam Games\007"
   for id in $(ls ~/.local/share/Steam/steamapps/compatdata); do echo "$id: $(curl -s "https://store.steampowered.com/app/$id/" | grep -oP '(?<=<title>)[^<]*' )"; done
     echo ""
-    echo "Press any key to exit.."
+    echo "Press Enter to exit.."
     read ext
 }
 
@@ -164,7 +164,7 @@ remove_orphans() {
   echo ":: Removing orphaned packages.."
   pacman -Qdtq | sudo pacman -Rns - > /dev/null
   echo ""
-  echo "Press any key to exit.."
+  echo "Press Enter to exit.."
   read ext
 }
 
