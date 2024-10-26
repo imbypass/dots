@@ -1,0 +1,15 @@
+width = 100%
+height = 100%
+border-width = 0
+outline-width = 0
+padding-left = 35%
+padding-top = 25%
+result-spacing = 25
+num-results = 10
+font = GeistMono Nerd Font Mono
+font-size: 12px
+background-color = #11111baa
+text-color = #cdd6f4
+selection-color = #74c7ec
+hide-cursor = true
+prompt-color = #cba6f7

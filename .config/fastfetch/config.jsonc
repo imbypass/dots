@@ -21,7 +21,7 @@
         {
             "type": "title",
             "keyWidth": 10,
-            "keyColor": "32",
+            "keyColor": "30",
         },
         {
             "type": "os",

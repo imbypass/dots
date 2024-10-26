@@ -3,9 +3,7 @@
     "autoUpdateNotification": true,
     "useQuickCss": true,
     "themeLinks": [],
-    "enabledThemes": [
-        "system24-pywal.theme.css"
-    ],
+    "enabledThemes": [],
     "enableReactDevtools": false,
     "frameless": false,
     "transparent": false,
@@ -350,9 +348,6 @@
             "messages": false
         },
         "PreviewMessage": {
-            "enabled": false
-        },
-        "PronounDB": {
             "enabled": false
         },
         "QuickMention": {
@@ -707,6 +702,15 @@
         },
         "FullSearchContext": {
             "enabled": false
+        },
+        "UserMessagesPronouns": {
+            "enabled": false
+        },
+        "DynamicImageModalAPI": {
+            "enabled": true
+        },
+        "FixImagesQuality": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -719,7 +723,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1729726259222
+        "settingsSyncVersion": 1729945367042
     },
     "notifyAboutUpdates": true
 }

@@ -1,5 +1,7 @@
+@import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha.theme.css");
+
 :root {
-    --accent-color: var(--cat-sky);
+    --accent-color: var(--cat-sapphire);
     --font: "Geist";
     --font-code: "GeistMono NF";
 }

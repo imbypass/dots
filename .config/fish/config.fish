@@ -1,5 +1,7 @@
 if status is-interactive
+    set TERM 'xterm-256color'
     set fish_greeting
+    set fish_tmux_autostart true
     fastfetch
 end
 
@@ -18,6 +20,7 @@ zoxide init fish --cmd cd | source
 # pyenv init - | source
 /home/linuxbrew/.linuxbrew/bin/brew shellenv | source
 
+
 set -x ZSH "$HOME/.oh-my-zsh"
 set -x HYPRSHOT_DIR "$HOME/Pictures/Screenshots/"
 set -x ELECTRON_OZONE_PLATFORM_HINT "wayland"
@@ -26,9 +29,10 @@ set -x GTK_THEME ZorinGrey-Dark
 set -x GTK2_RC_FILES /usr/share/themes/ZorinGrey-Dark/gtk-2.0/gtkrc
 set -x QT_STYLE_OVERRIDE ZorinGrey-Dark
 set -x MICRO_TRUECOLOR 1
-set -x SHELL 'fish'
-set -x EDITOR 'nvim'
-set -x VISUAL 'qview'
+set SHELL 'fish'
+set EDITOR 'nvim'
+set VISUAL 'qview'
+set TERM 'xterm-256color'
 set -x ANI_CLI_MODE 'dub'
 set -x FZF_DEFAULT_OPTS "\
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
@@ -53,8 +57,11 @@ alias cat="bat -p"
 alias nano="nvim"
 alias py3="python3"
 alias vim="nvim"
+
+# Custom shortcut aliases
 alias vps="ssh root@imbypass.pw"
 alias ani="ani-cli --dub --skip"
+alias wg++="x86_64-w64-mingw32-g++"
 
 # Custom ricing aliases
 alias clock="tty-clock -t -c -b -B"
