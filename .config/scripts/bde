@@ -241,9 +241,7 @@ rofi_cmd() {
         -dmenu -p "configuration" -mesg "bypassde" -markup-rows
 }
 
-[[ $1 == "--fzf" ]] && ui_fzf
-
-[[ $1 == "" ]] && ui
+[[ $1 == "" ]] && ui_fzf
 
 
 if [[ $1 == "rl" ]];then

@@ -1,7 +1,8 @@
-@import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha.theme.css");
+@import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha-sky.theme.css")
+(prefers-color-scheme: dark);
 
 :root {
-    --accent-color: var(--cat-sapphire);
+    --accent-color: var(--cat-sky);
     --font: "Geist";
     --font-code: "GeistMono NF";
 }
@@ -49,12 +50,12 @@ div {
 	color: var(--cat-crust) !important;
 }
 
-/* catppuccin icon */
+/* catppuccin icon
 .childWrapper_f90abb:has(> svg:not(.favoriteIcon_dcc7a4)) {
 	background: url('https://0x0.st/X3ig.png');
 	background-color: transparent !important;
 	background-size: cover;
-}
+} */
 
 [data-tab-id=ADD_FRIEND]{
     background-color: var(--background-color) !important;

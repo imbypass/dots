@@ -11,7 +11,7 @@
             "left": 1,
             "right": 3,
         },
-        "type": "small",
+        "type": "none",
     },
     "display": {
         "separator": " "
@@ -35,17 +35,17 @@
         },
         {
             "type": "kernel",
-            "key": "kernel ",
+            "key": "kernel\t ",
             "keyColor": "33",
         },
         {
             "type": "uptime",
-            "key": "uptime ",
+            "key": "uptime\t ",
             "keyColor": "34",
         },
         {
             "type": "command",
-            "key": "os age ",
+            "key": "os age\t ",
             "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
             "keyColor": "35",
         },
