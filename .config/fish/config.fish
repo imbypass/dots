@@ -2,6 +2,7 @@ if status is-interactive
     set TERM 'xterm-256color'
     set fish_greeting
     set fish_tmux_autostart true
+    fish_vi_key_bindings
     fastfetch
 end
 
