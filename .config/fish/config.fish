@@ -2,8 +2,10 @@ if status is-interactive
     set TERM 'xterm-256color'
     set fish_greeting
     set fish_tmux_autostart true
+    set fish_tmux_autoname_session true
+    tmux source ~/.tmux.conf
     fish_vi_key_bindings
-    fastfetch
+    #fastfetch -c ~/.config/fastfetch/minimal.jsonc
 end
 
 bind \e\e 'begin; set -l buf (commandline); commandline -r "sudo "$buf; end'
@@ -15,10 +17,9 @@ fish_add_path /home/bypass/local/bin
 fish_add_path /home/bypass/.config/scripts
 fish_add_path /home/linuxbrew/.linuxbrew/bin
 
-# starship init fish | source
+# Other Inits? (not exactly sure what to call these)
 zoxide init fish --cmd cd | source
-# thefuck --alias | source
-# pyenv init - | source
+thefuck --alias | source
 /home/linuxbrew/.linuxbrew/bin/brew shellenv | source
 
 
@@ -41,6 +42,7 @@ set -x FZF_DEFAULT_OPTS "\
 --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
 --color=selected-bg:#45475a \
 --multi"
+set -x BAT_THEME "mocha"
 
 # Custom miscellaneous aliases
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -58,6 +60,8 @@ alias cat="bat -p"
 alias nano="nvim"
 alias py3="python3"
 alias vim="nvim"
+alias ff="fastfetch"
+alias ghosts="fastfetch -c ~/.config/fastfetch/minimal.jsonc"
 
 # Custom shortcut aliases
 alias vps="ssh root@imbypass.pw"

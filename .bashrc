@@ -11,6 +11,7 @@ PS1='[\u@\h \W]\$ '
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 . "$HOME/.cargo/env"
+
 alias config='/usr/bin/git --git-dir=/home/bypass/.dotfiles/ --work-tree=/home/bypass'
 
 export TERM=xterm-256color
