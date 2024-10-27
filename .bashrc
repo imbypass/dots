@@ -21,4 +21,4 @@ export FZF_DEFAULT_OPTS=" \
 --color=selected-bg:#45475a \
 --multi"
 
-Hyprland & disown
+Hyprland > ~/.cache/hyprland/hyprland.log &
