@@ -1,5 +1,4 @@
-@import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha-sky.theme.css")
-(prefers-color-scheme: dark);
+@import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha-sky.theme.css");
 
 :root {
     --accent-color: var(--cat-sky);
@@ -23,7 +22,17 @@
 	--cat-sapphire: #74c7ec;
 	--cat-blue: #89b4fa;
 	--cat-lavender: #b4befe;
-    --cat-none: #cdd6f4;
+    --cat-text: #cdd6f4;
+    --cat-subtext-1: #bac2de;
+    --cat-subtext-0: #a6adc8;
+    --cat-overlay-2: #9399b2;
+    --cat-overlay-1: #7f849c;
+    --cat-overlay-0: #6c7086;
+    --cat-surface-2: #585b70;
+    --cat-surface-1: #45475a;
+    --cat-surface-0: #313244;
+    --cat-base: #1e1e2e;
+    --cat-mantle: #181825;
     --cat-crust: #11111b;
 }
 
@@ -31,47 +40,7 @@
     --font-primary: var(--font) !important;
     --font-display: var(--font) !important;
 
-    --roundness-xl: 6px; /* roundness of big panel outer corners */
-	--roundness-l: 6px; /* popout panels */
-	--roundness-m: 6px; /* smaller panels, images, embeds */
-	--roundness-s: 6px; /* members, settings inputs */
-	--roundness-xs: 6px; /* channels, buttons */
-	--roundness-xxs: 6px; /* searchbar, small elements */
-}
-
-div {
-  font-family: var(--font) !important;
-}
-
-.colorDanger_d90b3d, .colorDanger_d90b3d .checkbox_d90b3d, .colorDanger_d90b3d .radioSelection_d90b3d {
-	color: var(--cat-red) !important; 
-}
-.focused_d90b3d {
-	color: var(--cat-crust) !important;
-}
-
-/* catppuccin icon
-.childWrapper_f90abb:has(> svg:not(.favoriteIcon_dcc7a4)) {
-	background: url('https://0x0.st/X3ig.png');
-	background-color: transparent !important;
-	background-size: cover;
-} */
-
-[data-tab-id=ADD_FRIEND]{
-    background-color: var(--background-color) !important;
-    color: var(--interactive-normal) !important;
-}
-[data-tab-id=ADD_FRIEND]:hover{
-    background-color: var(--background-modifier-hover) !important;
-    color: var(--interactive-hover) !important;
-}
-[data-tab-id=ADD_FRIEND][aria-selected=true]{
-    background-color: var(--background-modifier-selected) !important;
-    color: var(--interactive-active) !important;
-}
-[data-tab-id=ADD_FRIEND][aria-selected=true]:hover{
-    background-color: var(--background-modifier-hover) !important;
-    color: var(--interactive-active) !important;
+    --background-modifier-accent: var(--cat-surface-0);
 }
 
 /*--- Channel List Outer Circle Icon Recolor ---*/
@@ -131,15 +100,21 @@ div {
     fill: var(--accent-color) !important;
 }
 
-/* Hide New Member Badge */
+/*--- Hide New Member Badge ---*/
 .newMemberBadge_ed263a {
   display: none;
 }
 
+/*--- Summaries Info Bar Recolor ---*/
 .newTopicsBarContainer_cf58b5, .newTopicsBarText_cf58b5, newTopicsBarIcon_cf58b5, .barButtonBase_cf58b5 {
-    color: #313244;
+    color: var(--cat-surface-0);
+}
+/*--- Summaries Tag Icon Recolor ---*/
+.summariesBetaTag_cf58b5 {
+    color: var(--cat-base);
 }
 
-.summariesBetaTag_cf58b5 {
-    color: #1e1e2e;
+/*--- Voice Chat Action Icon Recolor ---*/
+div[class^=actionButtons] [class^=button][class*=buttonColor_], div[class^=actionButtons] [class^=button] [class*=buttonColor_] {
+    background-color: var(--cat-base);
 }
