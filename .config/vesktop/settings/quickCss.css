@@ -1,7 +1,7 @@
-@import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha-sky.theme.css");
+@import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha-yellow.theme.css");
 
 :root {
-    --accent-color: var(--cat-sky);
+    --accent-color: var(--cat-yellow);
     --font: "Geist";
     --font-code: "GeistMono NF";
 }
@@ -40,7 +40,10 @@
     --font-primary: var(--font) !important;
     --font-display: var(--font) !important;
 
-    --background-modifier-accent: var(--cat-surface-0);
+    --background-modifier-accent: var(--cat-mantle) !important;
+    --background-modifier-selected: var(--cat-base) !important;
+    --background-modifier-active: var(--cat-base) !important;
+    --background-modifier-hover: var(--cat-base) !important;
 }
 
 /*--- Channel List Outer Circle Icon Recolor ---*/
@@ -117,4 +120,10 @@
 /*--- Voice Chat Action Icon Recolor ---*/
 div[class^=actionButtons] [class^=button][class*=buttonColor_], div[class^=actionButtons] [class^=button] [class*=buttonColor_] {
     background-color: var(--cat-base);
+}
+
+/*--- Forum Post Recolor ---*/
+div[class^=chat]>div[class^=content]>div[class^=container] div[class*=mainCard_] {
+    background-color: var(--cat-mantle);
+    border-color: var(--cat-crust);
 }
