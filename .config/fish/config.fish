@@ -5,7 +5,7 @@ if status is-interactive
     set fish_tmux_autoname_session true
     tmux source ~/.tmux.conf
     fish_vi_key_bindings
-    #fastfetch -c ~/.config/fastfetch/minimal.jsonc
+    fastfetch -c ~/.config/fastfetch/minimal.jsonc
 end
 
 bind \e\e 'begin; set -l buf (commandline); commandline -r "sudo "$buf; end'
