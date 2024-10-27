@@ -1,4 +1,4 @@
-# bash
+# /usr/bin/env
 
 # I'm sure there are better ways of doing this, but I REALLY don't work with bash/zsh scripts often.
 # This just seemed like a more convenient way to execute some of the common shit that I do on my PC.
