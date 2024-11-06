@@ -1,8 +1,8 @@
 /*****----- Configuration -----*****/
 configuration {
   modi:                       "drun";
-  show-icons:                 false;
-  display-drun:               "apps";
+  show-icons:                 true;
+  display-drun:               "󰣇";
   display-run:                "";
   display-filebrowser:        "";
   display-window:             "";
@@ -58,10 +58,13 @@ window {
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               0px;
-    border-color:                @border-colour;
+    border-radius:               14px;
+    border-color:                none;
     cursor:                      "default";
     background-color:            @background-colour;
+    opacity:                      0.9;
+    background-image:            linear-gradient(45deg,#89b4fa, #74c7ec, #cba6f7, #f5c2e7);
+    padding: 2px;
 }
 
 /*****----- Main Box -----*****/
@@ -70,11 +73,12 @@ mainbox {
     spacing:                     0px;
     margin:                      0px;
     padding:                     0px;
-    border:                      2px solid;
-    border-radius:               4px;
+    border:                      0px solid;
+    border-radius:               14px;
     border-color:                @border-colour;
-    background-color:            transparent;
+    background-color:            #1E1D2D;
     children:                    [ "inputbar", "listview" ];
+
 }
 
 /*****----- Inputbar -----*****/
@@ -199,7 +203,7 @@ element alternate.active {
 element-icon {
     background-color:            transparent;
     text-color:                  inherit;
-    size:                        32px;
+    size:                        28px;
     cursor:                      inherit;
 }
 element-text {

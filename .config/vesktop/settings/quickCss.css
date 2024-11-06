@@ -1,7 +1,8 @@
-@import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha-yellow.theme.css");
+@import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha.theme.css");
+/* @import url("https://raw.githubusercontent.com/rose-pine/discord/refs/heads/main/rose-pine.theme.css"); */
 
 :root {
-    --accent-color: var(--cat-yellow);
+    --accent-color: var(--cat-pink);
     --font: "Geist";
     --font-code: "GeistMono NF";
 }

@@ -1,4 +1,6 @@
-* {
-    font: "GeistMono NF SemiBold 12";
+window, mainbox, entry {
+    font: "Geist SemiBold 12";
 }
-
+i, small {
+    font: "Maple Mono NF SemiBold 12";
+}

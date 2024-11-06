@@ -151,7 +151,7 @@
         },
         "FakeProfileThemes": {
             "enabled": true,
-            "nitroFirst": true
+            "nitroFirst": false
         },
         "FavoriteEmojiFirst": {
             "enabled": false
@@ -195,7 +195,7 @@
             "size": 100,
             "zoom": 3.6999999999999997,
             "nearestNeighbour": false,
-            "square": true,
+            "square": false,
             "saveZoomValues": true,
             "invertScroll": true,
             "zoomSpeed": 0.5
@@ -462,8 +462,8 @@
             "enabled": false
         },
         "Translate": {
-            "enabled": false,
-            "autoTranslate": true,
+            "enabled": true,
+            "autoTranslate": false,
             "showChatBarButton": true,
             "service": "google",
             "receivedInput": "auto",
@@ -723,7 +723,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1729945367042
+        "settingsSyncVersion": 1730721397172
     },
     "notifyAboutUpdates": true
 }

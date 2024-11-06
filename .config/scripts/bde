@@ -6,6 +6,26 @@ echo -ne "\033]0;bypassDE Configuration\007"
 
 BDE_VERSION="1.21"
 
+edit_prompt() {
+  case "$1" in
+      "")
+        nvim ~/.config/hypr/
+      ;;
+      "hypr")
+        nvim ~/.config/hypr/hyprland.conf
+      ;;
+      "keys")
+        nvim ~/.config/hypr/conf/keybinding.conf
+      ;;
+      "autostart")
+        nvim ~/.config/hypr/conf/autostart.conf
+      ;;
+      "plugins")
+        nvim ~/.config/hypr/conf/custom/plugins.conf
+      ;;
+  esac
+}
+
 reload_prompt() {
 	case "$1" in
       "")
@@ -251,7 +271,10 @@ elif [[ $1 == "apps" ]];then
   show_launcher
 
 elif [[ $1 == "wp" ]];then
-	set_wallpaper $2
+  waypaper
+
+elif [[ $1 == "edit" ]];then
+  edit_prompt $2
 
 elif [[ $1 == "ram" ]];then
 	free_cache
