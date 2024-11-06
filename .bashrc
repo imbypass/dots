@@ -32,8 +32,6 @@ export TERM='xterm-256color'
 export ANI_CLI_MODE='dub'
 export BAT_THEME='mocha'
 export PYENV_ROOT="$HOME/.pyenv"
-export OPENAI_API_KEY='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'
-export ANTHROPIC_API_KEY='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'
 
 # Custom miscellaneous aliases
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
