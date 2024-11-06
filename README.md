@@ -1,1 +1,3 @@
-My personal dotfiles. An absolute mess, sorry if you're digging through here..
+# imbypass' dotfiles
+
+## I apologize profusely to anyone who unfortunately happens to be digging into here.
