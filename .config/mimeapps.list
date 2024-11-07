@@ -2,8 +2,6 @@
 application/schema+json=code-oss.desktop;
 text/x-csrc=code-oss.desktop;
 text/plain=code-oss.desktop;
-x-scheme-handler/http=firefox.desktop;zen-browser.desktop;zen-alpha.desktop;
-x-scheme-handler/https=firefox.desktop;zen-browser.desktop;zen-alpha.desktop;
 x-scheme-handler/chrome=firefox.desktop;zen-browser.desktop;zen-alpha.desktop;
 text/html=code-oss.desktop;firefox.desktop;zen-browser.desktop;zen-alpha.desktop;
 application/x-extension-htm=firefox.desktop;zen-browser.desktop;zen-alpha.desktop;
@@ -35,8 +33,6 @@ image/webp=zen-alpha.desktop;userapp-qview-E3XYT2.desktop;
 
 [Default Applications]
 text/x-csrc=code-oss.desktop
-x-scheme-handler/http=zen-alpha.desktop
-x-scheme-handler/https=zen-alpha.desktop
 x-scheme-handler/chrome=zen-alpha.desktop
 text/html=zen-alpha.desktop
 application/x-extension-htm=zen-alpha.desktop
@@ -63,3 +59,4 @@ video/x-matroska=vlc.desktop
 image/png=userapp-qview-E3XYT2.desktop
 audio/flac=deadbeef.desktop
 x-scheme-handler/wago-app=wago-app.desktop
+
