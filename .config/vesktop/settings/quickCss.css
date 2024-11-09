@@ -3,8 +3,8 @@
 
 :root {
     --accent-color: var(--cat-pink);
-    --font: "Geist";
-    --font-code: "GeistMono NF";
+    --font: "Inter Display SemiBold";
+    --font-code: "JetBrainsMono NFM";
 }
 
 /* catppuccin color palette */
