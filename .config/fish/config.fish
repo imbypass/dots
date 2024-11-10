@@ -79,6 +79,7 @@ alias ff="fastfetch -c minimal"
 alias ghosts="fastfetch -c ~/.config/fastfetch/minimal.jsonc"
 alias wp="waypaper --random > /dev/null"
 alias clear="/usr/bin/clear && ghosts"
+alias ex="exit"
 
 # Custom shortcut aliases
 alias vps="ssh root@imbypass.pw"
