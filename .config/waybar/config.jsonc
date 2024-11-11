@@ -1,4 +1,5 @@
 {
+// === [ WAYBAR CONFIGURATION ] === //
     "layer": "top",
     "position": "top",
     "margin-top": 0,
@@ -14,7 +15,7 @@
 
     "tray": {
     	"icon-size": 24,
-    	"spacing": 24,
+    	"spacing": 24
     },
     
     "modules-left": [
@@ -31,7 +32,7 @@
     ],
 
 
-    // === [ MIDDLE MODULES ] === //
+// === [ MIDDLE MODULES ] === //
     "hyprland/window": {
         "format": "{}",
         "rewrite": {
@@ -55,38 +56,38 @@
           "rofi - (.*)": "<span color=\"#E0DDF9\">$1</span>",
           "Search(.*)": "<span> </span> <span color=\"#E0DDF9\">Search $1</span>",
           "\\s*(.*)\\s+": "<span color=\"#E0DDF9\">$1</span>",
-          "\\s*": " ",
+          "\\s*": " "
          },
          "separate-outputs": false
     },
 
-	// === [ LEFT MODULES ] === //
-    "clock": {
-        "format": "  <span color=\"#E0DDF9\">{:%I:%M %p}</span>",
-        "tooltip-format": "{:%a, %b %e, %Y}"
-    },
+// === [ LEFT MODULES ] === //
+  "clock": {
+      "format": "  <span color=\"#E0DDF9\">{:%I:%M %p}</span>",
+      "tooltip-format": "{:%a, %b %e, %Y}"
+  },
     
 	"hyprland/workspaces": {
       "format": "{icon}",
       "format-icons": {
         "default": "",
-        "active": "",
+        "active": ""
       }
-    },
+  },
 
-   "custom/logo" : {
-   		"tooltip": false,
-   		"format": " 󰣇 ",
-   		"on-click": "rofi -show drun",
+  "custom/logo" : {
+  		"tooltip": false,
+  		"format": " 󰣇 ",
+  		"on-click": "rofi -show drun"
+  },
+  
+  "custom/weather" : {
+       "tooltip" : true,
+       "format" : "{}",
+       "interval" : 30,
+       "exec" : "$HOME/.config/waybar/scripts/waybar-wttr.py",
+       "return-type" : "json"
    },
-	
-   "custom/weather" : {
-        "tooltip" : true,
-        "format" : "{}",
-        "interval" : 30,
-        "exec" : "$HOME/.config/waybar/scripts/waybar-wttr.py",
-        "return-type" : "json"
-    },
 
   "custom/notification": {
     "tooltip": false,
@@ -109,88 +110,88 @@
     "escape": true
   },
     
-    "custom/spotify": {
-    	"tooltip": false,
-        "format": "{}",
-        "max-length": 40,
-        "escape": true,
-        "exec": "$HOME/.config/waybar/scripts/mediaplayer.sh",
-    },
+  "custom/spotify": {
+  	"tooltip": false,
+      "format": "{}",
+      "max-length": 40,
+      "escape": true,
+      "exec": "$HOME/.config/waybar/scripts/mediaplayer.sh"
+  },
 
     
-	// === [ RIGHT MODULES ] === //
-    "network": {
-        "format-wifi": " {signalStrength}%",
-        "format-ethernet": "",
-        "tooltip-format": "{ifname}:{essid} {ipaddr}/{cidr}",
-        "format-linked": "{ifname} (No IP)",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": " {bandwidthDownBits}  {bandwidthUpBits}"
-    },
+// === [ RIGHT MODULES ] === //
+  "network": {
+      "format-wifi": " {signalStrength}%",
+      "format-ethernet": "",
+      "tooltip-format": "{ifname}:{essid} {ipaddr}/{cidr}",
+      "format-linked": "{ifname} (No IP)",
+      "format-disconnected": "Disconnected ⚠",
+      "format-alt": " {bandwidthDownBits}  {bandwidthUpBits}"
+  },
 
-    "bluetooth": {
-	    "format": " ",
-	    "format-disabled": "", // an empty format will hide the module
-	    "format-connected": " {num_connections}",
-	    "tooltip-format": "{device_alias}",
-	    "tooltip-format-connected": " {device_enumerate}",
-	    "tooltip-format-enumerate-connected": "{device_alias}"
-    },
+  "bluetooth": {
+	  "format": " ",
+	  "format-disabled": "", // an empty format will hide the module
+	  "format-connected": " {num_connections}",
+	  "tooltip-format": "{device_alias}",
+	  "tooltip-format-connected": " {device_enumerate}",
+	  "tooltip-format-enumerate-connected": "{device_alias}"
+  },
 	
 	"memory": {
 		"format": "  <span color=\"#E0DDF9\">{}%</span>",
 		"tooltip": "false",
-		"on-click": "kitty btop",
+		"on-click": "kitty btop"
 	},
 	
 	"cpu": {
 		"format": " {usage}%",
 		"tooltip": "false",
-		"on-click": "kitty btop",
+		"on-click": "kitty btop"
 	},
 
-    "pulseaudio": {
-        "format": "{icon}  <span color=\"#E0DDF9\">{volume}%</span>",
-        "tooltip": false,
-        "format-muted": "  Muted",
-        "on-click": "pavucontrol",
-        "on-scroll-up": "pamixer -i 5",
-        "on-scroll-down": "pamixer -d 5",
-        "scroll-step": 1,
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        }
-    },
-
-    "tray": {
-        "icon-size": 14,
-        "spacing": 10
-    },
-    
-    "custom/pacman": {
-      "format": "{icon} {}",
-      "return-type": "json",
+  "pulseaudio": {
+      "format": "{icon}  <span color=\"#E0DDF9\">{volume}%</span>",
+      "tooltip": false,
+      "format-muted": "  Muted",
+      "on-click": "pavucontrol",
+      "on-scroll-up": "pamixer -i 5",
+      "on-scroll-down": "pamixer -d 5",
+      "scroll-step": 1,
       "format-icons": {
-        "pending-updates": " ",
-        "updated": ""
-      },
-      "exec-if": "which waybar-updates",
-      "exec": "waybar-updates --notify",
-    },
+          "headphone": "",
+          "hands-free": "",
+          "headset": "",
+          "phone": "",
+          "portable": "",
+          "car": "",
+          "default": ["", "", ""]
+      }
+  },
 
-    // === [ UNUSED MODULES ] === //
-    "temperature": {
-        "thermal-zone": 1,
-        "format": "{temperatureF}°F ",
-        "critical-threshold": 80,
-        "format-critical": "{temperatureC}°C "
+  "tray": {
+      "icon-size": 14,
+      "spacing": 10
+  },
+  
+  "custom/pacman": {
+    "format": "{icon} {}",
+    "return-type": "json",
+    "format-icons": {
+      "pending-updates": " ",
+      "updated": ""
     },
+    "exec-if": "which waybar-updates",
+    "exec": "waybar-updates --notify"
+  },
+
+// === [ UNUSED MODULES ] === //
+  "temperature": {
+      "thermal-zone": 1,
+      "format": "{temperatureF}°F ",
+      "critical-threshold": 80,
+      "format-critical": "{temperatureC}°C "
+  },
 	
 	"temperature": {
 		"format": "{icon} {temperatureC}°C",
@@ -199,13 +200,13 @@
 		"format-icons": ["", "", ""]
 	},
 
-    "pulseaudio#microphone": {
-        "format": "{format_source}",
-        "format-source": " {volume}%",
-        "format-source-muted": "  Muted",
-        "on-click": "pamixer --default-source -t",
-        "on-scroll-up": "pamixer --default-source -i 5",
-        "on-scroll-down": "pamixer --default-source -d 5",
-        "scroll-step": 5
-    },
+  "pulseaudio#microphone": {
+      "format": "{format_source}",
+      "format-source": " {volume}%",
+      "format-source-muted": "  Muted",
+      "on-click": "pamixer --default-source -t",
+      "on-scroll-up": "pamixer --default-source -i 5",
+      "on-scroll-down": "pamixer --default-source -d 5",
+      "scroll-step": 5
+  }
 }

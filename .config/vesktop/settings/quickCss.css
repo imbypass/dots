@@ -1,8 +1,8 @@
-@import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha.theme.css");
+@import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha-blue.theme.css");
 @import url("https://imbypass.pw/catppuccin-mocha.patch.css");
 
 :root {
-    --accent-color: var(--cat-pink);
+    --accent-color: var(--catppuccin-mocha-blue);
     --font: "Inter Display SemiBold";
     --font-code: "JetBrainsMono NFM";
 }
