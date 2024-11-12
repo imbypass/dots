@@ -37,25 +37,6 @@ starship init fish | source
 fzf --fish | source
 pyenv init - | source
 
-set -x ZSH "$HOME/.oh-my-zsh"
-set -x HYPRSHOT_DIR "$HOME/Pictures/Screenshots/"
-set -x ELECTRON_OZONE_PLATFORM_HINT "wayland"
-set -x MOZ_ENABLE_WAYLAND 0
-set -x GTK_THEME catppuccin-mocha-peach-standard+default
-set -x GTK2_RC_FILES /usr/share/themes/Catppuccin-Mocha-Standard-Sapphire-Dark/gtk-2.0/gtkrc
-set -x MICRO_TRUECOLOR 1
-set SHELL 'fish'
-set EDITOR 'foot -e nvim'
-set VISUAL 'qview'
-set TERM 'xterm-256color'
-set -x ANI_CLI_MODE 'dub'
-set -x FZF_DEFAULT_OPTS "\
---color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
---color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
---color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
---color=selected-bg:#45475a \
---multi"
-set -x BAT_THEME "mocha"
 
 # Custom miscellaneous aliases
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
