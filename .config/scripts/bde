@@ -1,27 +1,32 @@
-# /usr/bin/env
+#! /usr/bin/env bash
 
 # I'm sure there are better ways of doing this, but I REALLY don't work with bash/zsh scripts often.
 # This just seemed like a more convenient way to execute some of the common shit that I do on my PC.
-echo -ne "\033]0;bypassDE Configuration\007"
 
 BDE_VERSION="1.21"
 
 edit_prompt() {
   case "$1" in
       "")
-        nvim ~/.config/hypr/
+        $EDITOR ~/.config/hypr/
       ;;
       "hypr")
-        nvim ~/.config/hypr/hyprland.conf
+        $EDITOR ~/.config/hypr/hyprland.conf
       ;;
       "keys")
-        nvim ~/.config/hypr/conf/keybinding.conf
+        $EDITOR ~/.config/hypr/conf/keybinding.conf
       ;;
       "autostart")
-        nvim ~/.config/hypr/conf/autostart.conf
+        $EDITOR ~/.config/hypr/conf/autostart.conf
       ;;
       "plugins")
-        nvim ~/.config/hypr/conf/custom/plugins.conf
+        $EDITOR ~/.config/hypr/conf/custom/plugins.conf
+      ;;
+      "winrules")
+        $EDITOR ~/.config/hypr/conf/windowrule.conf
+      ;;
+      "env")
+        $EDITOR ~/.config/hypr/conf/custom/environment.conf
       ;;
   esac
 }

@@ -3,11 +3,8 @@ if status is-interactive
     set fish_greeting
     set fish_tmux_autostart true
     set fish_tmux_autoname_session true
-    #fish_vi_key_bindings
+    fish_vi_key_bindings
     fastfetch -c ~/.config/fastfetch/minimal.jsonc
-    
-    set QT_QPA_PLATFORMTHEME qt5ct
-    set --erase QT_STYLE_OVERRIDE
 end
 
 function y
@@ -19,7 +16,7 @@ function y
 	rm -f -- "$tmp"
 end
 
-
+# Prepend sudo binds
 bind \e\e 'begin; set -l buf (commandline); commandline -r "sudo "$buf; end'
 bind -k nul accept-autosuggestion
 
@@ -36,7 +33,6 @@ thefuck --alias | source
 starship init fish | source
 fzf --fish | source
 pyenv init - | source
-
 
 # Custom miscellaneous aliases
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -63,6 +59,7 @@ alias ex="exit"
 
 # Custom shortcut aliases
 alias vps="ssh root@imbypass.pw"
+alias moviebox="ssh schaefer@10.0.0.196"
 alias ani="ani-cli --dub --skip"
 alias wg++="x86_64-w64-mingw32-g++"
 alias binds="nvim ~/.config/hypr/conf/keybinding.conf"
@@ -85,3 +82,4 @@ alias la 'eza -a'
 
 # Created by `pipx` on 2024-10-31 03:20:13
 set PATH $PATH /home/bypass/.local/bin
+set -x EDITOR 'nvim'

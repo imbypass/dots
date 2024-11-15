@@ -26,12 +26,14 @@ export MOZ_ENABLE_WAYLAND=0
 export GTK_THEME=catppuccin-mocha-mauve-standard+default
 export GTK2_RC_FILES=/usr/share/themes/Catppuccin-Mocha-Standard-Sapphire-Dark/gtk-2.0/gtkrc
 export MICRO_TRUECOLOR=1
-export EDITOR='foot -e nvim'
+export EDITOR='nvim'
 export VISUAL='qview'
 export TERM='xterm-256color'
 export ANI_CLI_MODE='dub'
 export BAT_THEME='mocha'
 export PYENV_ROOT="$HOME/.pyenv"
+export QT_QPA_PLATFORMTHEME='qt5ct'
+
 
 # Custom miscellaneous aliases
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
