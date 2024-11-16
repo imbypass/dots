@@ -4,7 +4,7 @@ if status is-interactive
     set fish_tmux_autostart true
     set fish_tmux_autoname_session true
     fish_vi_key_bindings
-    fastfetch -c ~/.config/fastfetch/minimal.jsonc
+    bash -c "~/.config/scripts/pacman.sh"
 end
 
 function y
@@ -52,9 +52,10 @@ alias v="nvim"
 alias py3="python3"
 alias vim="nvim"
 alias ff="fastfetch -c minimal"
-alias ghosts="fastfetch -c ~/.config/fastfetch/minimal.jsonc"
+alias pman="bash -c ~/.config/scripts/pacman.sh"
+alias ghosts="bash -c ~/.config/scripts/ghosts.sh"
 alias wp="waypaper --random > /dev/null"
-alias clear="/usr/bin/clear && ghosts"
+alias clear="/usr/bin/clear && pman"
 alias ex="exit"
 
 # Custom shortcut aliases

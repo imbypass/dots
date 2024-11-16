@@ -1,6 +1,7 @@
 [Added Associations]
 text/x-chdr=cursor.desktop;
 image/png=userapp-qview-E3XYT2.desktop;
+text/plain=org.gnome.gedit.desktop;
 
 [Default Applications]
 image/png=userapp-qview-E3XYT2.desktop

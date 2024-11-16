@@ -3,7 +3,7 @@
 # I'm sure there are better ways of doing this, but I REALLY don't work with bash/zsh scripts often.
 # This just seemed like a more convenient way to execute some of the common shit that I do on my PC.
 
-BDE_VERSION="1.21"
+BDE_VERSION="1.5"
 
 edit_prompt() {
   case "$1" in
@@ -16,17 +16,29 @@ edit_prompt() {
       "keys")
         $EDITOR ~/.config/hypr/conf/keybinding.conf
       ;;
+      "deco")
+        $EDITOR ~/.config/hypr/conf/decoration.conf
+      ;;
       "autostart")
         $EDITOR ~/.config/hypr/conf/autostart.conf
       ;;
       "plugins")
         $EDITOR ~/.config/hypr/conf/custom/plugins.conf
       ;;
-      "winrules")
+      "windows")
         $EDITOR ~/.config/hypr/conf/windowrule.conf
       ;;
       "env")
         $EDITOR ~/.config/hypr/conf/custom/environment.conf
+      ;;
+      "rofi")
+        $EDITOR ~/.config/rofi/config.rasi
+      ;;
+      "fish")
+        $EDITOR ~/.config/fish/config.fish
+      ;;
+      "custom")
+        $EDITOR ~/.config/hypr/conf/custom/general.conf
       ;;
   esac
 }
@@ -34,17 +46,11 @@ edit_prompt() {
 reload_prompt() {
 	case "$1" in
       "")
-        # reload_nwgdock
-        # reload_waybar
         reload_hypr
-        # reload_swaync
         reload_hyprpanel
       ;;
       "all")
-        # reload_nwgdock
-        # reload_waybar
         reload_hypr
-        # reload_swaync
         reload_hyprpanel
       ;;
       "dock")
@@ -94,8 +100,8 @@ reload_swaync() {
 
 reload_hyprpanel() {
   echo ":: Reloading HyprPanel.."
-  killall -9 ags > /dev/null
-  ags > /dev/null & disown
+  killall -9 agsv1 > /dev/null
+  agsv1 > /dev/null & disown
 }
 
 init_prompt() {
@@ -159,9 +165,6 @@ file_upload() {
 search_steamapps() {
   echo -ne "\033]0;Installed Steam Games\007"
   for id in $(ls ~/.local/share/Steam/steamapps/compatdata); do echo "$id: $(curl -s "https://store.steampowered.com/app/$id/" | grep -oP '(?<=<title>)[^<]*' )"; done
-    echo ""
-    echo "Press Enter to exit.."
-    read ext
 }
 
 search_fonts() {
@@ -173,9 +176,6 @@ search_fonts() {
    	    tr , \\n |
    	    sort |
    	    uniq
-  echo ""
-  echo "Press any key to exit.."
-  read ext
 }
 
 free_cache() {
@@ -188,9 +188,6 @@ remove_orphans() {
   echo -ne "\033]0;Removing orphaned packages..\007"
   echo ":: Removing orphaned packages.."
   pacman -Qdtq | sudo pacman -Rns - > /dev/null
-  echo ""
-  echo "Press Enter to exit.."
-  read ext
 }
 
 toggle_gamemode() {
