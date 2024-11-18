@@ -19,11 +19,14 @@ edit_prompt() {
       "deco")
         $EDITOR ~/.config/hypr/conf/decoration.conf
       ;;
-      "autostart")
+      "autorun")
         $EDITOR ~/.config/hypr/conf/autostart.conf
       ;;
       "plugins")
         $EDITOR ~/.config/hypr/conf/custom/plugins.conf
+      ;;
+      "layout")
+        $EDITOR ~/.config/hypr/conf/layout.conf
       ;;
       "windows")
         $EDITOR ~/.config/hypr/conf/windowrule.conf
@@ -39,6 +42,9 @@ edit_prompt() {
       ;;
       "custom")
         $EDITOR ~/.config/hypr/conf/custom/general.conf
+      ;;
+      "defaults")
+        $EDITOR ~/.config/mimeapps.list
       ;;
   esac
 }
@@ -216,61 +222,8 @@ display_version() {
 	echo $BDE_VERSION;
 }
 
-function exect() {
-  $@
-}
-
-function ui_fzf(){
-  apps=(
-    ";Reload Environment;bde rl all"
-    ";Clear Cached RAM;bde ram"
-  	";Remove Orphans;bde clean"
-    "󰸳;List Steam Games;bde steam"
-    ";List Installed Fonts;bde fonts"
-    ";Toggle Floating Windows;bde hf"
-    "󱎓;Toggle Game Mode;bde gm"
-    "󰸉;Change Wallpaper;bde wp"
-  )
-
-  fzf_result=$(printf "%s\n" "${apps[@]}" | awk -F ';' '{print $1" "$2}' | fzf --reverse)
-  [[ -z $fzf_result ]] && exit 0
-  fzf_result=${fzf_result/ /;}
-  line=$(printf "%s\n" "${apps[@]}" | grep "$fzf_result")
-  command=$(echo "$line" | sed 's/^[^;]*;//;s/^[^;]*;//')
-
-  exect "$command"
-  exit 0
-}
-
-function ui() {
-  CHOSEN=$(printf "reload environment\nfree cached ram\nremove orphans\nlist steam games\nlist installed fonts\ntoggle floating windows\ntoggle game mode\nchange wallpaper" | rofi_cmd)
-
-  case "$CHOSEN" in
-      "reload environment") ~/.config/scripts/bde rl all ;;
-      "free cached ram") foot ~/.config/scripts/bde ram ;;
-      "remove orphans") foot ~/.config/scripts/bde clean ;;
-      "list steam games") foot ~/.config/scripts/bde steam ;;
-      "list installed fonts") foot ~/.config/scripts/bde fonts ;;
-      "toggle floating windows") ~/.config/scripts/bde hf ;;
-      "toggle game mode") ~/.config/scripts/bde gm ;;
-      "change wallpaper") foot ~/.config/scripts/bde wp ;;
-      *) exit 1 ;;
-  esac
-}
-
-rofi_cmd() {
-    rofi -theme-str "listview {columns: 1; lines: 8;}" \
-        -dmenu -p "configuration" -mesg "bypassde" -markup-rows
-}
-
-[[ $1 == "" ]] && ui_fzf
-
-
 if [[ $1 == "rl" ]];then
   reload_prompt $2
-
-elif [[ $1 == "apps" ]];then
-  show_launcher
 
 elif [[ $1 == "wp" ]];then
   waypaper
@@ -278,11 +231,17 @@ elif [[ $1 == "wp" ]];then
 elif [[ $1 == "edit" ]];then
   edit_prompt $2
 
+elif [[ $1 == "cache" ]];then
+	free_cache
+
 elif [[ $1 == "ram" ]];then
 	free_cache
 
 elif [[ $1 == "gm" ]];then
 	toggle_gamemode
+  
+elif [[ $1 == "rm" ]];then
+	remove_orphans
 
 elif [[ $1 == "clean" ]];then
 	remove_orphans
@@ -302,14 +261,7 @@ elif [[ $1 == "up" ]];then
 elif [[ $1 == "hf" ]];then
 	toggle_floatwindows
 
-elif [[ $1 == "loop" ]];then
-  while true; do
-    bde
-    echo "Press enter to continue, e to exit" 
-    read -n 1 REPLY
-    clear
-    [[ $REPLY == "e" ]] && exit 0
-  done
 else
   echo "Unknown argument"
+
 fi

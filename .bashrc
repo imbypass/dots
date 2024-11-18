@@ -30,7 +30,7 @@ export EDITOR='nvim'
 export VISUAL='qview'
 export TERM='xterm-256color'
 export ANI_CLI_MODE='dub'
-export BAT_THEME='mocha'
+export BAT_THEME="Catppuccin Mocha"
 export PYENV_ROOT="$HOME/.pyenv"
 export QT_QPA_PLATFORMTHEME='qt5ct'
 
@@ -52,8 +52,8 @@ alias nano="nvim"
 alias py3="python3"
 alias vim="nvim"
 alias ff="fastfetch"
-alias ghosts="fastfetch -c ~/.config/fastfetch/minimal.jsonc"
-alias wp="waypaper"
+alias ghosts="~/.config/scripts/ghosts.sh"
+alias wp="hyprwall"
 
 # Custom shortcut aliases
 alias vps="ssh root@imbypass.pw"
@@ -74,31 +74,6 @@ alias fx="hyprshade toggle vibrance"
 # Initialize pyenv
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-
-#!/bin/sh
-if [ "$TERM" = "linux" ]; then
-	/bin/echo -e "
-	\e]P0#191724
-	\e]P1#eb6f92
-	\e]P2#9ccfd8
-	\e]P3#f6c177
-	\e]P4#31748f
-	\e]P5#c4a7e7
-	\e]P6#ebbcba
-	\e]P7#e0def4
-	\e]P8#26233a
-	\e]P9#eb6f92
-	\e]PA#9ccfd8
-	\e]PB#f6c177
-	\e]PC#31748f
-	\e]PD#c4a7e7
-	\e]PE#ebbcba
-	\e]PF#e0def4
-	"
-	# get rid of artifacts
-	clear
-fi
-
 
 # Start Hyprland if not already running
 pidof Hyprland || Hyprland > ~/.cache/hyprland/hyprland.log &
