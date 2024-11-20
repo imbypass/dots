@@ -402,7 +402,7 @@
   "theme.bar.buttons.modules.submap.border": "#94e2d5",
   "theme.bar.buttons.modules.submap.icon": "#94e2d5",
   "theme.bar.buttons.modules.submap.icon_background": "#242438",
-  "theme.bar.opacity": 95,
+  "theme.bar.opacity": 85,
   "bar.workspaces.show_icons": true,
   "bar.workspaces.showWsIcons": false,
   "theme.bar.buttons.workspaces.fontSize": ".2em",
@@ -421,7 +421,7 @@
   "bar.workspaces.icons.occupied": "",
   "theme.bar.buttons.workspaces.numbered_active_highlight_padding": "0.4em",
   "bar.workspaces.spacing": 2,
-  "bar.launcher.icon": "",
+  "bar.launcher.icon": "  ",
   "bar.windowtitle.truncation": true,
   "theme.bar.buttons.windowtitle.spacing": "0.75em",
   "bar.windowtitle.label": false,
@@ -504,6 +504,10 @@
     },
     "Windscribe2": {
       "icon": "󰖂",
+      "color": "#ffffff"
+    },
+    "spotify-client": {
+      "icon": "",
       "color": "#ffffff"
     }
   }
