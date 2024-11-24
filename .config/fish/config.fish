@@ -4,7 +4,7 @@ if status is-interactive
     set fish_tmux_autostart true
     set fish_tmux_autoname_session true
     fish_vi_key_bindings
-    bash -c "~/.config/scripts/pacman.sh"
+    #bash -c "~/.config/scripts/pacman.sh"
 end
 
 function y
@@ -26,7 +26,18 @@ fish_add_path /home/bypass/local/bin
 fish_add_path /home/bypass/.config/scripts
 fish_add_path /home/linuxbrew/.linuxbrew/bin
 
+# Starship Transient Prompt
+function starship_transient_prompt_func
+  starship module character
+end
+
+#function starship_transient_rprompt_func
+  #starship module time
+#end
+
 # Other Inits? (not exactly sure what to call these)
+starship init fish | source
+enable_transience
 zoxide init fish --cmd cd | source
 thefuck --alias | source
 /home/linuxbrew/.linuxbrew/bin/brew shellenv | source
@@ -39,7 +50,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 # Custom system aliases
-alias cl="clear"
+alias cl="/usr/bin/clear"
 alias tree="eza -l --tree --icons"
 alias l="ls"
 alias ls="eza --icons"
@@ -49,13 +60,14 @@ alias h="hyprctl"
 alias cat="bat"
 alias nano="nvim"
 alias v="nvim"
+alias f="microfetch"
 alias py3="python3"
 alias vim="nvim"
 alias ff="fastfetch -c minimal"
 alias pman="bash -c ~/.config/scripts/pacman.sh"
 alias ghosts="bash -c ~/.config/scripts/ghosts.sh"
 alias wp="waypaper --random > /dev/null"
-alias clear="/usr/bin/clear && pman"
+alias cl="/usr/bin/clear && pman"
 alias ex="exit"
 
 # Custom shortcut aliases

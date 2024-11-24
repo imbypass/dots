@@ -193,9 +193,9 @@
         "ImageZoom": {
             "enabled": true,
             "size": 100,
-            "zoom": 3.6999999999999997,
+            "zoom": 17.96153846153846,
             "nearestNeighbour": false,
-            "square": false,
+            "square": true,
             "saveZoomValues": true,
             "invertScroll": true,
             "zoomSpeed": 0.5
@@ -389,7 +389,8 @@
             "memberList": true,
             "voiceUsers": true,
             "reactorsList": true,
-            "colorChatMessages": false
+            "colorChatMessages": false,
+            "pollResults": true
         },
         "SecretRingToneEnabler": {
             "enabled": false
@@ -725,7 +726,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1731344222388
+        "settingsSyncVersion": 1732242521643
     },
     "notifyAboutUpdates": true
 }

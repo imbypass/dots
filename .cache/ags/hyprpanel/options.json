@@ -11,7 +11,7 @@
   "menus.dashboard.shortcuts.left.shortcut3.command": "vesktop",
   "menus.dashboard.shortcuts.left.shortcut2.command": "spotify",
   "scalingPriority": "hyprland",
-  "notifications.position": "top right",
+  "notifications.position": "top left",
   "menus.clock.time.hideSeconds": true,
   "menus.clock.weather.location": "32735",
   "theme.bar.scaling": 100,
@@ -36,7 +36,7 @@
   "theme.bar.buttons.borderSize": "0.15em",
   "theme.bar.buttons.dashboard.enableBorder": false,
   "theme.bar.margin_sides": "0.5em",
-  "theme.bar.buttons.padding_x": "0rem",
+  "theme.bar.buttons.padding_x": "0.45rem",
   "theme.bar.buttons.spacing": "0.4em",
   "theme.bar.outer_spacing": "0.3em",
   "menus.dashboard.shortcuts.left.shortcut1.icon": "󰖟",
@@ -421,7 +421,7 @@
   "bar.workspaces.icons.occupied": "",
   "theme.bar.buttons.workspaces.numbered_active_highlight_padding": "0.4em",
   "bar.workspaces.spacing": 2,
-  "bar.launcher.icon": "  ",
+  "bar.launcher.icon": " 󰸶 ",
   "bar.windowtitle.truncation": true,
   "theme.bar.buttons.windowtitle.spacing": "0.75em",
   "bar.windowtitle.label": false,
@@ -443,7 +443,9 @@
       "left": [
         "dashboard"
       ],
-      "middle": [],
+      "middle": [
+        "workspaces"
+      ],
       "right": [
         "systray",
         "volume",
@@ -500,15 +502,31 @@
   "bar.systray.customIcons": {
     "chrome_status_icon_1": {
       "icon": "",
-      "color": "#ffffff"
+      "color": "#cdd6f4"
     },
     "Windscribe2": {
-      "icon": "󰖂",
-      "color": "#ffffff"
+      "icon": "",
+      "color": "#cdd6f4"
     },
     "spotify-client": {
       "icon": "",
-      "color": "#ffffff"
+      "color": "#cdd6f4"
+    },
+    "steam": {
+      "icon": "",
+      "color": "#cdd6f4"
+    },
+    "blueman": {
+      "icon": "",
+      "color": "#cdd6f4"
+    },
+    "nm-applet": {
+      "icon": "",
+      "color": "#cdd6f4"
     }
-  }
+  },
+  "notifications.showActionsOnHover": true,
+  "notifications.ignore": [
+    "spotify"
+  ]
 }
