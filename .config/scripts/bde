@@ -19,7 +19,7 @@ edit_prompt() {
       "deco")
         $EDITOR ~/.config/hypr/conf/decoration.conf
       ;;
-      "autorun")
+      "startup")
         $EDITOR ~/.config/hypr/conf/autostart.conf
       ;;
       "plugins")
