@@ -30,7 +30,7 @@ pyenv init - | source
 starship init fish | source
 
 # Enable transient prompt for Starship/Fish
-enable_transience
+#enable_transience
 
 # Dotfiles git alias
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
