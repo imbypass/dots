@@ -79,6 +79,4 @@ fish_add_path /home/linuxbrew/.linuxbrew/bin
 
 # Created by `pipx` on 2024-10-31 03:20:13
 set PATH $PATH /home/bypass/.local/bin
-set -x EDITOR 'nvim'
-set -x BAT_THEME 'Catppuccin Mocha'
-
+#set -x BAT_THEME 'Catppuccin Mocha'
