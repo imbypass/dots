@@ -6,4 +6,4 @@
 ![image](https://imbypass.pw/upload/X7st.png)
 
 
-###### There is no real work done to make this installable. Your best off just downloading and using individual parts.
+###### There is no real work done to make this installable. You're best off just downloading and using individual parts.
