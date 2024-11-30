@@ -44,16 +44,17 @@ alias ls="eza --icons"
 alias lsa="eza -la --icons"
 alias l 'ls'
 alias la 'ls -a'
-alias cl="/usr/bin/clear && pman"
+alias cl="clear"
 alias ex="exit"
 alias grep="rg"
 alias cat="bat"
-alias h="hyprctl"
-alias f="microfetch"
 alias py3="python3"
 alias v="nvim"
 alias vim="nvim"
 alias nano="nvim"
+alias fetch="bfetch"
+alias f="bfetch"
+alias h="hyprctl"
 
 # Ricing commands - Making little things less painful
 alias pman="bash -c ~/.config/scripts/pacman.sh"
@@ -79,4 +80,3 @@ fish_add_path /home/linuxbrew/.linuxbrew/bin
 
 # Created by `pipx` on 2024-10-31 03:20:13
 set PATH $PATH /home/bypass/.local/bin
-#set -x BAT_THEME 'Catppuccin Mocha'

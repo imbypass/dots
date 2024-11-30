@@ -10,6 +10,9 @@ edit_prompt() {
       "")
         $EDITOR ~/.config/hypr/
       ;;
+      "colors")
+        $EDITOR ~/.config/hypr/conf/custom/mocha.conf
+      ;;
       "hypr")
         $EDITOR ~/.config/hypr/hyprland.conf
       ;;
