@@ -53,6 +53,7 @@ alias v="nvim"
 alias vim="nvim"
 alias nano="nvim"
 alias fetch="bfetch"
+alias microfetch="bfetch"
 alias f="bfetch"
 alias h="hyprctl"
 

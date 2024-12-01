@@ -40,6 +40,12 @@ edit_prompt() {
       "rofi")
         $EDITOR ~/.config/rofi/config.rasi
       ;;
+      "term")
+        $EDITOR ~/.config/alacritty/alacritty.toml
+      ;;
+      "tmux")
+        $EDITOR ~/.config/tmux/tmux.conf
+      ;;
       "fish")
         $EDITOR ~/.config/fish/config.fish
       ;;

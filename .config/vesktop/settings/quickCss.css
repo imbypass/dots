@@ -3,7 +3,6 @@
 
 :root {
     --accent-color: var(--catppuccin-mocha-sapphire);
-    --font: "Inter Display SemiBold";
-    --font2: "JetBrainsMono Nerd Font";
-    --font-code: "JetBrainsMono Nerd Font";
+    --font: "Iosevka NFM";
+    --font-code: "Iosevka NFM";
 }

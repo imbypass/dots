@@ -1,6 +1,6 @@
 window, mainbox, entry {
-    font: "Geist SemiBold 12";
+    font: "Iosevka Nerd Font SemiBold 12";
 }
 i, small {
-    font: "Maple Mono NF SemiBold 12";
+    font: "Iosevka Nerd Font SemiBold 12";
 }
