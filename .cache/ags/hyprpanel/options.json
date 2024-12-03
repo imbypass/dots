@@ -1,6 +1,6 @@
 {
   "bar.customModules.updates.pollingInterval": 1440000,
-  "terminal": "foot",
+  "terminal": "alacritty",
   "theme.font.name": "Iosevka Nerd Font",
   "theme.bar.floating": false,
   "theme.bar.buttons.enableBorders": false,
@@ -15,9 +15,9 @@
   "menus.clock.time.hideSeconds": true,
   "menus.clock.weather.location": "32735",
   "theme.bar.scaling": 100,
-  "bar.clock.format": "%l:%M %p    ",
+  "bar.clock.format": "%l:%M %p  ",
   "theme.bar.menus.monochrome": false,
-  "theme.bar.location": "bottom",
+  "theme.bar.location": "top",
   "theme.bar.buttons.workspaces.enableBorder": false,
   "theme.bar.buttons.windowtitle.enableBorder": false,
   "bar.windowtitle.custom_title": true,
@@ -71,14 +71,14 @@
   "theme.bar.buttons.network.text": "#f9e2af",
   "theme.bar.buttons.network.icon": "#f9e2af",
   "theme.bar.buttons.network.border": "#f9e2af",
-  "theme.bar.buttons.dashboard.icon": "#74c6ec",
+  "theme.bar.buttons.dashboard.icon": "#cdd6f4",
   "theme.bar.buttons.dashboard.border": "#74c6ec",
   "theme.bar.buttons.workspaces.border": "#b4befe",
   "theme.bar.buttons.workspaces.numbered_active_underline_color": "#b4befe",
-  "theme.bar.buttons.workspaces.active": "#b4befe",
-  "theme.bar.buttons.workspaces.hover": "#b4befe",
-  "theme.bar.buttons.workspaces.occupied": "#b4befe",
-  "theme.bar.buttons.workspaces.available": "#b4befe",
+  "theme.bar.buttons.workspaces.active": "#cdd6f4",
+  "theme.bar.buttons.workspaces.hover": "#cdd6f4",
+  "theme.bar.buttons.workspaces.occupied": "#cdd6f4",
+  "theme.bar.buttons.workspaces.available": "#cdd6f4",
   "theme.bar.buttons.media.text": "#a6e3a1",
   "theme.bar.buttons.media.icon": "#a6e3a1",
   "theme.bar.buttons.media.border": "#a6e3a1",
@@ -287,7 +287,7 @@
   "theme.bar.buttons.notifications.icon": "#b4befe",
   "theme.bar.buttons.notifications.background": "#242438",
   "theme.bar.buttons.clock.icon": "#f5c2e7",
-  "theme.bar.buttons.clock.text": "#74c6ec",
+  "theme.bar.buttons.clock.text": "#cdd6f4",
   "theme.bar.buttons.clock.background": "#242438",
   "theme.bar.buttons.battery.icon": "#f9e2af",
   "theme.bar.buttons.battery.text": "#f9e2af",
@@ -417,8 +417,8 @@
   "menus.dashboard.shortcuts.right.shortcut3.icon": "",
   "menus.dashboard.shortcuts.left.shortcut4.icon": "󰝰",
   "bar.workspaces.icons.active": "",
-  "bar.workspaces.icons.available": "",
-  "bar.workspaces.icons.occupied": "",
+  "bar.workspaces.icons.available": "",
+  "bar.workspaces.icons.occupied": "",
   "theme.bar.buttons.workspaces.numbered_active_highlight_padding": "0.4em",
   "bar.workspaces.spacing": 2,
   "bar.launcher.icon": "  ",
@@ -501,32 +501,27 @@
   "theme.bar.buttons.systray.enableBorder": false,
   "bar.systray.customIcons": {
     "chrome_status_icon_1": {
-      "icon": "",
-      "color": "#cdd6f4"
+      "icon": ""
     },
     "Windscribe2": {
-      "icon": "",
-      "color": "#cdd6f4"
+      "icon": ""
     },
     "spotify-client": {
-      "icon": "",
-      "color": "#cdd6f4"
+      "icon": ""
     },
     "steam": {
-      "icon": "",
-      "color": "#cdd6f4"
+      "icon": ""
     },
     "blueman": {
-      "icon": "",
-      "color": "#cdd6f4"
+      "icon": ""
     },
     "nm-applet": {
-      "icon": "",
-      "color": "#cdd6f4"
+      "icon": ""
     }
   },
   "notifications.showActionsOnHover": true,
   "notifications.ignore": [
     "spotify"
-  ]
+  ],
+  "theme.bar.buttons.systray.customIcon": "#cdd6f4"
 }
