@@ -68,6 +68,7 @@ alias moviebox="ssh schaefer@10.0.0.196"
 alias ani="ani-cli --dub --skip"
 alias wg++="x86_64-w64-mingw32-g++"
 alias unset="set --erase"
+alias cb="~/.var/app/com.usebottles.bottles/data/bottles/bottles/Battle.net/drive_c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_classic_era_/CurseBreaker"
 
 # Custom ricing aliases
 alias clock="tty-clock -t -c -b -B"

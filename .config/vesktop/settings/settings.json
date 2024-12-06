@@ -122,7 +122,7 @@
             "enabled": true
         },
         "CustomRPC": {
-            "enabled": false,
+            "enabled": true,
             "type": 0,
             "timestampMode": 0
         },
@@ -667,7 +667,7 @@
             "enabled": true
         },
         "WebRichPresence (arRPC)": {
-            "enabled": false
+            "enabled": true
         },
         "ConsoleJanitor": {
             "enabled": false
@@ -726,7 +726,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1733088451274
+        "settingsSyncVersion": 1733250514248
     },
     "notifyAboutUpdates": true
 }

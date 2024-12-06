@@ -49,6 +49,7 @@ alias vim="nvim"
 alias ff="fastfetch"
 alias ghosts="~/.config/scripts/ghosts.sh"
 alias wp="hyprwall"
+alias cb="~/.var/app/com.usebottles.bottles/data/bottles/bottles/Battle.net/drive_c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_classic_era_/CurseBreaker"
 
 # Custom shortcut aliases
 alias vps="ssh root@imbypass.pw"

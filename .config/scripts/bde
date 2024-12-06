@@ -132,8 +132,8 @@ init_wp() {
 	echo " => Initializing swww..."
 	swww-daemon > /dev/null & disown
 	swww-daemon --format xrgb > /dev/null & disown
-	sleep 0.5
-	python -O ~/.config/scripts/set-wallpaper.py -P > /dev/null & disown 
+	# sleep 0.5
+	# python -O ~/.config/scripts/set-wallpaper.py -P > /dev/null & disown 
 }
 
 init_xdg() {
