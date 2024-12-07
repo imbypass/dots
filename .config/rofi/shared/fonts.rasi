@@ -1,6 +1,6 @@
 window, mainbox, entry {
-    font: "Iosevka Nerd Font SemiBold 12";
+    font: "SF Pro Display SemiBold 11";
 }
 i, small {
-    font: "Iosevka Nerd Font SemiBold 12";
+    font: "SF Pro Display Bold 12";
 }

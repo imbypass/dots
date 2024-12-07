@@ -3,7 +3,7 @@ general.import = [
 ]
 
 [font]
-size = 13
+size = 12
 
 [font.bold]
 family = "SFMono Nerd Font Mono"

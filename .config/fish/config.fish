@@ -41,9 +41,10 @@ alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 # Custom system aliases
 alias tree="eza -l --tree --icons"
 alias ls="eza --icons"
-alias lsa="eza -la --icons"
+alias ls="g --table --icons"
 alias l 'ls'
 alias la 'ls -a'
+alias lsa="ls -la"
 alias cl="clear"
 alias ex="exit"
 alias grep="rg"
