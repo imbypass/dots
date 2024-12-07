@@ -51,7 +51,7 @@
   "theme.bar.buttons.volume.enableBorder": false,
   "bar.workspaces.showAllActive": true,
   "bar.workspaces.show_numbered": false,
-  "bar.workspaces.workspaces": 5,
+  "bar.workspaces.workspaces": 2,
   "bar.network.truncation": true,
   "bar.network.label": false,
   "bar.network.truncation_size": 0,
@@ -403,8 +403,8 @@
   "theme.bar.buttons.modules.submap.icon": "#94e2d5",
   "theme.bar.buttons.modules.submap.icon_background": "#242438",
   "theme.bar.opacity": 90,
-  "bar.workspaces.show_icons": true,
-  "bar.workspaces.showWsIcons": false,
+  "bar.workspaces.show_icons": false,
+  "bar.workspaces.showWsIcons": true,
   "theme.bar.buttons.workspaces.fontSize": "1em",
   "bar.windowtitle.icon": true,
   "bar.media.show_active_only": true,
@@ -538,5 +538,7 @@
   "theme.bar.menus.border.size": "0.13em",
   "bar.workspaces.applicationIconEmptyWorkspace": "",
   "bar.windowtitle.class_name": true,
-  "theme.bar.buttons.clock.enableBorder": false
+  "theme.bar.buttons.clock.enableBorder": false,
+  "bar.workspaces.hideUnoccupied": true,
+  "bar.workspaces.workspaceMask": false
 }

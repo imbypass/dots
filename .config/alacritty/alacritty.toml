@@ -19,9 +19,9 @@ style = "Italic"
 
 [font.normal]
 family = "SFMono Nerd Font Mono"
-style = "SemiBold"
+style = "Regular"
 
 [window]
-padding = { x = 5, y = 5 }
+padding = { x = 8, y = 9 }
 title = "Terminal"
 dynamic_padding = true

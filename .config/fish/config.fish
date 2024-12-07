@@ -28,6 +28,7 @@ thefuck --alias | source
 fzf --fish | source
 pyenv init - | source
 starship init fish | source
+g --init fish | source
 
 # Enable transient prompt for Starship/Fish
 #enable_transience
@@ -41,7 +42,7 @@ alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 # Custom system aliases
 alias tree="eza -l --tree --icons"
 alias ls="eza --icons"
-alias ls="g --table --icons"
+alias ls="g --table --icons --title"
 alias l 'ls'
 alias la 'ls -a'
 alias lsa="ls -la"
