@@ -6,20 +6,20 @@ general.import = [
 size = 13
 
 [font.bold]
-family = "Iosevka Term"
+family = "SFMono Nerd Font Mono"
 style = "Bold"
 
 [font.bold_italic]
-family = "Iosevka Term"
+family = "SFMono Nerd Font Mono"
 style = "Bold Italic"
 
 [font.italic]
-family = "Iosevka Term"
+family = "SFMono Nerd Font Mono"
 style = "Italic"
 
 [font.normal]
-family = "Iosevka Term"
-style = "Regular"
+family = "SFMono Nerd Font Mono"
+style = "SemiBold"
 
 [window]
 padding = { x = 5, y = 5 }
