@@ -1,5 +1,5 @@
 window, mainbox, entry {
-    font: "SF Pro Display 12";
+    font: "SF Pro Display SemiBold 12";
 }
 i, small {
     font: "SF Pro Display 9";

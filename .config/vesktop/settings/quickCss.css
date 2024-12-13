@@ -1,9 +1,14 @@
+/* Import remote css */
 @import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha-blue.theme.css");
 @import url("https://imbypass.pw/catppuccin-mocha.patch.css");
-@import url("https://cdn.jsdelivr.net/npm/sf-mono-webfont@1.0.0/stylesheet.min.css");
 
+/* Set accent color and fonts */
 :root {
     --accent-color: var(--catppuccin-mocha-blue);
     --font: "SF Pro Display";
-    --font-code: "SF Mono";
+    --font-code: "JetBrainsMono Nerd Font Mono";
 }
+
+
+/* remove Play Again container */
+.container_e5a9ed { display: none; }

@@ -2,9 +2,11 @@
 if status is-interactive
     set TERM 'xterm-256color'
     set fish_greeting
-    set fish_tmux_autostart true
+    set fish_tmux_autostart false
     set fish_tmux_autoname_session true
     fish_vi_key_bindings
+    echo ""
+    motivate 0 8 8 0 8 8
 end
 
 # Alt+Escape to prepend 'sudo'
@@ -52,7 +54,6 @@ alias grep="rg"
 alias cat="bat"
 alias py3="python3"
 alias v="nvim"
-alias vim="nvim"
 alias nano="nvim"
 alias fetch="bfetch"
 alias microfetch="bfetch"

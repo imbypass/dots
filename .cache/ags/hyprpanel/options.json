@@ -17,7 +17,7 @@
   "theme.bar.scaling": 100,
   "bar.clock.format": "%l:%M %p",
   "theme.bar.menus.monochrome": true,
-  "theme.bar.location": "bottom",
+  "theme.bar.location": "top",
   "theme.bar.buttons.workspaces.enableBorder": false,
   "theme.bar.buttons.windowtitle.enableBorder": false,
   "bar.windowtitle.custom_title": true,
@@ -532,7 +532,8 @@
   "bar.workspaces.applicationIconMap": {
     "[vV]esktop": "",
     "title:YouTube": "",
-    "class:Alacritty$": ""
+    "class:Alacritty$": "",
+    "class:nemo$": ""
   },
   "bar.workspaces.numbered_active_indicator": "highlight",
   "theme.bar.menus.border.size": "0.13em",

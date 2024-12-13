@@ -8,7 +8,7 @@ BDE_VERSION="1.5"
 edit_prompt() {
   case "$1" in
       "")
-        $EDITOR ~/.config/hypr/
+        $EDITOR ~/.config/scripts/bde
       ;;
       "colors")
         $EDITOR ~/.config/hypr/conf/custom/mocha.conf
@@ -66,6 +66,9 @@ reload_prompt() {
       ;;
       "all")
         reload_hypr
+        reload_hyprpanel
+      ;;
+      "ags")
         reload_hyprpanel
       ;;
       "dock")
@@ -132,8 +135,6 @@ init_wp() {
 	echo " => Initializing swww..."
 	swww-daemon > /dev/null & disown
 	swww-daemon --format xrgb > /dev/null & disown
-	# sleep 0.5
-	# python -O ~/.config/scripts/set-wallpaper.py -P > /dev/null & disown 
 }
 
 init_xdg() {
@@ -153,28 +154,8 @@ init_xdg() {
 	sleep 1
 }
 
-wallpaper_prompt() {
-  echo -ne "\033]0;wallpaper chooser\007"
-  ls ~/Pictures/Wallpapers/catppuccin | \
-  fzf --preview="~/.config/scripts/bde wp ~/Pictures/Wallpapers/catppuccin/{}" | \
-  xargs -I {} ~/.config/scripts/bde wp ~/Pictures/Wallpapers/catppuccin/{}
-}
-
-set_wallpaper() {
-	if [[ $1 == "" ]]; then
-	    # echo $RED":: No wallpaper provided. Exiting..."
-      wallpaper_prompt
-	else
-	    if [[ $- == *i* ]]
-      then
-        echo ":: Changing wallpaper to: $1..."
-      fi
-	   	python -O ~/.config/scripts/set-wallpaper.py -I $1 > /dev/null &
-	fi
-}
-
 file_upload() {
-  curl -X POST -F "fileToUpload=@$1" https://imbypass.pw/upload/index.php
+  curl -X POST -F "file=@$1" https://imbypass.pw/upload/index.php
 }
 
 search_steamapps() {
@@ -206,7 +187,7 @@ remove_orphans() {
 }
 
 toggle_gamemode() {
-   	echo ":: Toggling game mode..."
+  echo ":: Toggling game mode..."
 	HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
 	if [ "$HYPRGAMEMODE" = 1 ] ; then
 	    hyprctl --batch "\
@@ -223,8 +204,8 @@ toggle_gamemode() {
 }
 
 toggle_floatwindows() {
-   	echo ":: Toggling all floating windows..."
-   	hyprctl dispatch workspaceopt allfloat > /dev/null
+  echo ":: Toggling all floating windows..."
+  hyprctl dispatch workspaceopt allfloat > /dev/null
 }
 
 display_version() {
@@ -243,7 +224,7 @@ elif [[ $1 == "edit" ]];then
 elif [[ $1 == "cache" ]];then
 	free_cache
 
-elif [[ $1 == "ram" ]];then
+elif [[ $1 == "free" ]];then
 	free_cache
 
 elif [[ $1 == "gm" ]];then
