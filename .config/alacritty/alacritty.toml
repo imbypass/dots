@@ -6,22 +6,22 @@ general.import = [
 size = 13
 
 [font.bold]
-family = "JetBrainsMono Nerd Font Mono"
+family = "IosevkaTerm Nerd Font Mono"
 style = "Bold"
 
 [font.bold_italic]
-family = "JetBrainsMono Nerd Font Mono"
+family = "IosevkaTerm Nerd Font Mono"
 style = "Bold Italic"
 
 [font.italic]
-family = "JetBrainsMono Nerd Font Mono"
+family = "IosevkaTerm Nerd Font Mono"
 style = "Italic"
 
 [font.normal]
-family = "JetBrainsMono Nerd Font Mono"
+family = "IosevkaTerm Nerd Font Mono"
 style = "Regular"
 
 [window]
-padding = { x = 28, y = 29 }
+padding = { x = 20, y = 10 }
 title = "Terminal"
 dynamic_padding = true

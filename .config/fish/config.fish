@@ -2,11 +2,11 @@
 if status is-interactive
     set TERM 'xterm-256color'
     set fish_greeting
-    set fish_tmux_autostart false
+    set fish_tmux_autostart true
     set fish_tmux_autoname_session true
     fish_vi_key_bindings
     echo ""
-    motivate 0 8 8 0 8 8
+    #motivate 0 8 8 0 8 8
 end
 
 # Alt+Escape to prepend 'sudo'
@@ -72,6 +72,7 @@ alias ani="ani-cli --dub --skip"
 alias wg++="x86_64-w64-mingw32-g++"
 alias unset="set --erase"
 alias cb="~/.var/app/com.usebottles.bottles/data/bottles/bottles/Battle.net/drive_c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_classic_era_/CurseBreaker"
+alias ncmp="ncmpcpp"
 
 # Custom ricing aliases
 alias clock="tty-clock -t -c -b -B"
