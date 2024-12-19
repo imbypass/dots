@@ -2,11 +2,21 @@
 if status is-interactive
     set TERM 'xterm-256color'
     set fish_greeting
-    set fish_tmux_autostart true
+    set fish_tmux_autostart false
     set fish_tmux_autoname_session true
     fish_vi_key_bindings
     echo ""
     #motivate 0 8 8 0 8 8
+end
+
+# Yazi shell wrapper
+function y
+	set tmp (mktemp -t "yazi-cwd.XXXXXX")
+	yazi $argv --cwd-file="$tmp"
+	if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+		builtin cd -- "$cwd"
+	end
+	rm -f -- "$tmp"
 end
 
 # Alt+Escape to prepend 'sudo'
@@ -46,7 +56,7 @@ alias tree="eza -l --tree --icons"
 alias ls="eza --icons"
 alias ls="g --table --icons --title"
 alias l 'ls'
-alias la 'ls -a'
+alias la 'ls -la'
 alias lsa="ls -la"
 alias cl="clear"
 alias ex="exit"

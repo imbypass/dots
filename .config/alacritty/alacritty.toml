@@ -3,22 +3,22 @@ general.import = [
 ]
 
 [font]
-size = 13
+size = 14
 
 [font.bold]
-family = "IosevkaTerm Nerd Font Mono"
+family = "ZedMono Nerd Font Mono"
 style = "Bold"
 
 [font.bold_italic]
-family = "IosevkaTerm Nerd Font Mono"
+family = "ZedMono Nerd Font Mono"
 style = "Bold Italic"
 
 [font.italic]
-family = "IosevkaTerm Nerd Font Mono"
+family = "ZedMono Nerd Font Mono"
 style = "Italic"
 
 [font.normal]
-family = "IosevkaTerm Nerd Font Mono"
+family = "ZedMono Nerd Font Mono"
 style = "Regular"
 
 [window]
