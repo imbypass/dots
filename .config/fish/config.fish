@@ -2,11 +2,9 @@
 if status is-interactive
     set TERM 'xterm-256color'
     set fish_greeting
-    set fish_tmux_autostart false
+    set fish_tmux_autostart true
     set fish_tmux_autoname_session true
     fish_vi_key_bindings
-    echo ""
-    #motivate 0 8 8 0 8 8
 end
 
 # Yazi shell wrapper

@@ -1,4 +1,20 @@
 {
+  "bar.layouts": {
+    "0": {
+      "left": [
+        "dashboard",
+        "workspaces"
+      ],
+      "middle": [
+        "windowtitle"
+      ],
+      "right": [
+        "systray",
+        "volume",
+        "clock"
+      ]
+    }
+  },
   "bar.customModules.updates.pollingInterval": 1440000,
   "terminal": "alacritty",
   "theme.font.name": "SF Pro Display",
@@ -11,7 +27,7 @@
   "menus.dashboard.shortcuts.left.shortcut3.command": "vesktop",
   "menus.dashboard.shortcuts.left.shortcut2.command": "spotify",
   "scalingPriority": "hyprland",
-  "notifications.position": "top left",
+  "notifications.position": "bottom right",
   "menus.clock.time.hideSeconds": true,
   "menus.clock.weather.location": "32735",
   "theme.bar.scaling": 100,
@@ -25,13 +41,6 @@
   "menus.dashboard.shortcuts.enabled": false,
   "menus.dashboard.directories.enabled": true,
   "theme.osd.enable": true,
-  "menus.dashboard.shortcuts.right.shortcut3.command": "rofi -show drun",
-  "menus.dashboard.directories.left.directory1.command": "bash -c \"rofi -show drun\"",
-  "menus.dashboard.directories.left.directory2.command": "bash -c \"agsv1 -t notificationsmenu\"",
-  "menus.dashboard.directories.left.directory3.command": "bash -c \"agsv1 -t settings-dialog\"",
-  "menus.dashboard.directories.right.directory1.command": "bash -c \"nautilus $HOME/Documents/\"",
-  "menus.dashboard.directories.right.directory2.command": "bash -c \"nautilus $HOME/Downloads/",
-  "menus.dashboard.directories.right.directory3.command": "bash -c \"nautilus $HOME/Pictures/\"bash -c \"nautilus $HOME/Pictures/\"bash -c \"nautilus $HOME/Pictures/\"bash -c \"nautilus $HOME/Pictures/\"",
   "theme.bar.menus.menu.notifications.height": "83em",
   "theme.bar.buttons.borderSize": "0.15em",
   "theme.bar.buttons.dashboard.enableBorder": false,
@@ -41,13 +50,6 @@
   "theme.bar.outer_spacing": "0.3em",
   "menus.dashboard.shortcuts.left.shortcut1.icon": "󰖟",
   "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Firefox",
-  "bar.windowtitle.title_map": [
-    [
-      "*",
-      " ",
-      " "
-    ]
-  ],
   "theme.bar.buttons.volume.enableBorder": false,
   "bar.workspaces.showAllActive": true,
   "bar.workspaces.show_numbered": false,
@@ -62,8 +64,8 @@
   "theme.bar.background": "#1e1e2e",
   "theme.bar.buttons.style": "default",
   "theme.bar.buttons.monochrome": false,
-  "theme.bar.buttons.windowtitle.text": "#f5c2e7",
-  "theme.bar.buttons.windowtitle.icon": "#f5c2e7",
+  "theme.bar.buttons.windowtitle.text": "#cdd6f4",
+  "theme.bar.buttons.windowtitle.icon": "#cdd6f4",
   "theme.bar.buttons.windowtitle.border": "#f5c2e7",
   "theme.bar.buttons.bluetooth.text": "#89b4fa",
   "theme.bar.buttons.bluetooth.icon": "#89b4fa",
@@ -438,23 +440,6 @@
   "bar.media.show_artist": true,
   "theme.bar.buttons.modules.cpu.enableBorder": false,
   "theme.bar.buttons.modules.ram.enableBorder": false,
-  "bar.layouts": {
-    "0": {
-      "left": [
-        "dashboard",
-        "workspaces"
-      ],
-      "middle": [
-        "windowtitle"
-      ],
-      "right": [
-        "systray",
-        "volume",
-        "battery",
-        "clock"
-      ]
-    }
-  },
   "theme.font.weight": 500,
   "bar.customModules.ram.round": true,
   "wallpaper.pywal": false,
@@ -493,7 +478,7 @@
   "bar.workspaces.applicationIconOncePerWorkspace": true,
   "bar.windowtitle.truncation_size": 50,
   "tear": true,
-  "hyprpanel.restartCommand": "agsv1 -q; agsv1",
+  "hyprpanel.restartCommand": "hyprpanel -q; hyprpanel",
   "theme.bar.menus.popover.scaling": 80,
   "bar.customModules.netstat.labelType": "in",
   "menus.media.displayTime": true,
@@ -542,5 +527,10 @@
   "theme.bar.buttons.clock.enableBorder": false,
   "bar.workspaces.hideUnoccupied": true,
   "bar.workspaces.workspaceMask": false,
-  "theme.bar.buttons.workspaces.numbered_active_highlight_border": "0.2em"
+  "theme.bar.buttons.workspaces.numbered_active_highlight_border": "0.2em",
+  "menus.dashboard.directories.left.directory1.command": "rofi -show drun",
+  "menus.dashboard.directories.left.directory2.command": "hyprpanel toggleWindow notificationsmenu",
+  "menus.dashboard.directories.left.directory3.command": "hyprpanel toggleWindow settings-dialog",
+  "menus.dashboard.directories.right.directory2.command": "bash -c \"xdg-open $HOME/Downloads/\"",
+  "menus.dashboard.directories.right.directory3.command": "bash -c \"xdg-open $HOME/Pictures\""
 }
