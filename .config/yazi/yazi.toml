@@ -1,0 +1,6 @@
+[manager]
+show_hidden = false
+ratio = [2, 3, 4]
+sort_by = 'natural'
+sort_reverse =false
+sort_dir_first = true
