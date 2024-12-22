@@ -155,7 +155,11 @@ init_xdg() {
 }
 
 file_upload() {
-  curl -X POST -F "file=@$1" https://imbypass.pw/upload/index.php
+  curl -X POST -F "file=@$1" https://imbypass.pw/upload.php
+}
+
+file_upload_fate() {
+  curl -X POST -F "file=@$1" -F "secret_key=$FATE_KEY" https://api.fate.ovh/cli/
 }
 
 search_steamapps() {
@@ -247,6 +251,9 @@ elif [[ $1 == "init" ]];then
 
 elif [[ $1 == "up" ]];then
 	file_upload $2
+
+elif [[ $1 == "fup" ]];then
+	file_upload_fate $2
 
 elif [[ $1 == "hf" ]];then
 	toggle_floatwindows
