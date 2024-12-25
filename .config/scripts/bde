@@ -68,7 +68,7 @@ reload_prompt() {
         reload_hypr
         reload_hyprpanel
       ;;
-      "ags")
+      "bar")
         reload_hyprpanel
       ;;
       "dock")
@@ -118,8 +118,8 @@ reload_swaync() {
 
 reload_hyprpanel() {
   echo ":: Reloading HyprPanel.."
-  killall -9 agsv1 > /dev/null
-  agsv1 > /dev/null & disown
+  killall -9 gjs > /dev/null
+  hyprpanel > ~/hyprpanel.log 2>&1 & disown
 }
 
 init_prompt() {
@@ -220,7 +220,7 @@ if [[ $1 == "rl" ]];then
   reload_prompt $2
 
 elif [[ $1 == "wp" ]];then
-  waypaper
+  hyprwall $2
 
 elif [[ $1 == "edit" ]];then
   edit_prompt $2

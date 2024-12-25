@@ -5,7 +5,9 @@
         "dashboard",
         "workspaces"
       ],
-      "middle": [],
+      "middle": [
+        "windowtitle"
+      ],
       "right": [
         "systray",
         "volume",
@@ -16,7 +18,7 @@
   "bar.customModules.updates.pollingInterval": 1440000,
   "terminal": "alacritty",
   "theme.font.name": "SF Pro Display",
-  "theme.bar.floating": false,
+  "theme.bar.floating": true,
   "theme.bar.buttons.enableBorders": false,
   "theme.font.size": "1.05rem",
   "menus.dashboard.powermenu.avatar.image": "/home/bypass/Pictures/bepi_round.png",
@@ -451,7 +453,7 @@
   "bar.customModules.updates.label": true,
   "theme.bar.margin_bottom": "0em",
   "theme.bar.margin_top": "0.25em",
-  "theme.bar.buttons.y_margins": "0.4em",
+  "theme.bar.buttons.y_margins": "0em",
   "bar.volume.label": true,
   "bar.clock.showTime": true,
   "bar.customModules.ram.pollingInterval": 2000,
@@ -467,7 +469,7 @@
   "menus.dashboard.directories.left.directory2.label": "󰂚   Notifications",
   "menus.dashboard.directories.left.directory1.label": "   Applications",
   "menus.dashboard.controls.enabled": true,
-  "theme.osd.location": "top",
+  "theme.osd.location": "bottom right",
   "theme.osd.orientation": "horizontal",
   "theme.osd.muted_zero": true,
   "theme.bar.buttons.workspaces.smartHighlight": false,
@@ -535,5 +537,7 @@
   "theme.bar.menus.menu.dashboard.scaling": 100,
   "bar.autoHide": "never",
   "menus.clock.weather.enabled": false,
-  "menus.clock.weather.unit": "imperial"
+  "menus.clock.weather.unit": "imperial",
+  "bar.workspaces.ignored": "{\"-99\", \"-98\"}",
+  "theme.osd.active_monitor": false
 }
