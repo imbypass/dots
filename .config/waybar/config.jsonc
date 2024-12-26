@@ -22,13 +22,12 @@
     	"hyprland/workspaces"
     ],
     "modules-center": [
+      "hyprland/window"
     ],
     "modules-right": [
     	"tray",
-    	"memory",
     	"pulseaudio",
-    	"clock",
-      "custom/notification"
+    	"clock"
     ],
 
 

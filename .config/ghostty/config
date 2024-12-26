@@ -1,0 +1,14 @@
+theme = mocha
+background = 1E1E2E
+
+cursor-color = 89b4fa
+adjust-cursor-thickness = 2
+font-family = "SF Mono Nerd Font Mono"
+font-feature = dlig ss05 liga
+shell-integration = fish
+confirm-close-surface = false
+window-padding-x = 15
+window-padding-y = 8,5
+title = Terminal
+window-decoration = false
+window-theme = system

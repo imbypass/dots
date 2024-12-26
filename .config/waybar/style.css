@@ -1,7 +1,7 @@
 @import url('/home/bypass/.cache/wal/colors-waybar.css');
 
 * {
-    font-family: "GeistMono NF Medium";
+    font-family: "SF Pro Display";
     font-size: 12.5px;
     font-weight: bold;
 }
@@ -13,6 +13,7 @@ window#waybar {
     border-radius: 0;
     border-width: 0px 0px 2px 0px;
     opacity: 1.0;
+    padding: 24px;
 }
 
 tooltip {
