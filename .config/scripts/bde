@@ -19,6 +19,9 @@ edit_prompt() {
       "keys")
         $EDITOR ~/.config/hypr/conf/keybinding.conf
       ;;
+      "apps")
+        $EDITOR ~/.config/hypr/conf/apps.conf
+      ;;
       "deco")
         $EDITOR ~/.config/hypr/conf/decoration.conf
       ;;
@@ -41,7 +44,7 @@ edit_prompt() {
         $EDITOR ~/.config/rofi/config.rasi
       ;;
       "term")
-        $EDITOR ~/.config/alacritty/alacritty.toml
+        $EDITOR ~/.config/ghostty/config
       ;;
       "tmux")
         $EDITOR ~/.config/tmux/tmux.conf
@@ -54,6 +57,9 @@ edit_prompt() {
       ;;
       "defaults")
         $EDITOR ~/.config/mimeapps.list
+      ;;
+      "dock")
+        $EDITOR ~/.cache/nwg-dock-pinned
       ;;
   esac
 }

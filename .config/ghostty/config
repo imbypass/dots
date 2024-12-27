@@ -1,14 +1,31 @@
-theme = mocha
-background = 1E1E2E
+### Color Scheme
+theme = catppuccin-mocha
 
-cursor-color = 89b4fa
-adjust-cursor-thickness = 2
-font-family = "SF Mono Nerd Font Mono"
+### Font Settings
+font-family = SFMono Nerd Font Mono
 font-feature = dlig ss05 liga
-shell-integration = fish
-confirm-close-surface = false
+font-size = 11
+adjust-cell-height = 0
+
+### Cursor Settings
+cursor-style = bar
+cursor-color = 89b4fa
+adjust-cursor-thickness = 1
+
+### Window Settings
 window-padding-x = 15
 window-padding-y = 8,5
+window-padding-balance = false
 title = Terminal
+
+### Window Decoration
 window-decoration = false
 window-theme = system
+
+### Shell Settings
+shell-integration = fish
+shell-integration-features = no-cursor
+mouse-hide-while-typing = true
+
+### Miscellaneous Settings
+confirm-close-surface = false

@@ -5,9 +5,7 @@
         "dashboard",
         "workspaces"
       ],
-      "middle": [
-        "windowtitle"
-      ],
+      "middle": [],
       "right": [
         "systray",
         "volume",
@@ -18,7 +16,7 @@
   "bar.customModules.updates.pollingInterval": 1440000,
   "terminal": "alacritty",
   "theme.font.name": "SF Pro Display",
-  "theme.bar.floating": true,
+  "theme.bar.floating": false,
   "theme.bar.buttons.enableBorders": false,
   "theme.font.size": "1.05rem",
   "menus.dashboard.powermenu.avatar.image": "/home/bypass/Pictures/bepi_round.png",
@@ -51,7 +49,7 @@
   "menus.dashboard.shortcuts.left.shortcut1.icon": "󰖟",
   "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Firefox",
   "theme.bar.buttons.volume.enableBorder": false,
-  "bar.workspaces.showAllActive": true,
+  "bar.workspaces.showAllActive": false,
   "bar.workspaces.show_numbered": false,
   "bar.workspaces.workspaces": 4,
   "bar.network.truncation": true,
@@ -64,8 +62,8 @@
   "theme.bar.background": "#181825",
   "theme.bar.buttons.style": "default",
   "theme.bar.buttons.monochrome": false,
-  "theme.bar.buttons.windowtitle.text": "#89b4fa",
-  "theme.bar.buttons.windowtitle.icon": "#89b4fa",
+  "theme.bar.buttons.windowtitle.text": "#cdd6f4",
+  "theme.bar.buttons.windowtitle.icon": "#cdd6f4",
   "theme.bar.buttons.windowtitle.border": "#f5c2e7",
   "theme.bar.buttons.bluetooth.text": "#89b4fa",
   "theme.bar.buttons.bluetooth.icon": "#89b4fa",
@@ -453,7 +451,7 @@
   "bar.customModules.updates.label": true,
   "theme.bar.margin_bottom": "0em",
   "theme.bar.margin_top": "0.25em",
-  "theme.bar.buttons.y_margins": "0.3em",
+  "theme.bar.buttons.y_margins": "0.5em",
   "bar.volume.label": true,
   "bar.clock.showTime": true,
   "bar.customModules.ram.pollingInterval": 2000,
