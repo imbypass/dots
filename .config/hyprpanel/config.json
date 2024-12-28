@@ -484,6 +484,9 @@
   "menus.volume.raiseMaximumVolume": true,
   "theme.bar.buttons.systray.enableBorder": false,
   "bar.systray.customIcons": {
+    "StreamDeck UI": {
+      "icon": "󱖏"
+    },
     "chrome_status_icon_1": {
       "icon": ""
     },
