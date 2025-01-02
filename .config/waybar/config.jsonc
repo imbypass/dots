@@ -5,13 +5,13 @@
     "margin-top": 0,
     "margin-right": 0,
     "margin-left": 0,
-    "margin-bottom": 2,
+    "margin-bottom": 0,
     "mod": "dock",
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
     "reload_style_on_change": true,
-    "height": 30,
+    "height": 42,
 
     "tray": {
     	"icon-size": 24,
@@ -19,14 +19,17 @@
     },
     
     "modules-left": [
+      "custom/logo",
     	"hyprland/workspaces"
     ],
     "modules-center": [
-      "hyprland/window"
     ],
     "modules-right": [
-    	"tray",
+      "tray",
+      "network",
     	"pulseaudio",
+      "pulseaudio#microphone",
+      "battery",
     	"clock"
     ],
 
@@ -35,26 +38,27 @@
     "hyprland/window": {
         "format": "{}",
         "rewrite": {
-          "\\s*(.*)\\s+": "<span color=\"#E0DDF9\">$1</span>",
+          "\\s*(.*)\\s+": "$1",
           "\\s*": "",
-          "(\\d\\. )?(.*)- VLC media player": "<span>󰕼  </span> <span color=\"#E0DDF9\">$2</span>",
-          "(\\d\\. )?(.*)— Zen Browser": "<span>  </span> <span color=\"#E0DDF9\">$2</span>",
-          "(\\d\\. )?(.*)- Google Chrome": "<span>  </span> <span color=\"#E0DDF9\">$2</span>",
-          "(\\d\\. )?(.*)- Thunar": "<span>  </span> <span color=\"#E0DDF9\">$2</span>",
-          "(\\d\\. )?(.*)Vesktop": "<span>    <span color=\"#E0DDF9\">Discord</span></span>",
-          "(\\d\\. )?(.*)Discord Popout": "<span>    <span color=\"#E0DDF9\">Discord</span></span>",
-          "(\\d\\. )?(.*)Spotify": "<span>󰓇   <span color=\"#E0DDF9\">Spotify</span></span>",
-          "(\\d\\. )?(.*)Spotify Premium": "<span>󰓇   <span color=\"#E0DDF9\">Spotify</span></span>",
-          "(\\d\\. )?(.*)ncspot": "<span>󰓇   <span color=\"#E0DDF9\">Spotify</span></span>",
-          "(\\d\\. )?(.*)Steam": "<span>󰓓   <span color=\"#E0DDF9\">Steam</span></span>",
-          "(\\d\\. )?(.*)Minecraft": "<span>󰍳   <span color=\"#E0DDF9\">Minecraft</span></span>",
-          "(.*)[Ll]unar [Cc]lient": "<span>󰍳   <span color=\"#E0DDF9\">Minecraft</span></span>",
-          "(\\d\\. )?(.*)Code - OSS": "<span>󰨞   <span color=\"#E0DDF9\">VS Code</span></span>",
-          "bypass@archbtw:(\\d\\. )?(.*)": "<span>󰄛   </span><span color=\"#E0DDF9\">$2</span>",
-          "nano (.*)": "<span>󱇧   </span><span color=\"#E0DDF9\">$1</span>",
-          "rofi - (.*)": "<span color=\"#E0DDF9\">$1</span>",
-          "Search(.*)": "<span> </span> <span color=\"#E0DDF9\">Search $1</span>",
-          "\\s*(.*)\\s+": "<span color=\"#E0DDF9\">$1</span>",
+          "(\\d\\. )?(.*)- VLC media player": "<span>󰕼 </span> $2",
+          "(\\d\\. )?(.*)— Mozilla Firefox": "<span> </span> $2",
+          "(\\d\\. )?(.*)- Google Chrome": "<span> </span> $2",
+          "(\\d\\. )?(.*)- Thunar": "<span> </span> $2",
+          "(\\d\\. )?(.*)Terminal": "<span></span> Terminal",
+          "(\\d\\. )?(.*)Vesktop": "<span> </span> Discord",
+          "(\\d\\. )?(.*)Discord Popout": "<span> </span> Discord",
+          "(\\d\\. )?(.*)Spotify": "<span>󰓇 </span> Spotify",
+          "(\\d\\. )?(.*)Spotify Premium": "<span>󰓇 </span> Spotify",
+          "(\\d\\. )?(.*)ncspot": "<span>󰓇 </span> Spotify",
+          "(\\d\\. )?(.*)Steam": "<span>󰓓 </span> Steam",
+          "(\\d\\. )?(.*)Minecraft": "<span>󰍳 </span> Minecraft",
+          "(.*)[Ll]unar [Cc]lient": "<span>󰍳 </span> Minecraft",
+          "(\\d\\. )?(.*)Code - OSS": "<span>󰨞 </span> VS Code",
+          "bypass@archbtw:(\\d\\. )?(.*)": "<span>󰄛 </span> $2",
+          "nano (.*)": "<span>󱇧 </span> $1",
+          "rofi - (.*)": "$1",
+          "Search(.*)": "<span> </span> Search $1",
+          "\\s*(.*)\\s+": "$1",
           "\\s*": " "
          },
          "separate-outputs": false
@@ -62,22 +66,30 @@
 
 // === [ LEFT MODULES ] === //
   "clock": {
-      "format": "  <span color=\"#E0DDF9\">{:%I:%M %p}</span>",
+      "format": "{:%I:%M %p}",
       "tooltip-format": "{:%a, %b %e, %Y}"
   },
-    
+  "battery": {
+      "format": "  {}%"
+  }, 
 	"hyprland/workspaces": {
-      "format": "{icon}",
+      "format": "{}",
       "format-icons": {
         "default": "",
         "active": ""
+      },
+      "persistent-workspaces": {
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": []
       }
   },
 
   "custom/logo" : {
   		"tooltip": false,
   		"format": " 󰣇 ",
-  		"on-click": "rofi -show drun"
+  		"on-click": "walker"
   },
   
   "custom/weather" : {
@@ -92,13 +104,13 @@
     "tooltip": false,
     "format": "{icon}",
     "format-icons": {
-      "notification": "󰂚<span foreground='#F38BA8'><sup></sup></span>",
+      "notification": "󰂚<span foreground='#F38BA8'><sup></sup>",
       "none": "󰂚",
-      "dnd-notification": "<span foreground='#F38BA8'><sup></sup></span>",
+      "dnd-notification": "<span foreground='#F38BA8'><sup></sup>",
       "dnd-none": "󰂛",
-      "inhibited-notification": "󰂚<span foreground='#F38BA8'><sup></sup></span>",
+      "inhibited-notification": "󰂚<span foreground='#F38BA8'><sup></sup>",
       "inhibited-none": "󰂚",
-      "dnd-inhibited-notification": "󰂛<span foreground='#F38BA8'><sup></sup></span>",
+      "dnd-inhibited-notification": "󰂛<span foreground='#F38BA8'><sup></sup>",
       "dnd-inhibited-none": "󰂛"
     },
     "return-type": "json",
@@ -120,12 +132,12 @@
     
 // === [ RIGHT MODULES ] === //
   "network": {
-      "format-wifi": " {signalStrength}%",
+      "format-wifi": " ",
       "format-ethernet": "",
-      "tooltip-format": "{ifname}:{essid} {ipaddr}/{cidr}",
+      "format-alt": "  {essid}",
       "format-linked": "{ifname} (No IP)",
-      "format-disconnected": "Disconnected ⚠",
-      "format-alt": " {bandwidthDownBits}  {bandwidthUpBits}"
+      "format-disconnected": "⚠",
+      "tooltip-format": " {bandwidthDownBits}  {bandwidthUpBits}"
   },
 
   "bluetooth": {
@@ -138,7 +150,7 @@
   },
 	
 	"memory": {
-		"format": "  <span color=\"#E0DDF9\">{}%</span>",
+		"format": "  {}%",
 		"tooltip": "false",
 		"on-click": "kitty btop"
 	},
@@ -150,12 +162,13 @@
 	},
 
   "pulseaudio": {
-      "format": "{icon}  <span color=\"#E0DDF9\">{volume}%</span>",
+      "format": "{icon}  {volume}%",
       "tooltip": false,
-      "format-muted": "  Muted",
-      "on-click": "pavucontrol",
-      "on-scroll-up": "pamixer -i 5",
-      "on-scroll-down": "pamixer -d 5",
+      "format-muted": " MUTED",
+      "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+      "on-click-right": "pavucontrol",
+      "on-scroll-up": "pamixer -i 1",
+      "on-scroll-down": "pamixer -d 1",
       "scroll-step": 1,
       "format-icons": {
           "headphone": "",
@@ -202,10 +215,10 @@
   "pulseaudio#microphone": {
       "format": "{format_source}",
       "format-source": " {volume}%",
-      "format-source-muted": "  Muted",
+      "format-source-muted": "  MUTED",
       "on-click": "pamixer --default-source -t",
-      "on-scroll-up": "pamixer --default-source -i 5",
-      "on-scroll-down": "pamixer --default-source -d 5",
+      "on-scroll-up": "pamixer --default-source -i 1",
+      "on-scroll-down": "pamixer --default-source -d 1",
       "scroll-step": 5
   }
 }

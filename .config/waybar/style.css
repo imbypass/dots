@@ -1,118 +1,154 @@
-@import url('/home/bypass/.cache/wal/colors-waybar.css');
+@define-color rosewater #f5e0dc;
+@define-color flamingo #f2cdcd;
+@define-color pink #f5c2e7;
+@define-color mauve #cba6f7;
+@define-color red #f38ba8;
+@define-color maroon #eba0ac;
+@define-color peach #fab387;
+@define-color yellow #f9e2af;
+@define-color green #a6e3a1;
+@define-color teal #94e2d5;
+@define-color sky #89dceb;
+@define-color sapphire #74c7ec;
+@define-color blue #89b4fa;
+@define-color lavender #b4befe;
+@define-color text #cdd6f4;
+@define-color subtext1 #bac2de;
+@define-color subtext0 #a6adc8;
+@define-color overlay2 #9399b2;
+@define-color overlay1 #7f849c;
+@define-color overlay0 #6c7086;
+@define-color surface2 #585b70;
+@define-color surface1 #45475a;
+@define-color surface0 #313244;
+@define-color base #1e1e2e;
+@define-color mantle #181825;
+@define-color crust #11111b;
 
 * {
-    font-family: "SF Pro Display";
-    font-size: 12.5px;
+    font-family: "JetBrainsMono NF";
+    font-size: 15px;
     font-weight: bold;
 }
 
 window#waybar {
-    background: @background;
-    color: @foreground;
-    border: 0px solid @color4;
-    border-radius: 0;
-    border-width: 0px 0px 2px 0px;
+    background: @mantle;
+    color: @text;
     opacity: 1.0;
-    padding: 24px;
+    /*padding: 24px;*/
+    border-top: 2px solid @base;
+    border-bottom: 2px solid @crust;
 }
 
 tooltip {
-    background: @background;
-    opacity: 0.8;
-    border-radius: 8px;
+    background: @crust;
+    opacity: 1.0;
+    border-radius: 6px;
     border-width: 2px;
     border-style: solid;
-    border-color: @foreground;
+    border-color: @mantle;
     padding: 0;
-    color: @foreground;
+    color: @text;
 }
 
 #workspaces {
 	padding-left: 5px;
 }
 #workspaces button {
-    color: #717899;
+    border-radius: 0;
+    color: @subtext0;
     margin: 0;
-    padding: 4px;
+    padding: 10px;
     padding-bottom: 0px;
     padding-top: 0px;
+    border: none;
+    border-bottom: 2px solid @crust;
+    border-top: 2px solid @base;
 }
 #workspaces button.active {
-    color: @color4;
+    color: @blue;
+    border-top: 2px solid @blue;
+    background: @crust;
 }
 #workspaces button.focused {
-    color: @color2;
+    color: @lavender;
+    border-top: 2px solid @lavender;
+
 }
 #workspaces button.urgent {
-    color: @color1;
+    color: @blue;
+    border-top: 2px solid @blue;
+    background: @crust;
 }
 #workspaces button:hover {
-    color: @color4;
-    background: rgba(0,0,0,0);
-}
-
-#clock {
-    color: @color3;
-    padding-left: 8px;
+    color: @pink;
+    border-top: 2px solid @pink;
+    background: @crust;
 }
 
 #custom-logo {
-	padding-left: 15px;
+	padding-left: 6px;
 	padding-right: 5px;
-	color: #009FF5;
+	color: @sapphire;
 }
 #custom-spotify {
 	margin-left: 15px;
-	color: @foreground;
-}
-#custom-pacman {
-	padding-left: 5px;
-	padding-right: 15px;
-}
-#custom-notification {
-  padding-right: 18px;
-  color: #ededed;
-}
-#window {
-	padding-left: 15px;
-	padding-right: 15px;
-	color: @color4
+	color: @text;
 }
 
+
+#clock,
+#battery,
 #network,
 #bluetooth,
 #cpu,
 #memory,
 #pulseaudio,
 #pulseaudio.microphone {
+  /*margin-bottom: 8px;*/
 	margin-left: 10px;
 	margin-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid @crust; /* remove @crust for accent colors */
+  /*border-top: 2px solid @base;*/
 }
-
-#network {
-	color: #cdcdcd;
-}
-#bluetooth {
-    color: @color5;
-} 
-#cpu {
-    color: @color4;
-}
-#memory {
-    color: @color5;
-}
-#pulseaudio {
-    color: @color1;
-}
-#pulseaudio.microphone {
-    color: @color11;
-}
-
 #tray {
-	padding-left: 10px;
 	padding-right: 10px;
 }
-
+#window {
+	color: @lavender;
+}
+#battery {
+  color: @mauve;
+}
+#network {
+  padding-right: 5px;
+  padding-top: 3px;
+  border-bottom: 2px solid @crust;
+	color: @lavender;
+}
+#bluetooth {
+    color: @sapphire;
+} 
+#cpu {
+    color: @yellow;
+}
+#memory {
+    color: @peach;
+}
+#pulseaudio {
+    color: @blue;
+    margin-right: 0px;
+    padding-right: 6px;
+    padding-left: 0px;
+}
+#pulseaudio.microphone {
+    color: @blue;
+    margin-left: 0px;
+    padding-left: 6px;
+    padding-right: 0px;
+}
 #clock {
-	padding-right: 15px;
+  color: @pink;
 }

@@ -37,6 +37,9 @@ edit_prompt() {
       "windows")
         $EDITOR ~/.config/hypr/conf/windowrule.conf
       ;;
+      "walker")
+        $EDITOR ~/.config/walker/config.json
+      ;;
       "env")
         $EDITOR ~/.config/hypr/conf/custom/environment.conf
       ;;
@@ -83,6 +86,9 @@ reload_prompt() {
       "waybar")
         reload_waybar
       ;;
+      "walker")
+        reload_walker
+      ;;
       "mako")
         reload_mako
       ;;
@@ -110,6 +116,12 @@ reload_waybar() {
 reload_mako() {
   echo ":: Reloading mako.."
   makoctl reload > /dev/null
+}
+
+reload_walker() {
+  echo ":: Reloading walker service.."
+  killall walker > /dev/null
+  walker --gapplication-service & disown > /dev/null
 }
 
 reload_hypr() {
@@ -226,7 +238,7 @@ if [[ $1 == "rl" ]];then
   reload_prompt $2
 
 elif [[ $1 == "wp" ]];then
-  hyprwall $2
+  swww img $2
 
 elif [[ $1 == "edit" ]];then
   edit_prompt $2

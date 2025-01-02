@@ -51,8 +51,7 @@ alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 # Custom system aliases
 alias tree="eza -l --tree --icons"
-alias ls="eza --icons"
-alias ls="g --table --icons --title"
+alias ls="g --icons"
 alias l 'ls'
 alias la 'ls -la'
 alias lsa="ls -la"
@@ -67,11 +66,13 @@ alias fetch="bfetch"
 alias microfetch="bfetch"
 alias f="bfetch"
 alias h="hyprctl"
+alias q="exit"
+alias yay="paru"
 
 # Ricing commands - Making little things less painful
 alias pman="bash -c ~/.config/scripts/pacman.sh"
 alias ghosts="bash -c ~/.config/scripts/ghosts.sh"
-alias wp="waypaper --random > /dev/null"
+alias wp="swww img $1 > /dev/null"
 
 # Custom shortcut aliases
 alias vps="ssh root@imbypass.pw"
@@ -84,7 +85,7 @@ alias ncmp="ncmpcpp"
 
 # Custom ricing aliases
 alias clock="tty-clock -t -c -b -B"
-alias icons="papirus-folders -t Papirus-Dark -C "
+alias icons="papirus-folders -t Papirus-Dark -C $1"
 
 # Custom PATH environment
 fish_add_path /home/bypass/.spicetify
