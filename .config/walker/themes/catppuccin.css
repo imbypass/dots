@@ -143,7 +143,6 @@ child:hover {
   font-size: 0.8em;
 }
 #sub:hover {
-  color: @mantle;
 }
 
 #activationlabel {
