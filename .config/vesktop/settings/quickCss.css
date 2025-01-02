@@ -5,10 +5,9 @@
 /* Set accent color and fonts */
 :root {
     --accent-color: var(--catppuccin-mocha-blue);
-    --font: "JetBrainsMono Nerd Font Mono";
-    --font-code: "JetBrainsMono Nerd Font Mono";
+    --font: "JetBrainsMono NF";
+    --font-code: "JetBrainsMono NF";
 }
-
 
 /* remove Play Again container */
 .container_e5a9ed { display: none; }

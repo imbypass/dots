@@ -68,6 +68,7 @@ alias f="bfetch"
 alias h="hyprctl"
 alias q="exit"
 alias yay="paru"
+alias yeet="paru -Rs"
 
 # Ricing commands - Making little things less painful
 alias pman="bash -c ~/.config/scripts/pacman.sh"

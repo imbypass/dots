@@ -1,30 +1,30 @@
 sort=-time
 layer=overlay
 width=300
-height=120
+height=220
 border-size=2
-border-radius=8
+border-radius=2
 icons=1
 icon-location=left
 markup=1
 actions=1
 history=1
-anchor=top-center
+anchor=top-right
 max-icon-size=48
 default-timeout=5000
 ignore-timeout=1
-font=Geist Medium 11
-background-color=#1e1e2e
-border-color=#cdd6f4
+font=JetBrainsMono Nerd Font Mono SemiBold 10.5
+background-color=#1E1E2E
+border-color=#313244
 
 [urgency=low]
-border-color=#cdd6f4
+border-color=#313244
 
 [urgency=normal]
-border-color=#89b4fa
+border-color=#313244
 
 [urgency=high]
-border-color=#f9e2af
+border-color=#89B4FA
 default-timeout=0
 
 [category=mpd]

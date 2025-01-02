@@ -274,6 +274,6 @@
     "resume_last_query": false
   },
   "terminal_title_flag": "",
-  "theme": "default",
+  "theme": "catppuccin",
   "timeout": 0
 }
