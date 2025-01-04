@@ -11,3 +11,6 @@
 
 /* remove Play Again container */
 .container_e5a9ed { display: none; }
+
+/* Better font rendering? */
+* { text-rendering: optimizeLegibility; }

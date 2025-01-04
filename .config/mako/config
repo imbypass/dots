@@ -1,7 +1,7 @@
 sort=-time
 layer=overlay
 width=300
-height=220
+height=350
 border-size=2
 border-radius=2
 icons=1
@@ -11,7 +11,7 @@ actions=1
 history=1
 anchor=top-right
 max-icon-size=48
-default-timeout=5000
+default-timeout=4000
 ignore-timeout=1
 font=JetBrainsMono Nerd Font Mono SemiBold 10.5
 background-color=#1E1E2E

@@ -1,6 +1,5 @@
 # Interactive shell settings
 if status is-interactive
-    set TERM 'xterm-256color'
     set fish_greeting
     set fish_tmux_autostart false
     set fish_tmux_autoname_session true
@@ -43,48 +42,40 @@ g --init fish | source
 # Enable transient prompt for Starship/Fish
 #enable_transience
 
-# Dotfiles git alias
+# Aliases - Configuration
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
-# Simplified update-grub command
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
-# Custom system aliases
+# Aliases - System Tools
 alias tree="eza -l --tree --icons"
 alias ls="g --icons"
 alias l 'ls'
 alias la 'ls -la'
 alias lsa="ls -la"
 alias cl="clear"
+alias q="exit"
 alias ex="exit"
 alias grep="rg"
-alias cat="bat"
+alias cat="bat -p"
 alias py3="python3"
 alias v="nvim"
+alias vim="nvim"
 alias nano="nvim"
+
+# Aliases - User Tools
+alias yay="paru"
+alias yeet="paru -Rs"
 alias fetch="bfetch"
 alias microfetch="bfetch"
 alias f="bfetch"
 alias h="hyprctl"
-alias q="exit"
-alias yay="paru"
-alias yeet="paru -Rs"
-
-# Ricing commands - Making little things less painful
-alias pman="bash -c ~/.config/scripts/pacman.sh"
-alias ghosts="bash -c ~/.config/scripts/ghosts.sh"
 alias wp="swww img $1 > /dev/null"
-
-# Custom shortcut aliases
 alias vps="ssh root@imbypass.pw"
 alias moviebox="ssh schaefer@10.0.0.196"
 alias ani="ani-cli --dub --skip"
 alias wg++="x86_64-w64-mingw32-g++"
 alias unset="set --erase"
-alias cb="~/.var/app/com.usebottles.bottles/data/bottles/bottles/Battle.net/drive_c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_classic_era_/CurseBreaker"
 alias ncmp="ncmpcpp"
-
-# Custom ricing aliases
 alias clock="tty-clock -t -c -b -B"
 alias icons="papirus-folders -t Papirus-Dark -C $1"
 
@@ -94,5 +85,4 @@ fish_add_path /home/bypass/local/bin
 fish_add_path /home/bypass/.config/scripts
 fish_add_path /home/linuxbrew/.linuxbrew/bin
 
-# Created by `pipx` on 2024-10-31 03:20:13
 set PATH $PATH /home/bypass/.local/bin

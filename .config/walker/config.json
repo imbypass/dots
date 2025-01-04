@@ -204,7 +204,7 @@
     "on_query_change": "",
     "on_selection": ""
   },
-  "force_keyboard_focus": false,
+  "force_keyboard_focus": true,
   "hotreload_theme": false,
   "keys": {
     "accept_typeahead": [
@@ -266,6 +266,30 @@
       "switcher_only": false,
       "src_once": "cd /home/bypass/Pictures/Wallpapers/ && find -type f \\( -iname \"*.jpg\" -o -iname \"*.jpeg\" -o -iname \"*.png\" \\)",
       "cmd": "swww img /home/bypass/Pictures/Wallpapers/%RESULT%"
+    },
+    {
+      "name": "power",
+      "placeholder": "Power",
+      "switcher_only": true,
+      "recalculate_score": true,
+      "show_icon_when_single": true,
+      "entries": [
+        {
+          "label": "Shutdown",
+          "icon": "system-shutdown",
+          "exec": "shutdown now"
+        },
+        {
+          "label": "Reboot",
+          "icon": "system-reboot",
+          "exec": "reboot"
+        },
+        {
+          "label": "Lock Screen",
+          "icon": "system-lock-screen",
+          "exec": "playerctl --all-players pause & hyprlock"
+        }
+      ]
     }
   ],
   "search": {

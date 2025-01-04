@@ -181,8 +181,11 @@
   },
 
   "tray": {
-      "icon-size": 14,
-      "spacing": 10
+      "icon-size": 16,
+      "spacing": 10,
+      "icons": {
+        "discord": "discord"
+      }
   },
   
   "custom/pacman": {

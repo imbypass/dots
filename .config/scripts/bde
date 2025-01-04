@@ -3,13 +3,17 @@
 # I'm sure there are better ways of doing this, but I REALLY don't work with bash/zsh scripts often.
 # This just seemed like a more convenient way to execute some of the common shit that I do on my PC.
 
-BDE_VERSION="1.5"
+BDE_VERSION="0.15.3"
 
 edit_prompt() {
   case "$1" in
+
+      # Edit the script itself
       "")
         $EDITOR ~/.config/scripts/bde
       ;;
+
+      # Edit Hyprland configuration
       "colors")
         $EDITOR ~/.config/hypr/conf/custom/mocha.conf
       ;;
@@ -37,16 +41,27 @@ edit_prompt() {
       "windows")
         $EDITOR ~/.config/hypr/conf/windowrule.conf
       ;;
+      "env")
+        $EDITOR ~/.config/hypr/conf/custom/environment.conf
+      ;;
+      "custom")
+        $EDITOR ~/.config/hypr/conf/custom/general.conf
+      ;;
+      
+      # Edit any user configs
+      "mako")
+        $EDITOR ~/.config/mako/config
+      ;;
       "walker")
         $EDITOR ~/.config/walker/config.json
       ;;
-      "env")
-        $EDITOR ~/.config/hypr/conf/custom/environment.conf
+      "waybar")
+        $EDITOR ~/.config/waybar/config.jsonc
       ;;
       "rofi")
         $EDITOR ~/.config/rofi/config.rasi
       ;;
-      "term")
+      "ghostty")
         $EDITOR ~/.config/ghostty/config
       ;;
       "tmux")
@@ -55,14 +70,14 @@ edit_prompt() {
       "fish")
         $EDITOR ~/.config/fish/config.fish
       ;;
-      "custom")
-        $EDITOR ~/.config/hypr/conf/custom/general.conf
-      ;;
       "defaults")
         $EDITOR ~/.config/mimeapps.list
       ;;
       "dock")
         $EDITOR ~/.cache/nwg-dock-pinned
+      ;;
+      "starship")
+        $EDITOR ~/.config/starship.toml
       ;;
   esac
 }
@@ -208,10 +223,14 @@ remove_orphans() {
   pacman -Qdtq | sudo pacman -Rns - > /dev/null
 }
 
+
+
+
 toggle_gamemode() {
   echo ":: Toggling game mode..."
 	HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
 	if [ "$HYPRGAMEMODE" = 1 ] ; then
+      notify-send -u low -a Hyprland -t 750 "GAME MODE" "ENABLED: [ON] / OFF" -i /usr/share/icons/Papirus-Dark/96x96/devices/input-gaming.svg
 	    hyprctl --batch "\
 	        keyword animations:enabled 0;\
 	        keyword decoration:drop_shadow 0;\
@@ -221,62 +240,56 @@ toggle_gamemode() {
 	        keyword general:border_size 1;\
 	        keyword decoration:rounding 0" > /dev/null
 	    exit
+  else
+      notify-send -u low -a Hyprland -t 750 "GAME MODE" "ENABLED: ON / [OFF]" -i /usr/share/icons/Papirus-Dark/96x96/devices/input-gaming.svg
 	fi
 	hyprctl reload > /dev/null
 }
+
+
+
 
 toggle_floatwindows() {
   echo ":: Toggling all floating windows..."
   hyprctl dispatch workspaceopt allfloat > /dev/null
 }
 
+
+
+
 display_version() {
 	echo $BDE_VERSION;
 }
 
+# main() ?
 if [[ $1 == "rl" ]];then
   reload_prompt $2
-
 elif [[ $1 == "wp" ]];then
   swww img $2
-
 elif [[ $1 == "edit" ]];then
   edit_prompt $2
-
 elif [[ $1 == "cache" ]];then
 	free_cache
-
 elif [[ $1 == "free" ]];then
 	free_cache
-
 elif [[ $1 == "gm" ]];then
 	toggle_gamemode
-  
 elif [[ $1 == "rm" ]];then
 	remove_orphans
-
 elif [[ $1 == "clean" ]];then
 	remove_orphans
-
 elif [[ $1 == "steam" ]];then
 	search_steamapps
-
 elif [[ $1 == "fonts" ]];then
 	search_fonts
-
 elif [[ $1 == "init" ]];then
 	init_prompt $2
-
 elif [[ $1 == "up" ]];then
 	file_upload $2
-
 elif [[ $1 == "fup" ]];then
 	file_upload_fate $2
-
 elif [[ $1 == "hf" ]];then
 	toggle_floatwindows
-
 else
-  echo "Unknown argument"
-
+  echo "ok"
 fi

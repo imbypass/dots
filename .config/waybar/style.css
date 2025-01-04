@@ -151,4 +151,5 @@ tooltip {
 }
 #clock {
   color: @pink;
+  margin-right: 16px;
 }
