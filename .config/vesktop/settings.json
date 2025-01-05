@@ -5,7 +5,7 @@
     "splashColor": "rgb(205, 214, 244)",
     "splashBackground": "rgb(30, 30, 46)",
     "customTitleBar": false,
-    "staticTitle": true,
+    "staticTitle": false,
     "splashTheming": true,
     "clickTrayToShowHide": true,
     "disableMinSize": true,

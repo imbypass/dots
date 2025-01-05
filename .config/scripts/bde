@@ -85,106 +85,67 @@ edit_prompt() {
 reload_prompt() {
 	case "$1" in
       "")
-        reload_hypr
-        reload_hyprpanel
-      ;;
-      "all")
-        reload_hypr
-        reload_hyprpanel
-      ;;
-      "bar")
-        reload_hyprpanel
+        echo ":: No service provided. Exiting.."
       ;;
       "dock")
-        reload_nwgdock
+        echo ":: Reloading nwg-dock-hyprland.."
+        killall -9 nwg-dock-hyprland > /dev/null
+        nwg-dock-hyprland -r -mb 15 -mt 10 -i 36 -x -nolauncher > ~/.cache/nwg-dock.log & disown
       ;;
       "waybar")
-        reload_waybar
+        echo ":: Reloading waybar.."
+        killall waybar > /dev/null
+        waybar > /dev/null & disown
       ;;
       "walker")
-        reload_walker
+        echo ":: Reloading walker service.."
+        killall walker > /dev/null
+        walker --gapplication-service & disown > /dev/null
       ;;
       "mako")
-        reload_mako
+        echo ":: Reloading mako.."
+        makoctl reload > /dev/null
       ;;
       "hypr")
-        reload_hypr
+        echo ":: Reloading hyprland.."
+        hyprctl reload > /dev/null
       ;;
-      "sway")
-        reload_swaync
+      "swaync")
+        echo ":: Reloading swaync.."
+        swaync-client -rs > /dev/null
+      ;;
+      "hyprpanel")
+        echo ":: Reloading HyprPanel.."
+        killall -9 gjs > /dev/null
+        hyprpanel > ~/hyprpanel.log 2>&1 & disown
       ;;
   esac
-}
-
-reload_nwgdock() {
-  echo ":: Reloading nwg-dock-hyprland.."
-  killall -9 nwg-dock-hyprland > /dev/null
-  nwg-dock-hyprland -r -mb 15 -mt 10 -i 36 -x -nolauncher > ~/.cache/nwg-dock.log & disown
-}
-
-reload_waybar() {
-  echo ":: Reloading waybar.."
-  killall waybar > /dev/null
-  waybar > /dev/null & disown
-}
-
-reload_mako() {
-  echo ":: Reloading mako.."
-  makoctl reload > /dev/null
-}
-
-reload_walker() {
-  echo ":: Reloading walker service.."
-  killall walker > /dev/null
-  walker --gapplication-service & disown > /dev/null
-}
-
-reload_hypr() {
-  echo ":: Reloading hyprland.."
-  hyprctl reload > /dev/null
-}
-
-reload_swaync() {
-  echo ":: Reloading swaync.."
-  swaync-client -rs > /dev/null
-}
-
-reload_hyprpanel() {
-  echo ":: Reloading HyprPanel.."
-  killall -9 gjs > /dev/null
-  hyprpanel > ~/hyprpanel.log 2>&1 & disown
 }
 
 init_prompt() {
 	case "$1" in 
     "xdg")
-      init_xdg ;;
+	    echo " => Initializing xdg-desktop-portal..."
+	    sleep 1
+	    killall xdg-desktop-portal-hyprland > /dev/null
+	    killall xdg-desktop-portal-gnome > /dev/null
+	    killall xdg-desktop-portal-kde > /dev/null
+	    killall xdg-desktop-portal-lxqt > /dev/null
+	    killall xdg-desktop-portal-wlr > /dev/null
+	    killall xdg-desktop-portal-gtk > /dev/null
+	    killall xdg-desktop-portal > /dev/null
+	    sleep 1
+	    /usr/lib/xdg-desktop-portal-hyprland > /dev/null &
+	    sleep 2
+	    /usr/lib/xdg-desktop-portal > /dev/null &
+	    sleep 1
+    ;;
     "wp")
-      init_wp ;;
+	    echo " => Initializing swww..."
+	    swww-daemon > /dev/null & disown
+	    swww-daemon --format xrgb > /dev/null & disown
+    ;;
   esac
-}
-
-init_wp() {
-	echo " => Initializing swww..."
-	swww-daemon > /dev/null & disown
-	swww-daemon --format xrgb > /dev/null & disown
-}
-
-init_xdg() {
-	echo " => Initializing xdg-desktop-portal..."
-	sleep 1
-	killall xdg-desktop-portal-hyprland > /dev/null
-	killall xdg-desktop-portal-gnome > /dev/null
-	killall xdg-desktop-portal-kde > /dev/null
-	killall xdg-desktop-portal-lxqt > /dev/null
-	killall xdg-desktop-portal-wlr > /dev/null
-	killall xdg-desktop-portal-gtk > /dev/null
-	killall xdg-desktop-portal > /dev/null
-	sleep 1
-	/usr/lib/xdg-desktop-portal-hyprland > /dev/null &
-	sleep 2
-	/usr/lib/xdg-desktop-portal > /dev/null &
-	sleep 1
 }
 
 file_upload() {

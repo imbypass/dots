@@ -4,3 +4,14 @@ ratio = [2, 3, 4]
 sort_by = 'natural'
 sort_reverse =false
 sort_dir_first = true
+
+[opener]
+play = [
+  { run = 'mpv "$@"', orphan = true, for = "unix" },
+]
+edit = [
+  { run = '$EDITOR "$@"', block = true, for = "unix" },
+]
+open = [
+  { run = 'xdg-open "$@"', desc = "Open" },
+]
