@@ -46,18 +46,6 @@ alias h="hyprctl"
 alias cat="bat -p"
 alias nano="nvim"
 alias py3="python3"
-alias vim="nvim"
-
-# Aliases - User Tools
-alias ff="fastfetch"
-alias wp="hyprwall"
-alias vps="ssh root@imbypass.pw"
-alias ani="ani-cli --dub --skip"
-alias wg++="x86_64-w64-mingw32-g++"
-alias clock="tty-clock -t -c -b -B"
-alias whereami="hostnamectl hostname"
-alias icat="kitty +kitten icat"
-alias icons="papirus-folders -t Papirus-Dark -C "
 
 
 #### [ HYPRLAND ] ####

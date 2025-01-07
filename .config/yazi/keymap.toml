@@ -7,8 +7,3 @@ desc = "Enter the child directory, or open the file"
 on   = "<Backspace>"
 run  = "hidden toggle"
 desc = "Toggle visibility of all files"
-
-keymap = [
-  { on = [ ";" ],         exec = "shell",               desc = "Run a shell command" }, 
-  { on = [ ":" ],         exec = "shell --block",       desc = "Run a shell command (block the UI until the command finishes)" }
-]

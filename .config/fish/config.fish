@@ -37,7 +37,6 @@ thefuck --alias | source
 fzf --fish | source
 pyenv init - | source
 starship init fish | source
-#g --init fish | source
 
 # Enable transient prompt for Starship/Fish
 #enable_transience
@@ -63,8 +62,6 @@ alias vim="nvim"
 alias nano="nvim"
 
 # Aliases - User Tools
-alias yay="paru"
-alias yeet="paru -Rs"
 alias fetch="bfetch"
 alias microfetch="bfetch"
 alias f="bfetch"
