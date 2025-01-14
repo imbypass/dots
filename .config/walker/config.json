@@ -261,11 +261,12 @@
   "monitor": "",
   "plugins": [
     {
-      "name": "wallpapers",
+      "name": "wallpaper",
       "placeholder": "Wallpapers",
       "switcher_only": false,
-      "src_once": "cd /home/bypass/Pictures/Wallpapers/ && find -type f \\( -iname \"*.jpg\" -o -iname \"*.jpeg\" -o -iname \"*.png\" \\)",
-      "cmd": "swww img /home/bypass/Pictures/Wallpapers/%RESULT%"
+      "refresh": true,
+      "src": "bash -c ~/.config/scripts/walker/wallpaper.sh",
+      "parser": "kv"
     },
     {
       "name": "power",

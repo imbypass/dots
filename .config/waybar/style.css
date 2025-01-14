@@ -1,3 +1,4 @@
+/* Catppuccin Color Palette */
 @define-color rosewater #f5e0dc;
 @define-color flamingo #f2cdcd;
 @define-color pink #f5c2e7;
@@ -25,73 +26,88 @@
 @define-color mantle #181825;
 @define-color crust #11111b;
 
+/* Active Color Selection */
+@define-color accent @blue;
+@define-color logo_color @sapphire;
+@define-color workspace_active @blue;
+@define-color workspace_hover @pink;
+@define-color module_clock @pink;
+@define-color module_audio_vol @blue;
+@define-color module_audio_mic @blue;
+
+/* Start Waybar Styling */
 * {
-    font-family: "JetBrainsMono NF";
-    font-family: "Maple Mono";
-    font-size: 15px;
-    font-weight: bold;
+  font-family: "Maple Mono";
+  font-size: 14.25px;
+  font-weight: 600;
 }
 
 window#waybar {
-    background: @mantle;
-    color: @text;
-    opacity: 1.0;
-    /*padding: 24px;*/
-    border-top: 2px solid @base;
-    border-bottom: 2px solid @crust;
+  color: @text;
+  background: @mantle;
+  opacity: 1.0;
+  border: 1px solid @surface0;
+  border-top: 1px solid @base;
+  border-left: 1px solid @base;
+  border-right: 1px solid @base;
 }
 
 tooltip {
-    background: @crust;
-    opacity: 1.0;
-    border-radius: 6px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: @mantle;
-    padding: 0;
-    color: @text;
+  color: @text;
+  background: @crust;
+  opacity: 1.0;
+  border: 2px solid @mantle;
+  border-radius: 6px;
+  padding: 0;
 }
 
 #workspaces {
 	padding-left: 5px;
 }
-#workspaces button {
-    border-radius: 0;
-    color: @subtext0;
-    margin: 0;
-    padding: 10px;
-    padding-bottom: 0px;
-    padding-top: 0px;
-    border: none;
-    border-bottom: 2px solid @crust;
-    border-top: 2px solid @base;
-}
-#workspaces button.active {
-    color: @blue;
-    border-top: 2px solid @blue;
-    background: @crust;
-}
-#workspaces button.focused {
-    color: @lavender;
-    border-top: 2px solid @lavender;
 
+#workspaces button {
+  border-radius: 0;
+  color: @subtext0;
+  margin: 0;
+  padding: 10px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  border-bottom: 1px solid @surface0;
+  border-top: 1px solid @base;
 }
+
+#workspaces button.active {
+  color: @workspace_active;
+  border-top: 2px solid @workspace_active;
+  background: @crust;
+  padding-bottom: 1px;
+}
+
+#workspaces button.focused {
+  color: @lavender;
+  border-top: 2px solid @lavender;
+}
+
 #workspaces button.urgent {
-    color: @blue;
-    border-top: 2px solid @blue;
-    background: @crust;
+  color: @blue;
+  border-top: 2px solid @blue;
+  background: @crust;
 }
+
 #workspaces button:hover {
-    color: @pink;
-    border-top: 2px solid @pink;
-    background: @crust;
+  color: @workspace_hover;
+  border-top: 2px solid @workspace_hover;
+  background: @crust;
+  border-bottom: 1px solid @surface0;
+  padding-bottom: 1px;
 }
 
 #custom-logo {
 	padding-left: 6px;
 	padding-right: 5px;
-	color: @sapphire;
+	color: @logo_color;
 }
+
 #custom-spotify {
 	margin-left: 15px;
 	color: @text;
@@ -106,51 +122,59 @@ tooltip {
 #memory,
 #pulseaudio,
 #pulseaudio.microphone {
-  /*margin-bottom: 8px;*/
 	margin-left: 10px;
 	margin-right: 10px;
   padding-top: 5px;
   padding-bottom: 4px;
-  border-bottom: 2px solid @crust; /* remove @crust for accent colors */
-  /*border-top: 2px solid @base;*/
+  border-bottom: 1px solid @surface0; /* remove @crust for accent colors */
 }
+
 #tray {
 	padding-right: 10px;
 }
+
 #window {
 	color: @lavender;
 }
+
 #battery {
   color: @mauve;
 }
+
 #network {
   padding-right: 5px;
   padding-top: 3px;
   border-bottom: 2px solid @crust;
 	color: @lavender;
 }
+
 #bluetooth {
-    color: @sapphire;
+  color: @sapphire;
 } 
+
 #cpu {
-    color: @yellow;
+  color: @yellow;
 }
+
 #memory {
-    color: @peach;
+  color: @peach;
 }
+
 #pulseaudio {
-    color: @blue;
-    margin-right: 0px;
-    padding-right: 6px;
-    padding-left: 0px;
+  color: @module_audio_vol;
+  margin-right: 0px;
+  padding-right: 6px;
+  padding-left: 0px;
 }
+
 #pulseaudio.microphone {
-    color: @blue;
-    margin-left: 0px;
-    padding-left: 6px;
-    padding-right: 0px;
+  color: @module_audio_mic;
+  margin-left: 0px;
+  padding-left: 6px;
+  padding-right: 0px;
 }
+
 #clock {
-  color: @pink;
+  color: @module_clock;
   margin-right: 16px;
 }
