@@ -4,12 +4,12 @@
 
 <hr>
 
-- Color Scheme: [Catppuccin](https://catppuccin.com/)
-- Terminal: [Alacritty](https://alacritty.org/)
-- Shell: [Fish](https://fishshell.com/)
-- Prompt: [Starship](https://starship.rs/)
-- File Manager (CLI): [Yazi](https://yazi-rs.github.io/)
-- File Manager (GUI): [Nemo](https://community.linuxmint.com/software/view/nemo)
+- Color Scheme: [catppuccin](https://catppuccin.com/)
+- Terminal: [ghostty](https://ghostty.org/)
+- Shell: [fish](https://fishshell.com/)
+- Prompt: [starship](https://starship.rs/)
+- File Manager (CLI): [yazi](https://yazi-rs.github.io/)
+- File Manager (GUI): [nemo](https://community.linuxmint.com/software/view/nemo)
 - Taskbar: [waybar](https://github.com/Alexays/Waybar)
 - Fetch: [NotAShelf/microfetch](https://github.com/NotAShelf/microfetch)
 
