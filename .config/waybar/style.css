@@ -34,6 +34,7 @@
 @define-color module_clock @pink;
 @define-color module_audio_vol @blue;
 @define-color module_audio_mic @blue;
+@define-color module_weather @yellow;
 
 /* Start Waybar Styling */
 * {
@@ -114,6 +115,7 @@ tooltip {
 }
 
 
+
 #clock,
 #battery,
 #network,
@@ -121,7 +123,8 @@ tooltip {
 #cpu,
 #memory,
 #pulseaudio,
-#pulseaudio.microphone {
+#pulseaudio.microphone,
+#custom-weather {
 	margin-left: 10px;
 	margin-right: 10px;
   padding-top: 5px;
@@ -176,5 +179,8 @@ tooltip {
 
 #clock {
   color: @module_clock;
-  margin-right: 16px;
+}
+
+#custom-weather {
+  color: @module_weather;
 }

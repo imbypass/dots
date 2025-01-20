@@ -29,7 +29,8 @@
     	"pulseaudio",
       "pulseaudio#microphone",
       "battery",
-    	"clock"
+    	"clock",
+      "custom/weather"
     ],
 
 
@@ -101,13 +102,13 @@
   		"on-click": "walker"
   },
   
-  "custom/weather" : {
-       "tooltip" : true,
-       "format" : "{}",
-       "interval" : 30,
-       "exec" : "$HOME/.config/waybar/scripts/waybar-wttr.py",
-       "return-type" : "json"
-   },
+  "custom/weather": {
+      "format": "{}°",
+      "tooltip": true,
+      "interval": 3600,
+      "exec": "wttrbar --nerd --mph --fahrenheit --lang en --ampm --hide-conditions --custom-indicator \"{ICON}  {temp_F}\" --location 32735",
+      "return-type": "json"
+  },
 
   "custom/notification": {
     "tooltip": false,

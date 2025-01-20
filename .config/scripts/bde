@@ -64,6 +64,9 @@ edit_prompt() {
       "ghostty")
         $EDITOR ~/.config/ghostty/config
       ;;
+      "foot")
+        $EDITOR ~/.config/foot/foot.ini
+      ;;
       "tmux")
         $EDITOR ~/.config/tmux/tmux.conf
       ;;
@@ -181,7 +184,8 @@ free_cache() {
 remove_orphans() {
   echo -ne "\033]0;Removing orphaned packages..\007"
   echo ":: Removing orphaned packages.."
-  pacman -Qdtq | sudo pacman -Rns - > /dev/null
+  # pacman -Qdtq | sudo pacman -Rns - > /dev/null
+  sudo pacman -Rns $(pacman -Qdtq) --noconfirm > /dev/null
 }
 
 

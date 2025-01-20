@@ -52,6 +52,7 @@ alias l 'ls'
 alias la 'ls -la'
 alias lsa="ls -la"
 alias cl="clear"
+alias x="exit"
 alias q="exit"
 alias ex="exit"
 alias grep="rg"
@@ -76,6 +77,7 @@ alias unset="set --erase"
 alias ncmp="ncmpcpp"
 alias clock="tty-clock -t -c -b -B"
 alias icons="papirus-folders -t Papirus-Dark -C $1"
+alias t="todo"
 
 # Custom PATH environment
 fish_add_path /home/bypass/.spicetify
