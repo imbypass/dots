@@ -23,6 +23,7 @@
     	"hyprland/workspaces"
     ],
     "modules-center": [
+      "wlr/taskbar"
     ],
     "modules-right": [
       "tray",
@@ -62,6 +63,24 @@
           "\\s*": " "
          },
          "separate-outputs": false
+    },
+    "wlr/taskbar": {
+	    "format": "{icon}",
+	    "icon-size": 14,
+	    "icon-theme": "Papirus",
+	    "tooltip-format": "{title}",
+	    "on-click": "activate",
+	    "on-click-middle": "close",
+	    "ignore-list": [
+	       "Alacritty"
+	    ],
+	    "app_ids-mapping": {
+        "firefoxdeveloperedition": "firefox-developer-edition"
+	    },
+	    "rewrite": {
+		    "Firefox Web Browser": "Firefox",
+		    "Foot Server": "Terminal"
+	    }
     },
 
 // === [ LEFT MODULES ] === //

@@ -221,9 +221,7 @@
             "enabled": false
         },
         "MessageClickActions": {
-            "enabled": true,
-            "requireModifier": false,
-            "enableDoubleClickToEdit": true
+            "enabled": true
         },
         "MessageLinkEmbeds": {
             "enabled": false
@@ -716,6 +714,9 @@
         },
         "FixImagesQuality": {
             "enabled": false
+        },
+        "FullUserInChatbox": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -728,7 +729,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1736029644580
+        "settingsSyncVersion": 1737723914583
     },
     "notifyAboutUpdates": true
 }
