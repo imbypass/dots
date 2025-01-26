@@ -1,7 +1,7 @@
 # Interactive shell settings
 if status is-interactive
     set fish_greeting
-    set fish_tmux_autostart false
+    set fish_tmux_autostart true
     set fish_tmux_autoname_session true
     fish_vi_key_bindings
 end
@@ -61,6 +61,7 @@ alias py3="python3"
 alias v="nvim"
 alias vim="nvim"
 alias nano="nvim"
+alias hx="helix"
 
 # Aliases - User Tools
 alias fetch="bfetch"
@@ -78,6 +79,7 @@ alias ncmp="ncmpcpp"
 alias clock="tty-clock -t -c -b -B"
 alias icons="papirus-folders -t Papirus-Dark -C $1"
 alias t="todo"
+alias ducks="du -cks * | sort -rn | head"
 
 # Custom PATH environment
 fish_add_path /home/bypass/.spicetify

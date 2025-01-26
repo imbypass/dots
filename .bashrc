@@ -48,7 +48,6 @@ alias nano="nvim"
 alias py3="python3"
 
 
-#### [ HYPRLAND ] ####
-
 # Start Hyprland if not already running
-pidof Hyprland > /dev/null || Hyprland > ~/.hyprland.log & disown
+mkdir ~/.logs/ > /dev/null
+pidof Hyprland > /dev/null || Hyprland > ~/.logs/hyprland.log & disown

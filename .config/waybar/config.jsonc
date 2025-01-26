@@ -23,7 +23,6 @@
     	"hyprland/workspaces"
     ],
     "modules-center": [
-      "wlr/taskbar"
     ],
     "modules-right": [
       "tray",
@@ -31,9 +30,10 @@
       "pulseaudio#microphone",
       "battery",
     	"clock",
-      "custom/weather"
     ],
 
+    //"custom/weather"
+    //"wlr/taskbar"
 
 // === [ MIDDLE MODULES ] === //
     "hyprland/window": {
@@ -78,7 +78,7 @@
         "firefoxdeveloperedition": "firefox-developer-edition"
 	    },
 	    "rewrite": {
-		    "Firefox Web Browser": "Firefox",
+		    "Mozilla Firefox": "Firefox",
 		    "Foot Server": "Terminal"
 	    }
     },
@@ -92,13 +92,13 @@
       "format": "  {}%"
   }, 
 	"hyprland/workspaces": {
-      "format": "{icon}",
+      "format": "{}",
       "format-icons": {
-        "1": "I",
-        "2": "II",
-        "3": "III",
-        "4": "IV",
-        "5": "V",
+        "1": "CHAT",
+        "2": "WEB",
+        "3": "FILE",
+        "4": "TERM",
+        "5": "GAME",
         "6": "VI",
         "7": "VII",
         "8": "VIII",
@@ -108,10 +108,10 @@
         "12": "XII"
       },
       "persistent-workspaces": {
-        "1": [],
-        "2": [],
-        "3": [],
-        "4": []
+        //"1": [],
+        //"2": [],
+        //"3": [],
+        //"4": []
       }
   },
 
