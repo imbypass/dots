@@ -1,0 +1,20 @@
+theme = "mocha"
+
+[editor]
+line-number = "relative"
+cursorline = true
+color-modes = true
+true-color = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.indent-guides]
+render = true
+
+
+[keys.normal]
+C-s = ":w" # Maps Ctrl-s to the typable command :w which is an alias for :write (save file)
+";" = "command_mode"
