@@ -4,6 +4,7 @@
 # This just seemed like a more convenient way to execute some of the common shit that I do on my PC.
 
 BDE_VERSION="0.15.3"
+EDITOR="helix"
 
 edit_prompt() {
   case "$1" in

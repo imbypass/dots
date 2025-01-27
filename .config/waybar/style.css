@@ -48,7 +48,7 @@ window#waybar {
   background: @mantle;
   opacity: 1.0;
   border: 1px solid @surface0;
-  border-top: 1px solid @base;
+  border-bottom: 1px solid @base;
   border-left: 1px solid @base;
   border-right: 1px solid @base;
 }
@@ -104,9 +104,10 @@ tooltip {
 }
 
 #custom-logo {
-	padding-left: 6px;
-	padding-right: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
 	color: @logo_color;
+  font-size: 18px;
 }
 
 #custom-spotify {
@@ -130,7 +131,8 @@ tooltip {
 	margin-right: 10px;
   padding-top: 5px;
   padding-bottom: 4px;
-  border-bottom: 1px solid @surface0; /* remove @crust for accent colors */
+  border-top: 1px solid @surface0;
+  border-bottom: 1px solid @crust;/* remove @crust for accent colors */
 }
 
 #tray {
@@ -185,3 +187,4 @@ tooltip {
 #custom-weather {
   color: @module_weather;
 }
+

@@ -1,7 +1,7 @@
 {
 // === [ WAYBAR CONFIGURATION ] === //
     "layer": "top",
-    "position": "top",
+    "position": "bottom",
     "margin-top": 0,
     "margin-right": 0,
     "margin-left": 0,
@@ -20,7 +20,7 @@
     
     "modules-left": [
       "custom/logo",
-    	"hyprland/workspaces"
+      "wlr/taskbar"
     ],
     "modules-center": [
     ],
@@ -33,7 +33,7 @@
     ],
 
     //"custom/weather"
-    //"wlr/taskbar"
+    //"hyprland/workspaces",
 
 // === [ MIDDLE MODULES ] === //
     "hyprland/window": {
@@ -66,20 +66,23 @@
     },
     "wlr/taskbar": {
 	    "format": "{icon}",
-	    "icon-size": 14,
+	    "icon-size": 18,
 	    "icon-theme": "Papirus",
 	    "tooltip-format": "{title}",
 	    "on-click": "activate",
 	    "on-click-middle": "close",
 	    "ignore-list": [
-	       "Alacritty"
+	       "Alacritty",
+         "Spotify",
+         "Foot"
 	    ],
 	    "app_ids-mapping": {
         "firefoxdeveloperedition": "firefox-developer-edition"
 	    },
 	    "rewrite": {
 		    "Mozilla Firefox": "Firefox",
-		    "Foot Server": "Terminal"
+		    "Foot Server": "Terminal",
+        "Vesktop": "Discord"
 	    }
     },
 
@@ -117,8 +120,8 @@
 
   "custom/logo" : {
   		"tooltip": false,
-  		"format": " 󰣇 ",
-  		"on-click": "walker"
+  		"format": "  󰣇  ",
+  		"on-click": "walker -m applications"
   },
   
   "custom/weather": {

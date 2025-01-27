@@ -10,7 +10,7 @@ play = [
   { run = 'mpv "$@"', orphan = true, for = "unix" },
 ]
 edit = [
-  { run = '$EDITOR "$@"', block = true, for = "unix" },
+  { run = 'helix "$@"', block = true, for = "unix" },
 ]
 open = [
   { run = 'xdg-open "$@"', desc = "Open" },

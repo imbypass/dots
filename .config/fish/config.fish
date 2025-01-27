@@ -8,12 +8,12 @@ end
 
 # Yazi shell wrapper
 function y
-	set tmp (mktemp -t "yazi-cwd.XXXXXX")
-	yazi $argv --cwd-file="$tmp"
-	if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-		builtin cd -- "$cwd"
-	end
-	rm -f -- "$tmp"
+    set tmp (mktemp -t "yazi-cwd.XXXXXX")
+    yazi $argv --cwd-file="$tmp"
+    if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+        builtin cd -- "$cwd"
+    end
+    rm -f -- "$tmp"
 end
 
 # Alt+Escape to prepend 'sudo'
@@ -22,12 +22,12 @@ bind -k nul accept-autosuggestion
 
 # Starship Transient Prompt (Left)
 function starship_transient_prompt_func
-  starship module character
+    starship module character
 end
 
 # Starship Transient Prompt (Right)
 function starship_transient_rprompt_func
-  starship module time
+    starship module time
 end
 
 # Initialize software
@@ -48,7 +48,7 @@ alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 # Aliases - System Tools
 alias tree="eza -l --tree --icons"
 alias ls="eza --icons"
-alias l 'ls'
+alias l="ls"
 alias la 'ls -la'
 alias lsa="ls -la"
 alias cl="clear"
@@ -58,9 +58,9 @@ alias ex="exit"
 alias grep="rg"
 alias cat="bat -p"
 alias py3="python3"
-alias v="nvim"
-alias vim="nvim"
-alias nano="nvim"
+alias v="helix"
+alias vim="helix"
+alias nano="helix"
 alias hx="helix"
 
 # Aliases - User Tools
@@ -88,3 +88,4 @@ fish_add_path /home/bypass/.config/scripts
 fish_add_path /home/linuxbrew/.linuxbrew/bin
 
 set PATH $PATH /home/bypass/.local/bin
+set EDITOR helix

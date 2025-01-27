@@ -29,7 +29,7 @@ export GTK2_RC_FILES=/usr/share/themes/Catppuccin-Mocha-Standard-Sapphire-Dark/g
 export MICRO_TRUECOLOR=1
 export TERM='xterm-256color'
 export PYENV_ROOT="$HOME/.pyenv"
-export QT_QPA_PLATFORMTHEME='qt5ct'
+export EDITOR="helix"
 
 # Aliases - Configuration
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -46,8 +46,10 @@ alias h="hyprctl"
 alias cat="bat -p"
 alias nano="nvim"
 alias py3="python3"
+alias hx="helix"
 
 
 # Start Hyprland if not already running
-mkdir ~/.logs/ > /dev/null
+mkdir ~/.logs/ > /dev/null || echo ""
 pidof Hyprland > /dev/null || Hyprland > ~/.logs/hyprland.log & disown
+
