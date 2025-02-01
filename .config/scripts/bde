@@ -4,84 +4,84 @@
 # This just seemed like a more convenient way to execute some of the common shit that I do on my PC.
 
 BDE_VERSION="0.15.3"
-EDITOR="helix"
+# EDITOR="helix"
 
 edit_prompt() {
   case "$1" in
 
       # Edit the script itself
       "")
-        $EDITOR ~/.config/scripts/bde
+        cd ~/.config/ && $EDITOR scripts/bde
       ;;
 
       # Edit Hyprland configuration
       "colors")
-        $EDITOR ~/.config/hypr/conf/custom/mocha.conf
+        cd ~/.config/hypr/ && $EDITOR conf/custom/mocha.conf
       ;;
       "hypr")
-        $EDITOR ~/.config/hypr/hyprland.conf
+        cd ~/.config/hypr/ && $EDITOR hyprland.conf
       ;;
       "keys")
-        $EDITOR ~/.config/hypr/conf/keybinding.conf
+        cd ~/.config/hypr/ && $EDITOR conf/keybinding.conf
       ;;
       "apps")
-        $EDITOR ~/.config/hypr/conf/apps.conf
+        cd ~/.config/hypr/ && $EDITOR conf/apps.conf
       ;;
       "deco")
-        $EDITOR ~/.config/hypr/conf/decoration.conf
+        cd ~/.config/hypr/ && $EDITOR conf/decoration.conf
       ;;
       "startup")
-        $EDITOR ~/.config/hypr/conf/autostart.conf
+        cd ~/.config/hypr/ && $EDITOR conf/autostart.conf
       ;;
       "plugins")
-        $EDITOR ~/.config/hypr/conf/custom/plugins.conf
+        cd ~/.config/hypr/ && $EDITOR conf/custom/plugins.conf
       ;;
       "layout")
-        $EDITOR ~/.config/hypr/conf/layout.conf
+        cd ~/.config/hypr/ && $EDITOR conf/layout.conf
       ;;
       "windows")
-        $EDITOR ~/.config/hypr/conf/windowrule.conf
+        cd ~/.config/hypr/ && $EDITOR conf/windowrule.conf
       ;;
       "env")
-        $EDITOR ~/.config/hypr/conf/custom/environment.conf
+        cd ~/.config/hypr/ && $EDITOR conf/custom/environment.conf
       ;;
       "custom")
-        $EDITOR ~/.config/hypr/conf/custom/general.conf
+        cd ~/.config/hypr/ && $EDITOR conf/custom/general.conf
       ;;
       
       # Edit any user configs
       "mako")
-        $EDITOR ~/.config/mako/config
+        cd ~/.config/ && $EDITOR mako/config
       ;;
       "walker")
-        $EDITOR ~/.config/walker/config.json
+        cd ~/.config/ && $EDITOR walker/config.json
       ;;
       "waybar")
-        $EDITOR ~/.config/waybar/config.jsonc
+        cd ~/.config/ && $EDITOR waybar/config.jsonc
       ;;
       "rofi")
-        $EDITOR ~/.config/rofi/config.rasi
+        cd ~/.config/ && $EDITOR rofi/config.rasi
       ;;
       "ghostty")
-        $EDITOR ~/.config/ghostty/config
+        cd ~/.config/ && $EDITOR ghostty/config
       ;;
       "foot")
-        $EDITOR ~/.config/foot/foot.ini
+        cd ~/.config/ && $EDITOR foot/foot.ini
       ;;
       "tmux")
-        $EDITOR ~/.config/tmux/tmux.conf
+        cd ~/.config/ && $EDITOR tmux/tmux.conf
       ;;
       "fish")
-        $EDITOR ~/.config/fish/config.fish
+        cd ~/.config/ && $EDITOR fish/config.fish
       ;;
       "defaults")
-        $EDITOR ~/.config/mimeapps.list
+        cd ~/.config/ && $EDITOR mimeapps.list
       ;;
       "dock")
-        $EDITOR ~/.cache/nwg-dock-pinned
+        cd ~/.cache/ && $EDITOR nwg-dock-pinned
       ;;
       "starship")
-        $EDITOR ~/.config/starship.toml
+        cd ~/.config/ && $EDITOR starship.toml
       ;;
   esac
 }
@@ -98,12 +98,12 @@ reload_prompt() {
       ;;
       "waybar")
         echo ":: Reloading waybar.."
-        killall waybar > /dev/null
+        killall -9  waybar > /dev/null
         waybar > /dev/null & disown
       ;;
       "walker")
         echo ":: Reloading walker service.."
-        killall walker > /dev/null
+        killall -9 walker > /dev/null
         walker --gapplication-service & disown > /dev/null
       ;;
       "mako")
@@ -123,6 +123,11 @@ reload_prompt() {
         killall -9 gjs > /dev/null
         hyprpanel > ~/hyprpanel.log 2>&1 & disown
       ;;
+      "ghostty")
+        echo ":: Reloading Ghostty.."
+        killall -9 ghostty > /dev/null
+        ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false & disown
+      ;;        
   esac
 }
 

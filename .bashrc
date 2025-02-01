@@ -21,6 +21,7 @@ export FZF_DEFAULT_OPTS=" \
 --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
 --color=selected-bg:#45475a \
 --multi --reverse"
+
 export HYPRSHOT_DIR="$HOME/Pictures/Screenshots/"
 export ELECTRON_OZONE_PLATFORM_HINT="wayland"
 export MOZ_ENABLE_WAYLAND=0
@@ -48,8 +49,6 @@ alias nano="nvim"
 alias py3="python3"
 alias hx="helix"
 
-
 # Start Hyprland if not already running
 mkdir ~/.logs/ > /dev/null || echo ""
 pidof Hyprland > /dev/null || Hyprland > ~/.logs/hyprland.log & disown
-

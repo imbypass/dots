@@ -66,7 +66,7 @@
     },
     "wlr/taskbar": {
 	    "format": "{icon}",
-	    "icon-size": 18,
+	    "icon-size": 24,
 	    "icon-theme": "Papirus",
 	    "tooltip-format": "{title}",
 	    "on-click": "activate",
@@ -74,8 +74,9 @@
 	    "ignore-list": [
 	       "Alacritty",
          "Spotify",
-         "Foot"
-	    ],
+         "Foot",
+         "Windscribe"
+ 	    ],
 	    "app_ids-mapping": {
         "firefoxdeveloperedition": "firefox-developer-edition"
 	    },

@@ -14,7 +14,7 @@
     }
   },
   "bar.customModules.updates.pollingInterval": 1440000,
-  "terminal": "alacritty",
+  "terminal": "ghostty",
   "theme.font.name": "SF Pro Display",
   "theme.bar.floating": false,
   "theme.bar.buttons.enableBorders": false,

@@ -76,10 +76,14 @@ alias ani="ani-cli --dub --skip"
 alias wg++="x86_64-w64-mingw32-g++"
 alias unset="set --erase"
 alias ncmp="ncmpcpp"
-alias clock="tty-clock -t -c -b -B"
+alias clock="tty-clock -t -c -b -B -C 4"
 alias icons="papirus-folders -t Papirus-Dark -C $1"
 alias t="todo"
 alias ducks="du -cks * | sort -rn | head"
+
+# Custom NNN colors? Find a better way, peanut.
+set -Ux NNN_COLORS "#04020301;4231"
+set -Ux NNN_FCOLORS 030304020705050801060301
 
 # Custom PATH environment
 fish_add_path /home/bypass/.spicetify
