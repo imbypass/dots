@@ -63,3 +63,4 @@ x-scheme-handler/wago-app=wago-app.desktop
 x-scheme-handler/discord-448016723057049601=discord-448016723057049601.desktop
 application/x-msdownload=wine.desktop
 text/x-python=org.xfce.mousepad.desktop
+x-scheme-handler/mailto=google-chrome.desktop

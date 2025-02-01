@@ -1,13 +1,14 @@
-@import url("https://imbypass.pw/catppuccin-mocha.patch.css");
+/* Remote Theme */
 /* @import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha-blue.theme.css"); */
 @import url("https://raw.githubusercontent.com/refact0r/system24/refs/heads/main/theme/flavors/catppuccin-mocha.theme.css");
+@import url("https://imbypass.pw/catppuccin-mocha.patch.css");
+
+/* Theme Settings */
 :root {
     --accent-color: var(--catppuccin-mocha-blue);
     --font: "Maple Mono";
     --font-code: "Maple Mono";
     --purple: var(--accent-color) !important;
+    --purple2: var(--purple) !important;
 }
 
-* {
-    text-rendering: optimizeLegibility;
-}

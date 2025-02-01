@@ -1,0 +1,31 @@
+use_nerdfont = true
+flip_status_indicators = true
+notify = true
+library_tabs = ["tracks", "artists", "browse"]
+hide_display_names = false
+statusbar_format = "%title - %artists"
+[track_format]
+left = "%title - %artists"
+center = "%album"
+right = "%saved %duration"
+[keybindings]
+"Space"="playpause"
+
+[theme]
+background = "#1e1e2e"
+primary = "#cdd6f4"
+secondary = "#414868"
+title = "#89b4fa"
+playing = "#f5c2e7"
+playing_selected = "#f5c2e7"
+playing_bg = "#1e1e2e"
+highlight = "#cdd6f4"
+highlight_bg = "#181825"
+error = "#414868"
+error_bg = "#f38ba8"
+statusbar = "#89b4fa"
+statusbar_progress = "#89b4fa"
+statusbar_bg = "#1e1e2e"
+cmdline = "#cdd6f4"
+cmdline_bg = "#1e1e2e"
+search_match = "#f38ba8"
