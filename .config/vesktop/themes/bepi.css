@@ -9,6 +9,7 @@
     --font: "Maple Mono";
     --font-code: "Maple Mono";
     --purple: var(--accent-color) !important;
-    --purple2: var(--purple) !important;
+    --purple-2: var(--purple) !important;
+    --purple-1: var(--purple) !important;
 }
 

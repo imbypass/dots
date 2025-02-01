@@ -1,138 +1,120 @@
 {
-// === [ WAYBAR CONFIGURATION ] === //
-    "layer": "top",
-    "position": "bottom",
-    "margin-top": 0,
-    "margin-right": 0,
-    "margin-left": 0,
-    "margin-bottom": 0,
-    "mod": "dock",
-    "exclusive": true,
-    "passthrough": false,
-    "gtk-layer-shell": true,
-    "reload_style_on_change": true,
-    "height": 42,
-
-    "tray": {
-    	"icon-size": 24,
-    	"spacing": 24
+  "layer": "top",
+  "position": "bottom",
+  "margin-top": 0,
+  "margin-right": 0,
+  "margin-left": 0,
+  "margin-bottom": 0,
+  "mod": "dock",
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  "reload_style_on_change": true,
+  "height": 42,
+  "tray": {
+    "icon-size": 16,
+    "spacing": 10,
+    "icons": {
+      "discord": "discord"
+    }
+  },
+  "modules-left": [
+    "custom/logo",
+    "wlr/taskbar"
+  ],
+  "modules-center": [],
+  "modules-right": [
+    "tray",
+    "pulseaudio",
+    "pulseaudio#microphone",
+    "battery",
+    "clock"
+  ],
+  "hyprland/window": {
+    "format": "{}",
+    "rewrite": {
+      "\\s*(.*)\\s+": "$1",
+      "\\s*": " ",
+      "(\\d\\. )?(.*)- VLC media player": "<span>󰕼 </span> $2",
+      "(\\d\\. )?(.*)— Mozilla Firefox": "<span> </span> $2",
+      "(\\d\\. )?(.*)- Google Chrome": "<span> </span> $2",
+      "(\\d\\. )?(.*)- Thunar": "<span> </span> $2",
+      "(\\d\\. )?(.*)Terminal": "<span></span> Terminal",
+      "(\\d\\. )?(.*)Vesktop": "<span> </span> Discord",
+      "(\\d\\. )?(.*)Discord Popout": "<span> </span> Discord",
+      "(\\d\\. )?(.*)Spotify": "<span>󰓇 </span> Spotify",
+      "(\\d\\. )?(.*)Spotify Premium": "<span>󰓇 </span> Spotify",
+      "(\\d\\. )?(.*)ncspot": "<span>󰓇 </span> Spotify",
+      "(\\d\\. )?(.*)Steam": "<span>󰓓 </span> Steam",
+      "(\\d\\. )?(.*)Minecraft": "<span>󰍳 </span> Minecraft",
+      "(.*)[Ll]unar [Cc]lient": "<span>󰍳 </span> Minecraft",
+      "(\\d\\. )?(.*)Code - OSS": "<span>󰨞 </span> VS Code",
+      "bypass@archbtw:(\\d\\. )?(.*)": "<span>󰄛 </span> $2",
+      "nano (.*)": "<span>󱇧 </span> $1",
+      "rofi - (.*)": "$1",
+      "Search(.*)": "<span> </span> Search $1"
     },
-    
-    "modules-left": [
-      "custom/logo",
-      "wlr/taskbar"
+    "separate-outputs": false
+  },
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 24,
+    "icon-theme": "Papirus",
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": [
+      "Alacritty",
+      "Spotify",
+      "Foot",
+      "Windscribe"
     ],
-    "modules-center": [
-    ],
-    "modules-right": [
-      "tray",
-    	"pulseaudio",
-      "pulseaudio#microphone",
-      "battery",
-    	"clock",
-    ],
-
-    //"custom/weather"
-    //"hyprland/workspaces",
-
-// === [ MIDDLE MODULES ] === //
-    "hyprland/window": {
-        "format": "{}",
-        "rewrite": {
-          "\\s*(.*)\\s+": "$1",
-          "\\s*": "",
-          "(\\d\\. )?(.*)- VLC media player": "<span>󰕼 </span> $2",
-          "(\\d\\. )?(.*)— Mozilla Firefox": "<span> </span> $2",
-          "(\\d\\. )?(.*)- Google Chrome": "<span> </span> $2",
-          "(\\d\\. )?(.*)- Thunar": "<span> </span> $2",
-          "(\\d\\. )?(.*)Terminal": "<span></span> Terminal",
-          "(\\d\\. )?(.*)Vesktop": "<span> </span> Discord",
-          "(\\d\\. )?(.*)Discord Popout": "<span> </span> Discord",
-          "(\\d\\. )?(.*)Spotify": "<span>󰓇 </span> Spotify",
-          "(\\d\\. )?(.*)Spotify Premium": "<span>󰓇 </span> Spotify",
-          "(\\d\\. )?(.*)ncspot": "<span>󰓇 </span> Spotify",
-          "(\\d\\. )?(.*)Steam": "<span>󰓓 </span> Steam",
-          "(\\d\\. )?(.*)Minecraft": "<span>󰍳 </span> Minecraft",
-          "(.*)[Ll]unar [Cc]lient": "<span>󰍳 </span> Minecraft",
-          "(\\d\\. )?(.*)Code - OSS": "<span>󰨞 </span> VS Code",
-          "bypass@archbtw:(\\d\\. )?(.*)": "<span>󰄛 </span> $2",
-          "nano (.*)": "<span>󱇧 </span> $1",
-          "rofi - (.*)": "$1",
-          "Search(.*)": "<span> </span> Search $1",
-          "\\s*(.*)\\s+": "$1",
-          "\\s*": " "
-         },
-         "separate-outputs": false
+    "app_ids-mapping": {
+      "firefoxdeveloperedition": "firefox-developer-edition"
     },
-    "wlr/taskbar": {
-	    "format": "{icon}",
-	    "icon-size": 24,
-	    "icon-theme": "Papirus",
-	    "tooltip-format": "{title}",
-	    "on-click": "activate",
-	    "on-click-middle": "close",
-	    "ignore-list": [
-	       "Alacritty",
-         "Spotify",
-         "Foot",
-         "Windscribe"
- 	    ],
-	    "app_ids-mapping": {
-        "firefoxdeveloperedition": "firefox-developer-edition"
-	    },
-	    "rewrite": {
-		    "Mozilla Firefox": "Firefox",
-		    "Foot Server": "Terminal",
-        "Vesktop": "Discord"
-	    }
-    },
-
-// === [ LEFT MODULES ] === //
+    "rewrite": {
+      "Mozilla Firefox": "Firefox",
+      "Foot Server": "Terminal",
+      "Vesktop": "Discord"
+    }
+  },
   "clock": {
-      "format": "{:%I:%M %p}",
-      "tooltip-format": "{:%a, %b %e, %Y}"
+    "format": "{:%I:%M %p}",
+    "tooltip-format": "{:%a, %b %e, %Y}"
   },
   "battery": {
-      "format": "  {}%"
-  }, 
-	"hyprland/workspaces": {
-      "format": "{}",
-      "format-icons": {
-        "1": "CHAT",
-        "2": "WEB",
-        "3": "FILE",
-        "4": "TERM",
-        "5": "GAME",
-        "6": "VI",
-        "7": "VII",
-        "8": "VIII",
-        "9": "IX",
-        "10": "X",
-        "11": "XI",
-        "12": "XII"
-      },
-      "persistent-workspaces": {
-        //"1": [],
-        //"2": [],
-        //"3": [],
-        //"4": []
-      }
+    "format": "  {}%"
   },
-
-  "custom/logo" : {
-  		"tooltip": false,
-  		"format": "  󰣇  ",
-  		"on-click": "walker -m applications"
+  "hyprland/workspaces": {
+    "format": "{}",
+    "format-icons": {
+      "1": "CHAT",
+      "2": "WEB",
+      "3": "FILE",
+      "4": "TERM",
+      "5": "GAME",
+      "6": "VI",
+      "7": "VII",
+      "8": "VIII",
+      "9": "IX",
+      "10": "X",
+      "11": "XI",
+      "12": "XII"
+    },
+    "persistent-workspaces": {}
   },
-  
+  "custom/logo": {
+    "tooltip": false,
+    "format": "  󰣇  ",
+    "on-click": "walker -m applications"
+  },
   "custom/weather": {
-      "format": "{}°",
-      "tooltip": true,
-      "interval": 3600,
-      "exec": "wttrbar --nerd --mph --fahrenheit --lang en --ampm --hide-conditions --custom-indicator \"{ICON}  {temp_F}\" --location 32735",
-      "return-type": "json"
+    "format": "{}°",
+    "tooltip": true,
+    "interval": 3600,
+    "exec": "wttrbar --nerd --mph --fahrenheit --lang en --ampm --hide-conditions --custom-indicator \"{ICON}  {temp_F}\" --location 32735",
+    "return-type": "json"
   },
-
   "custom/notification": {
     "tooltip": false,
     "format": "{icon}",
@@ -153,75 +135,62 @@
     "on-click-right": "swaync-client -d -sw",
     "escape": true
   },
-    
   "custom/spotify": {
-  	"tooltip": false,
-      "format": "{}",
-      "max-length": 40,
-      "escape": true,
-      "exec": "$HOME/.config/waybar/scripts/mediaplayer.sh"
+    "tooltip": false,
+    "format": "{}",
+    "max-length": 40,
+    "escape": true,
+    "exec": "$HOME/.config/waybar/scripts/mediaplayer.sh"
   },
-
-    
-// === [ RIGHT MODULES ] === //
   "network": {
-      "format-wifi": " ",
-      "format-ethernet": "",
-      "format-alt": "  {essid}",
-      "format-linked": "{ifname} (No IP)",
-      "format-disconnected": "⚠",
-      "tooltip-format": " {bandwidthDownBits}  {bandwidthUpBits}"
+    "format-wifi": " ",
+    "format-ethernet": "",
+    "format-alt": "  {essid}",
+    "format-linked": "{ifname} (No IP)",
+    "format-disconnected": "⚠",
+    "tooltip-format": " {bandwidthDownBits}  {bandwidthUpBits}"
   },
-
   "bluetooth": {
-	  "format": " ",
-	  "format-disabled": "", // an empty format will hide the module
-	  "format-connected": " {num_connections}",
-	  "tooltip-format": "{device_alias}",
-	  "tooltip-format-connected": " {device_enumerate}",
-	  "tooltip-format-enumerate-connected": "{device_alias}"
+    "format": " ",
+    "format-disabled": "",
+    "format-connected": " {num_connections}",
+    "tooltip-format": "{device_alias}",
+    "tooltip-format-connected": " {device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}"
   },
-	
-	"memory": {
-		"format": "  {}%",
-		"tooltip": "false",
-		"on-click": "kitty btop"
-	},
-	
-	"cpu": {
-		"format": " {usage}%",
-		"tooltip": "false",
-		"on-click": "kitty btop"
-	},
-
+  "memory": {
+    "format": "  {}%",
+    "tooltip": "false",
+    "on-click": "kitty btop"
+  },
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": "false",
+    "on-click": "kitty btop"
+  },
   "pulseaudio": {
-      "format": "{icon}  {volume}%",
-      "tooltip": false,
-      "format-muted": " MUTED",
-      "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-      "on-click-right": "pavucontrol",
-      "on-scroll-up": "pamixer -i 1",
-      "on-scroll-down": "pamixer -d 1",
-      "scroll-step": 1,
-      "format-icons": {
-          "headphone": "",
-          "hands-free": "",
-          "headset": "",
-          "phone": "",
-          "portable": "",
-          "car": "",
-          "default": ["", "", ""]
-      }
+    "format": "{icon}  {volume}%",
+    "tooltip": false,
+    "format-muted": " MUTED",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click-right": "pavucontrol",
+    "on-scroll-up": "pamixer -i 1",
+    "on-scroll-down": "pamixer -d 1",
+    "scroll-step": 1,
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    }
   },
-
-  "tray": {
-      "icon-size": 16,
-      "spacing": 10,
-      "icons": {
-        "discord": "discord"
-      }
-  },
-  
   "custom/pacman": {
     "format": "{icon} {}",
     "return-type": "json",
@@ -232,29 +201,23 @@
     "exec-if": "which waybar-updates",
     "exec": "waybar-updates --notify"
   },
-
-// === [ UNUSED MODULES ] === //
   "temperature": {
-      "thermal-zone": 1,
-      "format": "{temperatureF}°F ",
-      "critical-threshold": 80,
-      "format-critical": "{temperatureC}°C "
+    "format": "{icon} {temperatureC}°C",
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 80,
+    "format-icons": [
+      "",
+      "",
+      ""
+    ]
   },
-	
-	"temperature": {
-		"format": "{icon} {temperatureC}°C",
-		"hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-		"critical-threshold": 80,
-		"format-icons": ["", "", ""]
-	},
-
   "pulseaudio#microphone": {
-      "format": "{format_source}",
-      "format-source": " {volume}%",
-      "format-source-muted": "  MUTED",
-      "on-click": "pamixer --default-source -t",
-      "on-scroll-up": "pamixer --default-source -i 1",
-      "on-scroll-down": "pamixer --default-source -d 1",
-      "scroll-step": 5
+    "format": "{format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": "  MUTED",
+    "on-click": "pamixer --default-source -t",
+    "on-scroll-up": "pamixer --default-source -i 1",
+    "on-scroll-down": "pamixer --default-source -d 1",
+    "scroll-step": 5
   }
 }

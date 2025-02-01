@@ -4,10 +4,12 @@ notify = true
 library_tabs = ["tracks", "artists", "browse"]
 hide_display_names = false
 statusbar_format = "%title - %artists"
+
 [track_format]
 left = "%title - %artists"
 center = "%album"
 right = "%saved %duration"
+
 [keybindings]
 "Space"="playpause"
 
