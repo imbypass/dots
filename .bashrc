@@ -11,8 +11,8 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 . "$HOME/.cargo/env"
 
 # Initialization - pyenv
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
 
 # Environment Variables
 export FZF_DEFAULT_OPTS=" \
@@ -29,7 +29,7 @@ export GTK_THEME=catppuccin-mocha-blue-standard+default
 export GTK2_RC_FILES=/usr/share/themes/Catppuccin-Mocha-Standard-Sapphire-Dark/gtk-2.0/gtkrc
 export MICRO_TRUECOLOR=1
 export TERM='xterm-256color'
-export PYENV_ROOT="$HOME/.pyenv"
+# export PYENV_ROOT="$HOME/.pyenv"
 export EDITOR="helix"
 
 # Aliases - Configuration

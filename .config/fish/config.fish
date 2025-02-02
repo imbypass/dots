@@ -35,11 +35,7 @@ zoxide init fish --cmd cd | source
 thefuck --alias | source
 /home/linuxbrew/.linuxbrew/bin/brew shellenv | source
 fzf --fish | source
-pyenv init - | source
 starship init fish | source
-
-# Enable transient prompt for Starship/Fish
-#enable_transience
 
 # Aliases - Configuration
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -57,7 +53,6 @@ alias q="exit"
 alias ex="exit"
 alias grep="rg"
 alias cat="bat -p"
-alias py3="python3"
 alias v="helix"
 alias vim="helix"
 alias nano="helix"
@@ -81,15 +76,8 @@ alias icons="papirus-folders -t Papirus-Dark -C $1"
 alias t="todo"
 alias ducks="du -cks * | sort -rn | head"
 
-# Custom NNN colors? Find a better way, peanut.
-set -Ux NNN_COLORS "#04020301;4231"
-set -Ux NNN_FCOLORS 030304020705050801060301
-
 # Custom PATH environment
 fish_add_path /home/bypass/.spicetify
-fish_add_path /home/bypass/local/bin
 fish_add_path /home/bypass/.config/scripts
 fish_add_path /home/linuxbrew/.linuxbrew/bin
-
-set PATH $PATH /home/bypass/.local/bin
-set EDITOR helix
+fish_add_path /home/bypass/.local/bin

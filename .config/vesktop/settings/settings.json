@@ -6,7 +6,8 @@
     "enabledThemes": [
         "catppuccin.theme.css",
         "Catppuccin Mocha.css",
-        "bepi.css"
+        "bepi.css",
+        "midnight-bepi.css"
     ],
     "enableReactDevtools": false,
     "frameless": false,
@@ -185,9 +186,6 @@
         "GreetStickerPicker": {
             "enabled": false
         },
-        "HideAttachments": {
-            "enabled": false
-        },
         "iLoveSpam": {
             "enabled": false
         },
@@ -344,7 +342,25 @@
             "dmSectionCollapsed": false,
             "canCollapseDmSection": false,
             "userBasedCategoryList": {
-                "148201667085598720": []
+                "148201667085598720": [
+                    {
+                        "id": "pxyf4amj7vi",
+                        "name": "Close Friends",
+                        "color": 10070709,
+                        "collapsed": false,
+                        "channels": [
+                            "975514265832284170",
+                            "588193248305217537",
+                            "1189261309636771891",
+                            "289876249378160640",
+                            "1038627479818096702",
+                            "1112190218670440448",
+                            "980292879798902824",
+                            "1015718332109955112",
+                            "294685587401605132"
+                        ]
+                    }
+                ]
             }
         },
         "PlainFolderIcon": {
@@ -728,6 +744,9 @@
         },
         "IrcColors": {
             "enabled": false
+        },
+        "HideMedia": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -740,7 +759,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1738420949161
+        "settingsSyncVersion": 1738504120278
     },
     "notifyAboutUpdates": true
 }

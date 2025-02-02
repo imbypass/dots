@@ -54,4 +54,4 @@ SETUVAR fish_pager_color_selected_background:\x1d
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/home/linuxbrew/\x2elinuxbrew/bin\x1e/home/bypass/\x2econfig/scripts\x1e/home/bypass/dotfiles/scripts\x1e/home/bypass/\x2espicetify
+SETUVAR fish_user_paths:/home/bypass/\x2elocal/bin\x1e/home/linuxbrew/\x2elinuxbrew/bin\x1e/home/bypass/\x2econfig/scripts\x1e/home/bypass/dotfiles/scripts\x1e/home/bypass/\x2espicetify

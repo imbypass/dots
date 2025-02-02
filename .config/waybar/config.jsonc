@@ -12,7 +12,7 @@
   "reload_style_on_change": true,
   "height": 42,
   "tray": {
-    "icon-size": 16,
+    "icon-size": 14,
     "spacing": 10,
     "icons": {
       "discord": "discord"
@@ -105,7 +105,7 @@
   },
   "custom/logo": {
     "tooltip": false,
-    "format": "  󰣇  ",
+    "format": " 󰣇 ",
     "on-click": "walker -m applications"
   },
   "custom/weather": {
@@ -170,7 +170,7 @@
   },
   "pulseaudio": {
     "format": "{icon}  {volume}%",
-    "tooltip": false,
+    "tooltip": true,
     "format-muted": " MUTED",
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "on-click-right": "pavucontrol",

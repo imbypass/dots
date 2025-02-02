@@ -6,14 +6,14 @@ border-size=2
 border-radius=2
 icons=1
 icon-location=left
-markup=1
-actions=1
+markup=0
+actions=0
 history=1
 anchor=top-right
 max-icon-size=48
 default-timeout=4000
 ignore-timeout=1
-font=Maple Mono NF 10.5
+font=ZedMono NFP 10.5
 background-color=#1E1E2E
 border-color=#313244
 
