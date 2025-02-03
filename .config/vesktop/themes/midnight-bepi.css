@@ -12,7 +12,7 @@
 :root {
     --accent-color: var(--catppuccin-mocha-blue);
     --font: "ZedMono Nerd Font Mono";
-    --font-code: "ZedMono Nerd Fontw Mono";
+    --font-code: "ZedMono Nerd Font Mono";
 }
 
 /* customize things here */
