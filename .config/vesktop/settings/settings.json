@@ -261,7 +261,8 @@
         },
         "NoBlockedMessages": {
             "enabled": true,
-            "ignoreMessages": false
+            "ignoreMessages": false,
+            "applyToIgnoredUsers": true
         },
         "NoDevtoolsWarning": {
             "enabled": false
@@ -328,7 +329,8 @@
             "onboarding": true
         },
         "PermissionsViewer": {
-            "enabled": true
+            "enabled": true,
+            "permissionsSortOrder": 0
         },
         "petpet": {
             "enabled": false
@@ -759,7 +761,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1738504120278
+        "settingsSyncVersion": 1738551614122
     },
     "notifyAboutUpdates": true
 }
