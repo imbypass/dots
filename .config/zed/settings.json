@@ -1,5 +1,6 @@
 // Zed settings
 {
+  "icon_theme": "Catppuccin Mocha",
   "ui_font_size": 15,
   "buffer_font_size": 14,
   "ui_font_family": "ZedMono Nerd Font Propo",
@@ -10,6 +11,11 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Catppuccin Mocha"
+    "dark": "Catppuccin Mocha (blue)"
+  },
+  "terminal": {
+    "shell": {
+      "program": "/usr/bin/fish"
+    }
   }
 }
