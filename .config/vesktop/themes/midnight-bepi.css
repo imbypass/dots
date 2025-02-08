@@ -5,21 +5,17 @@
  * @version 1.6.2
 */
 
+/* import midnight theme */
 @import url('https://refact0r.github.io/midnight-discord/midnight.css');
-@import url("https://imbypass.pw/catppuccin-mocha.patch.css");
 
-/* Theme Settings */
-:root {
-    --accent-color: var(--catppuccin-mocha-blue);
-    --font: "ZedMono Nerd Font Mono";
-    --font-code: "ZedMono Nerd Font Mono";
-}
+/* import catppuccin patch */
+@import url("https://imbypass.pw/catppuccin-mocha.patch.css");
 
 /* customize things here */
 :root {
 
 	/* top left corner text */
-	--corner-text: 'Catppuccin';
+	--corner-text: 'discord';
 
 	/* thickness of messages divider */
 	--divider-thickness: 1px;
@@ -95,7 +91,7 @@
 
 /* catppuccin icon */
 .childWrapper__6e9f8:has(> svg:not(.favoriteIcon_dcc7a4)) {
-	background: url('https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png');
+	background: url('https://0x0.st/X3ig.png');
 	background-color: transparent !important;
 	background-size: cover;
 }

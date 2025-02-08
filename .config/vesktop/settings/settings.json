@@ -1,12 +1,11 @@
 {
     "autoUpdate": true,
     "autoUpdateNotification": true,
-    "useQuickCss": false,
+    "useQuickCss": true,
     "themeLinks": [],
     "enabledThemes": [
         "catppuccin.theme.css",
         "Catppuccin Mocha.css",
-        "bepi.css",
         "midnight-bepi.css"
     ],
     "enableReactDevtools": false,
@@ -85,7 +84,7 @@
             "enabled": true
         },
         "BetterNotesBox": {
-            "enabled": true,
+            "enabled": false,
             "hide": true,
             "noSpellCheck": false
         },
@@ -104,7 +103,7 @@
             "enabled": false
         },
         "CallTimer": {
-            "enabled": false,
+            "enabled": true,
             "format": "stopwatch"
         },
         "ClearURLs": {
@@ -118,7 +117,7 @@
             "enabled": false
         },
         "ConsoleShortcuts": {
-            "enabled": false
+            "enabled": true
         },
         "CopyUserURLs": {
             "enabled": false
@@ -138,7 +137,8 @@
             "dearrowByDefault": true
         },
         "Decor": {
-            "enabled": false
+            "enabled": false,
+            "agreedToGuidelines": false
         },
         "EmoteCloner": {
             "enabled": false
@@ -155,7 +155,7 @@
             "enabled": false
         },
         "FakeProfileThemes": {
-            "enabled": true,
+            "enabled": false,
             "nitroFirst": false
         },
         "FavoriteEmojiFirst": {
@@ -375,7 +375,7 @@
             }
         },
         "PlainFolderIcon": {
-            "enabled": false
+            "enabled": true
         },
         "PlatformIndicators": {
             "enabled": true,
@@ -494,7 +494,7 @@
             "enabled": false
         },
         "ThemeAttributes": {
-            "enabled": false
+            "enabled": true
         },
         "TimeBarAllActivities": {
             "enabled": false
@@ -705,7 +705,10 @@
             "enabled": true
         },
         "ConsoleJanitor": {
-            "enabled": false
+            "enabled": true,
+            "disableLoggers": false,
+            "disableSpotifyLogger": true,
+            "whitelistedLoggers": "GatewaySocket; Routing/Utils"
         },
         "WebKeybinds": {
             "enabled": true
@@ -718,7 +721,8 @@
             "addBack": true
         },
         "MentionAvatars": {
-            "enabled": false
+            "enabled": true,
+            "showAtSymbol": true
         },
         "YoutubeAdblock": {
             "enabled": true
@@ -727,7 +731,7 @@
             "enabled": false
         },
         "AlwaysExpandRoles": {
-            "enabled": true
+            "enabled": false
         },
         "CopyFileContents": {
             "enabled": false
@@ -754,7 +758,11 @@
             "enabled": false
         },
         "IrcColors": {
-            "enabled": false
+            "enabled": false,
+            "memberListColors": false,
+            "lightness": 70,
+            "applyColorOnlyInDms": false,
+            "applyColorOnlyToUsersWithoutColor": false
         },
         "HideMedia": {
             "enabled": false
@@ -762,7 +770,7 @@
     },
     "notifications": {
         "timeout": 5000,
-        "position": "bottom-right",
+        "position": "top-right",
         "useNative": "not-focused",
         "logLimit": 50
     },
@@ -770,7 +778,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1738964862713
+        "settingsSyncVersion": 1739025381390
     },
     "notifyAboutUpdates": true
 }

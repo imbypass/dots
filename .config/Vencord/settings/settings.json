@@ -85,7 +85,7 @@
             "enabled": true
         },
         "BetterNotesBox": {
-            "enabled": true,
+            "enabled": false,
             "hide": true,
             "noSpellCheck": false
         },
@@ -156,7 +156,7 @@
             "enabled": false
         },
         "FakeProfileThemes": {
-            "enabled": true,
+            "enabled": false,
             "nitroFirst": false
         },
         "FavoriteEmojiFirst": {
@@ -732,7 +732,7 @@
             "enabled": false
         },
         "AlwaysExpandRoles": {
-            "enabled": true
+            "enabled": false
         },
         "CopyFileContents": {
             "enabled": false
@@ -759,11 +759,11 @@
             "enabled": false
         },
         "IrcColors": {
-            "enabled": true,
+            "enabled": false,
             "memberListColors": false,
             "lightness": 70,
             "applyColorOnlyInDms": false,
-            "applyColorOnlyToUsersWithoutColor": true
+            "applyColorOnlyToUsersWithoutColor": false
         },
         "HideMedia": {
             "enabled": false
@@ -779,7 +779,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1738974226444
+        "settingsSyncVersion": 1738977378994
     },
     "notifyAboutUpdates": true
 }
