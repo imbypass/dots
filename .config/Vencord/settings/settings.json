@@ -1,7 +1,7 @@
 {
     "autoUpdate": true,
     "autoUpdateNotification": true,
-    "useQuickCss": false,
+    "useQuickCss": true,
     "themeLinks": [],
     "enabledThemes": [
         "catppuccin.theme.css",
@@ -375,7 +375,7 @@
             }
         },
         "PlainFolderIcon": {
-            "enabled": false
+            "enabled": true
         },
         "PlatformIndicators": {
             "enabled": true,
@@ -494,7 +494,7 @@
             "enabled": false
         },
         "ThemeAttributes": {
-            "enabled": false
+            "enabled": true
         },
         "TimeBarAllActivities": {
             "enabled": false
@@ -718,7 +718,8 @@
             "addBack": true
         },
         "MentionAvatars": {
-            "enabled": false
+            "enabled": true,
+            "showAtSymbol": true
         },
         "YoutubeAdblock": {
             "enabled": true
@@ -762,7 +763,7 @@
     },
     "notifications": {
         "timeout": 5000,
-        "position": "bottom-right",
+        "position": "top-right",
         "useNative": "not-focused",
         "logLimit": 50
     },
@@ -770,7 +771,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1738964862713
+        "settingsSyncVersion": 1738973548179
     },
     "notifyAboutUpdates": true
 }

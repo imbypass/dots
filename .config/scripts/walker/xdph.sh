@@ -1,3 +1,3 @@
 # walker xdph picker
 
-walker -n --modules xdphpicker
+walker --modules xdphpicker

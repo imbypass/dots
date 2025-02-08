@@ -137,11 +137,6 @@ init_prompt() {
 	    echo " => Initializing xdg-desktop-portal..."
 	    sleep 1
 	    killall xdg-desktop-portal-hyprland > /dev/null
-	    killall xdg-desktop-portal-gnome > /dev/null
-	    killall xdg-desktop-portal-kde > /dev/null
-	    killall xdg-desktop-portal-lxqt > /dev/null
-	    killall xdg-desktop-portal-wlr > /dev/null
-	    killall xdg-desktop-portal-gtk > /dev/null
 	    killall xdg-desktop-portal > /dev/null
 	    sleep 1
 	    /usr/lib/xdg-desktop-portal-hyprland > /dev/null &
