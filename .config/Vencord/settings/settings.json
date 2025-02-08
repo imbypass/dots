@@ -104,7 +104,7 @@
             "enabled": false
         },
         "CallTimer": {
-            "enabled": false,
+            "enabled": true,
             "format": "stopwatch"
         },
         "ClearURLs": {
@@ -118,7 +118,7 @@
             "enabled": false
         },
         "ConsoleShortcuts": {
-            "enabled": false
+            "enabled": true
         },
         "CopyUserURLs": {
             "enabled": false
@@ -138,7 +138,8 @@
             "dearrowByDefault": true
         },
         "Decor": {
-            "enabled": false
+            "enabled": false,
+            "agreedToGuidelines": false
         },
         "EmoteCloner": {
             "enabled": false
@@ -705,7 +706,10 @@
             "enabled": true
         },
         "ConsoleJanitor": {
-            "enabled": false
+            "enabled": true,
+            "disableLoggers": false,
+            "disableSpotifyLogger": true,
+            "whitelistedLoggers": "GatewaySocket; Routing/Utils"
         },
         "WebKeybinds": {
             "enabled": true
@@ -755,7 +759,11 @@
             "enabled": false
         },
         "IrcColors": {
-            "enabled": false
+            "enabled": true,
+            "memberListColors": false,
+            "lightness": 70,
+            "applyColorOnlyInDms": false,
+            "applyColorOnlyToUsersWithoutColor": true
         },
         "HideMedia": {
             "enabled": false
@@ -771,7 +779,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1738973548179
+        "settingsSyncVersion": 1738974226444
     },
     "notifyAboutUpdates": true
 }
