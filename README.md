@@ -11,6 +11,7 @@
 - File Manager (CLI): [yazi](https://yazi-rs.github.io/)
 - File Manager (GUI): [nemo](https://community.linuxmint.com/software/view/nemo)
 - Taskbar: [waybar](https://github.com/Alexays/Waybar)
+- Launcher: [walker](https://github.com/abenz1267/walker)
 - Fetch: [NotAShelf/microfetch](https://github.com/NotAShelf/microfetch)
 
 <hr>

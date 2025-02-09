@@ -4,7 +4,6 @@
 # This just seemed like a more convenient way to execute some of the common shit that I do on my PC.
 
 BDE_VERSION="0.15.3"
-# EDITOR="helix"
 
 edit_prompt() {
   case "$1" in
@@ -83,6 +82,8 @@ edit_prompt() {
       "starship")
         cd ~/.config/ && $EDITOR starship.toml
       ;;
+      "mconnect")
+        cd ~/.config/ && $EDITOR mconnect/mconnect.conf
   esac
 }
 
@@ -94,17 +95,17 @@ reload_prompt() {
       "dock")
         echo ":: Reloading nwg-dock-hyprland.."
         killall -9 nwg-dock-hyprland > /dev/null
-        nwg-dock-hyprland -r -mb 15 -mt 10 -i 36 -x -nolauncher > ~/.cache/nwg-dock.log & disown
+        nwg-dock-hyprland -r -mb 15 -mt 10 -i 36 -x -nolauncher > ~/.logs/nwg-dock.log & disown
       ;;
       "waybar")
         echo ":: Reloading waybar.."
         killall -9  waybar > /dev/null
-        waybar > /dev/null & disown
+        waybar > ~/.logs/waybar.log & disown
       ;;
       "walker")
         echo ":: Reloading walker service.."
         killall -9 walker > /dev/null
-        walker --gapplication-service & disown > /dev/null
+        walker --gapplication-service & disown > ~/.logs/walker.log
       ;;
       "mako")
         echo ":: Reloading mako.."
@@ -121,20 +122,25 @@ reload_prompt() {
       "hyprpanel")
         echo ":: Reloading HyprPanel.."
         killall -9 gjs > /dev/null
-        hyprpanel > ~/hyprpanel.log 2>&1 & disown
+        hyprpanel > ~/.logs/hyprpanel.log 2>&1 & disown
       ;;
       "ghostty")
         echo ":: Reloading Ghostty.."
         killall -9 ghostty > /dev/null
         ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false & disown
-      ;;        
+      ;;
+      "mconnect")
+        echo ":: Reloading mconnect.."
+        killall -9 mconnect > /dev/null
+        mconnect -d > ~/.logs/mconnect.log & disown
+      ;;
   esac
 }
 
 init_prompt() {
 	case "$1" in 
     "xdg")
-	    echo " => Initializing xdg-desktop-portal..."
+	    echo ":: Initializing xdg-desktop-portal..."
 	    sleep 1
 	    killall xdg-desktop-portal-hyprland > /dev/null
 	    killall xdg-desktop-portal > /dev/null
@@ -145,7 +151,7 @@ init_prompt() {
 	    sleep 1
     ;;
     "wp")
-	    echo " => Initializing swww..."
+	    echo ":: Initializing swww..."
 	    swww-daemon > /dev/null & disown
 	    swww-daemon --format xrgb > /dev/null & disown
     ;;
@@ -189,9 +195,6 @@ remove_orphans() {
   sudo pacman -Rns $(pacman -Qdtq) --noconfirm > /dev/null
 }
 
-
-
-
 toggle_gamemode() {
   echo ":: Toggling game mode..."
 	HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
@@ -212,23 +215,25 @@ toggle_gamemode() {
 	hyprctl reload > /dev/null
 }
 
-
-
-
 toggle_floatwindows() {
   echo ":: Toggling all floating windows..."
   hyprctl dispatch workspaceopt allfloat > /dev/null
 }
-
-
-
 
 display_version() {
 	echo $BDE_VERSION;
 }
 
 # main() ?
-if [[ $1 == "rl" ]];then
+if [[ $1 == "--version" ]];then
+  display_version
+elif [[ $1 == "-v" ]];then
+  display_version
+elif [[ $1 == "version" ]];then
+  display_version
+elif [[ $1 == "v" ]];then
+  display_version
+elif [[ $1 == "rl" ]];then
   reload_prompt $2
 elif [[ $1 == "wp" ]];then
   swww img $2
