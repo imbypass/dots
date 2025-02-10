@@ -263,7 +263,7 @@
     {
       "name": "wallpaper",
       "placeholder": "Wallpapers",
-      "theme": "cat_wall",
+      "theme": "jelly_wall",
       "switcher_only": false,
       "refresh": true,
       "src": "bash -c ~/.config/scripts/walker/wallpaper.sh",
@@ -300,6 +300,6 @@
     "resume_last_query": false
   },
   "terminal_title_flag": "",
-  "theme": "catppuccin",
+  "theme": "jellybeans",
   "timeout": 0
 }

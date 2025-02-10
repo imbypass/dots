@@ -1,19 +1,9 @@
-@import url("https://minidiscordthemes.github.io/Snippets/ChannelListWidth/main.css");
-@import url("https://minidiscordthemes.github.io/Snippets/SettingsAsOverlay/main.css");
-@import url("https://minidiscordthemes.github.io/SettingsIcons/main.min.css");
 
 * {
     text-rendering: optimizeLegibility !important;
 }
 
 :root {
-    --accent-color: var(--catppuccin-mocha-lavender);
     --font: "ZedMono Nerd Font Mono";
     --font-code: "ZedMono Nerd Font Mono";
-    
-    --settingsicons: show;
-    --si-size: 18px;
-    --si-gap: 14px;
-    --channellist-width: 140px;
-    --channellist-header-height: 48px;
 }

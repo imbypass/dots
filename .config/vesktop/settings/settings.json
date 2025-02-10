@@ -6,7 +6,8 @@
     "enabledThemes": [
         "catppuccin.theme.css",
         "Catppuccin Mocha.css",
-        "midnight-bepi.css"
+        "base16.css",
+        "base16.colors.css"
     ],
     "enableReactDevtools": false,
     "frameless": false,
@@ -438,7 +439,7 @@
             "mode": 2
         },
         "ShikiCodeblocks": {
-            "enabled": true,
+            "enabled": false,
             "useDevIcon": "GREYSCALE",
             "theme": "https://raw.githubusercontent.com/shikijs/shiki/0b28ad8ccfbf2615f2d9d38ea8255416b8ac3043/packages/shiki/themes/dark-plus.json"
         },
@@ -778,7 +779,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1739025381390
+        "settingsSyncVersion": 1739223399581
     },
     "notifyAboutUpdates": true
 }

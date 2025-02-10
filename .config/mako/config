@@ -14,14 +14,14 @@ max-icon-size=48
 default-timeout=4000
 ignore-timeout=1
 font=ZedMono NFP 10.5
-background-color=#1E1E2E
-border-color=#313244
+background-color=#151515
+border-color=#313131
 
 [urgency=low]
-border-color=#313244
+border-color=#313131
 
 [urgency=normal]
-border-color=#313244
+border-color=#313131
 
 [urgency=high]
 border-color=#89B4FA

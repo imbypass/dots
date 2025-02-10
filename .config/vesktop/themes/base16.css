@@ -1,0 +1,112 @@
+/**
+* @name base16
+* @author https://github.com/imbypass
+* @version 1.0.0
+* @description base16 theme for Vencord
+**/
+
+.theme-light,
+.theme-dark {
+    --font-primary: var(--font) !important;
+    --font-display: var(--font) !important;
+    --primary-630: var(--base00);
+    --primary-660: var(--base00);
+    --search-popout-option-fade: none;
+    --bg-overlay-2: var(--base00);
+    --bg-overlay-3: var(--base01);
+    --home-background: var(--base00);
+    --background-primary: var(--base00);
+    --background-secondary: var(--base01);
+    --background-secondary-alt: var(--base01);
+    --background-tertiary: var(--base00);
+    --background-accent: var(--base03);
+    --background-floating: var(--base01);
+    --background-modifier-selected: var(--base00);
+    --background-modifier-accent: var(--base02);
+    --channeltextarea-background: var(--base01);
+    --channels-default: var(--base04);
+    --channel-icon: var(--base04);
+    --header-primary: var(--base04);
+    --header-secondary: var(--base03);
+    --interactive-normal: var(--base05);
+    --interactive-hover: var(--base05);
+    --interactive-active: var(--base05);
+    --interactive-muted: var(--base03);
+    --scrollbar-thin-track: transparent;
+    --scrollbar-auto-track: transparent;
+    --text-normal: var(--base05);
+    --text-secondary: var(--base01);
+    --text-muted: var(--base03);
+    --text-link: var(--base04);
+    --text-brand: var(--base07);
+    --button-filled-brand-background: var(--base0D);
+    --button-filled-brand-text: var(--base05);
+    --bg-brand: var(--base03);
+    --bg-mod-faint: var(--base02);
+    --status-positive: var(--base0B);
+    --text-positive: var(--base0B);
+    --status-positive-background: var(--base0B);
+    --status-positive-text: var(--base05);
+    --status-negative: var(--base08);
+    --text-negative: var(--base08);
+    --status-warning: var(--base0A);
+    --text-warning: var(--base0A);
+    --status-danger: var(--base08);
+    --status-success: var(--base0B);
+    --menu-item-default-hover-bg: var(--base02);
+    --menu-item-danger-hover-bg: var(--base08);
+    --control-brand-foreground-new: var(--base02);
+    --control-brand-foreground: var(--base04);
+    --status-warning-background: var(--base03);
+    --status-danger-background: var(--base08);
+    --modal-background: var(--base01);
+    --brand-260: var(--base0D);
+    --brand-500: var(--base02);
+    --brand-560: var(--base01);
+    --white-500: var(--base05);
+    --white: var(--base05);
+    --green-360: var(--base0B);
+}
+
+/*--- Forum Background Recolor ---*/
+.container_f369db {
+    background-color: var(--bg-overlay-2);
+}
+
+/*--- Hide New Member Badge ---*/
+.newMemberBadge_ed263a {
+    display: none;
+}
+
+/*--- Summaries Tag Icon Recolor ---*/
+.summariesBetaTag_cf58b5 {
+    color: var(--base03);
+}
+
+div.folderIconWrapper__48112 {
+    background-color: var(--base01) !important;
+}
+
+/*--- Voice Chat Action Icon Recolor ---*/
+div[class^="actionButtons"] [class^="button"][class*="buttonColor_"],
+div[class^="actionButtons"] [class^="button"] [class*="buttonColor_"] {
+    background-color: var(--base02);
+}
+
+/*--- Status Icon Recolor ---*/
+svg[fill^="#f23f43"],
+rect[fill^="#f23f43"] {
+    fill: var(--status-danger) !important;
+}
+svg[fill^="#f0b232"],
+rect[fill^="#f0b232"] {
+    fill: var(--status-warning) !important;
+}
+svg[fill^="#23a55a"],
+rect[fill^="#23a55a"] {
+    fill: var(--status-positive) !important;
+}
+svg[fill^="#80848e"],
+rect[fill^="#80848e"] {
+    fill: var(--base03) !important;
+}

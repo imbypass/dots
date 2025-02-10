@@ -31,6 +31,7 @@ video/x-matroska=vlc.desktop;
 audio/flac=io.bassi.Amberol.desktop;
 image/webp=userapp-qview-E3XYT2.desktop;
 application/x-msdownload=wine.desktop;
+text/css=dev.zed.Zed.desktop;
 
 [Default Applications]
 text/x-csrc=org.xfce.mousepad.desktop
@@ -65,3 +66,4 @@ application/x-msdownload=wine.desktop
 text/x-python=org.xfce.mousepad.desktop
 x-scheme-handler/mailto=google-chrome.desktop
 x-scheme-handler/discord=vesktop.desktop
+text/css=dev.zed.Zed.desktop

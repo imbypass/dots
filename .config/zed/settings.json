@@ -11,7 +11,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Catppuccin Mocha (blue)"
+    "dark": "VScode Dark Plus"
   },
   "terminal": {
     "shell": {

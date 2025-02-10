@@ -22,11 +22,18 @@ export FZF_DEFAULT_OPTS=" \
 --color=selected-bg:#45475a \
 --multi --reverse"
 
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#202020,bg:#151515,spinner:#ffafaf,hl:#ff8700 \
+--color=fg:#dddddd,header:#ffaf5f,info:#ff8700,pointer:#ffafaf \
+--color=marker:#ff5f87,fg+:#c6b6ee,prompt:#ff8700,hl+:#ff8700 \
+--color=border:#151515 \
+--multi --reverse"
+
 export HYPRSHOT_DIR="$HOME/Pictures/Screenshots/"
 export ELECTRON_OZONE_PLATFORM_HINT="wayland"
 export MOZ_ENABLE_WAYLAND=0
-export GTK_THEME=catppuccin-mocha-blue-standard+default
-export GTK2_RC_FILES=/usr/share/themes/Catppuccin-Mocha-Standard-Sapphire-Dark/gtk-2.0/gtkrc
+# export GTK_THEME=catppuccin-mocha-blue-standard+default
+# export GTK2_RC_FILES=/usr/share/themes/Catppuccin-Mocha-Standard-Sapphire-Dark/gtk-2.0/gtkrc
 export MICRO_TRUECOLOR=1
 export TERM='xterm-256color'
 # export PYENV_ROOT="$HOME/.pyenv"
