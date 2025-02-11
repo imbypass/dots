@@ -115,3 +115,7 @@ svg[fill^="#80848e"],
 rect[fill^="#80848e"] {
     fill: var(--base03) !important;
 }
+
+* {
+    text-rendering: optimizeLegibility !important;
+}

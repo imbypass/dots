@@ -1,8 +1,3 @@
-
-* {
-    text-rendering: optimizeLegibility !important;
-}
-
 :root {
     --font: "ZedMono Nerd Font Mono";
     --font-code: "ZedMono Nerd Font Mono";

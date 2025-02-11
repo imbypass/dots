@@ -367,7 +367,7 @@
                         "id": "9is5ky8j46e",
                         "name": "Scratch Pad",
                         "color": 10070709,
-                        "collapsed": false,
+                        "collapsed": true,
                         "channels": [
                             "1190873777211449414"
                         ]
@@ -779,7 +779,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1739237058552
+        "settingsSyncVersion": 1739302976681
     },
     "notifyAboutUpdates": true
 }

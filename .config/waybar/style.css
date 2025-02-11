@@ -1,121 +1,93 @@
-/* Jellybeans Color Palette */
-@define-color rosewater #b0d0f0;
-@define-color flamingo #f2cdcd;
-@define-color pink #c6b6ee;
-@define-color mauve #cba6f7;
-@define-color red #cf6a4c;
-@define-color maroon #eba0ac;
-@define-color peach #fab387;
-@define-color yellow #fad07a;
-@define-color green #99ad6a;
-@define-color teal #668799;
-@define-color sky #89dceb;
-@define-color sapphire #74c7ec;
-@define-color blue #8197bf;
-@define-color lavender #b4befe;
-@define-color text #e8e8d3;
-@define-color subtext1 #e8e8d3;
-@define-color subtext0 #a6adc8;
-@define-color overlay2 #9399b2;
-@define-color overlay1 #7f849c;
-@define-color overlay0 #6c7086;
-@define-color surface2 #888888;
-@define-color surface1 #454545;
-@define-color surface0 #313131;
-@define-color base #151515;
-@define-color mantle #181818;
-@define-color crust #111111;
+@import url("base16.css");
 
 /* Active Color Selection */
-@define-color accent @blue;
-@define-color logo_color @text;
-@define-color workspace_active @blue;
-@define-color workspace_hover @pink;
-@define-color module_clock @text;
-@define-color module_audio_vol @text;
-@define-color module_audio_mic @text;
-@define-color module_weather @yellow;
+@define-color accent @base0D;
+@define-color logo_color @base05;
+@define-color workspace_active @base0D;
+@define-color workspace_hover @base0F;
+@define-color module_clock @base05;
+@define-color module_audio_vol @base05;
+@define-color module_audio_mic @base05;
+@define-color module_weather @base0A;
 
 /* Start Waybar Styling */
 * {
-  font-family: "ZedMono Nerd Font Propo";
-  font-size: 14.25px;
-  font-weight: 600;
+    font-family: "ZedMono Nerd Font Propo";
+    font-size: 14.25px;
+    font-weight: 600;
 }
 
 window#waybar {
-  color: @text;
-  background: @mantle;
-  opacity: 1.0;
-  border: 1px solid @surface0;
-  border-bottom: 1px solid @base;
-  border-left: 1px solid @base;
-  border-right: 1px solid @base;
+    color: @base05;
+    background: @base01;
+    opacity: 1;
+    border: 1px solid @base02;
+    border-bottom: 1px solid @base00;
+    border-left: 1px solid @base00;
+    border-right: 1px solid @base00;
 }
 
 tooltip {
-  color: @text;
-  background: @crust;
-  opacity: 1.0;
-  border: 2px solid @mantle;
-  border-radius: 6px;
-  padding: 0;
+    color: @base05;
+    background: @base00;
+    opacity: 1;
+    border: 2px solid @base01;
+    border-radius: 6px;
+    padding: 0;
 }
 
 #workspaces {
-	padding-left: 5px;
+    padding-left: 5px;
 }
 
 #workspaces button {
-  border-radius: 0;
-  color: @subtext0;
-  margin: 0;
-  padding: 10px;
-  padding-bottom: 0px;
-  padding-top: 0px;
-  border-bottom: 1px solid @surface0;
-  border-top: 1px solid @base;
+    border-radius: 0;
+    color: @base05;
+    margin: 0;
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    border-bottom: 1px solid @base02;
+    border-top: 1px solid @base00;
 }
 
 #workspaces button.active {
-  color: @workspace_active;
-  border-top: 2px solid @workspace_active;
-  background: @crust;
-  padding-bottom: 1px;
+    color: @workspace_active;
+    border-top: 2px solid @workspace_active;
+    background: @base00;
+    padding-bottom: 1px;
 }
 
 #workspaces button.focused {
-  color: @lavender;
-  border-top: 2px solid @lavender;
+    color: @base0E;
+    border-top: 2px solid @base0E;
 }
 
 #workspaces button.urgent {
-  color: @blue;
-  border-top: 2px solid @blue;
-  background: @crust;
+    color: @base0D;
+    border-top: 2px solid @base0D;
+    background: @base00;
 }
 
 #workspaces button:hover {
-  color: @workspace_hover;
-  border-top: 2px solid @workspace_hover;
-  background: @crust;
-  border-bottom: 1px solid @surface0;
-  padding-bottom: 1px;
+    color: @workspace_hover;
+    border-top: 2px solid @workspace_hover;
+    background: @base00;
+    border-bottom: 1px solid @base02;
+    padding-bottom: 1px;
 }
 
 #custom-logo {
-	padding-left: 10px;
-	padding-right: 10px;
-	color: @logo_color;
-  font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: @logo_color;
+    font-size: 18px;
 }
 
 #custom-spotify {
-	margin-left: 15px;
-	color: @text;
+    margin-left: 15px;
+    color: @base05;
 }
-
-
 
 #clock,
 #battery,
@@ -127,64 +99,51 @@ tooltip {
 #pulseaudio.microphone,
 #wlr-taskbar,
 #custom-weather {
-	margin-left: 10px;
-	margin-right: 10px;
-  padding-top: 5px;
-  padding-bottom: 4px;
-  border-top: 1px solid @surface0;
-  border-bottom: 1px solid @crust;/* remove @crust for accent colors */
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    border-top: 1px solid @base02;
+    border-bottom: 1px solid @base00; /* remove @base00 for accent colors */
 }
 
 #tray {
-	padding-right: 10px;
-}
-
-#window {
-	color: @lavender;
-}
-
-#battery {
-  color: @mauve;
+    padding-right: 10px;
 }
 
 #network {
-  padding-right: 5px;
-  padding-top: 3px;
-  border-bottom: 2px solid @crust;
-	color: @lavender;
-}
-
-#bluetooth {
-  color: @sapphire;
-} 
-
-#cpu {
-  color: @yellow;
-}
-
-#memory {
-  color: @peach;
+    padding-right: 5px;
+    padding-top: 3px;
+    border-bottom: 2px solid @base00;
 }
 
 #pulseaudio {
-  color: @module_audio_vol;
-  margin-right: 0px;
-  padding-right: 6px;
-  padding-left: 0px;
+    color: @module_audio_vol;
+    margin-right: 0px;
+    padding-right: 6px;
+    padding-left: 0px;
 }
 
 #pulseaudio.microphone {
-  color: @module_audio_mic;
-  margin-left: 0px;
-  padding-left: 6px;
-  padding-right: 0px;
+    color: @module_audio_mic;
+    margin-left: 0px;
+    padding-left: 6px;
+    padding-right: 0px;
 }
 
 #clock {
-  color: @module_clock;
+    color: @module_clock;
 }
-
 #custom-weather {
-  color: @module_weather;
+    color: @module_weather;
 }
-
+#window {
+}
+#battery {
+}
+#bluetooth {
+}
+#cpu {
+}
+#memory {
+}

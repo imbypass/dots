@@ -57,6 +57,7 @@ alias v="helix"
 alias vim="helix"
 alias nano="helix"
 alias hx="helix"
+alias z="zed"
 
 # Aliases - User Tools
 alias fetch="bfetch"
