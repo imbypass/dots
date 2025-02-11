@@ -41,6 +41,8 @@
     --text-brand: var(--base07);
     --button-filled-brand-background: var(--base0D);
     --button-filled-brand-text: var(--base05);
+    --button-positive-background: var(--base0B);
+    --button-outline-positive-border: var(--base0B);
     --bg-brand: var(--base03);
     --bg-mod-faint: var(--base02);
     --status-positive: var(--base0B);
@@ -73,11 +75,6 @@
     background-color: var(--bg-overlay-2);
 }
 
-/*--- Hide New Member Badge ---*/
-.newMemberBadge_ed263a {
-    display: none;
-}
-
 /*--- Summaries Tag Icon Recolor ---*/
 .summariesBetaTag_cf58b5 {
     color: var(--base03);
@@ -91,6 +88,14 @@ div.folderIconWrapper__48112 {
 div[class^="actionButtons"] [class^="button"][class*="buttonColor_"],
 div[class^="actionButtons"] [class^="button"] [class*="buttonColor_"] {
     background-color: var(--base02);
+}
+
+/* --- Checkboxes ON --- */
+.checked__87bf1 {
+    background-color: var(--base0B) !important;
+}
+path[fill^="rgba(35, 165, 90, 1)"] {
+    fill: var(--base0B) !important;
 }
 
 /*--- Status Icon Recolor ---*/
