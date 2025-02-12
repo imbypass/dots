@@ -6,7 +6,6 @@
     "enabledThemes": [
         "catppuccin.theme.css",
         "Catppuccin Mocha.css",
-        "base16.colors.css",
         "base16.css"
     ],
     "enableReactDevtools": false,
@@ -779,7 +778,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1739326656702
+        "settingsSyncVersion": 1739387631173
     },
     "notifyAboutUpdates": true
 }

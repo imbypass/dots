@@ -5,11 +5,30 @@
 * @description base16 theme for Vencord
 **/
 
+:root {
+    --base00: #151515;
+    --base01: #202020;
+    --base02: #303030;
+    --base03: #505050;
+    --base04: #b0b0b0;
+    --base05: #d0d0d0;
+    --base06: #e0e0e0;
+    --base07: #f5f5f5;
+    --base08: #fb9fb1;
+    --base09: #eda987;
+    --base0A: #ddb26f;
+    --base0B: #acc267;
+    --base0C: #12cfc0;
+    --base0D: #6fc2ef;
+    --base0E: #e1a3ee;
+    --base0F: #deaf8f;
+}
+
 .theme-light,
 .theme-dark {
-    --font-primary: var(--font);
-    --font-display: var(--font);
-    --font-headline: var(--font);
+    --font-primary: var(--font, "gg sans");
+    --font-display: var(--font, "gg sans");
+    --font-headline: var(--font, "gg sans");
     --activity-card-background: var(--base01);
     --primary-630: var(--base00);
     --primary-660: var(--base00);
@@ -43,12 +62,12 @@
     --scrollbar-thin-track: transparent;
     --scrollbar-auto-track: transparent;
     --text-normal: var(--base05);
-    --text-secondary: var(--base01);
+    --text-secondary: var(--base03);
     --text-muted: var(--base03);
     --text-link: var(--base04);
     --text-brand: var(--base07);
     --button-filled-brand-background: var(--base0D);
-    --button-filled-brand-text: var(--base05);
+    --button-filled-brand-text: var(--base00);
     --button-positive-background: var(--base0B);
     --button-danger-background: var(--base08);
     --button-outline-positive-border: var(--base0B);
@@ -73,8 +92,10 @@
     --brand-260: var(--base0D);
     --brand-500: var(--base02);
     --brand-560: var(--base01);
-    --white-500: var(--base05);
     --white: var(--base05);
+    --white-100: var(--base05);
+    --white-200: var(--base05);
+    --white-500: var(--base05);
     --green-360: var(--base0B);
     --red: var(--base08);
     --red-400: var(--base08);
@@ -113,6 +134,10 @@ div[class^="actionButtons"] [class^="button"] [class*="buttonColor_"] {
 }
 path[fill^="rgba(35, 165, 90, 1)"] {
     fill: var(--base0B) !important;
+}
+
+.lockIcon__2666b {
+    filter: grayscale(100%);
 }
 
 /*--- Status Icon Recolor ---*/
