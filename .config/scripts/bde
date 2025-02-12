@@ -4,6 +4,7 @@
 # This just seemed like a more convenient way to execute some of the common shit that I do on my PC.
 
 BDE_VERSION="0.15.3"
+EDITOR="zed"
 
 edit_prompt() {
   case "$1" in
@@ -15,7 +16,7 @@ edit_prompt() {
 
       # Edit Hyprland configuration
       "colors")
-        cd ~/.config/hypr/ && $EDITOR conf/custom/mocha.conf
+        cd ~/.config/hypr/ && $EDITOR conf/custom/base16.conf
       ;;
       "hypr")
         cd ~/.config/hypr/ && $EDITOR hyprland.conf

@@ -1,5 +1,5 @@
 ### Color Scheme
-theme = Jellybeans
+theme = jellybeans.conf
 
 ### Font Settings
 font-family = ZedMono Nerd Font Propo

@@ -14,7 +14,7 @@
     --base05: #d0d0d0;
     --base06: #e0e0e0;
     --base07: #f5f5f5;
-    --base08: #fb9fb1;
+    --base08: #cf6a4c;
     --base09: #eda987;
     --base0A: #ddb26f;
     --base0B: #acc267;
@@ -86,6 +86,7 @@
     --status-success: var(--base0B);
     --menu-item-default-hover-bg: var(--base02);
     --menu-item-danger-hover-bg: var(--base08);
+    --menu-item-danger-active-bg: var(--base08);
     --status-warning-background: var(--base03);
     --status-danger-background: var(--base08);
     --modal-background: var(--base01);
@@ -101,6 +102,7 @@
     --red-400: var(--base08);
     --red-460: var(--base08);
     --red-500: var(--base08);
+    --red-630: var(--base08);
     --yellow-360: var(--base0A);
     --primary-300: var(--base05);
     --primary-630: var(--base01);

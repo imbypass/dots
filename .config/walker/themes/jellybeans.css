@@ -45,102 +45,101 @@ slider,
 #bar,
 #sub,
 #activationlabel {
-  all: unset;
+    all: unset;
 }
 
 #window {
-  color: @text;
+    color: @text;
 }
 
 #box {
-  border-radius: 3px;
-  background: @mantle;
-  padding: 32px;
-  border: 2px solid @surface-0;
-  box-shadow:
-    0px 1px 1px rgba(0, 0, 0, 0.82),
-    0px 1px 1px rgba(0, 0, 0, 0.82);
+    border-radius: 6px;
+    background: @mantle;
+    padding: 32px;
+    border: 2px solid @surface-0;
+    box-shadow:
+        0px 1px 1px rgba(0, 0, 0, 0.82),
+        0px 1px 1px rgba(0, 0, 0, 0.82);
 }
 
 #search {
-  box-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.1),
-    0 1px 1px rgba(0, 0, 0, 0.22);
-  background: @base;
-  border: 2px solid @surface-0;
-  border-radius: 2px;
-  padding: 8px;
-  margin-bottom: 16px;
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.1),
+        0 1px 1px rgba(0, 0, 0, 0.22);
+    background: @base;
+    border: 2px solid @surface-0;
+    border-radius: 2px;
+    padding: 8px;
+    margin-bottom: 16px;
 }
 
 #prompt {
-  margin-left: 4px;
-  margin-right: 12px;
-  color: @text;
-  opacity: 0.2;
+    margin-left: 4px;
+    margin-right: 12px;
+    color: @text;
+    opacity: 0.2;
 }
 
 #clear {
-  color: @text;
-  opacity: 0.8;
+    color: @text;
+    opacity: 0.8;
 }
 
 #password,
 #input,
 #typeahead {
-  border-radius: 2px;
+    border-radius: 2px;
 }
 
 #input {
-  background: none;
+    background: none;
 }
 
 #password {
 }
 
 #spinner {
-  padding: 8px;
+    padding: 8px;
 }
 
 #typeahead {
-  color: @text;
-  opacity: 0.8;
+    color: @text;
+    opacity: 0.8;
 }
 
 #input placeholder {
-  opacity: 0.5;
+    opacity: 0.5;
 }
 
 #list {
 }
 
 child {
-  padding: 12px;
-  border-radius: 2px;
+    padding: 12px;
+    border-radius: 2px;
 }
 
 child:selected,
 child:hover {
-  background: @base;
+    background: @base;
 }
 
 #item {
 }
 
 #icon {
-  margin-right: 8px;
+    margin-right: 8px;
 }
 
 #text {
 }
 
-
 #label {
-  font-weight: 500;
+    font-weight: 500;
 }
 
 #sub {
-  font-size: 0.8em;
+    font-size: 0.8em;
 }
 #sub:hover {
 }
@@ -155,27 +154,27 @@ child:hover {
 }
 
 .activation #activationlabel {
-  color: @blue;
+    color: @blue;
 }
 
 .activation #text,
 .activation #icon,
 .activation #search {
-  opacity: 0.5;
+    opacity: 0.5;
 }
 
 .aiItem {
-  padding: 10px;
-  border-radius: 2px;
-  color: @text;
-  background: @mantle;
+    padding: 10px;
+    border-radius: 2px;
+    color: @text;
+    background: @mantle;
 }
 
 .aiItem.user {
-  padding-left: 0;
-  padding-right: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .aiItem.assistant {
-  background: @base;
+    background: @base;
 }
