@@ -30,6 +30,7 @@
     --font-display: var(--font, "gg sans");
     --font-headline: var(--font, "gg sans");
     --activity-card-background: var(--base01);
+    --card-primary-bg: var(--base02);
     --primary-630: var(--base00);
     --primary-660: var(--base00);
     --primary-800: var(--base00);
@@ -90,14 +91,16 @@
     --status-warning-background: var(--base03);
     --status-danger-background: var(--base08);
     --modal-background: var(--base01);
+    --brand-15a: var(--base01);
     --brand-260: var(--base0D);
-    --brand-500: var(--base02);
+    --brand-500: var(--base03);
     --brand-560: var(--base01);
     --white: var(--base05);
     --white-100: var(--base05);
     --white-200: var(--base05);
     --white-500: var(--base05);
     --green-360: var(--base0B);
+    --green-330: var(--base0B);
     --red: var(--base08);
     --red-400: var(--base08);
     --red-460: var(--base08);
