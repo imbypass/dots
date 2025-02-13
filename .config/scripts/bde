@@ -4,7 +4,6 @@
 # This just seemed like a more convenient way to execute some of the common shit that I do on my PC.
 
 BDE_VERSION="0.15.3"
-EDITOR="zed"
 
 edit_prompt() {
   case "$1" in
@@ -48,7 +47,7 @@ edit_prompt() {
       "custom")
         cd ~/.config/hypr/ && $EDITOR conf/custom/general.conf
       ;;
-      
+
       # Edit any user configs
       "mako")
         cd ~/.config/ && $EDITOR mako/config
@@ -139,7 +138,7 @@ reload_prompt() {
 }
 
 init_prompt() {
-	case "$1" in 
+	case "$1" in
     "xdg")
 	    echo ":: Initializing xdg-desktop-portal..."
 	    sleep 1

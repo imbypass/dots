@@ -1,8 +1,10 @@
 // Zed settings
 {
-  "icon_theme": "Catppuccin Mocha",
-  "ui_font_size": 15,
-  "buffer_font_size": 14,
+  "features": {
+    "inline_completion_provider": "zed"
+  },
+  "ui_font_size": 15.5,
+  "buffer_font_size": 15,
   "ui_font_family": "ZedMono Nerd Font Propo",
   "buffer_font_family": "ZedMono Nerd Font Propo",
   "buffer_line_height": {
