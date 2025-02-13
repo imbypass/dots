@@ -118,6 +118,10 @@
     background-color: var(--bg-overlay-2);
 }
 
+.circleIconButton__5bc7e {
+    color: var(--base04);
+}
+
 /*--- Summaries Tag Icon Recolor ---*/
 .summariesBetaTag_cf58b5 {
     color: var(--base03);
