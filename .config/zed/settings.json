@@ -1,7 +1,8 @@
 // Zed settings
 {
+  "theme": "Base16 Chalk",
   "features": {
-    "inline_completion_provider": "zed"
+    "edit_prediction_provider": "zed"
   },
   "ui_font_size": 15.5,
   "buffer_font_size": 15,
@@ -9,11 +10,6 @@
   "buffer_font_family": "ZedMono Nerd Font Propo",
   "buffer_line_height": {
     "custom": 1.55
-  },
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "VScode Dark Plus"
   },
   "terminal": {
     "shell": {

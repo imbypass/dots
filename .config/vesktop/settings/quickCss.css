@@ -1,8 +1,10 @@
 :root {
     --font: "ZedMono Nerd Font Mono";
     --font-code: "ZedMono Nerd Font Mono";
-    
-    
+}
+
+
+:root{
     --base00: #151515;
     --base01: #202020;
     --base02: #303030;
@@ -19,5 +21,4 @@
     --base0D: #597bc5;
     --base0E: #a037b0;
     --base0F: #deaf8f;
-    
-} 
+}
