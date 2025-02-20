@@ -15,20 +15,17 @@
     "icon-size": 14,
     "spacing": 10,
     "icons": {
-      "discord": "discord"
-    }
+      "discord": "discord",
+    },
   },
-  "modules-left": [
-    "custom/logo",
-    "wlr/taskbar"
-  ],
+  "modules-left": ["custom/logo", "wlr/taskbar"],
   "modules-center": [],
   "modules-right": [
     "tray",
     "pulseaudio",
     "pulseaudio#microphone",
     "battery",
-    "clock"
+    "clock",
   ],
   "hyprland/window": {
     "format": "{}",
@@ -52,9 +49,9 @@
       "bypass@archbtw:(\\d\\. )?(.*)": "<span>󰄛 </span> $2",
       "nano (.*)": "<span>󱇧 </span> $1",
       "rofi - (.*)": "$1",
-      "Search(.*)": "<span> </span> Search $1"
+      "Search(.*)": "<span> </span> Search $1",
     },
-    "separate-outputs": false
+    "separate-outputs": false,
   },
   "wlr/taskbar": {
     "format": "{icon}",
@@ -68,23 +65,24 @@
       "Spotify",
       "Foot",
       "Windscribe",
-      "Easy Effects"
+      "Easy Effects",
+      "Picture-in-Picture",
     ],
     "app_ids-mapping": {
-      "firefoxdeveloperedition": "firefox-developer-edition"
+      "firefoxdeveloperedition": "firefox-developer-edition",
     },
     "rewrite": {
       "Mozilla Firefox": "Firefox",
       "Foot Server": "Terminal",
-      "Vesktop": "Discord"
-    }
+      "Vesktop": "Discord",
+    },
   },
   "clock": {
     "format": "{:%I:%M %p}",
-    "tooltip-format": "{:%a, %b %e, %Y}"
+    "tooltip-format": "{:%a, %b %e, %Y}",
   },
   "battery": {
-    "format": "  {}%"
+    "format": "  {}%",
   },
   "hyprland/workspaces": {
     "format": "{}",
@@ -100,21 +98,21 @@
       "9": "IX",
       "10": "X",
       "11": "XI",
-      "12": "XII"
+      "12": "XII",
     },
-    "persistent-workspaces": {}
+    "persistent-workspaces": {},
   },
   "custom/logo": {
     "tooltip": false,
     "format": " 󰣇 ",
-    "on-click": "walker -m applications"
+    "on-click": "walker -m applications",
   },
   "custom/weather": {
     "format": "{}°",
     "tooltip": true,
     "interval": 3600,
     "exec": "wttrbar --nerd --mph --fahrenheit --lang en --ampm --hide-conditions --custom-indicator \"{ICON}  {temp_F}\" --location 32735",
-    "return-type": "json"
+    "return-type": "json",
   },
   "custom/notification": {
     "tooltip": false,
@@ -127,21 +125,21 @@
       "inhibited-notification": "󰂚<span foreground='#F38BA8'><sup></sup>",
       "inhibited-none": "󰂚",
       "dnd-inhibited-notification": "󰂛<span foreground='#F38BA8'><sup></sup>",
-      "dnd-inhibited-none": "󰂛"
+      "dnd-inhibited-none": "󰂛",
     },
     "return-type": "json",
     "exec-if": "which swaync-client",
     "exec": "swaync-client -swb",
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
-    "escape": true
+    "escape": true,
   },
   "custom/spotify": {
     "tooltip": false,
     "format": "{}",
     "max-length": 40,
     "escape": true,
-    "exec": "$HOME/.config/waybar/scripts/mediaplayer.sh"
+    "exec": "$HOME/.config/waybar/scripts/mediaplayer.sh",
   },
   "network": {
     "format-wifi": " ",
@@ -149,7 +147,7 @@
     "format-alt": "  {essid}",
     "format-linked": "{ifname} (No IP)",
     "format-disconnected": "⚠",
-    "tooltip-format": " {bandwidthDownBits}  {bandwidthUpBits}"
+    "tooltip-format": " {bandwidthDownBits}  {bandwidthUpBits}",
   },
   "bluetooth": {
     "format": " ",
@@ -157,17 +155,17 @@
     "format-connected": " {num_connections}",
     "tooltip-format": "{device_alias}",
     "tooltip-format-connected": " {device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}"
+    "tooltip-format-enumerate-connected": "{device_alias}",
   },
   "memory": {
     "format": "  {}%",
     "tooltip": "false",
-    "on-click": "kitty btop"
+    "on-click": "kitty btop",
   },
   "cpu": {
     "format": " {usage}%",
     "tooltip": "false",
-    "on-click": "kitty btop"
+    "on-click": "kitty btop",
   },
   "pulseaudio": {
     "format": "{icon}  {volume}%",
@@ -185,32 +183,24 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": [
-        "",
-        "",
-        ""
-      ]
-    }
+      "default": ["", "", ""],
+    },
   },
   "custom/pacman": {
     "format": "{icon} {}",
     "return-type": "json",
     "format-icons": {
       "pending-updates": " ",
-      "updated": ""
+      "updated": "",
     },
     "exec-if": "which waybar-updates",
-    "exec": "waybar-updates --notify"
+    "exec": "waybar-updates --notify",
   },
   "temperature": {
     "format": "{icon} {temperatureC}°C",
     "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
     "critical-threshold": 80,
-    "format-icons": [
-      "",
-      "",
-      ""
-    ]
+    "format-icons": ["", "", ""],
   },
   "pulseaudio#microphone": {
     "format": "{format_source}",
@@ -219,6 +209,6 @@
     "on-click": "pamixer --default-source -t",
     "on-scroll-up": "pamixer --default-source -i 1",
     "on-scroll-down": "pamixer --default-source -d 1",
-    "scroll-step": 5
-  }
+    "scroll-step": 5,
+  },
 }

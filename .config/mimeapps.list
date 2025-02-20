@@ -34,6 +34,7 @@ application/x-msdownload=wine.desktop;
 text/css=dev.zed.Zed.desktop;
 video/quicktime=mpv.desktop;
 inode/symlink=dev.zed.Zed.desktop;
+application/x-matroska=vlc.desktop;
 
 [Default Applications]
 text/x-csrc=org.xfce.mousepad.desktop
@@ -72,3 +73,4 @@ text/css=dev.zed.Zed.desktop
 text/plain=dev.zed.Zed.desktop
 video/quicktime=mpv.desktop
 inode/symlink=dev.zed.Zed.desktop
+application/x-matroska=vlc.desktop
