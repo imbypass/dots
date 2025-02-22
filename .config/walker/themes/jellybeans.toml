@@ -12,7 +12,7 @@ v_align = "fill"
 
 [ui.window.box]
 h_align = "center"
-v_align = "end"
+v_align = "center"
 h_expand = false
 v_expand = false
 width = 450
@@ -33,7 +33,7 @@ theme = ""
 
 [ui.window.box.margins]
 top = 0
-bottom = 75
+bottom = 0
 
 [ui.window.box.ai_scroll]
 name = "aiScroll"
