@@ -4,6 +4,7 @@
 # This just seemed like a more convenient way to execute some of the common shit that I do on my PC.
 
 BDE_VERSION="0.15.3"
+EDITOR="zed"
 
 edit_prompt() {
   case "$1" in
@@ -15,63 +16,63 @@ edit_prompt() {
 
       # Edit Hyprland configuration
       "colors")
-        cd ~/.config/hypr/ && $EDITOR conf/custom/base16.conf
+        cd ~/.config/hypr/ && $EDITOR . conf/custom/base16.conf
       ;;
       "hypr")
-        cd ~/.config/hypr/ && $EDITOR hyprland.conf
+        cd ~/.config/hypr/ && $EDITOR . hyprland.conf
       ;;
       "keys")
-        cd ~/.config/hypr/ && $EDITOR conf/keybinding.conf
+        cd ~/.config/hypr/ && $EDITOR . conf/keybinding.conf
       ;;
       "apps")
-        cd ~/.config/hypr/ && $EDITOR conf/apps.conf
+        cd ~/.config/hypr/ && $EDITOR . conf/apps.conf
       ;;
       "deco")
-        cd ~/.config/hypr/ && $EDITOR conf/decoration.conf
+        cd ~/.config/hypr/ && $EDITOR . conf/decoration.conf
       ;;
       "startup")
-        cd ~/.config/hypr/ && $EDITOR conf/autostart.conf
+        cd ~/.config/hypr/ && $EDITOR . conf/autostart.conf
       ;;
       "plugins")
-        cd ~/.config/hypr/ && $EDITOR conf/custom/plugins.conf
+        cd ~/.config/hypr/ && $EDITOR . conf/custom/plugins.conf
       ;;
       "layout")
-        cd ~/.config/hypr/ && $EDITOR conf/layout.conf
+        cd ~/.config/hypr/ && $EDITOR . conf/layout.conf
       ;;
       "windows")
-        cd ~/.config/hypr/ && $EDITOR conf/windowrule.conf
+        cd ~/.config/hypr/ && $EDITOR . conf/windowrule.conf
       ;;
       "env")
-        cd ~/.config/hypr/ && $EDITOR conf/custom/environment.conf
+        cd ~/.config/hypr/ && $EDITOR . conf/custom/environment.conf
       ;;
       "custom")
-        cd ~/.config/hypr/ && $EDITOR conf/custom/general.conf
+        cd ~/.config/hypr/ && $EDITOR . conf/custom/general.conf
       ;;
 
       # Edit any user configs
       "mako")
-        cd ~/.config/ && $EDITOR mako/config
+        cd ~/.config/mako && $EDITOR . config
       ;;
       "walker")
-        cd ~/.config/ && $EDITOR walker/config.json
+        cd ~/.config/walker && $EDITOR . config.json
       ;;
       "waybar")
-        cd ~/.config/ && $EDITOR waybar/config.jsonc
+        cd ~/.config/waybar && $EDITOR . config.jsonc
       ;;
       "rofi")
-        cd ~/.config/ && $EDITOR rofi/config.rasi
+        cd ~/.config/rofi && $EDITOR . config.rasi
       ;;
       "ghostty")
-        cd ~/.config/ && $EDITOR ghostty/config
+        cd ~/.config/ghostty && $EDITOR . config
       ;;
       "foot")
-        cd ~/.config/ && $EDITOR foot/foot.ini
+        cd ~/.config/foot && $EDITOR . foot.ini
       ;;
       "tmux")
-        cd ~/.config/ && $EDITOR tmux/tmux.conf
+        cd ~/.config/tmux && $EDITOR . tmux.conf
       ;;
       "fish")
-        cd ~/.config/ && $EDITOR fish/config.fish
+        cd ~/.config/ && $EDITOR . fish/config.fish
       ;;
       "defaults")
         cd ~/.config/ && $EDITOR mimeapps.list
@@ -83,7 +84,7 @@ edit_prompt() {
         cd ~/.config/ && $EDITOR starship.toml
       ;;
       "mconnect")
-        cd ~/.config/ && $EDITOR mconnect/mconnect.conf
+        cd ~/.config/mconnect && $EDITOR mconnect.conf
   esac
 }
 

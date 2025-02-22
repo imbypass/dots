@@ -1,39 +1,39 @@
 :root {
     --font: "ZedMono Nerd Font Mono";
     --font-code: "ZedMono Nerd Font Mono";
-    
 
-    --base00: #0A0A0A;
-    --base01: #0D0D0D;
+    --base00: #0a0a0a;
+    --base01: #0d0d0d;
     --base02: #111111;
     --base03: #393939;
     --base04: #767676;
-    --base05: #E9E4E4;
+    --base05: #e9e4e4;
     --base06: #bfbfbf;
     --base07: #cacaca;
-    --base08: #B86467;
-    --base09: #DABD8D;
+    --base08: #b86467;
+    --base09: #dabd8d;
     --base0A: #aca98a;
-    --base0B: #8D987E;
-    --base0C: #8BA8A4;
-    --base0D: #8EA5BA;
-    --base0E: #AB89B2;
+    --base0B: #8d987e;
+    --base0C: #8ba8a4;
+    --base0D: #8ea5ba;
+    --base0E: #ab89b2;
     --base0F: #ac8aac;
-    
+
     --base00: #151515;
     --base01: #202020;
     --base02: #303030;
     --base03: #505050;
     --base04: #b0b0b0;
-    --base05: #DCDFE0;
+    --base05: #dcdfe0;
     --base06: #e0e0e0;
     --base07: #f5f5f5;
-    --base08: #F25C5C;
-    --base09: #FF9C6A;
-    --base0A: #d8ad4c;
-    --base0B: #55B682;
-    --base0C: #7AAAFF;
-    --base0D: #597bc5;
-    --base0E: #B87AFF;
-    --base0F: #F17AC6;
+    --base08: #b86467;
+    --base09: #dabd8d;
+    --base0A: #aca98a;
+    --base0B: #8d987e;
+    --base0C: #8ba8a4;
+    --base0D: #8ea5ba;
+    --base0E: #ab89b2;
+    --base0F: #ac8aac;
+
 }

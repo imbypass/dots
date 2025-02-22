@@ -1,6 +1,6 @@
 {
   "layer": "top",
-  "position": "bottom",
+  "position": "top",
   "margin-top": 0,
   "margin-right": 0,
   "margin-left": 0,
@@ -20,7 +20,7 @@
     }
   },
   "modules-left": ["custom/logo", "hyprland/workspaces"],
-  "modules-center": ["wlr/taskbar"],
+  "modules-center": [],
   "modules-right": [
     "custom/weather",
     "tray",

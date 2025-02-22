@@ -47,8 +47,8 @@ tooltip {
     padding: 10px;
     padding-bottom: 0px;
     padding-top: 0px;
-    border-bottom: 1px solid transparent;
-    border-top: 1px solid @base00;
+    border-bottom: 2px solid transparent;
+    border-top: 1px solid transparent;
 }
 
 #workspaces button.active {
@@ -73,7 +73,7 @@ tooltip {
     color: @workspace_hover;
     border-top: 2px solid @workspace_hover;
     background: @base00;
-    border-bottom: 1px solid transparent;
+    border-bottom: 2px solid transparent;
     padding-bottom: 1px;
 }
 
