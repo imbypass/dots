@@ -13,7 +13,7 @@
 /* Start Waybar Styling */
 * {
     font-family: "ZedMono Nerd Font Propo";
-    font-size: 14.25px;
+    font-size: 14.5px;
     font-weight: 600;
 }
 
@@ -47,7 +47,7 @@ tooltip {
     padding: 10px;
     padding-bottom: 0px;
     padding-top: 0px;
-    border-bottom: 1px solid @base02;
+    border-bottom: 1px solid transparent;
     border-top: 1px solid @base00;
 }
 
@@ -73,7 +73,7 @@ tooltip {
     color: @workspace_hover;
     border-top: 2px solid @workspace_hover;
     background: @base00;
-    border-bottom: 1px solid @base02;
+    border-bottom: 1px solid transparent;
     padding-bottom: 1px;
 }
 

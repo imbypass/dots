@@ -1,6 +1,6 @@
 // Zed settings
 {
-  "icon_theme": "Material Icon Theme",
+  "icon_theme": "Zed (Default)",
   "assistant": {
     "default_model": {
       "provider": "zed.dev",

@@ -1,61 +1,51 @@
 {
-    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-    "logo": {
-        "color": {
-          "1": "31",
-          "2": "33",
-        },
-        "height": 24,
-        "padding": {
-            "top": 1,
-            "left": 1,
-            "right": 3,
-        },
-        "type": "small",
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source": "~/Pictures/bepi_round.png",
+    "type": "kitty",
+  },
+  "display": {
+    "separator": " ",
+  },
+  "modules": [
+    "break",
+    {
+      "type": "title",
+      "keyWidth": 10,
+      "keyColor": "30",
     },
-    "display": {
-        "separator": " "
+    {
+      "type": "os",
+      "key": "os\t ",
+      "keyColor": "31",
     },
-    "modules": [
-        "break",
-        {
-            "type": "title",
-            "keyWidth": 10,
-            "keyColor": "30",
-        },
-        {
-            "type": "os",
-            "key": "os\t ",
-            "keyColor": "31",
-        },
-        {
-            "type": "host",
-            "key": "host\t ",
-            "keyColor": "32",
-        },
-        {
-            "type": "kernel",
-            "key": "kernel ",
-            "keyColor": "33",
-        },
-        {
-            "type": "uptime",
-            "key": "uptime ",
-            "keyColor": "34",
-        },
-        {
-            "type": "command",
-            "key": "os age ",
-            "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
-            "keyColor": "35",
-        },
-        {
-            "type": "packages",
-            "format": "{}",
-            "key": "pkgs\t ",
-            "keyColor": "37",
-        },
-        "break",
-    ]
+    {
+      "type": "host",
+      "key": "host\t ",
+      "keyColor": "32",
+    },
+    {
+      "type": "kernel",
+      "key": "kernel ",
+      "keyColor": "33",
+    },
+    {
+      "type": "uptime",
+      "key": "uptime ",
+      "keyColor": "34",
+    },
+    {
+      "type": "command",
+      "key": "os age ",
+      "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
+      "keyColor": "35",
+    },
+    {
+      "type": "packages",
+      "format": "{}",
+      "key": "pkgs\t ",
+      "keyColor": "37",
+    },
+    "break",
+  ],
 }
-
