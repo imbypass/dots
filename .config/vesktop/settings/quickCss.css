@@ -1,3 +1,5 @@
+@import url('https://raw.githubusercontent.com/imbypass/base16-discord/refs/heads/main/base16.css');
+
 :root {
     --font: "ZedMono Nerd Font Propo";
     --font-code: "ZedMono Nerd Font Propo";
@@ -6,10 +8,10 @@
     --base01: #181818;
     --base02: #303030;
     --base03: #505050;
-    --base04: #b0b0b0;
-    --base05: #dcdfe0;
-    --base06: #e0e0e0;
-    --base07: #f5f5f5;
+    --base04: #B0B0B0;
+    --base05: #DCDFE0;
+    --base06: #E0E0E0;
+    --base07: #F5F5F5;
     --base08: #E27373;
     --base09: #FFBA7B;
     --base0A: #F9CF7A;
@@ -17,5 +19,15 @@
     --base0C: #00988E;
     --base0D: #97BEDC;
     --base0E: #E1C0FA;
-    --base0F: #ac8aac;
+    --base0F: #D4ACA7;
 }
+
+
+/* Hide Profile Tab Shop Ads */
+.container__8279f { display: none; }
+
+/* Hide Family Center Settings Tab */
+.item_b3f026[data-tab-id^="Family Center"] { display:none; }
+
+/* Hide Discord Social Links */
+.socialLinks__7df54 { display: none; }
