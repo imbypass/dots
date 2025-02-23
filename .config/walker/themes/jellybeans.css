@@ -43,7 +43,7 @@ slider,
 }
 
 #box {
-    border-radius: 6px;
+    border-radius: 10px;
     background: @base00;
     padding: 32px;
     border: 2px solid @base02;
@@ -58,7 +58,7 @@ slider,
         0 1px 1px rgba(0, 0, 0, 0.22);
     background: @base00;
     border: 2px solid @base02;
-    border-radius: 2px;
+    border-radius: 6px;
     padding: 8px;
     margin-bottom: 16px;
 }
