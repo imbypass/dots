@@ -10,8 +10,8 @@
 window#waybar {
     color: @base05;
     background: @base00;
-    border: 1px solid #0c0c0c;
-    border-radius: 8px;
+    border: 2px solid #0c0c0c;
+    border-radius: 10px;
 }
 
 tooltip {
@@ -30,8 +30,10 @@ tooltip {
 #clock,
 #cpu,
 #custom-logo,
+#custom-power,
 #custom-spotify,
 #custom-weather,
+#window,
 #memory,
 #network,
 #pulseaudio,
@@ -42,8 +44,10 @@ tooltip {
     background-color: @base01;
     margin: 6px 4px 6px 4px;
     border-radius: 8px;
+    border: 2px solid #0e0e0e;
     padding-left: 14px;
     padding-right: 14px;
+    transition: all 0.3s ease;
 }
 
 #workspaces {
@@ -67,16 +71,36 @@ tooltip {
     color: @base09;
 }
 #workspaces button:hover {
-    color: @base0E;
+    color: @base0A;
     background-color: @base02;
 }
 
 #custom-logo {
-    color: @base0D;
+    color: @base05;
     font-size: 18px;
     padding-left: 0px;
     padding-right: 0px;
-    margin-left: 8px;
+    margin-left: 6px;
+}
+#custom-logo:hover {
+    color: @base0A;
+    background-color: @base01;
+}
+
+#custom-power {
+    color: @base08;
+    font-size: 14px;
+    border: 2px solid @base00;
+    background-color: @base00;
+    margin-right: 10px;
+    margin-bottom: 8px;
+    margin-top: 6px;
+    margin-left: 4px;
+    padding: 2px;
+    padding-left: 0;
+}
+#custom-power:hover {
+    color: @base0A;
 }
 
 #custom-spotify {
@@ -85,7 +109,7 @@ tooltip {
 }
 
 #pulseaudio {
-    margin-right: -4px;
+    margin-right: 2px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
