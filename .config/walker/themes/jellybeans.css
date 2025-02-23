@@ -85,9 +85,6 @@ slider,
     background: none;
 }
 
-#password {
-}
-
 #spinner {
     padding: 8px;
 }
@@ -106,7 +103,7 @@ slider,
 
 child {
     padding: 12px;
-    border-radius: 2px;
+    border-radius: 6px;
 }
 
 child:selected,
