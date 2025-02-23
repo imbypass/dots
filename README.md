@@ -4,8 +4,8 @@
 
 <hr>
 
-- Color Scheme: [catppuccin](https://catppuccin.com/)
-- Terminal: [ghostty](https://ghostty.org/)
+- Color Scheme: [base16/custom](https://github.com/chriskempson/base16)
+- Terminal: [foot](https://codeberg.org/dnkl/foot)
 - Shell: [fish](https://fishshell.com/)
 - Prompt: [starship](https://starship.rs/)
 - File Manager (CLI): [yazi](https://yazi-rs.github.io/)
@@ -17,6 +17,6 @@
 <hr>
 
 ## Preview
-![image](https://0x0.st/8o8V.png)
+![image](https://0x0.st/8AHV.png)
 
 ###### There is no real work done to make this installable. Your best off just downloading and using individual parts.
