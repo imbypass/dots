@@ -1,6 +1,5 @@
 @import url("base16.css");
 
-/* Start Waybar Styling */
 * {
     font-family: "ZedMono Nerd Font Propo";
     font-size: 14.5px;
@@ -47,13 +46,14 @@ tooltip {
     border: 2px solid #0e0e0e;
     padding-left: 14px;
     padding-right: 14px;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
 }
 
 #workspaces {
     padding-left: 0px;
     padding-right: 0px;
 }
+
 #workspaces button {
     border-radius: 6px;
     color: @base05;
@@ -61,18 +61,22 @@ tooltip {
     padding-bottom: 0px;
     padding-top: 0px;
 }
+
 #workspaces button.active {
     color: @base0D;
 }
+
 #workspaces button.focused {
     color: @base0E;
 }
+
 #workspaces button.urgent {
     color: @base09;
 }
+
 #workspaces button:hover {
     color: @base0A;
-    background-color: @base02;
+    background-color: @base01;
 }
 
 #custom-logo {
@@ -82,13 +86,14 @@ tooltip {
     padding-right: 0px;
     margin-left: 6px;
 }
+
 #custom-logo:hover {
     color: @base0A;
     background-color: @base01;
 }
 
 #custom-power {
-    color: @base08;
+    color: @base03;
     font-size: 14px;
     border: 2px solid @base00;
     background-color: @base00;
@@ -99,8 +104,9 @@ tooltip {
     padding: 2px;
     padding-left: 0;
 }
+
 #custom-power:hover {
-    color: @base0A;
+    color: @base08;
 }
 
 #custom-spotify {

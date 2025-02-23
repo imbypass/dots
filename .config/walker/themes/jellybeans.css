@@ -1,29 +1,19 @@
-@define-color rosewater #b0d0f0;
-@define-color flamingo #f2cdcd;
-@define-color pink #c6b6ee;
-@define-color mauve #cba6f7;
-@define-color red #cf6a4c;
-@define-color maroon #eba0ac;
-@define-color peach #fab387;
-@define-color yellow #fad07a;
-@define-color green #99ad6a;
-@define-color teal #668799;
-@define-color sky #89dceb;
-@define-color sapphire #74c7ec;
-@define-color blue #8197bf;
-@define-color lavender #b4befe;
-@define-color text #e8e8d3;
-@define-color subtext-1 #e8e8d3;
-@define-color subtext-0 #a6adc8;
-@define-color overlay-2 #9399b2;
-@define-color overlay-1 #7f849c;
-@define-color overlay-0 #6c7086;
-@define-color surface-2 #888888;
-@define-color surface-1 #454545;
-@define-color surface-0 #313131;
-@define-color base #151515;
-@define-color mantle #181818;
-@define-color crust #111111;
+@define-color base00 #121212;
+@define-color base01 #181818;
+@define-color base02 #303030;
+@define-color base03 #505050;
+@define-color base04 #B0B0B0;
+@define-color base05 #DCDFE0;
+@define-color base06 #E0E0E0;
+@define-color base07 #F5F5F5;
+@define-color base08 #E27373;
+@define-color base09 #FFBA7B;
+@define-color base0A #F9CF7A;
+@define-color base0B #94B979;
+@define-color base0C #00988E;
+@define-color base0D #97BEDC;
+@define-color base0E #E1C0FA;
+@define-color base0F #D4ACA7;
 
 #window,
 #box,
@@ -49,14 +39,14 @@ slider,
 }
 
 #window {
-    color: @text;
+    color: @base05;
 }
 
 #box {
     border-radius: 6px;
-    background: @mantle;
+    background: @base00;
     padding: 32px;
-    border: 2px solid @surface-0;
+    border: 2px solid @base02;
     box-shadow:
         0px 1px 1px rgba(0, 0, 0, 0.2),
         0px 1px 1px rgba(0, 0, 0, 0.2);
@@ -66,8 +56,8 @@ slider,
     box-shadow:
         0 1px 2px rgba(0, 0, 0, 0.1),
         0 1px 1px rgba(0, 0, 0, 0.22);
-    background: @base;
-    border: 2px solid @surface-0;
+    background: @base00;
+    border: 2px solid @base02;
     border-radius: 2px;
     padding: 8px;
     margin-bottom: 16px;
@@ -76,12 +66,12 @@ slider,
 #prompt {
     margin-left: 4px;
     margin-right: 12px;
-    color: @text;
+    color: @base05;
     opacity: 0.2;
 }
 
 #clear {
-    color: @text;
+    color: @base05;
     opacity: 0.8;
 }
 
@@ -103,7 +93,7 @@ slider,
 }
 
 #typeahead {
-    color: @text;
+    color: @base05;
     opacity: 0.8;
 }
 
@@ -121,17 +111,11 @@ child {
 
 child:selected,
 child:hover {
-    background: @base;
-}
-
-#item {
+    background: @base01;
 }
 
 #icon {
     margin-right: 8px;
-}
-
-#text {
 }
 
 #label {
@@ -141,20 +125,9 @@ child:hover {
 #sub {
     font-size: 0.8em;
 }
-#sub:hover {
-}
-
-#activationlabel {
-}
-
-#bar {
-}
-
-.barentry {
-}
 
 .activation #activationlabel {
-    color: @blue;
+    color: @base0D;
 }
 
 .activation #text,
@@ -166,8 +139,8 @@ child:hover {
 .aiItem {
     padding: 10px;
     border-radius: 2px;
-    color: @text;
-    background: @mantle;
+    color: @base05;
+    background: @base00;
 }
 
 .aiItem.user {
@@ -176,5 +149,5 @@ child:hover {
 }
 
 .aiItem.assistant {
-    background: @base;
+    background: @base01;
 }
