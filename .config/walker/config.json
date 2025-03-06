@@ -1,6 +1,6 @@
 {
   "activation_mode": {
-    "labels": "jkl;asdf"
+    "labels": "jkl;as"
   },
   "app_launch_prefix": "",
   "as_window": false,
@@ -44,10 +44,7 @@
     "bookmarks": {
       "entries": [
         {
-          "keywords": [
-            "walker",
-            "github"
-          ],
+          "keywords": ["walker", "github"],
           "label": "Walker",
           "url": "https://github.com/abenz1267/walker"
         }
@@ -207,45 +204,23 @@
   "force_keyboard_focus": true,
   "hotreload_theme": false,
   "keys": {
-    "accept_typeahead": [
-      "tab"
-    ],
+    "accept_typeahead": ["tab"],
     "activation_modifiers": {
       "alternate": "alt",
       "keep_open": "shift"
     },
     "ai": {
-      "clear_session": [
-        "ctrl x"
-      ],
-      "copy_last_response": [
-        "ctrl c"
-      ],
-      "resume_session": [
-        "ctrl r"
-      ],
-      "run_last_response": [
-        "ctrl e"
-      ]
+      "clear_session": ["ctrl x"],
+      "copy_last_response": ["ctrl c"],
+      "resume_session": ["ctrl r"],
+      "run_last_response": ["ctrl e"]
     },
-    "close": [
-      "esc"
-    ],
-    "next": [
-      "down"
-    ],
-    "prev": [
-      "up"
-    ],
-    "remove_from_history": [
-      "shift backspace"
-    ],
-    "resume_query": [
-      "ctrl r"
-    ],
-    "toggle_exact_search": [
-      "ctrl m"
-    ],
+    "close": ["esc"],
+    "next": ["down"],
+    "prev": ["up"],
+    "remove_from_history": ["shift backspace"],
+    "resume_query": ["ctrl r"],
+    "toggle_exact_search": ["ctrl m"],
     "trigger_labels": "lalt"
   },
   "list": {
