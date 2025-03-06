@@ -1,28 +1,29 @@
 sort=-time
 layer=overlay
-width=300
-height=350
+width=350
+height=400
 border-size=2
 border-radius=6
 icons=1
-margin=0,10,-10
+margin=20
+padding=10
 icon-location=left
 markup=1
 actions=1
 history=1
-anchor=bottom-right
+anchor=top-right
 max-icon-size=48
 default-timeout=4000
 ignore-timeout=1
-font=ZedMono NFP 10.5
-background-color=#151515
-border-color=#313131
+font=ZedMono NFP 11
+background-color=#121212
+border-color=#303030
 
 [urgency=low]
-border-color=#313131
+border-color=#303030
 
 [urgency=normal]
-border-color=#313131
+border-color=#303030
 
 [urgency=high]
 border-color=#89B4FA

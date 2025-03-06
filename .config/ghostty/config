@@ -4,7 +4,7 @@ theme = jellybeans.conf
 ### Font Settings
 font-family = ZedMono Nerd Font Propo
 font-feature = dlig ss05 liga
-font-size = 11.5
+font-size = 11.25
 font-thicken = true
 adjust-cell-height = 0
 
