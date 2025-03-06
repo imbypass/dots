@@ -458,7 +458,8 @@
             "enabled": false
         },
         "SilentMessageToggle": {
-            "enabled": true
+            "enabled": true,
+            "persistState": false
         },
         "SilentTyping": {
             "enabled": false,
@@ -776,7 +777,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1740350298740
+        "settingsSyncVersion": 1741223891541
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false

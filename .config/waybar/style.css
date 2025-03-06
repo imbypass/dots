@@ -1,112 +1,84 @@
 @import url("base16.css");
 
+/* Start Waybar Styling */
 * {
-    font-family: "ZedMono Nerd Font Propo";
-    font-size: 14.5px;
+    font-family: "ZedMono NFP ExtraBold";
+    transition: all 0.3s ease;
+    font-size: 13.5px;
     font-weight: 600;
 }
 
 window#waybar {
     color: @base05;
     background: @base00;
-    border: 2px solid #0c0c0c;
-    border-radius: 10px;
+    opacity: 1;
+    border-top: 2px solid @base01;
 }
 
 tooltip {
     color: @base05;
-    background: @base01;
-    border: 2px solid @base02;
-    border-radius: 8px;
-    padding: 0px;
-    margin: 0px;
-    opacity: 0.95;
-    font-size: 10px;
+    background: @base00;
+    opacity: 1;
+    border: 2px solid @base01;
+    border-radius: 6px;
+    padding: 0;
 }
 
-#battery,
-#bluetooth,
 #clock,
-#cpu,
-#custom-logo,
-#custom-power,
-#custom-spotify,
-#custom-weather,
-#window,
-#memory,
+#battery,
 #network,
+#bluetooth,
+#cpu,
+#memory,
 #pulseaudio,
 #pulseaudio.microphone,
-#tray,
 #wlr-taskbar,
-#workspaces {
-    background-color: @base01;
-    margin: 6px 4px 6px 4px;
-    border-radius: 8px;
-    border: 2px solid #0e0e0e;
-    padding-left: 14px;
-    padding-right: 14px;
-    transition: all 0.4s ease;
-}
-
-#workspaces {
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
+#custom-weather,
+#custom-logo,
 #workspaces button {
-    border-radius: 6px;
+    border-radius: 4px;
+    background: @base01;
     color: @base05;
-    margin: 0px;
+    margin: 6px;
+    margin-top: 8px;
+    padding: 10px;
     padding-bottom: 0px;
     padding-top: 0px;
 }
 
-#workspaces button.active {
-    color: @base0D;
+#tray {
+    padding-right: 10px;
 }
 
-#workspaces button.focused {
-    color: @base0E;
+#network {
+    padding-right: 5px;
+    padding-top: 3px;
+    border-bottom: 2px solid @base00;
 }
 
-#workspaces button.urgent {
-    color: @base09;
+#pulseaudio {
+    margin-right: 0px;
+    padding-right: 6px;
+    padding-left: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
-#workspaces button:hover {
-    color: @base0A;
-    background-color: @base01;
+#pulseaudio.microphone {
+    margin-left: 0px;
+    padding-left: 6px;
+    padding-right: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
 }
-
 #custom-logo {
-    color: @base05;
-    font-size: 18px;
     padding-left: 0px;
     padding-right: 0px;
-    margin-left: 6px;
+    color: @base05;
+    font-size: 18px;
 }
-
 #custom-logo:hover {
-    color: @base0A;
-    background-color: @base01;
-}
-
-#custom-power {
-    color: @base03;
-    font-size: 14px;
-    border: 2px solid @base00;
-    background-color: @base00;
-    margin-right: 10px;
-    margin-bottom: 8px;
-    margin-top: 6px;
-    margin-left: 4px;
-    padding: 2px;
-    padding-left: 0;
-}
-
-#custom-power:hover {
-    color: @base08;
+    color: @base0D;
 }
 
 #custom-spotify {
@@ -114,14 +86,33 @@ tooltip {
     color: @base05;
 }
 
-#pulseaudio {
-    margin-right: 2px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+#custom-power {
+    margin-right: 5px;
+}
+#custom-power:hover {
+    color: @base08;
 }
 
-#pulseaudio.microphone {
-    margin-left: -4px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+
+#workspaces {
+    padding-left: 0px;
 }
+
+#workspaces button {
+    border: 0px;
+    border-radius: 4px;
+    color: @base05;
+    margin: 6px;
+    margin-top: 8px;
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+#workspaces button:hover {
+    border: 0px;
+}
+#workspaces button.urgent {
+    color: @base00;
+    background: @base0A;
+}
+
