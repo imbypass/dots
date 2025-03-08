@@ -65,11 +65,11 @@
     "on-click-middle": "close",
     "ignore-list": [
       "Alacritty",
-      "Spotify",
       "Foot",
       "Windscribe",
       "Easy Effects",
       "Picture-in-Picture",
+      "dojo-voice",
     ],
     "rewrite": {
       "Mozilla Firefox": "Firefox",
