@@ -221,6 +221,11 @@ toggle_floatwindows() {
   hyprctl dispatch workspaceopt allfloat > /dev/null
 }
 
+show_expose() {
+    echo ":: Showing desktop expose..."
+    hyprctl dispatch hyprexpo:expo show > /dev/null
+}
+
 display_version() {
 	echo $BDE_VERSION;
 }
@@ -262,6 +267,8 @@ elif [[ $1 == "fup" ]];then
 	file_upload_fate $2
 elif [[ $1 == "hf" ]];then
 	toggle_floatwindows
+elif [[ $1 == "expose" ]];then
+	show_expose
 else
   echo "ok"
 fi

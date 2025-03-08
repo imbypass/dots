@@ -33,6 +33,7 @@ tooltip {
 #custom-weather,
 #custom-logo,
 #custom-spotify,
+#custom-expose,
 #custom-notifications,
 #workspaces button {
     border-radius: 4px;
@@ -48,11 +49,7 @@ tooltip {
 #tray {
     padding-right: 10px;
 }
-#network {
-    padding-right: 5px;
-    padding-top: 3px;
-    border-bottom: 2px solid @base00;
-}
+
 #pulseaudio {
     margin-right: 0px;
     padding-right: 6px;
@@ -85,9 +82,6 @@ tooltip {
     color: @base08;
 }
 
-#workspaces {
-    padding-left: 0px;
-}
 #workspaces button {
     border: 0px;
     border-radius: 4px;
@@ -104,4 +98,20 @@ tooltip {
 #workspaces button.urgent {
     color: @base00;
     background: @base0A;
+}
+#workspaces button {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-right: 0;
+    padding-left: 12px;
+}
+#custom-expose {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    margin-left: 0;
+    padding-left: 4px;
+    padding-right: 14px;
+}
+#custom-expose:hover {
+    color: @base0D;
 }

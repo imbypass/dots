@@ -20,7 +20,7 @@
       "discord": "",
     },
   },
-  "modules-left": ["custom/logo", "hyprland/workspaces"],
+  "modules-left": ["custom/logo", "hyprland/workspaces", "custom/expose"],
   "modules-center": ["wlr/taskbar"],
   "modules-right": [
     "tray",
@@ -96,6 +96,11 @@
     "format": " 󰣇 ",
     "on-click": "walker -m applications",
   },
+  "custom/expose": {
+    "tooltip": false,
+    "format": "󰕰",
+    "on-click": "sleep 0.15 && bde expose",
+  },
   "custom/power": {
     "tooltip": false,
     "format": " ⏻ ",
@@ -114,7 +119,7 @@
   "pulseaudio": {
     "format": "{icon} {volume}%",
     "tooltip": true,
-    "format-muted": " MUTED",
+    "format-muted": "<span color=\"#E27373\"> MUTED</span>",
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "on-click-right": "pavucontrol",
     "on-scroll-up": "pamixer -i 1",
@@ -133,8 +138,9 @@
   "pulseaudio#microphone": {
     "format": "{format_source}",
     "format-source": " {volume}%",
-    "format-source-muted": "<span> MUTED</span>",
+    "format-source-muted": "<span color=\"#E27373\"> MUTED</span>",
     "on-click": "pamixer --default-source -t",
+    "on-click-right": "pavucontrol",
     "on-scroll-up": "pamixer --default-source -i 1",
     "on-scroll-down": "pamixer --default-source -d 1",
     "scroll-step": 5,

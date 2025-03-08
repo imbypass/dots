@@ -1,8 +1,6 @@
 @import url('https://raw.githubusercontent.com/imbypass/base16-discord/refs/heads/main/base16.css');
 
 :root {
-    --font: "ZedMono Nerd Font Propo";
-    --font-code: "ZedMono Nerd Font Propo";
     --base00: #121212;
     --base01: #181818;
     --base02: #303030;
@@ -19,6 +17,11 @@
     --base0D: #97BEDC;
     --base0E: #E1C0FA;
     --base0F: #D4ACA7;
+}
+
+:root {
+    --font: "ZedMono Nerd Font Propo";
+    --font-code: "ZedMono Nerd Font Propo";
 }
 
 

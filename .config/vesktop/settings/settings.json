@@ -233,7 +233,7 @@
             "ignoreSelf": false,
             "ignoreUsers": "",
             "ignoreChannels": "",
-            "ignoreGuilds": "",
+            "ignoreGuilds": "399812551963049995",
             "logEdits": true,
             "logDeletes": true,
             "collapseDeleted": false,
@@ -777,7 +777,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1741301992997
+        "settingsSyncVersion": 1741469742188
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false
