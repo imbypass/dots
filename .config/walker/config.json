@@ -156,19 +156,9 @@
           "url": "https://www.google.com/search?q=%TERM%"
         },
         {
-          "name": "DuckDuckGo",
+          "name": "Elden Ring Wiki",
           "switcher_only": true,
-          "url": "https://duckduckgo.com/?q=%TERM%"
-        },
-        {
-          "name": "Ecosia",
-          "switcher_only": true,
-          "url": "https://www.ecosia.org/search?q=%TERM%"
-        },
-        {
-          "name": "Yandex",
-          "switcher_only": true,
-          "url": "https://yandex.com/search/?text=%TERM%"
+          "url": "https://eldenring.wiki.fextralife.com/Elden+Ring+Wiki#gsc.tab=0&gsc.q=%TERM%&gsc.sort="
         }
       ],
       "icon": "applications-internet",

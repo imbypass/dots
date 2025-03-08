@@ -11,17 +11,14 @@
 window#waybar {
     color: @base05;
     background: @base00;
-    opacity: 1;
     border-top: 2px solid @base01;
 }
 
 tooltip {
     color: @base05;
     background: @base00;
-    opacity: 1;
-    border: 2px solid @base01;
+    border: 2px solid @base02;
     border-radius: 6px;
-    padding: 0;
 }
 
 #clock,
@@ -35,6 +32,8 @@ tooltip {
 #wlr-taskbar,
 #custom-weather,
 #custom-logo,
+#custom-spotify,
+#custom-notifications,
 #workspaces button {
     border-radius: 4px;
     background: @base01;
@@ -49,13 +48,11 @@ tooltip {
 #tray {
     padding-right: 10px;
 }
-
 #network {
     padding-right: 5px;
     padding-top: 3px;
     border-bottom: 2px solid @base00;
 }
-
 #pulseaudio {
     margin-right: 0px;
     padding-right: 6px;
@@ -63,7 +60,6 @@ tooltip {
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
 }
-
 #pulseaudio.microphone {
     margin-left: 0px;
     padding-left: 6px;
@@ -71,6 +67,7 @@ tooltip {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
 }
+
 #custom-logo {
     padding-left: 0px;
     padding-right: 0px;
@@ -81,11 +78,6 @@ tooltip {
     color: @base0D;
 }
 
-#custom-spotify {
-    margin-left: 15px;
-    color: @base05;
-}
-
 #custom-power {
     margin-right: 5px;
 }
@@ -93,11 +85,9 @@ tooltip {
     color: @base08;
 }
 
-
 #workspaces {
     padding-left: 0px;
 }
-
 #workspaces button {
     border: 0px;
     border-radius: 4px;
@@ -115,4 +105,3 @@ tooltip {
     color: @base00;
     background: @base0A;
 }
-
