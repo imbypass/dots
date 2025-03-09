@@ -8,7 +8,7 @@
   "mod": "dock",
   "exclusive": true,
   "passthrough": false,
-  "gtk-layer-shell": false,
+  "gtk-layer-shell": true,
   "reload_style_on_change": true,
   "height": 44,
   "tray": {
@@ -79,6 +79,7 @@
   "clock": {
     "format": "󰥔 {:%I:%M %p}",
     "tooltip-format": "{:%a, %b %e, %Y}",
+    "on-click": "gnome-calendar",
   },
   "battery": {
     "format": " {}%",
@@ -119,7 +120,7 @@
   "pulseaudio": {
     "format": "{icon} {volume}%",
     "tooltip": true,
-    "format-muted": "<span color=\"#E27373\"> MUTED</span>",
+    "format-muted": "<span color=\"#E27373\"> MUTED</span>",
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "on-click-right": "pavucontrol",
     "on-scroll-up": "pamixer -i 1",
