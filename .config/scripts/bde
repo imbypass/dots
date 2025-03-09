@@ -223,6 +223,7 @@ toggle_floatwindows() {
 
 show_expose() {
     echo ":: Showing desktop expose..."
+    sleep 0.15
     hyprctl dispatch hyprexpo:expo show > /dev/null
 }
 

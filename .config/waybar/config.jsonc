@@ -100,7 +100,7 @@
   "custom/expose": {
     "tooltip": false,
     "format": "󰕰",
-    "on-click": "sleep 0.15 && bde expose",
+    "on-click": "bde expose",
   },
   "custom/power": {
     "tooltip": false,
