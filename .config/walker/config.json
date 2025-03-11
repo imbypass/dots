@@ -9,7 +9,7 @@
       "anthropic": {
         "prompts": [
           {
-            "label": "General Assistant",
+            "label": "Artificial Intelligence",
             "max_tokens": 1000,
             "model": "claude-3-5-sonnet-20241022",
             "prompt": "You are a helpful general assistant. Keep your answers short and precise.",

@@ -3,8 +3,7 @@
 # I'm sure there are better ways of doing this, but I REALLY don't work with bash/zsh scripts often.
 # This just seemed like a more convenient way to execute some of the common shit that I do on my PC.
 
-BDE_VERSION="0.15.3"
-EDITOR="zed"
+BDE_VERSION="0.16.0"
 
 edit_prompt() {
   case "$1" in
@@ -227,6 +226,12 @@ show_expose() {
     hyprctl dispatch hyprexpo:expo show > /dev/null
 }
 
+update_mirrors() {
+    echo ":: Updating mirrors..."
+    sudo reflector --verbose --country US --latest 8 --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist > /dev/null
+    echo ":: Mirrors updated."
+}
+
 display_version() {
 	echo $BDE_VERSION;
 }
@@ -240,36 +245,54 @@ elif [[ $1 == "version" ]];then
   display_version
 elif [[ $1 == "v" ]];then
   display_version
+
 elif [[ $1 == "rl" ]];then
   reload_prompt $2
+
 elif [[ $1 == "wp" ]];then
   swww img $2
+
 elif [[ $1 == "edit" ]];then
-  edit_prompt $2
+    edit_prompt $2
+elif [[ $1 == "e" ]];then
+    edit_prompt $2
+
 elif [[ $1 == "cache" ]];then
 	free_cache
 elif [[ $1 == "free" ]];then
 	free_cache
+
 elif [[ $1 == "gm" ]];then
 	toggle_gamemode
+
 elif [[ $1 == "rm" ]];then
 	remove_orphans
 elif [[ $1 == "clean" ]];then
 	remove_orphans
+
 elif [[ $1 == "steam" ]];then
 	search_steamapps
 elif [[ $1 == "fonts" ]];then
 	search_fonts
+
 elif [[ $1 == "init" ]];then
 	init_prompt $2
+
 elif [[ $1 == "up" ]];then
 	file_upload $2
-elif [[ $1 == "fup" ]];then
-	file_upload_fate $2
+
 elif [[ $1 == "hf" ]];then
 	toggle_floatwindows
+
+elif [[ $1 == "x" ]];then
+    show_expose
 elif [[ $1 == "expose" ]];then
 	show_expose
+
+elif [[ $1 == "m" ]];then
+    update_mirrors
+elif [[ $1 == "mirrors" ]];then
+	update_mirrors
 else
   echo "ok"
 fi
