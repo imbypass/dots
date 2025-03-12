@@ -43,6 +43,7 @@ slider,
 }
 
 #box {
+    margin-left: 4px;
     border-radius: 10px;
     background: @base00;
     padding: 32px;
