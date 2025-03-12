@@ -24,6 +24,7 @@
   "modules-center": ["wlr/taskbar"],
   "modules-right": [
     "tray",
+    "custom/weather",
     "pulseaudio",
     "pulseaudio#microphone",
     "battery",
@@ -116,6 +117,13 @@
     "exec": "$HOME/.config/waybar/scripts/mediaplayer.sh",
     "on-click": "playerctl --player=spotify play-pause",
     "on-click-right": "playerctl --player=spotify next",
+  },
+  "custom/weather": {
+    "format": "{}°",
+    "tooltip": true,
+    "interval": 3600,
+    "exec": "wttrbar --mph --fahrenheit --lang en --ampm --hide-conditions --custom-indicator \"{ICON} {temp_F}\" --location 32735",
+    "return-type": "json",
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",

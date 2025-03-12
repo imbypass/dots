@@ -84,6 +84,9 @@ tooltip {
     color: @base08;
 }
 
+#custom-weather {
+}
+
 #workspaces button {
     border: 0px;
     border-radius: 4px;
