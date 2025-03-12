@@ -37,14 +37,14 @@
                 "left": 0,
                 "right": 0
               },
-              "height": 200,
-              "max_height": 200,
+              "height": 100,
+              "max_height": 100,
               "orientation": "vertical",
               "activation_label": {
                 "hide": true
               },
               "icon": {
-                "pixel_size": 375,
+                "pixel_size": 250,
                 "theme": ""
               },
               "label": {
@@ -58,10 +58,10 @@
               "left": 0,
               "right": 0
             },
-            "max_height": 800,
-            "max_width": 1600,
-            "min_width": 1600,
-            "width": 300
+            "max_height": 550,
+            "max_width": 1000,
+            "min_width": 1000,
+            "width": 150
           }
         },
         "search": {
