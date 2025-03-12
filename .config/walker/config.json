@@ -178,6 +178,7 @@
       "hidden": true,
       "name": "xdphpicker",
       "placeholder": "Screen/Window Picker",
+      "theme": "base16",
       "show_sub_when_single": true,
       "switcher_only": true,
       "weight": 5
