@@ -39,7 +39,8 @@
       "show_generic": true,
       "show_icon_when_single": true,
       "show_sub_when_single": true,
-      "weight": 5
+      "weight": 5,
+      "theme": "base16_start"
     },
     "bookmarks": {
       "entries": [
@@ -228,7 +229,7 @@
     {
       "name": "wallpaper",
       "placeholder": "Wallpapers",
-      "theme": "jelly_wall",
+      "theme": "base16_wall",
       "switcher_only": false,
       "refresh": true,
       "src": "bash -c ~/.config/walker/scripts/wallpaper.sh",
@@ -265,6 +266,6 @@
     "resume_last_query": false
   },
   "terminal_title_flag": "",
-  "theme": "jellybeans",
+  "theme": "base16",
   "timeout": 0
 }

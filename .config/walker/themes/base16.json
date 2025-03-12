@@ -49,9 +49,7 @@
           "position": "end"
         },
         "h_align": "center",
-        "margins": {
-          "top": 200
-        },
+        "v_align": "center",
         "scroll": {
           "list": {
             "item": {
@@ -70,10 +68,11 @@
             "margins": {
               "top": 8
             },
-            "max_height": 400,
+            "max_height": 350,
             "max_width": 400,
             "min_width": 400,
-            "width": 400
+            "width": 400,
+            "marker_color": "#89B4FA"
           }
         },
         "search": {
