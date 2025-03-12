@@ -254,7 +254,7 @@
         {
           "label": "Lock Screen",
           "icon": "system-lock-screen",
-          "exec": "playerctl --all-players pause & hyprlock"
+          "exec": "hyprlock"
         }
       ]
     }
