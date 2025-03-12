@@ -215,7 +215,7 @@
   },
   "list": {
     "dynamic_sub": true,
-    "keyboard_scroll_style": "emacs",
+    "keyboard_scroll_style": "neovim",
     "max_entries": 1000,
     "placeholder": "No Results",
     "show_initial_entries": true,
@@ -231,7 +231,7 @@
       "theme": "jelly_wall",
       "switcher_only": false,
       "refresh": true,
-      "src": "bash -c ~/.config/scripts/walker/wallpaper.sh",
+      "src": "bash -c ~/.config/walker/scripts/wallpaper.sh",
       "parser": "kv"
     },
     {

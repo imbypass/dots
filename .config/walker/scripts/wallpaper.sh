@@ -8,5 +8,5 @@ while walls= read -r path; do
   name=${name//-/ };
   name=${name//   / };
 
-  printf "image=$path;label=${name};exec=swww img $path;\n"
+  printf "image=$path;label=${name};exec=swww img $path && cp $path ~/Pictures/.wallpaper;\n"
 done <<< "$list"
