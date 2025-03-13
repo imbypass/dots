@@ -28,7 +28,7 @@
           "margins": {
             "top": 8
           },
-          "max_height": 300,
+          "max_height": 150,
           "min_width": 400,
           "name": "aiScroll",
           "v_align": "fill",
@@ -58,6 +58,7 @@
           "list": {
             "item": {
               "activation_label": {
+                "enabled": false,
                 "h_align": "fill",
                 "v_align": "fill",
                 "width": 20,
@@ -72,7 +73,7 @@
             "margins": {
               "top": 8
             },
-            "max_height": 350,
+            "max_height": 450,
             "max_width": 400,
             "min_width": 400,
             "width": 400,
