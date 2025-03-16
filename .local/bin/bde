@@ -10,7 +10,7 @@ edit_prompt() {
 
       # Edit the script itself
       "")
-        cd ~/.config/ && $EDITOR scripts/bde
+        cd ~/.local/bin/ && $EDITOR bde
       ;;
 
       # Edit Hyprland configuration
