@@ -154,20 +154,20 @@
   "network": {
     "interface": "enp3s0",
     "format": "{ifname}",
-    "format-wifi": "{essid} ({signalStrength}%) ",
-    "format-ethernet": "",
+    "format-wifi": "{essid} ({signalStrength}%) 󰤨",
+    "format-ethernet": "󰤨",
     "format-disconnected": "", //An empty format will hide the module.
     "tooltip-format": "{ifname}",
-    "tooltip-format-wifi": " {essid} ({signalStrength}%)",
-    "tooltip-format-ethernet": " Unregistered Hypercam 2",
+    "tooltip-format-wifi": "󰤨 {essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "󰤨 Unregistered Hypercam 2",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
     "on-click-right": "nm-connection-editor",
   },
   "bluetooth": {
-    "format": "󰂯",
+    "format": "",
     "format-disabled": "󰂲", // an empty format will hide the module
-    "format-connected": "󰂯 {num_connections} connected",
+    "format-connected": " {num_connections} connected",
     "tooltip-format": "{controller_alias}",
     "tooltip-format-connected": "{controller_alias}\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
