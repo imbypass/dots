@@ -13,15 +13,20 @@
   "height": 44,
   "tray": {
     "icon-size": 14,
-    "spacing": 10,
+    "spacing": 8,
     "icons": {
       "vesktop": "",
       "vencord": "",
       "discord": "",
     },
   },
-  "modules-left": ["custom/logo", "hyprland/workspaces", "custom/expose"],
-  "modules-center": ["wlr/taskbar"],
+  "modules-left": [
+    "custom/logo",
+    "hyprland/workspaces",
+    "custom/expose",
+    "wlr/taskbar",
+  ],
+  "modules-center": [],
   "modules-right": [
     "tray",
     "pulseaudio",
@@ -60,23 +65,13 @@
   },
   "wlr/taskbar": {
     "format": "{icon}",
-    "icon-size": 22,
-    "icon-theme": "Papirus",
+    "icon-size": 18,
+    "icon-theme": "Papirus-Dark",
     "tooltip-format": "{title}",
     "on-click": "activate",
     "on-click-middle": "close",
-    "ignore-list": [
-      "Alacritty",
-      "Foot",
-      "Windscribe",
-      "Easy Effects",
-      "Picture-in-Picture",
-      "dojo-voice",
-    ],
-    "rewrite": {
-      "Mozilla Firefox": "Firefox",
-      "Vesktop": "Discord",
-    },
+    "sort-by-app-id": true,
+    "ignore-list": ["Windscribe", "Picture-in-Picture", "dojo-voice"],
   },
   "clock": {
     "format": "󰥔 {:%I:%M %p}",
