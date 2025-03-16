@@ -90,7 +90,7 @@ edit_prompt() {
 reload_prompt() {
 	case "$1" in
       "")
-        echo ":: No service provided. Exiting.."
+        echo ":: No service specified. Exiting.."
       ;;
       "dock")
         echo ":: Reloading nwg-dock-hyprland.."

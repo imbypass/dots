@@ -1,0 +1,3 @@
+# walker wallpaper picker script
+
+walker -n --modules wallpaper
