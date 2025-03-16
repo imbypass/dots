@@ -120,3 +120,18 @@ tooltip {
 #custom-expose:hover {
     color: @base0D;
 }
+
+#network {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-right: 0;
+    padding-right: 6px;
+    padding-left: 12px;
+}
+#bluetooth {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    margin-left: 0;
+    padding-left: 6px;
+    padding-right: 14px;
+}

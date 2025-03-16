@@ -24,9 +24,10 @@
   "modules-center": ["wlr/taskbar"],
   "modules-right": [
     "tray",
-    "custom/weather",
     "pulseaudio",
     "pulseaudio#microphone",
+    "network",
+    "bluetooth",
     "battery",
     "clock",
     "custom/power",
@@ -154,5 +155,27 @@
     "on-scroll-up": "pamixer --default-source -i 1",
     "on-scroll-down": "pamixer --default-source -d 1",
     "scroll-step": 5,
+  },
+  "network": {
+    "interface": "enp3s0",
+    "format": "{ifname}",
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "",
+    "format-disconnected": "", //An empty format will hide the module.
+    "tooltip-format": "{ifname}",
+    "tooltip-format-wifi": " {essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": " Unregistered Hypercam 2",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50,
+    "on-click-right": "nm-connection-editor",
+  },
+  "bluetooth": {
+    "format": "󰂯",
+    "format-disabled": "󰂲", // an empty format will hide the module
+    "format-connected": "󰂯 {num_connections} connected",
+    "tooltip-format": "{controller_alias}",
+    "tooltip-format-connected": "{controller_alias}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "on-click-right": "blueman-manager",
   },
 }

@@ -3,7 +3,7 @@
 # I'm sure there are better ways of doing this, but I REALLY don't work with bash/zsh scripts often.
 # This just seemed like a more convenient way to execute some of the common shit that I do on my PC.
 
-BDE_VERSION="0.16.0"
+BDE_VERSION="0.17.0"
 
 edit_prompt() {
   case "$1" in
@@ -138,24 +138,24 @@ reload_prompt() {
 }
 
 init_prompt() {
-	case "$1" in
-    "xdg")
-	    echo ":: Initializing xdg-desktop-portal..."
-	    sleep 1
-	    killall xdg-desktop-portal-hyprland > /dev/null
-	    killall xdg-desktop-portal > /dev/null
-	    sleep 1
-	    /usr/lib/xdg-desktop-portal-hyprland > /dev/null &
-	    sleep 2
-	    /usr/lib/xdg-desktop-portal > /dev/null &
-	    sleep 1
-    ;;
-    "wp")
-	    echo ":: Initializing swww..."
-	    swww-daemon > /dev/null & disown
-	    swww-daemon --format xrgb > /dev/null & disown
-    ;;
-  esac
+    case "$1" in
+        "xdg")
+    	    echo ":: Initializing xdg-desktop-portal..."
+    	    sleep 1
+    	    killall xdg-desktop-portal-hyprland > /dev/null
+    	    killall xdg-desktop-portal > /dev/null
+    	    sleep 1
+    	    /usr/lib/xdg-desktop-portal-hyprland > /dev/null &
+    	    sleep 2
+    	    /usr/lib/xdg-desktop-portal > /dev/null &
+    	    sleep 1
+        ;;
+        "wp")
+    	    echo ":: Initializing swww..."
+    	    swww-daemon > /dev/null & disown
+    	    swww-daemon --format xrgb > /dev/null & disown
+        ;;
+    esac
 }
 
 file_upload() {
@@ -232,6 +232,21 @@ update_mirrors() {
     echo ":: Mirrors updated."
 }
 
+update_prompt() {
+    case "$1" in
+        "zed")
+    	    echo ":: Updating zed..."
+            curl -f https://zed.dev/install.sh | sh
+        ;;
+        "mirrors")
+            update_mirrors
+        ;;
+        "")
+            echo "ok"
+        ;;
+    esac
+}
+
 display_version() {
 	echo $BDE_VERSION;
 }
@@ -293,6 +308,12 @@ elif [[ $1 == "m" ]];then
     update_mirrors
 elif [[ $1 == "mirrors" ]];then
 	update_mirrors
+
+elif [[ $1 == "update" ]];then
+    update_prompt $2
+elif [[ $1 == "u" ]];then
+    update_prompt $2
+
 else
   echo "ok"
 fi

@@ -31,6 +31,7 @@ fish_add_path /home/bypass/.spicetify
 fish_add_path /home/bypass/.config/scripts
 fish_add_path /home/linuxbrew/.linuxbrew/bin
 fish_add_path /home/bypass/.local/bin
+fish_add_path /opt/android-sdk/platform-tools
 
 # Aliases - Configuration
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
