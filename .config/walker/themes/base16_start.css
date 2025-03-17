@@ -6,14 +6,14 @@
 @define-color base05 #DCDFE0;
 @define-color base06 #E0E0E0;
 @define-color base07 #F5F5F5;
-@define-color base08 #E27373;
-@define-color base09 #FFBA7B;
-@define-color base0A #F9CF7A;
-@define-color base0B #94B979;
-@define-color base0C #00988E;
-@define-color base0D #97BEDC;
-@define-color base0E #E1C0FA;
-@define-color base0F #D4ACA7;
+@define-color base08 #D34D55;
+@define-color base09 #E0896A;
+@define-color base0A #FFEE1F;
+@define-color base0B #42be65;
+@define-color base0C #3ddbd9;
+@define-color base0D #33b1ff;
+@define-color base0E #be95ff;
+@define-color base0F #ee5396;
 
 #window,
 #box,

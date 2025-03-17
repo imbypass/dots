@@ -1,5 +1,6 @@
 # Interactive shell settings
 if status is-interactive
+    base16-oxocarbon
     set fish_greeting
     set fish_tmux_autostart false
     set fish_tmux_autoname_session true

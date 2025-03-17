@@ -74,7 +74,7 @@
     "ignore-list": ["Windscribe", "Picture-in-Picture", "dojo-voice"],
   },
   "clock": {
-    "format": "󰥔 {:%I:%M %p}",
+    "format": "{:%I:%M %p}",
     "tooltip-format": "{:%a, %b %e, %Y}",
     "on-click": "gnome-calendar",
   },
@@ -154,12 +154,12 @@
   "network": {
     "interface": "enp3s0",
     "format": "{ifname}",
-    "format-wifi": "{essid} ({signalStrength}%) 󰤨",
+    "format-wifi": "󰤨 {essid} ({signalStrength}%)",
     "format-ethernet": "󰤨",
-    "format-disconnected": "", //An empty format will hide the module.
-    "tooltip-format": "{ifname}",
+    "format-disconnected": "", // hides on empty
+    "tooltip-format": "󰤨 {ifname}",
     "tooltip-format-wifi": "󰤨 {essid} ({signalStrength}%)",
-    "tooltip-format-ethernet": "󰤨 Unregistered Hypercam 2",
+    "tooltip-format-ethernet": "󰤨 Ethernet",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
     "on-click-right": "nm-connection-editor",

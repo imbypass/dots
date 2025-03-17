@@ -139,3 +139,10 @@ tooltip {
     padding-left: 10px;
     padding-right: 15px;
 }
+
+#bluetooth,
+#network,
+#custom-logo,
+#custom-power {
+    font-family: "ZedMono NFP ExtraBold";
+}
