@@ -1,5 +1,3 @@
-@import url('https://raw.githubusercontent.com/imbypass/base16-discord/refs/heads/main/base16.css');
-
 :root {
     --base00: #121212;
     --base01: #181818;
@@ -23,18 +21,3 @@
     --font-code: "ZedMono Nerd Font Propo";
     --font: "ZedMono Nerd Font Propo";
 }
-
-
-
-
-
-
-
-/* Hide Profile Tab Shop Ads */
-.container__8279f { display: none; }
-
-/* Hide Family Center Settings Tab */
-.item_b3f026[data-tab-id^="Family Center"] { display:none; }
-
-/* Hide Discord Social Links */
-.socialLinks__7df54 { display: none; }
