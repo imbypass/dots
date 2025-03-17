@@ -153,12 +153,12 @@
   },
   "network": {
     "interface": "enp3s0",
-    "format": "{ifname}",
-    "format-wifi": "󰤨 {essid} ({signalStrength}%)",
+    "format": "󰤨",
+    "format-wifi": "󰤨",
     "format-ethernet": "󰤨",
     "format-disconnected": "", // hides on empty
-    "tooltip-format": "󰤨 {ifname}",
-    "tooltip-format-wifi": "󰤨 {essid} ({signalStrength}%)",
+    "tooltip-format": "󰤨 Wireless",
+    "tooltip-format-wifi": "󰤨 Wireless",
     "tooltip-format-ethernet": "󰤨 Ethernet",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
