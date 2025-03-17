@@ -1,0 +1,15 @@
+/**
+ * @name Custom Font
+ * @author @bypass_
+ * @authorLink https://github.com/imbypass
+ * @description Custom font instruction for base16-discord
+ * @license MIT
+ * @version 0.1.0
+ * @authorId 148201667085598720
+ * @discord bypass_
+ **/
+
+:root {
+    --font-code: "ZedMono Nerd Font Propo";
+    --font: "ZedMono Nerd Font Propo";
+}

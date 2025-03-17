@@ -2,11 +2,11 @@
     "autoUpdate": true,
     "autoUpdateNotification": true,
     "useQuickCss": true,
-    "themeLinks": [
-        "https://raw.githubusercontent.com/imbypass/base16-discord/refs/heads/main/base16.css"
-    ],
+    "themeLinks": [],
     "enabledThemes": [
-        "patches.theme.css"
+        "patches.theme.css",
+        "fonts.theme.css",
+        "base16.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": true,
@@ -782,7 +782,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1742249875487
+        "settingsSyncVersion": 1742255079199
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false
