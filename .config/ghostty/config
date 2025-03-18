@@ -16,7 +16,7 @@ adjust-cursor-thickness = 1
 ### Window Settings
 window-padding-x = 15
 window-padding-y = 8,5
-window-padding-balance = false
+window-padding-balance = true
 
 ### Window Decoration
 window-decoration = false

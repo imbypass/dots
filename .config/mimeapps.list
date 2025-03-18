@@ -75,3 +75,4 @@ video/quicktime=mpv.desktop
 inode/symlink=dev.zed.Zed.desktop
 application/x-matroska=vlc.desktop
 x-scheme-handler/discord-1170028348756471908=discord-1170028348756471908.desktop
+x-scheme-handler/discord-418076578333851669=discord-418076578333851669.desktop
