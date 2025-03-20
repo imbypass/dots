@@ -1,25 +1,25 @@
 /*
 *
-* Base16 Catppuccin Mocha
-* Author: https://github.com/catppuccin/catppuccin
+* Base16 Chalk
+* Author: Chris Kempson (http://chriskempson.com)
 *
 */
 
 :root {
-    --base00: #1e1e2e;
-    --base01: #181825;
-    --base02: #313244;
-    --base03: #45475a;
-    --base04: #585b70;
-    --base05: #cdd6f4;
-    --base06: #f5e0dc;
-    --base07: #b4befe;
-    --base08: #f38ba8;
-    --base09: #fab387;
-    --base0A: #f9e2af;
-    --base0B: #a6e3a1;
-    --base0C: #94e2d5;
-    --base0D: #89b4fa;
-    --base0E: #cba6f7;
-    --base0F: #f2cdcd;
+    --base00: #151515;
+    --base01: #202020;
+    --base02: #303030;
+    --base03: #505050;
+    --base04: #b0b0b0;
+    --base05: #d0d0d0;
+    --base06: #e0e0e0;
+    --base07: #f5f5f5;
+    --base08: #fb9fb1;
+    --base09: #eda987;
+    --base0A: #ddb26f;
+    --base0B: #acc267;
+    --base0C: #12cfc0;
+    --base0D: #6fc2ef;
+    --base0E: #e1a3ee;
+    --base0F: #deaf8f;
 }
