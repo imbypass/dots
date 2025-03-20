@@ -89,6 +89,9 @@ tooltip {
     color: @base08;
 }
 
+#workspaces:hover {
+    border: 0px transparent;
+}
 #workspaces button {
     border: 0px;
     border-radius: 4px;
@@ -100,7 +103,7 @@ tooltip {
     padding-top: 0px;
 }
 #workspaces button:hover {
-    border: 0px;
+    border: 0px transparent;
 }
 #workspaces button.urgent {
     color: @base00;

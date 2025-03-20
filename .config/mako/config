@@ -18,14 +18,14 @@ ignore-timeout=1
 font=ZedMono Nerd Font Propo 11
 
 # start colors
-background-color=#151515
-border-color=#303030
-text-color=#d0d0d0
+background-color=#212121
+border-color=#353535
+text-color=#eeffff
 [urgency=low]
-border-color=#303030
+border-color=#353535
 [urgency=normal]
-border-color=#303030
+border-color=#353535
 [urgency=high]
-border-color=#fb9fb1
+border-color=#f07178
 default-timeout=0
 # end colors

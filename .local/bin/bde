@@ -134,6 +134,11 @@ reload_prompt() {
         killall -9 mconnect > /dev/null
         mconnect -d > ~/.logs/mconnect.log & disown
       ;;
+      "gtk")
+        echo ":: Reloading gtk.."
+        gsettings set org.gnome.desktop.interface gtk-theme FlatDummy > /dev/null
+        gsettings set org.gnome.desktop.interface gtk-theme FlatColor > /dev/null
+      ;;
   esac
 }
 

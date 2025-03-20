@@ -32,6 +32,20 @@
 #
 
 [[items]]
+file = "~/.themes/FlatColor/colors2"
+template = "gtk-flatcolor"
+subtemplate = "gtk-2"
+rewrite = true
+hook = "~/.local/bin/bde rl gtk"
+
+[[items]]
+file = "~/.themes/FlatColor/colors3"
+template = "gtk-flatcolor"
+subtemplate = "gtk-3"
+rewrite = true
+hook = "~/.local/bin/bde rl gtk"
+
+[[items]]
 file = "~/.config/mako/config"
 template = "mako"
 rewrite = false
@@ -83,7 +97,9 @@ hook = "~/.local/bin/bde rl waybar"
 [[items]]
 file = "~/.config/foot/foot.ini"
 template = "foot"
-rewrite = true
+rewrite = false
+start = "# start colors"
+end = "# end colors"
 
 [[items]]
 file = "~/.config/fish/themes/base16.theme"
