@@ -93,3 +93,15 @@ file = "~/.config/spicetify/Themes/base16/color.ini"
 template = "spotify"
 rewrite = true
 hook = "~/.local/bin/bde rl spotify"
+
+[[items]]
+file = "~/.config/tmux/base16.conf"
+template = "tmux"
+subtemplate = "default"
+rewrite = true
+hook = "tmux source ~/.config/tmux/base16.conf"
+
+[[items]]
+file = "~/.config/zed/themes/base16-flavours.json"
+template = "zed"
+rewrite = true

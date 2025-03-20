@@ -9,7 +9,7 @@
     "version": "2"
   },
   "vim_mode": false,
-  "theme": "Base16 Oxocarbon Dark",
+  "theme": "Base16 Flavours",
   "features": {
     "edit_prediction_provider": "zed"
   },
