@@ -15,9 +15,10 @@
     "icon-size": 14,
     "spacing": 8,
     "icons": {
-      "vesktop": "",
-      "vencord": "",
-      "discord": "",
+      "spotify": "",
+      "Steam": "󰓓",
+      "StreamDeck UI": "",
+      "Vesktop": "",
     },
   },
   "modules-left": [
@@ -56,9 +57,6 @@
       "(\\d\\. )?(.*)Minecraft": "<span>󰍳 </span> Minecraft",
       "(.*)[Ll]unar [Cc]lient": "<span>󰍳 </span> Minecraft",
       "(\\d\\. )?(.*)Code - OSS": "<span>󰨞 </span> VS Code",
-      "bypass@archbtw:(\\d\\. )?(.*)": "<span>󰄛 </span> $2",
-      "nano (.*)": "<span>󱇧 </span> $1",
-      "rofi - (.*)": "$1",
       "Search(.*)": "<span> </span> Search $1",
     },
     "separate-outputs": false,
@@ -162,6 +160,7 @@
     "tooltip-format-ethernet": "󰤨 Ethernet",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
+    "on-click": "nm-connection-editor",
     "on-click-right": "nm-connection-editor",
   },
   "bluetooth": {
@@ -171,6 +170,7 @@
     "tooltip-format": "{controller_alias}",
     "tooltip-format-connected": "{controller_alias}\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "on-click": "blueman-manager",
     "on-click-right": "blueman-manager",
   },
 }

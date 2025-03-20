@@ -1,18 +1,25 @@
+/*
+*
+* Base16 Catppuccin Mocha
+* Author: https://github.com/catppuccin/catppuccin
+*
+*/
+
 :root {
-    --base00: #121212;
-    --base01: #181818;
-    --base02: #303030;
-    --base03: #505050;
-    --base04: #B0B0B0;
-    --base05: #DCDFE0;
-    --base06: #E0E0E0;
-    --base07: #F5F5F5;
-    --base08: #D34D55;
-    --base09: #E0896A;
-    --base0A: #ffdc7b;
-    --base0B: #42be65;
-    --base0C: #3ddbd9;
-    --base0D: #33b1ff;
-    --base0E: #be95ff;
-    --base0F: #ee5396;
+    --base00: #1e1e2e;
+    --base01: #181825;
+    --base02: #313244;
+    --base03: #45475a;
+    --base04: #585b70;
+    --base05: #cdd6f4;
+    --base06: #f5e0dc;
+    --base07: #b4befe;
+    --base08: #f38ba8;
+    --base09: #fab387;
+    --base0A: #f9e2af;
+    --base0B: #a6e3a1;
+    --base0C: #94e2d5;
+    --base0D: #89b4fa;
+    --base0E: #cba6f7;
+    --base0F: #f2cdcd;
 }

@@ -1,6 +1,5 @@
 # Interactive shell settings
 if status is-interactive
-    base16-oxocarbon
     set fish_greeting
     set fish_tmux_autostart false
     set fish_tmux_autoname_session true
@@ -48,6 +47,7 @@ alias ex="exit"
 alias f="bfetch"
 alias fetch="bfetch"
 alias ff="fastfetch"
+alias fl="flavours"
 alias g="git"
 alias grep="rg"
 alias h="hyprctl"

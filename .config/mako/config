@@ -13,22 +13,19 @@ actions=1
 history=1
 anchor=top-right
 max-icon-size=52
-default-timeout=4000
+default-timeout=3500
 ignore-timeout=1
 font=ZedMono Nerd Font Propo 11
-background-color=#121212
-border-color=#303030
 
+# start colors
+background-color=#1e1e2e
+border-color=#313244
+text-color=#cdd6f4
 [urgency=low]
-border-color=#303030
-
+border-color=#313244
 [urgency=normal]
-border-color=#303030
-
+border-color=#313244
 [urgency=high]
-border-color=#89B4FA
+border-color=#f38ba8
 default-timeout=0
-
-[category=mpd]
-default-timeout=2000
-group-by=category
+# end colors

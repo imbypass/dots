@@ -237,6 +237,15 @@
       "parser": "kv"
     },
     {
+      "name": "themes",
+      "placeholder": "System Theme",
+      "theme": "base16",
+      "switcher_only": false,
+      "refresh": true,
+      "src": "bash -c ~/.config/walker/scripts/themes.sh",
+      "parser": "kv"
+    },
+    {
       "name": "power",
       "placeholder": "Power",
       "switcher_only": true,
