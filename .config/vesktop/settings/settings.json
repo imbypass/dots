@@ -352,7 +352,7 @@
                         "id": "pxyf4amj7vi",
                         "name": "Close Friends",
                         "color": 10070709,
-                        "collapsed": false,
+                        "collapsed": true,
                         "channels": [
                             "975514265832284170",
                             "588193248305217537",
@@ -782,7 +782,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1742259683480
+        "settingsSyncVersion": 1742485200082
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false
