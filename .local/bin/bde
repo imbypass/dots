@@ -140,7 +140,9 @@ reload_prompt() {
       ;;
       "spotify")
         echo ":: Reloading spicetify.."
-        spicetify apply > /dev/null
+        pkill spicetify > /dev/null
+        spicetify watch -s & disown
+        sleep 1 && pkill spicetify > /dev/null
       ;;
   esac
 }
