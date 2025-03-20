@@ -99,8 +99,7 @@ reload_prompt() {
       ;;
       "waybar")
         echo ":: Reloading waybar.."
-        killall -9  waybar > /dev/null
-        waybar > ~/.logs/waybar.log & disown
+        pkill -SIGRTMIN+7 waybar > /dev/null
       ;;
       "walker")
         echo ":: Reloading walker service.."
@@ -138,6 +137,10 @@ reload_prompt() {
         echo ":: Reloading gtk.."
         gsettings set org.gnome.desktop.interface gtk-theme FlatDummy > /dev/null
         gsettings set org.gnome.desktop.interface gtk-theme FlatColor > /dev/null
+      ;;
+      "spotify")
+        echo ":: Reloading spicetify.."
+        spicetify apply > /dev/null
       ;;
   esac
 }
