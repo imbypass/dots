@@ -131,3 +131,9 @@ rewrite = true
 file = "~/.config/helix/themes/base16.toml"
 template = "helix"
 rewrite = true
+
+### MICRO EDITOR ###
+[[items]]
+file = "~/.config/micro/colorschemes/base16.micro"
+template = "micro"
+rewrite = true
