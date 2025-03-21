@@ -3,7 +3,7 @@
 # I'm sure there are better ways of doing this, but I REALLY don't work with bash/zsh scripts often.
 # This just seemed like a more convenient way to execute some of the common shit that I do on my PC.
 
-BDE_VERSION="0.17.0"
+BDE_VERSION="0.18.0"
 
 edit_prompt() {
   case "$1" in
@@ -170,10 +170,6 @@ file_upload() {
   curl -X POST -F "file=@$1" https://imbypass.pw/upload.php
 }
 
-file_upload_fate() {
-  curl -X POST -F "file=@$1" -F "secret_key=$FATE_KEY" https://api.fate.ovh/cli/
-}
-
 search_steamapps() {
   echo -ne "\033]0;Installed Steam Games\007"
   for id in $(ls ~/.local/share/Steam/steamapps/compatdata); do echo "$id: $(curl -s "https://store.steampowered.com/app/$id/" | grep -oP '(?<=<title>)[^<]*' )"; done
@@ -255,6 +251,32 @@ update_prompt() {
     esac
 }
 
+popout_prompt() {
+    case "$1" in
+        "apps")
+                walker -m applications
+        ;;
+        "a")
+                walker -m applications
+        ;;
+        "theme")
+            walker -m themes
+        ;;
+        "t")
+            walker -m themes
+        ;;
+        "wall")
+            walker -n -m wallpaper
+        ;;
+        "w")
+            walker -n -m wallpaper
+        ;;
+        "")
+            echo "ok"
+        ;;
+    esac
+}
+
 display_version() {
 	echo $BDE_VERSION;
 }
@@ -321,6 +343,16 @@ elif [[ $1 == "update" ]];then
     update_prompt $2
 elif [[ $1 == "u" ]];then
     update_prompt $2
+
+elif [[ $1 == "popout" ]];then
+    popout_prompt $2
+elif [[ $1 == "p" ]];then
+    popout_prompt $2
+
+elif [[ $1 == "theme" ]];then
+    popout_prompt "theme"
+elif [[ $1 == "wall" ]];then
+    popout_prompt "wall"
 
 else
   echo "ok"
