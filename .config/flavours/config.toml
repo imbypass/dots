@@ -3,13 +3,13 @@
 
 shell = "fish -c '{}'"
 
+### GTK THEME ###
 [[items]]
 file = "~/.themes/FlatColor/colors2"
 template = "gtk-flatcolor"
 subtemplate = "gtk-2"
 rewrite = true
 hook = "~/.local/bin/bde rl gtk"
-
 [[items]]
 file = "~/.themes/FlatColor/colors3"
 template = "gtk-flatcolor"
@@ -17,6 +17,48 @@ subtemplate = "gtk-3"
 rewrite = true
 hook = "~/.local/bin/bde rl gtk"
 
+### VESKTOP ###
+[[items]]
+file = "~/.config/vesktop/settings/quickCss.css"
+template = "vesktop"
+rewrite = true
+
+### SIMPLEFOX ###
+[[items]]
+file = "/home/bypass/.mozilla/firefox/li1xg7z9.default-release/chrome/userChrome.css"
+template = "firefox"
+rewrite = false
+start = "/* start colors */"
+end = "/* end colors */"
+
+### MPV ###
+[[items]]
+file = "~/.config/mpv/mpv.conf"
+template = "mpv"
+rewrite = false
+start = "# start colors"
+end = "# end colors"
+
+### ZED EDITOR ###
+[[items]]
+file = "~/.config/zed/themes/base16-flavours.json"
+template = "zed"
+rewrite = true
+
+### SPOTIFY ###
+[[items]]
+file = "~/.config/spicetify/Themes/base16/color.ini"
+template = "spotify"
+rewrite = true
+hook = "~/.local/bin/bde rl spotify"
+
+### HYPRLAND ###
+[[items]]
+file = "~/.config/hypr/conf/custom/base16.conf"
+template = "hyprland"
+rewrite = true
+
+### MAKO DAEMON ###
 [[items]]
 file = "~/.config/mako/config"
 template = "mako"
@@ -25,6 +67,7 @@ start = "# start colors"
 end = "# end colors"
 hook = "~/.local/bin/bde rl mako"
 
+### WALKER ###
 [[items]]
 file = "~/.config/walker/themes/base16.css"
 template = "walker"
@@ -32,7 +75,6 @@ rewrite = false
 start = "/* start flavours */"
 end = "/* end flavours */"
 hook = "~/.local/bin/bde rl walker"
-
 [[items]]
 file = "~/.config/walker/themes/base16_start.css"
 template = "walker"
@@ -40,7 +82,6 @@ rewrite = false
 start = "/* start flavours */"
 end = "/* end flavours */"
 hook = "~/.local/bin/bde rl walker"
-
 [[items]]
 file = "~/.config/walker/themes/base16_wall.css"
 template = "walker"
@@ -49,22 +90,14 @@ start = "/* start flavours */"
 end = "/* end flavours */"
 hook = "~/.local/bin/bde rl walker"
 
-[[items]]
-file = "~/.config/vesktop/settings/quickCss.css"
-template = "vesktop"
-rewrite = true
-
-[[items]]
-file = "~/.config/hypr/conf/custom/base16.conf"
-template = "hyprland"
-rewrite = true
-
+### WAYBAR ###
 [[items]]
 file = "~/.config/waybar/base16.css"
 template = "waybar"
 rewrite = true
 hook = "~/.local/bin/bde rl waybar"
 
+### FOOT TERMINAL ###
 [[items]]
 file = "~/.config/foot/foot.ini"
 template = "foot"
@@ -72,28 +105,14 @@ rewrite = false
 start = "# start colors"
 end = "# end colors"
 
-[[items]]
-file = "~/.config/fish/themes/base16.theme"
-template = "fish"
-rewrite = true
-
+### GHOSTTY TERMINAL ###
 [[items]]
 file = "~/.config/ghostty/themes/base.conf"
 template = "ghostty"
 rewrite = true
 hook = "~/.local/bin/bde rl ghostty"
 
-[[items]]
-file = "~/.config/helix/themes/base16.toml"
-template = "helix"
-rewrite = true
-
-[[item]]
-file = "~/.config/spicetify/Themes/base16/color.ini"
-template = "spotify"
-rewrite = true
-hook = "~/.local/bin/bde rl spotify"
-
+### TMUX ###
 [[items]]
 file = "~/.config/tmux/base16.conf"
 template = "tmux"
@@ -101,7 +120,14 @@ subtemplate = "default"
 rewrite = true
 hook = "tmux source ~/.config/tmux/base16.conf"
 
+### FISH SHELL ###
 [[items]]
-file = "~/.config/zed/themes/base16-flavours.json"
-template = "zed"
+file = "~/.config/fish/themes/base16.theme"
+template = "fish"
+rewrite = true
+
+### HELIX EDITOR ###
+[[items]]
+file = "~/.config/helix/themes/base16.toml"
+template = "helix"
 rewrite = true

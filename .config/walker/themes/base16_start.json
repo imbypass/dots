@@ -66,17 +66,17 @@
                 "y_align": 0.5
               },
               "icon": {
-                "pixel_size": 26,
+                "pixel_size": 28,
                 "theme": ""
               }
             },
             "margins": {
               "top": 8
             },
-            "max_height": 450,
-            "max_width": 400,
-            "min_width": 400,
-            "width": 400,
+            "max_height": 460,
+            "max_width": 300,
+            "min_width": 300,
+            "width": 300,
             "marker_color": "#89B4FA"
           }
         },
@@ -106,7 +106,7 @@
             "hide": true
           }
         },
-        "width": 450
+        "width": 350
       },
       "h_align": "fill",
       "v_align": "fill"

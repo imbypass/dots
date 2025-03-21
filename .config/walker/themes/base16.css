@@ -114,15 +114,16 @@ child:hover {
 }
 
 #icon {
-    margin-right: 8px;
+    margin-right: 12px;
 }
 
 #label {
+    font-size: 14px;
     font-weight: 500;
 }
 
 #sub {
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
 .activation #activationlabel {

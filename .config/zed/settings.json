@@ -13,8 +13,8 @@
   "features": {
     "edit_prediction_provider": "zed"
   },
-  "ui_font_size": 16,
-  "buffer_font_size": 14.25,
+  "ui_font_size": 16.5,
+  "buffer_font_size": 14,
   "ui_font_family": "ZedMono Nerd Font Propo",
   "buffer_font_family": "ZedMono Nerd Font Propo",
   "buffer_line_height": {
