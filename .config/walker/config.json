@@ -247,7 +247,7 @@
     },
     {
       "name": "power",
-      "placeholder": "Power",
+      "placeholder": "System",
       "switcher_only": true,
       "recalculate_score": true,
       "show_icon_when_single": true,
