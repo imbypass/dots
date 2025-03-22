@@ -355,6 +355,15 @@
             "userBasedCategoryList": {
                 "148201667085598720": [
                     {
+                        "id": "9is5ky8j46e",
+                        "name": "Scratch Pad",
+                        "color": 10070709,
+                        "collapsed": false,
+                        "channels": [
+                            "1190873777211449414"
+                        ]
+                    },
+                    {
                         "id": "pxyf4amj7vi",
                         "name": "Close Friends",
                         "color": 10070709,
@@ -369,15 +378,6 @@
                             "980292879798902824",
                             "1015718332109955112",
                             "294685587401605132"
-                        ]
-                    },
-                    {
-                        "id": "9is5ky8j46e",
-                        "name": "Scratch Pad",
-                        "color": 10070709,
-                        "collapsed": false,
-                        "channels": [
-                            "1190873777211449414"
                         ]
                     }
                 ]
@@ -791,7 +791,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1742587801615
+        "settingsSyncVersion": 1742614865048
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false
