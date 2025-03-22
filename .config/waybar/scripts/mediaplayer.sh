@@ -13,11 +13,11 @@ main() {
   new_stat=''
   while true
   do
-    player_status=$(playerctl --player=spotify status 2> /dev/null)
+    player_status=$(playerctl status 2> /dev/null)
     if [ "$player_status" = "Playing" ]; then
-      new_stat="  $(playerctl --player=spotify metadata artist) - $(playerctl --player=spotify metadata title)"
+      new_stat=" $(playerctl metadata artist) - $(playerctl metadata title)"
     elif [ "$player_status" = "Paused" ]; then
-      new_stat="  $(playerctl --player=spotify metadata artist) - $(playerctl --player=spotify metadata title)"
+      new_stat=" $(playerctl metadata artist) - $(playerctl metadata title)"
     fi
 
     if [ "$new_stat" != "$old_stat" ]; then

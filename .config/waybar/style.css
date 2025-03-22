@@ -8,6 +8,10 @@
     font-weight: 600;
 }
 
+.muted {
+    color: @base08;
+}
+
 window#waybar {
     color: @base05;
     background: @base00;
@@ -44,10 +48,6 @@ tooltip {
     padding: 12px;
     padding-bottom: 0px;
     padding-top: 0px;
-}
-
-#clock:hover {
-    background-color: @base02;
 }
 
 #tray {
@@ -125,6 +125,10 @@ tooltip {
 }
 #custom-expose:hover {
     color: @base0D;
+}
+#custom-spotify {
+    font-size: 16px;
+    margin-left: 0px;
 }
 
 #network {
