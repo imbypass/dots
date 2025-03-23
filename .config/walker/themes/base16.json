@@ -54,6 +54,7 @@
           "list": {
             "item": {
               "activation_label": {
+                "hide": true,
                 "h_align": "fill",
                 "v_align": "fill",
                 "width": 20,
@@ -68,7 +69,7 @@
             "margins": {
               "top": 8
             },
-            "max_height": 289,
+            "max_height": 295,
             "max_width": 400,
             "min_width": 400,
             "width": 400,

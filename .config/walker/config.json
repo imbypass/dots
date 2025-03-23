@@ -248,25 +248,12 @@
     {
       "name": "power",
       "placeholder": "System",
+      "theme": "base16",
       "switcher_only": true,
+      "keep_sort": true,
       "recalculate_score": true,
       "show_icon_when_single": true,
       "entries": [
-        {
-          "label": "Shutdown",
-          "icon": "system-shutdown",
-          "exec": "shutdown now"
-        },
-        {
-          "label": "Reboot",
-          "icon": "system-reboot",
-          "exec": "reboot"
-        },
-        {
-          "label": "Lock Screen",
-          "icon": "system-lock-screen",
-          "exec": "hyprlock"
-        },
         {
           "label": "Change Wallpaper",
           "icon": "preferences-desktop-wallpaper",
@@ -276,6 +263,46 @@
           "label": "Change Theme",
           "icon": "style",
           "exec": "walker -n -m themes"
+        },
+        {
+          "label": "Lock Screen",
+          "icon": "system-lock-screen",
+          "exec": "hyprlock"
+        },
+        {
+          "label": "Reboot",
+          "icon": "system-reboot",
+          "exec": "reboot"
+        },
+        {
+          "label": "Shutdown",
+          "icon": "system-shutdown",
+          "exec": "shutdown now"
+        }
+      ]
+    },
+    {
+      "name": "screenshot",
+      "placeholder": "Screenshot",
+      "theme": "base16_popup",
+      "switcher_only": false,
+      "recalculate_score": true,
+      "show_icon_when_single": true,
+      "entries": [
+        {
+          "label": "Region",
+          "icon": "region",
+          "exec": "hyprshot -m region -z -o ~/Pictures/Screenshots -f \"screenshot_$(date +%d%m%Y_%H%M%S).png\""
+        },
+        {
+          "label": "Window",
+          "icon": "window",
+          "exec": "hyprshot -m window -z -o ~/Pictures/Screenshots -f \"screenshot_$(date +%d%m%Y_%H%M%S).png\""
+        },
+        {
+          "label": "Screen",
+          "icon": "preferences-system-windows",
+          "exec": "hyprshot -m output -z -o ~/Pictures/Screenshots -f \"screenshot_$(date +%d%m%Y_%H%M%S).png\""
         }
       ]
     }

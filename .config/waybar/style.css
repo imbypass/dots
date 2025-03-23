@@ -48,6 +48,7 @@ tooltip {
     padding: 12px;
     padding-bottom: 0px;
     padding-top: 0px;
+    /* margin-bottom: 10px; */
 }
 
 #tray {
@@ -84,6 +85,7 @@ tooltip {
 #custom-power {
     margin-right: 10px;
     margin-left: 4px;
+    /* margin-bottom: 4px; */
 }
 #custom-power:hover {
     color: @base08;
@@ -101,6 +103,7 @@ tooltip {
     padding: 10px;
     padding-bottom: 0px;
     padding-top: 0px;
+    /* margin-bottom: 10px; */
 }
 #workspaces button:hover {
     border: 0px transparent;
