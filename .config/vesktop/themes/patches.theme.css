@@ -24,3 +24,17 @@
 .socialLinks__7df54 {
     display: none;
 }
+
+/* Hide New Visual Refresh Top Bar */
+div[class^="bar_"],
+div[class*=" bar_"] {
+    display: none !important;
+}
+div[class^="base_"],
+div[class*=" base_"] {
+    grid-template-rows: [top] min-content [titleBarEnd] min-content [noticeEnd] 1fr [end] !important;
+}
+div[class^="tutorialContainer_"],
+div[class*=" tutorialContainer_"] {
+    padding-top: 12px;
+}
