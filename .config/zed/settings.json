@@ -15,7 +15,7 @@
   },
   "ui_font_size": 16.5,
   "buffer_font_size": 14,
-  "ui_font_family": "Google Sans Display",
+  "ui_font_family": "Product Sans Medium",
   "buffer_font_family": "ZedMono Nerd Font Propo",
   "buffer_line_height": {
     "custom": 1.525
