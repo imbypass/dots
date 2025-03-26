@@ -1,8 +1,9 @@
 theme = base.conf
 
 ### Font Settings
-font-family = ZedMono NFP
-font-feature = dlig ss05 liga
+font-family = ZedMono NFM
+font-family-bold = ZedMono NFM
+# font-feature = dlig ss05 liga
 font-size = 11.25
 font-thicken = true
 adjust-cell-height = 0
