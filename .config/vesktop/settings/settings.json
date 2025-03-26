@@ -4,8 +4,9 @@
     "useQuickCss": true,
     "themeLinks": [],
     "enabledThemes": [
-        "base16.theme.css",
-        "fonts.theme.css"
+        "fonts.theme.css",
+        "patches.theme.css",
+        "base16.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": true,
@@ -790,7 +791,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1742955262431
+        "settingsSyncVersion": 1742960721603
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false
