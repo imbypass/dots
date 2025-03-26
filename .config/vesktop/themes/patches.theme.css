@@ -38,3 +38,8 @@ div[class^="tutorialContainer_"],
 div[class*=" tutorialContainer_"] {
     padding-top: 12px;
 }
+
+/* Read All Button - Remove Border */
+.vc-ranb-button {
+    border: 0px;
+}

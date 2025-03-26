@@ -1,6 +1,6 @@
 {
   "layer": "top",
-  "position": "bottom",
+  "position": "top",
   "margin-top": 0,
   "margin-right": 0,
   "margin-left": 0,
@@ -85,7 +85,7 @@
   "custom/logo": {
     "tooltip": false,
     "format": " 󰣇 ",
-    "on-click": "walker -m applications",
+    "on-click": "walker",
   },
   "custom/expose": {
     "tooltip": false,
@@ -115,9 +115,9 @@
     "return-type": "json",
   },
   "pulseaudio": {
-    "format": "{icon} {volume}%",
+    "format": "{icon}  {volume}%",
     "tooltip": true,
-    "format-muted": "<span color=\"#323232\"> MUTED</span>",
+    "format-muted": "<span color=\"#323232\">  MUTED</span>",
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "on-click-right": "pavucontrol",
     "on-scroll-up": "pamixer -i 1",
@@ -135,8 +135,8 @@
   },
   "pulseaudio#microphone": {
     "format": "{format_source}",
-    "format-source": " {volume}%",
-    "format-source-muted": "<span color=\"#323232\"> MUTED</span>",
+    "format-source": "  {volume}%",
+    "format-source-muted": "<span color=\"#323232\">   MUTED</span>",
     "on-click": "pamixer --default-source -t",
     "on-click-right": "pavucontrol",
     "on-scroll-up": "pamixer --default-source -i 1",
