@@ -16,7 +16,6 @@ window#waybar {
     color: @base05;
     background: @base00;
     border-bottom: 2px solid @base01;
-    opacity: 0.95;
 }
 
 tooltip {
