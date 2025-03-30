@@ -135,12 +135,18 @@ reload_prompt() {
       ;;
       "gtk")
         echo ":: Reloading gtk.."
-        gsettings set org.gnome.desktop.interface gtk-theme FlatDummy > /dev/null
-        gsettings set org.gnome.desktop.interface gtk-theme FlatColor > /dev/null
+        cd ~/.themes/phocus && npm run build > /dev/null
+        gsettings set org.gnome.desktop.interface gtk-theme phocus_refresh > /dev/null
+        gsettings set org.gnome.desktop.interface gtk-theme phocus > /dev/null
       ;;
       "spotify")
         echo ":: Reloading spicetify.."
         spicetify apply > /dev/null
+      ;;
+      "pcmanfm")
+        echo ":: Reloading pcmanfm.."
+        killall -9 pcmanfm-qt > /dev/null
+        pcmanfm-qt --desktop > ~/.logs/pcmanfm.log & disown
       ;;
   esac
 }

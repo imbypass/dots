@@ -117,7 +117,7 @@
   "pulseaudio": {
     "format": "{icon}  {volume}%",
     "tooltip": true,
-    "format-muted": "<span color=\"#323232\">  MUTED</span>",
+    "format-muted": "  MUTED",
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "on-click-right": "pavucontrol",
     "on-scroll-up": "pamixer -i 1",
@@ -136,7 +136,7 @@
   "pulseaudio#microphone": {
     "format": "{format_source}",
     "format-source": "  {volume}%",
-    "format-source-muted": "<span color=\"#323232\">   MUTED</span>",
+    "format-source-muted": "   MUTED",
     "on-click": "pamixer --default-source -t",
     "on-click-right": "pavucontrol",
     "on-scroll-up": "pamixer --default-source -i 1",

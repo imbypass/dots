@@ -384,7 +384,7 @@
             }
         },
         "PlainFolderIcon": {
-            "enabled": true
+            "enabled": false
         },
         "PlatformIndicators": {
             "enabled": true,
@@ -468,7 +468,7 @@
         "ShowMeYourName": {
             "enabled": true,
             "displayNames": false,
-            "mode": "user-nick",
+            "mode": "nick-user",
             "inReplies": false
         },
         "SilentMessageToggle": {
@@ -612,7 +612,7 @@
             "enabled": false
         },
         "BetterSettings": {
-            "enabled": true,
+            "enabled": false,
             "disableFade": true,
             "eagerLoad": true,
             "organizeMenu": true
@@ -791,7 +791,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1742960721603
+        "settingsSyncVersion": 1743276758825
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false

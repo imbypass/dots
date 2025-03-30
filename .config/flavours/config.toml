@@ -3,7 +3,7 @@
 
 shell = "fish -c '{}'"
 
-### GTK THEME ###
+### FLATCOLOR GTK THEME ###
 [[items]]
 file = "~/.themes/FlatColor/colors2"
 template = "gtk-flatcolor"
@@ -15,6 +15,15 @@ file = "~/.themes/FlatColor/colors3"
 template = "gtk-flatcolor"
 subtemplate = "gtk-3"
 rewrite = true
+hook = "~/.local/bin/bde rl gtk"
+
+### PHOCUS GTK THEME ###
+[[items]]
+file = "~/.themes/phocus/scss/gtk-3.0/_colors.scss"
+template = "phocus"
+rewrite = false
+start = "// start colors"
+end = "// end colors"
 hook = "~/.local/bin/bde rl gtk"
 
 ### VESKTOP ###
