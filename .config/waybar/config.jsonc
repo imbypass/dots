@@ -84,12 +84,12 @@
   },
   "custom/logo": {
     "tooltip": false,
-    "format": " 󰣇 ",
+    "format": "    ",
     "on-click": "walker",
   },
   "custom/expose": {
     "tooltip": false,
-    "format": "󰕰",
+    "format": "󰨑",
     "on-click": "bde expose",
   },
   "custom/power": {
