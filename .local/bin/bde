@@ -10,6 +10,7 @@ edit_prompt() {
 
       # Edit the script itself
       "")
+      	EDITOR="micro"
         cd ~/.local/bin/ && $EDITOR bde
       ;;
 
@@ -209,7 +210,7 @@ toggle_gamemode() {
   echo ":: Toggling game mode..."
 	HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
 	if [ "$HYPRGAMEMODE" = 1 ] ; then
-      notify-send -u low -a Hyprland -t 750 "GAME MODE" "ENABLED: [ON] / OFF" -i /usr/share/icons/Papirus-Dark/96x96/devices/input-gaming.svg
+      notify-send -u low -a Hyprland -t 750 $(uname -n) "Game Mode Enabled" -i /usr/share/icons/Papirus-Dark/96x96/devices/input-gaming.svg
 	    hyprctl --batch "\
 	        keyword animations:enabled 0;\
 	        keyword decoration:drop_shadow 0;\
@@ -220,7 +221,7 @@ toggle_gamemode() {
 	        keyword decoration:rounding 0" > /dev/null
 	    exit
   else
-      notify-send -u low -a Hyprland -t 750 "GAME MODE" "ENABLED: ON / [OFF]" -i /usr/share/icons/Papirus-Dark/96x96/devices/input-gaming.svg
+      notify-send -u critical -a Hyprland -t 750 $(uname -n) "Game Mode Disabled" -i /usr/share/icons/Papirus-Dark/96x96/devices/input-gaming.svg
 	fi
 	hyprctl reload > /dev/null
 }
@@ -260,10 +261,10 @@ update_prompt() {
 popout_prompt() {
     case "$1" in
         "apps")
-                walker -m applications
+            walker -m applications
         ;;
         "a")
-                walker -m applications
+            walker -m applications
         ;;
         "theme")
             walker -m themes

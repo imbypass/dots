@@ -37,8 +37,8 @@ colors="$c1$sq $c2$sq $c3$sq $c4$sq $c5$sq $c6$sq"
 printf "
              $c1 os $c9 $os
   (\\ /)      $c2 kr $c9 $kr
-  ( . .)     $c3 pa $c9 $pa
-  c($c1\"$c9)($c1\"$c9)    $c4 sh $c9 $sh
+  (. .)/     $c3 pa $c9 $pa
+  ($c1\"$c9)($c1\"$c9)     $c4 sh $c9 $sh
              $c5 wm $c9 $wm
 
               $colors
