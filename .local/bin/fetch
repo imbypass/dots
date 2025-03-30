@@ -21,6 +21,7 @@ wm=${wm%%\"*}
 # Get package count information
 pa=$(pacman -Q | wc -l)
 
+# Load terminal colors for output
 s='\e[48;0;7m';      e='\e[0;m'
 c1='\e[0;31m';   c2='\e[0;32m';
 c3='\e[0;33m';   c4='\e[0;34m';
@@ -29,8 +30,10 @@ c7='\e[0;30m';   c8='\e[0;37m';
 c9='\e[0;38m';
 sq=' '
 
+# Create color palette sequence
 colors="$c1$sq $c2$sq $c3$sq $c4$sq $c5$sq $c6$sq"
 
+# Print output
 printf "
              $c1 os $c9 $os
   (\\ /)      $c2 kr $c9 $kr

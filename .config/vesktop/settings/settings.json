@@ -6,7 +6,7 @@
     "enabledThemes": [
         "fonts.theme.css",
         "patches.theme.css",
-        "base16.theme.css"
+        "base16-dev.css"
     ],
     "enableReactDevtools": false,
     "frameless": true,
@@ -486,8 +486,9 @@
         },
         "SpotifyControls": {
             "enabled": false,
-            "hoverControls": false,
-            "useSpotifyUris": false
+            "hoverControls": true,
+            "useSpotifyUris": false,
+            "previousButtonRestartsTrack": true
         },
         "SpotifyCrack": {
             "enabled": true,
@@ -791,7 +792,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1743276758825
+        "settingsSyncVersion": 1743352308579
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false
