@@ -20,9 +20,8 @@
     "hyprland/workspaces",
     "custom/expose",
     "custom/spotify",
-    "wlr/taskbar",
   ],
-  "modules-center": [],
+  "modules-center": ["wlr/taskbar"],
   "modules-right": [
     "tray",
     "pulseaudio",
@@ -84,8 +83,8 @@
   },
   "custom/logo": {
     "tooltip": false,
-    "format": "    ",
-    "on-click": "walker",
+    "format": "  ",
+    "on-click": "walker -m applications",
   },
   "custom/expose": {
     "tooltip": false,
