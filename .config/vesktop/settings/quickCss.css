@@ -1,25 +1,25 @@
 /*
 *
-* Base16 Rosé Pine
-* Author: Emilia Dunfelt &lt;edun@dunfelt.se&gt;
+* Base16 Tokyo Night Custom
+* Author: and-rs
 *
 */
 
 :root {
-    --base00: #191724;
-    --base01: #1f1d2e;
-    --base02: #26233a;
-    --base03: #6e6a86;
-    --base04: #908caa;
-    --base05: #e0def4;
-    --base06: #e0def4;
-    --base07: #524f67;
-    --base08: #eb6f92;
-    --base09: #f6c177;
-    --base0A: #ebbcba;
-    --base0B: #31748f;
-    --base0C: #9ccfd8;
-    --base0D: #c4a7e7;
-    --base0E: #f6c177;
-    --base0F: #524f67;
+    --base00: #07090d;
+    --base01: #090b11;
+    --base02: #121520;
+    --base03: #475070;
+    --base04: #5f7299;
+    --base05: #acb0d0;
+    --base06: #bdc0d0;
+    --base07: #fefefe;
+    --base08: #f7768e;
+    --base09: #eda987;
+    --base0A: #e0af68;
+    --base0B: #9ece6a;
+    --base0C: #4abaaf;
+    --base0D: #7aa2f7;
+    --base0E: #bb9af7;
+    --base0F: #9a7ecc;
 }
