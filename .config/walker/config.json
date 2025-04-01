@@ -261,7 +261,7 @@
         },
         {
           "label": "Change Theme",
-          "icon": "style",
+          "icon": "gpaint",
           "exec": "walker -n -m themes"
         },
         {
