@@ -98,6 +98,20 @@ rewrite = false
 start = "/* start flavours */"
 end = "/* end flavours */"
 hook = "~/.local/bin/bde rl walker"
+[[items]]
+file = "~/.config/walker/themes/base16_apps.css"
+template = "walker"
+rewrite = false
+start = "/* start flavours */"
+end = "/* end flavours */"
+hook = "~/.local/bin/bde rl walker"
+[[items]]
+file = "~/.config/walker/themes/base16_power.css"
+template = "walker"
+rewrite = false
+start = "/* start flavours */"
+end = "/* end flavours */"
+hook = "~/.local/bin/bde rl walker"
 
 ### WAYBAR ###
 [[items]]

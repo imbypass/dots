@@ -33,14 +33,14 @@
       "hide_actions_with_empty_query": true,
       "history": true,
       "name": "applications",
-      "placeholder": "Applications",
+      "placeholder": "Search..",
       "prioritize_new": true,
       "refresh": true,
       "show_generic": true,
       "show_icon_when_single": true,
       "show_sub_when_single": true,
       "weight": 5,
-      "theme": "base16_start"
+      "theme": "base16_apps"
     },
     "bookmarks": {
       "entries": [
@@ -248,7 +248,7 @@
     {
       "name": "power",
       "placeholder": "System",
-      "theme": "base16",
+      "theme": "base16_power",
       "switcher_only": true,
       "keep_sort": true,
       "recalculate_score": true,

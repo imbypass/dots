@@ -45,9 +45,10 @@ slider,
 }
 
 #box {
+    margin-left: 4px;
     border-radius: 6px;
     background: @base00;
-    padding: 32px;
+    padding: 8px;
     border: 2px solid @base02;
     box-shadow:
         0px 1px 1px rgba(0, 0, 0, 0.2),
@@ -60,9 +61,9 @@ slider,
         0 1px 1px rgba(0, 0, 0, 0.22);
     background: @base02;
     border: 2px solid @base02;
-    border-radius: 4px;
-    padding: 8px;
-    margin-bottom: 16px;
+    border-radius: 6px;
+    padding: 0px;
+    margin-bottom: -4px;
 }
 
 #prompt {
@@ -99,14 +100,17 @@ slider,
 
 #input placeholder {
     opacity: 0.5;
+    color: @base05;
 }
 
 #list {
 }
 
 child {
-    padding: 12px;
-    border-radius: 6px;
+    padding: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border-radius: 4px;
 }
 
 child:selected,
@@ -117,15 +121,16 @@ child:hover {
 
 #icon {
     margin-right: 12px;
+    margin-left: 6px;
 }
 
 #label {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 #sub {
-    font-size: 0.925em;
+    font-size: 0;
 }
 
 .activation #activationlabel {
@@ -136,20 +141,4 @@ child:hover {
 .activation #icon,
 .activation #search {
     opacity: 0.5;
-}
-
-.aiItem {
-    padding: 10px;
-    border-radius: 2px;
-    color: @base05;
-    background: @base00;
-}
-
-.aiItem.user {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-.aiItem.assistant {
-    background: @base01;
 }
