@@ -209,8 +209,9 @@ remove_orphans() {
 toggle_gamemode() {
   echo ":: Toggling game mode..."
 	HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
+	OS=$(cat /etc/os-release | grep -E '^PRETTY_NAME=' | cut -d'"' -f2 | cut -d'=' -f2)
 	if [ "$HYPRGAMEMODE" = 1 ] ; then
-      notify-send -u low -a Hyprland -t 750 $(uname -n) "Game Mode Enabled" -i /usr/share/icons/Papirus-Dark/96x96/devices/input-gaming.svg
+      notify-send -u normal -a Hyprland -t 750 "$OS" "Game Mode Enabled" -i /usr/share/icons/Papirus-Dark/96x96/devices/input-gaming.svg
 	    hyprctl --batch "\
 	        keyword animations:enabled 0;\
 	        keyword decoration:drop_shadow 0;\
@@ -221,7 +222,7 @@ toggle_gamemode() {
 	        keyword decoration:rounding 0" > /dev/null
 	    exit
   else
-      notify-send -u critical -a Hyprland -t 750 $(uname -n) "Game Mode Disabled" -i /usr/share/icons/Papirus-Dark/96x96/devices/input-gaming.svg
+      notify-send -u normal -a Hyprland -t 750 "$OS" "Game Mode Disabled" -i /usr/share/icons/Papirus-Dark/96x96/devices/input-gaming.svg
 	fi
 	hyprctl reload > /dev/null
 }
