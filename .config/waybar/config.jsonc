@@ -116,7 +116,7 @@
   "pulseaudio": {
     "format": "{icon}  {volume}%",
     "tooltip": true,
-    "format-muted": "  MUTED",
+    "format-muted": "    MUTED",
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "on-click-right": "pavucontrol",
     "on-scroll-up": "pamixer -i 1",
