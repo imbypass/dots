@@ -10,43 +10,42 @@ edit_prompt() {
 
       # Edit the script itself
       "")
-      	EDITOR="micro"
         cd ~/.local/bin/ && $EDITOR bde
       ;;
 
       # Edit Hyprland configuration
       "colors")
-        cd ~/.config/hypr/ && $EDITOR . conf/custom/base16.conf
+        cd ~/.config/hypr/ && $EDITOR . extras/flavours.conf
       ;;
       "hypr")
         cd ~/.config/hypr/ && $EDITOR . hyprland.conf
       ;;
       "keys")
-        cd ~/.config/hypr/ && $EDITOR . conf/keybinding.conf
+        cd ~/.config/hypr/ && $EDITOR . core/binds.conf
       ;;
       "apps")
-        cd ~/.config/hypr/ && $EDITOR . conf/apps.conf
+        cd ~/.config/hypr/ && $EDITOR . core/user-env.conf
       ;;
       "deco")
-        cd ~/.config/hypr/ && $EDITOR . conf/decoration.conf
+        cd ~/.config/hypr/ && $EDITOR . core/decoration.conf
       ;;
       "startup")
-        cd ~/.config/hypr/ && $EDITOR . conf/autostart.conf
+        cd ~/.config/hypr/ && $EDITOR . core/auto-start.conf
       ;;
       "plugins")
-        cd ~/.config/hypr/ && $EDITOR . conf/custom/plugins.conf
+        cd ~/.config/hypr/ && $EDITOR . extras/plugins.conf
       ;;
       "layout")
-        cd ~/.config/hypr/ && $EDITOR . conf/layout.conf
+        cd ~/.config/hypr/ && $EDITOR . core/layout.conf
       ;;
       "windows")
-        cd ~/.config/hypr/ && $EDITOR . conf/windowrule.conf
+        cd ~/.config/hypr/ && $EDITOR . extras/windowrule.conf
       ;;
       "env")
-        cd ~/.config/hypr/ && $EDITOR . conf/custom/environment.conf
+        cd ~/.config/hypr/ && $EDITOR . core/environment.conf
       ;;
       "custom")
-        cd ~/.config/hypr/ && $EDITOR . conf/custom/general.conf
+        cd ~/.config/hypr/ && $EDITOR . extras/general.conf
       ;;
 
       # Edit any user configs
