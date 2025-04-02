@@ -114,7 +114,7 @@
     "return-type": "json",
   },
   "pulseaudio": {
-    "format": "{icon}  {volume}%",
+    "format": "{icon}    {volume}%",
     "tooltip": true,
     "format-muted": "    MUTED",
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
