@@ -57,6 +57,13 @@ rewrite = false
 start = "# start colors"
 end = "# end colors"
 
+### STEAM ###
+[[items]]
+file = "~/Documents/Adwaita-for-Steam/adwaita/colorthemes/base16/base16.css"
+template = "steam"
+rewrite = true
+hook = "~/Documents/Adwaita-for-Steam/install.py --color-theme base16 --extras library/hide_whats_new --font googlesans"
+
 ### ZED EDITOR ###
 [[items]]
 file = "~/.config/zed/themes/base16-flavours.json"
@@ -72,7 +79,7 @@ hook = "~/.local/bin/bde rl spotify"
 
 ### HYPRLAND ###
 [[items]]
-file = "~/.config/hypr/conf/custom/base16.conf"
+file = "~/.config/hypr/extras/flavours.conf"
 template = "hyprland"
 rewrite = true
 
