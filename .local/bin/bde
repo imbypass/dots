@@ -24,7 +24,7 @@ edit_prompt() {
         cd ~/.config/hypr/ && $EDITOR . core/binds.conf
       ;;
       "apps")
-        cd ~/.config/hypr/ && $EDITOR . core/user-env.conf
+        cd ~/.config/hypr/ && $EDITOR . extras/user-env.conf
       ;;
       "deco")
         cd ~/.config/hypr/ && $EDITOR . core/decoration.conf
