@@ -26,6 +26,15 @@ start = "// start colors"
 end = "// end colors"
 hook = "~/.local/bin/bde rl gtk"
 
+### GTK 4.0 THEME ###
+[[items]]
+file = "~/.config/gtk-4.0/gtk.css"
+template = "gtk4"
+rewrite = false
+start = "/* start colors */"
+end = "/* end colors */"
+hook = "~/.local/bin/bde rl gtk"
+
 ### VESKTOP ###
 [[items]]
 file = "~/.config/vesktop/settings/quickCss.css"
