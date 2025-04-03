@@ -15,7 +15,7 @@
 window#waybar {
     color: @base05;
     background: @base00;
-    border-bottom: 2px solid @base01;
+    border-top: 2px solid @base01;
 }
 
 tooltip {
@@ -48,7 +48,7 @@ tooltip {
     padding: 12px;
     padding-bottom: 0px;
     padding-top: 0px;
-    margin-bottom: 10px; /*--> comment out for bottom bar */
+    /*margin-bottom: 10px; --> comment out for bottom bar */
 }
 
 #tray {
@@ -85,7 +85,7 @@ tooltip {
 #custom-power {
     margin-right: 10px;
     margin-left: 4px;
-    margin-bottom: 4px; /*--> comment out for bottom bar */
+    /*margin-bottom: 4px; --> comment out for bottom bar */
 }
 #custom-power:hover {
     color: @base08;
@@ -103,7 +103,7 @@ tooltip {
     padding: 10px;
     padding-bottom: 0px;
     padding-top: 0px;
-    margin-bottom: 10px; /*--> comment out for bottom bar */
+    /* margin-bottom: 10px; --> comment out for bottom bar */
 }
 #workspaces button:hover {
     border: 0px transparent;

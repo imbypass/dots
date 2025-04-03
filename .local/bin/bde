@@ -39,7 +39,7 @@ edit_prompt() {
         cd ~/.config/hypr/ && $EDITOR . core/layout.conf
       ;;
       "windows")
-        cd ~/.config/hypr/ && $EDITOR . extras/windowrule.conf
+        cd ~/.config/hypr/ && $EDITOR . extras/window-rules.conf
       ;;
       "env")
         cd ~/.config/hypr/ && $EDITOR . core/environment.conf
