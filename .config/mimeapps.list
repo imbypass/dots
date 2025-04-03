@@ -1,10 +1,9 @@
 [Added Associations]
 text/x-chdr=org.xfce.mousepad.desktop;
-image/png=userapp-qview-E3XYT2.desktop;
-text/plain=org.xfce.mousepad.desktop;
+image/png=org.xfce.mousepad.desktop;userapp-qview-E3XYT2.desktop;
+text/plain=org.xfce.mousepad.desktop;dev.zed.Zed.desktop;
 application/schema+json=org.xfce.mousepad.desktop;dev.zed.Zed.desktop;
 text/x-csrc=org.xfce.mousepad.desktop;
-text/plain=org.xfce.mousepad.desktop;dev.zed.Zed.desktop;
 x-scheme-handler/chrome=firefox.desktop;
 text/html=firefox.desktop;
 application/x-extension-htm=firefox.desktop;
@@ -26,7 +25,6 @@ audio/mpeg=vlc.desktop;
 video/mp4=vlc.desktop;mpv.desktop;
 image/jpeg=userapp-qview-E3XYT2.desktop;
 image/x-dds=userapp-qview-E3XYT2.desktop;
-image/png=org.xfce.mousepad.desktop;userapp-qview-E3XYT2.desktop;
 video/x-matroska=vlc.desktop;
 audio/flac=io.bassi.Amberol.desktop;
 image/webp=userapp-qview-E3XYT2.desktop;
@@ -35,6 +33,8 @@ text/css=dev.zed.Zed.desktop;
 video/quicktime=mpv.desktop;
 inode/symlink=dev.zed.Zed.desktop;
 application/x-matroska=vlc.desktop;
+inode/directory=xfce4-file-manager.desktop;org.gnome.Nautilus.desktop;
+x-scheme-handler/trash=xfce4-file-manager.desktop;
 
 [Default Applications]
 text/x-csrc=org.xfce.mousepad.desktop
@@ -77,3 +77,4 @@ application/x-matroska=vlc.desktop
 x-scheme-handler/discord-1170028348756471908=discord-1170028348756471908.desktop
 x-scheme-handler/discord-418076578333851669=discord-418076578333851669.desktop
 application/schema+json=dev.zed.Zed.desktop
+x-scheme-handler/trash=xfce4-file-manager.desktop

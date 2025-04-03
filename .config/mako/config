@@ -3,7 +3,7 @@ layer=overlay
 width=350
 height=400
 border-size=2
-border-radius=16
+border-radius=14
 icons=1
 margin=20
 padding=10
@@ -15,7 +15,7 @@ anchor=top-right
 max-icon-size=52
 default-timeout=3500
 ignore-timeout=1
-font=Google Sans Display Medium 10
+font=Google Sans Display Medium 11
 
 # start colors
 background-color=#191724
