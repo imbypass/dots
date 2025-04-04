@@ -19,23 +19,19 @@
     display: none;
 }
 
-/* Hide Family Center Settings Tab */
-.item_b3f026[data-tab-id^="Family Center"] {
-    display: none;
-}
-
 /* Hide Discord Social Links */
 .socialLinks__7df54 {
     display: none;
 }
 
 /* Hide New Visual Refresh Top Bar */
-div[class^="bar_"],
-div[class*=" bar_"] {
-    display: none !important;
-}
 div[class^="base_"],
 div[class*=" base_"] {
+    div[class^="bar_"],
+    div[class*=" bar_"] {
+        display: none !important;
+    }
+
     grid-template-rows: [top] min-content [titleBarEnd] min-content [noticeEnd] 1fr [end] !important;
 }
 div[class^="tutorialContainer_"],

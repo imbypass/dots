@@ -70,13 +70,6 @@ file = "~/.config/zed/themes/base16-flavours.json"
 template = "zed"
 rewrite = true
 
-### SPOTIFY ###
-[[items]]
-file = "~/.config/spicetify/Themes/base16/color.ini"
-template = "spotify"
-rewrite = true
-hook = "~/.local/bin/bde rl spotify"
-
 ### HYPRLAND ###
 [[items]]
 file = "~/.config/hypr/extras/flavours.conf"
@@ -176,3 +169,10 @@ rewrite = true
 file = "~/.config/micro/colorschemes/base16.micro"
 template = "micro"
 rewrite = true
+
+### SPOTIFY ###
+[[items]]
+file = "~/.config/spicetify/Themes/base16/color.ini"
+template = "spotify"
+rewrite = true
+#hook = "~/.local/bin/bde rl spotify"
