@@ -38,6 +38,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 # Aliases - System Tools
+alias ⏲️="date"
 alias ...="cd ../.."
 alias ani="ani-cli --dub --skip"
 alias b="bde"
