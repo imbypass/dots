@@ -1,3 +1,4 @@
+format=<b>%a ⏵</b> %s\n%b
 sort=-time
 layer=overlay
 width=350

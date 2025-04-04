@@ -238,7 +238,7 @@
     },
     {
       "name": "themes",
-      "placeholder": "System Theme",
+      "placeholder": "Color Scheme",
       "theme": "base16",
       "switcher_only": false,
       "refresh": true,
@@ -260,7 +260,7 @@
           "exec": "walker -n -m wallpaper"
         },
         {
-          "label": "Change Theme",
+          "label": "Change Color Scheme",
           "icon": "gpaint",
           "exec": "walker -n -m themes"
         },

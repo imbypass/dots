@@ -4,18 +4,18 @@
 shell = "fish -c '{}'"
 
 ### FLATCOLOR GTK THEME ###
-[[items]]
-file = "~/.themes/FlatColor/colors2"
-template = "gtk-flatcolor"
-subtemplate = "gtk-2"
-rewrite = true
-hook = "~/.local/bin/bde rl gtk"
-[[items]]
-file = "~/.themes/FlatColor/colors3"
-template = "gtk-flatcolor"
-subtemplate = "gtk-3"
-rewrite = true
-hook = "~/.local/bin/bde rl gtk"
+# [[items]]
+# file = "~/.themes/FlatColor/colors2"
+# template = "gtk-flatcolor"
+# subtemplate = "gtk-2"
+# rewrite = true
+# hook = "~/.local/bin/bde rl gtk"
+# [[items]]
+# file = "~/.themes/FlatColor/colors3"
+# template = "gtk-flatcolor"
+# subtemplate = "gtk-3"
+# rewrite = true
+# hook = "~/.local/bin/bde rl gtk"
 
 ### PHOCUS GTK THEME ###
 [[items]]
