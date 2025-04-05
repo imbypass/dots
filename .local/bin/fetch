@@ -1,5 +1,6 @@
 #!/bin/sh
 
+
 os=$(cat /etc/os-release | grep -E '^PRETTY_NAME=' | cut -d'"' -f2 | cut -d'=' -f2)
 
 read -r _ _ version _ < /proc/version
@@ -15,20 +16,19 @@ wm=$(xprop -id "$id" -notype -len 100 -f _NET_WM_NAME 8t)
 wm=${wm##*WM_NAME = \"}
 wm=${wm%%\"*}
 
-s='\e[0;7m';      e='\e[0;m'
-c1='\e[0;31m';   c2='\e[0;32m';
-c3='\e[0;33m';   c4='\e[0;34m';
-c5='\e[0;35m';   c6='\e[0;36m';
-c7='\e[0;30m';   c8='\e[0;37m';
-c9='\e[0;38m';   sq=' ';
-palette="$c1$sq $c2$sq $c3$sq $c4$sq $c5$sq $c6$sq $e"
+s='\e[0;7m';  e='\e[0;m'
+r='\e[0;31m'; g='\e[0;32m';
+y='\e[0;33m'; b='\e[0;34m';
+m='\e[0;35m'; c='\e[0;36m';
+w='\e[0;38m'; d=' ';
+colors="$r$d $g$d $y$d $b$d $m$d $c$d $e"
 
 printf "
-          $c1 os $c9 ${os}
- (\\ /)    $c2 kr $c9 ${kr}
- (. .)/   $c3 pa $c9 ${pa}
- ($c1\"$c9)($c1\"$c9)   $c4 sh $c9 ${sh}
-          $c5 wm $c9 ${wm}
+          $r os $w ${os}
+ (\\ /)    $g kr $w ${kr}
+ (. .)/   $y pa $w ${pa}
+ ($r\"$w)($r\"$w)   $b sh $w ${sh}
+          $m wm $w ${wm}
 
-           $palette
+           $colors
 "

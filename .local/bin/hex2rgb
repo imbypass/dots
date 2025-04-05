@@ -1,0 +1,65 @@
+#!/bin/bash
+
+# Usage check
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 <filename>"
+    exit 1
+fi
+
+FILE="$1"
+
+# Check if file exists
+if [ ! -f "$FILE" ]; then
+    echo "Error: File '$FILE' not found."
+    exit 1
+fi
+
+# Function to convert hex to RGB
+hex_to_rgb() {
+    local hex="$1"
+    # Remove # if present
+    hex="${hex#\#}"
+
+    # Handle both 3-digit and 6-digit hex codes
+    if [ ${#hex} -eq 3 ]; then
+        # Expand 3-digit hex code
+        r=$(printf "%d" 0x${hex:0:1}${hex:0:1})
+        g=$(printf "%d" 0x${hex:1:1}${hex:1:1})
+        b=$(printf "%d" 0x${hex:2:1}${hex:2:1})
+    elif [ ${#hex} -eq 6 ]; then
+        r=$(printf "%d" 0x${hex:0:2})
+        g=$(printf "%d" 0x${hex:2:2})
+        b=$(printf "%d" 0x${hex:4:2})
+    else
+        echo "Invalid hex color: $hex"
+        return 1
+    fi
+
+    echo "$r, $g, $b"
+}
+
+# Create a temporary file
+TEMP_FILE=$(mktemp)
+
+# Use sed to extract hex color codes and process each one
+hex_colors=$(grep -o '#[0-9A-Fa-f]\{3\}\|#[0-9A-Fa-f]\{6\}' "$FILE" | sort | uniq)
+
+# Create the sed command for replacements
+sed_cmd=""
+for hex in $hex_colors; do
+    rgb=$(hex_to_rgb "$hex")
+    # Escape special characters for sed
+    hex_escaped=$(echo "$hex" | sed 's/[\/&]/\\&/g')
+    rgb_escaped=$(echo "$rgb" | sed 's/[\/&]/\\&/g')
+    sed_cmd="$sed_cmd s/$hex_escaped/$rgb_escaped/g; "
+done
+
+# Apply all replacements at once if we have any hex colors
+if [ -n "$sed_cmd" ]; then
+    sed "$sed_cmd" "$FILE" > "$TEMP_FILE"
+    mv "$TEMP_FILE" "$FILE"
+    echo "Conversion completed: Hex colors in '$FILE' have been replaced with RGB format"
+else
+    echo "No hex colors found in '$FILE'"
+    rm "$TEMP_FILE"
+fi

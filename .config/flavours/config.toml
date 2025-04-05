@@ -62,7 +62,7 @@ end = "# end colors"
 file = "~/Documents/Adwaita-for-Steam/adwaita/colorthemes/base16/base16.css"
 template = "steam"
 rewrite = true
-hook = "~/Documents/Adwaita-for-Steam/install.py --color-theme base16 --extras library/hide_whats_new --font googlesans"
+hook = "~/.local/bin/bde rl steam"
 
 ### ZED EDITOR ###
 [[items]]
@@ -175,4 +175,5 @@ rewrite = true
 file = "~/.config/spicetify/Themes/base16/color.ini"
 template = "spotify"
 rewrite = true
-#hook = "~/.local/bin/bde rl spotify"
+hook = "~/.local/bin/bde rl spotify"
+light = false

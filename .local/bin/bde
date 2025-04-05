@@ -148,6 +148,11 @@ reload_prompt() {
         killall -9 pcmanfm-qt > /dev/null
         pcmanfm-qt --desktop > ~/.logs/pcmanfm.log & disown
       ;;
+      "steam")
+        echo ":: Reloading Steam.."
+        ~/.local/bin/hex2rgb ~/Documents/Adwaita-for-Steam/adwaita/colorthemes/base16/base16.css
+        sleep 2 && cd ~/Documents/Adwaita-for-Steam/ && ./install.py --color-theme base16 --extras library/hide_whats_new --font googlesans
+      ;;
   esac
 }
 

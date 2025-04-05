@@ -67,7 +67,6 @@ x-scheme-handler/wago-app=wago-app.desktop
 x-scheme-handler/discord-448016723057049601=discord-448016723057049601.desktop
 application/x-msdownload=wine.desktop
 text/x-python=org.xfce.mousepad.desktop
-x-scheme-handler/mailto=google-chrome.desktop
 x-scheme-handler/discord=vesktop.desktop
 text/css=dev.zed.Zed.desktop
 text/plain=dev.zed.Zed.desktop
@@ -78,3 +77,4 @@ x-scheme-handler/discord-1170028348756471908=discord-1170028348756471908.desktop
 x-scheme-handler/discord-418076578333851669=discord-418076578333851669.desktop
 application/schema+json=dev.zed.Zed.desktop
 x-scheme-handler/trash=xfce4-file-manager.desktop
+
