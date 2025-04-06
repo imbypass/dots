@@ -148,9 +148,9 @@
     "format-wifi": "󰤨",
     "format-ethernet": "󰤨",
     "format-disconnected": "", // hides on empty
-    "tooltip-format": "󰤨 Wireless",
-    "tooltip-format-wifi": "󰤨 Wireless",
-    "tooltip-format-ethernet": "󰤨 Ethernet",
+    "tooltip-format": "󰤨   Wireless",
+    "tooltip-format-wifi": "󰤨   Wireless",
+    "tooltip-format-ethernet": "󰤨   Ethernet",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
     "on-click": "nm-connection-editor",
