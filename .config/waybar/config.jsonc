@@ -83,7 +83,8 @@
   },
   "custom/logo": {
     "tooltip": false,
-    "format": "  ",
+    "format_stack": "  ",
+    "format": "󰣇",
     "on-click": "walker -m applications",
   },
   "custom/expose": {

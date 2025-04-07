@@ -201,7 +201,7 @@
         "ImageZoom": {
             "enabled": true,
             "size": 100,
-            "zoom": 17.96153846153846,
+            "zoom": 9.088433169641068,
             "nearestNeighbour": false,
             "square": true,
             "saveZoomValues": true,
@@ -244,7 +244,7 @@
             "ignoreSelf": true,
             "ignoreUsers": "",
             "ignoreChannels": "",
-            "ignoreGuilds": "399812551963049995",
+            "ignoreGuilds": "",
             "logEdits": true,
             "logDeletes": true,
             "collapseDeleted": false,
@@ -780,6 +780,9 @@
         },
         "HideMedia": {
             "enabled": false
+        },
+        "DisableDeepLinks": {
+            "enabled": true
         }
     },
     "notifications": {
@@ -792,7 +795,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1743857274758
+        "settingsSyncVersion": 1744050457116
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false

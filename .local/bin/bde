@@ -47,6 +47,9 @@ edit_prompt() {
       "custom")
         cd ~/.config/hypr/ && $EDITOR . extras/general.conf
       ;;
+      "lock")
+      	cd ~/.config/hypr/ && $EDITOR . hyprlock.conf
+      ;;
 
       # Edit any user configs
       "mako")
@@ -177,8 +180,13 @@ init_prompt() {
     esac
 }
 
+# file_upload() {
+#   curl -X POST -F "file=@$1" https://imbypass.pw/upload.php
+# }
+
 file_upload() {
-  curl -X POST -F "file=@$1" https://imbypass.pw/upload.php
+    wl-paste | up -t $1 | wl-copy
+    notify-send -u normal -a hyprshot -t 750 "0x0.st" "Image uploaded and copied to clipboard." -i /usr/share/icons/Papirus-Dark/96x96/apps/diodon.svg
 }
 
 search_steamapps() {
@@ -215,7 +223,7 @@ toggle_gamemode() {
 	HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
 	OS=$(cat /etc/os-release | grep -E '^PRETTY_NAME=' | cut -d'"' -f2 | cut -d'=' -f2)
 	if [ "$HYPRGAMEMODE" = 1 ] ; then
-      notify-send -u normal -a Hyprland -t 750 "$OS" "Game Mode Enabled" -i /usr/share/icons/Papirus-Dark/96x96/devices/input-gaming.svg
+        notify-send -u normal -a Hyprland -t 750 "$OS" "Game Mode Enabled" -i /usr/share/icons/Papirus-Dark/96x96/devices/input-gaming.svg
 	    hyprctl --batch "\
 	        keyword animations:enabled 0;\
 	        keyword decoration:drop_shadow 0;\
@@ -225,8 +233,8 @@ toggle_gamemode() {
 	        keyword general:border_size 1;\
 	        keyword decoration:rounding 0" > /dev/null
 	    exit
-  else
-      notify-send -u normal -a Hyprland -t 750 "$OS" "Game Mode Disabled" -i /usr/share/icons/Papirus-Dark/96x96/devices/input-gaming.svg
+	else
+        notify-send -u normal -a Hyprland -t 750 "$OS" "Game Mode Disabled" -i /usr/share/icons/Papirus-Dark/96x96/devices/input-gaming.svg
 	fi
 	hyprctl reload > /dev/null
 }

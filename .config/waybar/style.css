@@ -72,14 +72,15 @@ tooltip {
 
 #custom-logo {
     margin-left: 10px;
-    padding-left: 0px;
-    padding-right: 0px;
-    color: @base05;
-    font-size: 18px;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 22px;
+    background-color: @base00;
+    color: @base0D;
 }
 #custom-logo:hover {
-    color: @base01;
     background-color: @base0D;
+    color: @base00;
 }
 
 #custom-power {

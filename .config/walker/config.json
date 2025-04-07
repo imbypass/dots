@@ -265,6 +265,11 @@
           "exec": "walker -n -m themes"
         },
         {
+          "label": "Toggle Window Tiling",
+          "icon": "preferences-desktop-icons",
+          "exec": "~/.local/bin/bde hf"
+        },
+        {
           "label": "Lock Screen",
           "icon": "system-lock-screen",
           "exec": "hyprlock"

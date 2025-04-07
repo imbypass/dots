@@ -3,20 +3,6 @@
 
 shell = "fish -c '{}'"
 
-### FLATCOLOR GTK THEME ###
-# [[items]]
-# file = "~/.themes/FlatColor/colors2"
-# template = "gtk-flatcolor"
-# subtemplate = "gtk-2"
-# rewrite = true
-# hook = "~/.local/bin/bde rl gtk"
-# [[items]]
-# file = "~/.themes/FlatColor/colors3"
-# template = "gtk-flatcolor"
-# subtemplate = "gtk-3"
-# rewrite = true
-# hook = "~/.local/bin/bde rl gtk"
-
 ### PHOCUS GTK THEME ###
 [[items]]
 file = "~/.themes/phocus/scss/gtk-3.0/_colors.scss"
@@ -72,7 +58,7 @@ rewrite = true
 
 ### HYPRLAND ###
 [[items]]
-file = "~/.config/hypr/extras/flavours.conf"
+file = "~/.config/hypr/extras/colors.conf"
 template = "hyprland"
 rewrite = true
 
