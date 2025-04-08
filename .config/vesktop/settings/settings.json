@@ -5,8 +5,8 @@
     "themeLinks": [],
     "enabledThemes": [
         "fonts.theme.css",
-        "base16-dev.css",
-        "patches.theme.css"
+        "patches.theme.css",
+        "base16-dev.css"
     ],
     "enableReactDevtools": false,
     "frameless": true,
@@ -795,7 +795,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1744050457116
+        "settingsSyncVersion": 1744073006515
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false
