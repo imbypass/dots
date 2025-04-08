@@ -253,7 +253,12 @@ show_expose() {
 update_mirrors() {
     echo ":: Updating mirrors..."
     sudo reflector --verbose --country US --latest 8 --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist > /dev/null
-    echo ":: Mirrors updated."
+}
+
+update_colors() {
+    echo ":: Updating system colors..."
+    /usr/bin/wallust run ~/.local/share/wallpapers/.wallpaper
+    sleep 1 && /usr/bin/flavours apply match-wallpaper
 }
 
 update_prompt() {
@@ -264,6 +269,9 @@ update_prompt() {
         ;;
         "mirrors")
             update_mirrors
+        ;;
+        "colors")
+            update_colors
         ;;
         "")
             echo "ok"
