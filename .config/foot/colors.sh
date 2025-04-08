@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-config_path=~/.config/foot/foot.ini
+config_path=~/.config/foot/colors.ini
 
 inotifywait -q -m "$config_path" -e create -e modify |
     while read; do

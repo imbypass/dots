@@ -117,11 +117,11 @@ hook = "~/.local/bin/bde rl waybar"
 
 ### FOOT TERMINAL ###
 [[items]]
-file = "~/.config/foot/foot.ini"
+file = "~/.config/foot/colors.ini"
 template = "foot"
-rewrite = false
-start = "# start colors"
-end = "# end colors"
+rewrite = true
+# start = "# start colors"
+# end = "# end colors"
 
 ### GHOSTTY TERMINAL ###
 [[items]]
