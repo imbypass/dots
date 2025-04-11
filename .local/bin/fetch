@@ -28,13 +28,22 @@ m='\e[0;35m'; c='\e[0;36m';
 w='\e[0;38m'; d=' ';
 colors="$r$d $g$d $y$d $b$d $m$d $c$d $e"
 
-printf "
-          $r os $w ${os}
- (\\ /)    $g kr $w ${kr}
- (. .)/   $y pa $w ${pa}
- ($r\"$w)($r\"$w)   $b sh $w ${sh}
-          $m wm $w ${wm}
+# printf "
+#           $r os $w ${os}
+#  (\\ /)    $g kr $w ${kr}
+#  (. .)/   $y pa $w ${pa}
+#  ($r\"$w)($r\"$w)   $b sh $w ${sh}
+#           $m wm $w ${wm}
 
-           $colors
+#            $colors
+# "
+printf "
+${r}os $w ${os}
+${g}kr $w ${kr}
+${y}pa $w ${pa}
+${b}sh $w ${sh}
+${m}wm $w ${wm}
+
+$colors
 "
 # $c ag $w ${ddif} days
