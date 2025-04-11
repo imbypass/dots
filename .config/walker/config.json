@@ -293,6 +293,6 @@
     "resume_last_query": false
   },
   "terminal_title_flag": "",
-  "theme": "base16",
+  "theme": "base16/default",
   "timeout": 0
 }
