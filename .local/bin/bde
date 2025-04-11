@@ -258,7 +258,7 @@ update_mirrors() {
 
 update_colors() {
     echo ":: Updating system colors..."
-    /usr/bin/wallust run ~/.local/share/wallpapers/.wallpaper
+    /usr/bin/wallust run -s ~/.local/share/wallpapers/.wallpaper
 }
 
 update_prompt() {

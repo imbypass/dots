@@ -1,7 +1,20 @@
+/* Custom interface font */
 * {
-    font-family: "ZedMono Nerd Font Mono", "Sans" !important;
+    font-family: "Google Sans Display Medium" !important;
 }
 
+/* Remove top gradient from playlists */
+.main-entityHeader-backgroundColor {
+    display: none !important;
+}
+.main-actionBarBackground-background {
+    display: none !important;
+}
+.main-home-homeHeader {
+    display: none !important;
+}
+
+/* Recolor Spotify UI */
 :root,
 .encore-dark-theme,
 .encore-base-set,

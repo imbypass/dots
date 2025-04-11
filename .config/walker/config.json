@@ -229,7 +229,7 @@
   "plugins": [
     {
       "name": "wallpaper",
-      "placeholder": "Wallpapers",
+      "placeholder": "Search...",
       "theme": "base16/wallpaper",
       "switcher_only": false,
       "refresh": true,
@@ -238,8 +238,8 @@
     },
     {
       "name": "themes",
-      "placeholder": "Color Scheme",
-      "theme": "base16/default",
+      "placeholder": "Search...",
+      "theme": "base16/theme",
       "switcher_only": false,
       "refresh": true,
       "src": "bash -c ~/.config/walker/scripts/themes.sh",
@@ -247,7 +247,7 @@
     },
     {
       "name": "power",
-      "placeholder": "System",
+      "placeholder": "Search...",
       "theme": "base16/power",
       "switcher_only": true,
       "keep_sort": true,
