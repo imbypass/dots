@@ -46,7 +46,7 @@ slider,
 
 #box {
     margin-left: 4px;
-    border-radius: 6px;
+    border-radius: 10px;
     background: @base00;
     padding: 8px;
     border: 2px solid @base02;
@@ -107,7 +107,7 @@ child {
     padding: 5px;
     margin-top: 3px;
     margin-bottom: 3px;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 child:selected,

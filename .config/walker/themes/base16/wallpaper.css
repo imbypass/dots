@@ -45,7 +45,7 @@ slider,
 }
 
 #box {
-    border-radius: 6px;
+    border-radius: 10px;
     background: @base00;
     padding: 32px;
     border: 2px solid @base02;
@@ -57,7 +57,7 @@ slider,
 #search {
     background: @base02;
     border: 2px solid @base02;
-    border-radius: 4px;
+    border-radius: 6px;
     padding: 8px;
     margin-bottom: 16px;
 }
@@ -85,9 +85,6 @@ slider,
     font-weight: 600;
 }
 
-#password {
-}
-
 #spinner {
     padding: 8px;
 }
@@ -107,21 +104,12 @@ slider,
 
 child {
     padding: 12px;
-    border-radius: 2px;
+    border-radius: 8px;
 }
 
 child:selected,
 child:hover {
     background: @base01;
-}
-
-#item {
-}
-
-#icon {
-}
-
-#text {
 }
 
 #label {
@@ -130,17 +118,6 @@ child:hover {
 
 #sub {
     font-size: 0.8em;
-}
-#sub:hover {
-}
-
-#activationlabel {
-}
-
-#bar {
-}
-
-.barentry {
 }
 
 .activation #activationlabel {
