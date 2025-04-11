@@ -8,5 +8,5 @@ while walls= read -r path; do
   name=${name//-/ };
   name=${name//   / };
 
-  printf "image=$path;label=${name};exec=swww img --transition-fps 144 --transition-duration 1 -t any $path && cp $path /home/bypass/.local/share/wallpapers/.wallpaper;\n"
+  printf "image=$path;label=${name};exec=swww img --transition-fps 144 --transition-duration 1 -t fade $path && cp $path /home/bypass/.local/share/wallpapers/.wallpaper && /home/bypass/.local/bin/bde update colors;\n"
 done <<< "$list"

@@ -23,9 +23,9 @@
           "position": "end"
         },
         "h_align": "end",
-        "v_align": "end",
+        "v_align": "start",
         "margins": {
-          "bottom": 48,
+          "top": 48,
           "right": 50
         },
         "scroll": {

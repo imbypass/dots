@@ -16,6 +16,11 @@ wm=$(xprop -id "$id" -notype -len 100 -f _NET_WM_NAME 8t)
 wm=${wm##*WM_NAME = \"}
 wm=${wm%%\"*}
 
+brth=$(stat -c %W /);
+crnt=$(date +%s);
+tmprg=$((crnt - brth));
+ddif=$((tmprg / 86400));
+
 s='\e[0;7m';  e='\e[0;m'
 r='\e[0;31m'; g='\e[0;32m';
 y='\e[0;33m'; b='\e[0;34m';
@@ -29,6 +34,7 @@ printf "
  (. .)/   $y pa $w ${pa}
  ($r\"$w)($r\"$w)   $b sh $w ${sh}
           $m wm $w ${wm}
+          $c ag $w ${ddif} days
 
            $colors
 "

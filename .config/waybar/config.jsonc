@@ -1,6 +1,6 @@
 {
   "layer": "bottom",
-  "position": "bottom",
+  "position": "top",
   "margin-top": 0,
   "margin-right": 0,
   "margin-left": 0,
@@ -21,7 +21,8 @@
     "custom/expose",
     "custom/spotify",
   ],
-  "modules-center": ["wlr/taskbar"],
+  // "wlr/taskbar"
+  "modules-center": [],
   "modules-right": [
     "tray",
     "pulseaudio",

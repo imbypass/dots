@@ -163,3 +163,10 @@ template = "spotify"
 rewrite = true
 hook = "~/.local/bin/bde rl spotify"
 light = false
+
+### NWG DOCK ###
+[[items]]
+file = "~/.config/nwg-dock-hyprland/colors.css"
+template = "nwg-dock"
+rewrite = true
+hook = "~/.local/bin/bde rl dock"
