@@ -15,40 +15,40 @@ edit_prompt() {
 
       # Edit Hyprland configuration
       "colors")
-        cd ~/.config/hypr/ && $EDITOR extras/colors.conf
+        cd ~/.config/hypr/ && $EDITOR . extras/colors.conf
       ;;
       "hypr")
-        cd ~/.config/hypr/ && $EDITOR hyprland.conf
+        cd ~/.config/hypr/ && $EDITOR . hyprland.conf
       ;;
       "keys")
-        cd ~/.config/hypr/ && $EDITOR core/binds.conf
+        cd ~/.config/hypr/ && $EDITOR . core/binds.conf
       ;;
       "apps")
-        cd ~/.config/hypr/ && $EDITOR extras/user.conf
+        cd ~/.config/hypr/ && $EDITOR . extras/user.conf
       ;;
       "deco")
-        cd ~/.config/hypr/ && $EDITOR core/decoration.conf
+        cd ~/.config/hypr/ && $EDITOR . core/decoration.conf
       ;;
       "startup")
-        cd ~/.config/hypr/ && $EDITOR core/startup.conf
+        cd ~/.config/hypr/ && $EDITOR . core/startup.conf
       ;;
       "plugins")
-        cd ~/.config/hypr/ && $EDITOR extras/plugins.conf
+        cd ~/.config/hypr/ && $EDITOR . extras/plugins.conf
       ;;
       "layout")
-        cd ~/.config/hypr/ && $EDITOR core/layout.conf
+        cd ~/.config/hypr/ && $EDITOR . core/layout.conf
       ;;
-      "windows")
-        cd ~/.config/hypr/ && $EDITOR extras/rules.conf
+      "rules")
+        cd ~/.config/hypr/ && $EDITOR . extras/rules.conf
       ;;
       "env")
-        cd ~/.config/hypr/ && $EDITOR core/environment.conf
+        cd ~/.config/hypr/ && $EDITOR . core/environment.conf
       ;;
       "custom")
-        cd ~/.config/hypr/ && $EDITOR extras/general.conf
+        cd ~/.config/hypr/ && $EDITOR . extras/general.conf
       ;;
       "lock")
-      	cd ~/.config/hypr/ && $EDITOR hyprlock.conf
+      	cd ~/.config/hypr/ && $EDITOR . hyprlock.conf
       ;;
 
       # Edit any user configs
