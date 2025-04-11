@@ -15,78 +15,79 @@ edit_prompt() {
 
       # Edit Hyprland configuration
       "colors")
-        cd ~/.config/hypr/ && $EDITOR . extras/flavours.conf
+        cd ~/.config/hypr/ && $EDITOR extras/colors.conf
       ;;
       "hypr")
-        cd ~/.config/hypr/ && $EDITOR . hyprland.conf
+        cd ~/.config/hypr/ && $EDITOR hyprland.conf
       ;;
       "keys")
-        cd ~/.config/hypr/ && $EDITOR . core/binds.conf
+        cd ~/.config/hypr/ && $EDITOR core/binds.conf
       ;;
       "apps")
-        cd ~/.config/hypr/ && $EDITOR . extras/user-env.conf
+        cd ~/.config/hypr/ && $EDITOR extras/user.conf
       ;;
       "deco")
-        cd ~/.config/hypr/ && $EDITOR . core/decoration.conf
+        cd ~/.config/hypr/ && $EDITOR core/decoration.conf
       ;;
       "startup")
-        cd ~/.config/hypr/ && $EDITOR . core/auto-start.conf
+        cd ~/.config/hypr/ && $EDITOR core/startup.conf
       ;;
       "plugins")
-        cd ~/.config/hypr/ && $EDITOR . extras/plugins.conf
+        cd ~/.config/hypr/ && $EDITOR extras/plugins.conf
       ;;
       "layout")
-        cd ~/.config/hypr/ && $EDITOR . core/layout.conf
+        cd ~/.config/hypr/ && $EDITOR core/layout.conf
       ;;
       "windows")
-        cd ~/.config/hypr/ && $EDITOR . extras/window-rules.conf
+        cd ~/.config/hypr/ && $EDITOR extras/rules.conf
       ;;
       "env")
-        cd ~/.config/hypr/ && $EDITOR . core/environment.conf
+        cd ~/.config/hypr/ && $EDITOR core/environment.conf
       ;;
       "custom")
-        cd ~/.config/hypr/ && $EDITOR . extras/general.conf
+        cd ~/.config/hypr/ && $EDITOR extras/general.conf
       ;;
       "lock")
-      	cd ~/.config/hypr/ && $EDITOR . hyprlock.conf
+      	cd ~/.config/hypr/ && $EDITOR hyprlock.conf
       ;;
 
       # Edit any user configs
+      "dock")
+        cd ~/.config/nwg-dock-hyprland && $EDITOR style.css
+      ;;
       "mako")
-        cd ~/.config/mako && $EDITOR . config
+        cd ~/.config/mako && $EDITOR config
       ;;
       "walker")
-        cd ~/.config/walker && $EDITOR . config.json
+        cd ~/.config/walker && $EDITOR config.json
       ;;
       "waybar")
-        cd ~/.config/waybar && $EDITOR . config.jsonc
+        cd ~/.config/waybar && $EDITOR config.jsonc
       ;;
       "rofi")
-        cd ~/.config/rofi && $EDITOR . config.rasi
+        cd ~/.config/rofi && $EDITOR config.rasi
       ;;
       "ghostty")
-        cd ~/.config/ghostty && $EDITOR . config
+        cd ~/.config/ghostty && $EDITOR config
       ;;
       "foot")
-        cd ~/.config/foot && $EDITOR . foot.ini
+        cd ~/.config/foot && $EDITOR foot.ini
       ;;
       "tmux")
-        cd ~/.config/tmux && $EDITOR . tmux.conf
+        cd ~/.config/tmux && $EDITOR tmux.conf
       ;;
       "fish")
-        cd ~/.config/ && $EDITOR . fish/config.fish
+        cd ~/.config/ && $EDITOR fish/config.fish
       ;;
       "defaults")
         cd ~/.config/ && $EDITOR mimeapps.list
       ;;
-      "dock")
+      "pins")
         cd ~/.cache/ && $EDITOR nwg-dock-pinned
       ;;
       "starship")
         cd ~/.config/ && $EDITOR starship.toml
       ;;
-      "mconnect")
-        cd ~/.config/mconnect && $EDITOR mconnect.conf
   esac
 }
 
