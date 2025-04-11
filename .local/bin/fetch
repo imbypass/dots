@@ -34,7 +34,7 @@ printf "
  (. .)/   $y pa $w ${pa}
  ($r\"$w)($r\"$w)   $b sh $w ${sh}
           $m wm $w ${wm}
-          $c ag $w ${ddif} days
 
            $colors
 "
+# $c ag $w ${ddif} days
