@@ -40,7 +40,7 @@
       "show_icon_when_single": true,
       "show_sub_when_single": true,
       "weight": 5,
-      "theme": "base16_apps"
+      "theme": "base16/applications"
     },
     "bookmarks": {
       "entries": [
@@ -178,7 +178,7 @@
       "hidden": true,
       "name": "xdphpicker",
       "placeholder": "Screen/Window Picker",
-      "theme": "base16",
+      "theme": "base16/default",
       "show_sub_when_single": true,
       "switcher_only": true,
       "weight": 5
@@ -230,7 +230,7 @@
     {
       "name": "wallpaper",
       "placeholder": "Wallpapers",
-      "theme": "base16_wall",
+      "theme": "base16/wallpaper",
       "switcher_only": false,
       "refresh": true,
       "src": "bash -c ~/.config/walker/scripts/wallpaper.sh",
@@ -239,7 +239,7 @@
     {
       "name": "themes",
       "placeholder": "Color Scheme",
-      "theme": "base16",
+      "theme": "base16/default",
       "switcher_only": false,
       "refresh": true,
       "src": "bash -c ~/.config/walker/scripts/themes.sh",
@@ -248,7 +248,7 @@
     {
       "name": "power",
       "placeholder": "System",
-      "theme": "base16_power",
+      "theme": "base16/power",
       "switcher_only": true,
       "keep_sort": true,
       "recalculate_score": true,
@@ -283,31 +283,6 @@
           "label": "Shutdown",
           "icon": "system-shutdown",
           "exec": "shutdown now"
-        }
-      ]
-    },
-    {
-      "name": "screenshot",
-      "placeholder": "Screenshot",
-      "theme": "base16_popup",
-      "switcher_only": false,
-      "recalculate_score": true,
-      "show_icon_when_single": true,
-      "entries": [
-        {
-          "label": "Region",
-          "icon": "region",
-          "exec": "hyprshot -m region -z -o ~/Pictures/Screenshots -f \"screenshot_$(date +%d%m%Y_%H%M%S).png\""
-        },
-        {
-          "label": "Window",
-          "icon": "window",
-          "exec": "hyprshot -m window -z -o ~/Pictures/Screenshots -f \"screenshot_$(date +%d%m%Y_%H%M%S).png\""
-        },
-        {
-          "label": "Screen",
-          "icon": "preferences-system-windows",
-          "exec": "hyprshot -m output -z -o ~/Pictures/Screenshots -f \"screenshot_$(date +%d%m%Y_%H%M%S).png\""
         }
       ]
     }
