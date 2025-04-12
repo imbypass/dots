@@ -28,7 +28,7 @@
           "margins": {
             "top": 8
           },
-          "max_height": 300,
+          "max_height": 290,
           "min_width": 400,
           "name": "aiScroll",
           "v_align": "fill",
@@ -69,10 +69,10 @@
             "margins": {
               "top": 8
             },
-            "max_height": 295,
-            "max_width": 400,
-            "min_width": 400,
-            "width": 400,
+            "max_height": 230,
+            "max_width": 350,
+            "min_width": 350,
+            "width": 350,
             "height": 120,
             "marker_color": "#FFFFFF"
           }
