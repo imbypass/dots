@@ -73,28 +73,7 @@ hook = "~/.local/bin/bde rl mako"
 
 ### WALKER ###
 [[items]]
-file = "~/.config/walker/themes/base16/default.css"
-template = "walker"
-rewrite = false
-start = "/* start flavours */"
-end = "/* end flavours */"
-hook = "~/.local/bin/bde rl walker"
-[[items]]
-file = "~/.config/walker/themes/base16/wallpaper.css"
-template = "walker"
-rewrite = false
-start = "/* start flavours */"
-end = "/* end flavours */"
-hook = "~/.local/bin/bde rl walker"
-[[items]]
-file = "~/.config/walker/themes/base16/applications.css"
-template = "walker"
-rewrite = false
-start = "/* start flavours */"
-end = "/* end flavours */"
-hook = "~/.local/bin/bde rl walker"
-[[items]]
-file = "~/.config/walker/themes/base16/power.css"
+file = "~/.config/walker/themes/base16/colors.css"
 template = "walker"
 rewrite = false
 start = "/* start flavours */"
