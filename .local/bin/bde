@@ -52,6 +52,9 @@ edit_prompt() {
       ;;
 
       # Edit any user configs
+      "cleanup")
+        cd ~/.local/bin && $EDITOR cleanup
+      ;;
       "dock")
         cd ~/.config/nwg-dock-hyprland && $EDITOR style.css
       ;;
