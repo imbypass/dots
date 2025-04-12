@@ -47,7 +47,7 @@ slider,
     border: 2px solid @base02;
     border-radius: 6px;
     padding: 0px;
-    margin-bottom: -4px;
+    margin-bottom: -6px;
 }
 
 #prompt {
@@ -69,6 +69,7 @@ slider,
 }
 
 #input {
+    margin-bottom: -4px;
     background: none;
     font-weight: 600;
 }
@@ -90,6 +91,13 @@ slider,
 child {
     padding: 5px;
     margin-top: 3px;
+    margin-bottom: 3px;
+    border-radius: 6px;
+
+    padding: 5px;
+    margin-left: 4px;
+    margin-top: 3px;
+    margin-right: 4px;
     margin-bottom: 3px;
     border-radius: 6px;
 }
