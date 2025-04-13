@@ -10,17 +10,14 @@
   "passthrough": false,
   "gtk-layer-shell": true,
   "reload_style_on_change": true,
-  "height": 44,
+  "height": 43,
   "tray": {
     "icon-size": 14,
     "spacing": 8,
   },
-  "modules-left": [
-    "custom/logo",
-    "hyprland/workspaces",
-    "custom/expose",
-    "custom/spotify",
-  ],
+
+  // "hyprland/workspaces", "custom/expose", "custom/spotify"
+  "modules-left": ["custom/logo"],
   // "wlr/taskbar"
   "modules-center": [],
   "modules-right": [

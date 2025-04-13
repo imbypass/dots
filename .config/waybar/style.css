@@ -41,7 +41,7 @@ tooltip {
 #custom-notifications,
 #workspaces button {
     border-radius: 4px;
-    background: @base01;
+    background: @base00;
     color: @base05;
     margin: 6px;
     margin-top: 8px;
