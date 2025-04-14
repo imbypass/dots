@@ -28,7 +28,6 @@ tooltip {
 #memory,
 #pulseaudio,
 #pulseaudio.microphone,
-#wlr-taskbar,
 #custom-weather,
 #custom-logo,
 #custom-spotify,
@@ -69,13 +68,13 @@ tooltip {
 
 #custom-logo {
     margin-bottom: 7px;
-    margin-top: 8px;
+    margin-top: 9px;
     margin-left: 10px;
     margin-right: 10px;
-    padding-left: 7px;
+    padding-left: 8px;
     padding-right: 7px;
-    padding-top: 1px;
-    padding-bottom: 3px;
+    padding-top: 0px;
+    padding-bottom: 1px;
     font-size: 20px;
     background-color: @base0D;
     color: @base00;
@@ -137,10 +136,13 @@ tooltip {
 #custom-expose {
     margin-left: 0px;
     margin-right: 12px;
-    padding-left: 10px;
-    padding-right: 14px;
+    padding-left: 5px;
+    padding-right: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
+    font-size: 13px;
 }
 #custom-expose:hover {
     color: @base0D;
@@ -176,4 +178,17 @@ tooltip {
 #clock {
     padding-top: 1px;
     font-size: 13px;
+}
+
+#taskbar button {
+    padding: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 5px;
+    margin-top: 7px;
+    border-radius: 4px;
+}
+
+#taskbar button.active {
+    background-color: @base02;
 }

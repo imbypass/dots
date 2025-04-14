@@ -18,8 +18,13 @@
   },
 
   //
-  "modules-left": ["custom/logo", "hyprland/workspaces", "custom/expose"],
-  // "wlr/taskbar"
+  "modules-left": [
+    "custom/logo",
+    "hyprland/workspaces",
+    "custom/expose",
+    "wlr/taskbar",
+  ],
+  //
   "modules-center": [],
   "modules-right": [
     "tray",
