@@ -1,6 +1,6 @@
 {
   "layer": "bottom",
-  "position": "top",
+  "position": "bottom",
   "margin-top": 0,
   "margin-right": 0,
   "margin-left": 0,
@@ -10,14 +10,15 @@
   "passthrough": false,
   "gtk-layer-shell": true,
   "reload_style_on_change": true,
-  "height": 43,
+  "height": 46,
   "tray": {
+    "icon-theme": "HiColor",
     "icon-size": 14,
     "spacing": 8,
   },
 
-  // "hyprland/workspaces", "custom/expose", "custom/spotify"
-  "modules-left": ["custom/logo"],
+  //
+  "modules-left": ["custom/logo", "hyprland/workspaces", "custom/expose"],
   // "wlr/taskbar"
   "modules-center": [],
   "modules-right": [
@@ -64,7 +65,7 @@
     "ignore-list": ["Windscribe", "Picture-in-Picture", "dojo-voice"],
   },
   "clock": {
-    "format": "{:%I:%M %p}",
+    "format": "{:%I:%M %p\n<sub>%m/%d/%Y</sub>}",
     "tooltip-format": "{:%a, %b %e, %Y}",
     "on-click": "gnome-calendar",
   },
@@ -72,8 +73,8 @@
     "format": " {}%",
   },
   "hyprland/workspaces": {
-    "format": "Workspace {}",
-    "active-only": true,
+    "format": "{}",
+    "active-only": false,
     "format-icons": {},
     "persistent-workspaces": {},
     "on-scroll-up": "hyprctl dispatch workspace e+1",
@@ -145,23 +146,22 @@
     "interface": "enp3s0",
     "format": "󰤨",
     "format-wifi": "󰤨",
-    "format-ethernet": "󰤨",
+    "format-ethernet": "",
     "format-disconnected": "", // hides on empty
     "tooltip-format": "󰤨   Wireless",
     "tooltip-format-wifi": "󰤨   Wireless",
-    "tooltip-format-ethernet": "󰤨   Ethernet",
+    "tooltip-format-ethernet": "    Ethernet",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
     "on-click": "nm-connection-editor",
     "on-click-right": "nm-connection-editor",
   },
   "bluetooth": {
-    "format": "",
     "format-disabled": "󰂲", // an empty format will hide the module
-    "format-connected": " {num_connections} connected",
-    "tooltip-format": "{controller_alias}",
-    "tooltip-format-connected": "{controller_alias}\n\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "format-connected": "",
+    "tooltip-format": "   {controller_alias}",
+    "tooltip-format-connected": "   {controller_alias}\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t({device_address})",
     "on-click": "blueman-manager",
     "on-click-right": "blueman-manager",
   },

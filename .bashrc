@@ -26,6 +26,7 @@ export MOZ_ENABLE_WAYLAND=0
 export MICRO_TRUECOLOR=1
 export TERM='xterm-256color'
 export NIXPKGS_ALLOW_UNFREE=1
+export WINEDEBUG=fixme-all
 
 # Aliases - Configuration
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'

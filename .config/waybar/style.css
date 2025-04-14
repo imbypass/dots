@@ -1,15 +1,10 @@
 @import url("base16.css");
 
-/* Start Waybar Styling */
 * {
     font-family: "Google Sans Display Medium";
     transition: all 0.3s ease;
     font-size: 13.5px;
     font-weight: 700;
-}
-
-.muted {
-    color: @base08;
 }
 
 window#waybar {
@@ -39,20 +34,21 @@ tooltip {
 #custom-spotify,
 #custom-expose,
 #custom-notifications,
-#workspaces button {
+#workspaces button,
+#tray {
     border-radius: 4px;
-    background: @base00;
+    background: @base01;
     color: @base05;
     margin: 6px;
-    margin-top: 8px;
+    margin-top: 7px;
+    margin-bottom: 6px;
     padding: 12px;
     padding-bottom: 0px;
     padding-top: 0px;
-    /*margin-bottom: 10px; --> comment out for bottom bar */
 }
 
 #tray {
-    padding-right: 10px;
+    padding-right: 12px;
 }
 
 #pulseaudio {
@@ -61,6 +57,7 @@ tooltip {
     padding-left: 10px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
+    font-size: 12.75px;
 }
 #pulseaudio.microphone {
     margin-left: 0px;
@@ -71,61 +68,79 @@ tooltip {
 }
 
 #custom-logo {
+    margin-bottom: 7px;
+    margin-top: 8px;
     margin-left: 10px;
-    padding-left: 6px;
-    padding-right: 6px;
-    font-size: 22px;
-    background-color: @base00;
-    color: @base0D;
-}
-#custom-logo:hover {
+    margin-right: 10px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 1px;
+    padding-bottom: 3px;
+    font-size: 20px;
     background-color: @base0D;
     color: @base00;
+    font-family: "ZedMono NFP ExtraBold";
+    border-radius: 25px;
 }
 
 #custom-power {
     margin-right: 10px;
     margin-left: 4px;
-    /*margin-bottom: 4px; --> comment out for bottom bar */
+    font-family: "ZedMono NFP ExtraBold";
 }
 #custom-power:hover {
     color: @base08;
 }
 
+#workspaces {
+    background: @base01;
+    margin-top: 7px;
+    margin-bottom: 6px;
+    margin-right: 0;
+    border-radius: 4px;
+    padding-right: 4px;
+    padding-left: 4px;
+    padding-top: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
 #workspaces:hover {
     border: 0px transparent;
 }
 #workspaces button {
+    border-radius: 0px;
     border: 0px;
-    border-radius: 4px;
     color: @base05;
     margin: 6px;
     margin-top: 8px;
-    padding: 10px;
-    padding-bottom: 0px;
-    padding-top: 0px;
-    /* margin-bottom: 10px; --> comment out for bottom bar */
+    padding-left: 12px;
+    padding-right: 12px;
+}
+#workspaces button:nth-child(0) {
+    background-color: red;
+}
+#workspaces button.active {
+    color: @base0D;
 }
 #workspaces button:hover {
-    border: 0px transparent;
+    color: @base0D;
 }
 #workspaces button.urgent {
     color: @base00;
     background: @base0A;
 }
 #workspaces button {
-    border-bottom-right-radius: 0px;
-    border-top-right-radius: 0px;
     margin-right: 0;
+    margin-left: 0;
     padding-left: 12px;
 }
 #custom-expose {
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 0px;
-    margin-left: 0;
+    margin-left: 0px;
     margin-right: 12px;
-    padding-left: 4px;
-    padding-right: 12px;
+    padding-left: 10px;
+    padding-right: 14px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
 }
 #custom-expose:hover {
     color: @base0D;
@@ -142,18 +157,23 @@ tooltip {
     padding-right: 6px;
     padding-left: 13px;
     padding-bottom: 2px;
+    padding-top: 2px;
+    font-size: 15px;
+    font-family: "ZedMono NFP ExtraBold";
 }
 #bluetooth {
     border-bottom-left-radius: 0px;
     border-top-left-radius: 0px;
     margin-left: 0;
-    padding-left: 10px;
     padding-right: 15px;
+    padding-left: 10px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    font-size: 15px;
+    font-family: "ZedMono NFP ExtraBold";
 }
 
-#bluetooth,
-#network,
-#custom-logo,
-#custom-power {
-    font-family: "ZedMono NFP ExtraBold";
+#clock {
+    padding-top: 1px;
+    font-size: 13px;
 }

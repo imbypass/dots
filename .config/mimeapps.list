@@ -1,6 +1,6 @@
 [Added Associations]
 text/x-chdr=org.xfce.mousepad.desktop;
-image/png=org.xfce.mousepad.desktop;userapp-qview-E3XYT2.desktop;
+image/png=com.interversehq.qView.desktop;
 text/plain=org.xfce.mousepad.desktop;dev.zed.Zed.desktop;
 application/schema+json=org.xfce.mousepad.desktop;dev.zed.Zed.desktop;
 text/x-csrc=org.xfce.mousepad.desktop;
@@ -23,11 +23,11 @@ text/x-python=org.xfce.mousepad.desktop;
 text/x-lua=org.xfce.mousepad.desktop;
 audio/mpeg=vlc.desktop;
 video/mp4=vlc.desktop;mpv.desktop;
-image/jpeg=userapp-qview-E3XYT2.desktop;
-image/x-dds=userapp-qview-E3XYT2.desktop;
+image/jpeg=com.interversehq.qView.desktop;
+image/x-dds=com.interversehq.qView.desktop;
 video/x-matroska=vlc.desktop;
 audio/flac=io.bassi.Amberol.desktop;
-image/webp=userapp-qview-E3XYT2.desktop;
+image/webp=com.interversehq.qView.desktop;
 application/x-msdownload=wine.desktop;
 text/css=dev.zed.Zed.desktop;
 video/quicktime=mpv.desktop;
@@ -35,6 +35,9 @@ inode/symlink=dev.zed.Zed.desktop;
 application/x-matroska=vlc.desktop;
 inode/directory=xfce4-file-manager.desktop;org.gnome.Nautilus.desktop;
 x-scheme-handler/trash=xfce4-file-manager.desktop;
+audio/x-mpegurl=audacious.desktop;
+image/bmp=com.interversehq.qView.desktop;
+image/svg+xml=com.interversehq.qView.desktop;
 
 [Default Applications]
 text/x-csrc=org.xfce.mousepad.desktop
@@ -59,9 +62,9 @@ video/mp4=mpv.desktop
 x-scheme-handler/lunarclient=lunarclient.desktop
 image/x-dds=userapp-qview-E3XYT2.desktop
 video/x-matroska=vlc.desktop
-image/png=userapp-qview-E3XYT2.desktop
+image/png=com.interversehq.qView.desktop
 image/jpg=userapp-qview-E3XYT2.desktop
-image/jpeg=userapp-qview-E3XYT2.desktop
+image/jpeg=com.interversehq.qView.desktop
 image/gif=userapp-qview-E3XYT2.desktop
 x-scheme-handler/wago-app=wago-app.desktop
 x-scheme-handler/discord-448016723057049601=discord-448016723057049601.desktop
@@ -77,4 +80,7 @@ x-scheme-handler/discord-1170028348756471908=discord-1170028348756471908.desktop
 x-scheme-handler/discord-418076578333851669=discord-418076578333851669.desktop
 application/schema+json=dev.zed.Zed.desktop
 x-scheme-handler/trash=xfce4-file-manager.desktop
-
+audio/x-mpegurl=audacious.desktop
+image/bmp=com.interversehq.qView.desktop
+image/webp=com.interversehq.qView.desktop
+image/svg+xml=com.interversehq.qView.desktop
