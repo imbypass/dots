@@ -10,9 +10,8 @@
   "passthrough": false,
   "gtk-layer-shell": true,
   "reload_style_on_change": true,
-  "height": 46,
+  "height": 50,
   "tray": {
-    "icon-theme": "HiColor",
     "icon-size": 14,
     "spacing": 8,
   },
@@ -61,13 +60,20 @@
   },
   "wlr/taskbar": {
     "format": "{icon}",
-    "icon-size": 18,
+    "icon-size": 22,
     "icon-theme": "Papirus-Dark",
     "tooltip-format": "{title}",
     "on-click": "activate",
     "on-click-middle": "close",
     "sort-by-app-id": true,
-    "ignore-list": ["Windscribe", "Picture-in-Picture", "dojo-voice"],
+    "ignore-list": [
+      "Windscribe",
+      "Picture-in-Picture",
+      "dojo-voice",
+      "Network Connections",
+      "Bluetooth Devices",
+      "Volume Control",
+    ],
   },
   "clock": {
     "format": "{:%I:%M %p\n<sub>%m/%d/%Y</sub>}",
