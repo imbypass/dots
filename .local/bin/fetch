@@ -21,29 +21,16 @@ crnt=$(date +%s);
 tmprg=$((crnt - brth));
 ddif=$((tmprg / 86400));
 
-s='\e[0;7m';  e='\e[0;m'
-r='\e[0;31m'; g='\e[0;32m';
-y='\e[0;33m'; b='\e[0;34m';
-m='\e[0;35m'; c='\e[0;36m';
-w='\e[0;38m'; d=' ';
-colors="$r$d $g$d $y$d $b$d $m$d $c$d $e"
+r='\e[0;31m'; g='\e[0;32m'; b='\e[0;34m';
+c='\e[0;36m'; y='\e[0;33m'; m='\e[0;35m';
+w='\e[0;38m';
 
 printf "
-          $r os $w ${os}
- (\\ /)    $g kr $w ${kr}
- (. .)/   $y pa $w ${pa}
- ($r\"$w)($r\"$w)   $b sh $w ${sh}
-          $m wm $w ${wm}
+           ${r}os  ${w}${os}
+ (\\ /)     ${g}kr  ${w}${kr}
+ (. .)/    ${y}pa  ${w}${pa}
+ (${r}\"${w})(${r}\"${w})    ${b}sh  ${w}${sh}
+           ${m}wm  ${w}${wm}
 
-           $colors
+           $(~/.local/bin/colors)
 "
-# printf "
-# ${r}os $w ${os}
-# ${g}kr $w ${kr}
-# ${y}pa $w ${pa}
-# ${b}sh $w ${sh}
-# ${m}wm $w ${wm}
-
-# $colors
-# "
-# $c ag $w ${ddif} days

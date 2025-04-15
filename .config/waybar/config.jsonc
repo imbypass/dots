@@ -17,14 +17,9 @@
   },
 
   //
-  "modules-left": [
-    "custom/logo",
-    "hyprland/workspaces",
-    "custom/expose",
-    "wlr/taskbar",
-  ],
+  "modules-left": ["custom/logo", "hyprland/workspaces", "custom/expose"],
   //
-  "modules-center": [],
+  "modules-center": ["wlr/taskbar"],
   "modules-right": [
     "tray",
     "pulseaudio",
@@ -78,7 +73,6 @@
   "clock": {
     "format": "{:%I:%M %p\n<sub>%m/%d/%Y</sub>}",
     "tooltip-format": "{:%a, %b %e, %Y}",
-    "on-click": "gnome-calendar",
   },
   "battery": {
     "format": " {}%",
