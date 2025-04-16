@@ -6,7 +6,8 @@
     "enabledThemes": [
         "fonts.theme.css",
         "patches.theme.css",
-        "base16-dev.css"
+        "base16-dev.css",
+        "visual-refresh.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": true,
@@ -602,7 +603,14 @@
             "enabled": true
         },
         "NewGuildSettings": {
-            "enabled": true
+            "enabled": true,
+            "guild": true,
+            "everyone": true,
+            "role": true,
+            "events": true,
+            "highlights": true,
+            "messages": 3,
+            "showAllChannels": true
         },
         "BetterRoleContext": {
             "enabled": false
@@ -796,7 +804,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1744767020832
+        "settingsSyncVersion": 1744843124150
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false

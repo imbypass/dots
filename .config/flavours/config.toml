@@ -141,4 +141,4 @@ light = false
 file = "~/.config/nwg-dock-hyprland/colors.css"
 template = "nwg-dock"
 rewrite = true
-hook = "~/.local/bin/bde rl dock"
+# hook = "~/.local/bin/bde rl dock"
