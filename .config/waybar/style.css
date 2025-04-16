@@ -52,8 +52,9 @@ tooltip {
 }
 
 #pulseaudio {
+    min-width: 65px;
     margin-right: 0px;
-    padding-right: 6px;
+    padding-right: 0px;
     padding-left: 10px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -61,7 +62,7 @@ tooltip {
 }
 #pulseaudio.microphone {
     margin-left: 0px;
-    padding-left: 6px;
+    padding-left: 0px;
     padding-right: 10px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
@@ -72,16 +73,20 @@ tooltip {
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
-    padding-left: 7px;
-    padding-right: 6px;
-    padding-top: 1px;
-    padding-bottom: 2px;
+    padding-left: 6px;
+    padding-right: 5px;
+    padding-top: 0px;
+    padding-bottom: 1px;
     font-size: 21.5px;
     background-color: @base0D;
+    border: 2px solid @base0D;
     color: @base00;
     font-family: "ZedMono NFP ExtraBold";
     border-radius: 18px;
     /* border-bottom-left-radius: 6px; */
+}
+#custom-logo:hover {
+    color: @base07;
 }
 
 #custom-power {
