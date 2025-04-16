@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 os=$(cat /etc/os-release | grep -E '^PRETTY_NAME=' | cut -d'"' -f2 | cut -d'=' -f2)
 
 read -r _ _ version _ < /proc/version

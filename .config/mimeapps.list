@@ -1,7 +1,7 @@
 [Added Associations]
 text/x-chdr=org.xfce.mousepad.desktop;
 image/png=com.interversehq.qView.desktop;
-text/plain=org.xfce.mousepad.desktop;dev.zed.Zed.desktop;
+text/plain=org.xfce.mousepad.desktop;dev.zed.Zed.desktop;micro.desktop;
 application/schema+json=org.xfce.mousepad.desktop;dev.zed.Zed.desktop;
 text/x-csrc=org.xfce.mousepad.desktop;
 x-scheme-handler/chrome=firefox.desktop;
@@ -38,6 +38,7 @@ x-scheme-handler/trash=xfce4-file-manager.desktop;
 audio/x-mpegurl=audacious.desktop;
 image/bmp=com.interversehq.qView.desktop;
 image/svg+xml=com.interversehq.qView.desktop;
+application/xml=micro.desktop;
 
 [Default Applications]
 text/x-csrc=org.xfce.mousepad.desktop
@@ -72,7 +73,7 @@ application/x-msdownload=wine.desktop
 text/x-python=org.xfce.mousepad.desktop
 x-scheme-handler/discord=vesktop.desktop
 text/css=dev.zed.Zed.desktop
-text/plain=dev.zed.Zed.desktop
+text/plain=micro.desktop
 video/quicktime=mpv.desktop
 inode/symlink=dev.zed.Zed.desktop
 application/x-matroska=vlc.desktop
@@ -85,3 +86,4 @@ image/bmp=com.interversehq.qView.desktop
 image/webp=com.interversehq.qView.desktop
 image/svg+xml=com.interversehq.qView.desktop
 application/x-shellscript=micro.desktop
+application/xml=micro.desktop

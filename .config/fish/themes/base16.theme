@@ -1,0 +1,37 @@
+# Base16 Chalk - fish color config
+# Chris Kempson (http://chriskempson.com)
+
+fish_color_normal d0d0d0
+fish_color_command 6fc2ef
+fish_color_keyword 12cfc0
+fish_color_quote eda987
+fish_color_redirection acc267
+fish_color_end b0b0b0
+fish_color_error fb9fb1
+fish_color_param ddb26f
+fish_color_comment b0b0b0
+fish_color_selection --reverse
+fish_color_operator d0d0d0
+fish_color_escape acc267
+fish_color_autosuggestion b0b0b0
+fish_color_cwd ddb26f
+fish_color_user eda987
+fish_color_host 12cfc0
+fish_color_host_remote 6fc2ef
+fish_color_cancel d0d0d0
+fish_color_search_match --background=151515
+fish_color_valid_path
+
+fish_pager_color_progress ddb26f
+fish_pager_color_background --background=202020
+fish_pager_color_prefix 12cfc0
+fish_pager_color_completion b0b0b0
+fish_pager_color_description b0b0b0
+fish_pager_color_secondary_background
+fish_pager_color_secondary_prefix
+fish_pager_color_secondary_completion
+fish_pager_color_secondary_description
+fish_pager_color_selected_background --background=303030
+fish_pager_color_selected_prefix 12cfc0
+fish_pager_color_selected_completion d0d0d0
+fish_pager_color_selected_description d0d0d0
