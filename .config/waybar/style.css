@@ -76,14 +76,13 @@ tooltip {
     padding-left: 6px;
     padding-right: 5px;
     padding-top: 0px;
-    padding-bottom: 1px;
+    padding-bottom: 0px;
     font-size: 21.5px;
     background-color: @base0D;
     border: 2px solid @base0D;
     color: @base00;
     font-family: "ZedMono NFP ExtraBold";
     border-radius: 18px;
-    /* border-bottom-left-radius: 6px; */
 }
 #custom-logo:hover {
     color: @base07;
