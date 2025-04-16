@@ -280,13 +280,14 @@
             "enabled": true
         },
         "NoMosaic": {
-            "enabled": false
+            "enabled": true,
+            "inlineVideo": true
         },
         "NoPendingCount": {
             "enabled": false
         },
         "NoProfileThemes": {
-            "enabled": false
+            "enabled": true
         },
         "NoRPC": {
             "enabled": false
@@ -601,7 +602,7 @@
             "enabled": true
         },
         "NewGuildSettings": {
-            "enabled": false
+            "enabled": true
         },
         "BetterRoleContext": {
             "enabled": false
@@ -772,11 +773,11 @@
             "enabled": false
         },
         "IrcColors": {
-            "enabled": false,
-            "memberListColors": false,
+            "enabled": true,
+            "memberListColors": true,
             "lightness": 70,
             "applyColorOnlyInDms": false,
-            "applyColorOnlyToUsersWithoutColor": false
+            "applyColorOnlyToUsersWithoutColor": true
         },
         "HideMedia": {
             "enabled": false
@@ -795,7 +796,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1744575924978
+        "settingsSyncVersion": 1744763742747
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false

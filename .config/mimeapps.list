@@ -39,6 +39,7 @@ audio/x-mpegurl=audacious.desktop;
 image/bmp=com.interversehq.qView.desktop;
 image/svg+xml=com.interversehq.qView.desktop;
 application/xml=micro.desktop;
+application/x-fishscript=dev.zed.Zed.desktop;
 
 [Default Applications]
 text/x-csrc=org.xfce.mousepad.desktop
@@ -87,3 +88,4 @@ image/webp=com.interversehq.qView.desktop
 image/svg+xml=com.interversehq.qView.desktop
 application/x-shellscript=micro.desktop
 application/xml=micro.desktop
+application/x-fishscript=dev.zed.Zed.desktop
