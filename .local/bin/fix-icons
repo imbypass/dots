@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Define custom folder icon color
+ICON_THEME='breeze'
+
+# Define color codes
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+WHITE='\033[0;37m'
+BOLD='\033[1m'
+UNDERLINE='\033[4m'
+NC='\033[0m' # No Color (reset)
+
+# Check for root privileges
+if [ "$EUID" -ne 0 ]; then
+  echo -e "${BOLD}${RED}Error:${NC} This script must be run with sudo privileges."
+  echo -e "Please run again with: sudo $0"
+  exit 1
+fi
+
+echo -e "${BOLD}${BLUE}:: ${NC}Refreshing icon theme..."
+papirus-folders -t Papirus -C ${ICON_THEME} > /dev/null
+papirus-folders -t Papirus-Dark -C ${ICON_THEME} > /dev/null
+echo -e "${BOLD}${GREEN}:: ${NC}Icon theme updated."

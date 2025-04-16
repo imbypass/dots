@@ -10,10 +10,6 @@
  * @discord bypass_
  **/
 
-/* * {
-    --custom-channel-textarea-text-area-height: 42px !important;
-} */
-
 /* Hide Profile Tab Shop Ads */
 .container__8279f {
     display: none;
@@ -22,21 +18,6 @@
 /* Hide Discord Social Links */
 .socialLinks__7df54 {
     display: none;
-}
-
-/* Hide New Visual Refresh Top Bar */
-div[class^="base_"],
-div[class*=" base_"] {
-    div[class^="bar_"],
-    div[class*=" bar_"] {
-        display: none !important;
-    }
-
-    grid-template-rows: [top] min-content [titleBarEnd] min-content [noticeEnd] 1fr [end] !important;
-}
-div[class^="tutorialContainer_"],
-div[class*=" tutorialContainer_"] {
-    padding-top: 12px;
 }
 
 /* Read All Button - Remove Border */
