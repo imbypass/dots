@@ -33,20 +33,17 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 # Aliases - System Tools
+alias cat="bat -p"
 alias cl="clear"
-alias tree="eza -l --tree --icons"
+alias ex="exit"
 alias l="ls"
 alias ls="eza --icons --grid"
 alias lsa="eza -la --icons --grid"
-alias grep="rg"
-alias h="hyprctl"
-alias cat="bat -p"
-alias nano="nvim"
-alias py3="python3"
-alias hx="helix"
+alias nano="micro"
+alias q="exit"
 
 # Start Hyprland if not already running
-pidof Hyprland > /dev/null || Hyprland > ~/.logs/hyprland.log & disown
+pidof Hyprland > /dev/null || Hyprland & disown
 
 # If not running interactively, don't do anything
 #[[ $- != *i* ]] && return
