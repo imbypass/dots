@@ -99,8 +99,8 @@
     "tooltip": false,
     "format": " 󱂬 ",
     "format": "",
-    "on-click": "walker -m power",
-    "on-click-right": "$TERMINAL -e btop",
+    "on-click": "swaync-client -t",
+    "on-click-right": "walker -m power",
   },
   "custom/spotify": {
     "tooltip": true,

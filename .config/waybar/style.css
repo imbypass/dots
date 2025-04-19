@@ -132,8 +132,7 @@ tooltip {
     color: @base0D;
 }
 #workspaces button.urgent {
-    color: @base00;
-    background: @base0A;
+    color: @base0A;
 }
 #workspaces button {
     margin-right: 0;
