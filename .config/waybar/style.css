@@ -52,7 +52,7 @@ tooltip {
 }
 
 #pulseaudio {
-    min-width: 65px;
+    min-width: 52px;
     margin-right: 0px;
     padding-right: 0px;
     padding-left: 10px;
@@ -78,23 +78,24 @@ tooltip {
     padding-top: 0px;
     padding-bottom: 0px;
     font-size: 21.5px;
-    background-color: @base0D;
-    border: 2px solid @base0D;
-    color: @base00;
+    background-color: @base00;
+    border: 2px solid @base00;
+    color: @base05;
     font-family: "ZedMono NFP ExtraBold";
     border-radius: 18px;
 }
 #custom-logo:hover {
-    color: @base07;
+    color: @base0D;
 }
 
 #custom-power {
     margin-right: 10px;
     margin-left: 4px;
     font-family: "ZedMono NFP ExtraBold";
+    font-size: 18px;
 }
 #custom-power:hover {
-    color: @base08;
+    color: @base0D;
 }
 
 #workspaces {

@@ -3,7 +3,7 @@
 # I'm sure there are better ways of doing this, but I REALLY don't work with bash/zsh scripts often.
 # This just seemed like a more convenient way to execute some of the common shit that I do on my PC.
 
-BDE_VERSION="0.18.0"
+BDE_VERSION="0.21.0"
 
 edit_prompt() {
   case "$1" in
@@ -52,6 +52,12 @@ edit_prompt() {
       ;;
 
       # Edit any user configs
+      "aliases")
+        cd ~/.config/fish/ && $EDITOR . conf.d/alias.fish
+      ;;
+      "path")
+        cd ~/.config/fish/ && $EDITOR . conf.d/PATH.fish
+      ;;
       "cleanup")
         cd ~/.local/bin && $EDITOR cleanup
       ;;

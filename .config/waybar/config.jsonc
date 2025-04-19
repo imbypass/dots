@@ -86,8 +86,8 @@
   },
   "custom/logo": {
     "tooltip": false,
-    "format_stack": "  ",
-    "format": "󰣇",
+    //  󰣇 
+    "format": "",
     "on-click": "walker -m applications",
   },
   "custom/expose": {
@@ -97,7 +97,8 @@
   },
   "custom/power": {
     "tooltip": false,
-    "format": " ⏻ ",
+    "format": " 󱂬 ",
+    "format": "",
     "on-click": "walker -m power",
     "on-click-right": "$TERMINAL -e btop",
   },
@@ -120,7 +121,7 @@
   "pulseaudio": {
     "format": "{icon}    {volume}%",
     "tooltip": true,
-    "format-muted": "    MUTED",
+    "format-muted": "    MUTE",
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "on-click-right": "GTK_THEME=Adw pavucontrol",
     "on-scroll-up": "pamixer -i 1",
@@ -139,7 +140,7 @@
   "pulseaudio#microphone": {
     "format": "{format_source}",
     "format-source": "  {volume}%",
-    "format-source-muted": "   MUTED",
+    "format-source-muted": "   MUTE",
     "on-click": "pamixer --default-source -t",
     "on-click-right": "GTK_THEME=Adw pavucontrol -t 4",
     "on-scroll-up": "pamixer --default-source -i 1",
