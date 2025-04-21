@@ -10,7 +10,7 @@
   "passthrough": false,
   "gtk-layer-shell": true,
   "reload_style_on_change": true,
-  "height": 50,
+  "height": 44,
   "tray": {
     "icon-size": 14,
     "spacing": 10,
@@ -26,8 +26,6 @@
     "clock",
     "custom/power",
   ],
-  // "network",
-  // "bluetooth",
 
   "hyprland/window": {
     "format": "{}",
@@ -52,6 +50,14 @@
     },
     "separate-outputs": false,
   },
+  "hyprland/workspaces": {
+    "format": "{}",
+    "active-only": false,
+    "format-icons": {},
+    "persistent-workspaces": {},
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+  },
   "wlr/taskbar": {
     "format": "{icon}",
     "icon-size": 22,
@@ -61,12 +67,13 @@
     "on-click-middle": "close",
     "sort-by-app-id": true,
     "ignore-list": [
-      "Windscribe",
-      "Picture-in-Picture",
-      "dojo-voice",
-      "Network Connections",
+      "Battle.net",
       "Bluetooth Devices",
+      "Network Connections",
+      "Picture-in-Picture",
       "Volume Control",
+      "Windscribe",
+      "dojo-voice",
     ],
   },
   "clock": {
@@ -76,47 +83,29 @@
   "battery": {
     "format": " {}%",
   },
-  "hyprland/workspaces": {
-    "format": "{}",
-    "active-only": false,
-    "format-icons": {},
-    "persistent-workspaces": {},
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1",
+  "network": {
+    "interface": "enp3s0",
+    "format": "󰤨",
+    "format-wifi": "󰤨",
+    "format-ethernet": "",
+    "format-disconnected": "", // hides on empty
+    "tooltip-format": "󰤨   Wireless",
+    "tooltip-format-wifi": "󰤨   Wireless",
+    "tooltip-format-ethernet": "    Ethernet",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50,
+    "on-click": "nm-connection-editor",
+    "on-click-right": "nm-connection-editor",
   },
-  "custom/logo": {
-    "tooltip": false,
-    //  󰣇 
-    "format": "",
-    "on-click": "walker -m applications",
-  },
-  "custom/expose": {
-    "tooltip": false,
-    "format": "󰨑",
-    "on-click": "bde expose",
-  },
-  "custom/power": {
-    "tooltip": false,
-    "format": " 󱂬 ",
-    "format": "",
-    "on-click": "swaync-client -t",
-    "on-click-right": "walker -m power",
-  },
-  "custom/spotify": {
-    "tooltip": true,
-    "tooltip-format": "{}",
-    "format": "󰎇",
-    "escape": true,
-    "exec": "$HOME/.config/waybar/scripts/mediaplayer.sh",
-    "on-click": "playerctl play-pause",
-  },
-  "custom/weather": {
-    "format": "{}°",
-    "tooltip": true,
-    "interval": 3600,
-    "on-click": "gnome-weather",
-    "exec": "wttrbar --mph --fahrenheit --lang en --ampm --hide-conditions --location 32735",
-    "return-type": "json",
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "󰂲", // an empty format will hide the module
+    "format-connected": "",
+    "tooltip-format": "   {controller_alias}",
+    "tooltip-format-connected": "   {controller_alias}\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t({device_address})",
+    "on-click": "blueman-manager",
+    "on-click-right": "blueman-manager",
   },
   "pulseaudio": {
     "format": "{icon}    {volume}%",
@@ -147,28 +136,63 @@
     "on-scroll-down": "pamixer --default-source -d 1",
     "scroll-step": 5,
   },
-  "network": {
-    "interface": "enp3s0",
-    "format": "󰤨",
-    "format-wifi": "󰤨",
-    "format-ethernet": "",
-    "format-disconnected": "", // hides on empty
-    "tooltip-format": "󰤨   Wireless",
-    "tooltip-format-wifi": "󰤨   Wireless",
-    "tooltip-format-ethernet": "    Ethernet",
-    "tooltip-format-disconnected": "Disconnected",
-    "max-length": 50,
-    "on-click": "nm-connection-editor",
-    "on-click-right": "nm-connection-editor",
+
+  "custom/logo": {
+    "tooltip": false,
+    //  󰣇 
+    "format": " ",
+    "on-click": "walker -m applications",
   },
-  "bluetooth": {
-    "format": "",
-    "format-disabled": "󰂲", // an empty format will hide the module
-    "format-connected": "",
-    "tooltip-format": "   {controller_alias}",
-    "tooltip-format-connected": "   {controller_alias}\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}\t({device_address})",
-    "on-click": "blueman-manager",
-    "on-click-right": "blueman-manager",
+  "custom/expose": {
+    "tooltip": false,
+    "format": "󰨑",
+    "on-click": "bde expose",
+  },
+  "custom/power": {
+    "tooltip": false,
+    "format": " 󱂬 ",
+    "format": "",
+    "on-click": "swaync-client -t",
+    "on-click-right": "walker -m power",
+  },
+  "custom/spotify": {
+    "tooltip": true,
+    "tooltip-format": "{}",
+    "format": "󰎇",
+    "escape": true,
+    "exec": "$HOME/.config/waybar/scripts/mediaplayer.sh",
+    "on-click": "playerctl play-pause",
+  },
+  "custom/weather": {
+    "format": "{}°",
+    "tooltip": true,
+    "interval": 3600,
+    "on-click": "gnome-weather",
+    "exec": "wttrbar --mph --fahrenheit --lang en --ampm --hide-conditions --location 32735",
+    "return-type": "json",
+  },
+
+  "custom/appicon1": {
+    "tooltip": false,
+    "format": "   ",
+    "on-click": "firefox",
+  },
+
+  "custom/appicon2": {
+    "tooltip": false,
+    "format": "   ",
+    "on-click": "discord",
+  },
+
+  "custom/appicon3": {
+    "tooltip": false,
+    "format": "   ",
+    "on-click": "steam",
+  },
+
+  "custom/appicon4": {
+    "tooltip": false,
+    "format": "   ",
+    "on-click": "spotify",
   },
 }

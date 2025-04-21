@@ -50,7 +50,32 @@ tooltip {
 #tray {
     padding-right: 12px;
 }
-
+#network {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-right: 0;
+    padding-right: 6px;
+    padding-left: 13px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    font-size: 15px;
+    font-family: "ZedMono NFP ExtraBold";
+}
+#bluetooth {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    margin-left: 0;
+    padding-right: 15px;
+    padding-left: 10px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    font-size: 15px;
+    font-family: "ZedMono NFP ExtraBold";
+}
+#clock {
+    padding-top: 1px;
+    font-size: 13px;
+}
 #pulseaudio {
     min-width: 52px;
     margin-right: 0px;
@@ -66,36 +91,6 @@ tooltip {
     padding-right: 10px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
-}
-
-#custom-logo {
-    margin-bottom: 8px;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-left: 6px;
-    padding-right: 5px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    font-size: 21.5px;
-    background-color: @base00;
-    border: 2px solid @base00;
-    color: @base05;
-    font-family: "ZedMono NFP ExtraBold";
-    border-radius: 18px;
-}
-#custom-logo:hover {
-    color: @base0D;
-}
-
-#custom-power {
-    margin-right: 10px;
-    margin-left: 4px;
-    font-family: "ZedMono NFP ExtraBold";
-    font-size: 18px;
-}
-#custom-power:hover {
-    color: @base0D;
 }
 
 #workspaces {
@@ -119,26 +114,63 @@ tooltip {
     color: @base05;
     margin: 6px;
     margin-top: 8px;
+    margin-left: 0;
+    margin-right: 0;
     padding-left: 12px;
     padding-right: 12px;
 }
 #workspaces button:nth-child(0) {
     background-color: red;
 }
-#workspaces button.active {
+#workspaces button:hover {
     color: @base0D;
 }
-#workspaces button:hover {
+#workspaces button.active {
     color: @base0D;
 }
 #workspaces button.urgent {
     color: @base0A;
 }
-#workspaces button {
-    margin-right: 0;
-    margin-left: 0;
-    padding-left: 12px;
+
+#taskbar button {
+    padding: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 5px;
+    margin-top: 7px;
+    border-radius: 4px;
 }
+#taskbar button.active {
+    background-color: @base02;
+}
+
+#custom-logo {
+    margin: 8px;
+    font-size: 21.5px;
+    background-color: @base00;
+    border: 2px solid @base00;
+    color: @base05;
+    font-family: "ZedMono NFP ExtraBold";
+    border-radius: 18px;
+    background-image: url("/home/bypass/.config/waybar/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#custom-logo:hover {
+    color: @base0D;
+}
+
+#custom-power {
+    margin-right: 10px;
+    margin-left: 4px;
+    font-family: "ZedMono NFP ExtraBold";
+    font-size: 18px;
+}
+#custom-power:hover {
+    color: @base0D;
+}
+
 #custom-expose {
     margin-left: 0px;
     margin-right: 12px;
@@ -153,48 +185,43 @@ tooltip {
 #custom-expose:hover {
     color: @base0D;
 }
+
 #custom-spotify {
     font-size: 16px;
     margin-left: 0px;
 }
 
-#network {
-    border-bottom-right-radius: 0px;
-    border-top-right-radius: 0px;
-    margin-right: 0;
-    padding-right: 6px;
-    padding-left: 13px;
-    padding-bottom: 2px;
-    padding-top: 2px;
-    font-size: 15px;
-    font-family: "ZedMono NFP ExtraBold";
+#custom-appicon1:hover,
+#custom-appicon2:hover,
+#custom-appicon3:hover,
+#custom-appicon4:hover {
+    background-color: @base01;
 }
-#bluetooth {
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 0px;
-    margin-left: 0;
-    padding-right: 15px;
-    padding-left: 10px;
-    padding-bottom: 2px;
-    padding-top: 2px;
-    font-size: 15px;
-    font-family: "ZedMono NFP ExtraBold";
-}
-
-#clock {
-    padding-top: 1px;
-    font-size: 13px;
-}
-
-#taskbar button {
+#custom-appicon1,
+#custom-appicon2,
+#custom-appicon3,
+#custom-appicon4 {
     padding: 8px;
+    padding-left: 14px;
+    padding-right: 14px;
     margin-left: 2px;
     margin-right: 2px;
     margin-bottom: 5px;
     margin-top: 7px;
     border-radius: 4px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px;
 }
-
-#taskbar button.active {
-    background-color: @base02;
+#custom-appicon1 {
+    background-image: url("/usr/share/icons/Papirus-Dark/24x24/apps/firefox.svg");
+}
+#custom-appicon2 {
+    background-image: url("/usr/share/icons/Papirus-Dark/24x24/apps/discord.svg");
+}
+#custom-appicon3 {
+    background-image: url("/usr/share/icons/Papirus-Dark/24x24/apps/steam.svg");
+}
+#custom-appicon4 {
+    background-image: url("/usr/share/icons/Papirus-Dark/24x24/apps/spotify.svg");
 }
