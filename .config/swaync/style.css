@@ -13,6 +13,7 @@
     background-color: @base00;
     color: @base05;
     padding: 0;
+    margin-bottom: 24px;
 }
 
 .floating-notifications.background
@@ -47,6 +48,7 @@
     .notification-content
     .summary {
     color: @base05;
+    margin-left: 5px;
 }
 
 .floating-notifications.background
@@ -56,6 +58,8 @@
     .notification-content
     .time {
     color: @base04;
+    font-size: 0.8em;
+    margin-top: 5px;
 }
 
 .floating-notifications.background
@@ -65,6 +69,7 @@
     .notification-content
     .body {
     color: @base05;
+    margin-left: 5px;
 }
 
 .floating-notifications.background

@@ -42,6 +42,7 @@ UNUSED_USR_SHARE=(
     ncspot
     nvim
     org.kde.kdeconnect.nonplasma
+    org.freedesktop.IBus.Setup
     qdbusviewer
     qv4l2
     qvidcap

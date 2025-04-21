@@ -27,9 +27,15 @@ file = "~/.config/vesktop/settings/quickCss.css"
 template = "vesktop"
 rewrite = true
 
-### SIMPLEFOX ###
+### FIREFOX ###
 [[items]]
 file = "/home/bypass/.mozilla/firefox/li1xg7z9.default-release/chrome/userChrome.css"
+template = "firefox"
+rewrite = false
+start = "/* start colors */"
+end = "/* end colors */"
+[[items]]
+file = "/home/bypass/.mozilla/firefox/li1xg7z9.default-release/chrome/userContent.css"
 template = "firefox"
 rewrite = false
 start = "/* start colors */"
@@ -99,8 +105,6 @@ hook = "~/.local/bin/bde rl waybar"
 file = "~/.config/foot/colors.ini"
 template = "foot"
 rewrite = true
-# start = "# start colors"
-# end = "# end colors"
 
 ### GHOSTTY TERMINAL ###
 [[items]]
@@ -148,4 +152,4 @@ light = false
 file = "~/.config/nwg-dock-hyprland/colors.css"
 template = "nwg-dock"
 rewrite = true
-# hook = "~/.local/bin/bde rl dock"
+hook = "~/.local/bin/bde rl dock"
