@@ -108,7 +108,12 @@ reload_prompt() {
       "dock")
         echo ":: Reloading nwg-dock-hyprland.."
         killall -9 nwg-dock-hyprland > /dev/null
-        nwg-dock-hyprland -r -mb 15 -mt 10 -i 32 -x -nolauncher > ~/.logs/nwg-dock.log & disown
+        nwg-dock-hyprland -r -mb 15 -mt 10 -i 32 -x -nolauncher & disown
+      ;;
+      "waybar_full")
+        echo ":: Reloading waybar.."
+        killall -9 waybar > /dev/null
+        waybar & disown
       ;;
       "waybar")
         echo ":: Reloading waybar.."
@@ -117,7 +122,7 @@ reload_prompt() {
       "walker")
         echo ":: Reloading walker service.."
         killall -9 walker > /dev/null
-        walker --gapplication-service & disown > ~/.logs/walker.log
+        walker --gapplication-service & disown
       ;;
       "mako")
         echo ":: Reloading mako.."
@@ -134,7 +139,7 @@ reload_prompt() {
       "hyprpanel")
         echo ":: Reloading HyprPanel.."
         killall -9 gjs > /dev/null
-        hyprpanel > ~/.logs/hyprpanel.log 2>&1 & disown
+        hyprpanel & disown
       ;;
       "ghostty")
         echo ":: Reloading Ghostty.."
@@ -144,7 +149,7 @@ reload_prompt() {
       "mconnect")
         echo ":: Reloading mconnect.."
         killall -9 mconnect > /dev/null
-        mconnect -d > ~/.logs/mconnect.log & disown
+        mconnect -d & disown
       ;;
       "gtk")
         echo ":: Reloading gtk.."
@@ -159,7 +164,7 @@ reload_prompt() {
       "pcmanfm")
         echo ":: Reloading pcmanfm.."
         killall -9 pcmanfm-qt > /dev/null
-        pcmanfm-qt --desktop > ~/.logs/pcmanfm.log & disown
+        pcmanfm-qt --desktop & disown
       ;;
       "steam")
         echo ":: Reloading Steam.."

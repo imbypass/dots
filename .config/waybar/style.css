@@ -39,7 +39,7 @@ tooltip {
     border-radius: 4px;
     background: @base01;
     color: @base05;
-    margin: 6px;
+    margin: 3px;
     margin-top: 7px;
     margin-bottom: 6px;
     padding: 12px;
@@ -102,8 +102,8 @@ tooltip {
     padding-right: 4px;
     padding-left: 4px;
     padding-top: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
+    /* border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px; */
 }
 #workspaces:hover {
     border: 0px transparent;
@@ -166,6 +166,7 @@ tooltip {
     margin-left: 4px;
     font-family: "ZedMono NFP ExtraBold";
     font-size: 18px;
+    color: @base02;
 }
 #custom-power:hover {
     color: @base0D;

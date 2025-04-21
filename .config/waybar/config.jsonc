@@ -16,7 +16,8 @@
     "spacing": 10,
   },
 
-  "modules-left": ["custom/logo", "hyprland/workspaces", "custom/expose"],
+  // "hyprland/workspaces"
+  "modules-left": ["custom/logo"],
   "modules-center": ["wlr/taskbar"],
   "modules-right": [
     "tray",
@@ -53,7 +54,10 @@
   "hyprland/workspaces": {
     "format": "{}",
     "active-only": false,
-    "format-icons": {},
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+    },
     "persistent-workspaces": {},
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
