@@ -10,7 +10,7 @@
   "passthrough": false,
   "gtk-layer-shell": true,
   "reload_style_on_change": true,
-  "height": 44,
+  "height": 48,
   "tray": {
     "icon-size": 14,
     "spacing": 10,
@@ -36,7 +36,6 @@
       "(\\d\\. )?(.*)- VLC media player": "<span>󰕼 </span> $2",
       "(\\d\\. )?(.*)— Mozilla Firefox": "<span> </span> $2",
       "(\\d\\. )?(.*)- Google Chrome": "<span> </span> $2",
-      "(\\d\\. )?(.*)- Thunar": "<span> </span> $2",
       "(\\d\\. )?(.*)Terminal": "<span></span> Terminal",
       "(\\d\\. )?(.*)Vesktop": "<span> </span> Discord",
       "(\\d\\. )?(.*)Discord Popout": "<span> </span> Discord",
@@ -54,17 +53,13 @@
   "hyprland/workspaces": {
     "format": "{}",
     "active-only": false,
-    "format-icons": {
-      "1": "1",
-      "2": "2",
-    },
     "persistent-workspaces": {},
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
   },
   "wlr/taskbar": {
     "format": "{icon}",
-    "icon-size": 22,
+    "icon-size": 20,
     "icon-theme": "Papirus-Dark",
     "tooltip-format": "{title}",
     "on-click": "activate",
@@ -81,7 +76,7 @@
     ],
   },
   "clock": {
-    "format": "{:%I:%M %p\n<sub>%m/%d/%Y</sub>}",
+    "format": " {:%I:%M %p\n<sub>%m/%d/%Y</sub>}",
     "tooltip-format": "{:%a, %b %e, %Y}",
   },
   "battery": {

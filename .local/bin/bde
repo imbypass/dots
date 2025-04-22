@@ -107,8 +107,8 @@ reload_prompt() {
       ;;
       "dock")
         echo ":: Reloading nwg-dock-hyprland.."
-        killall -9 nwg-dock-hyprland > /dev/null
-        nwg-dock-hyprland -r -mb 15 -mt 10 -i 32 -x -nolauncher & disown
+        #killall -9 nwg-dock-hyprland > /dev/null
+        #nwg-dock-hyprland -r -mb 15 -mt 10 -i 32 -x -nolauncher & disown
       ;;
       "waybar_full")
         echo ":: Reloading waybar.."

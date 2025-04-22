@@ -2,7 +2,7 @@
 
 * {
     all: unset;
-    font-size: 13px;
+    font-size: 14px;
     font-family: "Product Sans Black";
     transition: 75ms;
 }
@@ -48,7 +48,7 @@
     .notification-content
     .summary {
     color: @base05;
-    margin-left: 5px;
+    margin-left: 8px;
 }
 
 .floating-notifications.background
@@ -69,7 +69,7 @@
     .notification-content
     .body {
     color: @base05;
-    margin-left: 5px;
+    margin-left: 8px;
 }
 
 .floating-notifications.background
@@ -208,7 +208,8 @@
     .notification-content
     .summary {
     color: @base05;
-    margin-left: 5px;
+    margin-left: 8px;
+    margin-top: -10px;
 }
 
 .control-center
@@ -219,7 +220,7 @@
     .time {
     color: @base04;
     font-size: 0.8em;
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
 .control-center
@@ -229,7 +230,8 @@
     .notification-content
     .body {
     color: @base05;
-    margin-left: 5px;
+    margin-left: 8px;
+    margin-top: -5px;
 }
 
 .control-center
