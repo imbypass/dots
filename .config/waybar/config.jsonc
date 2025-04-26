@@ -17,10 +17,10 @@
   },
 
   // "hyprland/workspaces"
-  "modules-left": ["custom/logo"],
-  "modules-center": ["wlr/taskbar"],
+  "modules-left": ["custom/logo", "wlr/taskbar"],
+  "modules-center": [],
   "modules-right": [
-    "tray",
+    "group/systray",
     "pulseaudio",
     "pulseaudio#microphone",
     "battery",
@@ -66,7 +66,6 @@
     "on-click-middle": "close",
     "sort-by-app-id": true,
     "ignore-list": [
-      "Battle.net",
       "Bluetooth Devices",
       "Network Connections",
       "Picture-in-Picture",
@@ -136,10 +135,25 @@
     "scroll-step": 5,
   },
 
+  "group/systray": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "not-power",
+      "transition-left-to-right": false,
+    },
+    "modules": ["custom/tray", "tray"],
+  },
+
+  "custom/tray": {
+    "tooltip": false,
+    "format": "󰅁",
+  },
+
   "custom/logo": {
     "tooltip": false,
     //  󰣇 
-    "format": " ",
+    "format": "󰣇",
     "on-click": "walker -m applications",
   },
   "custom/expose": {

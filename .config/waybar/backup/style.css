@@ -1,0 +1,159 @@
+@import url("base16.css");
+
+/* Start Waybar Styling */
+* {
+    font-family: "Google Sans Display Medium";
+    transition: all 0.3s ease;
+    font-size: 13.5px;
+    font-weight: 700;
+}
+
+.muted {
+    color: @base08;
+}
+
+window#waybar {
+    color: @base05;
+    background: @base00;
+    border-top: 2px solid @base01;
+}
+
+tooltip {
+    color: @base05;
+    background: @base00;
+    border: 2px solid @base02;
+    border-radius: 6px;
+}
+
+#clock,
+#battery,
+#network,
+#bluetooth,
+#cpu,
+#memory,
+#pulseaudio,
+#pulseaudio.microphone,
+#wlr-taskbar,
+#custom-weather,
+#custom-logo,
+#custom-spotify,
+#custom-expose,
+#custom-notifications,
+#workspaces button {
+    border-radius: 4px;
+    background: @base01;
+    color: @base05;
+    margin: 6px;
+    margin-top: 8px;
+    padding: 12px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    /*margin-bottom: 10px; --> comment out for bottom bar */
+}
+
+#tray {
+    padding-right: 10px;
+}
+
+#pulseaudio {
+    margin-right: 0px;
+    padding-right: 6px;
+    padding-left: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+#pulseaudio.microphone {
+    margin-left: 0px;
+    padding-left: 6px;
+    padding-right: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+#custom-logo {
+    margin-left: 10px;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 22px;
+    background-color: @base00;
+    color: @base0D;
+}
+#custom-logo:hover {
+    background-color: @base0D;
+    color: @base00;
+}
+
+#custom-power {
+    margin-right: 10px;
+    margin-left: 4px;
+    /*margin-bottom: 4px; --> comment out for bottom bar */
+}
+#custom-power:hover {
+    color: @base08;
+}
+
+#workspaces:hover {
+    border: 0px transparent;
+}
+#workspaces button {
+    border: 0px;
+    border-radius: 4px;
+    color: @base05;
+    margin: 6px;
+    margin-top: 8px;
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    /* margin-bottom: 10px; --> comment out for bottom bar */
+}
+#workspaces button:hover {
+    border: 0px transparent;
+}
+#workspaces button.urgent {
+    color: @base00;
+    background: @base0A;
+}
+#workspaces button {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-right: 0;
+    padding-left: 12px;
+}
+#custom-expose {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    margin-left: 0;
+    margin-right: 12px;
+    padding-left: 4px;
+    padding-right: 12px;
+}
+#custom-expose:hover {
+    color: @base0D;
+}
+#custom-spotify {
+    font-size: 16px;
+    margin-left: 0px;
+}
+
+#network {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-right: 0;
+    padding-right: 6px;
+    padding-left: 13px;
+    padding-bottom: 2px;
+}
+#bluetooth {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    margin-left: 0;
+    padding-left: 10px;
+    padding-right: 15px;
+}
+
+#bluetooth,
+#network,
+#custom-logo,
+#custom-power {
+    font-family: "ZedMono NFP ExtraBold";
+}

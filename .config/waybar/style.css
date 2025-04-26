@@ -144,21 +144,34 @@ tooltip {
     background-color: @base02;
 }
 
+#custom-tray {
+    font-size: 24px;
+    color: @base02;
+    margin-right: 6px;
+    margin-left: 6px;
+    font-family: "ZedMono NFP ExtraBold";
+    font-size: 18px;
+}
+#custom-tray:hover {
+    color: @base0D;
+}
+
 #custom-logo {
     margin: 8px;
     font-size: 21.5px;
     background-color: @base00;
     border: 2px solid @base00;
-    color: @base05;
+    color: @base0D;
+    margin-bottom: 5px;
     font-family: "ZedMono NFP ExtraBold";
     border-radius: 18px;
-    background-image: url("/home/bypass/.config/waybar/logo.png");
+    /* background-image: url("/home/bypass/.config/waybar/logo.png"); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 #custom-logo:hover {
-    color: @base0D;
+    color: @base05;
 }
 
 #custom-power {

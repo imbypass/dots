@@ -40,6 +40,8 @@ image/bmp=com.interversehq.qView.desktop;
 image/svg+xml=com.interversehq.qView.desktop;
 application/xml=micro.desktop;
 application/x-fishscript=dev.zed.Zed.desktop;
+application/zip=org.gnome.FileRoller.desktop;
+application/vnd.rar=org.gnome.FileRoller.desktop;
 
 [Default Applications]
 text/x-csrc=org.xfce.mousepad.desktop
@@ -89,3 +91,5 @@ image/svg+xml=com.interversehq.qView.desktop
 application/x-shellscript=micro.desktop
 application/xml=micro.desktop
 application/x-fishscript=dev.zed.Zed.desktop
+application/zip=org.gnome.FileRoller.desktop
+application/vnd.rar=org.gnome.FileRoller.desktop
