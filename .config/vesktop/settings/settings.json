@@ -159,10 +159,15 @@
             "enableEmojiBypass": true,
             "transformEmojis": true,
             "transformStickers": true,
-            "transformCompoundSentence": false
+            "transformCompoundSentence": false,
+            "emojiSize": 48,
+            "stickerSize": 160,
+            "useHyperLinks": true,
+            "hyperLinkText": "{{NAME}}",
+            "disableEmbedPermissionCheck": false
         },
         "FakeProfileThemes": {
-            "enabled": false,
+            "enabled": true,
             "nitroFirst": false
         },
         "FavoriteEmojiFirst": {
@@ -285,7 +290,10 @@
             "inlineVideo": true
         },
         "NoPendingCount": {
-            "enabled": false
+            "enabled": true,
+            "hideFriendRequestsCount": true,
+            "hideMessageRequestsCount": true,
+            "hidePremiumOffersCount": true
         },
         "NoProfileThemes": {
             "enabled": true
@@ -552,7 +560,7 @@
             "enabled": false
         },
         "USRBG": {
-            "enabled": false,
+            "enabled": true,
             "voiceBackground": true,
             "nitroFirst": false
         },
@@ -781,7 +789,7 @@
             "enabled": false
         },
         "IrcColors": {
-            "enabled": true,
+            "enabled": false,
             "memberListColors": true,
             "lightness": 70,
             "applyColorOnlyInDms": false,
@@ -804,7 +812,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1745621365729
+        "settingsSyncVersion": 1745775100928
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false
