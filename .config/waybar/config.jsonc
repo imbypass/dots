@@ -16,7 +16,7 @@
     "spacing": 10,
   },
 
-  // "hyprland/workspaces"
+  // ==========[ ENABLED WAYBAR MODULES ]=========== //
   "modules-left": ["custom/logo", "wlr/taskbar"],
   "modules-center": [],
   "modules-right": [
@@ -28,6 +28,7 @@
     "custom/power",
   ],
 
+  // ==========[ STANDARD WAYBAR MODULES ]========== //
   "hyprland/window": {
     "format": "{}",
     "rewrite": {
@@ -135,6 +136,7 @@
     "scroll-step": 5,
   },
 
+  // ==========[ SYSTEM TRAY HOVER GROUP ]========== //
   "group/systray": {
     "orientation": "horizontal",
     "drawer": {
@@ -145,14 +147,13 @@
     "modules": ["custom/tray", "tray"],
   },
 
+  // ==========[ CUSTOM WAYBAR MODULES ]========== //
   "custom/tray": {
     "tooltip": false,
     "format": "󰅁",
   },
-
   "custom/logo": {
     "tooltip": false,
-    //  󰣇 
     "format": "󰣇",
     "on-click": "walker -m applications",
   },
@@ -163,7 +164,6 @@
   },
   "custom/power": {
     "tooltip": false,
-    "format": " 󱂬 ",
     "format": "",
     "on-click": "swaync-client -t",
     "on-click-right": "walker -m power",
@@ -185,24 +185,22 @@
     "return-type": "json",
   },
 
+  // ==========[ CUSTOM ICON DOCK CONCEPT ]========== //
   "custom/appicon1": {
     "tooltip": false,
     "format": "   ",
     "on-click": "firefox",
   },
-
   "custom/appicon2": {
     "tooltip": false,
     "format": "   ",
     "on-click": "discord",
   },
-
   "custom/appicon3": {
     "tooltip": false,
     "format": "   ",
     "on-click": "steam",
   },
-
   "custom/appicon4": {
     "tooltip": false,
     "format": "   ",

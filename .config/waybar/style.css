@@ -50,6 +50,7 @@ tooltip {
 #tray {
     padding-right: 12px;
 }
+
 #network {
     border-bottom-right-radius: 0px;
     border-top-right-radius: 0px;
@@ -61,6 +62,7 @@ tooltip {
     font-size: 15px;
     font-family: "ZedMono NFP ExtraBold";
 }
+
 #bluetooth {
     border-bottom-left-radius: 0px;
     border-top-left-radius: 0px;
@@ -72,10 +74,12 @@ tooltip {
     font-size: 15px;
     font-family: "ZedMono NFP ExtraBold";
 }
+
 #clock {
     padding-top: 1px;
     font-size: 13px;
 }
+
 #pulseaudio {
     min-width: 52px;
     margin-right: 0px;
@@ -85,6 +89,7 @@ tooltip {
     border-bottom-right-radius: 0px;
     font-size: 12.75px;
 }
+
 #pulseaudio.microphone {
     margin-left: 0px;
     padding-left: 0px;
@@ -102,8 +107,6 @@ tooltip {
     padding-right: 4px;
     padding-left: 4px;
     padding-top: 0px;
-    /* border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px; */
 }
 #workspaces:hover {
     border: 0px transparent;
@@ -118,9 +121,6 @@ tooltip {
     margin-right: 0;
     padding-left: 12px;
     padding-right: 12px;
-}
-#workspaces button:nth-child(0) {
-    background-color: red;
 }
 #workspaces button:hover {
     color: @base0D;
@@ -144,18 +144,6 @@ tooltip {
     background-color: @base02;
 }
 
-#custom-tray {
-    font-size: 24px;
-    color: @base02;
-    margin-right: 6px;
-    margin-left: 6px;
-    font-family: "ZedMono NFP ExtraBold";
-    font-size: 18px;
-}
-#custom-tray:hover {
-    color: @base0D;
-}
-
 #custom-logo {
     margin: 8px;
     font-size: 21.5px;
@@ -165,7 +153,6 @@ tooltip {
     margin-bottom: 5px;
     font-family: "ZedMono NFP ExtraBold";
     border-radius: 18px;
-    /* background-image: url("/home/bypass/.config/waybar/logo.png"); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -197,6 +184,18 @@ tooltip {
     font-size: 13px;
 }
 #custom-expose:hover {
+    color: @base0D;
+}
+
+#custom-tray {
+    font-size: 24px;
+    color: @base02;
+    margin-right: 6px;
+    margin-left: 6px;
+    font-family: "ZedMono NFP ExtraBold";
+    font-size: 18px;
+}
+#custom-tray:hover {
     color: @base0D;
 }
 
