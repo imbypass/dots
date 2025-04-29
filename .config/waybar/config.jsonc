@@ -139,10 +139,11 @@
 
   // ==========[ SYSTEM TRAY HOVER GROUP ]========== //
   "group/systray": {
-    "orientation": "horizontal",
+    "orientation": "inherit",
     "drawer": {
       "transition-duration": 500,
       "children-class": "not-power",
+      "click-to-reveal": true,
       "transition-left-to-right": false,
     },
     "modules": ["custom/tray", "tray"],
@@ -157,6 +158,7 @@
     "tooltip": false,
     "format": "󰣇",
     "on-click": "walker -m applications",
+    "on-click-right": "bde expose",
   },
   "custom/expose": {
     "tooltip": false,
