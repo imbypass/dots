@@ -8,6 +8,9 @@ PS1='[\u@\h \W]\$ '
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 . "$HOME/.cargo/env"
 
+# Initialization - Starship
+eval "$(starship init bash)"
+
 # Initialization - pyenv
 # command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 # eval "$(pyenv init -)"
