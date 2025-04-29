@@ -1,5 +1,4 @@
 # Custom PATH environment
-fish_add_path /home/bypass/.spicetify
 fish_add_path /home/bypass/.config/scripts
 fish_add_path /home/linuxbrew/.linuxbrew/bin
 fish_add_path /home/bypass/.local/bin
