@@ -4,15 +4,17 @@
     "useQuickCss": true,
     "themeLinks": [],
     "enabledThemes": [
-        "patches.theme.css",
+        "base16-discord.theme.css",
+        "discolored.theme.css",
         "fonts.theme.css",
-        "visual-refresh.theme.css",
-        "base16-dev.css"
+        "snippets.theme.css",
+        "userpfp.theme.css",
+        "visual-refresh.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": true,
     "transparent": false,
-    "winCtrlQ": false,
+    "winCtrlQ": true,
     "disableMinSize": true,
     "winNativeTitleBar": false,
     "plugins": {
@@ -52,7 +54,7 @@
         },
         "Settings": {
             "enabled": true,
-            "settingsLocation": "belowActivity"
+            "settingsLocation": "aboveNitro"
         },
         "SupportHelper": {
             "enabled": true
@@ -85,12 +87,12 @@
             "enabled": true
         },
         "BetterNotesBox": {
-            "enabled": false,
+            "enabled": true,
             "hide": true,
             "noSpellCheck": false
         },
         "BetterRoleDot": {
-            "enabled": false,
+            "enabled": true,
             "bothStyles": false,
             "copyRoleColorInProfilePopout": false
         },
@@ -171,7 +173,7 @@
             "nitroFirst": false
         },
         "FavoriteEmojiFirst": {
-            "enabled": false
+            "enabled": true
         },
         "FavoriteGifSearch": {
             "enabled": false
@@ -241,7 +243,10 @@
             "enableDoubleClickToReply": true
         },
         "MessageLinkEmbeds": {
-            "enabled": false
+            "enabled": true,
+            "listMode": "blacklist",
+            "idList": "",
+            "automodEmbeds": "never"
         },
         "MessageLogger": {
             "enabled": true,
@@ -317,7 +322,7 @@
             "enabled": true
         },
         "NormalizeMessageLinks": {
-            "enabled": false
+            "enabled": true
         },
         "NotificationVolume": {
             "enabled": false
@@ -486,10 +491,10 @@
             "persistState": false
         },
         "SilentTyping": {
-            "enabled": false,
-            "isEnabled": true,
-            "showIcon": false,
-            "contextMenu": true
+            "enabled": true,
+            "isEnabled": false,
+            "showIcon": true,
+            "contextMenu": false
         },
         "SortFriendRequests": {
             "enabled": false
@@ -812,7 +817,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1745775100928
+        "settingsSyncVersion": 1745963856247
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false

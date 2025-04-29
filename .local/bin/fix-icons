@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define custom folder icon color
-ICON_THEME='pink'
+ICON_THEME=$1
 
 # Define color codes
 RED='\033[0;31m'
@@ -17,12 +17,17 @@ NC='\033[0m' # No Color (reset)
 
 # Check for root privileges
 if [ "$EUID" -ne 0 ]; then
-  echo -e "${BOLD}${RED}Error:${NC} This script must be run with sudo privileges."
+  echo -e "${BOLD}${RED}[ERROR]${NC} This script must be run with sudo privileges."
   echo -e "Please run again with: sudo $0"
   exit 1
 fi
 
-echo -e "${BOLD}${BLUE}:: ${NC}Refreshing icon theme..."
-papirus-folders -t Papirus -C ${ICON_THEME} > /dev/null
-papirus-folders -t Papirus-Dark -C ${ICON_THEME} > /dev/null
+if [[ -z "$1" ]]; then
+    echo -e "${BOLD}${YELLOW}[WARNING]${NC} No color specified. Defaulting to \"pink\"."
+    ICON_THEME="pink"
+fi
+
+echo -e "${BOLD}${BLUE}:: ${NC}Setting icon theme to $ICON_THEME.."
+papirus-folders -t Papirus -C $ICON_THEME > /dev/null
+papirus-folders -t Papirus-Dark -C $ICON_THEME > /dev/null
 echo -e "${BOLD}${GREEN}:: ${NC}Icon theme updated."

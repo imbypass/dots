@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#! /usr/bin/bash
 
 # I'm sure there are better ways of doing this, but I REALLY don't work with bash/zsh scripts often.
 # This just seemed like a more convenient way to execute some of the common shit that I do on my PC.
@@ -195,10 +195,6 @@ init_prompt() {
     esac
 }
 
-# file_upload() {
-#   curl -X POST -F "file=@$1" https://imbypass.pw/upload.php
-# }
-
 file_upload() {
     wl-paste | up -t $1 | wl-copy
     notify-send -u normal -a hyprshot -t 750 "0x0.st" "Image uploaded and copied to clipboard." -i /usr/share/icons/Papirus-Dark/96x96/apps/diodon.svg
@@ -252,6 +248,16 @@ toggle_gamemode() {
         notify-send -u normal -a Hyprland -t 750 "$OS" "Game Mode Disabled" -i /usr/share/icons/Papirus-Dark/96x96/devices/input-gaming.svg
 	fi
 	hyprctl reload > /dev/null
+}
+
+toggle_blur() {
+    echo ":: Toggling blur..."
+    HYPRBLUR=$(hyprctl getoption decoration:blur:enabled | awk 'NR==1{print $2}')
+    if [ "$HYPRBLUR" = 0 ]; then
+        hyprctl keyword decoration:blur:enabled yes
+    else
+        hyprctl keyword decoration:blur:enabled no
+    fi
 }
 
 toggle_floatwindows() {
@@ -351,6 +357,8 @@ elif [[ $1 == "free" ]];then
 
 elif [[ $1 == "gm" ]];then
 	toggle_gamemode
+elif [[ $1 == "game" ]];then
+	toggle_gamemode
 
 elif [[ $1 == "rm" ]];then
 	remove_orphans
@@ -370,6 +378,9 @@ elif [[ $1 == "up" ]];then
 
 elif [[ $1 == "hf" ]];then
 	toggle_floatwindows
+
+elif [[ $1 == "blur" ]];then
+	toggle_blur
 
 elif [[ $1 == "x" ]];then
     show_expose
