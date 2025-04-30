@@ -4,17 +4,18 @@
     "useQuickCss": true,
     "themeLinks": [],
     "enabledThemes": [
-        "base16-discord.theme.css",
+        "visual-refresh.theme.css",
+        "snippets.theme.css",
         "discolored.theme.css",
         "fonts.theme.css",
-        "snippets.theme.css",
-        "userpfp.theme.css",
-        "visual-refresh.theme.css"
+        "base16-discord.theme.css",
+        "settings-icons.theme.css",
+        "userpfp.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": true,
     "transparent": false,
-    "winCtrlQ": true,
+    "winCtrlQ": false,
     "disableMinSize": true,
     "winNativeTitleBar": false,
     "plugins": {
@@ -161,12 +162,7 @@
             "enableEmojiBypass": true,
             "transformEmojis": true,
             "transformStickers": true,
-            "transformCompoundSentence": false,
-            "emojiSize": 48,
-            "stickerSize": 160,
-            "useHyperLinks": true,
-            "hyperLinkText": "{{NAME}}",
-            "disableEmbedPermissionCheck": false
+            "transformCompoundSentence": false
         },
         "FakeProfileThemes": {
             "enabled": true,
@@ -209,7 +205,7 @@
         "ImageZoom": {
             "enabled": true,
             "size": 100,
-            "zoom": 9.088433169641068,
+            "zoom": 17.96153846153846,
             "nearestNeighbour": false,
             "square": true,
             "saveZoomValues": true,
@@ -237,23 +233,20 @@
             "enabled": false
         },
         "MessageClickActions": {
-            "enabled": true,
-            "requireModifier": false,
-            "enableDoubleClickToEdit": true,
-            "enableDoubleClickToReply": true
+            "enabled": true
         },
         "MessageLinkEmbeds": {
             "enabled": true,
+            "automodEmbeds": "never",
             "listMode": "blacklist",
-            "idList": "",
-            "automodEmbeds": "never"
+            "idList": ""
         },
         "MessageLogger": {
             "enabled": true,
             "deleteStyle": "text",
             "ignoreBots": true,
             "ignoreSelf": true,
-            "ignoreUsers": "786906691639050250",
+            "ignoreUsers": "",
             "ignoreChannels": "",
             "ignoreGuilds": "",
             "logEdits": true,
@@ -325,7 +318,8 @@
             "enabled": true
         },
         "NotificationVolume": {
-            "enabled": false
+            "enabled": true,
+            "notificationVolume": 100
         },
         "NSFWGateBypass": {
             "enabled": true
@@ -370,15 +364,6 @@
             "userBasedCategoryList": {
                 "148201667085598720": [
                     {
-                        "id": "9is5ky8j46e",
-                        "name": "Scratch Pad",
-                        "color": 10070709,
-                        "collapsed": false,
-                        "channels": [
-                            "1190873777211449414"
-                        ]
-                    },
-                    {
                         "id": "pxyf4amj7vi",
                         "name": "Close Friends",
                         "color": 10070709,
@@ -394,12 +379,21 @@
                             "1015718332109955112",
                             "294685587401605132"
                         ]
+                    },
+                    {
+                        "id": "9is5ky8j46e",
+                        "name": "Scratch Pad",
+                        "color": 10070709,
+                        "collapsed": false,
+                        "channels": [
+                            "1190873777211449414"
+                        ]
                     }
                 ]
             }
         },
         "PlainFolderIcon": {
-            "enabled": false
+            "enabled": true
         },
         "PlatformIndicators": {
             "enabled": true,
@@ -482,28 +476,28 @@
         },
         "ShowMeYourName": {
             "enabled": true,
-            "displayNames": false,
             "mode": "nick-user",
+            "displayNames": false,
             "inReplies": false
         },
         "SilentMessageToggle": {
             "enabled": true,
-            "persistState": false
+            "persistState": false,
+            "autoDisable": true
         },
         "SilentTyping": {
-            "enabled": true,
-            "isEnabled": false,
-            "showIcon": true,
-            "contextMenu": false
+            "enabled": false,
+            "isEnabled": true,
+            "showIcon": false,
+            "contextMenu": true
         },
         "SortFriendRequests": {
             "enabled": false
         },
         "SpotifyControls": {
             "enabled": false,
-            "hoverControls": true,
-            "useSpotifyUris": false,
-            "previousButtonRestartsTrack": true
+            "hoverControls": false,
+            "useSpotifyUris": false
         },
         "SpotifyCrack": {
             "enabled": true,
@@ -523,7 +517,7 @@
             "enabled": false
         },
         "ThemeAttributes": {
-            "enabled": false
+            "enabled": true
         },
         "TimeBarAllActivities": {
             "enabled": false
@@ -616,17 +610,10 @@
             "enabled": true
         },
         "NewGuildSettings": {
-            "enabled": true,
-            "guild": true,
-            "everyone": true,
-            "role": true,
-            "events": true,
-            "highlights": true,
-            "messages": 3,
-            "showAllChannels": true
+            "enabled": true
         },
         "BetterRoleContext": {
-            "enabled": false
+            "enabled": true
         },
         "ResurrectHome": {
             "enabled": false
@@ -794,11 +781,11 @@
             "enabled": false
         },
         "IrcColors": {
-            "enabled": false,
-            "memberListColors": true,
+            "enabled": true,
+            "memberListColors": false,
             "lightness": 70,
             "applyColorOnlyInDms": false,
-            "applyColorOnlyToUsersWithoutColor": true
+            "applyColorOnlyToUsersWithoutColor": false
         },
         "HideMedia": {
             "enabled": false
@@ -817,7 +804,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1745963856247
+        "settingsSyncVersion": 1746057285327
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false

@@ -1,5 +1,5 @@
 /**
- * @name Custom Interface Font
+ * @name Custom Font
  * @author @bypass_
  * @authorLink https://github.com/imbypass
  * @description Custom font instruction for base16-discord
@@ -11,5 +11,5 @@
 
 :root {
     --font-code: "IosevkaTerm Nerd Font Propo";
-    --font: "Google Sans Display Medium";
+    --font: "Google Sans Display Medium" !important;
 }

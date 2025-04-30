@@ -2,11 +2,11 @@
     "discordBranch": "stable",
     "minimizeToTray": true,
     "arRPC": true,
-    "splashColor": "rgb(223, 224, 226)",
-    "splashBackground": "rgb(54, 55, 62)",
+    "splashColor": "rgb(224, 222, 244)",
+    "splashBackground": "rgb(25, 23, 36)",
     "customTitleBar": false,
     "staticTitle": false,
-    "splashTheming": false,
+    "splashTheming": true,
     "clickTrayToShowHide": true,
     "disableMinSize": true,
     "openLinksWithElectron": false,
@@ -17,5 +17,5 @@
     "enableMenu": false,
     "disableSmoothScroll": true,
     "hardwareAcceleration": false,
-    "enableSplashScreen": false
+    "enableSplashScreen": true
 }
