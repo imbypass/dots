@@ -112,7 +112,7 @@
     > *:last-child
     > *
     .notification-action:active {
-    background-color: #74c7ec;
+    background-color: @base0D;
     color: @base05;
 }
 
@@ -144,55 +144,45 @@
 }
 
 .control-center {
-    border-radius: 12.6px;
+    border-radius: 8px;
     margin: 4px;
     background-color: @base00;
     border: 2px solid @base02;
     color: @base05;
     padding: 14px;
 }
-
 .control-center .widget-title > label {
     color: @base05;
     font-size: 1.3em;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
-
 .control-center .widget-title button {
     border-radius: 7px;
     color: @base05;
     background-color: @base01;
     padding: 8px;
 }
-
 .control-center .widget-title button:hover {
-    background-color: @base03;
-    color: @base05;
-}
-
-.control-center .widget-title button:active {
     background-color: @base0D;
     color: @base00;
 }
-
 .control-center .notification-row .notification-background {
     border-radius: 7px;
     color: @base05;
     background-color: @base01;
     margin-top: 14px;
 }
-
 .control-center .notification-row .notification-background .notification {
     padding: 4px;
     border-radius: 8px;
     border: 2px solid @base02;
 }
-
 .control-center
     .notification-row
     .notification-background
     .notification.critical {
 }
-
 .control-center
     .notification-row
     .notification-background
@@ -200,7 +190,6 @@
     .notification-content {
     margin: 7px;
 }
-
 .control-center
     .notification-row
     .notification-background
@@ -211,7 +200,6 @@
     margin-left: 8px;
     margin-top: -10px;
 }
-
 .control-center
     .notification-row
     .notification-background
@@ -222,7 +210,6 @@
     font-size: 0.8em;
     margin-top: 15px;
 }
-
 .control-center
     .notification-row
     .notification-background
@@ -233,7 +220,6 @@
     margin-left: 8px;
     margin-top: -5px;
 }
-
 .control-center
     .notification-row
     .notification-background
@@ -242,7 +228,6 @@
     > * {
     min-height: 3.4em;
 }
-
 .control-center
     .notification-row
     .notification-background
@@ -255,7 +240,6 @@
     background-color: @base00;
     margin: 7px;
 }
-
 .control-center
     .notification-row
     .notification-background
@@ -266,7 +250,6 @@
     background-color: @base01;
     color: @base05;
 }
-
 .control-center
     .notification-row
     .notification-background
@@ -274,10 +257,9 @@
     > *:last-child
     > *
     .notification-action:active {
-    background-color: #74c7ec;
+    background-color: @base0D;
     color: @base05;
 }
-
 .control-center .notification-row .notification-background .close-button {
     margin: 7px;
     padding: 2px;
@@ -285,16 +267,13 @@
     color: @base00;
     background-color: @base03;
 }
-
 .close-button {
     border-radius: 6.3px;
 }
-
 .control-center .notification-row .notification-background .close-button:hover {
     background-color: @base08;
     color: @base00;
 }
-
 .control-center
     .notification-row
     .notification-background
@@ -302,24 +281,21 @@
     background-color: @base03;
     color: @base00;
 }
-
 .control-center .notification-row .notification-background:hover {
     background-color: #7f849c;
     color: @base05;
 }
-
 .control-center .notification-row .notification-background:active {
-    background-color: #74c7ec;
+    background-color: @base0D;
     color: @base05;
 }
 
 .notification.critical progress {
-    background-color: @base03;
+    background-color: @base08;
 }
-
 .notification.low progress,
 .notification.normal progress {
-    background-color: #89b4fa;
+    background-color: @base03;
 }
 
 .control-center-dnd {
@@ -336,6 +312,9 @@
 .control-center-dnd slider {
     background: @base02;
     border-radius: 8px;
+}
+.control-center-dnd slider:hover {
+    background: @base0D;
 }
 
 .widget-dnd {
@@ -359,73 +338,7 @@
     border-radius: 8px;
 }
 
-.widget-mpris .widget-mpris-player {
-    background: @base01;
-    padding: 7px;
-}
-
-.widget-mpris .widget-mpris-title {
-    font-size: 1.2rem;
-}
-
-.widget-mpris .widget-mpris-subtitle {
-    font-size: 0.8rem;
-}
-
-.widget-menubar > box > .menu-button-bar > button > label {
-    font-size: 3rem;
-    padding: 0.5rem 2rem;
-}
-
-.widget-menubar > box > .menu-button-bar > :last-child {
-    color: @base03;
-}
-
-.power-buttons button:hover,
-.powermode-buttons button:hover,
-.screenshot-buttons button:hover {
-    background: @base01;
-}
-
 .control-center .widget-label > label {
-    color: @base05;
+    color: @base04;
     font-size: 2rem;
-}
-
-.widget-buttons-grid {
-    padding-top: 1rem;
-}
-
-.widget-buttons-grid > flowbox > flowboxchild > button label {
-    font-size: 2.5rem;
-}
-
-.widget-volume {
-    padding-top: 1rem;
-}
-
-.widget-volume label {
-    font-size: 1.5rem;
-    color: #74c7ec;
-}
-
-.widget-volume trough highlight {
-    background: #74c7ec;
-}
-
-.widget-backlight trough highlight {
-    background: #f9e2af;
-}
-
-.widget-backlight label {
-    font-size: 1.5rem;
-    color: #f9e2af;
-}
-
-.widget-backlight .KB {
-    padding-bottom: 1rem;
-}
-
-.image {
-    padding-right: 0.5rem;
 }

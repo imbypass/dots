@@ -8,9 +8,9 @@
         "snippets.theme.css",
         "discolored.theme.css",
         "fonts.theme.css",
-        "base16-discord.theme.css",
         "settings-icons.theme.css",
-        "userpfp.theme.css"
+        "userpfp.theme.css",
+        "base16-discord.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": true,
@@ -622,7 +622,7 @@
             "enabled": false
         },
         "BetterSettings": {
-            "enabled": false,
+            "enabled": true,
             "disableFade": true,
             "eagerLoad": true,
             "organizeMenu": true
@@ -781,11 +781,11 @@
             "enabled": false
         },
         "IrcColors": {
-            "enabled": true,
+            "enabled": false,
             "memberListColors": false,
             "lightness": 70,
             "applyColorOnlyInDms": false,
-            "applyColorOnlyToUsersWithoutColor": false
+            "applyColorOnlyToUsersWithoutColor": true
         },
         "HideMedia": {
             "enabled": false
@@ -804,7 +804,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1746057345849
+        "settingsSyncVersion": 1746059844152
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false
