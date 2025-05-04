@@ -37,12 +37,17 @@ UNUSED_USR_SHARE=(
     fish
     foot-server
     footclient
+    java-java-openjdk
+    jconsole-java-openjdk
+    jshell-java-openjdk
     linguist
     lstopo
     ncspot
     nvim
     org.kde.kdeconnect.nonplasma
     org.freedesktop.IBus.Setup
+    pcmanfm-qt
+    pcmanfm-qt-desktop-pref
     qdbusviewer
     qv4l2
     qvidcap

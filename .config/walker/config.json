@@ -98,6 +98,7 @@
       "exec": "wl-copy",
       "history": true,
       "name": "emojis",
+      "theme": "base16/emojis",
       "placeholder": "Emojis",
       "show_unqualified": false,
       "switcher_only": true,
@@ -283,6 +284,24 @@
           "label": "Shutdown",
           "icon": "system-shutdown",
           "exec": "shutdown now"
+        }
+      ]
+    },
+    {
+      "name": "record",
+      "theme": "base16/power",
+      "switcher_only": true,
+      "keep_sort": true,
+      "recalculate_score": true,
+      "show_icon_when_single": true,
+      "entries": [
+        {
+          "label": "▶️  Start Recording",
+          "exec": "~/.local/bin/record start"
+        },
+        {
+          "label": "⏹️  Stop Recording",
+          "exec": "~/.local/bin/record stop"
         }
       ]
     }

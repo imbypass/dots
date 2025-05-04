@@ -2,7 +2,7 @@
 
 os=$(cat /etc/os-release | grep -E '^PRETTY_NAME=' | cut -d'"' -f2 | cut -d'=' -f2)
 
-read -r _ _ version _ < /proc/version
+read -r _ _ version _ </proc/version
 kr=${version%%-*}
 
 pa=$(pacman -Q | wc -l)
@@ -15,14 +15,18 @@ wm=$(xprop -id "$id" -notype -len 100 -f _NET_WM_NAME 8t)
 wm=${wm##*WM_NAME = \"}
 wm=${wm%%\"*}
 
-brth=$(stat -c %W /);
-crnt=$(date +%s);
-tmprg=$((crnt - brth));
-ddif=$((tmprg / 86400));
+brth=$(stat -c %W /)
+crnt=$(date +%s)
+tmprg=$((crnt - brth))
+ddif=$((tmprg / 86400))
 
-r='\e[0;31m'; g='\e[0;32m'; b='\e[0;34m';
-c='\e[0;36m'; y='\e[0;33m'; m='\e[0;35m';
-w='\e[0;38m';
+r='\033[0;31m'
+g='\033[0;32m'
+b='\033[0;34m'
+c='\033[0;36m'
+y='\033[0;33m'
+m='\033[0;35m'
+w='\033[0;38m'
 
 printf "
            ${r}os  ${w}${os}

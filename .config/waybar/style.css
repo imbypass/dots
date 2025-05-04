@@ -21,6 +21,24 @@ tooltip {
     font-family: "ZedMono NFP ExtraBold";
 }
 
+menu {
+    background: transparent;
+    border-radius: 8px;
+    border: 2px solid @base02;
+    color: @base05;
+    padding: 8px;
+}
+menuitem {
+    border-radius: 8px;
+    padding: 6px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+menuitem:hover {
+    background: @base02;
+    color: @base05;
+}
+
 #clock,
 #battery,
 #network,

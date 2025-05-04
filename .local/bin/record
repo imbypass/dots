@@ -2,7 +2,7 @@
 
 # main() ?
 if [[ $1 == "start" ]];then
-    cd "/home/${USER}/Videos/Screen Recordings/" && wf-recorder -a -f "$2.mp4" > /dev/null
+    cd "/home/${USER}/Videos/Screen Recordings/" && wf-recorder -a -f "$(date +%Y-%m-%d_%H-%M-%S).mp4" > /dev/null
 elif [[ $1 == "stop" ]];then
     kill -s INT $(pidof wf-recorder)
 else

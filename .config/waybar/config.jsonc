@@ -10,7 +10,6 @@
   "passthrough": false,
   "gtk-layer-shell": true,
   "reload_style_on_change": true,
-  "height": 48,
   "tray": {
     "icon-size": 14,
     "spacing": 10,
@@ -170,6 +169,15 @@
     "format": "",
     "on-click": "swaync-client -t",
     "on-click-right": "walker -m power",
+
+    // "menu": "on-click-right",
+    // "menu-file": "~/.config/waybar/menus/power.xml",
+    // "menu-actions": {
+    //   "shutdown": "notify-send 1",
+    //   "reboot": "notify-send 2",
+    //   "suspend": "notify-send 3",
+    //   "hibernate": "notify-send 4",
+    // },
   },
   "custom/spotify": {
     "tooltip": true,
