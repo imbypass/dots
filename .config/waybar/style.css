@@ -12,6 +12,7 @@ window#waybar {
     color: @base05;
     background: @base00;
     border-top: 2px solid @base01;
+    border-radius: 0;
 }
 
 tooltip {
@@ -24,9 +25,9 @@ tooltip {
 
 menu {
     background: transparent;
-    background-color: @base01;
+    background-color: @base00;
     border-radius: 8px;
-    border: 2px solid @base02;
+    border: 2px solid @base01;
     color: @base05;
     padding: 8px;
 }
@@ -38,7 +39,7 @@ menuitem {
     font-size: 8px;
 }
 menuitem:hover {
-    background: @base02;
+    background: @base01;
     color: @base05;
 }
 
