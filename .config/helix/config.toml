@@ -16,5 +16,5 @@ render = true
 
 
 [keys.normal]
-C-s = ":w"           # Maps Ctrl-s to the typable command :w which is an alias for :write (save file)
+C-s = ":w"
 ";" = "command_mode"
