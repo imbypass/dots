@@ -24,6 +24,7 @@ tooltip {
 
 menu {
     background: transparent;
+    background-color: @base01;
     border-radius: 8px;
     border: 2px solid @base02;
     color: @base05;
@@ -31,9 +32,10 @@ menu {
 }
 menuitem {
     border-radius: 4px;
-    padding: 6px;
+    padding: 7px;
     padding-left: 2px;
     padding-right: 2px;
+    font-size: 8px;
 }
 menuitem:hover {
     background: @base02;
