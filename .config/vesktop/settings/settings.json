@@ -6,6 +6,7 @@
     "enabledThemes": [
         "userpfp.theme.css",
         "visual-refresh.theme.css",
+        "snippets.theme.css",
         "fonts.theme.css",
         "settings-icons.theme.css",
         "base16-discord.theme.css"
@@ -222,9 +223,9 @@
         "LoadingQuotes": {
             "enabled": true,
             "replaceEvents": true,
-            "enablePluginPresetQuotes": true,
+            "enablePluginPresetQuotes": false,
             "enableDiscordPresetQuotes": false,
-            "additionalQuotes": "",
+            "additionalQuotes": "Loading|Loading",
             "additionalQuotesDelimiter": "|"
         },
         "MemberCount": {
@@ -532,7 +533,7 @@
             "receivedInput": "auto",
             "receivedOutput": "en",
             "sentInput": "auto",
-            "sentOutput": "en",
+            "sentOutput": "fr",
             "showAutoTranslateTooltip": true
         },
         "TypingIndicator": {
@@ -813,7 +814,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1746380510627
+        "settingsSyncVersion": 1746405183894
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false
