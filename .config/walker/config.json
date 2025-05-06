@@ -68,11 +68,12 @@
       "avoid_line_breaks": true,
       "exec": "wl-copy",
       "image_height": 300,
-      "max_entries": 100,
+      "max_entries": 3000,
       "name": "clipboard",
       "placeholder": "Clipboard",
       "switcher_only": true,
-      "weight": 5
+      "weight": 5,
+      "theme": "base16/popup"
     },
     "commands": {
       "icon": "utilities-terminal",
@@ -98,7 +99,7 @@
       "exec": "wl-copy",
       "history": true,
       "name": "emojis",
-      "theme": "base16/emojis",
+      "theme": "base16/popup",
       "placeholder": "Emojis",
       "show_unqualified": false,
       "switcher_only": true,
@@ -256,24 +257,9 @@
       "show_icon_when_single": true,
       "entries": [
         {
-          "label": "Change Wallpaper",
-          "icon": "preferences-desktop-wallpaper",
-          "exec": "walker -n -m wallpaper"
-        },
-        {
-          "label": "Change Color Scheme",
-          "icon": "gpaint",
-          "exec": "walker -n -m themes"
-        },
-        {
-          "label": "Toggle Window Tiling",
-          "icon": "preferences-desktop-icons",
-          "exec": "~/.local/bin/bde hf"
-        },
-        {
-          "label": "Lock Screen",
-          "icon": "system-lock-screen",
-          "exec": "hyprlock"
+          "label": "Shutdown",
+          "icon": "system-shutdown",
+          "exec": "shutdown now"
         },
         {
           "label": "Reboot",
@@ -281,9 +267,29 @@
           "exec": "reboot"
         },
         {
-          "label": "Shutdown",
-          "icon": "system-shutdown",
-          "exec": "shutdown now"
+          "label": "Lock Screen",
+          "icon": "system-lock-screen",
+          "exec": "hyprlock"
+        },
+        {
+          "label": "Toggle Window Tiling",
+          "icon": "preferences-desktop-icons",
+          "exec": "~/.local/bin/bde hf"
+        },
+        {
+          "label": "Change Color Scheme",
+          "icon": "gpaint",
+          "exec": "walker -n -m themes"
+        },
+        {
+          "label": "Change Wallpaper",
+          "icon": "preferences-desktop-wallpaper",
+          "exec": "walker -n -m wallpaper"
+        },
+        {
+          "label": "Screen Recorder",
+          "icon": "preferences-desktop-display",
+          "exec": "walker -m record"
         }
       ]
     },
@@ -298,6 +304,10 @@
         {
           "label": "▶️  Start Recording",
           "exec": "~/.local/bin/record start"
+        },
+        {
+          "label": "▶️  Start Recording (No Audio)",
+          "exec": "~/.local/bin/record start --noaudio"
         },
         {
           "label": "⏹️  Stop Recording",
