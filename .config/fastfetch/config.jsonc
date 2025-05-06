@@ -20,7 +20,6 @@
         "break",
         {
             "type": "title",
-            "keyWidth": 10,
             "keyColor": "30",
         },
         {
