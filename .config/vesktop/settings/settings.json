@@ -6,9 +6,9 @@
     "enabledThemes": [
         "userpfp.theme.css",
         "visual-refresh.theme.css",
-        "snippets.theme.css",
         "fonts.theme.css",
         "settings-icons.theme.css",
+        "snippets.theme.css",
         "base16-discord.theme.css"
     ],
     "enableReactDevtools": false,
@@ -249,7 +249,7 @@
             "deleteStyle": "text",
             "ignoreBots": true,
             "ignoreSelf": true,
-            "ignoreUsers": "673256656733339668",
+            "ignoreUsers": "786906691639050250,673256656733339668",
             "ignoreChannels": "",
             "ignoreGuilds": "",
             "logEdits": true,
@@ -814,7 +814,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1746417062968
+        "settingsSyncVersion": 1746489477652
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false
