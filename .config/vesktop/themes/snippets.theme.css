@@ -48,3 +48,12 @@ div[class^="background_"] {
 .tutorialContainer__650eb + .listItem__650eb {
     display: none;
 }
+
+/* Hide User Panel custom Nameplate */
+.panels_c48ade .container__4bbc6 {
+        background: none !important;
+    }
+    .videoContainer__4bbc6 video {
+        display: none !important;
+    }
+}

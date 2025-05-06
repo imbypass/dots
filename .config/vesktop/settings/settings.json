@@ -5,12 +5,12 @@
     "themeLinks": [],
     "enabledThemes": [
         "userpfp.theme.css",
-        "visual-refresh.theme.css",
         "fonts.theme.css",
         "settings-icons.theme.css",
         "snippets.theme.css",
-        "base16-discord.theme.css",
-        "icons-recolor.theme.css"
+        "icons-recolor.theme.css",
+        "visual-refresh.theme.css",
+        "base16-discord.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": true,
@@ -298,7 +298,7 @@
             "hidePremiumOffersCount": true
         },
         "NoProfileThemes": {
-            "enabled": true
+            "enabled": false
         },
         "NoRPC": {
             "enabled": false
@@ -815,7 +815,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1746495425738
+        "settingsSyncVersion": 1746561660909
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false
