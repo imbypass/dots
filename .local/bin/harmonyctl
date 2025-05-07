@@ -1,0 +1,507 @@
+#!/bin/bash
+
+# I'm sure there are better ways of doing this, but I REALLY don't work with bash/zsh scripts often.
+# This just seemed like a more convenient way to execute some of the common shit that I do on my PC.
+
+UTIL_VERSION="0.3.0"
+
+# Define color codes
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+WHITE='\033[0;37m'
+BOLD='\033[1m'
+UNDERLINE='\033[4m'
+RESET='\033[0m'
+
+print_logo() {
+    printf "${BLUE} _   _    _    ____  __  __  ___  _   ___   __
+| | | |  / \  |  _ \|  \/  |/ _ \| \ | \ \ / /
+| |_| | / _ \ | |_) | |\/| | | | |  \| |\ V /
+|  _  |/ ___ \|  _ <| |  | | |_| | |\  | | |
+|_| |_/_/   \_\_| \_\_|  |_|\___/|_| \_| |_|
+
+${RESET}"
+}
+
+print_help() {
+    print_logo
+    printf "usage: harmonyctl <command> [args...|--help]\n\n"
+    printf "commands:\n"
+    printf "  ${BLUE}cache\t\t\t${RESET}->\tForcibly frees cached RAM.\n"
+    printf "  ${BLUE}clean\t\t\t${RESET}->\tRemove orphaned packages from the system.\n"
+    printf "  ${BLUE}dock\t\t\t${RESET}->\tToggle the visibility of the application dock.\n"
+    printf "  ${BLUE}edit <value>\t\t${RESET}->\tEdit parts of HARMONY.\n"
+    printf "  ${BLUE}expose\t\t${RESET}->\tDisplay the desktop expose.\n"
+    printf "  ${BLUE}float\t\t\t${RESET}->\tToggle floating window mode for HARMONY.\n"
+    printf "  ${BLUE}fonts\t\t\t${RESET}->\tPrint all installed fonts.\n"
+    printf "  ${BLUE}gamemode\t\t${RESET}->\tToggle game mode for HARMONY.\n"
+    printf "  ${BLUE}help\t\t\t${RESET}->\tDisplay this help prompt.\n"
+    printf "  ${BLUE}list <value>\t\t${RESET}->\tList available edit/reload values for HARMONY.\n"
+    printf "  ${BLUE}mirrors\t\t${RESET}->\tUpdate Arch repository mirror list using REFLECTOR.\n"
+    printf "  ${BLUE}reload <value>\t${RESET}->\tReload parts of HARMONY's interface.\n"
+    printf "  ${BLUE}upload\t\t${RESET}->\tUpload the clipboard to 0x0.st and copy the result.\n"
+    printf "  ${BLUE}version\t\t${RESET}->\tDisplay the current version of HARMONY\n"
+}
+print_version() {
+    print_logo;
+	printf "${RESET}A Hyprland rice by ${BLUE}@imbypass_\t\t${RESET}${UTIL_VERSION}";
+	printf "\n"
+}
+print_lists() {
+    case "$1" in
+        "")
+            printf "\navailable options:\n"
+            printf "  ${YELLOW}edit${RESET}, ${YELLOW}list${RESET}, ${YELLOW}reload"
+            printf "\n"
+        ;;
+        "edit")
+            printf "\navailable options:\n"
+            printf "  ${YELLOW}aliases${RESET}, ${YELLOW}apps${RESET}, ${YELLOW}cleanup${RESET}, ${YELLOW}colors${RESET}, ${YELLOW}custom${RESET}, ${YELLOW}decoration${RESET}, ${YELLOW}defaults${RESET}, ${YELLOW}dock${RESET}, ${YELLOW}env${RESET}, ${YELLOW}fish${RESET}, ${YELLOW}foot${RESET}, ${YELLOW}ghostty${RESET}, ${YELLOW}hypr${RESET}, ${YELLOW}keys${RESET}, ${YELLOW}layout${RESET}, ${YELLOW}lock${RESET}, ${YELLOW}mako${RESET}, ${YELLOW}path${RESET}, ${YELLOW}pins${RESET}, ${YELLOW}plugins${RESET}, ${YELLOW}rofi${RESET}, ${YELLOW}rules${RESET}, ${YELLOW}starship${RESET}, ${YELLOW}startup${RESET}, ${YELLOW}swaync${RESET}, ${YELLOW}tmux${RESET}, ${YELLOW}walker${RESET}, ${YELLOW}waybar"
+            printf "\n"
+        ;;
+        "list")
+            printf "\navailable options:\n"
+            printf "  ${YELLOW}edit${RESET}, ${YELLOW}list${RESET}, ${YELLOW}reload"
+            printf "\n"
+        ;;
+        "reload")
+            printf "\navailable options:\n"
+            printf "  ${YELLOW}dock${RESET}, ${YELLOW}ghostty${RESET}, ${YELLOW}gtk${RESET}, ${YELLOW}hypr${RESET}, ${YELLOW}hyprpanel${RESET}, ${YELLOW}mako${RESET}, ${YELLOW}mconnect${RESET}, ${YELLOW}pcmanfm${RESET}, ${YELLOW}spotify${RESET}, ${YELLOW}steam${RESET}, ${YELLOW}swaync${RESET}, ${YELLOW}walker${RESET}, ${YELLOW}waybar${RESET}, ${YELLOW}waybar_full"
+            printf "\n"
+        ;;
+    esac
+}
+
+edit_prompt() {
+    case "$1" in
+
+        # Edit the script itself
+        "")
+            cd ~/.local/bin/ && $EDITOR $0
+        ;;
+
+        # Edit Hyprland configuration
+        "colors")
+            cd ~/.config/hypr/ && $EDITOR extras/colors.conf
+        ;;
+        "hypr")
+            cd ~/.config/hypr/ && $EDITOR hyprland.conf
+        ;;
+        "keys")
+            cd ~/.config/hypr/ && $EDITOR core/binds.conf
+        ;;
+        "apps")
+            cd ~/.config/hypr/ && $EDITOR extras/user.conf
+        ;;
+        "decoration")
+            cd ~/.config/hypr/ && $EDITOR core/decoration.conf
+        ;;
+        "startup")
+            cd ~/.config/hypr/ && $EDITOR core/startup.conf
+        ;;
+        "plugins")
+            cd ~/.config/hypr/ && $EDITOR extras/plugins.conf
+        ;;
+        "layout")
+            cd ~/.config/hypr/ && $EDITOR core/layout.conf
+        ;;
+        "rules")
+            cd ~/.config/hypr/ && $EDITOR extras/rules.conf
+        ;;
+        "env")
+            cd ~/.config/hypr/ && $EDITOR core/environment.conf
+        ;;
+        "custom")
+            cd ~/.config/hypr/ && $EDITOR extras/general.conf
+        ;;
+        "lock")
+           	cd ~/.config/hypr/ && $EDITOR hyprlock.conf
+        ;;
+
+        # Edit any user configs
+        "aliases")
+            cd ~/.config/fish/ && $EDITOR conf.d/alias.fish
+        ;;
+        "path")
+            cd ~/.config/fish/ && $EDITOR conf.d/PATH.fish
+        ;;
+        "cleanup")
+            cd ~/.local/bin && $EDITOR cleanup
+        ;;
+        "dock")
+            cd ~/.config/nwg-dock-hyprland && $EDITOR style.css
+        ;;
+        "mako")
+            cd ~/.config/mako && $EDITOR config
+        ;;
+        "swaync")
+            cd ~/.config/swaync && $EDITOR config.json
+        ;;
+        "walker")
+            cd ~/.config/walker && $EDITOR config.json
+        ;;
+        "waybar")
+            cd ~/.config/waybar && $EDITOR config.jsonc
+        ;;
+        "rofi")
+            cd ~/.config/rofi && $EDITOR config.rasi
+        ;;
+        "ghostty")
+            cd ~/.config/ghostty && $EDITOR config
+        ;;
+        "foot")
+            cd ~/.config/foot && $EDITOR foot.ini
+        ;;
+        "tmux")
+            cd ~/.config/tmux && $EDITOR tmux.conf
+        ;;
+        "fish")
+            cd ~/.config/ && $EDITOR fish/config.fish
+        ;;
+        "defaults")
+            cd ~/.config/ && $EDITOR mimeapps.list
+        ;;
+        "pins")
+            cd ~/.cache/ && $EDITOR nwg-dock-pinned
+        ;;
+        "starship")
+            cd ~/.config/ && $EDITOR starship.toml
+        ;;
+    esac
+}
+reload_prompt() {
+	case "$1" in
+        "")
+            printf "${BOLD}${BLUE}:: ${RESET}No service specified. Exiting..\n"
+        ;;
+        "all")
+            reload_prompt "gtk"
+            reload_prompt "hypr"
+            reload_prompt "spotify"
+            reload_prompt "steam"
+            reload_prompt "swaync"
+            reload_prompt "walker"
+            reload_prompt "waybar_full"
+        ;;
+        "dock")
+            printf "${BOLD}${BLUE}:: ${RESET}Reloading nwg-dock-hyprland..\n"
+            killall -9 nwg-dock-hyprland > /dev/null
+            nwg-dock-hyprland -r -mb 15 -mt 10 -i 32 -x -nolauncher & disown
+        ;;
+        "waybar_full")
+            printf "${BOLD}${BLUE}:: ${RESET}Reloading waybar..\n"
+            killall -9 waybar > /dev/null
+            waybar & disown
+        ;;
+        "waybar")
+            printf "${BOLD}${BLUE}:: ${RESET}Reloading waybar..\n"
+            pkill -SIGRTMIN+7 waybar > /dev/null
+        ;;
+        "walker")
+            printf "${BOLD}${BLUE}:: ${RESET}Reloading walker service..\n"
+            killall -9 walker > /dev/null
+            walker --gapplication-service & disown
+        ;;
+        "mako")
+            printf "${BOLD}${BLUE}:: ${RESET}Reloading mako..\n"
+            makoctl reload > /dev/null
+        ;;
+        "hypr")
+            printf "${BOLD}${BLUE}:: ${RESET}Reloading hyprland..\n"
+            hyprctl reload > /dev/null
+        ;;
+        "swaync")
+            printf "${BOLD}${BLUE}:: ${RESET}Reloading swaync..\n"
+            swaync-client -rs > /dev/null
+        ;;
+        "hyprpanel")
+            printf "${BOLD}${BLUE}:: ${RESET}Reloading HyprPanel..\n"
+            killall -9 gjs > /dev/null
+            hyprpanel & disown
+        ;;
+        "ghostty")
+            printf "${BOLD}${BLUE}:: ${RESET}Reloading Ghostty..\n"
+            killall -9 ghostty > /dev/null
+            ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false & disown
+        ;;
+        "mconnect")
+            printf "${BOLD}${BLUE}:: ${RESET}Reloading mconnect..\n"
+            killall -9 mconnect > /dev/null
+            mconnect -d & disown
+        ;;
+        "gtk")
+            printf "${BOLD}${BLUE}:: ${RESET}Reloading gtk..\n"
+            cd ~/.themes/phocus && npm run build > /dev/null
+            gsettings set org.gnome.desktop.interface gtk-theme phocus_refresh > /dev/null
+            gsettings set org.gnome.desktop.interface gtk-theme phocus > /dev/null
+        ;;
+        "spotify")
+            printf "${BOLD}${BLUE}:: ${RESET}Reloading spicetify..\n"
+            spicetify apply > /dev/null
+        ;;
+        "pcmanfm")
+            printf "${BOLD}${BLUE}:: ${RESET}Reloading pcmanfm..\n"
+            killall -9 pcmanfm-qt > /dev/null
+            pcmanfm-qt --desktop & disown
+        ;;
+        "steam")
+            printf "${BOLD}${BLUE}:: ${RESET}Reloading Steam..\n"
+            ~/.local/bin/hex2rgb ~/.local/share/adwaita-steam/adwaita/colorthemes/base16/base16.css
+            sleep 2 && cd ~/.local/share/adwaita-steam/ && ./install.py --color-theme base16 --extras library/hide_whats_new --font googlesans
+        ;;
+    esac
+}
+init_prompt() {
+        case "$1" in
+            "xdg")
+       	        printf "${BOLD}${BLUE}:: ${RESET}Initializing xdg-desktop-portal..\n"
+       	        sleep 1
+       	        killall xdg-desktop-portal-hyprland > /dev/null
+       	        killall xdg-desktop-portal > /dev/null
+       	        sleep 1
+       	        /usr/lib/xdg-desktop-portal-hyprland > /dev/null &
+       	        sleep 2
+       	        /usr/lib/xdg-desktop-portal > /dev/null &
+       	        sleep 1
+            ;;
+            "wp")
+       	        printf "${BOLD}${BLUE}:: ${RESET}Initializing swww..\n"
+       	        swww-daemon > /dev/null & disown
+       	        swww-daemon --format xrgb > /dev/null & disown
+            ;;
+        esac
+}
+
+file_upload() {
+        wl-paste | up -t $1 | wl-copy
+        notify-send -u normal -a hyprshot -t 750 "0x0.st" "Image uploaded and copied to clipboard." -i /usr/share/icons/Papirus-Dark/96x96/apps/diodon.svg
+}
+search_steamapps() {
+    for id in $(ls ~/.local/share/Steam/steamapps/compatdata);
+        do echo "$id: $(curl -s "https://store.steampowered.com/app/$id/" | grep -oP '(?<=<title>)[^<]*' )";
+    done
+}
+search_fonts() {
+    printf "${BOLD}${BLUE}:: ${RESET}Listing installed fonts..\n"
+    fc-list | grep -ioE ": [^:]*$1[^:]+:" | sed -E 's/(^: |:)//g' | tr , \\n | sort | uniq
+}
+free_cache() {
+    printf "${BOLD}${BLUE}:: ${RESET}Freeing cached RAM..\n"
+    printf 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null
+}
+remove_orphans() {
+    printf "${BOLD}${BLUE}:: ${RESET}Removing orphaned packages..\n"
+    # pacman -Qdtq | sudo pacman -Rns - > /dev/null
+    sudo pacman -Rns $(pacman -Qdtq) --noconfirm > /dev/null
+}
+
+toggle_gamemode() {
+    printf "${BOLD}${BLUE}:: ${RESET}Toggling game mode..\n"
+	HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
+	OS=$(cat /etc/os-release | grep -E '^PRETTY_NAME=' | cut -d'"' -f2 | cut -d'=' -f2)
+	if [ "$HYPRGAMEMODE" = 1 ] ; then
+                notify-send -u normal -a Hyprland -t 750 "$OS" "Game Mode Enabled" -i /usr/share/icons/Papirus-Dark/96x96/devices/input-gaming.svg
+	        hyprctl --batch "\
+	                keyword animations:enabled 0;\
+	                keyword decoration:drop_shadow 0;\
+	                keyword decoration:blur:enabled 0;\
+	                keyword general:gaps_in 0;\
+	                keyword general:gaps_out 0;\
+	                keyword general:border_size 1;\
+	                keyword decoration:rounding 0" > /dev/null
+	        exit
+	else
+                notify-send -u normal -a Hyprland -t 750 "$OS" "Game Mode Disabled" -i /usr/share/icons/Papirus-Dark/96x96/devices/input-gaming.svg
+	fi
+	hyprctl reload > /dev/null
+	hyprshade on vibrance > /dev/null
+}
+toggle_blur() {
+        printf "${BOLD}${BLUE}:: ${RESET}Toggling blur..\n"
+        HYPRBLUR=$(hyprctl getoption decoration:blur:enabled | awk 'NR==1{print $2}')
+        if [ "$HYPRBLUR" = 0 ]; then
+                hyprctl keyword decoration:blur:enabled yes
+        else
+                hyprctl keyword decoration:blur:enabled no
+        fi
+        hyprshade on vibrance > /dev/null
+}
+toggle_floatwindows() {
+    printf "${BOLD}${BLUE}:: ${RESET}Toggling all floating windows..\n"
+    hyprctl dispatch workspaceopt allfloat > /dev/null
+}
+toggle_dock() {
+    printf "${BOLD}${BLUE}:: ${RESET}Toggling dock visibility..\n"
+    killall nwg-dock-hyprland > /dev/null || nwg-dock-hyprland -r -mb 15 -mt 10 -i 32 -nolauncher > /dev/null  & disown > /dev/null
+}
+
+show_expose() {
+        printf "${BOLD}${BLUE}:: ${RESET}Showing desktop expose..\n"
+        sleep 0.15
+        hyprctl dispatch hyprexpo:expo show > /dev/null
+}
+
+update_mirrors() {
+        printf "${BOLD}${BLUE}:: ${RESET}Updating mirrors..\n"
+        sudo reflector --verbose --country US --latest 8 --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist > /dev/null
+}
+
+update_colors() {
+        printf "${BOLD}${BLUE}:: ${RESET}Updating system colors..\n"
+        /usr/bin/wal -i ~/.local/share/wallpapers/.wallpaper
+}
+
+update_prompt() {
+        case "$1" in
+                "zed")
+        	        printf "${BOLD}${BLUE}:: ${RESET}Updating zed..\n"
+                        curl -f https://zed.dev/install.sh | sh
+                        ~/.local/bin/patch-zed-icon
+                ;;
+                "mirrors")
+                        update_mirrors
+                ;;
+                "colors")
+                        update_colors
+                ;;
+                "")
+                        printf "ok"
+                ;;
+        esac
+}
+
+popout_prompt() {
+        case "$1" in
+
+                "apps")
+                        walker -m applications
+                ;;
+                "a")
+                        walker -m applications
+                ;;
+
+                "theme")
+                        walker -m themes
+                ;;
+                "t")
+                        walker -m themes
+                ;;
+
+                "wall")
+                        walker -n -m wallpaper
+                ;;
+                "w")
+                        walker -n -m wallpaper
+                ;;
+
+                "")
+                        printf "ok"
+                ;;
+        esac
+}
+
+
+
+if [[ $1 == "--version" ]];then
+    print_version
+elif [[ $1 == "-v" ]];then
+    print_version
+elif [[ $1 == "version" ]];then
+    print_version
+elif [[ $1 == "v" ]];then
+    print_version
+
+elif [[ $1 == "--help" ]];then
+    print_help
+elif [[ $1 == "-h" ]];then
+    print_help
+elif [[ $1 == "help" ]];then
+    print_help
+elif [[ $1 == "h" ]];then
+    print_help
+
+elif [[ $1 == "list" ]];then
+    print_lists $2
+
+elif [[ $1 == "dock" ]];then
+	toggle_dock
+
+
+elif [[ $1 == "reload" ]];then
+    reload_prompt $2
+elif [[ $1 == "rl" ]];then
+    reload_prompt $2
+
+elif [[ $1 == "wp" ]];then
+    swww img $2
+
+elif [[ $1 == "edit" ]];then
+        edit_prompt $2
+elif [[ $1 == "e" ]];then
+        edit_prompt $2
+
+elif [[ $1 == "cache" ]];then
+	free_cache
+elif [[ $1 == "free" ]];then
+	free_cache
+
+elif [[ $1 == "gm" ]];then
+	toggle_gamemode
+elif [[ $1 == "game" ]];then
+	toggle_gamemode
+elif [[ $1 == "gamemode" ]];then
+	toggle_gamemode
+
+elif [[ $1 == "rm" ]];then
+	remove_orphans
+elif [[ $1 == "clean" ]];then
+	remove_orphans
+
+elif [[ $1 == "steam" ]];then
+	search_steamapps
+elif [[ $1 == "fonts" ]];then
+	search_fonts
+
+elif [[ $1 == "init" ]];then
+	init_prompt $2
+
+elif [[ $1 == "up" ]];then
+	file_upload $2
+elif [[ $1 == "upload" ]];then
+	file_upload $2
+
+elif [[ $1 == "hf" ]];then
+	toggle_floatwindows
+elif [[ $1 == "float" ]];then
+	toggle_floatwindows
+
+elif [[ $1 == "blur" ]];then
+	toggle_blur
+
+elif [[ $1 == "x" ]];then
+        show_expose
+elif [[ $1 == "expose" ]];then
+	show_expose
+
+elif [[ $1 == "m" ]];then
+        update_mirrors
+elif [[ $1 == "mirrors" ]];then
+	update_mirrors
+
+elif [[ $1 == "update" ]];then
+        update_prompt $2
+elif [[ $1 == "u" ]];then
+        update_prompt $2
+
+elif [[ $1 == "popout" ]];then
+        popout_prompt $2
+elif [[ $1 == "p" ]];then
+        popout_prompt $2
+
+else
+    print_help
+fi
