@@ -288,7 +288,7 @@
         },
         {
           "label": "Screen Recorder",
-          "icon": "preferences-desktop-display",
+          "icon": "simplescreenrecorder",
           "exec": "walker -m record"
         }
       ]
