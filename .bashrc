@@ -5,8 +5,8 @@
 PS1='[\u@\h \W]\$ '
 
 # Initialization - Homebrew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-. "$HOME/.cargo/env"
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# . "$HOME/.cargo/env"
 
 # Initialization - Starship
 eval "$(starship init bash)"
