@@ -7,10 +7,10 @@
         "userpfp.theme.css",
         "fonts.theme.css",
         "settings-icons.theme.css",
-        "snippets.theme.css",
         "icons-recolor.theme.css",
         "visual-refresh.theme.css",
-        "base16-discord.theme.css"
+        "base16-discord.theme.css",
+        "snippets.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": true,
@@ -815,7 +815,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1746561660909
+        "settingsSyncVersion": 1746660319760
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false
