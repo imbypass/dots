@@ -10,7 +10,7 @@ template = "phocus"
 rewrite = false
 start = "// start colors"
 end = "// end colors"
-hook = "~/.local/bin/bde rl gtk"
+hook = "~/.local/bin/harmonyctl reload gtk"
 
 ### GTK 4.0 THEME ###
 [[items]]
@@ -19,7 +19,7 @@ template = "gtk4"
 rewrite = false
 start = "/* start colors */"
 end = "/* end colors */"
-hook = "~/.local/bin/bde rl gtk"
+hook = "~/.local/bin/harmonyctl reload gtk"
 
 ### VESKTOP ###
 [[items]]
@@ -54,7 +54,7 @@ end = "# end colors"
 file = "~/.local/share/adwaita-steam/adwaita/colorthemes/base16/base16.css"
 template = "steam"
 rewrite = true
-hook = "~/.local/bin/bde rl steam"
+hook = "~/.local/bin/harmonyctl reload steam"
 
 ### ZED EDITOR ###
 [[items]]
@@ -75,7 +75,7 @@ template = "mako"
 rewrite = false
 start = "# start colors"
 end = "# end colors"
-hook = "~/.local/bin/bde rl mako"
+hook = "~/.local/bin/harmonyctl reload mako"
 
 ### SWAYNC DAEMON ###
 [[items]]
@@ -91,14 +91,14 @@ template = "walker"
 rewrite = false
 start = "/* start flavours */"
 end = "/* end flavours */"
-hook = "~/.local/bin/bde rl walker"
+hook = "~/.local/bin/harmonyctl reload walker"
 
 ### WAYBAR ###
 [[items]]
 file = "~/.config/waybar/base16.css"
 template = "waybar"
 rewrite = true
-hook = "~/.local/bin/bde rl waybar"
+hook = "~/.local/bin/harmonyctl reload waybar"
 
 ### FOOT TERMINAL ###
 [[items]]
@@ -111,7 +111,7 @@ rewrite = true
 file = "~/.config/ghostty/themes/base.conf"
 template = "ghostty"
 rewrite = true
-hook = "~/.local/bin/bde rl ghostty"
+hook = "~/.local/bin/harmonyctl reload ghostty"
 
 ### TMUX ###
 [[items]]
@@ -144,7 +144,7 @@ rewrite = true
 file = "~/.config/spicetify/Themes/base16/color.ini"
 template = "spotify"
 rewrite = true
-hook = "~/.local/bin/bde rl spotify"
+hook = "~/.local/bin/harmonyctl reload spotify"
 light = false
 
 ### NWG DOCK ###
@@ -152,4 +152,4 @@ light = false
 file = "~/.config/nwg-dock-hyprland/colors.css"
 template = "nwg-dock"
 rewrite = true
-hook = "~/.local/bin/bde rl dock"
+hook = "~/.local/bin/harmonyctl reload dock"
