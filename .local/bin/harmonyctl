@@ -110,7 +110,7 @@ edit_prompt() {
             cd ~/.config/hypr/ && $EDITOR core/layout.conf
         ;;
         "rules")
-            cd ~/.config/hypr/ && $EDITOR extras/rules.conf
+            cd ~/.config/hypr/ && $EDITOR . extras/rules.conf
         ;;
         "env")
             cd ~/.config/hypr/ && $EDITOR core/environment.conf
