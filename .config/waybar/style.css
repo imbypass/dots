@@ -150,10 +150,10 @@ hr {
     padding-right: 12px;
 }
 #workspaces button:hover {
-    color: @base0D;
+    color: @base09;
 }
 #workspaces button.active {
-    color: @base0D;
+    color: @base09;
 }
 #workspaces button.urgent {
     color: @base0A;
@@ -176,7 +176,7 @@ hr {
     font-size: 21.5px;
     background-color: @base00;
     border: 2px solid @base00;
-    color: @base0D;
+    color: @base09;
     margin-bottom: 5px;
     font-family: "ZedMono NFP ExtraBold";
     border-radius: 8px;
@@ -196,7 +196,7 @@ hr {
     color: @base02;
 }
 #custom-power:hover {
-    color: @base0D;
+    color: @base09;
 }
 
 #custom-expose {
@@ -211,7 +211,7 @@ hr {
     font-size: 13px;
 }
 #custom-expose:hover {
-    color: @base0D;
+    color: @base09;
 }
 
 #custom-tray {

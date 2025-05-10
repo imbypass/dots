@@ -112,7 +112,7 @@
     > *:last-child
     > *
     .notification-action:active {
-    background-color: @base0D;
+    background-color: @base09;
     color: @base05;
 }
 
@@ -164,7 +164,7 @@
     padding: 8px;
 }
 .control-center .widget-title button:hover {
-    background-color: @base0D;
+    background-color: @base09;
     color: @base00;
 }
 .control-center .notification-row .notification-background {
@@ -257,7 +257,7 @@
     > *:last-child
     > *
     .notification-action:active {
-    background-color: @base0D;
+    background-color: @base09;
     color: @base05;
 }
 .control-center .notification-row .notification-background .close-button {
@@ -286,7 +286,7 @@
     color: @base05;
 }
 .control-center .notification-row .notification-background:active {
-    background-color: @base0D;
+    background-color: @base09;
     color: @base05;
 }
 
@@ -314,7 +314,7 @@
     border-radius: 8px;
 }
 .control-center-dnd slider:hover {
-    background: @base0D;
+    background: @base09;
 }
 
 .widget-dnd {
