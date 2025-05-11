@@ -28,7 +28,7 @@ ${RESET}"
 }
 
 print_help() {
-    print_logo
+    # print_logo
     printf "usage: harmonyctl <command> [args...|--help]\n\n"
     printf "commands:\n"
     printf "  ${BLUE}cache\t\t\t${RESET}->\tForcibly frees cached RAM.\n"
@@ -282,6 +282,46 @@ file_upload() {
         wl-paste | up -t $1 | wl-copy
         notify-send -u normal -a hyprshot -t 750 "0x0.st" "Image uploaded and copied to clipboard." -i /usr/share/icons/Papirus-Dark/96x96/apps/diodon.svg
 }
+free_cache() {
+    printf "${BOLD}${BLUE}:: ${RESET}Freeing cached RAM..\n"
+    printf 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null
+}
+
+popout_prompt() {
+        case "$1" in
+
+                "apps")
+                        walker -m applications
+                ;;
+                "a")
+                        walker -m applications
+                ;;
+
+                "theme")
+                        walker -m themes
+                ;;
+                "t")
+                        walker -m themes
+                ;;
+
+                "wall")
+                        walker -n -m wallpaper
+                ;;
+                "w")
+                        walker -n -m wallpaper
+                ;;
+
+                "")
+                        printf "ok"
+                ;;
+        esac
+}
+
+remove_orphans() {
+    printf "${BOLD}${BLUE}:: ${RESET}Removing orphaned packages..\n"
+    # pacman -Qdtq | sudo pacman -Rns - > /dev/null
+    sudo pacman -Rns $(pacman -Qdtq) --noconfirm > /dev/null
+}
 search_steamapps() {
     for id in $(ls ~/.local/share/Steam/steamapps/compatdata);
         do echo "$id: $(curl -s "https://store.steampowered.com/app/$id/" | grep -oP '(?<=<title>)[^<]*' )";
@@ -291,14 +331,40 @@ search_fonts() {
     printf "${BOLD}${BLUE}:: ${RESET}Listing installed fonts..\n"
     fc-list | grep -ioE ": [^:]*$1[^:]+:" | sed -E 's/(^: |:)//g' | tr , \\n | sort | uniq
 }
-free_cache() {
-    printf "${BOLD}${BLUE}:: ${RESET}Freeing cached RAM..\n"
-    printf 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null
+
+show_expose() {
+        printf "${BOLD}${BLUE}:: ${RESET}Showing desktop expose..\n"
+        sleep 0.15
+        hyprctl dispatch hyprexpo:expo show > /dev/null
 }
-remove_orphans() {
-    printf "${BOLD}${BLUE}:: ${RESET}Removing orphaned packages..\n"
-    # pacman -Qdtq | sudo pacman -Rns - > /dev/null
-    sudo pacman -Rns $(pacman -Qdtq) --noconfirm > /dev/null
+
+take_screenshot() {
+    TIMESTAMP=$(date +%d%m%Y_%H%M%S)
+    case "$1" in
+        "")
+            hyprshot -m region -z -f "screenshot_${TIMESTAMP}.png"
+        ;;
+        "region")
+            hyprshot -m region -z -f "screenshot_${TIMESTAMP}.png"
+        ;;
+        "--region")
+            hyprshot -m region -z -f "screenshot_${TIMESTAMP}.png"
+        ;;
+        "screen")
+            hyprshot -m output -z -f "screenshot_${TIMESTAMP}.png"
+        ;;
+        "--screen")
+            hyprshot -m output -z -f "screenshot_${TIMESTAMP}.png"
+        ;;
+        "window")
+            hyprshot -m window -z -f "screenshot_${TIMESTAMP}.png"
+        ;;
+        "--window")
+            hyprshot -m window -z -f "screenshot_${TIMESTAMP}.png"
+        ;;
+    esac
+
+    canberra-gtk-play -i camera-shutter
 }
 
 toggle_gamemode() {
@@ -341,12 +407,6 @@ toggle_dock() {
     killall nwg-dock-hyprland > /dev/null || nwg-dock-hyprland -r -mb 15 -mt 10 -i 32 -nolauncher > /dev/null  & disown > /dev/null
 }
 
-show_expose() {
-        printf "${BOLD}${BLUE}:: ${RESET}Showing desktop expose..\n"
-        sleep 0.15
-        hyprctl dispatch hyprexpo:expo show > /dev/null
-}
-
 update_mirrors() {
         printf "${BOLD}${BLUE}:: ${RESET}Updating mirrors..\n"
         sudo reflector --verbose --country US --latest 8 --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist > /dev/null
@@ -370,36 +430,6 @@ update_prompt() {
                 "colors")
                         update_colors
                 ;;
-                "")
-                        printf "ok"
-                ;;
-        esac
-}
-
-popout_prompt() {
-        case "$1" in
-
-                "apps")
-                        walker -m applications
-                ;;
-                "a")
-                        walker -m applications
-                ;;
-
-                "theme")
-                        walker -m themes
-                ;;
-                "t")
-                        walker -m themes
-                ;;
-
-                "wall")
-                        walker -n -m wallpaper
-                ;;
-                "w")
-                        walker -n -m wallpaper
-                ;;
-
                 "")
                         printf "ok"
                 ;;
@@ -490,19 +520,24 @@ elif [[ $1 == "expose" ]];then
 	show_expose
 
 elif [[ $1 == "m" ]];then
-        update_mirrors
+    update_mirrors
 elif [[ $1 == "mirrors" ]];then
 	update_mirrors
 
 elif [[ $1 == "update" ]];then
-        update_prompt $2
+    update_prompt $2
 elif [[ $1 == "u" ]];then
-        update_prompt $2
+    update_prompt $2
 
 elif [[ $1 == "popout" ]];then
-        popout_prompt $2
+    popout_prompt $2
 elif [[ $1 == "p" ]];then
-        popout_prompt $2
+    popout_prompt $2
+
+elif [[ $1 == "screenshot" ]];then
+    take_screenshot $2
+elif [[ $1 == "ss" ]];then
+    take_screenshot $2
 
 else
     print_help
