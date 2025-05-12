@@ -17,7 +17,7 @@
 
   // ==========[ ENABLED WAYBAR MODULES ]=========== //
   "modules-left": ["custom/logo", "wlr/taskbar"],
-  "modules-center": [],
+  "modules-center": ["hyprland/workspaces"],
   "modules-right": [
     "group/systray",
     "pulseaudio",
