@@ -27,6 +27,12 @@ file = "~/.config/vesktop/settings/quickCss.css"
 template = "vesktop"
 rewrite = true
 
+### NCSPOT ###
+[[items]]
+file = "~/.config/ncspot/config.toml"
+template = "ncspot"
+rewrite = true
+
 ### FIREFOX ###
 [[items]]
 file = "/home/bypass/.mozilla/firefox/li1xg7z9.default-release/chrome/userChrome.css"
