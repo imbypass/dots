@@ -26,7 +26,7 @@ image/png=swayimg.desktop;
 image/svg+xml=swayimg.desktop;
 image/webp=swayimg.desktop;
 image/x-dds=swayimg.desktop;
-inode/directory=xfce4-file-manager.desktop;org.gnome.Nautilus.desktop;
+inode/directory=org.gnome.Nautilus.desktop;
 inode/symlink=dev.zed.Zed.desktop;
 text/css=dev.zed.Zed.desktop;
 text/html=firefox.desktop;
@@ -43,7 +43,7 @@ video/x-matroska=mpv.desktop;
 x-scheme-handler/chrome=firefox.desktop;
 x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
-x-scheme-handler/trash=xfce4-file-manager.desktop;
+x-scheme-handler/trash=org.gnome.Nautilus.desktop;
 
 [Default Applications]
 application/json=dev.zed.Zed.desktop
@@ -72,7 +72,7 @@ image/png=swayimg.desktop
 image/svg+xml=swayimg.desktop
 image/webp=swayimg.desktop
 image/x-dds=swayimg.desktop
-inode/directory=org.gnome.Nautilus.desktop
+inode/directory=org.gnome.Nautilus.desktop;
 inode/symlink=dev.zed.Zed.desktop
 text/css=dev.zed.Zed.desktop
 text/html=firefox.desktop
