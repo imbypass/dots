@@ -54,7 +54,6 @@ UNUSED_USR_SHARE=(
     ranger
     yad-icon-browser
     yad-settings
-    yazi
 )
 
 for file in "${UNUSED_USR_SHARE[@]}"; do
