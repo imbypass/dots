@@ -9,8 +9,8 @@
         "settings-icons.theme.css",
         "icons-recolor.theme.css",
         "visual-refresh.theme.css",
-        "base16-discord.theme.css",
-        "snippets.theme.css"
+        "snippets.theme.css",
+        "base16-discord.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": true,
@@ -141,7 +141,7 @@
             "dearrowByDefault": true
         },
         "Decor": {
-            "enabled": false,
+            "enabled": true,
             "agreedToGuidelines": false
         },
         "EmoteCloner": {
@@ -815,7 +815,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1746970627216
+        "settingsSyncVersion": 1747011186371
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false

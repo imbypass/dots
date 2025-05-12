@@ -60,13 +60,13 @@ div[class^="background_"] {
 }
 
 /* Hide User Panel custom Nameplate */
-.panels_c48ade .container__4bbc6 {
+/* .panels_c48ade .container__4bbc6 {
         background: none !important;
     }
     .videoContainer__4bbc6 video {
         display: none !important;
     }
-}
+} */
 
 /* Hide Voice Channel Tile Gradients */
 :where(.visual-refresh) .singleUserRoot__4ad81 {
