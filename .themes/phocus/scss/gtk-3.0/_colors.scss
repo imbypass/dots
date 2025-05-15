@@ -1,0 +1,66 @@
+// start colors
+/*
+*
+* Base16 Rosé Pine
+* Author: Emilia Dunfelt &lt;edun@dunfelt.se&gt;
+*
+*/
+
+$base00: #191724;
+$base01: #1f1d2e;
+$base02: #26233a;
+$base03: #6e6a86;
+$base04: #908caa;
+$base05: #e0def4;
+$base06: #e0def4;
+$base07: #524f67;
+$base08: #eb6f92;
+$base09: #ebbcba;
+$base0A: #f6c177;
+$base0B: #31748f;
+$base0C: #9ccfd8;
+$base0D: #c4a7e7;
+$base0E: #ebbcba;
+$base0F: #524f67;
+// end colors
+
+$surface-strongest: $base00;
+$surface-strong: $base01;
+$surface-moderate: $base02;
+$surface-weak: $base01;
+$surface-weakest: $base04;
+
+$white-strongest: rgb(255, 255, 255);
+$white-strong: rgba(255, 255, 255, 0.87);
+$white-moderate: rgba(255, 255, 255, 0.34);
+$white-weak: rgba(255, 255, 255, 0.14);
+$white-weakest: rgba(255, 255, 255, 0.06);
+
+$black-strongest: rgb(0, 0, 0);
+$black-strong: rgba(0, 0, 0, 0.87);
+$black-moderate: rgba(0, 0, 0, 0.42);
+$black-weak: rgba(0, 0, 0, 0.15);
+$black-weakest: rgba(0, 0, 0, 0.06);
+
+$red-normal: $base08;
+$red-light: $base08;
+$orange-normal: $base09;
+$orange-light: $base09;
+$yellow-normal: $base0A;
+$yellow-light: $base0A;
+$green-normal: $base0B;
+$green-light: $base0B;
+$cyan-normal: $base0C;
+$cyan-light: $base0C;
+$blue-normal: $base0D;
+$blue-light: $base0D;
+$purple-normal: $base0E;
+$purple-light: $base0E;
+$pink-normal: $base0F;
+$pink-light: $base0F;
+
+$accent-primary: $base03;
+$accent-secondary: $base03;
+
+// TODO: is there a better way to do this? this is for example used in gnome-calculator for the result top-border
+@define-color borders #{"" +$surface-strong};
