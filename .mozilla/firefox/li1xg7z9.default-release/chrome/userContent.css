@@ -1,0 +1,32 @@
+/* base16_firefox - userContent */
+
+:root {
+    /* start colors */
+--base00: #191724;
+--base01: #1f1d2e;
+--base02: #26233a;
+--base03: #6e6a86;
+--base04: #908caa;
+--base05: #e0def4;
+--base06: #e0def4;
+--base07: #524f67;
+--base08: #eb6f92;
+--base09: #ebbcba;
+--base0A: #f6c177;
+--base0B: #31748f;
+--base0C: #9ccfd8;
+--base0D: #c4a7e7;
+--base0E: #ebbcba;
+--base0F: #524f67;
+    /* end colors */
+
+    --newtab-background-color: var(--base01) !important;
+    --newtab-background-color-secondary: var(--base02) !important;
+    --newtab-text-primary-color: var(--base05) !important;
+    --newtab-text-secondary-text: var(--base04) !important;
+    --newtab-wallpaper-color: var(--base01) !important;
+}
+
+body {
+    border: none;
+}
