@@ -257,24 +257,9 @@
       "show_icon_when_single": true,
       "entries": [
         {
-          "label": "Shutdown",
-          "icon": "system-shutdown",
-          "exec": "shutdown now"
-        },
-        {
-          "label": "Reboot",
-          "icon": "system-reboot",
-          "exec": "reboot"
-        },
-        {
-          "label": "Lock Screen",
-          "icon": "system-lock-screen",
-          "exec": "hyprlock"
-        },
-        {
-          "label": "Toggle Window Tiling",
-          "icon": "preferences-desktop-icons",
-          "exec": "~/.local/bin/bde hf"
+          "label": "Screen Recorder",
+          "icon": "simplescreenrecorder",
+          "exec": "walker -m record"
         },
         {
           "label": "Change Color Scheme",
@@ -287,9 +272,24 @@
           "exec": "walker -n -m wallpaper"
         },
         {
-          "label": "Screen Recorder",
-          "icon": "simplescreenrecorder",
-          "exec": "walker -m record"
+          "label": "Toggle Window Tiling",
+          "icon": "preferences-desktop-icons",
+          "exec": "~/.local/bin/bde hf"
+        },
+        {
+          "label": "Lock Screen",
+          "icon": "system-lock-screen",
+          "exec": "hyprlock"
+        },
+        {
+          "label": "Reboot",
+          "icon": "system-reboot",
+          "exec": "reboot"
+        },
+        {
+          "label": "Shutdown",
+          "icon": "system-shutdown",
+          "exec": "shutdown now"
         }
       ]
     },

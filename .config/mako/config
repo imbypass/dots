@@ -1,10 +1,10 @@
-format=<b>%a ⏵</b> %s\n%b
+format=<b>%s</b>\n%b
 sort=-time
 layer=overlay
 width=400
 height=400
 border-size=2
-border-radius=14
+border-radius=0
 icons=1
 margin=20
 padding=10

@@ -14,6 +14,7 @@ hook = "~/.local/bin/harmonyctl reload gtk"
 
 ### GTK 4.0 THEME ###
 [[items]]
+#file = "~/.themes/phocus/gtk-4.0/gtk.css"
 file = "~/.config/gtk-4.0/gtk.css"
 template = "gtk4"
 rewrite = false

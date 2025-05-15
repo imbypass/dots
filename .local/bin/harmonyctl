@@ -194,14 +194,10 @@ reload_prompt() {
             printf "${BOLD}${BLUE}:: ${RESET}Hiding nwg-dock-hyprland..\n"
             killall -37 nwg-dock-hyprland > /dev/null
         ;;
-        "waybar_full")
-            printf "${BOLD}${BLUE}:: ${RESET}Reloading waybar..\n"
+        "waybar")
+            printf "${BOLD}${BLUE}:: ${RESET}Reloading waybar (full)..\n"
             killall -9 waybar > /dev/null
             waybar & disown
-        ;;
-        "waybar")
-            printf "${BOLD}${BLUE}:: ${RESET}Reloading waybar..\n"
-            pkill -SIGRTMIN+7 waybar > /dev/null
         ;;
         "walker")
             printf "${BOLD}${BLUE}:: ${RESET}Reloading walker service..\n"

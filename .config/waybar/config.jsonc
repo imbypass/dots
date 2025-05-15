@@ -1,6 +1,6 @@
 {
   "layer": "bottom",
-  "position": "bottom",
+  "position": "top",
   "margin-top": 0,
   "margin-right": 0,
   "margin-left": 0,
@@ -17,7 +17,7 @@
 
   // ==========[ ENABLED WAYBAR MODULES ]=========== //
   "modules-left": ["custom/logo", "wlr/taskbar"],
-  "modules-center": ["hyprland/workspaces"],
+  "modules-center": [],
   "modules-right": [
     "group/systray",
     "pulseaudio",
@@ -111,7 +111,7 @@
     "tooltip": true,
     "format-muted": "    MUTE",
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-    "on-click-right": "GTK_THEME=Adw pavucontrol",
+    "on-click-right": "GTK_THEME=FOURdotZERO pavucontrol",
     "on-scroll-up": "pamixer -i 1",
     "on-scroll-down": "pamixer -d 1",
     "scroll-step": 1,
@@ -130,7 +130,7 @@
     "format-source": "  {volume}%",
     "format-source-muted": "   MUTE",
     "on-click": "pamixer --default-source -t",
-    "on-click-right": "GTK_THEME=Adw pavucontrol -t 4",
+    "on-click-right": "GTK_THEME=phocus pavucontrol -t 4",
     "on-scroll-up": "pamixer --default-source -i 1",
     "on-scroll-down": "pamixer --default-source -d 1",
     "scroll-step": 5,
@@ -167,8 +167,8 @@
   "custom/power": {
     "tooltip": false,
     "format": "",
-    "on-click": "swaync-client -t",
     "on-click-right": "walker -m power",
+    "on-click": "walker -m power",
 
     // "menu": "on-click-right",
     // "menu-file": "~/.config/waybar/menus/power.xml",

@@ -736,7 +736,7 @@
             "enabled": true
         },
         "WebRichPresence (arRPC)": {
-            "enabled": true
+            "enabled": false
         },
         "ConsoleJanitor": {
             "enabled": true,
@@ -815,7 +815,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1747011186371
+        "settingsSyncVersion": 1747186328854
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false

@@ -44,7 +44,7 @@
                 "hide": true
               },
               "icon": {
-                "pixel_size": 250,
+                "pixel_size": 100,
                 "theme": ""
               },
               "label": {
@@ -58,9 +58,9 @@
               "left": 0,
               "right": 0
             },
-            "max_height": 550,
-            "max_width": 1000,
-            "min_width": 1000,
+            "max_height": 495,
+            "max_width": 800,
+            "min_width": 800,
             "width": 150
           }
         },
@@ -91,7 +91,7 @@
             "hide": true
           }
         },
-        "width": 450
+        "width": 250
       },
       "h_align": "fill",
       "v_align": "fill"
