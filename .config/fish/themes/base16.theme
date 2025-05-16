@@ -1,37 +1,37 @@
-# Base16 Rosé Pine - fish color config
-# Emilia Dunfelt &lt;edun@dunfelt.se&gt;
+# Base16 Material Darker - fish color config
+# Nate Peterson
 
-fish_color_normal e0def4
-fish_color_command c4a7e7
-fish_color_keyword 9ccfd8
-fish_color_quote ebbcba
-fish_color_redirection 31748f
-fish_color_end 908caa
-fish_color_error eb6f92
-fish_color_param f6c177
-fish_color_comment 908caa
+fish_color_normal eeffff
+fish_color_command 82aaff
+fish_color_keyword 89ddff
+fish_color_quote f78c6c
+fish_color_redirection c3e88d
+fish_color_end b2ccd6
+fish_color_error f07178
+fish_color_param ffcb6b
+fish_color_comment b2ccd6
 fish_color_selection --reverse
-fish_color_operator e0def4
-fish_color_escape 31748f
-fish_color_autosuggestion 908caa
-fish_color_cwd f6c177
-fish_color_user ebbcba
-fish_color_host 9ccfd8
-fish_color_host_remote c4a7e7
-fish_color_cancel e0def4
-fish_color_search_match --background=191724
+fish_color_operator eeffff
+fish_color_escape c3e88d
+fish_color_autosuggestion b2ccd6
+fish_color_cwd ffcb6b
+fish_color_user f78c6c
+fish_color_host 89ddff
+fish_color_host_remote 82aaff
+fish_color_cancel eeffff
+fish_color_search_match --background=212121
 fish_color_valid_path
 
-fish_pager_color_progress f6c177
-fish_pager_color_background --background=1f1d2e
-fish_pager_color_prefix 9ccfd8
-fish_pager_color_completion 908caa
-fish_pager_color_description 908caa
+fish_pager_color_progress ffcb6b
+fish_pager_color_background --background=303030
+fish_pager_color_prefix 89ddff
+fish_pager_color_completion b2ccd6
+fish_pager_color_description b2ccd6
 fish_pager_color_secondary_background
 fish_pager_color_secondary_prefix
 fish_pager_color_secondary_completion
 fish_pager_color_secondary_description
-fish_pager_color_selected_background --background=26233a
-fish_pager_color_selected_prefix 9ccfd8
-fish_pager_color_selected_completion e0def4
-fish_pager_color_selected_description e0def4
+fish_pager_color_selected_background --background=353535
+fish_pager_color_selected_prefix 89ddff
+fish_pager_color_selected_completion eeffff
+fish_pager_color_selected_description eeffff
