@@ -3,17 +3,6 @@
     font-family: "Google Sans Display Medium" !important;
 }
 
-/* Remove top gradient from playlists */
-.main-entityHeader-backgroundColor {
-    display: none !important;
-}
-.main-actionBarBackground-background {
-    display: none !important;
-}
-.main-home-homeHeader {
-    display: none !important;
-}
-
 /* Recolor Spotify UI */
 :root,
 .encore-dark-theme,
@@ -26,4 +15,19 @@
     border-radius: 0.5rem;
     padding: 0.5rem;
     color: var(--spice-text);
+}
+
+/* Remove top gradient from playlists */
+.main-entityHeader-backgroundColor {
+    display: none !important;
+}
+.main-actionBarBackground-background {
+    display: none !important;
+}
+.main-home-homeHeader {
+    display: none !important;
+}
+
+.main-topBar-background {
+    background-color: var(--spice-main) !important;
 }
