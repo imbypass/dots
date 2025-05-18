@@ -1,4 +1,4 @@
-list=$(find -L "/home/bypass/.local/share/wallpapers/" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \))
+list=$(find -L "/home/bypass/.local/share/wallpapers/" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" \))
 
 while walls= read -r path; do
   name=$(b=${path##*/}; echo ${b%.*})
