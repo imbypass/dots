@@ -1,25 +1,25 @@
 /*
 *
-* Base16 Rosé Pine
-* Author: Emilia Dunfelt &lt;edun@dunfelt.se&gt;
+* Base16 Stardew Night
+* Author: Sammyette
 *
 */
 
 :root {
-    --base00: #191724;
-    --base01: #1f1d2e;
-    --base02: #26233a;
-    --base03: #6e6a86;
-    --base04: #908caa;
-    --base05: #e0def4;
-    --base06: #e0def4;
-    --base07: #524f67;
-    --base08: #eb6f92;
-    --base09: #ebbcba;
+    --base00: #16161b;
+    --base01: #212127;
+    --base02: #2a2a31;
+    --base03: #373741;
+    --base04: #4f4f5e;
+    --base05: #9595ae;
+    --base06: #e9ecf3;
+    --base07: #67677b;
+    --base08: #ff5454;
+    --base09: #ff985a;
     --base0A: #f6c177;
-    --base0B: #31748f;
+    --base0B: #6bc174;
     --base0C: #9ccfd8;
-    --base0D: #c4a7e7;
-    --base0E: #ebbcba;
-    --base0F: #524f67;
+    --base0D: #70abff;
+    --base0E: #ff72ff;
+    --base0F: #c175ff;
 }

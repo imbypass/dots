@@ -10,9 +10,9 @@
         "icons-recolor.theme.css",
         "visual-refresh.theme.css",
         "snippets.theme.css",
-        "base16-discord.theme.css",
         "base16.theme.css",
-        "patches.theme.css"
+        "patches.theme.css",
+        "base16-discord.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": true,
@@ -817,7 +817,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1747365652230
+        "settingsSyncVersion": 1747578676504
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false

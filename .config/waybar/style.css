@@ -176,7 +176,7 @@ hr {
     font-size: 21.5px;
     background-color: @base00;
     border: 2px solid @base00;
-    color: @base09;
+    color: @base0D;
     margin-bottom: 5px;
     font-family: "ZedMono NFP ExtraBold";
     border-radius: 8px;
@@ -196,7 +196,7 @@ hr {
     color: @base02;
 }
 #custom-power:hover {
-    color: @base09;
+    color: @base0D;
 }
 
 #custom-expose {

@@ -19,14 +19,14 @@ ignore-timeout=1
 font=Google Sans Display Medium 11
 
 # start colors
-background-color=#191724
-border-color=#26233a
-text-color=#e0def4
+background-color=#16161b
+border-color=#2a2a31
+text-color=#9595ae
 [urgency=low]
-border-color=#26233a
+border-color=#2a2a31
 [urgency=normal]
-border-color=#26233a
+border-color=#2a2a31
 [urgency=high]
-border-color=#eb6f92
+border-color=#ff5454
 default-timeout=0
 # end colors
