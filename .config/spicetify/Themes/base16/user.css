@@ -28,6 +28,7 @@
     display: none !important;
 }
 
-.main-topBar-background {
+.main-topBar-background,
+.main-home-filterChipsSection {
     background-color: var(--spice-main) !important;
 }

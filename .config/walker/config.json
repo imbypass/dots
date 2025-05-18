@@ -257,33 +257,33 @@
       "show_icon_when_single": true,
       "entries": [
         {
-          "label": "Screen Recorder",
-          "icon": "simplescreenrecorder",
-          "exec": "walker -m record"
-        },
-        {
           "label": "Change Color Scheme",
-          "icon": "gpaint",
+          "icon": "gnome-color-manager",
           "exec": "walker -n -m themes"
         },
         {
           "label": "Change Wallpaper",
-          "icon": "preferences-desktop-wallpaper",
+          "icon": "livewallpaper",
           "exec": "walker -n -m wallpaper"
         },
         {
           "label": "Toggle Window Tiling",
-          "icon": "preferences-desktop-icons",
+          "icon": "gnome-windows",
           "exec": "~/.local/bin/harmonyctl hf"
         },
         {
-          "label": "Toggle Gamemode",
-          "icon": "edge-game",
+          "label": "Toggle Game Mode",
+          "icon": "package_games_board",
           "exec": "~/.local/bin/harmonyctl gm"
         },
         {
+          "label": "Record Screen",
+          "icon": "gpu-screen-recorder",
+          "exec": "walker -m record"
+        },
+        {
           "label": "Lock Screen",
-          "icon": "system-lock-screen",
+          "icon": "system-log-out",
           "exec": "hyprlock"
         },
         {
@@ -307,15 +307,13 @@
       "show_icon_when_single": true,
       "entries": [
         {
-          "label": "▶️  Start Recording",
-          "exec": "~/.local/bin/record start"
-        },
-        {
-          "label": "▶️  Start Recording (No Audio)",
+          "label": "Start Recording",
+          "icon": "media-playback-start",
           "exec": "~/.local/bin/record start --noaudio"
         },
         {
-          "label": "⏹️  Stop Recording",
+          "label": "Stop Recording",
+          "icon": "media-playback-stop",
           "exec": "~/.local/bin/record stop"
         }
       ]

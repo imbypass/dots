@@ -26,13 +26,13 @@ tooltip {
 menu {
     background: transparent;
     background-color: @base00;
-    border-radius: 0px;
+    border-radius: 4px;
     border: 2px solid @base01;
     color: @base05;
     padding: 8px;
 }
 menuitem {
-    border-radius: 0px;
+    border-radius: 4px;
     padding: 7px;
     padding-left: 2px;
     padding-right: 2px;
@@ -63,7 +63,7 @@ hr {
 #custom-notifications,
 #workspaces button,
 #tray {
-    border-radius: 0px;
+    border-radius: 4px;
     background: @base01;
     color: @base05;
     margin: 3px;
@@ -165,7 +165,7 @@ hr {
     margin-right: 2px;
     margin-bottom: 5px;
     margin-top: 7px;
-    border-radius: 0px;
+    border-radius: 4px;
 }
 #taskbar button.active {
     background-color: @base02;
@@ -224,6 +224,6 @@ hr {
 }
 
 #custom-spotify {
-    font-size: 16px;
+    font-size: 13px;
     margin-left: 0px;
 }
