@@ -254,29 +254,29 @@ reload_prompt() {
     esac
 }
 init_prompt() {
-        case "$1" in
-            "xdg")
-       	        printf "${BOLD}${BLUE}:: ${RESET}Initializing xdg-desktop-portal..\n"
-       	        sleep 1
-       	        killall xdg-desktop-portal-hyprland > /dev/null
-       	        killall xdg-desktop-portal > /dev/null
-       	        sleep 1
-       	        /usr/lib/xdg-desktop-portal-hyprland > /dev/null &
-       	        sleep 2
-       	        /usr/lib/xdg-desktop-portal > /dev/null &
-       	        sleep 1
-            ;;
-            "wp")
-       	        printf "${BOLD}${BLUE}:: ${RESET}Initializing swww..\n"
-       	        swww-daemon > /dev/null & disown
-       	        swww-daemon --format xrgb > /dev/null & disown
-            ;;
-        esac
+    case "$1" in
+        "xdg")
+   	        printf "${BOLD}${BLUE}:: ${RESET}Initializing xdg-desktop-portal..\n"
+   	        sleep 1
+   	        killall xdg-desktop-portal-hyprland > /dev/null
+   	        killall xdg-desktop-portal > /dev/null
+   	        sleep 1
+   	        /usr/lib/xdg-desktop-portal-hyprland > /dev/null &
+   	        sleep 2
+   	        /usr/lib/xdg-desktop-portal > /dev/null &
+   	        sleep 1
+        ;;
+        "wp")
+   	        printf "${BOLD}${BLUE}:: ${RESET}Initializing swww..\n"
+   	        swww-daemon > /dev/null & disown
+   	        swww-daemon --format xrgb > /dev/null & disown
+        ;;
+    esac
 }
 
 file_upload() {
-        wl-paste | up -t $1 | wl-copy
-        notify-send -u normal -a hyprshot -t 750 "0x0.st" "Image uploaded and copied to clipboard." -i /usr/share/icons/Papirus-Dark/96x96/apps/diodon.svg
+    wl-paste | up -t $1 | wl-copy
+    notify-send -u normal -a hyprshot -t 750 "0x0.st" "Image uploaded and copied to clipboard." -i /usr/share/icons/Papirus-Dark/96x96/apps/diodon.svg
 }
 free_cache() {
     printf "${BOLD}${BLUE}:: ${RESET}Freeing cached RAM..\n"
@@ -284,33 +284,32 @@ free_cache() {
 }
 
 popout_prompt() {
-        case "$1" in
+    case "$1" in
+        "apps")
+            walker -m applications
+        ;;
+        "a")
+            walker -m applications
+        ;;
 
-                "apps")
-                        walker -m applications
-                ;;
-                "a")
-                        walker -m applications
-                ;;
+        "theme")
+            walker -m themes
+        ;;
+        "t")
+            walker -m themes
+        ;;
 
-                "theme")
-                        walker -m themes
-                ;;
-                "t")
-                        walker -m themes
-                ;;
+        "wall")
+            walker -n -m wallpaper
+        ;;
+        "w")
+            walker -n -m wallpaper
+        ;;
 
-                "wall")
-                        walker -n -m wallpaper
-                ;;
-                "w")
-                        walker -n -m wallpaper
-                ;;
-
-                "")
-                        printf "ok"
-                ;;
-        esac
+        "")
+            printf "ok"
+        ;;
+    esac
 }
 
 remove_orphans() {
@@ -329,9 +328,9 @@ search_fonts() {
 }
 
 show_expose() {
-        printf "${BOLD}${BLUE}:: ${RESET}Showing desktop expose..\n"
-        sleep 0.15
-        hyprctl dispatch hyprexpo:expo show > /dev/null
+    printf "${BOLD}${BLUE}:: ${RESET}Showing desktop expose..\n"
+    sleep 0.15
+    hyprctl dispatch hyprexpo:expo show > /dev/null
 }
 
 take_screenshot() {
@@ -368,31 +367,31 @@ toggle_gamemode() {
 	HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
 	OS=$(cat /etc/os-release | grep -E '^PRETTY_NAME=' | cut -d'"' -f2 | cut -d'=' -f2)
 	if [ "$HYPRGAMEMODE" = 1 ] ; then
-                notify-send -u normal -a Hyprland -t 750 "$OS" "Game Mode Enabled" -i /usr/share/icons/Papirus-Dark/96x96/devices/input-gaming.svg
-	        hyprctl --batch "\
-	                keyword animations:enabled 0;\
-	                keyword decoration:drop_shadow 0;\
-	                keyword decoration:blur:enabled 0;\
-	                keyword general:gaps_in 0;\
-	                keyword general:gaps_out 0;\
-	                keyword general:border_size 1;\
-	                keyword decoration:rounding 0" > /dev/null
-	        exit
+        notify-send -u normal -a Hyprland -t 750 "$OS" "Game Mode Enabled" -i /usr/share/icons/Papirus-Dark/96x96/devices/input-gaming.svg
+        hyprctl --batch "\
+                keyword animations:enabled 0;\
+                keyword decoration:drop_shadow 0;\
+                keyword decoration:blur:enabled 0;\
+                keyword general:gaps_in 0;\
+                keyword general:gaps_out 0;\
+                keyword general:border_size 1;\
+                keyword decoration:rounding 0" > /dev/null
+        exit
 	else
-                notify-send -u normal -a Hyprland -t 750 "$OS" "Game Mode Disabled" -i /usr/share/icons/Papirus-Dark/96x96/devices/input-gaming.svg
+        notify-send -u normal -a Hyprland -t 750 "$OS" "Game Mode Disabled" -i /usr/share/icons/Papirus-Dark/96x96/devices/input-gaming.svg
 	fi
 	hyprctl reload > /dev/null
 	hyprshade on vibrance > /dev/null
 }
 toggle_blur() {
-        printf "${BOLD}${BLUE}:: ${RESET}Toggling blur..\n"
-        HYPRBLUR=$(hyprctl getoption decoration:blur:enabled | awk 'NR==1{print $2}')
-        if [ "$HYPRBLUR" = 0 ]; then
-                hyprctl keyword decoration:blur:enabled yes
-        else
-                hyprctl keyword decoration:blur:enabled no
-        fi
-        hyprshade on vibrance > /dev/null
+    printf "${BOLD}${BLUE}:: ${RESET}Toggling blur..\n"
+    HYPRBLUR=$(hyprctl getoption decoration:blur:enabled | awk 'NR==1{print $2}')
+    if [ "$HYPRBLUR" = 0 ]; then
+            hyprctl keyword decoration:blur:enabled yes
+    else
+            hyprctl keyword decoration:blur:enabled no
+    fi
+    hyprshade on vibrance > /dev/null
 }
 toggle_floatwindows() {
     printf "${BOLD}${BLUE}:: ${RESET}Toggling all floating windows..\n"
@@ -404,32 +403,32 @@ toggle_dock() {
 }
 
 update_mirrors() {
-        printf "${BOLD}${BLUE}:: ${RESET}Updating mirrors..\n"
-        sudo reflector --verbose --country US --latest 8 --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist > /dev/null
+    printf "${BOLD}${BLUE}:: ${RESET}Updating mirrors..\n"
+    sudo reflector --verbose --country US --latest 8 --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist > /dev/null
 }
 
 update_colors() {
-        printf "${BOLD}${BLUE}:: ${RESET}Updating system colors..\n"
-        /usr/bin/wal -i ~/.local/share/wallpapers/.wallpaper
+    printf "${BOLD}${BLUE}:: ${RESET}Updating system colors..\n"
+    /usr/bin/wal -i ~/.local/share/wallpapers/.wallpaper
 }
 
 update_prompt() {
-        case "$1" in
-                "zed")
-        	        printf "${BOLD}${BLUE}:: ${RESET}Updating zed..\n"
-                        curl -f https://zed.dev/install.sh | sh
-                        ~/.local/bin/patch-zed-icon
-                ;;
-                "mirrors")
-                        update_mirrors
-                ;;
-                "colors")
-                        update_colors
-                ;;
-                "")
-                        printf "ok"
-                ;;
-        esac
+    case "$1" in
+        "zed")
+   	        printf "${BOLD}${BLUE}:: ${RESET}Updating zed..\n"
+            curl -f https://zed.dev/install.sh | sh
+            ~/.local/bin/patch-zed-icon
+        ;;
+        "mirrors")
+            update_mirrors
+        ;;
+        "colors")
+            update_colors
+        ;;
+        "")
+            printf "ok"
+        ;;
+    esac
 }
 
 

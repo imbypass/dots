@@ -10,95 +10,95 @@
 
 /*---Lock Icon Channel List Recolor---*/
 [class^="icon__"] path[d^="M16 4h.5v"] {
-    fill: var(--yellow-200) !important;
+    fill: var(--base0A) !important;
 }
 
 /*---Stages Lock Icon Channel List Recolor (since they use a differnt lock for some reason)----*/
 [class^="icon__"] path[d^="M16.5 18H16a1"] {
-    fill: var(--yellow-200) !important;
+    fill: var(--base0A) !important;
 }
 
 /*--- Chat Lock Icon Recolor ---*/
 /*--- Lock Icon Message Bar Channels ---*/
 [class^="icon__"] path[d^="M16 4h.5v"] {
-    fill: var(--yellow-200) !important;
+    fill: var(--base0A) !important;
 }
 
 /*--- Lock Thread Icon Message Bar Icon Recolor ---*/
 [class^="icon__"] path[d^="M16 18h.5v"] {
-    fill: var(--yellow-200) !important;
+    fill: var(--base0A) !important;
 }
 
 /*--- Stupid Ahh channel search icon ---*/
 [class^="searchResultChannelIcon__"] path[d^="M16 4h.5v-.5a2.5 2.5 0 0 1 5"] {
-    fill: var(--yellow-200) !important;
+    fill: var(--base0A) !important;
 }
 
 /*--- Stupid Ahh channel search icon(For stages) ---*/
 [class^="searchResultChannelIcon__"] path[d^="M16.5 18H16a1 1 0 0 0-1"] {
-    fill: var(--yellow-200) !important;
+    fill: var(--base0A) !important;
 }
 
 /*--- Vencord's UserVoiceShow Icon Recolor ---*/
 .vc-uvs-speaker path[d^="M16 4h.5v"] {
-    fill: var(--yellow-200) !important;
+    fill: var(--base0A) !important;
 }
 
 /*--- Channel List Icon Recolor ---*/
 /*--- Channels&Roles Message bar Channels ---*/
 /*--- Chat Icon Recolor ---*/
 [class^="icon__"] path[d^="M18.5 23c.88"] {
-    color: var(--green-360) !important;
+    color: var(--base0B) !important;
     /*color works most places except one place... idk why that is*/
-    fill: var(--green-360) !important;
+    fill: var(--base0B) !important;
 }
 
 /*--- 'NSFW' Channel List Icon Recolor ---*/
 /*--- 'NSFW' Chat Icon Recolor ---*/
 /*--- 'NSFW' Message Bar Icon Recolor ---*/
 [class^="icon__"] path[d^="M18.09 1.63"] {
-    fill: var(--status-danger-background) !important;
+    fill: var(--base08) !important;
 }
 
 /*--- 'NSFW' Thread Icon Message Bar Icon Recolor ---*/
 [class^="icon__"] path[d^="M18.09 15.63c.4-.7"] {
-    fill: var(--status-danger-background) !important;
+    fill: var(--base08) !important;
 }
 
 /*--- Stupid Ahh channel search icon ---*/
 [class^="searchResultChannelIcon__"] path[d^="M18.09 1.63c.4-.7 1.43-.7"] {
-    fill: var(--status-danger-background) !important;
+    fill: var(--base08) !important;
 }
 
 /*--- Ping Warning ---*/
 [class^="ping_"] path[d^="M18.09 14.63c.4-.7"] {
-    fill: var(--status-danger-background) !important;
+    fill: var(--base08) !important;
 }
 
 /*--------------*/
 [class^="contents__"] path[d^=" M-10,10 C-10,10 10,-10 10,-10"] {
-    stroke: var(--status-danger-background) !important ;
+    stroke: var(--base08) !important ;
 }
 
 /*--- Channel List Outer Circle Icon Recolor ---*/
 /*--- Chat Icon Recolor ---*/
 [class^="icon__"] path[d^="M19.61 18.25a1.08"] {
-    color: var(--blue-330) !important;
+    color: var(--base0D) !important;
 }
 
 /*--- Channel List Outer Circle Icon Recolor(Locked Stage) ---*/
 [class^="icon__"] path[d^="M21.92 14.08c.32"] {
-    color: var(--blue-330) !important;
+    color: var(--base0D) !important;
 }
 
 /*--- Stupid Ahh channel search icon ---*/
 [class^="searchResultChannelIcon__"]
     path[d^="M19.61 18.25a1.08 1.08 0 0 1-.07-1.33"] {
-    fill: var(--blue-330) !important;
+    fill: var(--base0D) !important;
 }
 
 /*--- Stupid Ahh channel search icon(Locked Stage) ---*/
 [class^="searchResultChannelIcon__"]
     path[d^="M21.92 14.08c.32.27.86.15.93-.26A11"] {
-    fill: var(--blue-330) !important;
+    fill: var(--base0D) !important;
 }

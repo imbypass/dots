@@ -274,7 +274,12 @@
         {
           "label": "Toggle Window Tiling",
           "icon": "preferences-desktop-icons",
-          "exec": "~/.local/bin/bde hf"
+          "exec": "~/.local/bin/harmonyctl hf"
+        },
+        {
+          "label": "Toggle Gamemode",
+          "icon": "edge-game",
+          "exec": "~/.local/bin/harmonyctl gm"
         },
         {
           "label": "Lock Screen",

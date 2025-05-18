@@ -24,7 +24,7 @@ fi
 
 if [[ -z "$1" ]]; then
     echo -e "${BOLD}${YELLOW}[WARNING]${NC} No color specified. Defaulting to \"pink\"."
-    ICON_THEME="pink"
+    ICON_THEME="black"
 fi
 
 echo -e "${BOLD}${BLUE}:: ${NC}Setting icon theme to $ICON_THEME.."

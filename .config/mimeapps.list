@@ -44,6 +44,7 @@ x-scheme-handler/chrome=firefox.desktop;
 x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
 x-scheme-handler/trash=org.gnome.Nautilus.desktop;
+image/gif=com.interversehq.qView.desktop;
 
 [Default Applications]
 application/json=dev.zed.Zed.desktop
@@ -65,7 +66,7 @@ application/xml=micro.desktop
 application/zip=org.gnome.FileRoller.desktop
 audio/x-mpegurl=audacious.desktop
 image/bmp=swayimg.desktop
-image/gif=swayimg.desktop
+image/gif=com.interversehq.qView.desktop
 image/jpeg=swayimg.desktop
 image/jpg=swayimg.desktop
 image/png=swayimg.desktop
