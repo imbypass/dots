@@ -45,6 +45,7 @@
               },
               "icon": {
                 "pixel_size": 100,
+                "height": 40,
                 "theme": ""
               },
               "label": {
