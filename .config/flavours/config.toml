@@ -22,7 +22,6 @@ start = "/* start colors */"
 end = "/* end colors */"
 hook = "~/.local/bin/harmonyctl reload gtk"
 
-
 ### QT6 THEME ###
 [[items]]
 file = "~/.config/qt6ct/colors/base16.conf"

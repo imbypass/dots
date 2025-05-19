@@ -16,7 +16,7 @@ anchor=top-right
 max-icon-size=48
 default-timeout=3500
 ignore-timeout=1
-font=Google Sans Display Medium 10
+font=Google Sans Display Medium 11
 
 # start colors
 background-color=#16161b
