@@ -10,7 +10,9 @@
 
 window#waybar {
     color: @base05;
+    background: rgba(22, 22, 27, 0.65);
     background: @base00;
+    border-top: 2px solid rgba(33, 33, 39, 0.25);
     border-top: 2px solid @base01;
     border-radius: 0;
 }
@@ -123,6 +125,11 @@ hr {
     padding-right: 10px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
+}
+
+#pulseaudio.muted,
+#pulseaudio.source-muted {
+    color: @base08;
 }
 
 #workspaces {

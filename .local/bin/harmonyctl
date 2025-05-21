@@ -399,7 +399,7 @@ toggle_floatwindows() {
 }
 toggle_dock() {
     printf "${BOLD}${BLUE}:: ${RESET}Toggling dock visibility..\n"
-    killall nwg-dock-hyprland > /dev/null || nwg-dock-hyprland -r -mb 15 -mt 10 -i 32 -nolauncher > /dev/null  & disown > /dev/null
+    killall nwg-dock-hyprland > /dev/null || nwg-dock-hyprland -r -mb 55 -mt 10 -i 32 -nolauncher > /dev/null  & disown > /dev/null
 }
 
 update_mirrors() {

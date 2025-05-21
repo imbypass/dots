@@ -59,16 +59,12 @@ div[class^="background_"] {
     background-color: var(--base00) !important;
 }
 
-/* Hide User Panel custom Nameplate */
-/* .panels_c48ade .container__4bbc6 {
-        background: none !important;
-    }
-    .videoContainer__4bbc6 video {
-        display: none !important;
-    }
-} */
-
 /* Hide Voice Channel Tile Gradients */
 :where(.visual-refresh) .singleUserRoot__4ad81 {
     background: none !important;
+}
+
+button[aria-label="Send a gift"],
+button[aria-label="Apps"] {
+    display: none;
 }

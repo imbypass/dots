@@ -5,7 +5,7 @@
 local M = {}
 
 M.base46 = {
-	theme = "rosepine",
+	theme = "catppuccin",
 
 	hl_override = {
 		Comment = { italic = true },

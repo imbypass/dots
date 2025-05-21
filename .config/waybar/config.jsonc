@@ -158,18 +158,18 @@
     "tooltip": false,
     "format": "󰣇",
     "on-click": "walker -m applications",
-    "on-click-right": "bde expose",
+    "on-click-right": "harmonyctl expose",
   },
   "custom/expose": {
     "tooltip": false,
     "format": "󰨑",
-    "on-click": "bde expose",
+    "on-click": "harmonyctl expose",
   },
   "custom/power": {
     "tooltip": false,
     "format": "",
-    "on-click-right": "walker -m power",
-    "on-click": "walker -m power",
+    "on-click-right": "walker -m mainmenu",
+    "on-click": "walker -m mainmenu",
   },
   "custom/spotify": {
     "tooltip": false,

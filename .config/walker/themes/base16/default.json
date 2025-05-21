@@ -54,7 +54,7 @@
           "list": {
             "item": {
               "activation_label": {
-                "hide": true,
+                "hide": false,
                 "h_align": "fill",
                 "v_align": "fill",
                 "width": 20,

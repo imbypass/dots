@@ -166,3 +166,11 @@ file = "~/.config/nwg-dock-hyprland/colors.css"
 template = "nwg-dock"
 rewrite = true
 hook = "~/.local/bin/harmonyctl reload dock"
+
+### NEOVIM ###
+[[items]]
+file = "~/.config/nvim/lua/options.lua"
+template = "nvim"
+rewrite = false
+start = "-- start colors"
+end = "-- end colors"

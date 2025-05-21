@@ -248,7 +248,7 @@
       "parser": "kv"
     },
     {
-      "name": "power",
+      "name": "mainmenu",
       "placeholder": "Search...",
       "theme": "base16/power",
       "switcher_only": true,
@@ -282,19 +282,9 @@
           "exec": "walker -m record"
         },
         {
-          "label": "Lock Screen",
-          "icon": "system-log-out",
-          "exec": "hyprlock"
-        },
-        {
-          "label": "Reboot",
-          "icon": "system-reboot",
-          "exec": "reboot"
-        },
-        {
-          "label": "Shutdown",
-          "icon": "system-shutdown",
-          "exec": "shutdown now"
+          "label": "Power Menu",
+          "icon": "boot",
+          "exec": "walker -m power"
         }
       ]
     },
@@ -315,6 +305,31 @@
           "label": "Stop Recording",
           "icon": "media-playback-stop",
           "exec": "~/.local/bin/record stop"
+        }
+      ]
+    },
+    {
+      "name": "power",
+      "theme": "base16/power",
+      "switcher_only": true,
+      "keep_sort": true,
+      "recalculate_score": true,
+      "show_icon_when_single": true,
+      "entries": [
+        {
+          "label": "Lock Screen",
+          "icon": "system-log-out",
+          "exec": "hyprlock"
+        },
+        {
+          "label": "Reboot",
+          "icon": "system-reboot",
+          "exec": "reboot"
+        },
+        {
+          "label": "Shutdown",
+          "icon": "system-shutdown",
+          "exec": "shutdown now"
         }
       ]
     }
