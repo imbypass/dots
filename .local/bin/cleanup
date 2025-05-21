@@ -19,9 +19,6 @@ if [ "$EUID" -ne 0 ]; then
   exit 1
 fi
 
-
-echo -e "${BOLD}${BLUE}:: ${NC}Performing desktop file cleanup..."
-
 # Remove unused .desktop files
 UNUSED_USR_SHARE=(
     avahi-discover
@@ -56,11 +53,15 @@ UNUSED_USR_SHARE=(
     yad-settings
 )
 
+echo -e "${BOLD}${BLUE}:: ${NC}Performing desktop file cleanup..."
 for file in "${UNUSED_USR_SHARE[@]}"; do
     if [ "$1" = "--verbose" ] || [ "$1" = "-v" ]; then
         echo -e " ${YELLOW}==> ${NC}Removing ${file}.desktop.."
     fi
     sudo rm -f "/usr/share/applications/${file}.desktop" > /dev/null
 done
+
+echo -e "${BOLD}${BLUE}:: ${NC}Cleaning up home directory..."
+rm -rf "/home/bypass/cache_directory" > /dev/null
 
 echo -e "${BOLD}${GREEN}:: ${NC}Desktop file cleanup completed successfully."
