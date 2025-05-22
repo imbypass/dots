@@ -77,7 +77,7 @@
     ],
   },
   "clock": {
-    "format": " {:%I:%M %p\n<sub>%m/%d/%Y</sub>}",
+    "format": " {:%I:%M%p \n<sub> %m/%d/%Y</sub>}",
     "tooltip-format": "{:%a, %b %e, %Y}",
   },
   "battery": {
@@ -108,9 +108,9 @@
     "on-click-right": "blueman-manager",
   },
   "pulseaudio": {
-    "format": "{icon}    {volume}%",
+    "format": "{icon} {volume}%",
     "tooltip": true,
-    "format-muted": "    MUTE",
+    "format-muted": " MUTE",
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "on-click-right": "GTK_THEME=FOURdotZERO pavucontrol",
     "on-scroll-up": "pamixer -i 1",
@@ -128,8 +128,8 @@
   },
   "pulseaudio#microphone": {
     "format": "{format_source}",
-    "format-source": "  {volume}%",
-    "format-source-muted": "   MUTE",
+    "format-source": " {volume}%",
+    "format-source-muted": " MUTE",
     "on-click": "pamixer --default-source -t",
     "on-click-right": "GTK_THEME=phocus pavucontrol -t 4",
     "on-scroll-up": "pamixer --default-source -i 1",

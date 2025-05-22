@@ -1,7 +1,7 @@
 // Zed settings
 {
   "icon_theme": "Zed (Default)",
-  "assistant": {
+  "agent": {
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-3-7-sonnet-latest"
@@ -15,8 +15,8 @@
   },
   "ui_font_size": 16.5,
   "buffer_font_size": 14,
-  "ui_font_family": "Product Sans Medium",
-  "buffer_font_family": "ZedMono Nerd Font Propo",
+  "ui_font_family": "IosevkaTerm Nerd Font Propo",
+  "buffer_font_family": "IosevkaTerm Nerd Font Propo",
   "buffer_line_height": {
     "custom": 1.525
   },

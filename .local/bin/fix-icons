@@ -23,8 +23,8 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 if [[ -z "$1" ]]; then
-    echo -e "${BOLD}${YELLOW}[WARNING]${NC} No color specified. Defaulting to \"pink\"."
     ICON_THEME="cat-mocha-lavender"
+    echo -e "${BOLD}${YELLOW}[WARNING]${NC} No color specified. Defaulting to \"${ICON_THEME}\"."
 fi
 
 echo -e "${BOLD}${BLUE}:: ${NC}Setting icon theme to $ICON_THEME.."

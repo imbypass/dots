@@ -231,7 +231,7 @@
   "plugins": [
     {
       "name": "wallpaper",
-      "placeholder": "Search...",
+      "placeholder": "Search",
       "theme": "base16/wallpaper",
       "switcher_only": false,
       "refresh": true,
@@ -240,7 +240,7 @@
     },
     {
       "name": "themes",
-      "placeholder": "Search...",
+      "placeholder": "Search",
       "theme": "base16/theme",
       "switcher_only": false,
       "refresh": true,
@@ -249,7 +249,7 @@
     },
     {
       "name": "mainmenu",
-      "placeholder": "Search...",
+      "placeholder": "Search",
       "theme": "base16/power",
       "switcher_only": true,
       "keep_sort": true,
@@ -336,7 +336,7 @@
   ],
   "search": {
     "delay": 0,
-    "placeholder": "Search...",
+    "placeholder": "Search",
     "resume_last_query": false
   },
   "terminal_title_flag": "",

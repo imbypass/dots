@@ -4,15 +4,14 @@
     "useQuickCss": true,
     "themeLinks": [],
     "enabledThemes": [
-        "fonts.theme.css",
-        "settings-icons.theme.css",
         "icons-recolor.theme.css",
         "visual-refresh.theme.css",
         "snippets.theme.css",
-        "base16.theme.css",
-        "patches.theme.css",
+        "base16-discord.theme.css",
+        "settings-icons.theme.css",
         "userpfp.theme.css",
-        "base16-discord.theme.css"
+        "fonts.theme.css",
+        "base16-discord.extras.css"
     ],
     "enableReactDevtools": false,
     "frameless": true,
@@ -87,10 +86,10 @@
             "enabled": false
         },
         "BetterGifPicker": {
-            "enabled": true
+            "enabled": false
         },
         "BetterNotesBox": {
-            "enabled": true,
+            "enabled": false,
             "hide": true,
             "noSpellCheck": false
         },
@@ -123,7 +122,7 @@
             "enabled": false
         },
         "ConsoleShortcuts": {
-            "enabled": true
+            "enabled": false
         },
         "CopyUserURLs": {
             "enabled": false
@@ -189,7 +188,7 @@
             "enabled": false
         },
         "GameActivityToggle": {
-            "enabled": true,
+            "enabled": false,
             "oldIcon": false
         },
         "GifPaste": {
@@ -205,7 +204,7 @@
             "enabled": false
         },
         "ImageZoom": {
-            "enabled": true,
+            "enabled": false,
             "size": 100,
             "zoom": 17.96153846153846,
             "nearestNeighbour": false,
@@ -635,7 +634,7 @@
             "enabled": false
         },
         "BetterSettings": {
-            "enabled": true,
+            "enabled": false,
             "disableFade": true,
             "eagerLoad": true,
             "organizeMenu": true
@@ -741,7 +740,7 @@
             "enabled": false
         },
         "ConsoleJanitor": {
-            "enabled": true,
+            "enabled": false,
             "disableLoggers": false,
             "disableSpotifyLogger": true,
             "whitelistedLoggers": "GatewaySocket; Routing/Utils"
@@ -817,7 +816,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1747777246016
+        "settingsSyncVersion": 1747949658565
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false

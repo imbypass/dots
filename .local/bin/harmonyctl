@@ -249,7 +249,7 @@ reload_prompt() {
         "steam")
             printf "${BOLD}${BLUE}:: ${RESET}Reloading Steam..\n"
             # ~/.local/bin/hex2rgb ~/.local/share/adwaita-steam/adwaita/colorthemes/base16/base16.css
-            sleep 2 && cd ~/.local/share/adwaita-steam/ && ./install.py --color-theme base16 --extras library/hide_whats_new --font googlesans
+            sleep 2 && cd ~/.local/share/adwaita-steam/ && ./install.py --color-theme base16 --extras library/hide_whats_new --font zedmono
         ;;
     esac
 }
