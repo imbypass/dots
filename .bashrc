@@ -44,6 +44,7 @@ alias ls="eza --icons --grid"
 alias lsa="eza -la --icons --grid"
 alias nano="micro"
 alias q="exit"
+alias hyprlockfix='hyprctl --instance 0 "dispatch exec hyprlock"'
 
 # Start Hyprland if not already running
 pidof Hyprland > /dev/null || Hyprland & disown

@@ -1,23 +1,23 @@
-@define-color foreground #c2c3c6;
-@define-color background #0c0f1c;
-@define-color cursor #c2c3c6;
+@define-color foreground #c2c2c1;
+@define-color background #0E0E09;
+@define-color cursor #c2c2c1;
 
-@define-color color0 #0c0f1c;
-@define-color color1 #988D6E;
-@define-color color2 #2E6197;
-@define-color color3 #5B6AA3;
-@define-color color4 #3577C5;
-@define-color color5 #4F9ECD;
-@define-color color6 #59A4D8;
-@define-color color7 #c2c3c6;
-@define-color color8 #5b5f70;
-@define-color color9 #988D6E;
-@define-color color10 #2E6197;
-@define-color color11 #5B6AA3;
-@define-color color12 #3577C5;
-@define-color color13 #4F9ECD;
-@define-color color14 #59A4D8;
-@define-color color15 #c2c3c6;
+@define-color color0 #0E0E09;
+@define-color color1 #645E51;
+@define-color color2 #A24B2C;
+@define-color color3 #8C7569;
+@define-color color4 #788872;
+@define-color color5 #9E8C6D;
+@define-color color6 #A89E96;
+@define-color color7 #c2c2c1;
+@define-color color8 #6a6a56;
+@define-color color9 #645E51;
+@define-color color10 #A24B2C;
+@define-color color11 #8C7569;
+@define-color color12 #788872;
+@define-color color13 #9E8C6D;
+@define-color color14 #A89E96;
+@define-color color15 #c2c2c1;
 /* AUTO GENERATED. DO NOT EDIT. CHANGES WILL BE OVERWRITTEN. */
 
 #window,
