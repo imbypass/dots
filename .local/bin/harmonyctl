@@ -268,9 +268,12 @@ init_prompt() {
         ;;
         "wp")
    	        printf "${BOLD}${BLUE}:: ${RESET}Initializing wallpaper daemon..\n"
-            if [[ $1 == "--video" ]];then
-                killall mpvpaper > /dev/null
-                mpvpaper -p -o "--loop=inf --framedrop=vo" "*" /home/bypass/Videos/Video\ Wallpapers/90s-retro-room-pixel-moewalls-com.mp4 & disown
+
+            killall swww-daemon > /dev/null
+            killall mpvpaper > /dev/null
+
+            if [[ $2 == "--video" ]];then
+                mpvpaper -p -o "--loop=10000 --framedrop=vo" "*" /home/bypass/Videos/Video\ Wallpapers/90s-retro-room-pixel-moewalls-com.mp4 & disown
             else
        	        swww-daemon > /dev/null & disown
        	        swww-daemon --format xrgb > /dev/null & disown
@@ -499,7 +502,7 @@ elif [[ $1 == "fonts" ]];then
 	search_fonts
 
 elif [[ $1 == "init" ]];then
-	init_prompt $2
+	init_prompt $2 $3
 
 elif [[ $1 == "up" ]];then
 	file_upload $2
@@ -515,7 +518,7 @@ elif [[ $1 == "blur" ]];then
 	toggle_blur
 
 elif [[ $1 == "x" ]];then
-        show_expose
+    show_expose
 elif [[ $1 == "expose" ]];then
 	show_expose
 

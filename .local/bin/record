@@ -11,7 +11,7 @@ if [[ $1 == "start" ]];then
         cd "/home/${USER}/Videos/Screen Recordings/" && wf-recorder -a -f "${TIMESTAMP}.mp4" > /dev/null
     fi
 elif [[ $1 == "stop" ]];then
-    notify-send -u low -a wl-recorder -t 750 "Screen Recorder" "Recording stopped!\nRecording saved to: $(pwd)/${TIMESTAMP}.mp4"
+    notify-send -u low -a wl-recorder -t 750 "Screen Recorder" "Recording stopped!\nRecording saved as: ${TIMESTAMP}.mp4"
     kill -s INT $(pidof wf-recorder)
 else
   echo "ok"
