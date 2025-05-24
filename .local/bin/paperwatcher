@@ -1,0 +1,11 @@
+#!/bin/bash
+
+while true; do
+  if pgrep -x "mpvpaper" > /dev/null; then
+    echo "$(date) - mpvpaper is running."
+  else
+    echo "$(date) - mpvpaper is not running. Starting it..."
+    ~/.local/bin/harmonyctl init wp --video &
+  fi
+  sleep 1
+done

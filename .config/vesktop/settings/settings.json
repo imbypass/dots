@@ -529,7 +529,7 @@
         },
         "Translate": {
             "enabled": true,
-            "autoTranslate": true,
+            "autoTranslate": false,
             "showChatBarButton": true,
             "service": "google",
             "receivedInput": "nl",
@@ -816,7 +816,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1748110296140
+        "settingsSyncVersion": 1748111322941
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false
