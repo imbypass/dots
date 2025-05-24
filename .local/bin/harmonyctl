@@ -267,9 +267,11 @@ init_prompt() {
    	        sleep 1
         ;;
         "wp")
-   	        printf "${BOLD}${BLUE}:: ${RESET}Initializing swww..\n"
-   	        swww-daemon > /dev/null & disown
-   	        swww-daemon --format xrgb > /dev/null & disown
+   	        printf "${BOLD}${BLUE}:: ${RESET}Initializing wallpaper daemon..\n"
+   	        # swww-daemon > /dev/null & disown
+   	        # swww-daemon --format xrgb > /dev/null & disown
+            killall mpvpaper > /dev/null
+            mpvpaper -p -o "--loop=inf --framedrop=vo" "*" /home/bypass/Videos/Video\ Wallpapers/90s-retro-room-pixel-moewalls-com.mp4 & disown
         ;;
     esac
 }
