@@ -29,11 +29,10 @@ m='\033[0;35m'
 w='\033[0;38m'
 
 printf "
+           ${c}${USER}@${HOSTNAME}
            ${r}os  ${w}${os}
- (\\ /)     ${g}kr  ${w}${kr}
- (. .)/    ${y}pa  ${w}${pa}
- (${r}\"${w})(${r}\"${w})    ${b}sh  ${w}${sh}
-           ${m}wm  ${w}${wm}
-
-           $(~/.local/bin/colors)
+ (\\ /)     ${g}wm  ${w}${wm}
+ (. .)/    ${y}sh  ${w}${sh}
+ (${r}\"${w})(${r}\"${w})    ${b}pa  ${w}${pa}
+           ${m}ag  ${w}${ddif} days
 "
