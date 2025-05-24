@@ -62,8 +62,8 @@
 @define-color pink-normal @base0F;
 @define-color pink-light @base0F;
 
-@define-color accent_color @purple-light;
-@define-color accent_bg_color @purple-normal;
+@define-color accent_color @blue-light;
+@define-color accent_bg_color @blue-normal;
 @define-color accent_fg_color @white-strong;
 
 @define-color destructive_color @red-light;
