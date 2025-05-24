@@ -5,5 +5,5 @@ while true; do
     echo "$(date) - mpvpaper is not running. Starting it..."
     ~/.local/bin/harmonyctl init wp --video &
   fi
-  sleep .25
+  sleep .1
 done

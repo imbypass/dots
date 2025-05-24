@@ -17,6 +17,8 @@ BOLD='\033[1m'
 UNDERLINE='\033[4m'
 RESET='\033[0m'
 
+VIDEO_WALLPAPER='/home/bypass/.local/share/wallpapers/video/90s-retro-room-pixel-moewalls-com.mp4'
+
 print_logo() {
     printf "${BLUE} _   _    _    ____  __  __  ___  _   ___   __
 | | | |  / \  |  _ \|  \/  |/ _ \| \ | \ \ / /
@@ -273,7 +275,7 @@ init_prompt() {
             killall mpvpaper > /dev/null
 
             if [[ $2 == "--video" ]];then
-                mpvpaper -p -o "--loop=10000 --framedrop=vo" "*" /home/bypass/Videos/Video\ Wallpapers/90s-retro-room-pixel-moewalls-com.mp4 & disown
+                mpvpaper -p -o "--loop=10000 --volume=0 --framedrop=vo" "*" ${VIDEO_WALLPAPER} & disown
             else
        	        swww-daemon > /dev/null & disown
        	        swww-daemon --format xrgb > /dev/null & disown
