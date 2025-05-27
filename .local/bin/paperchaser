@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [[ $1 == 'stop' ]]; then
+  echo "Killing paperchaser script.."
+  killall mpvpaper > /dev/null
+  killall paperchaser > /dev/null
+fi
+
 while true; do
   if ! pgrep -x "mpvpaper" > /dev/null; then
     echo "$(date) - mpvpaper is not running. Starting it..."

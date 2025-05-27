@@ -17,7 +17,7 @@ BOLD='\033[1m'
 UNDERLINE='\033[4m'
 RESET='\033[0m'
 
-VIDEO_WALLPAPER='/home/bypass/.local/share/wallpapers/video/90s-retro-room-pixel-moewalls-com.mp4'
+VIDEO_WALLPAPER='/home/bypass/.local/share/wallpapers/video/pixel-90s-retro-room.mp4'
 
 print_logo() {
     printf "${BLUE} _   _    _    ____  __  __  ___  _   ___   __

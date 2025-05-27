@@ -21,7 +21,7 @@ font=IosevkaTerm Nerd Font Propo Medium 11
 # start colors
 background-color=#16161b
 border-color=#2a2a31
-text-color=#9595ae
+text-color=#e9ecf3
 [urgency=low]
 border-color=#212127
 text-color=#4f4f5e
