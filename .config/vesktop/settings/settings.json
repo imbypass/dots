@@ -147,9 +147,6 @@
             "enabled": false,
             "agreedToGuidelines": false
         },
-        "EmoteCloner": {
-            "enabled": false
-        },
         "Experiments": {
             "enabled": true,
             "enableIsStaff": false,
@@ -806,6 +803,9 @@
         },
         "DisableDeepLinks": {
             "enabled": true
+        },
+        "ExpressionCloner": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -818,7 +818,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1748295300486
+        "settingsSyncVersion": 1748554015792
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false
