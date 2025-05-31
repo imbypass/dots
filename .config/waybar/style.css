@@ -186,6 +186,7 @@ hr {
     border: 2px solid @base00;
     color: @base0D;
     margin-bottom: 5px;
+    margin-right: -4px;
     font-family: "ZedMono NFP ExtraBold";
     border-radius: 8px;
     background-position: center;

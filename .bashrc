@@ -16,6 +16,8 @@ eval "$(starship init bash)"
 # eval "$(pyenv init -)"
 
 # Environment Variables
+source ~/.config/keys.sh
+
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#202020,bg:#151515,spinner:#ffafaf,hl:#ff8700 \
 --color=fg:#dddddd,header:#ffaf5f,info:#ff8700,pointer:#ffafaf \
