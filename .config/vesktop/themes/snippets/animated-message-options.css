@@ -1,0 +1,34 @@
+.buttonsInner__5126c > div:not(:last-of-type),
+.buttonsInner__5126c > .hoverBarButton_f84418 > div {
+    width: 0;
+    height: 0;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    transition:
+        min-width 0.15s ease-out,
+        width 0.15s ease-out,
+        height 0.15s ease-out,
+        padding 0.15s ease-out,
+        opacity 0.15s ease-out,
+        transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.buttonsInner__5126c:hover > .hoverBarButton_f84418:not(:last-of-type) {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    padding: 2px;
+    opacity: 1;
+    > div {
+        width: 20px;
+        height: 20px;
+        opacity: 1;
+    }
+}
+.buttonsInner__5126c:hover > .separator_f84418 {
+    width: 1px;
+    height: 24px;
+    margin: 2px 4px;
+    opacity: 1;
+}

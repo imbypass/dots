@@ -1,3 +1,11 @@
+/* Shorten Clan Tag Text Length */
+[class*="clanTag"] > span > span {
+    max-width: 4em;
+    display: -webkit-inline-box;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
 /* Shorten Clan Tags to Icon (expand on hover) */
 [class^="chipletContainerInner_"] > span > .unselectable__10651 {
     display: inline-block;

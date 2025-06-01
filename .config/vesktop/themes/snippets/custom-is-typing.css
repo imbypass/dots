@@ -1,0 +1,27 @@
+.typingDots_b88801 > .ellipsis_b88801 + .text_b88801 {
+    font-size: 0;
+    height: 16px;
+    > strong {
+        font-size: 12px;
+        &::after {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        &:last-child::after {
+            content: " is yapping...";
+        }
+        &:last-child:not(:first-child)::after {
+            content: " are yapping...";
+        }
+        &:nth-last-child(2)::after {
+            content: " and ";
+        }
+        &:nth-last-child(3)::after {
+            content: ", ";
+        }
+    }
+    &:not(:has(> strong))::after {
+        font-size: 12px;
+        content: "Several people are yapping...";
+    }
+}

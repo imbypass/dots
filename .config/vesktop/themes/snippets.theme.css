@@ -10,8 +10,10 @@
  **/
 
 @import url(./snippets/addfriends-button.css);
+@import url(./snippets/animated-message-options.css);
 @import url(./snippets/clean-chatbar.css);
 @import url(./snippets/clean-direct-messages.css);
+@import url(./snippets/custom-is-typing.css);
 @import url(./snippets/disable-vc-animations.css);
 @import url(./snippets/fix-usrbg.css);
 @import url(./snippets/hide-discover.css);
