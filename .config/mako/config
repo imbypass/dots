@@ -16,7 +16,7 @@ anchor=top-right
 max-icon-size=48
 default-timeout=3500
 ignore-timeout=1
-font=IosevkaTerm Nerd Font Propo Medium 11
+font=Iosevka Nerd Font Propo Medium 11
 
 # start colors
 background-color=#16161b
