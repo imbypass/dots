@@ -9,62 +9,13 @@
  * @discord bypass_
  **/
 
-/* Hide Profile Tabs (Shop, Nitro) */
-li.container_e45859 a[href^="/store"],
-li.container_e45859 a[href^="/shop"] {
-    display: none;
-}
-/* Hide Friends Button (not needed if the other 2 are hidden) */
-/* .friendsButtonContainer__35e86, */
-.sectionDivider__35e86 {
-    display: none;
-}
-
-/* Hide Discord Social Links */
-.socialLinks__7df54 {
-    display: none;
-}
-
-/* Read All Button - Remove Border */
-.vc-ranb-button {
-    border: 0px;
-}
-
-/* Remove background from add friend button */
-.addFriend__133bf {
-    background-color: var(--base01) !important;
-    color: var(--base04) !important;
-}
-.addFriend__133bf:hover {
-    color: var(--base0D) !important;
-}
-
-/* Fix voice channel USRBG backgrounds */
-div[class^="background_"] {
-    background-color: transparent !important;
-}
-
-/* Hide the Discover button in the server list */
-.tutorialContainer__650eb + .listItem__650eb {
-    display: none;
-}
-
-/* Disable voice channel pulsing animations */
-.sphere__11664 {
-    animation: none !important;
-    animation-play-state: paused !important;
-    display: none !important;
-}
-.gradientBackground__11664 {
-    background-color: var(--base00) !important;
-}
-
-/* Hide Voice Channel Tile Gradients */
-:where(.visual-refresh) .singleUserRoot__4ad81 {
-    background: none !important;
-}
-
-button[aria-label="Send a gift"],
-button[aria-label="Apps"] {
-    display: none;
-}
+@import url(./snippets/addfriends-button.css);
+@import url(./snippets/clean-chatbar.css);
+@import url(./snippets/clean-direct-messages.css);
+@import url(./snippets/disable-vc-animations.css);
+@import url(./snippets/fix-usrbg.css);
+@import url(./snippets/hide-discover.css);
+@import url(./snippets/hide-social-links.css);
+@import url(./snippets/remove-gradient-glow.css);
+@import url(./snippets/shorten-clantag.css);
+@import url(./snippets/swap-clantag-roleicon.css);

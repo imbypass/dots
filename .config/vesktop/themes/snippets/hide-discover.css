@@ -1,0 +1,4 @@
+/* Hide the Discover button in the server list */
+.tutorialContainer__650eb + .listItem__650eb {
+    display: none;
+}

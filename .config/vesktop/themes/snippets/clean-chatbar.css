@@ -1,0 +1,9 @@
+/* Hide Send Gift Button */
+button[aria-label="Send a gift"] {
+    display: none;
+}
+
+/* Hide Apps Button */
+button[aria-label="Apps"] {
+    display: none;
+}

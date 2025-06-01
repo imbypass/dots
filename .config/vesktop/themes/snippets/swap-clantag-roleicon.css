@@ -1,0 +1,25 @@
+/* Swap Clan Tag and Role Icon Positions */
+[class^="headerText"] {
+    display: inline-flex;
+}
+[class^="headerText"] > span:has([class^="roleIcon"]) {
+    order: 2;
+}
+[class^="headerText"] > span:has([class^="chipletContainerInner"]) {
+    order: 3;
+}
+[class^="headerText"] > span:is([class^="username"]) {
+    order: 1;
+}
+[class^="headerText"] > span[style="display: none;"] {
+    order: 4;
+}
+[class^="headerText"] > .vc-message-decorations-wrapper {
+    order: 5;
+}
+[class^="headerText"] > span:has(> [class^="newMemberBadge"]) {
+    order: 6;
+}
+[class^="headerText"] > span:is([class^="botTag"]) {
+    order: 7;
+}

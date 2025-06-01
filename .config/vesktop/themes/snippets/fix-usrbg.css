@@ -1,0 +1,4 @@
+/* Fix voice channel USRBG backgrounds */
+div[class^="background_"] {
+    background-color: transparent !important;
+}

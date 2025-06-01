@@ -1,0 +1,41 @@
+/* Shorten Clan Tags to Icon (expand on hover) */
+[class^="chipletContainerInner_"] > span > .unselectable__10651 {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 0;
+    will-change: max-width, margin;
+    transition:
+        max-width 0.7s cubic-bezier(0.34, 1.56, 0.64, 1),
+        margin 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+[class^="chipletContainerInner_"]:hover > span > .unselectable__10651 {
+    max-width: 20ch;
+    margin-right: 0.3ch;
+    /* Prevents it from triggering if you just quickly mouseover :D */
+    transition-delay: 0.08s;
+}
+[class^="chipletContainerInner_"] > span > img.badge__10651 {
+    margin-right: 0;
+    transition:
+        transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1),
+        margin 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+[class^="chipletContainerInner_"]:hover > span > img.badge__10651 {
+    /* transform: rotateZ(360deg); */
+    margin-right: 0.6ch;
+    /* Same as above transition delay */
+    transition-delay: 0.08s;
+}
+[class^="chipletContainerInner_"] {
+    position: relative;
+}
+[class^="chipletContainerInner_"]::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    pointer-events: none;
+}

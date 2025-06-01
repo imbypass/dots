@@ -1,0 +1,14 @@
+/* Disable voice channel pulsing animations */
+.sphere__11664 {
+    animation: none !important;
+    animation-play-state: paused !important;
+    display: none !important;
+}
+.gradientBackground__11664 {
+    background-color: var(--base00) !important;
+}
+
+/* Hide Voice Channel Tile Gradients */
+:where(.visual-refresh) .singleUserRoot__4ad81 {
+    background: none !important;
+}
