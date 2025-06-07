@@ -17,8 +17,8 @@
   },
 
   // ==========[ ENABLED WAYBAR MODULES ]=========== //
-  "modules-left": [],
-  "modules-center": ["custom/logo", "wlr/taskbar"],
+  "modules-left": ["custom/logo", "wlr/taskbar"],
+  "modules-center": [],
   "modules-right": [
     "group/systray",
     "pulseaudio",

@@ -1,11 +1,11 @@
 @import url("base16.css");
 
 * {
-    font-family: "Iosevka Nerd Font Propo";
     transition: all 0.3s ease;
     font-size: 13.5px;
-    font-weight: 700;
+    font-weight: 600;
     border-radius: 0px;
+    font-family: "Iosevka Nerd Font Propo";
 }
 
 window#waybar {
@@ -21,7 +21,6 @@ tooltip {
     background: @base00;
     border: 2px solid @base02;
     border-radius: 0px;
-    font-family: "JetBrainsMono NFP ExtraBold";
 }
 
 menu {
@@ -88,7 +87,6 @@ hr {
     padding-bottom: 2px;
     padding-top: 2px;
     font-size: 15px;
-    font-family: "ZedMono NFP ExtraBold";
 }
 
 #bluetooth {
@@ -100,7 +98,6 @@ hr {
     padding-bottom: 2px;
     padding-top: 2px;
     font-size: 15px;
-    font-family: "ZedMono NFP ExtraBold";
 }
 
 #clock {
@@ -185,8 +182,7 @@ hr {
     border: 2px solid @base00;
     color: @base0D;
     margin-bottom: 5px;
-    margin-right: -4px;
-    font-family: "ZedMono NFP ExtraBold";
+    margin-right: 6px;
     border-radius: 8px;
     background-position: center;
     background-repeat: no-repeat;
@@ -199,7 +195,6 @@ hr {
 #custom-power {
     margin-right: 10px;
     margin-left: 4px;
-    font-family: "ZedMono NFP ExtraBold";
     font-size: 18px;
     color: @base02;
 }
@@ -227,7 +222,6 @@ hr {
     color: @base02;
     margin-right: 6px;
     margin-left: 6px;
-    font-family: "ZedMono NFP ExtraBold";
     font-size: 18px;
 }
 
