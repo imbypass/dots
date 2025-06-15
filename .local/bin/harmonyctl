@@ -345,31 +345,36 @@ show_expose() {
 
 take_screenshot() {
     TIMESTAMP=$(date +%d%m%Y_%H%M%S)
+    HYPRSHOT_ARGUMENT=$(echo $1 | sed -E 's/--//g')
+    FILENAME="screenshot_${TIMESTAMP}.png"
+
     case "$1" in
         "")
-            hyprshot -m region -z -f "screenshot_${TIMESTAMP}.png"
+            hyprshot -m region -z -f ${FILENAME}
         ;;
         "region")
-            hyprshot -m region -z -f "screenshot_${TIMESTAMP}.png"
+            hyprshot -m region -z -f ${FILENAME}
         ;;
         "--region")
-            hyprshot -m region -z -f "screenshot_${TIMESTAMP}.png"
+            hyprshot -m region -z -f ${FILENAME}
         ;;
         "screen")
-            hyprshot -m output -z -f "screenshot_${TIMESTAMP}.png"
+            hyprshot -m output -z -f ${FILENAME}
         ;;
         "--screen")
-            hyprshot -m output -z -f "screenshot_${TIMESTAMP}.png"
+            hyprshot -m output -z -f ${FILENAME}
         ;;
         "window")
-            hyprshot -m window -z -f "screenshot_${TIMESTAMP}.png"
+            hyprshot -m window -z -f ${FILENAME}
         ;;
         "--window")
-            hyprshot -m window -z -f "screenshot_${TIMESTAMP}.png"
+            hyprshot -m window -z -f ${FILENAME}
         ;;
     esac
 
-    canberra-gtk-play -i camera-shutter
+    if [[ -f "${SCREENSHOTS_DIR}/${FILENAME}" ]]; then
+        canberra-gtk-play -i camera-shutter
+    fi
 }
 
 toggle_gamemode() {
@@ -416,12 +421,10 @@ update_mirrors() {
     printf "${BOLD}${BLUE}:: ${RESET}Updating mirrors..\n"
     sudo reflector --verbose --country US --latest 8 --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist > /dev/null
 }
-
 update_colors() {
     printf "${BOLD}${BLUE}:: ${RESET}Updating system colors..\n"
     /usr/bin/wal -i ~/.local/share/wallpapers/.wallpaper
 }
-
 update_prompt() {
     case "$1" in
         "zed")
@@ -477,9 +480,9 @@ elif [[ $1 == "wp" ]];then
     swww img $2
 
 elif [[ $1 == "edit" ]];then
-        edit_prompt $2
+    edit_prompt $2
 elif [[ $1 == "e" ]];then
-        edit_prompt $2
+    edit_prompt $2
 
 elif [[ $1 == "cache" ]];then
 	free_cache
