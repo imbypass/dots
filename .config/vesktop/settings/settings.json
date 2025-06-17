@@ -4,14 +4,14 @@
     "useQuickCss": true,
     "themeLinks": [],
     "enabledThemes": [
-        "icons-recolor.theme.css",
+        "base16-discord.theme.css",
         "visual-refresh.theme.css",
-        "snippets.theme.css",
-        "settings-icons.theme.css",
         "userpfp.theme.css",
+        "snippets.theme.css",
+        "icons-recolor.theme.css",
         "fonts.theme.css",
-        "base16-discord.extras.css",
-        "base16-discord.theme.css"
+        "settings-icons.theme.css",
+        "base16-discord.extras.css"
     ],
     "enableReactDevtools": false,
     "frameless": true,
@@ -816,7 +816,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1749153402126
+        "settingsSyncVersion": 1750119404192
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false
