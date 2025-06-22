@@ -33,7 +33,6 @@ print_help() {
     # print_logo
     printf "usage: harmonyctl <command> [args...|--help]\n\n"
     printf "commands:\n"
-    printf "  ${BLUE}cache\t\t ${RESET}->\tForcibly frees cached RAM.\n"
     printf "  ${BLUE}clean\t\t ${RESET}->\tRemove orphaned packages from the system.\n"
     printf "  ${BLUE}dock\t\t ${RESET}->\tToggle the visibility of the application dock.\n"
     printf "  ${BLUE}edit <value>\t ${RESET}->\tEdit parts of HARMONY.\n"
@@ -44,6 +43,7 @@ print_help() {
     printf "  ${BLUE}help\t\t ${RESET}->\tDisplay this help prompt.\n"
     printf "  ${BLUE}list <value>\t ${RESET}->\tList available edit/reload values for HARMONY.\n"
     printf "  ${BLUE}mirrors\t ${RESET}->\tUpdate Arch repository mirror list using REFLECTOR.\n"
+    printf "  ${BLUE}ram\t\t ${RESET}->\tForcibly frees cached RAM.\n"
     printf "  ${BLUE}reload <value> ${RESET}->\tReload parts of HARMONY's interface.\n"
     printf "  ${BLUE}upload\t ${RESET}->\tUpload the clipboard to 0x0.st and copy the result.\n"
     printf "  ${BLUE}version\t ${RESET}->\tDisplay the current version of HARMONY\n"
@@ -341,6 +341,7 @@ show_expose() {
     printf "${BOLD}${BLUE}:: ${RESET}Showing desktop expose..\n"
     sleep 0.15
     hyprctl dispatch hyprexpo:expo show > /dev/null
+    hyprctl dispatch overview:toggle > /dev/null
 }
 
 take_screenshot() {
@@ -484,7 +485,7 @@ elif [[ $1 == "edit" ]];then
 elif [[ $1 == "e" ]];then
     edit_prompt $2
 
-elif [[ $1 == "cache" ]];then
+elif [[ $1 == "ram" ]];then
 	free_cache
 elif [[ $1 == "free" ]];then
 	free_cache
