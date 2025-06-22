@@ -155,7 +155,8 @@
   },
   "custom/logo": {
     "tooltip": false,
-    "format": "󰣇",
+    // "format": "󰣇",
+    "format": " ",
     "on-click": "walker -m applications",
     "on-click-right": "harmonyctl expose",
   },

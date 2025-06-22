@@ -3,7 +3,7 @@
 * {
     transition: all 0.3s ease;
     font-size: 13.5px;
-    font-weight: 600;
+    font-weight: 800;
     border-radius: 0px;
     font-family: "Iosevka Nerd Font Propo";
 }
@@ -166,8 +166,8 @@ hr {
 
 #taskbar button {
     padding: 8px;
-    margin-left: 2px;
-    margin-right: 2px;
+    margin-left: 4px;
+    margin-right: 4px;
     margin-bottom: 5px;
     margin-top: 7px;
     border-radius: 4px;
@@ -178,19 +178,21 @@ hr {
 
 #custom-logo {
     margin: 8px;
-    font-size: 21.5px;
+    font-size: 18px;
     background-color: @base00;
     border: 2px solid @base00;
     color: @base0D;
     margin-bottom: 5px;
-    margin-right: 6px;
+    margin-right: 4px;
     border-radius: 8px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 24px 24px;
+
+    background-image: url("/home/bypass/.steamgriddb/stardew-valley/icon.png");
 }
 #custom-logo:hover {
-    color: @base05;
+    color: @base06;
 }
 
 #custom-power {
