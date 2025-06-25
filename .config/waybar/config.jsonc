@@ -61,6 +61,7 @@
   "wlr/taskbar": {
     "format": "{icon}",
     "icon-size": 20,
+    // "icon-theme": "tela dark",
     "tooltip-format": "{title}",
     "on-click": "activate",
     "on-click-middle": "close",

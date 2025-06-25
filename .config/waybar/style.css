@@ -12,8 +12,6 @@ window#waybar {
     color: @base05;
     background: @base00;
     border-top: 2px solid @base01;
-    /* background: rgba(22, 22, 27, 0.65);
-    border-top: 2px solid rgba(42, 42, 47, 0.35); */
     border-radius: 0;
 }
 
@@ -187,12 +185,13 @@ hr {
     border-radius: 8px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 24px 24px;
 
+    background-size: 21px;
     background-image: url("/home/bypass/.steamgriddb/stardew-valley/icon.png");
 }
 #custom-logo:hover {
     color: @base06;
+    background-image: url("/home/bypass/.steamgriddb/stardew-valley/icon_blue.png");
 }
 
 #custom-power {
