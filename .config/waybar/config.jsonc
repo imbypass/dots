@@ -21,6 +21,8 @@
   "modules-center": [],
   "modules-right": [
     "group/systray",
+    "network",
+    "bluetooth",
     "pulseaudio",
     "pulseaudio#microphone",
     "battery",
@@ -152,7 +154,7 @@
   // ==========[ CUSTOM WAYBAR MODULES ]========== //
   "custom/tray": {
     "tooltip": false,
-    "format": "󰅁",
+    "format": "",
   },
   "custom/logo": {
     "tooltip": false,
@@ -169,6 +171,7 @@
   "custom/power": {
     "tooltip": false,
     "format": "",
+    "format": "󱪽",
     "on-click-right": "walker -m mainmenu",
     "on-click": "walker -m mainmenu",
   },
