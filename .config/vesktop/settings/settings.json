@@ -278,7 +278,7 @@
             "enabled": false
         },
         "NoBlockedMessages": {
-            "enabled": true,
+            "enabled": false,
             "ignoreMessages": false,
             "applyToIgnoredUsers": true
         },
@@ -819,7 +819,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1750811458517
+        "settingsSyncVersion": 1751124624187
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false
