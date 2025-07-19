@@ -6,15 +6,15 @@
     "enabledThemes": [
         "icons-recolor.theme.css",
         "visual-refresh.theme.css",
-        "snippets.theme.css",
         "settings-icons.theme.css",
         "userpfp.theme.css",
-        "fonts.theme.css",
         "base16-discord.extras.css",
-        "base16-discord.theme.css",
         "base16.theme.css",
         "base16.extras.css",
-        "patches.theme.css"
+        "patches.theme.css",
+        "fonts.theme.css",
+        "base16-discord.theme.css",
+        "snippets.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": true,
@@ -532,7 +532,7 @@
             "autoTranslate": false,
             "showChatBarButton": true,
             "service": "google",
-            "receivedInput": "nl",
+            "receivedInput": "auto",
             "receivedOutput": "en",
             "sentInput": "auto",
             "sentOutput": "fr",
@@ -819,7 +819,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1751124624187
+        "settingsSyncVersion": 1752269248677
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false

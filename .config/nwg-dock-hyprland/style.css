@@ -1,9 +1,9 @@
 @import url("./colors.css");
 
 window {
-    border-radius: 8px;
+    border-radius: 16px;
     border-style: solid;
-    border-width: 2px;
+    border-width: 1px;
 }
 
 #box {
@@ -18,15 +18,15 @@ image {
 }
 
 button {
-    padding: 6px;
+    padding: 3px;
     margin-left: 4px;
     margin-right: 4px;
     margin-top: 4px;
-    font-size: 12px;
+    font-size: 18px;
 }
 
 button:hover {
-    border-radius: 6px;
+    /* background-color: transparent; */
 }
 
 button:focus {

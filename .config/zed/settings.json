@@ -6,17 +6,16 @@
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-sonnet-4"
-    },
-    "version": "2"
+    }
   },
   "vim_mode": false,
   "theme": "Base16 Flavours",
   "features": {
     "edit_prediction_provider": "zed"
   },
-  "ui_font_size": 16.5,
+  "ui_font_size": 16,
   "buffer_font_size": 14,
-  "ui_font_family": "IosevkaTerm Nerd Font Propo",
+  "ui_font_family": "SF Pro Rounded",
   "buffer_font_family": "IosevkaTerm Nerd Font Propo",
   "buffer_line_height": {
     "custom": 1.525

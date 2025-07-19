@@ -17,7 +17,7 @@ BOLD='\033[1m'
 UNDERLINE='\033[4m'
 RESET='\033[0m'
 
-VIDEO_WALLPAPER='/home/bypass/.local/share/wallpapers/video/pixel-90s-retro-room.mp4'
+VIDEO_WALLPAPER='/home/bypass/Pictures/Live/cyberpunk-2077-judys-apartment.mp4'
 
 print_logo() {
     printf "${BLUE} _   _    _    ____  __  __  ___  _   ___   __
@@ -183,6 +183,7 @@ reload_prompt() {
         "all")
             reload_prompt "gtk"
             reload_prompt "hypr"
+            reload_prompt "dock"
             reload_prompt "spotify"
             reload_prompt "steam"
             reload_prompt "swaync"
@@ -192,7 +193,7 @@ reload_prompt() {
         "dock")
             printf "${BOLD}${BLUE}:: ${RESET}Reloading nwg-dock-hyprland..\n"
             killall -9 nwg-dock-hyprland > /dev/null
-            nwg-dock-hyprland -r -mb 15 -mt 10 -i 32 -x -nolauncher & disown
+            toggle_dock
             printf "${BOLD}${BLUE}:: ${RESET}Hiding nwg-dock-hyprland..\n"
             killall -37 nwg-dock-hyprland > /dev/null
         ;;
@@ -251,7 +252,7 @@ reload_prompt() {
         "steam")
             printf "${BOLD}${BLUE}:: ${RESET}Reloading Steam..\n"
             # ~/.local/bin/hex2rgb ~/.local/share/adwaita-steam/adwaita/colorthemes/base16/base16.css
-            sleep 2 && cd ~/.local/share/adwaita-steam/ && ./install.py --color-theme base16 --extras library/hide_whats_new --font zedmono
+            sleep 2 && cd ~/.local/share/adwaita-steam/ && ./install.py --color-theme base16 --extras library/hide_whats_new --font sfpro
         ;;
     esac
 }
@@ -286,7 +287,7 @@ init_prompt() {
 
 file_upload() {
     wl-paste | up -t $1 | wl-copy
-    notify-send -u normal -a hyprshot -t 750 "0x0.st" "Image uploaded and copied to clipboard." -i /usr/share/icons/Papirus-Dark/96x96/apps/diodon.svg
+    notify-send -u normal -a hyprshot -t 750 "0x0.st" "Image uploaded and copied to clipboard." -i ~/.local/share/harmony/logo.svg
 }
 free_cache() {
     printf "${BOLD}${BLUE}:: ${RESET}Freeing cached RAM..\n"
@@ -383,7 +384,7 @@ toggle_gamemode() {
 	HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
 	OS=$(cat /etc/os-release | grep -E '^PRETTY_NAME=' | cut -d'"' -f2 | cut -d'=' -f2)
 	if [ "$HYPRGAMEMODE" = 1 ] ; then
-        notify-send -u normal -a Hyprland -t 750 "$OS" "Game Mode Enabled" -i /usr/share/icons/Papirus-Dark/96x96/devices/input-gaming.svg
+        notify-send -u normal -a Hyprland -t 750 "Harmony" "Game Mode Enabled" -i ~/.local/share/harmony/logo.svg
         hyprctl --batch "\
                 keyword animations:enabled 0;\
                 keyword decoration:drop_shadow 0;\
@@ -394,7 +395,7 @@ toggle_gamemode() {
                 keyword decoration:rounding 0" > /dev/null
         exit
 	else
-        notify-send -u normal -a Hyprland -t 750 "$OS" "Game Mode Disabled" -i /usr/share/icons/Papirus-Dark/96x96/devices/input-gaming.svg
+        notify-send -u normal -a Hyprland -t 750 "Harmony" "Game Mode Disabled" -i ~/.local/share/harmony/logo.svg
 	fi
 	hyprctl reload > /dev/null
 	hyprshade on vibrance > /dev/null
@@ -411,16 +412,66 @@ toggle_blur() {
 }
 toggle_floatwindows() {
     printf "${BOLD}${BLUE}:: ${RESET}Toggling all floating windows..\n"
+    notify-send -u normal -a Hyprland -t 750 "Harmony" "Toggled Window Tiling" -i ~/.local/share/harmony/logo.svg
     hyprctl dispatch workspaceopt allfloat > /dev/null
 }
 toggle_dock() {
     printf "${BOLD}${BLUE}:: ${RESET}Toggling dock visibility..\n"
-    killall nwg-dock-hyprland > /dev/null || nwg-dock-hyprland -r -mb 55 -mt 10 -i 32 -nolauncher > /dev/null  & disown > /dev/null
+    killall nwg-dock-hyprland > /dev/null || nwg-dock-hyprland -x -r -mb 5 -mt 25 -i 40 -nolauncher -iw "secret,special" & disown
+}
+
+change_titlebars() {
+    CONFIG="$HOME/.config/hypr/extras/plugins/hyprbars.conf"
+
+    TB_THEME=$1
+
+    if [[ "$TB_THEME" == "win" ]]; then
+        TB_THEME="windows"
+    fi
+    if [[ "$TB_THEME" == "mac" ]]; then
+        TB_THEME="macos"
+    fi
+
+    # Update config file
+    sed -i "s|^source = hyprbars/.*\.conf$|source = hyprbars/$TB_THEME.conf|" "$CONFIG"
+
+    #if statement to check for specific values
+    if [[ "$TB_THEME" == "macos" ]]; then
+        change_rounding 10
+    elif [[ "$TB_THEME" == "windows" ]]; then
+        change_rounding 8
+        if [[ "$2" == "11" ]]; then
+            change_rounding 8
+        elif [[ "$2" == "10" ]]; then
+            change_rounding 0
+        fi
+    elif [[ "$TB_THEME" == "kde" ]]; then
+        change_rounding 4
+    fi
+
+    # echo "Hyprbars theme changed to: $1"
+}
+
+change_rounding() {
+    CONFIG="$HOME/.config/hypr/core/decoration/rounding.conf"
+
+    # Check if number provided
+    if [[ ! "$1" =~ ^[0-9]+$ ]]; then
+        echo "Usage: $0 <number>"
+        echo "Example: $0 12"
+        exit 1
+    fi
+
+    # Update config file
+    sed -i "1s/^\$corner_radius = [0-9]*$/\$corner_radius = $1/" "$CONFIG"
+
+    # echo "Rounding changed to: $1"
 }
 
 update_mirrors() {
     printf "${BOLD}${BLUE}:: ${RESET}Updating mirrors..\n"
     sudo reflector --verbose --country US --latest 8 --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist > /dev/null
+    notify-send -u low -a Hyprland -t 750 "Harmony" "Mirrors updated!" -i ~/.local/share/harmony/logo.svg
 }
 update_colors() {
     printf "${BOLD}${BLUE}:: ${RESET}Updating system colors..\n"
@@ -432,6 +483,7 @@ update_prompt() {
    	        printf "${BOLD}${BLUE}:: ${RESET}Updating zed..\n"
             curl -f https://zed.dev/install.sh | sh
             ~/.local/bin/patch-zed-icon
+            notify-send -u low -a Hyprland -t 750 "Harmony" "Zed updated!" -i ~/.local/share/harmony/logo.svg
         ;;
         "mirrors")
             update_mirrors
@@ -470,6 +522,15 @@ elif [[ $1 == "list" ]];then
 
 elif [[ $1 == "dock" ]];then
 	toggle_dock
+
+elif [[ $1 == "titlebars" ]];then
+	change_titlebars $2 $3
+elif [[ $1 == "titlebar" ]];then
+	change_titlebars $2 $3
+elif [[ $1 == "tb" ]];then
+	change_titlebars $2 $3
+elif [[ $1 == "rounding" ]];then
+	change_rounding $2
 
 
 elif [[ $1 == "reload" ]];then

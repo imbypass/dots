@@ -2,37 +2,35 @@
 
 * {
     transition: all 0.3s ease;
-    font-size: 13.5px;
-    font-weight: 800;
+    font-size: 13px;
+    font-weight: 700;
     border-radius: 0px;
-    font-family: "Iosevka Nerd Font Propo";
+    font-family: "SF Pro Rounded";
 }
 
 window#waybar {
     color: @base05;
-    background: @base00;
-    /* background: rgba(25, 25, 25, 0.65); */
-    border-top: 2px solid @base01;
+    background: alpha(@base01, 1);
     border-radius: 0;
 }
 
 tooltip {
-    color: @base05;
+    color: @base06;
     background: @base00;
-    border: 2px solid @base02;
-    border-radius: 0px;
+    border: 1px solid @base02;
+    border-radius: 12px;
 }
 
 menu {
     background: transparent;
     background-color: @base00;
-    border-radius: 4px;
-    border: 2px solid @base01;
+    border-radius: 12px;
+    border: 1px solid @base01;
     color: @base05;
     padding: 8px;
 }
 menuitem {
-    border-radius: 2px;
+    border-radius: 8px;
     padding: 7px;
     padding-left: 2px;
     padding-right: 2px;
@@ -55,6 +53,8 @@ hr {
 #cpu,
 #memory,
 #pulseaudio,
+#pulseaudio.sink,
+#pulseaudio.source,
 #pulseaudio.microphone,
 #custom-weather,
 #custom-logo,
@@ -63,15 +63,11 @@ hr {
 #custom-notifications,
 #workspaces button,
 #tray {
-    border-radius: 4px;
-    background: @base01;
-    color: @base05;
-    margin: 3px;
-    margin-top: 7px;
-    margin-bottom: 6px;
-    padding: 12px;
-    padding-bottom: 0px;
-    padding-top: 0px;
+    background: transparent;
+    color: @base06;
+    text-shadow: 0px 0px 4px rgba(1, 1, 1, 0.3);
+    margin-left: 14px;
+    margin-right: 14px;
 }
 
 #tray {
@@ -79,65 +75,42 @@ hr {
 }
 
 #network {
-    border-bottom-right-radius: 0px;
-    border-top-right-radius: 0px;
-    margin-right: 0;
-    padding-right: 6px;
-    padding-left: 13px;
-    padding-bottom: 2px;
-    padding-top: 2px;
     font-size: 15px;
+    margin-right: 12px;
+}
+#network:hover {
+    color: @base06;
 }
 
 #bluetooth {
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 0px;
-    margin-left: 0;
-    padding-right: 15px;
-    padding-left: 10px;
-    padding-bottom: 2px;
-    padding-top: 2px;
     font-size: 15px;
+    margin-right: 10px;
+}
+#bluetooth:hover {
+    color: @base06;
 }
 
 #clock {
-    padding-top: 1px;
+    margin-left: 4px;
+    margin-right: 16px;
     font-size: 13px;
 }
 
 #pulseaudio {
-    min-width: 52px;
-    margin-right: -5px;
-    padding-right: 0px;
-    padding-left: 9px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    font-size: 12.75px;
+    font-size: 15.75px;
     border: none;
 }
-
-#pulseaudio.microphone {
-    margin-left: 0px;
-    padding-left: 0px;
-    padding-right: 8px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
+#pulseaudio:hover {
+    color: @base06;
 }
 
-#pulseaudio.muted,
+#pulseaudio.sink-muted,
 #pulseaudio.source-muted {
     color: @base08;
 }
 
 #workspaces {
     background: @base01;
-    margin-top: 7px;
-    margin-bottom: 6px;
-    margin-right: 0;
-    border-radius: 0px;
-    padding-right: 4px;
-    padding-left: 4px;
-    padding-top: 0px;
 }
 #workspaces:hover {
     border: 0px transparent;
@@ -146,12 +119,6 @@ hr {
     border-radius: 0px;
     border: 0px;
     color: @base05;
-    margin: 6px;
-    margin-top: 8px;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 12px;
-    padding-right: 12px;
 }
 #workspaces button:hover {
     color: @base09;
@@ -163,52 +130,30 @@ hr {
     color: @base0A;
 }
 
-#taskbar button {
-    padding: 8px;
-    margin-left: 4px;
-    margin-right: 4px;
-    margin-bottom: 5px;
-    margin-top: 7px;
-    border-radius: 4px;
-}
-#taskbar button.active {
-    background-color: @base02;
-}
-
 #custom-logo {
     font-size: 18px;
-    background-color: @base00;
-    border: 2px solid @base00;
-    margin-bottom: 5px;
-    margin-right: 8px;
-    margin-left: 12px;
-    margin-top: 8px;
+    margin-right: 20px;
+    margin-left: 18px;
     border-radius: 8px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 39px;
+    background-size: 29px;
 }
 #custom-logo {
-    color: @base0D;
-    background-image: url("/home/bypass/.steamgriddb/stardew-valley/icon.png");
-    /* background-size: 24px; */
-    background-image: url("/home/bypass/.config/waybar/win10.png");
+    color: @base06;
 }
 #custom-logo:hover {
     color: @base06;
-    background-image: url("/home/bypass/.steamgriddb/stardew-valley/icon_blue.png");
-    /* background-size: 24px; */
-    background-image: url("/home/bypass/.config/waybar/win10_h.png");
 }
 
 #custom-power {
-    margin-right: 10px;
-    margin-left: 6px;
-    font-size: 18px;
-    color: @base02;
+    margin-right: 24px;
+    margin-left: 8px;
+    font-size: 14px;
+    color: @base06;
 }
 #custom-power:hover {
-    color: @base0D;
+    color: @base06;
 }
 
 #custom-expose {
@@ -216,7 +161,6 @@ hr {
     margin-right: 12px;
     padding-left: 5px;
     padding-right: 20px;
-    padding-top: 2px;
     padding-bottom: 2px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
@@ -228,13 +172,18 @@ hr {
 
 #custom-tray {
     font-size: 24px;
-    color: @base05;
+    color: @base06;
     margin-right: 10px;
     margin-left: 6px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 #custom-spotify {
     font-size: 13px;
     margin-left: 0px;
+}
+
+#window {
+    color: @base06;
+    font-size: 24px;
 }

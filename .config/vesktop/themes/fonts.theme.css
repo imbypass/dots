@@ -10,7 +10,12 @@
  **/
 
 :root {
-    --font-code: "Iosevka Nerd Font Propo";
-    --font: "Google Sans Display Medium";
-    --font: "Iosevka Nerd Font Propo";
+    --font-code: "SFMono Nerd Font Mono Semibold";
+    --font: "SF Pro Rounded";
+
+    --font-weight-light: 400;
+    --font-weight-normal: 500;
+    --font-weight-medium: 600;
+    --font-weight-semibold: 700;
+    --font-weight-bold: 800;
 }

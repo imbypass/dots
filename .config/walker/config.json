@@ -118,6 +118,9 @@
       "use_fd": false,
       "weight": 5
     },
+    "hyprland_keybinds": {
+      "path": "~/.config/hypr/core/binds.conf"
+    },
     "runner": {
       "generic_entry": false,
       "history": true,

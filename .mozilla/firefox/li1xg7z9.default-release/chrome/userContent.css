@@ -2,22 +2,22 @@
 
 :root {
     /* start colors */
---base00: #16161b;
---base01: #212127;
---base02: #2a2a31;
---base03: #373741;
---base04: #4f4f5e;
---base05: #9595ae;
---base06: #e9ecf3;
---base07: #67677b;
---base08: #ff5454;
---base09: #ff985a;
---base0A: #f6c177;
---base0B: #6bc174;
---base0C: #9ccfd8;
---base0D: #70abff;
---base0E: #ff72ff;
---base0F: #c175ff;
+--base00: #07090d;
+--base01: #090b11;
+--base02: #121520;
+--base03: #475070;
+--base04: #5f7299;
+--base05: #acb0d0;
+--base06: #bdc0d0;
+--base07: #fefefe;
+--base08: #f7768e;
+--base09: #eda987;
+--base0A: #e0af68;
+--base0B: #9ece6a;
+--base0C: #4abaaf;
+--base0D: #7aa2f7;
+--base0E: #bb9af7;
+--base0F: #9a7ecc;
     /* end colors */
 
     --newtab-background-color: var(--base01) !important;

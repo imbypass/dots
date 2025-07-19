@@ -1,3 +1,4 @@
+/* Custom "is typing..." indicator */
 .typingDots_b88801 > .ellipsis_b88801 + .text_b88801 {
     font-size: 0;
     height: 16px;

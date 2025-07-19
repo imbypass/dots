@@ -3,6 +3,12 @@
 
 shell = "fish -c '{}'"
 
+### HARMONY LOGO ###
+[[items]]
+file = "~/.local/share/harmony/logo.svg"
+template = "harmony"
+rewrite = true
+
 ### PHOCUS GTK THEME ###
 [[items]]
 file = "~/.themes/phocus/scss/gtk-3.0/_colors.scss"
@@ -113,6 +119,13 @@ template = "waybar"
 rewrite = true
 hook = "~/.local/bin/harmonyctl reload waybar"
 
+### NWG DOCK ###
+[[items]]
+file = "~/.config/nwg-dock-hyprland/colors.css"
+template = "nwg-dock"
+rewrite = true
+hook = "~/.local/bin/harmonyctl reload dock"
+
 ### FOOT TERMINAL ###
 [[items]]
 file = "~/.config/foot/colors.ini"
@@ -159,13 +172,6 @@ template = "spotify"
 rewrite = true
 hook = "~/.local/bin/harmonyctl reload spotify"
 light = false
-
-### NWG DOCK ###
-[[items]]
-file = "~/.config/nwg-dock-hyprland/colors.css"
-template = "nwg-dock"
-rewrite = true
-hook = "~/.local/bin/harmonyctl reload dock"
 
 ### NEOVIM ###
 [[items]]

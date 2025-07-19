@@ -13,11 +13,10 @@
 @import url(./snippets/animated-message-options.css);
 @import url(./snippets/clean-chatbar.css);
 @import url(./snippets/clean-direct-messages.css);
+@import url(./snippets/clean-dm-categories.css);
 @import url(./snippets/custom-is-typing.css);
 @import url(./snippets/disable-vc-animations.css);
 @import url(./snippets/fix-usrbg.css);
 @import url(./snippets/hide-discover.css);
 @import url(./snippets/hide-social-links.css);
-@import url(./snippets/remove-gradient-glow.css);
-@import url(./snippets/shorten-clantag.css);
 @import url(./snippets/swap-clantag-roleicon.css);
