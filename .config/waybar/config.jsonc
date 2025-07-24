@@ -1,33 +1,29 @@
 {
   "layer": "top",
-  "position": "top",
+  "position": "bottom",
   "margin-top": 0,
   "margin-right": 0,
   "margin-left": 0,
   "margin-bottom": 0,
   "mod": "dock",
-  "height": 32,
+  "height": 42,
   "exclusive": true,
   "passthrough": false,
   "gtk-layer-shell": true,
   "reload_style_on_change": true,
-  "tray": {
-    "icon-size": 14,
-    "spacing": 10,
-  },
 
   // ==========[ ENABLED WAYBAR MODULES ]=========== //
   "modules-left": ["custom/logo"],
-  "modules-center": [],
+  "modules-center": ["wlr/taskbar"],
   "modules-right": [
     "group/systray",
-    "battery",
-    "network",
-    "bluetooth",
     "pulseaudio",
     "pulseaudio#microphone",
-    "custom/power",
+    "network",
+    "bluetooth",
+    "battery",
     "clock",
+    "custom/power",
   ],
 
   // ==========[ STANDARD WAYBAR MODULES ]========== //
@@ -54,15 +50,15 @@
     "separate-outputs": false,
   },
   "hyprland/workspaces": {
-    "format": "{}",
-    "active-only": false,
+    "format": "Workspace {}",
+    "active-only": true,
     "persistent-workspaces": {},
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
   },
   "wlr/taskbar": {
     "format": "{icon}",
-    "icon-size": 20,
+    "icon-size": 18,
     // "icon-theme": "tela dark",
     "tooltip-format": "{title}",
     "on-click": "activate",
@@ -79,7 +75,7 @@
     ],
   },
   "clock": {
-    "format": " {:%a %b %e   %I:%M %p}",
+    "format": " {:%I:%M %p}",
     "tooltip-format": "{:%a, %b %e, %Y}",
   },
   "battery": {
@@ -132,7 +128,7 @@
   "pulseaudio#microphone": {
     "format": "{format_source}",
     "format-source": "",
-    "format-source-muted": "",
+    "format-source-muted": "󰍭",
     "tooltip-format": "{desc} ({volume}%)",
     "on-click": "pamixer --default-source -t",
     "on-click-right": "killall pavucontrol && GTK_THEME=FOURdotZERO pavucontrol -t 4 || GTK_THEME=FOURdotZERO pavucontrol -t 4",
@@ -153,6 +149,11 @@
     "modules": ["custom/tray", "tray"],
   },
 
+  "tray": {
+    "icon-size": 14,
+    "spacing": 12,
+  },
+
   // ==========[ CUSTOM WAYBAR MODULES ]========== //
   "custom/tray": {
     "tooltip": false,
@@ -160,7 +161,7 @@
   },
   "custom/logo": {
     "tooltip": false,
-    "format": "󰣇",
+    "format": "",
     "on-click": "walker -m applications",
     "on-click-right": "harmonyctl expose",
   },
@@ -172,7 +173,7 @@
   "custom/power": {
     "tooltip": false,
     "format": "",
-    "format": "",
+    "format": "⏻",
     "on-click-right": "walker -m mainmenu",
     "on-click": "walker -m mainmenu",
   },

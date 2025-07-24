@@ -183,7 +183,7 @@ reload_prompt() {
         "all")
             reload_prompt "gtk"
             reload_prompt "hypr"
-            reload_prompt "dock"
+            # reload_prompt "dock"
             reload_prompt "spotify"
             reload_prompt "steam"
             reload_prompt "swaync"

@@ -1,17 +1,17 @@
 window {
-    background: rgba(7, 9, 13, 0.55);        /* base01 */
-    border-color: rgba(9, 11, 17, 0.15);      /* base02 */
+    background: rgba(25, 23, 36, 0.55);        /* base01 */
+    border-color: rgba(31, 29, 46, 0.15);      /* base02 */
 }
 
 button,
 image {
-    color: #fefefe;             /* base07 */
+    color: #524f67;             /* base07 */
 }
 
 button {
-    color: #acb0d0;             /* base05 */
+    color: #e0def4;             /* base05 */
 }
 
 button:hover {
-    background-color: #121520;  /* base02 */
+    background-color: #26233a;  /* base02 */
 }

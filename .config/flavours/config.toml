@@ -89,19 +89,10 @@ rewrite = true
 
 ### MAKO DAEMON ###
 [[items]]
-file = "~/.config/mako/config"
+file = "~/.config/mako/colors"
 template = "mako"
-rewrite = false
-start = "# start colors"
-end = "# end colors"
-hook = "~/.local/bin/harmonyctl reload mako"
-
-### SWAYNC DAEMON ###
-[[items]]
-file = "~/.config/swaync/colors.css"
-template = "waybar"
 rewrite = true
-hook = "swaync-client -rs"
+hook = "~/.local/bin/harmonyctl reload mako"
 
 ### WALKER ###
 [[items]]
@@ -119,12 +110,12 @@ template = "waybar"
 rewrite = true
 hook = "~/.local/bin/harmonyctl reload waybar"
 
-### NWG DOCK ###
-[[items]]
-file = "~/.config/nwg-dock-hyprland/colors.css"
-template = "nwg-dock"
-rewrite = true
-hook = "~/.local/bin/harmonyctl reload dock"
+# ### NWG DOCK ###
+# [[items]]
+# file = "~/.config/nwg-dock-hyprland/colors.css"
+# template = "nwg-dock"
+# rewrite = true
+# hook = "~/.local/bin/harmonyctl reload dock"
 
 ### FOOT TERMINAL ###
 [[items]]
@@ -132,12 +123,12 @@ file = "~/.config/foot/colors.ini"
 template = "foot"
 rewrite = true
 
-### GHOSTTY TERMINAL ###
-[[items]]
-file = "~/.config/ghostty/themes/base.conf"
-template = "ghostty"
-rewrite = true
-hook = "~/.local/bin/harmonyctl reload ghostty"
+# ### GHOSTTY TERMINAL ###
+# [[items]]
+# file = "~/.config/ghostty/themes/base.conf"
+# template = "ghostty"
+# rewrite = true
+# hook = "~/.local/bin/harmonyctl reload ghostty"
 
 ### TMUX ###
 [[items]]
@@ -175,7 +166,7 @@ light = false
 
 ### NEOVIM ###
 [[items]]
-file = "~/.config/nvim/lua/options.lua"
+file = "~/.config/nvim/lua/config/base16.lua"
 template = "nvim"
 rewrite = false
 start = "-- start colors"

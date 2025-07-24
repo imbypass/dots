@@ -64,5 +64,6 @@ done
 
 echo -e "${BOLD}${BLUE}:: ${NC}Cleaning up home directory..."
 rm -rf "/home/bypass/cache_directory" > /dev/null
+rm -rf "/home/bypass/go" > /dev/null
 
 echo -e "${BOLD}${GREEN}:: ${NC}Desktop file cleanup completed successfully."
