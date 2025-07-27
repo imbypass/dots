@@ -9,7 +9,8 @@
 
 window#waybar {
     color: @base05;
-    background: alpha(@base01, 1);
+    background: transparent;
+    /* background: alpha(@base01, 1); */
     border-radius: 0;
 }
 
@@ -140,11 +141,20 @@ menuitem:hover {
 #custom-logo {
     font-size: 18px;
     margin-right: 10px;
-    margin-left: 20px;
+    margin-left: 18px;
     border-radius: 8px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 29px;
+
+    font-size: 35px;
+    background-image: url("/home/bypass/.local/share/harmony/logo.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-style: hidden;
+    margin-bottom: 0px;
+    margin-top: -1px;
 }
 #custom-logo {
     color: @base06;

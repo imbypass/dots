@@ -1,5 +1,6 @@
 /* Hide Profile Tabs (Shop, Nitro) */
 li.container_e45859 a[href^="/store"],
+li.container_e45859 a[href^="/library"],
 li.container_e45859 a[href^="/shop"] {
     display: none;
 }

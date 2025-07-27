@@ -23,10 +23,10 @@
           "position": "end"
         },
         "h_align": "start",
-        "v_align": "end",
+        "v_align": "start",
         "margins": {
           "bottom": 46,
-          "top": 36,
+          "top": 46,
           "left": 18
         },
         "scroll": {

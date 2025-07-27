@@ -1,11 +1,10 @@
 {
   "layer": "top",
-  "position": "bottom",
+  "position": "top",
   "margin-top": 0,
   "margin-right": 0,
   "margin-left": 0,
   "margin-bottom": 0,
-  "mod": "dock",
   "height": 42,
   "exclusive": true,
   "passthrough": false,
@@ -31,21 +30,6 @@
     "format": "{}",
     "rewrite": {
       "\\s*(.*)\\s+": "$1",
-      "\\s*": " ",
-      "(\\d\\. )?(.*)- VLC media player": " $2",
-      "(\\d\\. )?(.*)— Mozilla Firefox": "Firefox",
-      ".*Mozilla Firefox.*": "Firefox",
-      "(\\d\\. )?(.*)- Google Chrome": "Chrome",
-      "(\\d\\. )?(.*)foot": "Terminal",
-      ".*Discord.*": "Discord",
-      "(\\d\\. )?(.*)Spotify": "Spotify",
-      "(\\d\\. )?(.*)Spotify Premium": "Spotify",
-      "(\\d\\. )?(.*)ncspot": "Spotify",
-      "(\\d\\. )?(.*)Steam": "Steam",
-      "(\\d\\. )?(.*)Minecraft": "Minecraft",
-      "(.*)[Ll]unar [Cc]lient": "Minecraft",
-      "(\\d\\. )?(.*)Code - OSS": "Code",
-      "Search(.*)": "Search",
     },
     "separate-outputs": false,
   },
@@ -58,8 +42,7 @@
   },
   "wlr/taskbar": {
     "format": "{icon}",
-    "icon-size": 18,
-    // "icon-theme": "tela dark",
+    "icon-size": 16,
     "tooltip-format": "{title}",
     "on-click": "activate",
     "on-click-middle": "close",
@@ -87,8 +70,8 @@
     "format-wifi": "󰤨",
     "format-ethernet": "",
     "format-disconnected": "", // hides on empty
-    "tooltip-format": "󰤨   Wireless",
-    "tooltip-format-wifi": "󰤨   Wireless",
+    "tooltip-format": "󰤨   {essid}",
+    "tooltip-format-wifi": "󰤨   {essid}",
     "tooltip-format-ethernet": "    Ethernet",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
@@ -150,8 +133,8 @@
   },
 
   "tray": {
-    "icon-size": 14,
-    "spacing": 12,
+    "icon-size": 12,
+    "spacing": 10,
   },
 
   // ==========[ CUSTOM WAYBAR MODULES ]========== //
@@ -162,6 +145,7 @@
   "custom/logo": {
     "tooltip": false,
     "format": "",
+    "format": "   ",
     "on-click": "walker -m applications",
     "on-click-right": "harmonyctl expose",
   },

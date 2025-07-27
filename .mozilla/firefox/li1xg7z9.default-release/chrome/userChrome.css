@@ -2,22 +2,22 @@
 
 :root {
     /* start colors */
---base00: #07090d;
---base01: #090b11;
---base02: #121520;
---base03: #475070;
---base04: #5f7299;
---base05: #acb0d0;
---base06: #bdc0d0;
---base07: #fefefe;
---base08: #f7768e;
---base09: #eda987;
---base0A: #e0af68;
---base0B: #9ece6a;
---base0C: #4abaaf;
---base0D: #7aa2f7;
---base0E: #bb9af7;
---base0F: #9a7ecc;
+--base00: #1a1515;
+--base01: #2d2424;
+--base02: #453636;
+--base03: #725a5a;
+--base04: #9c8181;
+--base05: #dcc9bc;
+--base06: #ffe9c7;
+--base07: #cf223e;
+--base08: #f07342;
+--base09: #e39c45;
+--base0A: #959a6b;
+--base0B: #768f80;
+--base0C: #756d94;
+--base0D: #614f76;
+--base0E: #7b3d79;
+--base0F: #ae3f82;
     /* end colors */
 }
 

@@ -171,3 +171,12 @@ template = "nvim"
 rewrite = false
 start = "-- start colors"
 end = "-- end colors"
+
+### BONGOCAT BAR PET ###
+[[items]]
+file = "~/.config/bongocat/config"
+template = "bongocat"
+rewrite = false
+start = "# start colors"
+end = "# end colors"
+hook = "~/.local/bin/harmonyctl reload bongocat"

@@ -1,0 +1,13 @@
+background-color=#2d2424
+border-color=#453636
+text-color=#ffe9c7
+[urgency=low]
+border-color=#453636
+text-color=#dcc9bc
+[urgency=normal]
+border-color=#453636
+[urgency=high]
+background-color=#2d2424
+border-color=#f07342
+text-color=#f07342
+default-timeout=0

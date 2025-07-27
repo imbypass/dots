@@ -1,27 +1,27 @@
 /* start colors */
 /*
 *
-* Base16 Tokyo Night Custom
-* Author: and-rs
+* Base16 Biscuit de Mar (Dark)
+* Author: tsukki9696
 *
 */
 
-@define-color base00 #07090d;
-@define-color base01 #090b11;
-@define-color base02 #121520;
-@define-color base03 #475070;
-@define-color base04 #5f7299;
-@define-color base05 #acb0d0;
-@define-color base06 #bdc0d0;
-@define-color base07 #fefefe;
-@define-color base08 #f7768e;
-@define-color base09 #eda987;
-@define-color base0A #e0af68;
-@define-color base0B #9ece6a;
-@define-color base0C #4abaaf;
-@define-color base0D #7aa2f7;
-@define-color base0E #bb9af7;
-@define-color base0F #9a7ecc;
+@define-color base00 #1a1515;
+@define-color base01 #2d2424;
+@define-color base02 #453636;
+@define-color base03 #725a5a;
+@define-color base04 #9c8181;
+@define-color base05 #dcc9bc;
+@define-color base06 #ffe9c7;
+@define-color base07 #cf223e;
+@define-color base08 #f07342;
+@define-color base09 #e39c45;
+@define-color base0A #959a6b;
+@define-color base0B #768f80;
+@define-color base0C #756d94;
+@define-color base0D #614f76;
+@define-color base0E #7b3d79;
+@define-color base0F #ae3f82;
 /* end colors */
 
 @define-color surface-strongest @base00;
