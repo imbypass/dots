@@ -59,7 +59,10 @@
     "tooltip-format": "{:%a, %b %e, %Y}",
   },
   "battery": {
-    "format": " {}%",
+    "format-icons": ["", "", "", "", ""],
+    "format": "{icon}   {capacity}%",
+    "tooltip": true,
+    "tooltip-format": "Battery: {capacity}%\nTime Remaining: {time}",
   },
   "network": {
     "interface": "enp3s0",
