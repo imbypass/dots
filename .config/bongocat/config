@@ -1,0 +1,20 @@
+# Bongocat Configuration
+
+# Position can be "top" or "bottom"
+position = "top"
+
+# X and Y offset for the cat position
+offset_x = 1345
+offset_y = 1
+
+# Bar height in pixels
+bar_height = 36
+
+# start colors
+background_r = 26
+background_g = 21
+background_b = 21
+# end colors
+
+# Layer to draw on (0=background, 1=bottom, 2=top, 3=overlay)
+layer = 2
