@@ -28,7 +28,7 @@ slider,
 }
 
 #box {
-    border-radius: 12px;
+    border-radius: 18px;
     background: @base00;
     padding: 32px;
     border: 1px solid @base02;

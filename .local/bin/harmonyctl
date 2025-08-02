@@ -211,6 +211,9 @@ reload_prompt() {
     killall -9 walker >/dev/null
     walker --gapplication-service & disown
     ;;
+  "nautilus")
+    nautilus -q || nautilus & disown
+    ;;
   "mako")
     printf "${BOLD}${BLUE}:: ${RESET}Reloading mako..\n"
     makoctl reload >/dev/null

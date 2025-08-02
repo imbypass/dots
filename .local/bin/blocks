@@ -1,0 +1,93 @@
+#!/usr/bin/env bash
+
+# Default parameters
+COLUMNS=6
+ROWS=1
+INCLUDE_NEUTRALS=true
+
+# ANSI colors
+RESET='\033[0m'
+
+COLORS=(31 32 33 34 35 36)           # red, green, yellow, blue, magenta, cyan
+NEUTRALS=(30 37)                     # black, white
+BRIGHTS=(91 92 93 94 95 96)          # light variants
+NEUTRAL_BRIGHTS=(90 97)              # dark gray, light gray
+
+# Optional pattern function
+pattern_func() {
+  local x=$1
+  local y=$2
+  echo $((x + y))   # Default pattern: x + y
+}
+
+# Parse args
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --columns|-c)
+      COLUMNS="$2"; shift 2;;
+    --rows|-r)
+      ROWS="$2"; shift 2;;
+    --neutrals|-n)
+      INCLUDE_NEUTRALS=true; shift;;
+    --pattern|-p)
+      PATTERN_STRING="$2"; shift 2;;
+    *)
+      shift;;
+  esac
+done
+
+# If a custom pattern is supplied
+if [[ -n "$PATTERN_STRING" ]]; then
+  pattern_func() {
+    local x=$1
+    local y=$2
+    echo $(( $PATTERN_STRING ))
+  }
+fi
+
+# Generate ANSI block (returns array of lines)
+generate_block() {
+  local color_index=$1
+  if (( color_index < 0 )); then
+    echo "     "
+    echo "     "
+    echo "     "
+    echo "     "
+    return
+  fi
+
+  local base=("${COLORS[@]}")
+  local bright=("${BRIGHTS[@]}")
+  if $INCLUDE_NEUTRALS; then
+    base+=("${NEUTRALS[@]}")
+    bright+=("${NEUTRAL_BRIGHTS[@]}")
+  fi
+
+  local mod=$(( color_index % ${#base[@]} ))
+  local c=${base[$mod]}
+  local b=${bright[$mod]}
+
+  echo -e "\033[${c}m████ \033[0m"
+  echo -e "\033[${c}m████\033[${b}m█\033[0m"
+  echo -e "\033[${c}m████\033[${b}m█\033[0m"
+  echo -e "\033[${b}m ▀▀▀▀\033[0m"
+}
+
+# Render grid
+for (( y = 0; y < ROWS; y++ )); do
+  # Build all blocks for this row
+  row_blocks=()
+  for (( x = 0; x < COLUMNS; x++ )); do
+    val=$(pattern_func "$x" "$y")
+    mapfile -t blk < <(generate_block "$val")
+    for i in {0..3}; do
+      row_blocks[$i]+="${blk[$i]}  "
+    done
+  done
+
+  # Print each row line
+  for line in "${row_blocks[@]}"; do
+    echo "  $line"
+  done
+  echo
+done

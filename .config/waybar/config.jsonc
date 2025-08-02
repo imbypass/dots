@@ -5,21 +5,21 @@
   "margin-right": 0,
   "margin-left": 0,
   "margin-bottom": 0,
-  "height": 42,
+  "height": 36,
   "exclusive": true,
   "passthrough": false,
   "gtk-layer-shell": true,
   "reload_style_on_change": true,
 
   // ==========[ ENABLED WAYBAR MODULES ]=========== //
-  "modules-left": ["custom/logo"],
+  "modules-left": ["custom/logo", "hyprland/workspaces"],
   "modules-center": ["wlr/taskbar"],
   "modules-right": [
     "group/systray",
     "pulseaudio",
     "pulseaudio#microphone",
-    "network",
     "bluetooth",
+    "network",
     "battery",
     "clock",
     "custom/power",
@@ -28,9 +28,6 @@
   // ==========[ STANDARD WAYBAR MODULES ]========== //
   "hyprland/window": {
     "format": "{}",
-    "rewrite": {
-      "\\s*(.*)\\s+": "$1",
-    },
     "separate-outputs": false,
   },
   "hyprland/workspaces": {
@@ -42,7 +39,7 @@
   },
   "wlr/taskbar": {
     "format": "{icon}",
-    "icon-size": 16,
+    "icon-size": 13,
     "tooltip-format": "{title}",
     "on-click": "activate",
     "on-click-middle": "close",
