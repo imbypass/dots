@@ -60,7 +60,7 @@
   },
   "battery": {
     "format-icons": ["", "", "", "", ""],
-    "format": "{icon}   {capacity}%",
+    "format": "{icon}",
     "tooltip": true,
     "tooltip-format": "Battery: {capacity}%\nTime Remaining: {time}",
   },
