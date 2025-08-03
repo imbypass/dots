@@ -180,3 +180,12 @@ rewrite = false
 start = "# start colors"
 end = "# end colors"
 hook = "~/.local/bin/harmonyctl reload bongocat"
+
+
+### SWAYIMG BACKGROUND ###
+[[items]]
+file = "~/.config/swayimg/config"
+template = "swayimg"
+rewrite = false
+start = "# Window background color (RGBA)"
+end = "# Background for transparent images (grid/RGBA)"

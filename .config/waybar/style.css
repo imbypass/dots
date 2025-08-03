@@ -149,6 +149,17 @@ menuitem:hover {
 #workspaces button.urgent {
     color: @base0A;
 }
+/* ===[ CUSTOM MODULES ]=== */
+#cava {
+    margin-left: 100px;
+    margin-bottom: -8px;
+    color: @base07;
+    transition: all 0.3s ease;
+}
+#cava.silent {
+    color: @base00;
+    transition: all 0.3s ease;
+}
 
 /* =========[ CUSTOM MODULES ]========= */
 
