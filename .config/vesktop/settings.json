@@ -2,8 +2,8 @@
     "discordBranch": "stable",
     "minimizeToTray": true,
     "arRPC": true,
-    "splashColor": "rgb(255, 233, 199)",
-    "splashBackground": "rgb(26, 21, 21)",
+    "splashColor": "rgb(234, 234, 234)",
+    "splashBackground": "rgb(21, 21, 25)",
     "customTitleBar": false,
     "staticTitle": false,
     "splashTheming": true,
@@ -16,6 +16,7 @@
     ],
     "enableMenu": false,
     "disableSmoothScroll": true,
-    "hardwareAcceleration": false,
-    "enableSplashScreen": true
+    "hardwareAcceleration": true,
+    "enableSplashScreen": true,
+    "hardwareVideoAcceleration": true
 }

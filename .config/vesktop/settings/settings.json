@@ -14,7 +14,8 @@
         "patches.theme.css",
         "fonts.theme.css",
         "base16-discord.theme.css",
-        "snippets.theme.css"
+        "snippets.theme.css",
+        "EmojiReplace.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": true,
@@ -820,7 +821,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1753523748238
+        "settingsSyncVersion": 1754221573408
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false

@@ -193,6 +193,7 @@ reload_prompt() {
   "bongocat")
     killall -9 bongocat > /dev/null
     ~/.local/bin/bongocat & disown
+    reload_prompt "waybar"
     ;;
   "dock")
     printf "${BOLD}${BLUE}:: ${RESET}Reloading nwg-dock-hyprland..\n"

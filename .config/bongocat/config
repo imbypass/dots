@@ -4,7 +4,7 @@
 position = "top"
 
 # X and Y offset for the cat position
-offset_x = 1345
+offset_x = 155
 offset_y = 1
 
 # Bar height in pixels

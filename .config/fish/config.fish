@@ -6,7 +6,8 @@ if status is-interactive
     ~/.local/bin/fetch
 end
 
-set MANPAGER "nvim +Man!"
+# Tab to complete a line
+bind tab accept-autosuggestion
 
 # Alt+Escape to prepend 'sudo'
 bind \e\e 'begin; set -l buf (commandline); commandline -r "sudo "$buf; end'
