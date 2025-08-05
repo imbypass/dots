@@ -181,7 +181,6 @@ start = "# start colors"
 end = "# end colors"
 hook = "~/.local/bin/harmonyctl reload bongocat"
 
-
 ### SWAYIMG BACKGROUND ###
 [[items]]
 file = "~/.config/swayimg/config"
@@ -189,3 +188,9 @@ template = "swayimg"
 rewrite = false
 start = "# Window background color (RGBA)"
 end = "# Background for transparent images (grid/RGBA)"
+
+### MOUSE COLORS ###
+[[items]]
+file = "~/.local/share/harmony/BASE16"
+template = "mouse-colors"
+rewrite = true

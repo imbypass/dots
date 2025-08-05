@@ -3,7 +3,7 @@
 # I'm sure there are better ways of doing this, but I REALLY don't work with bash/zsh scripts often.
 # This just seemed like a more convenient way to execute some of the common shit that I do on my PC.
 
-UTIL_VERSION="0.3.0"
+UTIL_VERSION="0.4.1"
 
 # Define color codes
 RED='\033[0;31m'
@@ -183,16 +183,16 @@ reload_prompt() {
   "all")
     reload_prompt "gtk"
     reload_prompt "hypr"
-    # reload_prompt "dock"
+    reload_prompt "dock"
     reload_prompt "spotify"
     reload_prompt "steam"
-    reload_prompt "swaync"
     reload_prompt "walker"
-    reload_prompt "waybar_full"
+    reload_prompt "bongocat"
     ;;
   "bongocat")
-    killall -9 bongocat > /dev/null
-    ~/.local/bin/bongocat & disown
+    killall -9 bongocat >/dev/null
+    ~/.local/bin/bongocat &
+    disown
     reload_prompt "waybar"
     ;;
   "dock")
@@ -205,15 +205,18 @@ reload_prompt() {
   "waybar")
     printf "${BOLD}${BLUE}:: ${RESET}Reloading waybar (full)..\n"
     killall -9 waybar >/dev/null
-    waybar & disown
+    waybar &
+    disown
     ;;
   "walker")
     printf "${BOLD}${BLUE}:: ${RESET}Reloading walker service..\n"
     killall -9 walker >/dev/null
-    walker --gapplication-service & disown
+    walker --gapplication-service &
+    disown
     ;;
   "nautilus")
-    nautilus -q || nautilus & disown
+    nautilus -q || nautilus &
+    disown
     ;;
   "mako")
     printf "${BOLD}${BLUE}:: ${RESET}Reloading mako..\n"
@@ -230,7 +233,8 @@ reload_prompt() {
   "hyprpanel")
     printf "${BOLD}${BLUE}:: ${RESET}Reloading HyprPanel..\n"
     killall -9 gjs >/dev/null
-    hyprpanel & disown
+    hyprpanel &
+    disown
     ;;
   "ghostty")
     printf "${BOLD}${BLUE}:: ${RESET}Reloading Ghostty..\n"
@@ -241,7 +245,8 @@ reload_prompt() {
   "mconnect")
     printf "${BOLD}${BLUE}:: ${RESET}Reloading mconnect..\n"
     killall -9 mconnect >/dev/null
-    mconnect -d & disown
+    mconnect -d &
+    disown
     ;;
   "gtk")
     printf "${BOLD}${BLUE}:: ${RESET}Reloading gtk..\n"
@@ -256,7 +261,8 @@ reload_prompt() {
   "pcmanfm")
     printf "${BOLD}${BLUE}:: ${RESET}Reloading pcmanfm..\n"
     killall -9 pcmanfm-qt >/dev/null
-    pcmanfm-qt --desktop & disown
+    pcmanfm-qt --desktop &
+    disown
     ;;
   "steam")
     printf "${BOLD}${BLUE}:: ${RESET}Reloading Steam..\n"
@@ -285,10 +291,13 @@ init_prompt() {
     killall mpvpaper >/dev/null
 
     if [[ $2 == "--video" ]]; then
-      mpvpaper -p -o "--loop=10000 --volume=0 --framedrop=vo" "*" ${VIDEO_WALLPAPER} & disown
+      mpvpaper -p -o "--loop=10000 --volume=0 --framedrop=vo" "*" ${VIDEO_WALLPAPER} &
+      disown
     else
-      swww-daemon >/dev/null & disown
-      swww-daemon --format xrgb >/dev/null & disown
+      swww-daemon >/dev/null &
+      disown
+      swww-daemon --format xrgb >/dev/null &
+      disown
     fi
     ;;
   esac

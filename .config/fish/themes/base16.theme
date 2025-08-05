@@ -1,37 +1,37 @@
-# Base16 Marble Dark - fish color config
-# Aylur
+# Base16 Biscuit de Mar (Dark) - fish color config
+# tsukki9696
 
-fish_color_normal b2b5b3
-fish_color_command 50a4e7
-fish_color_keyword 50e6e6
-fish_color_quote ff985a
-fish_color_redirection 00d787
-fish_color_end 4f4f5e
-fish_color_error e55f86
-fish_color_param ebff71
-fish_color_comment 4f4f5e
+fish_color_normal dcc9bc
+fish_color_command 614f76
+fish_color_keyword 756d94
+fish_color_quote e39c45
+fish_color_redirection 768f80
+fish_color_end 9c8181
+fish_color_error f07342
+fish_color_param 959a6b
+fish_color_comment 9c8181
 fish_color_selection --reverse
-fish_color_operator b2b5b3
-fish_color_escape 00d787
-fish_color_autosuggestion 4f4f5e
-fish_color_cwd ebff71
-fish_color_user ff985a
-fish_color_host 50e6e6
-fish_color_host_remote 50a4e7
-fish_color_cancel b2b5b3
-fish_color_search_match --background=151519
+fish_color_operator dcc9bc
+fish_color_escape 768f80
+fish_color_autosuggestion 9c8181
+fish_color_cwd 959a6b
+fish_color_user e39c45
+fish_color_host 756d94
+fish_color_host_remote 614f76
+fish_color_cancel dcc9bc
+fish_color_search_match --background=1a1515
 fish_color_valid_path
 
-fish_pager_color_progress ebff71
-fish_pager_color_background --background=212127
-fish_pager_color_prefix 50e6e6
-fish_pager_color_completion 4f4f5e
-fish_pager_color_description 4f4f5e
+fish_pager_color_progress 959a6b
+fish_pager_color_background --background=2d2424
+fish_pager_color_prefix 756d94
+fish_pager_color_completion 9c8181
+fish_pager_color_description 9c8181
 fish_pager_color_secondary_background
 fish_pager_color_secondary_prefix
 fish_pager_color_secondary_completion
 fish_pager_color_secondary_description
-fish_pager_color_selected_background --background=2a2a31
-fish_pager_color_selected_prefix 50e6e6
-fish_pager_color_selected_completion b2b5b3
-fish_pager_color_selected_description b2b5b3
+fish_pager_color_selected_background --background=453636
+fish_pager_color_selected_prefix 756d94
+fish_pager_color_selected_completion dcc9bc
+fish_pager_color_selected_description dcc9bc

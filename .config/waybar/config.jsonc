@@ -165,7 +165,8 @@
     "format": "",
   },
   "custom/logo": {
-    "tooltip": false,
+    "tooltip": true,
+    "tooltip-format": "Applications",
     "format": "",
     "format": "   ",
     "on-click": "walker -m applications",
@@ -177,7 +178,8 @@
     "on-click": "harmonyctl expose",
   },
   "custom/power": {
-    "tooltip": false,
+    "tooltip": true,
+    "tooltip-format": "System Menu",
     "format": "",
     "format": "⏻",
     "on-click-right": "walker -m mainmenu",
