@@ -119,6 +119,7 @@ menuitem:hover {
 #pulseaudio {
     font-size: 13.75px;
     border: none;
+    margin-top: -1px;
 }
 #pulseaudio:hover {
     color: @base06;
@@ -218,5 +219,5 @@ menuitem:hover {
 }
 #custom-glorious {
     font-size: 12px;
-    margin-right: 12px;
+    margin-right: 9px;
 }

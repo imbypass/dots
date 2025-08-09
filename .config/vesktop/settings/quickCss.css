@@ -1,25 +1,25 @@
 /*
 *
-* Base16 Marble Dark
-* Author: Aylur
+* Base16 Biscuit de Mar (Dark)
+* Author: tsukki9696
 *
 */
 
 :root {
-    --base00: #151519;
-    --base01: #212127;
-    --base02: #2a2a31;
-    --base03: #373741;
-    --base04: #4f4f5e;
-    --base05: #b2b5b3;
-    --base06: #eaeaea;
-    --base07: #e7e7e7;
-    --base08: #e55f86;
-    --base09: #ff985a;
-    --base0A: #ebff71;
-    --base0B: #00d787;
-    --base0C: #50e6e6;
-    --base0D: #50a4e7;
-    --base0E: #9076e7;
-    --base0F: #e781d6;
+    --base00: #1a1515;
+    --base01: #2d2424;
+    --base02: #453636;
+    --base03: #725a5a;
+    --base04: #9c8181;
+    --base05: #dcc9bc;
+    --base06: #ffe9c7;
+    --base07: #faeedc;
+    --base08: #cf223e;
+    --base09: #f07342;
+    --base0A: #e39c45;
+    --base0B: #959a6b;
+    --base0C: #768f80;
+    --base0D: #614f76;
+    --base0E: #7b3d79;
+    --base0F: #ae3f82;
 }
