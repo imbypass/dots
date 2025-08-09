@@ -320,9 +320,9 @@
       "show_icon_when_single": true,
       "entries": [
         {
-          "label": "Lock Screen",
-          "icon": "system-log-out",
-          "exec": "hyprlock"
+          "label": "Shutdown",
+          "icon": "system-shutdown",
+          "exec": "shutdown now"
         },
         {
           "label": "Reboot",
@@ -330,9 +330,9 @@
           "exec": "reboot"
         },
         {
-          "label": "Shutdown",
-          "icon": "system-shutdown",
-          "exec": "shutdown now"
+          "label": "Lock Screen",
+          "icon": "system-log-out",
+          "exec": "hyprlock"
         }
       ]
     }

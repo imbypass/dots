@@ -190,6 +190,7 @@ reload_prompt() {
     reload_prompt "bongocat"
     ;;
   "bongocat")
+    printf "${BOLD}${BLUE}:: ${RESET}Reloading bongocat..\n"
     killall -9 bongocat >/dev/null
     ~/.local/bin/bongocat &
     disown
@@ -199,6 +200,7 @@ reload_prompt() {
     printf "${BOLD}${BLUE}:: ${RESET}Reloading nwg-dock-hyprland..\n"
     killall -9 nwg-dock-hyprland >/dev/null
     toggle_dock
+    sleep .1
     printf "${BOLD}${BLUE}:: ${RESET}Hiding nwg-dock-hyprland..\n"
     killall -37 nwg-dock-hyprland >/dev/null
     ;;
@@ -494,7 +496,15 @@ update_mirrors() {
 }
 update_colors() {
   printf "${BOLD}${BLUE}:: ${RESET}Updating system colors..\n"
-  /usr/bin/wal -i ~/.local/share/wallpapers/.wallpaper
+  # /usr/bin/wal -i ~/.local/share/wallpapers/.wallpaper
+  /usr/bin/flavours generate dark ~/.local/share/wallpapers/wallpaper.png &
+  /usr/bin/flavours generate dark ~/.local/share/wallpapers/wallpaper.jpg &
+}
+update_spotify() {
+    if pgrep -x "spotify" > /dev/null
+    then
+        reload_prompt "spotify"
+    fi
 }
 update_prompt() {
   case "$1" in
@@ -509,6 +519,9 @@ update_prompt() {
     ;;
   "colors")
     update_colors
+    ;;
+  "spotify")
+    update_spotify
     ;;
   "")
     printf "ok"

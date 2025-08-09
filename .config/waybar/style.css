@@ -55,10 +55,11 @@ menuitem:hover {
 #custom-spotify,
 #custom-expose,
 #custom-notifications,
+#custom-glorious,
 #workspaces button,
 #tray {
     background: transparent;
-    color: @base06;
+    color: @base05;
     text-shadow: 0px 0px 4px rgba(1, 1, 1, 0.3);
     margin-left: 14px;
     margin-right: 14px;
@@ -111,6 +112,7 @@ menuitem:hover {
     margin-left: 4px;
     margin-right: 16px;
     font-size: 12px;
+    color: @base07;
 }
 
 /* ===[ PULSEAUDIO ]=== */
@@ -131,6 +133,7 @@ menuitem:hover {
     font-size: 12px;
     margin-right: 6px;
     padding: 0;
+    color: @base07;
 }
 #workspaces:hover {
     border: 0px transparent;
@@ -138,13 +141,13 @@ menuitem:hover {
 #workspaces button {
     border-radius: 0px;
     border: 0px;
-    color: @base05;
+    color: @base06;
 }
 #workspaces button:hover {
     color: @base09;
 }
 #workspaces button.active {
-    color: @base06;
+    color: @base07;
 }
 #workspaces button.urgent {
     color: @base0A;
@@ -187,7 +190,7 @@ menuitem:hover {
     margin-right: 24px;
     margin-left: 8px;
     font-size: 13px;
-    color: @base06;
+    color: @base05;
 }
 #custom-power:hover {
     color: @base08;
@@ -212,4 +215,8 @@ menuitem:hover {
 #custom-spotify {
     font-size: 13px;
     margin-left: 0px;
+}
+#custom-glorious {
+    font-size: 12px;
+    margin-right: 12px;
 }

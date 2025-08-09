@@ -161,7 +161,7 @@ rewrite = true
 file = "~/.config/spicetify/Themes/base16/color.ini"
 template = "spotify"
 rewrite = true
-hook = "~/.local/bin/harmonyctl reload spotify"
+hook = "~/.local/bin/harmonyctl update spotify"
 light = false
 
 ### NEOVIM ###
@@ -171,15 +171,6 @@ template = "nvim"
 rewrite = false
 start = "-- start colors"
 end = "-- end colors"
-
-### BONGOCAT BAR PET ###
-[[items]]
-file = "~/.config/bongocat/config"
-template = "bongocat"
-rewrite = false
-start = "# start colors"
-end = "# end colors"
-hook = "~/.local/bin/harmonyctl reload bongocat"
 
 ### SWAYIMG BACKGROUND ###
 [[items]]
@@ -194,3 +185,12 @@ end = "# Background for transparent images (grid/RGBA)"
 file = "~/.local/share/harmony/BASE16"
 template = "mouse-colors"
 rewrite = true
+
+### BONGOCAT BAR PET ###
+[[items]]
+file = "~/.config/bongocat/config"
+template = "bongocat"
+rewrite = false
+start = "# start colors"
+end = "# end colors"
+hook = "~/.local/bin/harmonyctl reload bongocat"

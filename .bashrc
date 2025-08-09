@@ -45,12 +45,14 @@ alias ex="exit"
 alias l="ls"
 alias ls="eza --icons --grid"
 alias lsa="eza -la --icons --grid"
+alias mxw="sudo -n mxw"
 alias nano="micro"
 alias q="exit"
 alias hyprlockfix='hyprctl --instance 0 "dispatch exec hyprlock"'
 
 # Start Hyprland if not already running
-pidof Hyprland > /dev/null || Hyprland & disown
+pidof Hyprland >/dev/null || Hyprland &
+disown
 
 # If not running interactively, don't do anything
 #[[ $- != *i* ]] && return
