@@ -1,0 +1,3 @@
+#!/bin/bash
+
+/opt/google/chrome/google-chrome --profile-directory=Default --app="https://wootility.io/" --no-title-bar %U

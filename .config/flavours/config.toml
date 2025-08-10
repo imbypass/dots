@@ -60,6 +60,13 @@ rewrite = false
 start = "/* start colors */"
 end = "/* end colors */"
 
+### FZF ###
+[[items]]
+file = "~/.config/fish/conf.d/fzf.fish"
+template = "fzf"
+subtemplate = "base16-fish"
+rewrite = true
+
 ### MPV ###
 [[items]]
 file = "~/.config/mpv/mpv.conf"

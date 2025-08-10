@@ -398,7 +398,26 @@ take_screenshot() {
     canberra-gtk-play -i camera-shutter
   fi
 }
-
+toggle_blur() {
+  printf "${BOLD}${BLUE}:: ${RESET}Toggling blur..\n"
+  HYPRBLUR=$(hyprctl getoption decoration:blur:enabled | awk 'NR==1{print $2}')
+  if [ "$HYPRBLUR" = 0 ]; then
+    hyprctl keyword decoration:blur:enabled yes
+  else
+    hyprctl keyword decoration:blur:enabled no
+  fi
+  hyprshade on vibrance >/dev/null
+}
+toggle_dock() {
+  printf "${BOLD}${BLUE}:: ${RESET}Toggling dock visibility..\n"
+  killall nwg-dock-hyprland >/dev/null || nwg-dock-hyprland -x -r -mb 5 -mt 25 -i 40 -nolauncher -iw "secret,special" &
+  disown
+}
+toggle_floatwindows() {
+  printf "${BOLD}${BLUE}:: ${RESET}Toggling all floating windows..\n"
+  notify-send -u normal -a Hyprland -t 750 "Harmony" "Toggled Window Tiling" -i ~/.local/share/harmony/logo.svg
+  hyprctl dispatch workspaceopt allfloat >/dev/null
+}
 toggle_gamemode() {
   printf "${BOLD}${BLUE}:: ${RESET}Toggling game mode..\n"
   HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
@@ -420,25 +439,15 @@ toggle_gamemode() {
   hyprctl reload >/dev/null
   hyprshade on vibrance >/dev/null
 }
-toggle_blur() {
-  printf "${BOLD}${BLUE}:: ${RESET}Toggling blur..\n"
-  HYPRBLUR=$(hyprctl getoption decoration:blur:enabled | awk 'NR==1{print $2}')
-  if [ "$HYPRBLUR" = 0 ]; then
-    hyprctl keyword decoration:blur:enabled yes
+toggle_gnome_buttons() {
+  printf "${BOLD}${BLUE}:: ${RESET}Toggling GNOME buttons..\n"
+  BUTTONS=$(gsettings get org.gnome.desktop.wm.preferences button-layout)
+  echo ${BUTTONS}
+  if [ "$BUTTONS" = "':'" ]; then
+    gsettings set org.gnome.desktop.wm.preferences button-layout "appmenu:minimize,close"
   else
-    hyprctl keyword decoration:blur:enabled no
+    gsettings set org.gnome.desktop.wm.preferences button-layout ":"
   fi
-  hyprshade on vibrance >/dev/null
-}
-toggle_floatwindows() {
-  printf "${BOLD}${BLUE}:: ${RESET}Toggling all floating windows..\n"
-  notify-send -u normal -a Hyprland -t 750 "Harmony" "Toggled Window Tiling" -i ~/.local/share/harmony/logo.svg
-  hyprctl dispatch workspaceopt allfloat >/dev/null
-}
-toggle_dock() {
-  printf "${BOLD}${BLUE}:: ${RESET}Toggling dock visibility..\n"
-  killall nwg-dock-hyprland >/dev/null || nwg-dock-hyprland -x -r -mb 5 -mt 25 -i 40 -nolauncher -iw "secret,special" &
-  disown
 }
 
 change_titlebars() {
@@ -495,15 +504,16 @@ update_mirrors() {
   notify-send -u low -a Hyprland -t 750 "Harmony" "Mirrors updated!" -i ~/.local/share/harmony/logo.svg
 }
 update_colors() {
-  printf "${BOLD}${BLUE}:: ${RESET}Updating system colors..\n"
-  # /usr/bin/wal -i ~/.local/share/wallpapers/.wallpaper
-  /usr/bin/flavours generate dark ~/.local/share/wallpapers/wallpaper.png &
-  /usr/bin/flavours generate dark ~/.local/share/wallpapers/wallpaper.jpg &
+  printf "${BOLD}${BLUE}:: ${RESET}Generating colorscheme from wallpaper..\n"
+  /usr/bin/flavours generate dark ~/.local/share/wallpapers/wallpaper.png -s match-wallpaper > /dev/null &
+  /usr/bin/flavours generate dark ~/.local/share/wallpapers/wallpaper.jpg -s match-wallpaper > /dev/null &
 }
 update_spotify() {
     if pgrep -x "spotify" > /dev/null
     then
         reload_prompt "spotify"
+    else
+        spicetify apply > /dev/null
     fi
 }
 update_prompt() {
@@ -612,6 +622,9 @@ elif [[ $1 == "float" ]]; then
 
 elif [[ $1 == "blur" ]]; then
   toggle_blur
+
+elif [[ $1 == "nautilus" ]]; then
+  toggle_gnome_buttons
 
 elif [[ $1 == "x" ]]; then
   show_expose
