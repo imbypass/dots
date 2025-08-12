@@ -11,6 +11,7 @@ window#waybar {
     color: @base05;
     background: transparent;
     border-radius: 0;
+    border-bottom: 2px solid @base01;
 }
 
 tooltip {
@@ -178,7 +179,7 @@ menuitem:hover {
 
 /* ===[ APPLICATIONS ICON ]=== */
 #custom-logo {
-    font-size: 27px;
+    font-size: 33px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -220,4 +221,7 @@ menuitem:hover {
 #custom-glorious {
     font-size: 12px;
     margin-right: 9px;
+}
+#custom-glorious:hover {
+    color: @base06;
 }

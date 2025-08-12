@@ -281,7 +281,7 @@
         },
         {
           "label": "Record Screen",
-          "icon": "gpu-screen-recorder",
+          "icon": "screen-recorder",
           "exec": "walker -m record"
         },
         {

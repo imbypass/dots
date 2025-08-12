@@ -201,3 +201,9 @@ rewrite = false
 start = "# start colors"
 end = "# end colors"
 hook = "~/.local/bin/harmonyctl reload bongocat"
+
+### NWG-MENU ###
+[[items]]
+file = "~/.config/nwg-panel/base16.css"
+template = "vesktop"
+rewrite = true

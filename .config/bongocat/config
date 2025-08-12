@@ -5,10 +5,10 @@ position = "top"
 
 # X and Y offset for the cat position
 offset_x = 155
-offset_y = 1
+offset_y = 6
 
 # Bar height in pixels
-bar_height = 36
+bar_height = 42
 
 # start colors
 background_r = 21

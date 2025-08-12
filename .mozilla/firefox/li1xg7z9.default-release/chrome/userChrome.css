@@ -2,23 +2,33 @@
 
 :root {
     /* start colors */
---base00: #151519;
---base01: #212127;
---base02: #2a2a31;
---base03: #373741;
---base04: #4f4f5e;
---base05: #b2b5b3;
---base06: #eaeaea;
---base07: #e7e7e7;
---base08: #e55f86;
---base09: #ff985a;
---base0A: #ebff71;
---base0B: #00d787;
---base0C: #50e6e6;
---base0D: #50a4e7;
---base0E: #9076e7;
---base0F: #e781d6;
+    --base00: #151519;
+    --base01: #212127;
+    --base02: #2a2a31;
+    --base03: #373741;
+    --base04: #4f4f5e;
+    --base05: #b2b5b3;
+    --base06: #eaeaea;
+    --base07: #e7e7e7;
+    --base08: #e55f86;
+    --base09: #ff985a;
+    --base0A: #ebff71;
+    --base0B: #00d787;
+    --base0C: #50e6e6;
+    --base0D: #50a4e7;
+    --base0E: #9076e7;
+    --base0F: #e781d6;
     /* end colors */
+}
+
+:root {
+    --panel-separator-zap-gradient: linear-gradient(
+        90deg,
+        var(--base0E) 0%,
+        var(--base0F) 52.08%,
+        var(--base0A) 100%
+    ) !important;
+    --toolbarbutton-border-radius: 6px !important;
 }
 
 /* Tabs colors  */
@@ -62,11 +72,22 @@
 }
 
 .tab-background {
+    border-radius: 6px !important;
     border: 0px solid rgba(0, 0, 0, 0) !important;
+}
+
+#tabbrowser-tabs {
+    margin-left: 1px;
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
 
 .tabbrowser-tab[last-visible-tab="true"] {
     border: 0px solid rgba(0, 0, 0, 0) !important;
+}
+
+toolbarbutton {
+    border-radius: 6px !important;
 }
 
 /* Url Bar  */
@@ -79,10 +100,18 @@
     box-shadow: none !important;
 }
 
+#urlbar-background {
+    border-radius: 6px !important;
+}
+
 #navigator-toolbox {
     border: none !important;
 }
 
 .urlbarView-url {
     color: var(--base05) !important;
+}
+
+#star-button {
+    --toolbarbutton-icon-fill-attention: var(--base0D) !important;
 }
