@@ -2,22 +2,22 @@
 
 :root {
     /* start colors */
-    --base00: #151519;
-    --base01: #212127;
-    --base02: #2a2a31;
-    --base03: #373741;
-    --base04: #4f4f5e;
-    --base05: #b2b5b3;
-    --base06: #eaeaea;
-    --base07: #e7e7e7;
-    --base08: #e55f86;
-    --base09: #ff985a;
-    --base0A: #ebff71;
-    --base0B: #00d787;
-    --base0C: #50e6e6;
-    --base0D: #50a4e7;
-    --base0E: #9076e7;
-    --base0F: #e781d6;
+--base00: #07090d;
+--base01: #090b11;
+--base02: #121520;
+--base03: #475070;
+--base04: #5f7299;
+--base05: #acb0d0;
+--base06: #bdc0d0;
+--base07: #fefefe;
+--base08: #f7768e;
+--base09: #eda987;
+--base0A: #e0af68;
+--base0B: #9ece6a;
+--base0C: #4abaaf;
+--base0D: #7aa2f7;
+--base0E: #bb9af7;
+--base0F: #9a7ecc;
     /* end colors */
 }
 
@@ -75,6 +75,12 @@
     border-radius: 6px !important;
     border: 0px solid rgba(0, 0, 0, 0) !important;
 }
+.tab-background[selected] {
+    background-color: var(--base01) !important;
+}
+/*.tab-label {
+    color: var(--base05) !important;
+}*/
 
 #tabbrowser-tabs {
     margin-left: 1px;
@@ -114,4 +120,11 @@ toolbarbutton {
 
 #star-button {
     --toolbarbutton-icon-fill-attention: var(--base0D) !important;
+}
+
+.logo-and-wordmark {
+    display: none !important;
+}
+.search-inner-wrapper {
+    margin-top: 10% !important;
 }

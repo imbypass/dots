@@ -11,9 +11,9 @@ offset_y = 6
 bar_height = 42
 
 # start colors
-background_r = 21
-background_g = 21
-background_b = 25
+background_r = 7
+background_g = 9
+background_b = 13
 # end colors
 
 # Layer to draw on (0=background, 1=bottom, 2=top, 3=overlay)

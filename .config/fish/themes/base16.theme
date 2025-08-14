@@ -1,37 +1,37 @@
-# Base16 Marble Dark - fish color config
-# Aylur
+# Base16 Tokyo Night Custom - fish color config
+# and-rs
 
-fish_color_normal b2b5b3
-fish_color_command 50a4e7
-fish_color_keyword 50e6e6
-fish_color_quote ff985a
-fish_color_redirection 00d787
-fish_color_end 4f4f5e
-fish_color_error e55f86
-fish_color_param ebff71
-fish_color_comment 4f4f5e
+fish_color_normal acb0d0
+fish_color_command 7aa2f7
+fish_color_keyword 4abaaf
+fish_color_quote eda987
+fish_color_redirection 9ece6a
+fish_color_end 5f7299
+fish_color_error f7768e
+fish_color_param e0af68
+fish_color_comment 5f7299
 fish_color_selection --reverse
-fish_color_operator b2b5b3
-fish_color_escape 00d787
-fish_color_autosuggestion 4f4f5e
-fish_color_cwd ebff71
-fish_color_user ff985a
-fish_color_host 50e6e6
-fish_color_host_remote 50a4e7
-fish_color_cancel b2b5b3
-fish_color_search_match --background=151519
+fish_color_operator acb0d0
+fish_color_escape 9ece6a
+fish_color_autosuggestion 5f7299
+fish_color_cwd e0af68
+fish_color_user eda987
+fish_color_host 4abaaf
+fish_color_host_remote 7aa2f7
+fish_color_cancel acb0d0
+fish_color_search_match --background=07090d
 fish_color_valid_path
 
-fish_pager_color_progress ebff71
-fish_pager_color_background --background=212127
-fish_pager_color_prefix 50e6e6
-fish_pager_color_completion 4f4f5e
-fish_pager_color_description 4f4f5e
+fish_pager_color_progress e0af68
+fish_pager_color_background --background=090b11
+fish_pager_color_prefix 4abaaf
+fish_pager_color_completion 5f7299
+fish_pager_color_description 5f7299
 fish_pager_color_secondary_background
 fish_pager_color_secondary_prefix
 fish_pager_color_secondary_completion
 fish_pager_color_secondary_description
-fish_pager_color_selected_background --background=2a2a31
-fish_pager_color_selected_prefix 50e6e6
-fish_pager_color_selected_completion b2b5b3
-fish_pager_color_selected_description b2b5b3
+fish_pager_color_selected_background --background=121520
+fish_pager_color_selected_prefix 4abaaf
+fish_pager_color_selected_completion acb0d0
+fish_pager_color_selected_description acb0d0
