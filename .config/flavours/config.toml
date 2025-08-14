@@ -204,6 +204,7 @@ hook = "~/.local/bin/harmonyctl reload bongocat"
 
 ### NWG-MENU ###
 [[items]]
-file = "~/.config/nwg-panel/base16.css"
-template = "vesktop"
+file = "~/.config/nwg-panel/menu-start.css"
+template = "nwg-menu"
 rewrite = true
+hook = "~/.local/bin/harmonyctl reload waybar"
