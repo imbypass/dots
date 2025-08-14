@@ -1,0 +1,26 @@
+window {
+    background-color: #151519;
+    border: 2px solid #212127;
+    color: #eeeeee;
+    border-radius: 10px;
+}
+
+list {
+    background: none;
+    border-radius: 10px;
+}
+
+/* SEARCH BAR */
+entry {
+    background: #2a2a31;
+    border: 2px solid #2a2a31;
+}
+
+button {
+    background: #2a2a31;
+    border: none;
+}
+
+button:hover {
+    background-color: rgba (255, 255, 255, 0.1);
+}

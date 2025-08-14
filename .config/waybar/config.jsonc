@@ -170,7 +170,7 @@
     "tooltip-format": "Applications",
     "format": "",
     "format": "   ",
-    "on-click": "start",
+    "on-click": "~/.local/bin/start",
     "on-click-right": "harmonyctl expose",
   },
   "custom/expose": {
