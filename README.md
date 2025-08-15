@@ -4,7 +4,7 @@
 
 <hr>
 
-- Color Scheme: [base16/biscuit-mar](https://github.com/chriskempson/base16)
+- Color Scheme: [base16/tokyo-custom](https://github.com/chriskempson/base16)
 - Terminal: [foot](https://codeberg.org/dnkl/foot)
 - Shell: [fish](https://fishshell.com/)
 - Prompt: [starship](https://starship.rs/)
