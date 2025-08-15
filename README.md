@@ -16,6 +16,6 @@
 <hr>
 
 ## Preview
-![image](https://0x0.st/8F1q.png)
+![image](https://0x0.st/KrSB.png)
 
 ###### There is no real work done to make this installable. Your best off just downloading and using individual parts.
