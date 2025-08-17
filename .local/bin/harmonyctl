@@ -275,6 +275,10 @@ reload_prompt() {
 }
 init_prompt() {
   case "$1" in
+  "setup")
+    printf "${BOLD}${BLUE}:: ${RESET}Initializing miscellaneous setup files..\n"
+    gsettings set org.gnome.desktop.wm.preferences button-layout ":"
+    ;;
   "xdg")
     printf "${BOLD}${BLUE}:: ${RESET}Initializing xdg-desktop-portal..\n"
     sleep 1
@@ -505,16 +509,15 @@ update_mirrors() {
 }
 update_colors() {
   printf "${BOLD}${BLUE}:: ${RESET}Generating colorscheme from wallpaper..\n"
-  /usr/bin/flavours generate dark ~/.local/share/wallpapers/wallpaper.png -s match-wallpaper > /dev/null &
-  /usr/bin/flavours generate dark ~/.local/share/wallpapers/wallpaper.jpg -s match-wallpaper > /dev/null &
+  /usr/bin/flavours generate dark ~/.local/share/wallpapers/wallpaper.png -s match-wallpaper >/dev/null &
+  /usr/bin/flavours generate dark ~/.local/share/wallpapers/wallpaper.jpg -s match-wallpaper >/dev/null &
 }
 update_spotify() {
-    if pgrep -x "spotify" > /dev/null
-    then
-        reload_prompt "spotify"
-    else
-        spicetify apply > /dev/null
-    fi
+  if pgrep -x "spotify" >/dev/null; then
+    reload_prompt "spotify"
+  else
+    spicetify apply >/dev/null
+  fi
 }
 update_prompt() {
   case "$1" in
