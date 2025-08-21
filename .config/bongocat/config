@@ -1,7 +1,7 @@
 # Bongocat Configuration
 
 # Position can be "top" or "bottom"
-position = "top"
+position = "bottom"
 
 # X and Y offset for the cat position
 offset_x = 155

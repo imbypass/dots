@@ -8,17 +8,23 @@ $git_branch\
 $git_commit\
 $git_state\
 $git_status\
-$cmd_duration
+$cmd_duration\
 """
 
 [directory]
 style = "blue"
 
-[character]
+[python]
 format = "$symbol  "
 success_symbol = "[](yellow)"
 error_symbol = "[](red)"
 vimcmd_symbol = "[](green)"
+
+[character]
+format = "$symbol  "
+success_symbol = "[❯](yellow)"
+error_symbol = "[❯](red)"
+vimcmd_symbol = "[❮](green)"
 
 [git_branch]
 format = "[$branch]($style)"
@@ -42,7 +48,3 @@ style = "bright-black"
 [cmd_duration]
 format = "[$duration]($style) "
 style = "yellow"
-
-[python]
-format = "[$virtualenv]($style) "
-style = "bright-black"

@@ -11,7 +11,7 @@ window#waybar {
     color: @base05;
     background: transparent;
     border-radius: 0;
-    border-bottom: 2px solid @base01;
+    border-top: 2px solid @base01;
 
     box-shadow:
         0px 0px 5px rgba(0, 0, 0, 0.9),
@@ -61,6 +61,7 @@ menuitem:hover {
 #custom-expose,
 #custom-notifications,
 #custom-glorious,
+#custom-pacman,
 #workspaces button,
 #tray {
     background: transparent;
@@ -222,10 +223,18 @@ menuitem:hover {
     font-size: 13px;
     margin-left: 0px;
 }
+
+/* ===[ GLORIOUS MODEL O- INDICATOR ]=== */
 #custom-glorious {
     font-size: 12px;
-    margin-right: 9px;
+    margin-right: 12px;
 }
 #custom-glorious:hover {
     color: @base06;
+}
+
+/* ===[ PACMAN UPDATE COUNTER ]=== */
+#custom-pacman {
+    color: @base0A;
+    font-size: 16px;
 }

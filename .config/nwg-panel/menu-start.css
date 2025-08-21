@@ -1,7 +1,7 @@
 window {
-    background-color: #07090d;
-    border: 2px solid #121520;
-    color: #acb0d0;
+    background-color: #151519;
+    border: 2px solid #2a2a31;
+    color: #b2b5b3;
     border-radius: 10px;
 }
 
@@ -12,15 +12,15 @@ list {
 
 /* SEARCH BAR */
 entry {
-    background: #090b11;
-    border: 2px solid #121520;
+    background: #212127;
+    border: 2px solid #2a2a31;
 }
 
 button {
-    background: #090b11;
+    background: #212127;
     border: none;
 }
 
 button:hover {
-    background-color: #121520;
+    background-color: #2a2a31;
 }

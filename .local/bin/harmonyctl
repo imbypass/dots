@@ -217,7 +217,7 @@ reload_prompt() {
     disown
     ;;
   "nautilus")
-    nautilus -q || nautilus &
+    nautilus -q && nautilus &
     disown
     ;;
   "mako")

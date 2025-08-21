@@ -11,5 +11,5 @@ while walls= read -r path; do
   name=${name//-/ }
   name=${name//   / }
 
-  printf "image=$path;label=${name};exec=swww img --transition-fps 144 --transition-duration 1 -t center $path && cp $path /home/bypass/.local/share/wallpapers/.wallpaper && /home/bypass/.local/bin/harmonyctl u colors &;\n"
+  printf "image=$path;label=${name};exec=swww img --resize crop --transition-fps 144 --transition-duration 1 -t center $path && cp $path /home/bypass/.local/share/wallpapers/.wallpaper && /home/bypass/.local/bin/harmonyctl u colors &;\n"
 done <<<"$list"

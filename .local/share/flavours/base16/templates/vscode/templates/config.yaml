@@ -1,4 +1,4 @@
-base16:
+default:
   extension: .json
   output: themes/base16
 
