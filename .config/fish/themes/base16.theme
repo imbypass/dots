@@ -1,37 +1,37 @@
-# Base16 Tokyo Night Custom - fish color config
-# and-rs
+# Base16 Biscuit de Mar (Dark) - fish color config
+# tsukki9696
 
-fish_color_normal acb0d0
-fish_color_command 7aa2f7
-fish_color_keyword 4abaaf
-fish_color_quote eda987
-fish_color_redirection 9ece6a
-fish_color_end 5f7299
-fish_color_error f7768e
-fish_color_param e0af68
-fish_color_comment 5f7299
+fish_color_normal dcc9bc
+fish_color_command 614f76
+fish_color_keyword 768f80
+fish_color_quote f07342
+fish_color_redirection 959a6b
+fish_color_end 9c8181
+fish_color_error cf223e
+fish_color_param e39c45
+fish_color_comment 9c8181
 fish_color_selection --reverse
-fish_color_operator acb0d0
-fish_color_escape 9ece6a
-fish_color_autosuggestion 5f7299
-fish_color_cwd e0af68
-fish_color_user eda987
-fish_color_host 4abaaf
-fish_color_host_remote 7aa2f7
-fish_color_cancel acb0d0
-fish_color_search_match --background=07090d
+fish_color_operator dcc9bc
+fish_color_escape 959a6b
+fish_color_autosuggestion 9c8181
+fish_color_cwd e39c45
+fish_color_user f07342
+fish_color_host 768f80
+fish_color_host_remote 614f76
+fish_color_cancel dcc9bc
+fish_color_search_match --background=1a1515
 fish_color_valid_path
 
-fish_pager_color_progress e0af68
-fish_pager_color_background --background=090b11
-fish_pager_color_prefix 4abaaf
-fish_pager_color_completion 5f7299
-fish_pager_color_description 5f7299
+fish_pager_color_progress e39c45
+fish_pager_color_background --background=2d2424
+fish_pager_color_prefix 768f80
+fish_pager_color_completion 9c8181
+fish_pager_color_description 9c8181
 fish_pager_color_secondary_background
 fish_pager_color_secondary_prefix
 fish_pager_color_secondary_completion
 fish_pager_color_secondary_description
-fish_pager_color_selected_background --background=121520
-fish_pager_color_selected_prefix 4abaaf
-fish_pager_color_selected_completion acb0d0
-fish_pager_color_selected_description acb0d0
+fish_pager_color_selected_background --background=453636
+fish_pager_color_selected_prefix 768f80
+fish_pager_color_selected_completion dcc9bc
+fish_pager_color_selected_description dcc9bc

@@ -62,6 +62,8 @@ menuitem:hover {
 #custom-notifications,
 #custom-glorious,
 #custom-pacman,
+#custom-power,
+#custom-systray,
 #workspaces button,
 #tray {
     background: transparent;
@@ -69,6 +71,7 @@ menuitem:hover {
     text-shadow: 0px 0px 4px rgba(1, 1, 1, 0.3);
     margin-left: 14px;
     margin-right: 14px;
+    margin-top: 3px;
 }
 
 #taskbar button {
@@ -125,7 +128,6 @@ menuitem:hover {
 #pulseaudio {
     font-size: 13.75px;
     border: none;
-    margin-top: -1px;
 }
 #pulseaudio:hover {
     color: @base06;
@@ -189,7 +191,7 @@ menuitem:hover {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url("/home/bypass/.local/share/harmony/logo.svg");
-    margin: -1px 3px 0px 18px;
+    margin: 2px 3px 0px 18px;
 }
 
 /* ===[ USER MENU ]=== */
