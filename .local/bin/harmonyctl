@@ -502,6 +502,16 @@ change_rounding() {
   # echo "Rounding changed to: $1"
 }
 
+update_packages() {
+  printf "${BOLD}${BLUE}:: ${RESET}Running system update..\n"
+  printf " ${YELLOW}==> ${NC}Checking for official package updates..${RESET}\n"
+  sudo pacman -Syu
+  printf " ${YELLOW}==> ${NC}Checking for AUR updates..${RESET}\n"
+  paru
+  printf " ${YELLOW}==> ${NC}Checking for flatpak updates..${RESET}\n"
+  flatpak update
+  notify-send -u low -a Hyprland -t 750 "Arch Linux" "System update completed!" -i ~/.local/share/harmony/logo.svg
+}
 update_mirrors() {
   printf "${BOLD}${BLUE}:: ${RESET}Updating mirrors..\n"
   sudo reflector --verbose --country US --latest 8 --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist >/dev/null
@@ -535,6 +545,9 @@ update_prompt() {
     ;;
   "spotify")
     update_spotify
+    ;;
+  "system")
+    update_packages
     ;;
   "")
     printf "ok"

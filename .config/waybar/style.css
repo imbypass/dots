@@ -239,4 +239,5 @@ menuitem:hover {
 #custom-pacman {
     color: @base0A;
     font-size: 16px;
+    margin-bottom: 3px;
 }

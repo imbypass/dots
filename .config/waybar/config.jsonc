@@ -224,6 +224,6 @@
     },
     "exec-if": "which waybar-updates",
     "exec": "waybar-updates",
-    "on-click": "$TERMINAL -e echo \"Updates are available! Please update your system via Pacman.\""
+    "on-click": "$TERMINAL"
   }
 }
