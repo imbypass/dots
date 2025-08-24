@@ -29,6 +29,8 @@
         var(--base0A) 100%
     ) !important;
     --toolbarbutton-border-radius: 6px !important;
+    --toolbarbutton-icon-fill: var(--base05) !important;
+    --urlbar-box-bgcolor: var(--base01) !important;
 }
 
 /* Tabs colors  */
@@ -120,6 +122,16 @@ toolbarbutton {
 
 #star-button {
     --toolbarbutton-icon-fill-attention: var(--base0D) !important;
+}
+
+#vertical-tabs {
+    background-color: var(--base00) !important;
+}
+splitter#sidebar-tools-and-extensions-splitter {
+    display: none !important;
+}
+.tools-and-extensions[aria-orientation="vertical"] {
+    background-color: var(--base00) !important;
 }
 
 .logo-and-wordmark {
