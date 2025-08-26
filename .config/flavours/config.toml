@@ -1,5 +1,4 @@
 # Configuration for flavours
-# https://github.com/Misterio77/flavours
 
 shell = "fish -c '{}'"
 
@@ -48,13 +47,7 @@ rewrite = true
 
 ### FIREFOX ###
 [[items]]
-file = "/home/bypass/.mozilla/firefox/li1xg7z9.default-release/chrome/userChrome.css"
-template = "firefox"
-rewrite = false
-start = "/* start colors */"
-end = "/* end colors */"
-[[items]]
-file = "/home/bypass/.mozilla/firefox/li1xg7z9.default-release/chrome/userContent.css"
+file = "/home/bypass/.mozilla/firefox/li1xg7z9.default-release/chrome/base16.css"
 template = "firefox"
 rewrite = false
 start = "/* start colors */"

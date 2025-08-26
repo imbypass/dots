@@ -10,7 +10,8 @@
  **/
 
 :root {
-    --font-code: "SFMono Nerd Font Mono Semibold";
+    --font-code-old: "SFMono Nerd Font Mono Semibold";
+    --font-code: "GeistMono NFP Medium";
     --font: "SF Pro Rounded";
 
     --font-weight-light: 400;
