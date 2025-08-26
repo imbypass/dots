@@ -568,7 +568,7 @@
         "USRBG": {
             "enabled": true,
             "voiceBackground": true,
-            "nitroFirst": false
+            "nitroFirst": true
         },
         "ValidUser": {
             "enabled": true
@@ -809,6 +809,12 @@
         },
         "ExpressionCloner": {
             "enabled": false
+        },
+        "CopyStickerLinks": {
+            "enabled": false
+        },
+        "ImageFilename": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -821,7 +827,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1754748915832
+        "settingsSyncVersion": 1756169447559
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false

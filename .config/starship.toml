@@ -22,9 +22,9 @@ vimcmd_symbol = "[](green)"
 
 [character]
 format = "$symbol  "
-success_symbol = "[❯](yellow)"
-error_symbol = "[❯](red)"
-vimcmd_symbol = "[❮](green)"
+success_symbol = "[](yellow)"
+error_symbol = "[](red)"
+vimcmd_symbol = "[](green)"
 
 [git_branch]
 format = "[$branch]($style)"

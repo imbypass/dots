@@ -12,14 +12,8 @@
   "reload_style_on_change": true,
 
   // ==========[ ENABLED WAYBAR MODULES ]=========== //
-  "modules-left": [
-    "custom/logo",
-    "hyprland/workspaces",
-  ],
-  "modules-center": [
-    "custom/pacman",
-    "wlr/taskbar"
-  ],
+  "modules-left": ["custom/logo", "hyprland/workspaces"],
+  "modules-center": ["custom/pacman", "wlr/taskbar"],
   "modules-right": [
     "group/systray",
     "custom/glorious",
@@ -57,9 +51,14 @@
     "separate-outputs": false,
   },
   "hyprland/workspaces": {
-    "format": "Workspace {}",
+    "format": "{icon}",
     "active-only": true,
-    "persistent-workspaces": {},
+    "persistent-workspaces": {
+      "*": [1, 2, 3],
+    },
+    "format-icons": {
+      "default": "",
+    },
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
   },
@@ -220,10 +219,10 @@
     "return-type": "json",
     "format-icons": {
       "pending-updates": "󰚽",
-      "updated": ""
+      "updated": "",
     },
     "exec-if": "which waybar-updates",
     "exec": "waybar-updates",
-    "on-click": "$TERMINAL"
-  }
+    "on-click": "$TERMINAL",
+  },
 }

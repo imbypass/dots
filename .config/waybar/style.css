@@ -141,16 +141,18 @@ menuitem:hover {
 #workspaces {
     font-size: 12px;
     margin-right: 6px;
+    margin-left: 20px;
+    margin-top: 0px;
+    margin-bottom: -4px;
     padding: 0;
     color: @base07;
 }
-#workspaces:hover {
-    border: 0px transparent;
-}
 #workspaces button {
     border-radius: 0px;
+    margin: 4px;
+    padding: 0;
     border: 0px;
-    color: @base06;
+    color: @base02;
 }
 #workspaces button:hover {
     color: @base09;
@@ -181,6 +183,7 @@ menuitem:hover {
     color: @base04;
     margin-right: 12px;
     margin-left: 0px;
+    margin-bottom: -2px;
     font-size: 11px;
 }
 
@@ -239,5 +242,5 @@ menuitem:hover {
 #custom-pacman {
     color: @base0A;
     font-size: 16px;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
 }

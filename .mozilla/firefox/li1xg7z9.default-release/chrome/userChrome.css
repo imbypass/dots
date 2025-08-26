@@ -67,12 +67,6 @@
     background-color: var(--base00) !important;
 }
 
-:root {
-    --toolbarbutton-border-radius: 0 !important;
-    --tab-border-radius: 0 !important;
-    --tab-block-margin: 0 !important;
-}
-
 .tab-background {
     border-radius: 6px !important;
     border: 0px solid rgba(0, 0, 0, 0) !important;
@@ -99,6 +93,9 @@ toolbarbutton {
 }
 
 /* Url Bar  */
+#urlbar-input {
+    accent-color: var(--base0D) !important;
+}
 #urlbar-input-container {
     background-color: var(--base01) !important;
     border: 0px solid rgba(0, 0, 0, 0) !important;
@@ -139,4 +136,26 @@ splitter#sidebar-tools-and-extensions-splitter {
 }
 .search-inner-wrapper {
     margin-top: 10% !important;
+}
+
+
+:root {
+    --color-accent-primary-active: var(--base0D) !important;
+    --color-accent-primary-hover: var(--base0D) !important;
+    --color-accent-primary: var(--base0D) !important;
+    --focus-outline-color: var(--base00) !important;
+    --icon-color-critical: var(--base08) !important;
+    --icon-color-information: var(--base0D) !important;
+    --icon-color-success: var(--base0B) !important;
+    --icon-color-warning: var(--base0A) !important;
+    --outline-color-error: var(--base08) !important;
+    --tab-block-margin: 0 !important;
+    --tab-border-radius: 0 !important;
+    --text-color-error: var(--base08) !important;
+    --toolbar-field-border-color: var(--base00) !important;
+    --toolbar-field-focus-background-color: var(--base02) !important;
+    --toolbar-field-focus-border-color: var(--base00) !important;
+    --toolbarbutton-border-radius: 6px !important;
+    --in-content-page-background: var(--base01) !important;
+    --input-text-background-color: var(--base02) !important;
 }
