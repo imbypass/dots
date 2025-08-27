@@ -2,11 +2,9 @@
 
 os=$(cat /etc/os-release | grep -E '^PRETTY_NAME=' | cut -d'"' -f2 | cut -d'=' -f2)
 
-read -r _ _ version _ </proc/version
-kr=${version%%-*}
-
+kr=$(uname -r | cut -d'-' -f1)
 pa=$(pacman -Q | wc -l)
-
+rs=$(xrandr | grep '\*' | awk '{print $1}')
 sh=${SHELL##*/}
 
 id=$(xprop -root -notype _NET_SUPPORTING_WM_CHECK)
@@ -14,11 +12,6 @@ id=${id##* }
 wm=$(xprop -id "$id" -notype -len 100 -f _NET_WM_NAME 8t)
 wm=${wm##*WM_NAME = \"}
 wm=${wm%%\"*}
-
-brth=$(stat -c %W /)
-crnt=$(date +%s)
-tmprg=$((crnt - brth))
-ddif=$((tmprg / 86400))
 
 r='\033[0;31m'
 g='\033[0;32m'
@@ -29,10 +22,8 @@ m='\033[0;35m'
 w='\033[0;38m'
 
 printf "
-           ${c}${USER}@${HOSTNAME}
-           ${r}os  ${w}${os}
- (\\ /)     ${g}wm  ${w}${wm}
- (. .)/    ${y}sh  ${w}${sh}
- (${r}\"${w})(${r}\"${w})    ${b}pa  ${w}${pa}
-           ${m}ag  ${w}${ddif} days
+            ${r}wm   ${w}${wm}
+ (\\ /)      ${y}kr   ${w}${kr}
+ ( . .)     ${g}sh   ${w}${sh}
+ c(${r}\"${w})(${r}\"${w})    ${m}rs   ${w}${rs}
 "
