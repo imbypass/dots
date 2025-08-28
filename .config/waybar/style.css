@@ -139,6 +139,7 @@ menuitem:hover {
 
 /* ===[ WORKSPACES ]=== */
 #workspaces {
+    transition: none;
     font-size: 12px;
     margin-right: 6px;
     margin-left: 20px;
@@ -149,7 +150,7 @@ menuitem:hover {
 }
 #workspaces button {
     border-radius: 0px;
-    margin: 4px;
+    margin: 8px;
     padding: 0;
     border: 0px;
     color: @base02;

@@ -53,7 +53,7 @@
     border: 0px solid rgba(0, 0, 0, 0) !important;
 }
 .tab-background[selected] {
-    background-color: var(--base01) !important;
+    background-color: var(--base02) !important;
 }
 /*.tab-label {
     color: var(--base05) !important;
