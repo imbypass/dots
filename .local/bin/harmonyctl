@@ -3,7 +3,7 @@
 # I'm sure there are better ways of doing this, but I REALLY don't work with bash/zsh scripts often.
 # This just seemed like a more convenient way to execute some of the common shit that I do on my PC.
 
-UTIL_VERSION="0.4.1"
+UTIL_VERSION="0.5.0"
 
 # Define color codes
 RED='\033[0;31m'
@@ -17,7 +17,7 @@ BOLD='\033[1m'
 UNDERLINE='\033[4m'
 RESET='\033[0m'
 
-VIDEO_WALLPAPER='/home/bypass/Pictures/Live/cyberpunk-2077-judys-apartment.mp4'
+VIDEO_WALLPAPER='/home/bypass/Videos/Wallpapers/cyberpunk-2077-judys-apartment.mp4'
 
 print_logo() {
   printf "${BLUE} _   _    _    ____  __  __  ___  _   ___   __
@@ -27,6 +27,11 @@ print_logo() {
 |_| |_/_/   \_\_| \_\_|  |_|\___/|_| \_| |_|
 
 ${RESET}"
+}
+
+aur_git() {
+    git clone --single-branch --branch $1 https://github.com/archlinux/aur.git ~/Documents/aur_packages/$1
+    cd ~/Documents/aur_packages/$1
 }
 
 print_help() {
@@ -241,7 +246,10 @@ reload_prompt() {
   "ghostty")
     printf "${BOLD}${BLUE}:: ${RESET}Reloading Ghostty..\n"
     killall -9 ghostty >/dev/null
-    ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false &
+    ghostty \
+    --gtk-single-instance=true \
+    --quit-after-last-window-closed=false \
+    --initial-window=false &
     disown
     ;;
   "mconnect")
@@ -269,7 +277,10 @@ reload_prompt() {
   "steam")
     printf "${BOLD}${BLUE}:: ${RESET}Reloading Steam..\n"
     # ~/.local/bin/hex2rgb ~/.local/share/adwaita-steam/adwaita/colorthemes/base16/base16.css
-    sleep 2 && cd ~/.local/share/adwaita-steam/ && ./install.py --color-theme base16 --extras library/hide_whats_new --font sfpro
+    sleep 2 && cd ~/.local/share/adwaita-steam/ && ./install.py \
+    --color-theme base16 \
+    --extras library/hide_whats_new \
+    --font sfpro
     ;;
   esac
 }
@@ -308,16 +319,6 @@ init_prompt() {
     ;;
   esac
 }
-
-file_upload() {
-  wl-paste | up -t $1 | wl-copy
-  notify-send -u normal -a hyprshot -t 750 "0x0.st" "Image uploaded and copied to clipboard." -i ~/.local/share/harmony/logo.svg
-}
-free_cache() {
-  printf "${BOLD}${BLUE}:: ${RESET}Freeing cached RAM..\n"
-  printf 3 | sudo tee /proc/sys/vm/drop_caches >/dev/null
-}
-
 popout_prompt() {
   case "$1" in
   "apps")
@@ -347,11 +348,15 @@ popout_prompt() {
   esac
 }
 
-remove_orphans() {
-  printf "${BOLD}${BLUE}:: ${RESET}Removing orphaned packages..\n"
-  # pacman -Qdtq | sudo pacman -Rns - > /dev/null
-  sudo pacman -Rns $(pacman -Qdtq) --noconfirm >/dev/null
+file_upload() {
+  wl-paste | up -t $1 | wl-copy
+  notify-send -u normal -a hyprshot -t 750 "0x0.st" "Image uploaded and copied to clipboard." -i ~/.local/share/harmony/logo.svg
 }
+free_cache() {
+  printf "${BOLD}${BLUE}:: ${RESET}Freeing cached RAM..\n"
+  printf 3 | sudo tee /proc/sys/vm/drop_caches >/dev/null
+}
+
 search_steamapps() {
   for id in $(ls ~/.local/share/Steam/steamapps/compatdata); do
     echo "$id: $(curl -s "https://store.steampowered.com/app/$id/" | grep -oP '(?<=<title>)[^<]*')"
@@ -362,16 +367,19 @@ search_fonts() {
   fc-list | grep -ioE ": [^:]*$1[^:]+:" | sed -E 's/(^: |:)//g' | tr , \\n | sort | uniq
 }
 
+remove_orphans() {
+  printf "${BOLD}${BLUE}:: ${RESET}Removing orphaned packages..\n"
+  # pacman -Qdtq | sudo pacman -Rns - > /dev/null
+  sudo pacman -Rns $(pacman -Qdtq) --noconfirm >/dev/null
+}
 show_expose() {
   printf "${BOLD}${BLUE}:: ${RESET}Showing desktop expose..\n"
   sleep 0.15
   hyprctl dispatch hyprexpo:expo show >/dev/null
   hyprctl dispatch overview:toggle >/dev/null
 }
-
 take_screenshot() {
   TIMESTAMP=$(date +%d%m%Y_%H%M%S)
-  HYPRSHOT_ARGUMENT=$(echo $1 | sed -E 's/--//g')
   FILENAME="screenshot_${TIMESTAMP}.png"
 
   case "$1" in
@@ -402,6 +410,7 @@ take_screenshot() {
     canberra-gtk-play -i camera-shutter
   fi
 }
+
 toggle_blur() {
   printf "${BOLD}${BLUE}:: ${RESET}Toggling blur..\n"
   HYPRBLUR=$(hyprctl getoption decoration:blur:enabled | awk 'NR==1{print $2}')
@@ -485,7 +494,6 @@ change_titlebars() {
 
   # echo "Hyprbars theme changed to: $1"
 }
-
 change_rounding() {
   CONFIG="$HOME/.config/hypr/core/decoration/rounding.conf"
 
@@ -555,6 +563,8 @@ update_prompt() {
   esac
 }
 
+
+
 if [[ $1 == "--version" ]]; then
   print_version
 elif [[ $1 == "-v" ]]; then
@@ -573,12 +583,13 @@ elif [[ $1 == "help" ]]; then
 elif [[ $1 == "h" ]]; then
   print_help
 
+elif [[ $1 == "aur" ]]; then
+    aur_git $2
+
 elif [[ $1 == "list" ]]; then
   print_lists $2
-
 elif [[ $1 == "dock" ]]; then
   toggle_dock
-
 elif [[ $1 == "titlebars" ]]; then
   change_titlebars $2 $3
 elif [[ $1 == "titlebar" ]]; then
@@ -587,86 +598,68 @@ elif [[ $1 == "tb" ]]; then
   change_titlebars $2 $3
 elif [[ $1 == "rounding" ]]; then
   change_rounding $2
-
 elif [[ $1 == "reload" ]]; then
   reload_prompt $2
 elif [[ $1 == "rl" ]]; then
   reload_prompt $2
-
 elif [[ $1 == "wp" ]]; then
   swww img $2
-
 elif [[ $1 == "edit" ]]; then
   edit_prompt $2
 elif [[ $1 == "e" ]]; then
   edit_prompt $2
-
 elif [[ $1 == "ram" ]]; then
   free_cache
 elif [[ $1 == "free" ]]; then
   free_cache
-
 elif [[ $1 == "gm" ]]; then
   toggle_gamemode
 elif [[ $1 == "game" ]]; then
   toggle_gamemode
 elif [[ $1 == "gamemode" ]]; then
   toggle_gamemode
-
 elif [[ $1 == "rm" ]]; then
   remove_orphans
 elif [[ $1 == "clean" ]]; then
   remove_orphans
-
 elif [[ $1 == "steam" ]]; then
   search_steamapps
 elif [[ $1 == "fonts" ]]; then
   search_fonts
-
 elif [[ $1 == "init" ]]; then
   init_prompt $2 $3
-
 elif [[ $1 == "up" ]]; then
   file_upload $2
 elif [[ $1 == "upload" ]]; then
   file_upload $2
-
 elif [[ $1 == "hf" ]]; then
   toggle_floatwindows
 elif [[ $1 == "float" ]]; then
   toggle_floatwindows
-
 elif [[ $1 == "blur" ]]; then
   toggle_blur
-
 elif [[ $1 == "nautilus" ]]; then
   toggle_gnome_buttons
-
 elif [[ $1 == "x" ]]; then
   show_expose
 elif [[ $1 == "expose" ]]; then
   show_expose
-
 elif [[ $1 == "m" ]]; then
   update_mirrors
 elif [[ $1 == "mirrors" ]]; then
   update_mirrors
-
 elif [[ $1 == "update" ]]; then
   update_prompt $2
 elif [[ $1 == "u" ]]; then
   update_prompt $2
-
 elif [[ $1 == "popout" ]]; then
   popout_prompt $2
 elif [[ $1 == "p" ]]; then
   popout_prompt $2
-
 elif [[ $1 == "screenshot" ]]; then
   take_screenshot $2
 elif [[ $1 == "ss" ]]; then
   take_screenshot $2
-
 else
   print_help
 fi

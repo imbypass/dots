@@ -185,7 +185,7 @@ hook = "~/.local/bin/harmonyctl reload bongocat"
 file = "~/.config/waybar/base16.css"
 template = "waybar"
 rewrite = true
-hook = "~/.local/bin/harmonyctl reload waybar"
+hook = "sleep .5 &&  ~/.local/bin/harmonyctl reload waybar"
 
 # ### NWG-MENU ###
 # [[items]]

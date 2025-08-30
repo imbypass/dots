@@ -9,7 +9,7 @@
 
 window#waybar {
     color: @base05;
-    background: transparent;
+    background: @base00;
     border-radius: 0;
     border-top: 2px solid @base01;
 
@@ -138,7 +138,7 @@ menuitem:hover {
 }
 
 /* ===[ WORKSPACES ]=== */
-#workspaces {
+/*#workspaces {
     transition: none;
     font-size: 12px;
     margin-right: 6px;
@@ -163,7 +163,42 @@ menuitem:hover {
 }
 #workspaces button.urgent {
     color: @base0A;
+}*/
+
+#workspaces {
+    background: transparent;
+    margin: 3px 0px;
+    padding: 15px 6px;
+    margin-left: 10px;
+    margin-top: 4px;
+    border-radius: 16px;
+    border: solid 0px @base03;
 }
+
+#workspaces button {
+    min-width: 6px;
+    min-height: 4px;
+    padding: 0;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: @base03;
+    color: @base03;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active,
+#workspaces button:hover {
+    color: @base05;
+    background-color: @base05;
+    border-radius: 20px;
+    min-width: 25px;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button label {
+    font-size: 0px;
+}
+
 /* ===[ CUSTOM MODULES ]=== */
 #cava {
     margin-left: 100px;
