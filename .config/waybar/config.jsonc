@@ -173,7 +173,7 @@
     "tooltip-format": "Applications",
     "format": "",
     "format": "   ",
-    "on-click": "walker",
+    "on-click": "walker -m applications",
     "on-click-right": "harmonyctl expose",
   },
   "custom/expose": {
