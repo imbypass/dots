@@ -1,0 +1,96 @@
+@import url("../../base16.css");
+
+* {
+    font-weight: 400;
+    font-family: "Iosevka NFP";
+}
+
+window {
+    color: @base05;
+    background: @base00;
+    border-radius: 0;
+    border: 0;
+}
+
+tooltip {
+    color: @base06;
+    background: @base00;
+    border: 1px solid @base02;
+    border-radius: 8px;
+}
+
+menu {
+    /* background: transparent; */
+    background-color: @base02;
+    border-radius: 12px;
+    border: 1px solid @base00;
+    color: @base05;
+    padding: 8px;
+}
+menuitem {
+    border-radius: 8px;
+    padding: 7px;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 8px;
+}
+menuitem:hover {
+    background: @base01;
+    color: @base05;
+}
+
+#clock #pulseaudio,
+#custom-glorious,
+#workspaces button {
+    background: transparent;
+    color: @base05;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+/* ===[ CLOCK ]=== */
+#clock {
+    color: @base0E;
+    margin-right: 6px;
+}
+
+/* ===[ PULSEAUDIO ]=== */
+#pulseaudio {
+    border: none;
+    color: @base0E;
+    margin-right: -3px;
+}
+#pulseaudio.sink-muted,
+#pulseaudio.source-muted {
+    color: @base08;
+}
+
+/* ===[ MODEL O BATTERY INDICATOR ]=== */
+#custom-glorious {
+    color: @base09;
+    margin-right: 8px;
+}
+
+/* ===[ WORKSPACES ]=== */
+#workspaces {
+    padding: 0;
+    color: @base07;
+}
+#workspaces button {
+    border-radius: 0px;
+    border: 0px;
+    color: @base06;
+    padding: 0 7px 0 7px;
+    margin: 0;
+}
+#workspaces button:hover {
+    color: @base00;
+    background-color: @base0E;
+}
+#workspaces button.active {
+    color: @base00;
+    background-color: @base0E;
+}
+#workspaces button.urgent {
+    color: @base0A;
+}

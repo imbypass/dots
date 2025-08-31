@@ -1,6 +1,6 @@
 {
   "layer": "top",
-  "position": "bottom",
+  "position": "top",
   "margin-top": 0,
   "margin-right": 0,
   "margin-left": 0,
@@ -13,7 +13,7 @@
 
   // ==========[ ENABLED WAYBAR MODULES ]=========== //
   "modules-left": ["custom/logo", "hyprland/workspaces"],
-  "modules-center": ["custom/pacman", "wlr/taskbar"],
+  "modules-center": ["wlr/taskbar"],
   "modules-right": [
     "group/systray",
     "custom/glorious",
@@ -27,12 +27,15 @@
   ],
 
   "cava": {
+    // "cava_config": "$HOME/.config/cava/config",
     "framerate": 120,
     "autosens": 1,
+    // "sensitivity": 2,
     "bars": 8,
     "lower_cutoff_freq": 50,
     "higher_cutoff_freq": 10000,
     "hide_on_silence": true,
+    // "format_silent": "quiet",
     "method": "pipewire",
     "source": "auto",
     "stereo": true,
@@ -51,15 +54,9 @@
     "separate-outputs": false,
   },
   "hyprland/workspaces": {
-    "format": "{icon}",
+    "format": "Workspace {}",
     "active-only": true,
-    "persistent-workspaces": {
-      "*": [1, 2, 3, 4, 5],
-    },
-    "format-icons": {
-      "active": "",
-      "default": "",
-    },
+    "persistent-workspaces": {},
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
   },
@@ -101,15 +98,15 @@
     "tooltip-format-ethernet": "    Ethernet",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
-    "on-click": "GTK_THEME=FOURdotZERO nmgui",
-    "on-click-right": "GTK_THEME=FOURdotZERO nmgui",
+    "on-click": "nm-connection-editor",
+    "on-click-right": "nm-connection-editor",
   },
   "bluetooth": {
     "format": "",
     "format-disabled": "󰂲", // an empty format will hide the module
     "format-connected": "",
     "tooltip-format": "   {controller_alias}",
-    "tooltip-format-connected": "{controller_alias} ({num_connections} device)",
+    "tooltip-format-connected": "   {controller_alias}\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t({device_address})",
     "on-click": "blueman-manager",
     "on-click-right": "blueman-manager",
@@ -173,8 +170,13 @@
     "tooltip-format": "Applications",
     "format": "",
     "format": "   ",
-    "on-click": "walker -m applications",
+    "on-click": "~/.local/bin/start",
     "on-click-right": "harmonyctl expose",
+  },
+  "custom/expose": {
+    "tooltip": false,
+    "format": "󰨑",
+    "on-click": "harmonyctl expose",
   },
   "custom/power": {
     "tooltip": true,
@@ -209,16 +211,5 @@
     "exec": "$HOME/.config/waybar/scripts/glorious.sh",
     "on-click": "GTK_THEME=FOURdotZERO mxw-ui",
     "on-click-right": "GTK_THEME=FOURdotZERO mxw-ui",
-  },
-  "custom/pacman": {
-    "format": "{icon}",
-    "return-type": "json",
-    "format-icons": {
-      "pending-updates": "󰚽",
-      "updated": "",
-    },
-    "exec-if": "which waybar-updates",
-    "exec": "waybar-updates",
-    "on-click": "$TERMINAL",
   },
 }

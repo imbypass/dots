@@ -134,6 +134,33 @@ menuitem:hover {
 }
 
 /* ===[ WORKSPACES ]=== */
+/*#workspaces {
+    transition: none;
+    font-size: 12px;
+    margin-right: 6px;
+    margin-left: 20px;
+    margin-top: 0px;
+    margin-bottom: -4px;
+    padding: 0;
+    color: @base07;
+}
+#workspaces button {
+    border-radius: 0px;
+    margin: 8px;
+    padding: 0;
+    border: 0px;
+    color: @base02;
+}
+#workspaces button:hover {
+    color: @base09;
+}
+#workspaces button.active {
+    color: @base07;
+}
+#workspaces button.urgent {
+    color: @base0A;
+}*/
+
 #workspaces {
     background: transparent;
     margin: 3px 0px;
@@ -143,6 +170,7 @@ menuitem:hover {
     border-radius: 16px;
     border: solid 0px @base03;
 }
+
 #workspaces button {
     min-width: 6px;
     min-height: 4px;
@@ -153,6 +181,7 @@ menuitem:hover {
     color: @base03;
     transition: all 0.3s ease-in-out;
 }
+
 #workspaces button.active,
 #workspaces button:hover {
     color: @base05;
@@ -161,16 +190,12 @@ menuitem:hover {
     min-width: 25px;
     transition: all 0.3s ease-in-out;
 }
+
 #workspaces button label {
     font-size: 0px;
 }
-#workspaces button.urgent {
-    background-color: @base0A;
-}
 
-/* =========[ CUSTOM MODULES ]========= */
-
-/* ===[ CAVA MODULE ]=== */
+/* ===[ CUSTOM MODULES ]=== */
 #cava {
     margin-left: 100px;
     margin-bottom: -8px;
@@ -181,6 +206,8 @@ menuitem:hover {
     color: @base00;
     transition: all 0.3s ease;
 }
+
+/* =========[ CUSTOM MODULES ]========= */
 
 /* ===[ SYSTEM TRAY GROUP ]=== */
 #custom-tray {
@@ -213,17 +240,31 @@ menuitem:hover {
     color: @base08;
 }
 
+/* ===[ EXPOSE BUTTON ]=== */
+#custom-expose {
+    margin-left: 0px;
+    margin-right: 12px;
+    padding-left: 0px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    font-size: 13px;
+}
+#custom-expose:hover {
+    color: @base09;
+}
+
 /* ===[ SPOTIFY NOW PLAYING ]=== */
 #custom-spotify {
-    color: @base0B;
     font-size: 13px;
-    margin-left: 14px;
+    margin-left: 0px;
 }
 
 /* ===[ GLORIOUS MODEL O- INDICATOR ]=== */
 #custom-glorious {
     font-size: 12px;
-    margin-right: 10px;
+    margin-right: 12px;
 }
 #custom-glorious:hover {
     color: @base06;

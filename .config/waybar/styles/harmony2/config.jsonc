@@ -176,6 +176,11 @@
     "on-click": "walker -m applications",
     "on-click-right": "harmonyctl expose",
   },
+  "custom/expose": {
+    "tooltip": false,
+    "format": "󰨑",
+    "on-click": "harmonyctl expose",
+  },
   "custom/power": {
     "tooltip": true,
     "tooltip-format": "System Menu",
