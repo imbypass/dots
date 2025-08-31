@@ -20,5 +20,6 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 echo -e "${BOLD}${BLUE}:: ${NC}Patching Vesktop desktop entry..."
+sed -i -e 's/Name=Vesktop/Name=Discord/g' /usr/share/applications/vesktop.desktop
 sed -i -e 's/Icon=vesktop/Icon=discord/g' /usr/share/applications/vesktop.desktop
 echo -e "${BOLD}${GREEN}:: ${NC}Patch complete."

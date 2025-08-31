@@ -580,7 +580,7 @@
             "enabled": false
         },
         "VencordToolbox": {
-            "enabled": true
+            "enabled": false
         },
         "ViewIcons": {
             "enabled": true,
@@ -827,7 +827,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1756577569916
+        "settingsSyncVersion": 1756634500766
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false
