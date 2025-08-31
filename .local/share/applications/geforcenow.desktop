@@ -1,0 +1,12 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=GeForce NOW
+Exec=/opt/google/chrome/google-chrome --profile-directory=Default --app="https://play.geforcenow.com/mall/" %U
+Icon=nvidia
+StartupWMClass=geforcenow
+NoDisplay=false
+Comment=Cloud Gaming
+GenericName=Cloud Gaming

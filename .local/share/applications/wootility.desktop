@@ -1,0 +1,12 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Wootility
+MimeType=x-scheme-handler/web+wootwoot
+Exec=/opt/google/chrome/google-chrome --profile-directory=Default --app="https://wootility.io/" --no-title-bar %U
+Icon=keyboard
+StartupWMClass=wootility
+GenericName=Keyboard Configuration
+Comment=Wooting Keyboard Configurator
