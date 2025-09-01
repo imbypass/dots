@@ -5,8 +5,8 @@
 ## Configuration
 - Color Scheme → [base16/biscuit-sol](https://github.com/imbypass/dots/blob/main/.local/share/flavours/base16/schemes/tinted-theming/biscuit-sol-dark-base16.yaml)
 - Discord → [base16-discord](https://github.com/imbypass/base16-discord)
-- Spotify → [spicetify](https://github.com/imbypass/dots/tree/main/.config/spicetify)
-- Firefox → [spicetify](https://github.com/imbypass/dots/tree/main/.mozilla/firefox/li1xg7z9.default-release/chrome)
+- Spotify → [base16-spotify](https://github.com/imbypass/dots/tree/main/.config/spicetify)
+- Firefox → [base16-firefox](https://github.com/imbypass/dots/tree/main/.mozilla/firefox/li1xg7z9.default-release/chrome)
 - Terminal → [foot](https://github.com/imbypass/dots/tree/main/.config/foot)
 - Shell → [fish](https://github.com/imbypass/dots/tree/main/.config/fish)
 - Prompt → [starship](https://github.com/imbypass/dots/tree/main/.config/starship.toml)
