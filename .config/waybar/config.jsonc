@@ -219,6 +219,6 @@
     },
     "exec-if": "which waybar-updates",
     "exec": "waybar-updates",
-    "on-click": "$TERMINAL",
+    "on-click": "$TERMINAL -e paru",
   },
 }

@@ -194,12 +194,12 @@ menuitem:hover {
 
 /* ===[ APPLICATIONS ICON ]=== */
 #custom-logo {
-    font-size: 28px;
+    font-size: 38px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url("/home/bypass/.local/share/harmony/logo.svg");
-    margin: 2px 3px 0px 18px;
+    margin: -2px -3px -4px 16px;
 }
 
 /* ===[ USER MENU ]=== */
