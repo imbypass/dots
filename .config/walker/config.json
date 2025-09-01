@@ -270,18 +270,8 @@
           "exec": "walker -n -m wallpaper"
         },
         {
-          "label": "Toggle Window Tiling",
-          "icon": "gnome-windows",
-          "exec": "~/.local/bin/harmonyctl hf"
-        },
-        {
-          "label": "Toggle Game Mode",
-          "icon": "package_games_board",
-          "exec": "~/.local/bin/harmonyctl gm"
-        },
-        {
           "label": "Record Screen",
-          "icon": "screen-recorder",
+          "icon": "gpu-screen-recorder",
           "exec": "walker -m record"
         },
         {
