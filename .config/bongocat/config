@@ -11,7 +11,7 @@ offset_y = 6
 bar_height = 42
 
 # start colors
-background_r = 24
+background_r = 26
 background_g = 21
 background_b = 21
 # end colors

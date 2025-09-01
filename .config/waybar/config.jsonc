@@ -65,7 +65,7 @@
   },
   "wlr/taskbar": {
     "format": "{icon}",
-    "icon-size": 16,
+    "icon-size": 18,
     "tooltip-format": "{title}",
     "on-click": "activate",
     "on-click-middle": "close",
@@ -159,8 +159,8 @@
   },
 
   "tray": {
-    "icon-size": 14,
-    "spacing": 10,
+    "icon-size": 12,
+    "spacing": 8,
   },
 
   // ==========[ CUSTOM WAYBAR MODULES ]========== //
@@ -171,7 +171,6 @@
   "custom/logo": {
     "tooltip": true,
     "tooltip-format": "Applications",
-    "format": "",
     "format": "   ",
     "on-click": "walker -m applications",
     "on-click-right": "harmonyctl expose",
@@ -179,7 +178,6 @@
   "custom/power": {
     "tooltip": true,
     "tooltip-format": "System Menu",
-    "format": "",
     "format": "⏻",
     "on-click-right": "walker -m mainmenu",
     "on-click": "walker -m mainmenu",

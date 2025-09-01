@@ -147,7 +147,7 @@ menuitem:hover {
     min-width: 6px;
     min-height: 4px;
     padding: 0;
-    margin: 0 5px;
+    margin: 0 4px;
     border-radius: 50%;
     background-color: @base03;
     color: @base03;
@@ -158,7 +158,7 @@ menuitem:hover {
     color: @base05;
     background-color: @base05;
     border-radius: 20px;
-    min-width: 25px;
+    min-width: 20px;
     transition: all 0.3s ease-in-out;
 }
 #workspaces button label {
@@ -199,7 +199,7 @@ menuitem:hover {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url("/home/bypass/.local/share/harmony/logo.svg");
-    margin: -2px -3px -5px 14px;
+    margin: -2px -1px -5px 16px;
 }
 
 /* ===[ USER MENU ]=== */

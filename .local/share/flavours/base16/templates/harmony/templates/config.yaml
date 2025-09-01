@@ -1,3 +1,7 @@
 default:
   extension: .svg
   output: themes
+
+original:
+  extension: .svg
+  output: themes

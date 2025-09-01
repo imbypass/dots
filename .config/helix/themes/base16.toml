@@ -1,4 +1,4 @@
-# Scheme name: Biscuit de Sol (Dark)
+# Scheme name: Biscuit de Mar (Dark)
 # Scheme author: tsukki9696
 # Template author: Tinted Theming (https://github.com/tinted-theming)
 
@@ -81,19 +81,19 @@
 "ui.window" = { bg = "base01" }
 
 [palette]
-base00 = "#181515" # Default Background
-base01 = "#221e1e" # Lighter Background (Used for status bars, line number and folding marks)
-base02 = "#423939" # Selection Background
-base03 = "#6d5f5f" # Comments, Invisibles, Line Highlighting
-base04 = "#978787" # Dark Foreground (Used for status bars)
-base05 = "#b6a8a5" # Default Foreground, Caret, Delimiters, Operators
-base06 = "#f4e6d2" # Light Foreground (Not often used)
-base07 = "#f3ede4" # Light Background (Not often used)
-base08 = "#ca3f3f" # Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
-base09 = "#e46a3a" # Integers, Boolean, Constants, XML Attributes, Markup Link Url
+base00 = "#1a1515" # Default Background
+base01 = "#2d2424" # Lighter Background (Used for status bars, line number and folding marks)
+base02 = "#453636" # Selection Background
+base03 = "#725a5a" # Comments, Invisibles, Line Highlighting
+base04 = "#9c8181" # Dark Foreground (Used for status bars)
+base05 = "#dcc9bc" # Default Foreground, Caret, Delimiters, Operators
+base06 = "#ffe9c7" # Light Foreground (Not often used)
+base07 = "#faeedc" # Light Background (Not often used)
+base08 = "#cf223e" # Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
+base09 = "#f07342" # Integers, Boolean, Constants, XML Attributes, Markup Link Url
 base0A = "#e39c45" # Classes, Markup Bold, Search Text Background
-base0B = "#989f56" # Strings, Inherited Class, Markup Code, Diff Inserted
-base0C = "#629386" # Support, Regular Expressions, Escape Characters, Markup Quotes
-base0D = "#4a5a8d" # Functions, Methods, Attribute IDs, Headings
-base0E = "#9f569a" # Keywords, Storage, Selector, Markup Italic, Diff Changed
-base0F = "#c45497" # Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
+base0B = "#959a6b" # Strings, Inherited Class, Markup Code, Diff Inserted
+base0C = "#768f80" # Support, Regular Expressions, Escape Characters, Markup Quotes
+base0D = "#614f76" # Functions, Methods, Attribute IDs, Headings
+base0E = "#7b3d79" # Keywords, Storage, Selector, Markup Italic, Diff Changed
+base0F = "#ae3f82" # Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>

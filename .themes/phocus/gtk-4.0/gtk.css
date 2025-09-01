@@ -1,27 +1,27 @@
 /* start colors */
 /*
 *
-* Base16 Biscuit de Sol (Dark)
+* Base16 Biscuit de Mar (Dark)
 * Author: tsukki9696
 *
 */
 
-@define-color base00 #181515;
-@define-color base01 #221e1e;
-@define-color base02 #423939;
-@define-color base03 #6d5f5f;
-@define-color base04 #978787;
-@define-color base05 #b6a8a5;
-@define-color base06 #f4e6d2;
-@define-color base07 #f3ede4;
-@define-color base08 #ca3f3f;
-@define-color base09 #e46a3a;
+@define-color base00 #1a1515;
+@define-color base01 #2d2424;
+@define-color base02 #453636;
+@define-color base03 #725a5a;
+@define-color base04 #9c8181;
+@define-color base05 #dcc9bc;
+@define-color base06 #ffe9c7;
+@define-color base07 #faeedc;
+@define-color base08 #cf223e;
+@define-color base09 #f07342;
 @define-color base0A #e39c45;
-@define-color base0B #989f56;
-@define-color base0C #629386;
-@define-color base0D #4a5a8d;
-@define-color base0E #9f569a;
-@define-color base0F #c45497;
+@define-color base0B #959a6b;
+@define-color base0C #768f80;
+@define-color base0D #614f76;
+@define-color base0E #7b3d79;
+@define-color base0F #ae3f82;
 /* end colors */
 
 @define-color surface-strongest @base00;
