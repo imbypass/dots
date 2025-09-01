@@ -325,9 +325,14 @@
           "exec": "shutdown now"
         },
         {
-          "label": "Reboot",
+          "label": "Reboot (Full)",
           "icon": "system-reboot",
           "exec": "reboot"
+        },
+        {
+          "label": "Reboot (Soft)",
+          "icon": "system-reboot",
+          "exec": "systemctl soft-reboot"
         },
         {
           "label": "Lock Screen",

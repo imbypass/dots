@@ -30,8 +30,8 @@ ${RESET}"
 }
 
 aur_git() {
-    git clone --single-branch --branch $1 https://github.com/archlinux/aur.git ~/Documents/aur_packages/$1
-    cd ~/Documents/aur_packages/$1
+  git clone --single-branch --branch $1 https://github.com/archlinux/aur.git ~/Documents/aur_packages/$1
+  cd ~/Documents/aur_packages/$1
 }
 
 print_help() {
@@ -99,6 +99,9 @@ edit_prompt() {
     cd ~/.config/hypr/ && $EDITOR hyprland.conf
     ;;
   "keys")
+    cd ~/.config/hypr/ && $EDITOR core/binds.conf
+    ;;
+  "binds")
     cd ~/.config/hypr/ && $EDITOR core/binds.conf
     ;;
   "apps")
@@ -247,9 +250,9 @@ reload_prompt() {
     printf "${BOLD}${BLUE}:: ${RESET}Reloading Ghostty..\n"
     killall -9 ghostty >/dev/null
     ghostty \
-    --gtk-single-instance=true \
-    --quit-after-last-window-closed=false \
-    --initial-window=false &
+      --gtk-single-instance=true \
+      --quit-after-last-window-closed=false \
+      --initial-window=false &
     disown
     ;;
   "mconnect")
@@ -278,9 +281,9 @@ reload_prompt() {
     printf "${BOLD}${BLUE}:: ${RESET}Reloading Steam..\n"
     # ~/.local/bin/hex2rgb ~/.local/share/adwaita-steam/adwaita/colorthemes/base16/base16.css
     sleep 2 && cd ~/.local/share/adwaita-steam/ && ./install.py \
-    --color-theme base16 \
-    --extras library/hide_whats_new \
-    --font sfpro
+      --color-theme base16 \
+      --extras library/hide_whats_new \
+      --font sfpro
     ;;
   esac
 }
@@ -563,8 +566,6 @@ update_prompt() {
   esac
 }
 
-
-
 if [[ $1 == "--version" ]]; then
   print_version
 elif [[ $1 == "-v" ]]; then
@@ -584,7 +585,7 @@ elif [[ $1 == "h" ]]; then
   print_help
 
 elif [[ $1 == "aur" ]]; then
-    aur_git $2
+  aur_git $2
 
 elif [[ $1 == "list" ]]; then
   print_lists $2

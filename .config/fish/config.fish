@@ -10,3 +10,8 @@ end
 # Alt+Escape to prepend 'sudo'
 bind \e\e 'begin; set -l buf (commandline); commandline -r "sudo "$buf; end'
 bind -k nul accept-autosuggestion
+
+function fish_user_key_bindings
+    bind ! bind_bang
+    bind '$' bind_dollar
+end

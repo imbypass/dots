@@ -20,6 +20,26 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 echo -e "${BOLD}${BLUE}:: ${NC}Patching Vesktop desktop entry..."
+
+# Patch the desktop entry to change the name
 sed -i -e 's/Name=Vesktop/Name=Discord/g' /usr/share/applications/vesktop.desktop
-sed -i -e 's/Icon=vesktop/Icon=discord/g' /usr/share/applications/vesktop.desktop
+
+# Move the old Vesktop icons
+mv /usr/share/icons/Papirus-Dark/128x128/apps/vesktop.svg /usr/share/icons/Papirus-Dark/128x128/apps/vesktop_old.svg
+mv /usr/share/icons/Papirus-Dark/24x24/apps/vesktop.svg /usr/share/icons/Papirus-Dark/24x24/apps/vesktop_old.svg
+mv /usr/share/icons/Papirus-Dark/22x22/apps/vesktop.svg /usr/share/icons/Papirus-Dark/22x22/apps/vesktop_old.svg
+mv /usr/share/icons/Papirus-Dark/16x16/apps/vesktop.svg /usr/share/icons/Papirus-Dark/16x16/apps/vesktop_old.svg
+
+# Copy the Discord icons in their place
+cp /usr/share/icons/Papirus-Dark/128x128/apps/discord.svg /usr/share/icons/Papirus-Dark/128x128/apps/vesktop.svg
+cp /usr/share/icons/Papirus-Dark/24x24/apps/discord.svg /usr/share/icons/Papirus-Dark/24x24/apps/vesktop.svg
+cp /usr/share/icons/Papirus-Dark/22x22/apps/discord.svg /usr/share/icons/Papirus-Dark/22x22/apps/vesktop.svg
+cp /usr/share/icons/Papirus-Dark/16x16/apps/discord.svg /usr/share/icons/Papirus-Dark/16x16/apps/vesktop.svg
+
+# As dumb as it may seem to move the icons manually instead of just changing the desktop entry,
+# doing it manually will force other apps that use the icon pack but not the desktop entry to
+# use the Discord icon. It's only stupid if it doesn't work... Luckily, this actually works.
+#
+# ~ bepi
+
 echo -e "${BOLD}${GREEN}:: ${NC}Patch complete."
