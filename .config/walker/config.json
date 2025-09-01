@@ -238,7 +238,7 @@
       "theme": "base16/wallpaper",
       "switcher_only": false,
       "refresh": true,
-      "src": "bash -c ~/.config/walker/scripts/wallpaper.sh",
+      "src": "bash -c ~/.local/share/harmony/scripts/walker/wallpaper.sh",
       "parser": "kv"
     },
     {
@@ -247,7 +247,7 @@
       "theme": "base16/theme",
       "switcher_only": false,
       "refresh": true,
-      "src": "bash -c ~/.config/walker/scripts/themes.sh",
+      "src": "bash -c ~/.local/share/harmony/scripts/walker/themes.sh",
       "parser": "kv"
     },
     {
