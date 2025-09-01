@@ -2,7 +2,7 @@
 
 #### I apologize profusely to anyone who unfortunately happens to be digging into here.
 
-## Contents
+## Configuration
 - Color Scheme → [base16/biscuit-sol](https://github.com/imbypass/dots/blob/main/.local/share/flavours/base16/schemes/tinted-theming/biscuit-sol-dark-base16.yaml)
 - Discord → [base16-discord](https://github.com/imbypass/base16-discord)
 - Spotify → [spicetify](https://github.com/imbypass/dots/tree/main/.config/spicetify)
