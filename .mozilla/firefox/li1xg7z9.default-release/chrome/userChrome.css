@@ -138,8 +138,8 @@ splitter#sidebar-tools-and-extensions-splitter {
 }
 
 
-#nav-bar {
   /* customize this value. */
+/* #nav-bar {
   --navbar-margin: -38px;
 
   margin-top: var(--navbar-margin);
@@ -156,7 +156,7 @@ splitter#sidebar-tools-and-extensions-splitter {
   margin-bottom: var(--navbar-margin);
   z-index: 100;
   opacity: 1;
-}
+} */
 
 
 :root {
