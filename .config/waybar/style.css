@@ -124,6 +124,7 @@ menuitem:hover {
 #pulseaudio {
     font-size: 13.75px;
     border: none;
+    margin-right: 10px;
 }
 #pulseaudio:hover {
     color: @base06;

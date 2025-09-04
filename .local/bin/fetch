@@ -26,4 +26,7 @@ printf "
  (\\ /)      ${y}kr   ${w}${kr}
  ( . .)     ${g}sh   ${w}${sh}
  c(${r}\"${w})(${r}\"${w})    ${m}rs   ${w}${rs}
+ 
 "
+
+colors

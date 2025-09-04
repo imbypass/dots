@@ -18,7 +18,6 @@ eval "$(starship init bash)"
 # Environment Variables
 source ~/.config/keys.sh
 
-export HYPRSHOT_DIR="$HOME/Pictures/Screenshots/"
 export ELECTRON_OZONE_PLATFORM_HINT="wayland"
 export MOZ_ENABLE_WAYLAND=0
 export MICRO_TRUECOLOR=1

@@ -51,14 +51,10 @@
     "separate-outputs": false,
   },
   "hyprland/workspaces": {
-    "format": "{icon}",
-    "active-only": true,
+    "format": "{}",
+    "active-only": false,
     "persistent-workspaces": {
-      "*": [1, 2, 3, 4, 5],
-    },
-    "format-icons": {
-      "active": "",
-      "default": "",
+      "*": [1, 2],
     },
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",

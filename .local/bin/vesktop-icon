@@ -19,22 +19,69 @@ if [ "$EUID" -ne 0 ]; then
   exit 1
 fi
 
-echo -e "${BOLD}${BLUE}:: ${NC}Patching Vesktop desktop entry..."
+patch_tela_icons() {
+	echo -e "${BOLD}${BLUE}   ${NC}[1/2] Patching Tela theme"
+
+	echo -e "${BOLD}${YELLOW}   ==> ${NC}Backing up old Vesktop icon..."
+	mv /usr/share/icons/Tela/scalable/apps/vesktop.svg /usr/share/icons/Tela/scalable/apps/vesktop_old.svg
+	mv /usr/share/icons/Tela-black/scalable/apps/vesktop.svg /usr/share/icons/Tela-black/scalable/apps/vesktop_old.svg
+	mv /usr/share/icons/Tela-blue/scalable/apps/vesktop.svg /usr/share/icons/Tela-blue/scalable/apps/vesktop_old.svg
+	mv /usr/share/icons/Tela-brown/scalable/apps/vesktop.svg /usr/share/icons/Tela-brown/scalable/apps/vesktop_old.svg
+	mv /usr/share/icons/Tela-dracula/scalable/apps/vesktop.svg /usr/share/icons/Tela-dracula/scalable/apps/vesktop_old.svg
+	mv /usr/share/icons/Tela-green/scalable/apps/vesktop.svg /usr/share/icons/Tela-green/scalable/apps/vesktop_old.svg
+	mv /usr/share/icons/Tela-grey/scalable/apps/vesktop.svg /usr/share/icons/Tela-grey/scalable/apps/vesktop_old.svg
+	mv /usr/share/icons/Tela-manjaro/scalable/apps/vesktop.svg /usr/share/icons/Tela-manjaro/scalable/apps/vesktop_old.svg
+	mv /usr/share/icons/Tela-nord/scalable/apps/vesktop.svg /usr/share/icons/Tela-nord/scalable/apps/vesktop_old.svg
+	mv /usr/share/icons/Tela-orange/scalable/apps/vesktop.svg /usr/share/icons/Tela-orange/scalable/apps/vesktop_old.svg
+	mv /usr/share/icons/Tela-pink/scalable/apps/vesktop.svg /usr/share/icons/Tela-pink/scalable/apps/vesktop_old.svg
+	mv /usr/share/icons/Tela-purple/scalable/apps/vesktop.svg /usr/share/icons/Tela-purple/scalable/apps/vesktop_old.svg
+	mv /usr/share/icons/Tela-red/scalable/apps/vesktop.svg /usr/share/icons/Tela-red/scalable/apps/vesktop_old.svg
+	mv /usr/share/icons/Tela-ubuntu/scalable/apps/vesktop.svg /usr/share/icons/Tela-ubuntu/scalable/apps/vesktop_old.svg
+	mv /usr/share/icons/Tela-yellow/scalable/apps/vesktop.svg /usr/share/icons/Tela-yellow/scalable/apps/vesktop_old.svg
+
+	echo -e "${BOLD}${YELLOW}   ==> ${NC}Replacing Vesktop icon..."
+	cp /usr/share/icons/Tela/scalable/apps/discord.svg /usr/share/icons/Tela/scalable/apps/vesktop.svg
+	cp /usr/share/icons/Tela-black/scalable/apps/discord.svg /usr/share/icons/Tela-black/scalable/apps/vesktop.svg
+	cp /usr/share/icons/Tela-blue/scalable/apps/discord.svg /usr/share/icons/Tela-blue/scalable/apps/vesktop.svg
+	cp /usr/share/icons/Tela-brown/scalable/apps/discord.svg /usr/share/icons/Tela-brown/scalable/apps/vesktop.svg
+	cp /usr/share/icons/Tela-dracula/scalable/apps/discord.svg /usr/share/icons/Tela-dracula/scalable/apps/vesktop.svg
+	cp /usr/share/icons/Tela-green/scalable/apps/discord.svg /usr/share/icons/Tela-green/scalable/apps/vesktop.svg
+	cp /usr/share/icons/Tela-grey/scalable/apps/discord.svg /usr/share/icons/Tela-grey/scalable/apps/vesktop.svg
+	cp /usr/share/icons/Tela-manjaro/scalable/apps/discord.svg /usr/share/icons/Tela-manjaro/scalable/apps/vesktop.svg
+	cp /usr/share/icons/Tela-nord/scalable/apps/discord.svg /usr/share/icons/Tela-nord/scalable/apps/vesktop.svg
+	cp /usr/share/icons/Tela-orange/scalable/apps/discord.svg /usr/share/icons/Tela-orange/scalable/apps/vesktop.svg
+	cp /usr/share/icons/Tela-pink/scalable/apps/discord.svg /usr/share/icons/Tela-pink/scalable/apps/vesktop.svg
+	cp /usr/share/icons/Tela-purple/scalable/apps/discord.svg /usr/share/icons/Tela-purple/scalable/apps/vesktop.svg
+	cp /usr/share/icons/Tela-red/scalable/apps/discord.svg /usr/share/icons/Tela-red/scalable/apps/vesktop.svg
+	cp /usr/share/icons/Tela-ubuntu/scalable/apps/discord.svg /usr/share/icons/Tela-ubuntu/scalable/apps/vesktop.svg
+	cp /usr/share/icons/Tela-yellow/scalable/apps/discord.svg /usr/share/icons/Tela-yellow/scalable/apps/vesktop.svg
+}
+
+patch_papirus_icons() {
+	echo -e "${BOLD}${BLUE}   ${NC}[2/2] Patching Papirus theme"
+
+	echo -e "${BOLD}${YELLOW}   ==> ${NC}Backing up old Vesktop icon..."
+	mv /usr/share/icons/Papirus-Dark/128x128/apps/vesktop.svg /usr/share/icons/Papirus-Dark/128x128/apps/vesktop_old.svg
+	mv /usr/share/icons/Papirus-Dark/24x24/apps/vesktop.svg /usr/share/icons/Papirus-Dark/24x24/apps/vesktop_old.svg
+	mv /usr/share/icons/Papirus-Dark/22x22/apps/vesktop.svg /usr/share/icons/Papirus-Dark/22x22/apps/vesktop_old.svg
+	mv /usr/share/icons/Papirus-Dark/16x16/apps/vesktop.svg /usr/share/icons/Papirus-Dark/16x16/apps/vesktop_old.svg
+
+	echo -e "${BOLD}${YELLOW}   ==> ${NC}Replacing Vesktop icon..."
+	cp /usr/share/icons/Papirus-Dark/128x128/apps/discord.svg /usr/share/icons/Papirus-Dark/128x128/apps/vesktop.svg
+	cp /usr/share/icons/Papirus-Dark/24x24/apps/discord.svg /usr/share/icons/Papirus-Dark/24x24/apps/vesktop.svg
+	cp /usr/share/icons/Papirus-Dark/22x22/apps/discord.svg /usr/share/icons/Papirus-Dark/22x22/apps/vesktop.svg
+	cp /usr/share/icons/Papirus-Dark/16x16/apps/discord.svg /usr/share/icons/Papirus-Dark/16x16/apps/vesktop.svg
+}
+
 
 # Patch the desktop entry to change the name
+echo -e "${BOLD}${BLUE}:: ${NC}Patching Vesktop desktop entry..."
 sed -i -e 's/Name=Vesktop/Name=Discord/g' /usr/share/applications/vesktop.desktop
 
-# Move the old Vesktop icons
-mv /usr/share/icons/Papirus-Dark/128x128/apps/vesktop.svg /usr/share/icons/Papirus-Dark/128x128/apps/vesktop_old.svg
-mv /usr/share/icons/Papirus-Dark/24x24/apps/vesktop.svg /usr/share/icons/Papirus-Dark/24x24/apps/vesktop_old.svg
-mv /usr/share/icons/Papirus-Dark/22x22/apps/vesktop.svg /usr/share/icons/Papirus-Dark/22x22/apps/vesktop_old.svg
-mv /usr/share/icons/Papirus-Dark/16x16/apps/vesktop.svg /usr/share/icons/Papirus-Dark/16x16/apps/vesktop_old.svg
-
-# Copy the Discord icons in their place
-cp /usr/share/icons/Papirus-Dark/128x128/apps/discord.svg /usr/share/icons/Papirus-Dark/128x128/apps/vesktop.svg
-cp /usr/share/icons/Papirus-Dark/24x24/apps/discord.svg /usr/share/icons/Papirus-Dark/24x24/apps/vesktop.svg
-cp /usr/share/icons/Papirus-Dark/22x22/apps/discord.svg /usr/share/icons/Papirus-Dark/22x22/apps/vesktop.svg
-cp /usr/share/icons/Papirus-Dark/16x16/apps/discord.svg /usr/share/icons/Papirus-Dark/16x16/apps/vesktop.svg
+# Move the old Vesktop icons (Papirus)
+echo -e "${BOLD}${BLUE}:: ${NC}Patching themes.."
+patch_tela_icons
+patch_papirus_icons
 
 # As dumb as it may seem to move the icons manually instead of just changing the desktop entry,
 # doing it manually will force other apps that use the icon pack but not the desktop entry to
