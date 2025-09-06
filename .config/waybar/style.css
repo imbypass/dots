@@ -95,7 +95,7 @@ menuitem:hover {
 /* ===[ NETWORK ]=== */
 #network {
     font-size: 13px;
-    margin-right: 20px;
+    margin-right: 12px;
     margin-left: 10px;
 }
 #network:hover {
@@ -105,18 +105,19 @@ menuitem:hover {
 /* ===[ BLUETOOTH ]=== */
 #bluetooth {
     font-size: 13px;
-    margin-right: 15px;
+    margin-right: 12px;
     margin-left: 10px;
 }
 #bluetooth:hover {
-    color: @base06;
+    color: @base02;
 }
 
 /* ===[ CLOCK ]=== */
 #clock {
     margin-left: 10px;
     margin-right: 26px;
-    font-size: 13px;
+    font-size: 12px;
+    font-weight: 600;
     color: @base06;
 }
 
@@ -125,6 +126,7 @@ menuitem:hover {
     font-size: 13.75px;
     border: none;
     margin-right: 14px;
+    margin-bottom: 0;
 }
 #pulseaudio:hover {
     color: @base06;

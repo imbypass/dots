@@ -16,12 +16,11 @@
   "modules-center": ["custom/pacman", "wlr/taskbar"],
   "modules-right": [
     "group/systray",
-    "pulseaudio",
-    "pulseaudio#microphone",
     "bluetooth",
     "network",
+    "pulseaudio",
+    "pulseaudio#microphone",
     "battery",
-    "custom/power",
     "clock",
   ],
 
@@ -76,8 +75,10 @@
     ],
   },
   "clock": {
+    "justify": "right",
     "format": " {:%I:%M %p}",
     "tooltip-format": "{:%a, %b %e, %Y}",
+    "on-click-right": "walker -m mainmenu",
   },
   "battery": {
     "format-icons": ["", "", "", "", ""],
@@ -89,7 +90,8 @@
     "interface": "enp3s0",
     "format": "󰤨",
     "format-wifi": "󰤨",
-    "format-ethernet": "",
+    "format-ethernet2": "",
+    "format-ethernet": "󰤨",
     "format-disconnected": "", // hides on empty
     "tooltip-format": "󰤨   {essid}",
     "tooltip-format-wifi": "󰤨   {essid}",
@@ -103,6 +105,7 @@
     "format": "",
     "format-disabled": "󰂲", // an empty format will hide the module
     "format-connected": "",
+    "tooltip": false,
     "tooltip-format": "   {controller_alias}",
     "tooltip-format-connected": "{controller_alias} ({num_connections} device)",
     "tooltip-format-enumerate-connected": "{device_alias}\t({device_address})",
