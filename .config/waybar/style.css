@@ -82,7 +82,7 @@ menuitem:hover {
 
 /* ===[ SYSTEM TRAY ]=== */
 #tray {
-    padding-right: 6px;
+    margin-right: 6px;
 }
 
 /* ===[ BATTERY ]=== */
@@ -117,14 +117,14 @@ menuitem:hover {
     margin-left: 10px;
     margin-right: 26px;
     font-size: 13px;
-    color: @base07;
+    color: @base06;
 }
 
 /* ===[ PULSEAUDIO ]=== */
 #pulseaudio {
     font-size: 13.75px;
     border: none;
-    margin-right: 10px;
+    margin-right: 14px;
 }
 #pulseaudio:hover {
     color: @base06;
@@ -185,11 +185,15 @@ menuitem:hover {
 
 /* ===[ SYSTEM TRAY GROUP ]=== */
 #custom-tray {
+    padding-left: 18px;
     color: @base02;
     margin-right: 11px;
     margin-left: 0px;
     margin-bottom: -1px;
     font-size: 10px;
+}
+#custom-tray:hover {
+    color: @base03;
 }
 
 /* ===[ APPLICATIONS ICON ]=== */
@@ -208,10 +212,10 @@ menuitem:hover {
     margin-left: 8px;
     margin-bottom: -1px;
     font-size: 12px;
-    color: @base04;
+    color: @base03;
 }
 #custom-power:hover {
-    color: @base06;
+    color: @base04;
 }
 
 /* ===[ SPOTIFY NOW PLAYING ]=== */
@@ -224,7 +228,7 @@ menuitem:hover {
 /* ===[ GLORIOUS MODEL O- INDICATOR ]=== */
 #custom-glorious {
     font-size: 12px;
-    margin-right: 10px;
+    margin-left: 6px;
 }
 #custom-glorious:hover {
     color: @base06;
@@ -232,7 +236,7 @@ menuitem:hover {
 
 /* ===[ PACMAN UPDATE COUNTER ]=== */
 #custom-pacman {
-    color: @base0A;
-    font-size: 16px;
-    margin-bottom: 2px;
+    color: @base0B;
+    font-size: 18px;
+    margin-bottom: 3px;
 }

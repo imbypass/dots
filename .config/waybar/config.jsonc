@@ -16,7 +16,6 @@
   "modules-center": ["custom/pacman", "wlr/taskbar"],
   "modules-right": [
     "group/systray",
-    "custom/glorious",
     "pulseaudio",
     "pulseaudio#microphone",
     "bluetooth",
@@ -151,7 +150,11 @@
       "click-to-reveal": true,
       "transition-left-to-right": false,
     },
-    "modules": ["custom/tray", "tray"],
+    "modules": [
+      "custom/tray", 
+      "tray",
+      "custom/glorious",
+    ],
   },
 
   "tray": {
@@ -208,7 +211,7 @@
     "format": "{icon}",
     "return-type": "json",
     "format-icons": {
-      "pending-updates": "󰚽",
+      "pending-updates": "󰚰",
       "updated": "",
     },
     "exec-if": "which waybar-updates",
