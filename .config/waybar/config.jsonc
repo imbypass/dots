@@ -22,8 +22,8 @@
     "bluetooth",
     "network",
     "battery",
-    "clock",
     "custom/power",
+    "clock",
   ],
 
   "cava": {
@@ -174,7 +174,7 @@
   "custom/power": {
     "tooltip": true,
     "tooltip-format": "System Menu",
-    "format": "⏻",
+    "format": "",
     "on-click-right": "walker -m mainmenu",
     "on-click": "walker -m mainmenu",
   },

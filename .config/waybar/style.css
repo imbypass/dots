@@ -114,9 +114,9 @@ menuitem:hover {
 
 /* ===[ CLOCK ]=== */
 #clock {
-    margin-left: 4px;
-    margin-right: 16px;
-    font-size: 12px;
+    margin-left: 10px;
+    margin-right: 26px;
+    font-size: 13px;
     color: @base07;
 }
 
@@ -185,12 +185,11 @@ menuitem:hover {
 
 /* ===[ SYSTEM TRAY GROUP ]=== */
 #custom-tray {
-    font-size: 18px;
-    color: @base04;
-    margin-right: 12px;
+    color: @base02;
+    margin-right: 11px;
     margin-left: 0px;
-    margin-bottom: -2px;
-    font-size: 11px;
+    margin-bottom: -1px;
+    font-size: 10px;
 }
 
 /* ===[ APPLICATIONS ICON ]=== */
@@ -205,13 +204,14 @@ menuitem:hover {
 
 /* ===[ USER MENU ]=== */
 #custom-power {
-    margin-right: 24px;
+    margin-right: 16px;
     margin-left: 8px;
-    font-size: 13px;
-    color: @base05;
+    margin-bottom: -1px;
+    font-size: 12px;
+    color: @base04;
 }
 #custom-power:hover {
-    color: @base08;
+    color: @base06;
 }
 
 /* ===[ SPOTIFY NOW PLAYING ]=== */
