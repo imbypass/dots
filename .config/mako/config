@@ -1,9 +1,10 @@
 include=~/.config/mako/colors
+
 format=<b>%s</b>\n%b
 sort=-time
 layer=overlay
 width=400
-height=400
+height=550
 border-size=2
 border-radius=14
 icons=1
@@ -14,10 +15,11 @@ icon-location=right
 markup=1
 actions=1
 history=1
-anchor=top-center
+anchor=bottom-right
 max-icon-size=48
 default-timeout=3500
 ignore-timeout=1
 on-button-left=invoke-default-action
+
 font=Iosevka Nerd Font Propo Medium 11
 font=SF Pro Rounded Semibold 10
