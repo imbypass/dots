@@ -131,8 +131,8 @@ menuitem:hover {
 #pulseaudio:hover {
     color: @base06;
 }
-#pulseaudio.sink-muted,
-#pulseaudio.source-muted {
+#pulseaudio.microphone.source-muted,
+#pulseaudio.muted {
     color: @base08;
 }
 
@@ -230,10 +230,8 @@ menuitem:hover {
 /* ===[ GLORIOUS MODEL O- INDICATOR ]=== */
 #custom-glorious {
     font-size: 12px;
-    margin-left: 4px;
-}
-#custom-glorious:hover {
-    color: @base06;
+    margin-left: 6px;
+    color: white;
 }
 
 /* ===[ PACMAN UPDATE COUNTER ]=== */
