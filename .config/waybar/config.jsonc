@@ -16,7 +16,6 @@
   "modules-center": ["custom/pacman", "wlr/taskbar"],
   "modules-right": [
     "group/systray",
-    "bluetooth",
     "network",
     "pulseaudio",
     "pulseaudio#microphone",

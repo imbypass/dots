@@ -172,13 +172,13 @@ template = "mouse-colors"
 rewrite = true
 
 ### BONGOCAT BAR PET ###
-[[items]]
-file = "~/.config/bongocat/config"
-template = "bongocat"
-rewrite = false
-start = "# start colors"
-end = "# end colors"
-hook = "~/.local/bin/harmonyctl reload bongocat"
+# [[items]]
+# file = "~/.config/bongocat/config"
+# template = "bongocat"
+# rewrite = false
+# start = "# start colors"
+# end = "# end colors"
+# hook = "~/.local/bin/harmonyctl reload bongocat"
 
 ### WAYBAR ###
 [[items]]

@@ -12,10 +12,10 @@
         "patches.theme.css",
         "fonts.theme.css",
         "EmojiReplace.theme.css",
-        "base16-discord.theme.css",
-        "snippets.theme.css",
         "settings-icons.theme.css",
-        "base16.theme.css"
+        "base16.theme.css",
+        "snippets.theme.css",
+        "base16-discord.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": true,
@@ -485,7 +485,8 @@
             "enabled": true,
             "mode": "nick-user",
             "displayNames": false,
-            "inReplies": false
+            "inReplies": false,
+            "friendNicknames": "dms"
         },
         "SilentMessageToggle": {
             "enabled": true,
@@ -827,7 +828,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1757041982806
+        "settingsSyncVersion": 1757199030546
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false
