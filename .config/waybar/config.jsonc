@@ -63,7 +63,6 @@
     "tooltip-format": "Battery: {capacity}%\nTime Remaining: {time}",
   },
   "network": {
-    "interface": "enp3s0",
     "format": "󰤨",
     "format-wifi": "󰤨",
     "format-ethernet2": "",
