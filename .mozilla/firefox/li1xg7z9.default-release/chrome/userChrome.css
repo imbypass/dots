@@ -9,7 +9,7 @@
         var(--base0A) 100%
     ) !important;
     --toolbarbutton-border-radius: 6px !important;
-    --toolbarbutton-icon-fill: var(--base05) !important;
+    --toolbarbutton-icon-fill: var(--base04) !important;
     --urlbarView-separator-color: var(--base01) !important;
     --urlbar-box-bgcolor: var(--base01) !important;
 }

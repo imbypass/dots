@@ -15,21 +15,23 @@ window {
 }
 
 tooltip {
-    color: @base06;
-    background: @base00;
-    border: 1px solid @base02;
+    background-color: @base01;
     border-radius: 8px;
+    border: 1px solid @base02;
+    color: @base04;
+    padding: 8px;
 }
 
 menu {
-    /* background: transparent; */
-    background-color: @base02;
+    background: none;
+    background-color: @base01;
     border-radius: 12px;
-    border: 1px solid @base00;
+    border: 1px solid @base02;
     color: @base05;
     padding: 8px;
 }
 menuitem {
+    background: none;
     border-radius: 8px;
     padding: 7px;
     padding-left: 2px;
@@ -37,7 +39,7 @@ menuitem {
     font-size: 8px;
 }
 menuitem:hover {
-    background: @base01;
+    background: @base02;
     color: @base05;
 }
 
@@ -200,12 +202,12 @@ menuitem:hover {
 
 /* ===[ APPLICATIONS ICON ]=== */
 #custom-logo {
-    font-size: 38px;
+    font-size: 36px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url("/home/bypass/.local/share/harmony/logo.svg");
-    margin: -2px -1px -5px 16px;
+    margin: -2px 4px -3px 12px;
 }
 
 /* ===[ USER MENU ]=== */
@@ -230,7 +232,7 @@ menuitem:hover {
 /* ===[ GLORIOUS MODEL O- INDICATOR ]=== */
 #custom-glorious {
     font-size: 12px;
-    margin-left: 6px;
+    margin-left: 4px;
     color: white;
 }
 

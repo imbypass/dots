@@ -22,7 +22,7 @@
           "orientation": "horizontal",
           "position": "end"
         },
-        "h_align": "start",
+        "h_align": "center",
         "v_align": "end",
         "margins": {
           "bottom": 46,

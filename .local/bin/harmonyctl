@@ -372,8 +372,10 @@ search_fonts() {
 
 remove_orphans() {
   printf "${BOLD}${BLUE}:: ${RESET}Removing orphaned packages..\n"
-  # pacman -Qdtq | sudo pacman -Rns - > /dev/null
   sudo pacman -Rns $(pacman -Qdtq) --noconfirm >/dev/null
+
+  printf "${BOLD}${BLUE}:: ${RESET}Clearing package cache..\n"
+  yes | paru -Sc --noconfirm > /dev/null
 }
 show_expose() {
   printf "${BOLD}${BLUE}:: ${RESET}Showing desktop expose..\n"

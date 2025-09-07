@@ -12,8 +12,8 @@
   "reload_style_on_change": true,
 
   // ==========[ ENABLED WAYBAR MODULES ]=========== //
-  "modules-left": ["custom/logo", "hyprland/workspaces"],
-  "modules-center": ["custom/pacman", "wlr/taskbar"],
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["custom/logo", "custom/pacman", "wlr/taskbar"],
   "modules-right": [
     "group/systray",
     "network",
@@ -32,6 +32,7 @@
     },
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "on-click-right": "harmonyctl expose",
   },
   "wlr/taskbar": {
     "format": "{icon}",
@@ -73,8 +74,8 @@
     "tooltip-format-ethernet": "    Ethernet",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
-    "on-click": "GTK_THEME=FOURdotZERO nmgui",
-    "on-click-right": "GTK_THEME=FOURdotZERO nmgui",
+    "on-click": "nm-connection-editor",
+    "on-click-right": "nm-connection-editor",
   },
   "bluetooth": {
     "format": "",
@@ -111,7 +112,7 @@
     "format": "{format_source}",
     "format-source": "",
     "format-source-muted": "󰍭",
-    "tooltip-format": "{desc} ({volume}%)",
+    "tooltip-format": "Yeti Nano ({volume}%)",
     "on-click": "pamixer --default-source -t",
     "on-click-right": "killall pavucontrol && GTK_THEME=FOURdotZERO pavucontrol -t 4 || GTK_THEME=FOURdotZERO pavucontrol -t 4",
     "on-scroll-up": "pamixer --default-source -i 1",
@@ -150,7 +151,6 @@
     "tooltip-format": "Applications",
     "format": "   ",
     "on-click": "walker -m applications",
-    "on-click-right": "harmonyctl expose",
   },
   "custom/power": {
     "tooltip": true,
