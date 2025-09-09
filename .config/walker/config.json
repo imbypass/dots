@@ -33,7 +33,7 @@
       "hide_actions_with_empty_query": true,
       "history": true,
       "name": "applications",
-      "placeholder": "Search..",
+      "placeholder": "Applications",
       "prioritize_new": true,
       "refresh": true,
       "show_generic": true,
@@ -234,7 +234,7 @@
   "plugins": [
     {
       "name": "wallpaper",
-      "placeholder": "Search",
+      "placeholder": "Wallpapers",
       "theme": "base16/wallpaper",
       "switcher_only": false,
       "refresh": true,
@@ -243,7 +243,7 @@
     },
     {
       "name": "themes",
-      "placeholder": "Search",
+      "placeholder": "Color Schemes",
       "theme": "base16/theme",
       "switcher_only": false,
       "refresh": true,
