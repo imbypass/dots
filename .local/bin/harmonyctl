@@ -308,8 +308,9 @@ init_prompt() {
     ;;
   "wp")
     printf "${BOLD}${BLUE}:: ${RESET}Initializing wallpaper daemon..\n"
-	killall yin >/dev/null
-    yin >/dev/null &
+	killall yin >/dev/null &
+    sleep .5 && yin &
+	sleep .5 && yinctl --restore &
     ;;
   esac
 }
@@ -531,6 +532,7 @@ update_mirrors() {
 }
 update_colors() {
   printf "${BOLD}${BLUE}:: ${RESET}Generating colorscheme from wallpaper..\n"
+  /usr/bin/wal -i ~/.local/share/wallpapers/wallpaper.png >/dev/null &
   /usr/bin/flavours generate dark ~/.local/share/wallpapers/wallpaper.png -s match-wallpaper >/dev/null &
   /usr/bin/flavours generate dark ~/.local/share/wallpapers/wallpaper.jpg -s match-wallpaper >/dev/null &
 }
@@ -563,7 +565,11 @@ update_prompt() {
 
 set_wallpaper() {
 	if [[ $1 == *.mp4 ]]; then
-		ffmpeg -i $1 -ss 00:00:01.000 -vframes 1 /home/bypass/.local/share/wallpapers/.wallpaper
+		 ffmpeg -i $1 -ss 00:00:01.000 -vframes 1 /home/bypass/.local/share/wallpapers/tmp.png
+		 mv /home/bypass/.local/share/wallpapers/tmp.png /home/bypass/.local/share/wallpapers/.wallpaper
+		 cp /home/bypass/.local/share/wallpapers/.wallpaper /home/bypass/.local/share/wallpapers/wallpaper.png
+		 cp /home/bypass/.local/share/wallpapers/.wallpaper /home/bypass/.local/share/wallpapers/wallpaper.jpg
+		 rm /home/bypass/.local/share/wallpapers/tmp.png
 	else
 		cp $1 /home/bypass/.local/share/wallpapers/.wallpaper
 	fi

@@ -1,9 +1,10 @@
-/* Hide Send Gift Button */
-button[aria-label="Send a gift"] {
-    display: none;
-}
-
-/* Hide Apps Button */
+/* Hide various chatbar buttons */
+div[aria-label="Send a gift"],
+div[aria-label="Open sticker picker"],
+div[aria-label="Select emoji"],
 button[aria-label="Apps"] {
-    display: none;
+    display: none !important;
+}
+.has-webkit-scrollbar .buttons__74017 {
+    margin-right: -25px !important;
 }

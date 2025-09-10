@@ -7,7 +7,6 @@
         "icons-recolor.theme.css",
         "visual-refresh.theme.css",
         "userpfp.theme.css",
-        "base16-discord.extras.css",
         "base16.extras.css",
         "patches.theme.css",
         "fonts.theme.css",
@@ -828,7 +827,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1757199030546
+        "settingsSyncVersion": 1757465130559
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false

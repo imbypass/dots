@@ -72,6 +72,9 @@ menuitem:hover {
     margin-top: 3px;
 }
 
+#taskbar {
+    margin-left: -2px;
+}
 #taskbar button {
     background: transparent;
     color: @base06;
@@ -207,7 +210,7 @@ menuitem:hover {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url("/home/bypass/.local/share/harmony/logo.svg");
-    margin: -2px -2px -3px 8px; /* top right bottom left */
+    margin: -2px 6px -3px 8px; /* top right bottom left */
 }
 
 /* ===[ USER MENU ]=== */
@@ -241,4 +244,5 @@ menuitem:hover {
     color: @base0B;
     font-size: 18px;
     margin-bottom: 3px;
+    margin-left: 6px;
 }
