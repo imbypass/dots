@@ -13,7 +13,7 @@
 
   // ==========[ ENABLED WAYBAR MODULES ]=========== //
   "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["custom/logo", "custom/pacman", "wlr/taskbar"],
+  "modules-center": ["custom/logo", "wlr/taskbar"],
   "modules-right": [
     "group/systray",
     "network",
@@ -129,11 +129,7 @@
       "click-to-reveal": true,
       "transition-left-to-right": false,
     },
-    "modules": [
-      "custom/tray", 
-      "tray",
-      "custom/glorious",
-    ],
+    "modules": ["custom/tray", "tray", "custom/glorious"],
   },
 
   "tray": {

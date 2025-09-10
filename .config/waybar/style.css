@@ -3,7 +3,6 @@
 * {
     transition: all 0.3s ease;
     font-size: 13px;
-    font-weight: 700;
     font-family: "SF Pro Rounded";
 }
 
@@ -237,12 +236,4 @@ menuitem:hover {
     font-size: 12px;
     margin-left: 4px;
     color: white;
-}
-
-/* ===[ PACMAN UPDATE COUNTER ]=== */
-#custom-pacman {
-    color: @base0B;
-    font-size: 18px;
-    margin-bottom: 3px;
-    margin-left: 6px;
 }
