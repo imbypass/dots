@@ -18,7 +18,6 @@
     "group/systray",
     "network",
     "pulseaudio",
-    "pulseaudio#microphone",
     "battery",
     "clock",
   ],
@@ -130,7 +129,7 @@
       "click-to-reveal": true,
       "transition-left-to-right": false,
     },
-    "modules": ["custom/tray", "tray", "custom/glorious"],
+    "modules": ["custom/tray", "tray", "custom/glorious", "pulseaudio#microphone"],
   },
 
   "tray": {
