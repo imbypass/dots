@@ -1,0 +1,4 @@
+/* Hide any messages from blocked users, instead of showing a message was blocked. */
+div:has(> .contents_c19a55 > .blockedSystemMessage__7a70a) {
+    display:  none;
+}

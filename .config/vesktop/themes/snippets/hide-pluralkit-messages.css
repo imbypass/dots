@@ -1,0 +1,5 @@
+/* Hide any messages from apps/webhooks. Sorry Pluralkit, not sorry. */
+
+div.message__5126c:has(.botTag_c19a55) {
+    display:  none !important;
+}
