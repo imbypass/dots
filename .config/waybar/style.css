@@ -152,7 +152,8 @@ menuitem:hover {
     margin: 3px 0px;
     padding: 15px 6px;
     margin-left: 10px;
-    margin-top: 4px;
+    margin-top: 6px;
+    margin-bottom: 1px;
     border-radius: 16px;
     border: solid 0px @base03;
 }
@@ -185,8 +186,8 @@ menuitem:hover {
 
 /* ===[ CAVA MODULE ]=== */
 #cava {
-    margin-left: 100px;
-    margin-bottom: -8px;
+    margin-left: 20px;
+    margin-bottom: -20px;
     color: @base07;
     transition: all 0.3s ease;
 }
