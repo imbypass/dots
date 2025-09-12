@@ -4,6 +4,7 @@
     transition: all 0.3s ease;
     font-size: 13px;
     font-family: "SF Pro Rounded";
+    font-weight: 700;
 }
 
 window {
@@ -135,8 +136,11 @@ menuitem:hover {
 #pulseaudio:hover {
     color: @base06;
 }
-#pulseaudio.microphone.source-muted,
-#pulseaudio.muted {
+
+#pulseaudio.microphone {
+    color: @base0A;
+}
+#pulseaudio.microphone.source-muted{
     color: @base08;
 }
 
@@ -233,7 +237,7 @@ menuitem:hover {
 
 /* ===[ GLORIOUS MODEL O- INDICATOR ]=== */
 #custom-glorious {
-    font-size: 12px;
+    font-size: 14px;
     margin-left: 4px;
     color: white;
 }

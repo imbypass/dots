@@ -90,9 +90,9 @@
   },
   "pulseaudio": {
     "format": "{icon}",
+    "format-muted": "",
     "tooltip": true,
     "tooltip-format": "{desc} ({volume}%)",
-    "format-muted": "",
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "on-click-right": "killall pavucontrol && GTK_THEME=FOURdotZERO pavucontrol -t 3 || GTK_THEME=FOURdotZERO pavucontrol -t 3",
     "on-scroll-up": "pamixer -i 1",
@@ -112,6 +112,7 @@
     "format": "{format_source}",
     "format-source": "",
     "format-source-muted": "󰍭",
+    "tooltip": true,
     "tooltip-format": "Yeti Nano ({volume}%)",
     "on-click": "pamixer --default-source -t",
     "on-click-right": "killall pavucontrol && GTK_THEME=FOURdotZERO pavucontrol -t 4 || GTK_THEME=FOURdotZERO pavucontrol -t 4",

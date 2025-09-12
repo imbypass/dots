@@ -44,6 +44,7 @@ x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
 x-scheme-handler/trash=org.gnome.Nautilus.desktop;
 image/gif=com.interversehq.qView.desktop;swayimg.desktop;
+text/javascript=micro.desktop;
 
 [Default Applications]
 application/json=dev.zed.Zed.desktop
@@ -100,3 +101,4 @@ x-scheme-handler/web+wootwoot=google-chrome.desktop
 x-scheme-handler/mailspring=Mailspring.desktop
 x-scheme-handler/hydralauncher=hydralauncher.desktop
 application/vnd.microsoft.portable-executable=wine.desktop
+text/javascript=micro.desktop

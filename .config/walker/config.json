@@ -260,9 +260,9 @@
       "show_icon_when_single": true,
       "entries": [
         {
-          "label": "Power Menu",
-          "icon": "boot",
-          "exec": "walker -m power"
+          "label": "Record Screen",
+          "icon": "gpu-screen-recorder",
+          "exec": "walker -m record"
         },
         {
           "label": "Pick Wallpaper",
@@ -275,9 +275,9 @@
           "exec": "walker -n -m themes"
         },
         {
-          "label": "Record Screen",
-          "icon": "gpu-screen-recorder",
-          "exec": "walker -m record"
+          "label": "Power Menu",
+          "icon": "boot",
+          "exec": "walker -m power"
         }
       ]
     },

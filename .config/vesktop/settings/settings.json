@@ -412,10 +412,11 @@
             "enabled": false
         },
         "QuickMention": {
-            "enabled": false
+            "enabled": true
         },
         "QuickReply": {
-            "enabled": false
+            "enabled": true,
+            "shouldMention": 2
         },
         "ReactErrorDecoder": {
             "enabled": false
@@ -827,7 +828,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1757465130559
+        "settingsSyncVersion": 1757637791703
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false

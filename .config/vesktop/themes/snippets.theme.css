@@ -17,7 +17,8 @@
 @import url(./snippets/custom-is-typing.css);
 @import url(./snippets/disable-vc-animations.css);
 @import url(./snippets/fix-usrbg.css);
-/* @import url(./snippets/hide-blocked-messages.css); */
+@import url(./snippets/hide-blocked-messages.css);
+@import url(./snippets/hide-pluralkit-messages.css);
 @import url(./snippets/hide-discover.css);
 @import url(./snippets/hide-social-links.css);
 @import url(./snippets/swap-clantag-roleicon.css);
