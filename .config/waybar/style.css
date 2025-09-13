@@ -93,8 +93,9 @@ menuitem:hover {
 /* ===[ BATTERY ]=== */
 #battery {
     font-size: 13px;
-    margin-right: 20px;
-    margin-left: 10px;
+    margin-right: 10px;
+    margin-left: 8px;
+    margin-bottom: 0;
 }
 
 /* ===[ NETWORK ]=== */
@@ -131,6 +132,7 @@ menuitem:hover {
     font-size: 13.75px;
     border: none;
     margin-right: 10px;
+    margin-left: 8px;
     margin-bottom: 0;
 }
 #pulseaudio:hover {
@@ -142,7 +144,7 @@ menuitem:hover {
     margin-right: 4px;
     margin-left: 1px;
 }
-#pulseaudio.microphone.source-muted{
+#pulseaudio.microphone.source-muted {
     color: @base08;
 }
 

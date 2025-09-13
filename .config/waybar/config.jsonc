@@ -12,7 +12,7 @@
   "reload_style_on_change": true,
 
   // ==========[ ENABLED WAYBAR MODULES ]=========== //
-  "modules-left": ["hyprland/workspaces", "cava"],
+  "modules-left": ["hyprland/workspaces"],
   "modules-center": ["custom/logo", "wlr/taskbar"],
   "modules-right": [
     "group/systray",
@@ -129,7 +129,12 @@
       "click-to-reveal": true,
       "transition-left-to-right": false,
     },
-    "modules": ["custom/tray", "tray", "custom/glorious", "pulseaudio#microphone"],
+    "modules": [
+      "custom/tray",
+      "tray",
+      "custom/glorious",
+      "pulseaudio#microphone",
+    ],
   },
 
   "tray": {
