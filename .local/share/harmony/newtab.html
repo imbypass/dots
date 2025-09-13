@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>New Tab</title>
+        <style>
+            :root {
+                --border-radius: 6px;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family:
+                    system-ui,
+                    -apple-system,
+                    BlinkMacSystemFont,
+                    sans-serif;
+                background-color: var(--base00);
+                color: var(--base05);
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                line-height: 1.6;
+            }
+
+            .container {
+                max-width: 800px;
+                width: 90%;
+                text-align: center;
+            }
+
+            .time {
+                font-size: clamp(3rem, 8vw, 6rem);
+                font-weight: 700;
+                color: var(--base05);
+                margin-bottom: 1rem;
+                font-variant-numeric: tabular-nums;
+            }
+
+            .date {
+                font-size: 1.2rem;
+                color: var(--base04);
+                margin-bottom: 3rem;
+                font-weight: 400;
+            }
+
+            .search-container {
+                margin-bottom: 3rem;
+                position: relative;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .search-input {
+                width: 100%;
+                padding: 1rem 1.5rem 1rem 3rem;
+                font-size: 1rem;
+                background-color: var(--base01);
+                border: 1px solid var(--base02);
+                border-radius: var(--border-radius);
+                color: var(--base05);
+                font-family: inherit;
+                outline: none;
+                transition:
+                    border-color 0.2s ease,
+                    box-shadow 0.2s ease;
+            }
+
+            .search-input:focus {
+                border-color: var(--base0D);
+                box-shadow: 0 0 0 3px rgba(124, 175, 194, 0.1);
+            }
+
+            .search-input::placeholder {
+                color: var(--base03);
+            }
+
+            .search-icon {
+                position: absolute;
+                left: 1rem;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 18px;
+                height: 18px;
+                pointer-events: none;
+                opacity: 0.8;
+            }
+
+            .bookmarks {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1rem;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            .bookmark {
+                padding: 1rem;
+                background-color: var(--base01);
+                border: 2px solid var(--base02);
+                border-radius: var(--border-radius);
+                text-decoration: none;
+                color: var(--base05);
+                transition: all 0.2s ease;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .bookmark:hover {
+                background-color: var(--base02);
+                border-color: var(--base0A);
+                transform: translateY(-2px);
+            }
+
+            .bookmark-icon {
+                width: 32px;
+                height: 32px;
+                margin-bottom: 0.75rem;
+                border-radius: 4px;
+            }
+
+            .bookmark-title {
+                font-weight: 500;
+                margin-bottom: 0.25rem;
+                color: var(--base05);
+            }
+
+            .bookmark-url {
+                font-size: 0.75rem;
+                color: var(--base03);
+                opacity: 0.6;
+            }
+
+            @media (max-width: 600px) {
+                .bookmarks {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            #g-logo-blue {
+                fill: var(--base0D);
+            }
+            #g-logo-green {
+                fill: var(--base0B);
+            }
+            #g-logo-yellow {
+                fill: var(--base0A);
+            }
+            #g-logo-red {
+                fill: var(--base08);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="time" id="time"></div>
+            <div class="date" id="date"></div>
+
+            <div class="search-container">
+                <svg
+                    class="search-icon"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                        id="g-logo-blue"
+                    />
+                    <path
+                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                        id="g-logo-green"
+                    />
+                    <path
+                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                        id="g-logo-yellow"
+                    />
+                    <path
+                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                        id="g-logo-red"
+                    />
+                </svg>
+                <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Search Google or type a URL"
+                    id="searchInput"
+                />
+            </div>
+
+            <div class="bookmarks">
+                <a href="https://app.plex.tv/desktop/" class="bookmark">
+                    <img
+                        src="https://app.plex.tv/desktop/favicon.ico"
+                        alt="Plex"
+                        class="bookmark-icon"
+                    />
+                    <div class="bookmark-title">Plex</div>
+                    <div class="bookmark-url">plex.tv</div>
+                </a>
+                <a href="https://youtube.com" class="bookmark">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png"
+                        alt="YouTube"
+                        class="bookmark-icon"
+                    />
+                    <div class="bookmark-title">YouTube</div>
+                    <div class="bookmark-url">youtube.com</div>
+                </a>
+                <a href="https://putlocker.pe/home" class="bookmark">
+                    <img
+                        src="https://img.putlocker.pe/xxrz/100x100/100/06/64/06644b7b20b7dd1b9a6a9c1e9c578bfb/06644b7b20b7dd1b9a6a9c1e9c578bfb.png"
+                        alt="Reddit"
+                        class="bookmark-icon"
+                    />
+                    <div class="bookmark-title">Putlocker</div>
+                    <div class="bookmark-url">putlocker.pe</div>
+                </a>
+                <a href="https://www.amazon.com/Amazon-Video/" class="bookmark">
+                    <img
+                        src="data:image/png;base64,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"
+                        alt="Prime Video"
+                        class="bookmark-icon"
+                    />
+                    <div class="bookmark-title">Amazon Video</div>
+                    <div class="bookmark-url">amazon.com</div>
+                </a>
+                <a href="https://wallhaven.cc/" class="bookmark">
+                    <img
+                        src="https://wallhaven.cc/favicon.ico"
+                        alt="Wallhaven"
+                        class="bookmark-icon"
+                    />
+                    <div class="bookmark-title">Wallhaven</div>
+                    <div class="bookmark-url">wallhaven.cc</div>
+                </a>
+                <a href="https://wallrice.xyz/" class="bookmark">
+                    <img
+                        src="https://wallrice.xyz/favicon.ico"
+                        alt="Wallrice"
+                        class="bookmark-icon"
+                    />
+                    <div class="bookmark-title">Wallrice</div>
+                    <div class="bookmark-url">wallrice.xyz</div>
+                </a>
+            </div>
+        </div>
+
+        <script>
+            // Update time and date
+            function updateTime() {
+                const now = new Date();
+                const timeString = now.toLocaleTimeString([], {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                    hour12: true,
+                });
+                const dateString = now.toLocaleDateString([], {
+                    weekday: "long",
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                });
+
+                document.getElementById("time").textContent = timeString;
+                document.getElementById("date").textContent = dateString;
+            }
+
+            // Search functionality
+            document
+                .getElementById("searchInput")
+                .addEventListener("keypress", function (e) {
+                    if (e.key === "Enter") {
+                        const query = this.value.trim();
+                        if (query) {
+                            // Check if it looks like a URL
+                            if (query.includes(".") && !query.includes(" ")) {
+                                window.location.href = query.startsWith("http")
+                                    ? query
+                                    : "https://" + query;
+                            } else {
+                                // Search with Google
+                                window.location.href =
+                                    "https://www.google.com/search?q=" +
+                                    encodeURIComponent(query);
+                            }
+                        }
+                    }
+                });
+
+            // Focus search on key press
+            document.addEventListener("keydown", function (e) {
+                // Don't interfere with shortcuts or if already focused
+                if (
+                    e.ctrlKey ||
+                    e.metaKey ||
+                    e.altKey ||
+                    document.activeElement.tagName === "INPUT"
+                ) {
+                    return;
+                }
+
+                // Focus search on any printable character
+                if (e.key.length === 1) {
+                    document.getElementById("searchInput").focus();
+                }
+            });
+
+            // Initialize
+            updateTime();
+            setInterval(updateTime, 1000);
+        </script>
+    </body>
+</html>
