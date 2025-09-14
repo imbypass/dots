@@ -121,8 +121,8 @@ menuitem:hover {
 /* ===[ CLOCK ]=== */
 #clock {
     margin-left: 10px;
-    margin-right: 26px;
-    font-size: 12px;
+    margin-right: 20px;
+    font-size: 11px;
     font-weight: 600;
     color: @base05;
 }

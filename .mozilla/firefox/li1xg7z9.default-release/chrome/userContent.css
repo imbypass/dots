@@ -38,12 +38,3 @@ body {
 .search-inner-wrapper {
     margin-top: 10% !important;
 }
-
-#input {
-    background-color: var(--base02) !important;
-    color: var(--base05) !important;
-    border: 1px solid var(--base00) !important;
-}
-input::placeholder {
-    color: var(--base04) !important;
-}
