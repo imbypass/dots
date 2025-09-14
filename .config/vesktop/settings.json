@@ -2,7 +2,7 @@
     "discordBranch": "stable",
     "minimizeToTray": true,
     "arRPC": true,
-    "splashColor": "rgb(224, 224, 224)",
+    "splashColor": "rgb(234, 234, 234)",
     "splashBackground": "rgb(21, 21, 21)",
     "customTitleBar": false,
     "staticTitle": false,

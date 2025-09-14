@@ -1,9 +1,9 @@
 <svg class="svg-logo" width="120" height="120" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-    <title>harmony logo (Biscuit de Sol (Dark) by tsukki9696)</title>
+    <title>harmony logo (Marble Dark by Aylur)</title>
     <defs>
         <linearGradient gradientUnits="userSpaceOnUse" id="s0" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0" stop-color="#4a5a8d" stop-opacity="0.9" />
-            <stop offset="1" stop-color="#9f569a" stop-opacity="0.9" />
+            <stop offset="0" stop-color="#50a4e7" stop-opacity="0.9" />
+            <stop offset="1" stop-color="#9076e7" stop-opacity="0.9" />
         </linearGradient>
     </defs>
     <style>
