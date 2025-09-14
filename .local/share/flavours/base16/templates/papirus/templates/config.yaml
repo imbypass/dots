@@ -1,0 +1,11 @@
+folder-base16:
+  extension: .svg
+  output: colors
+
+folder-base16-activities:
+  extension: .svg
+  output: colors
+
+folder-base16-android:
+  extension: .svg
+  output: colors

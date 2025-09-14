@@ -1,0 +1,10 @@
+.messagelogger-deleted {
+    --deleted-color: var(--base02) !important;
+
+    --text-default: var(--deleted-color) !important;
+    --interactive-normal: var(--deleted-color) !important;
+    --text-muted: var(--deleted-color) !important;
+    --embed-title: var(--deleted-color) !important;
+    --text-link: var(--deleted-color) !important;
+    --header-primary: var(--deleted-color) !important;
+}

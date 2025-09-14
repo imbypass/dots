@@ -513,6 +513,11 @@ change_rounding() {
   # echo "Rounding changed to: $1"
 }
 
+change_colorscheme() {
+    flavours -c ~/.config/flavours/papirus-icons.toml apply $1
+    flavours apply $1
+}
+
 
 
 update_packages() {
@@ -577,7 +582,7 @@ set_wallpaper() {
 	# create visible versions with extensions for other tools
 	cp /home/bypass/.local/share/wallpapers/.wallpaper /home/bypass/.local/share/wallpapers/wallpaper.png
 	cp /home/bypass/.local/share/wallpapers/.wallpaper /home/bypass/.local/share/wallpapers/wallpaper.jpg
-	
+
 	# set wallpaper
 	yinctl --img $1
 
@@ -620,6 +625,12 @@ elif [[ $1 == "tb" ]]; then
   change_titlebars $2 $3
 elif [[ $1 == "rounding" ]]; then
   change_rounding $2
+elif [[ $1 == "colorscheme" ]]; then
+  change_colorscheme $2
+elif [[ $1 == "colors" ]]; then
+  change_colorscheme $2
+elif [[ $1 == "cs" ]]; then
+  change_colorscheme $2
 elif [[ $1 == "reload" ]]; then
   reload_prompt $2
 elif [[ $1 == "rl" ]]; then

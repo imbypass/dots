@@ -171,39 +171,9 @@ file = "~/.local/share/harmony/BASE16"
 template = "mouse-colors"
 rewrite = true
 
-### BONGOCAT BAR PET ###
-# [[items]]
-# file = "~/.config/bongocat/config"
-# template = "bongocat"
-# rewrite = false
-# start = "# start colors"
-# end = "# end colors"
-# hook = "~/.local/bin/harmonyctl reload bongocat"
-
 ### WAYBAR ###
 [[items]]
 file = "~/.config/waybar/base16.css"
 template = "waybar"
 rewrite = true
 hook = "sleep .5 &&  ~/.local/bin/harmonyctl reload waybar"
-
-# ### NWG-MENU ###
-# [[items]]
-# file = "~/.config/nwg-panel/menu-start.css"
-# template = "nwg-menu"
-# rewrite = true
-# hook = "~/.local/bin/harmonyctl reload waybar"
-
-# ### GHOSTTY TERMINAL ###
-# [[items]]
-# file = "~/.config/ghostty/themes/base.conf"
-# template = "ghostty"
-# rewrite = true
-# hook = "~/.local/bin/harmonyctl reload ghostty"
-
-# ### NWG DOCK ###
-# [[items]]
-# file = "~/.config/nwg-dock-hyprland/colors.css"
-# template = "nwg-dock"
-# rewrite = true
-# hook = "~/.local/bin/harmonyctl reload dock"
