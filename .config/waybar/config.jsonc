@@ -12,8 +12,8 @@
   "reload_style_on_change": true,
 
   // ==========[ ENABLED WAYBAR MODULES ]=========== //
-  "modules-left": ["custom/weather_icon", "custom/weather"],
-  "modules-center": ["custom/logo", "wlr/taskbar"],
+  "modules-left": ["custom/weather_icon", "custom/logo"],
+  "modules-center": ["wlr/taskbar"],
   "modules-right": [
     "group/systray",
     "network",

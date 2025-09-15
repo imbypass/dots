@@ -81,11 +81,11 @@
 "ui.window" = { bg = "base01" }
 
 [palette]
-base00 = "#151515" # Default Background
-base01 = "#212121" # Lighter Background (Used for status bars, line number and folding marks)
-base02 = "#2a2a2a" # Selection Background
-base03 = "#373737" # Comments, Invisibles, Line Highlighting
-base04 = "#4f4f4f" # Dark Foreground (Used for status bars)
+base00 = "#151519" # Default Background
+base01 = "#212127" # Lighter Background (Used for status bars, line number and folding marks)
+base02 = "#2a2a31" # Selection Background
+base03 = "#373741" # Comments, Invisibles, Line Highlighting
+base04 = "#4f4f5e" # Dark Foreground (Used for status bars)
 base05 = "#b2b5b3" # Default Foreground, Caret, Delimiters, Operators
 base06 = "#eaeaea" # Light Foreground (Not often used)
 base07 = "#e7e7e7" # Light Background (Not often used)
