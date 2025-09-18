@@ -1,39 +1,8 @@
 {
   "borders": {
-    "enabled": true,
     "color": "#1a1515",
+    "size": 3,
     "gap": 5,
-    "top": {
-      "enabled": true,
-      "height": 10.0
-    },
-    "left": {
-      "enabled": true,
-      "width": 10.0
-    },
-    "right": {
-      "enabled": true,
-      "width": 10.0
-    },
-    "bottom": {
-      "enabled": false,
-      "height": 0.0
-    },
-    "corners": {
-      "enabled": true,
-      "radius": 10,
-      "topleft": {
-        "enabled": true
-      },
-      "topright": {
-        "enabled": true
-      },
-      "bottomleft": {
-        "enabled": true
-      },
-      "bottomright": {
-        "enabled": true
-      }
-    }
+    "radius": 10
   }
 }

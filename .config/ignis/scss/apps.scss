@@ -1,10 +1,30 @@
-.pinned-app {
-    margin: 0 1rem;
-    border-bottom: 0px solid $base04;
+.harmony-icon {
+    font-size: 1.5rem;
+    padding: 0;
+    margin-top: 1rem;
+    margin-bottom: -0.25rem;
+    margin-left: 0.15rem;
+    margin-right: 0rem;
+}
 
-    transition: border-color 0.3s ease;
+.pinned-app {
+    padding: 0.3rem;
+    border-radius: 8px;
+    border: 2px solid $base01;
+    background-color: $base01;
+    transition: border-color 0.1s ease;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
 }
 
 .pinned-app:hover {
-    border-color: $base05;
+    border-color: $base03;
+    background-color: $base02;
+}
+
+.pinned-app.urgent {
+    border-color: $base0A;
+    background-color: $base04;
 }

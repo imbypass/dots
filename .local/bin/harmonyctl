@@ -18,11 +18,14 @@ UNDERLINE='\033[4m'
 RESET='\033[0m'
 
 print_logo() {
-  printf "${BLUE} _   _    _    ____  __  __  ___  _   ___   __
-| | | |  / \  |  _ \|  \/  |/ _ \| \ | \ \ / /
-| |_| | / _ \ | |_) | |\/| | | | |  \| |\ V /
-|  _  |/ ___ \|  _ <| |  | | |_| | |\  | | |
-|_| |_/_/   \_\_| \_\_|  |_|\___/|_| \_| |_|
+
+  printf "
+${BLUE}██╗  ██╗ █████╗ ██████╗ ███╗   ███╗ ██████╗ ███╗   ██╗██╗   ██╗
+██║  ██║██╔══██╗██╔══██╗████╗ ████║██╔═══██╗████╗  ██║╚██╗ ██╔╝
+███████║███████║██████╔╝██╔████╔██║██║   ██║██╔██╗ ██║ ╚████╔╝
+██╔══██║██╔══██║██╔══██╗██║╚██╔╝██║██║   ██║██║╚██╗██║  ╚██╔╝
+██║  ██║██║  ██║██║  ██║██║ ╚═╝ ██║╚██████╔╝██║ ╚████║   ██║
+╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝
 
 ${RESET}"
 }
@@ -252,6 +255,12 @@ reload_prompt() {
     printf "${BOLD}${BLUE}:: ${RESET}Reloading HyprPanel..\n"
     killall -9 gjs >/dev/null
     hyprpanel &
+    disown
+    ;;
+  "ignis")
+    printf "${BOLD}${BLUE}:: ${RESET}Reloading Ignis..\n"
+    killall -9 ignis >/dev/null
+    ignis init &
     disown
     ;;
   "ghostty")
@@ -528,6 +537,7 @@ change_colorscheme() {
 
 
 update_packages() {
+  print_logo
   printf "${BOLD}${BLUE}:: ${RESET}Running system update..\n"
   printf " ${YELLOW}==> ${NC}Checking for official package updates..${RESET}\n"
   sudo pacman -Syu
@@ -535,7 +545,7 @@ update_packages() {
   paru
   printf " ${YELLOW}==> ${NC}Checking for flatpak updates..${RESET}\n"
   flatpak update
-  notify-send -u low -a Hyprland -t 750 "Arch Linux" "System update completed!" -i ~/.local/share/harmony/logo.svg
+  notify-send -u low -a Hyprland -t 750 "Harmony" "System update completed!" -i ~/.local/share/harmony/logo.svg
 }
 update_mirrors() {
   printf "${BOLD}${BLUE}:: ${RESET}Updating mirrors..\n"
@@ -618,6 +628,9 @@ elif [[ $1 == "help" ]]; then
   print_help
 elif [[ $1 == "h" ]]; then
   print_help
+
+elif [[ $1 == "logo" ]]; then
+  print_logo
 
 elif [[ $1 == "aur" ]]; then
   aur_git $2

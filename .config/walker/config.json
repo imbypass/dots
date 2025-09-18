@@ -244,7 +244,7 @@
     {
       "name": "themes",
       "placeholder": "Color Schemes",
-      "theme": "base16/theme",
+      "theme": "base16/default",
       "switcher_only": false,
       "refresh": true,
       "src": "bash -c ~/.local/share/harmony/scripts/walker/themes.sh",

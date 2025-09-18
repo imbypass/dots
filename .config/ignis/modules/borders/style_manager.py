@@ -3,7 +3,7 @@ from watchdog.events import FileModifiedEvent, FileSystemEventHandler
 from watchdog.observers import Observer
 from ignis.gobject import IgnisGObject, IgnisSignal
 from ignis.singleton import IgnisSingleton
-from styling.style import Style
+from .style import Style
 import json
 import threading
 

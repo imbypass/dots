@@ -9,7 +9,6 @@ from ignis.options import options
 class IndicatorIcon(widgets.Icon):
     def __init__(self, css_classes: list[str] = [], **kwargs):
         super().__init__(
-            style="margin-left: -3px; margin-bottom: -2px; margin-right: 4px;",
             pixel_size=13,
             css_classes=["unset"] + css_classes, **kwargs
         )
@@ -50,9 +49,10 @@ class EthernetIcon(NetworkIndicatorIcon):
 class NetworkIndicator(widgets.EventBox):
     def __init__(self):
         super().__init__(
+            css_classes=["indicators"],
             child=[
                 WifiIcon(),
                 EthernetIcon()
             ],
-            on_click=lambda x: asyncio.create_task(utils.exec_sh_async("nm-connection-editor"))
+            on_right_click=lambda x: asyncio.create_task(utils.exec_sh_async("nm-connection-editor"))
         )

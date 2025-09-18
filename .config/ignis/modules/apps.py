@@ -28,7 +28,7 @@ class AppItem(widgets.Button):
         super().__init__(
             child=widgets.Box(
                 child=[
-                    widgets.Icon(image=app.icon, pixel_size=20),
+                    widgets.Icon(image=app.icon, pixel_size=18),
                     menu
                 ]
             ),
@@ -45,3 +45,4 @@ class Apps(widgets.Box):
                 transform=lambda value: [AppItem(app) for app in value]
             )
         )
+        self.set_orientation(1)

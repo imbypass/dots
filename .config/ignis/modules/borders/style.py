@@ -1,7 +1,6 @@
 
 from pydantic import BaseModel
-from styling.borders import Borders
-
+from .styling import Borders
 
 class Style(BaseModel):
     borders: Borders

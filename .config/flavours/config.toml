@@ -49,9 +49,8 @@ rewrite = true
 [[items]]
 file = "~/.config/ignis/style.json"
 template = "ignis-border"
-rewrite = false
-start = "\"enabled\": true,"
-end = "\"gap\": 5,"
+rewrite = true
+hook = "~/.local/bin/harmonyctl reload ignis"
 
 ### NCSPOT ###
 [[items]]
