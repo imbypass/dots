@@ -39,6 +39,20 @@ file = "~/.config/vesktop/settings/quickCss.css"
 template = "vesktop"
 rewrite = true
 
+### IGNIS ###
+[[items]]
+file = "~/.config/ignis/scss/base16.scss"
+template = "ignis"
+rewrite = true
+
+### IGNIS BORDERS ###
+[[items]]
+file = "~/.config/ignis/style.json"
+template = "ignis-border"
+rewrite = false
+start = "\"enabled\": true,"
+end = "\"gap\": 5,"
+
 ### NCSPOT ###
 [[items]]
 file = "~/.config/ncspot/config.toml"

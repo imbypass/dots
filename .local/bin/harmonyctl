@@ -30,6 +30,7 @@ ${RESET}"
 aur_git() {
   git clone --single-branch --branch $1 https://github.com/archlinux/aur.git ~/Documents/aur_packages/$1
   cd ~/Documents/aur_packages/$1
+  makepkg -si
 }
 
 
@@ -215,10 +216,15 @@ reload_prompt() {
     killall -37 nwg-dock-hyprland >/dev/null
     ;;
   "waybar")
-    printf "${BOLD}${BLUE}:: ${RESET}Reloading waybar (full)..\n"
-    killall -9 waybar >/dev/null
-    waybar &
-    disown
+    if [ "$2" = "full" ]; then
+        printf "${BOLD}${BLUE}:: ${RESET}Reloading waybar (full)..\n"
+        killall -9 waybar >/dev/null
+        waybar &
+        disown
+    else
+        printf "${BOLD}${BLUE}:: ${RESET}Reloading waybar (partial)..\n"
+        killall -USR2 waybar >/dev/null
+    fi
     ;;
   "walker")
     printf "${BOLD}${BLUE}:: ${RESET}Reloading walker service..\n"
@@ -232,7 +238,7 @@ reload_prompt() {
     ;;
   "mako")
     printf "${BOLD}${BLUE}:: ${RESET}Reloading mako..\n"
-    makoctl reload >/dev/null
+    sleep .5 && makoctl reload >/dev/null
     ;;
   "hypr")
     printf "${BOLD}${BLUE}:: ${RESET}Reloading hyprland..\n"
@@ -271,6 +277,7 @@ reload_prompt() {
     ;;
   "spotify")
     printf "${BOLD}${BLUE}:: ${RESET}Reloading spicetify..\n"
+    killall -9 spotify > /dev/null
     spicetify apply >/dev/null
     ;;
   "pcmanfm")
@@ -542,11 +549,12 @@ update_colors() {
   /usr/bin/flavours generate dark ~/.local/share/wallpapers/wallpaper.jpg -s match-wallpaper >/dev/null &
 }
 update_spotify() {
-  if pgrep -x "spotify" >/dev/null; then
-    reload_prompt "spotify"
-  else
-    spicetify apply >/dev/null
-  fi
+    if pgrep -x "spotify" >/dev/null; then
+        reload_prompt "spotify"
+    else
+        spicetify apply >/dev/null
+    fi
+    killall -9 spotify > /dev/null
 }
 update_prompt() {
   case "$1" in
@@ -584,6 +592,7 @@ set_wallpaper() {
 	cp /home/bypass/.local/share/wallpapers/.wallpaper /home/bypass/.local/share/wallpapers/wallpaper.jpg
 
 	# set wallpaper
+	notify-send -u low -a Hyprland -t 750 "Harmony" "Setting wallpaper.." -i ~/.local/share/harmony/logo.svg
 	yinctl --img $1
 
 	# update dynamic color scheme
@@ -632,10 +641,12 @@ elif [[ $1 == "colors" ]]; then
 elif [[ $1 == "cs" ]]; then
   change_colorscheme $2
 elif [[ $1 == "reload" ]]; then
-  reload_prompt $2
+  reload_prompt $2 $3
 elif [[ $1 == "rl" ]]; then
-  reload_prompt $2
+  reload_prompt $2 $3
 elif [[ $1 == "wp" ]]; then
+  set_wallpaper $2
+elif [[ $1 == "wallpaper" ]]; then
   set_wallpaper $2
 elif [[ $1 == "edit" ]]; then
   edit_prompt $2

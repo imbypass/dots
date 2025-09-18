@@ -142,9 +142,11 @@ menuitem:hover {
 }
 
 #pulseaudio.microphone {
-    color: @base07;
-    margin-right: 4px;
-    margin-left: 1px;
+    color: @base05;
+    margin-right: 1px;
+    margin-left: 0;
+    padding-left: 3px;
+    padding-right: 3px;
 }
 #pulseaudio.microphone.source-muted {
     color: @base08;
@@ -244,8 +246,9 @@ menuitem:hover {
 
 /* ===[ GLORIOUS MODEL O- INDICATOR ]=== */
 #custom-glorious {
-    font-size: 14px;
+    font-size: 12px;
     margin-left: 4px;
+    margin-right: 10px;
     color: white;
 }
 
