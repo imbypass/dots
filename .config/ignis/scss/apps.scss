@@ -1,0 +1,10 @@
+.pinned-app {
+    margin: 0 1rem;
+    border-bottom: 0px solid $base04;
+
+    transition: border-color 0.3s ease;
+}
+
+.pinned-app:hover {
+    border-color: $base05;
+}

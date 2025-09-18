@@ -1,0 +1,44 @@
+popover.menu {
+    background-color: transparent;
+
+    contents {
+        border: 2px solid $base03;
+        color: $base05;
+        padding: 0.35rem;
+        border-radius: 0.8rem;
+
+        modelbutton {
+            transition: 0.3s;
+            border-radius: 0.6rem;
+            padding: 0.55rem 1rem;
+        }
+        modelbutton:hover {
+            background-color: $base03;
+        }
+        separator {
+            background-color: $base03;
+            min-height: 0.1rem;
+            margin: 0.5rem 0;
+        }
+
+        label:disabled {
+            color: $base04;
+        }
+
+        arrow {
+            opacity: 0.3;
+
+            &:hover {
+                background: transparent;
+            }
+
+            &.left {
+                -gtk-icon-source: -gtk-icontheme("go-previous-symbolic");
+            }
+
+            &.right {
+                -gtk-icon-source: -gtk-icontheme("go-next-symbolic");
+            }
+        }
+    }
+}

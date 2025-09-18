@@ -1,0 +1,36 @@
+@import "./scss/base16.scss";
+@import "./scss/apps.scss";
+@import "./scss/borders.scss";
+@import "./scss/launcher.scss";
+@import "./scss/menu.scss";
+
+* {
+    all: unset;
+    font-weight: 600;
+    font-family: "SF Pro Rounded", sans-serif;
+}
+
+.bar {
+    padding: 0.7rem 1.25rem;
+    background-color: $base00;
+    color: $base05;
+}
+
+.clock {
+    font-size: 0.85rem;
+    margin-right: 0.5rem;
+}
+
+tooltip {
+    background: $base00;
+    border: 2px solid $base02;
+    color: $base06;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.harmony-icon {
+    margin-bottom: -2px;
+    margin-left: 0;
+}
