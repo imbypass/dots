@@ -19,7 +19,7 @@ from ignis.window_manager import WindowManager
 
 from modules.apps import Apps
 from modules.battery import Battery
-from modules.borders.borders import Borders
+from modules.borders import Borders
 from modules.launcher import Launcher
 from modules.network import NetworkIndicator
 
