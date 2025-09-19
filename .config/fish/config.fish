@@ -5,6 +5,8 @@ if status is-interactive
     set fish_tmux_autostart true
     set fish_tmux_autoname_session true
     fetch
+    echo ""
+    colors
 end
 
 # Tab to complete a line

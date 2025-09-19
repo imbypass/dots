@@ -267,7 +267,7 @@
         {
           "label": "Pick Wallpaper",
           "icon": "livewallpaper",
-          "exec": "walker -n -m wallpaper"
+          "exec": "xdg-open ~/.local/share/wallpapers/"
         },
         {
           "label": "Color Scheme",
