@@ -1,27 +1,27 @@
 /* start colors */
 /*
 *
-* Base16 Biscuit de Mar (Dark)
-* Author: tsukki9696
+* Base16 Marble Dark
+* Author: Aylur
 *
 */
 
-@define-color base00 #1a1515;
-@define-color base01 #2d2424;
-@define-color base02 #453636;
-@define-color base03 #725a5a;
-@define-color base04 #9c8181;
-@define-color base05 #dcc9bc;
-@define-color base06 #ffe9c7;
-@define-color base07 #faeedc;
-@define-color base08 #cf223e;
-@define-color base09 #f07342;
-@define-color base0A #e39c45;
-@define-color base0B #959a6b;
-@define-color base0C #768f80;
-@define-color base0D #614f76;
-@define-color base0E #7b3d79;
-@define-color base0F #ae3f82;
+@define-color base00 #0f0f0f;
+@define-color base01 #1d1d1d;
+@define-color base02 #212121;
+@define-color base03 #3a3a3a;
+@define-color base04 #4f4f4f;
+@define-color base05 #b2b5b3;
+@define-color base06 #eaeaea;
+@define-color base07 #e7e7e7;
+@define-color base08 #ff5454;
+@define-color base09 #ff985a;
+@define-color base0A #f6c177;
+@define-color base0B #6bc174;
+@define-color base0C #9ccfd8;
+@define-color base0D #70abff;
+@define-color base0E #ff72ff;
+@define-color base0F #c175ff;
 /* end colors */
 
 @define-color surface-strongest @base00;

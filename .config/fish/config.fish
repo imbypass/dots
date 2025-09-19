@@ -4,6 +4,7 @@ pyenv init - fish | source
 if status is-interactive
     set fish_tmux_autostart true
     set fish_tmux_autoname_session true
+    fetch
 end
 
 # Tab to complete a line

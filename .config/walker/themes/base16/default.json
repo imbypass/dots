@@ -70,9 +70,9 @@
               "top": 8
             },
             "max_height": 308,
-            "max_width": 350,
-            "min_width": 350,
-            "width": 350,
+            "max_width": 250,
+            "min_width": 250,
+            "width": 250,
             "height": 120,
             "marker_color": "#FFFFFF"
           }
@@ -103,7 +103,7 @@
             "hide": true
           }
         },
-        "width": 450
+        "width": 400
       },
       "h_align": "fill",
       "v_align": "fill"

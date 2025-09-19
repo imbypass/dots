@@ -253,7 +253,7 @@
     {
       "name": "mainmenu",
       "placeholder": "Search",
-      "theme": "base16/power",
+      "theme": "base16/default",
       "switcher_only": true,
       "keep_sort": true,
       "recalculate_score": true,
@@ -283,7 +283,7 @@
     },
     {
       "name": "record",
-      "theme": "base16/power",
+      "theme": "base16/default",
       "switcher_only": true,
       "keep_sort": true,
       "recalculate_score": true,
@@ -303,9 +303,10 @@
     },
     {
       "name": "power",
-      "theme": "base16/power",
+      "theme": "base16/default",
       "switcher_only": true,
       "keep_sort": true,
+      "search": false,
       "recalculate_score": true,
       "show_icon_when_single": true,
       "entries": [

@@ -16,6 +16,7 @@ from ignis.services.hyprland import HyprlandService, HyprlandWorkspace
 from ignis.services.mpris import MprisService, MprisPlayer
 from ignis.services.network import NetworkService
 from ignis.window_manager import WindowManager
+from ignis.services.upower import UPowerService
 
 from modules.apps import Apps
 from modules.battery import Battery
@@ -30,6 +31,7 @@ hyprland = HyprlandService.get_default()
 mpris = MprisService.get_default()
 network = NetworkService.get_default()
 window_manager = WindowManager.get_default()
+upower = UPowerService.get_default()
 
 css_manager.apply_css(
     CssInfoPath(
@@ -54,10 +56,10 @@ def harmony_icon() -> widgets.Button:
     return widgets.Button(
         child=widgets.Icon(
             image="/home/bypass/.local/share/harmony/logo.svg",
-            pixel_size=24,
+            pixel_size=26,
             css_classes=["harmony-icon"],
         ),
-        on_click=lambda x: window_manager.toggle_window("ignis_LAUNCHER"),
+        on_click=lambda x: create_exec_task("walker"),
         on_right_click=lambda x: create_exec_task("~/.local/bin/harmonyctl expose"),
     )
 
@@ -78,14 +80,33 @@ def clock() -> widgets.EventBox:
     return clock_box
 
 
+def power_icon() -> widgets.Box:
+    return widgets.EventBox(
+        css_classes=["indicators", "indicators-power"],
+        on_click=lambda x: create_exec_task("walker -m mainmenu"),
+        tooltip_text="Power Menu",
+        child=[
+            widgets.Label(
+                css_classes=["indicators-power"],
+                label='',
+                use_markup=False,
+                justify='left',
+                wrap=True,
+                wrap_mode='word',
+                ellipsize='end',
+                max_width_chars=1
+            )
+        ]
+    )
+
 def speaker_volume() -> widgets.Box:
     return widgets.EventBox(
-        css_classes=["indicators"],
+        css_classes=["indicators", "indicators-speaker"],
         on_scroll_up=lambda x: scroll_volume("up"),
         on_scroll_down=lambda x: scroll_volume("down"),
         on_click=lambda x: create_exec_task("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),
         on_right_click=lambda x: create_exec_task("GTK_THEME=FOURdotZERO pavucontrol"),
-        tooltip_text=audio.speaker.bind("volume", transform=lambda value: str(value)),
+        tooltip_text=audio.speaker.bind("volume", transform=lambda value: "Volume: " + str(value) + "%"),
         child=[
             widgets.Icon(
                 image=audio.speaker.bind("icon_name"),
@@ -96,12 +117,12 @@ def speaker_volume() -> widgets.Box:
 
 def microphone_volume() -> widgets.Box:
     return widgets.EventBox(
-        css_classes=["indicators"],
+        css_classes=["indicators", "indicators-microphone"],
         on_scroll_up=lambda x: scroll_volume("up"),
         on_scroll_down=lambda x: scroll_volume("down"),
         on_click=lambda x: create_exec_task("pamixer --default-source -t"),
         on_right_click=lambda x: create_exec_task("GTK_THEME=FOURdotZERO pavucontrol -t 4"),
-        tooltip_text=audio.microphone.bind("volume", transform=lambda value: str(value)),
+        tooltip_text=audio.microphone.bind("volume", transform=lambda value: "Mic Gain: " + str(value) + "%"),
         child=[
             widgets.Icon(
                 image=audio.microphone.bind("icon_name"),
@@ -149,7 +170,7 @@ def left() -> widgets.Box:
     left = widgets.Box(
         child=[
             harmony_icon(),
-            Apps(),
+            # Apps(),
         ],
         spacing=10
     )
@@ -174,6 +195,7 @@ def right() -> widgets.Box:
             NetworkIndicator(),
             Battery(),
             clock(),
+            power_icon(),
         ],
         spacing=10,
     )

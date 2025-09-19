@@ -206,8 +206,7 @@ reload_prompt() {
   "bongocat")
     printf "${BOLD}${BLUE}:: ${RESET}Reloading bongocat..\n"
     killall -9 bongocat >/dev/null
-    ~/.local/bin/bongocat &
-    disown
+    ~/.local/bin/bongocat & disown
     reload_prompt "waybar"
     ;;
   "dock")
@@ -232,19 +231,18 @@ reload_prompt() {
   "walker")
     printf "${BOLD}${BLUE}:: ${RESET}Reloading walker service..\n"
     killall -9 walker >/dev/null
-    walker --gapplication-service &
-    disown
+    walker --gapplication-service & disown
     ;;
   "nautilus")
-    nautilus -q && nautilus &
-    disown
+    printf "${BOLD}${BLUE}:: ${RESET}Reloading Nautilus..\n"
+    nautilus -q & disown
     ;;
   "mako")
     printf "${BOLD}${BLUE}:: ${RESET}Reloading mako..\n"
     sleep .5 && makoctl reload >/dev/null
     ;;
   "hypr")
-    printf "${BOLD}${BLUE}:: ${RESET}Reloading hyprland..\n"
+    printf "${BOLD}${BLUE}:: ${RESET}Reloading Hyprland..\n"
     hyprctl reload >/dev/null
     ;;
   "swaync")
@@ -254,14 +252,12 @@ reload_prompt() {
   "hyprpanel")
     printf "${BOLD}${BLUE}:: ${RESET}Reloading HyprPanel..\n"
     killall -9 gjs >/dev/null
-    hyprpanel &
-    disown
+    hyprpanel & disown
     ;;
   "ignis")
     printf "${BOLD}${BLUE}:: ${RESET}Reloading Ignis..\n"
     killall -9 ignis >/dev/null
-    ignis init &
-    disown
+    ignis init & disown
     ;;
   "ghostty")
     printf "${BOLD}${BLUE}:: ${RESET}Reloading Ghostty..\n"
@@ -269,14 +265,12 @@ reload_prompt() {
     ghostty \
       --gtk-single-instance=true \
       --quit-after-last-window-closed=false \
-      --initial-window=false &
-    disown
+      --initial-window=false & disown
     ;;
   "mconnect")
     printf "${BOLD}${BLUE}:: ${RESET}Reloading mconnect..\n"
     killall -9 mconnect >/dev/null
-    mconnect -d &
-    disown
+    mconnect -d & disown
     ;;
   "gtk")
     printf "${BOLD}${BLUE}:: ${RESET}Reloading gtk..\n"
@@ -292,8 +286,7 @@ reload_prompt() {
   "pcmanfm")
     printf "${BOLD}${BLUE}:: ${RESET}Reloading pcmanfm..\n"
     killall -9 pcmanfm-qt >/dev/null
-    pcmanfm-qt --desktop &
-    disown
+    pcmanfm-qt --desktop & disown
     ;;
   "steam")
     printf "${BOLD}${BLUE}:: ${RESET}Reloading Steam..\n"
@@ -338,27 +331,23 @@ popout_prompt() {
   "a")
     walker -m applications
     ;;
-
   "theme")
     walker -m themes
     ;;
   "t")
     walker -m themes
     ;;
-
   "wall")
     walker -n -m wallpaper
     ;;
   "w")
     walker -n -m wallpaper
     ;;
-
   "")
     printf "ok"
     ;;
   esac
 }
-
 
 
 file_upload() {
@@ -427,7 +416,6 @@ take_screenshot() {
 }
 
 
-
 toggle_blur() {
   printf "${BOLD}${BLUE}:: ${RESET}Toggling blur..\n"
   HYPRBLUR=$(hyprctl getoption decoration:blur:enabled | awk 'NR==1{print $2}')
@@ -479,7 +467,6 @@ toggle_gnome_buttons() {
     gsettings set org.gnome.desktop.wm.preferences button-layout ":"
   fi
 }
-
 
 
 change_titlebars() {

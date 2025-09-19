@@ -25,7 +25,8 @@ slider,
 
 #window {
     color: @base05;
-    margin-right: 15em;
+    margin-left: 49px;
+    margin-bottom: 8px;
 }
 
 #box {

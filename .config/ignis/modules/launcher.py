@@ -139,7 +139,7 @@ class Launcher(widgets.Window):
         )
         self._entry = widgets.Entry(
             hexpand=True,
-            placeholder_text="Search Applications",
+            placeholder_text="Applications",
             css_classes=["launcher-search"],
             on_change=self.__search,
             on_accept=self.__on_accept,

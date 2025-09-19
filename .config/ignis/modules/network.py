@@ -22,6 +22,7 @@ class NetworkIndicatorIcon(IndicatorIcon):
         self._other_device_type = other_device_type
 
         super().__init__(icon_name=device_type.bind("icon-name"))
+        self.css_classes=["indicators-network"]
 
         for binding in (
             device_type.bind("devices", self.__check_visibility),

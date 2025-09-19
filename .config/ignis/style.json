@@ -1,8 +1,8 @@
 {
   "borders": {
-    "color": "#1a1515",
-    "size": 3,
-    "gap": 5,
-    "radius": 10
+    "color": "#0f0f0f",
+    "size": 2.0,
+    "gap": 5.0,
+    "radius": 10.0
   }
 }

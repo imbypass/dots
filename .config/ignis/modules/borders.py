@@ -36,7 +36,7 @@ class Borders(Window):
         top = style.borders.size + style.borders.gap
         right = style.borders.size + style.borders.gap
         left = style.borders.size + style.borders.gap
-        bottom = style.borders.gap + style.borders.gap - 1
+        bottom = style.borders.gap + style.borders.gap - 3
 
         HyprlandService.get_default().send_command(
             f"keyword general:gaps_out {top},{right},{bottom},{left}")
