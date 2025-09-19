@@ -267,7 +267,7 @@
         {
           "label": "Pick Wallpaper",
           "icon": "livewallpaper",
-          "exec": "xdg-open ~/.local/share/wallpapers/"
+          "exec": "harmonyctl wp $(zenity --file-selection --title='Select Wallpaper')"
         },
         {
           "label": "Color Scheme",

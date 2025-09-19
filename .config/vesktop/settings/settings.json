@@ -252,7 +252,7 @@
             "deleteStyle": "text",
             "ignoreBots": true,
             "ignoreSelf": true,
-            "ignoreUsers": "786906691639050250,673256656733339668",
+            "ignoreUsers": "786906691639050250,673256656733339668,261292198979436544",
             "ignoreChannels": "",
             "ignoreGuilds": "",
             "logEdits": true,
@@ -829,7 +829,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1758239572525
+        "settingsSyncVersion": 1758312985362
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false

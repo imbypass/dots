@@ -1,4 +1,4 @@
-background-color=#0f0f0f
+background-color=#0a0a0a
 border-color=#1d1d1d
 text-color=#eaeaea
 [urgency=low]
@@ -7,7 +7,7 @@ text-color=#b2b5b3
 [urgency=normal]
 border-color=#212121
 [urgency=high]
-background-color=#0f0f0f
+background-color=#0a0a0a
 border-color=#ff5454
 text-color=#ff5454
 default-timeout=0

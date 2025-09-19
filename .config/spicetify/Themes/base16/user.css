@@ -1,6 +1,8 @@
 /* Custom interface font */
-* {
-    font-family: "SF Pro Rounded" !important;
+*,
+html,
+body {
+    font-family: "SF Compact Rounded" !important;
 }
 
 /* Recolor Spotify UI */

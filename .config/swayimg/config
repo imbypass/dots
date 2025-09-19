@@ -36,7 +36,7 @@ app_id = swayimg
 ################################################################################
 [viewer]
 # Window background color (RGBA)
-window = 0f0f0fFF
+window = 0a0a0aFF
 # Background for transparent images (grid/RGBA)
 transparency = grid
 # Default image scale (optimal/fit/width/height/fill/real)

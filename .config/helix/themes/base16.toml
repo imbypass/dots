@@ -81,7 +81,7 @@
 "ui.window" = { bg = "base01" }
 
 [palette]
-base00 = "#0f0f0f" # Default Background
+base00 = "#0a0a0a" # Default Background
 base01 = "#1d1d1d" # Lighter Background (Used for status bars, line number and folding marks)
 base02 = "#212121" # Selection Background
 base03 = "#3a3a3a" # Comments, Invisibles, Line Highlighting

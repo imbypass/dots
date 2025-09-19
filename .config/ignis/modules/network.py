@@ -9,7 +9,7 @@ from ignis.options import options
 class IndicatorIcon(widgets.Icon):
     def __init__(self, css_classes: list[str] = [], **kwargs):
         super().__init__(
-            pixel_size=13,
+            pixel_size=14,
             css_classes=["unset"] + css_classes, **kwargs
         )
 

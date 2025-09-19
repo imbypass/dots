@@ -4,7 +4,7 @@ while themes= read -r theme; do
     name=$(b=${theme##*/}; echo ${b%.*});
 
     if [ "$name" == "$(flavours current)" ]; then
-        name=" > $name < "
+        name=" > $name"
     fi
     name=${name//-/ };
     disp=($name);

@@ -1,9 +1,9 @@
 require('base16-colorscheme').setup({
     -- start colors
 -- Marble Dark scheme by Aylur
-base00 = '#0f0f0f',
+base00 = '#0a0a0a',
 base01 = '#1d1d1d',
-base02 = '#0f0f0f',
+base02 = '#0a0a0a',
 base03 = '#3a3a3a',
 base04 = '#4f4f4f',
 base05 = '#b2b5b3',

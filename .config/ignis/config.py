@@ -110,7 +110,7 @@ def speaker_volume() -> widgets.Box:
         child=[
             widgets.Icon(
                 image=audio.speaker.bind("icon_name"),
-                pixel_size=12,
+                pixel_size=14,
             )
         ]
     )
@@ -126,7 +126,7 @@ def microphone_volume() -> widgets.Box:
         child=[
             widgets.Icon(
                 image=audio.microphone.bind("icon_name"),
-                pixel_size=12,
+                pixel_size=14,
             )
         ]
     )
@@ -143,7 +143,7 @@ def tray_item(item: SystemTrayItem) -> widgets.Button:
     return widgets.Button(
         child=widgets.Box(
             child=[
-                widgets.Icon(image=item.bind("icon"), pixel_size=12),
+                widgets.Icon(image=item.bind("icon"), pixel_size=14),
                 menu,
             ]
         ),
@@ -170,7 +170,7 @@ def left() -> widgets.Box:
     left = widgets.Box(
         child=[
             harmony_icon(),
-            # Apps(),
+            Apps(),
         ],
         spacing=10
     )

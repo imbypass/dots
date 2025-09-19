@@ -22,4 +22,4 @@ ignore-timeout=1
 on-button-left=invoke-default-action
 
 font=Iosevka Nerd Font Propo Medium 11
-font=SF Pro Rounded Semibold 10
+font=SF Compact Rounded Medium 10
