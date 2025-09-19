@@ -14,7 +14,8 @@
         "settings-icons.theme.css",
         "base16.theme.css",
         "snippets.theme.css",
-        "base16-discord.theme.css"
+        "base16-discord.theme.css",
+        "base16-discord.extras.css"
     ],
     "enableReactDevtools": false,
     "frameless": true,
@@ -828,7 +829,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1757772212563
+        "settingsSyncVersion": 1758239572525
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false
