@@ -12,11 +12,11 @@
 :root {
     --font-code-old: "SFMono Nerd Font Mono Semibold";
     --font: "SF Compact Rounded";
-    --font-code: "GeistMono NFP Semibold";
+    --font-code: "Iosevka Nerd Font Propo";
 
-    --font-weight-light: 400;
+    /*--font-weight-light: 400;
     --font-weight-normal: 500;
     --font-weight-medium: 500;
     --font-weight-semibold: 700;
-    --font-weight-bold: 800;
+    --font-weight-bold: 800;*/
 }

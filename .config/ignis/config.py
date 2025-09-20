@@ -74,7 +74,6 @@ def clock() -> widgets.EventBox:
                 ).bind("output"),
             )
        ],
-       on_right_click=lambda x: create_exec_task("walker -m mainmenu"),
     )
     clock_box.set_orientation(1)
     return clock_box
@@ -83,7 +82,7 @@ def clock() -> widgets.EventBox:
 def power_icon() -> widgets.Box:
     return widgets.EventBox(
         css_classes=["indicators", "indicators-power"],
-        on_click=lambda x: create_exec_task("walker -m mainmenu"),
+        on_click=lambda x: create_exec_task("walker -H -m mainmenu"),
         tooltip_text="Power Menu",
         child=[
             widgets.Label(

@@ -262,7 +262,7 @@
         {
           "label": "Record Screen",
           "icon": "gpu-screen-recorder",
-          "exec": "walker -m record"
+          "exec": "walker -H -m record"
         },
         {
           "label": "Pick Wallpaper",
@@ -277,7 +277,7 @@
         {
           "label": "Power Menu",
           "icon": "boot",
-          "exec": "walker -m power"
+          "exec": "walker -H -m power"
         }
       ]
     },

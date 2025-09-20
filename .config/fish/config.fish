@@ -4,7 +4,9 @@ pyenv init - fish | source
 if status is-interactive
     set fish_tmux_autostart true
     set fish_tmux_autoname_session true
-    fetch
+    echo ""
+    harmonyctl logo
+    not_small_enough
     echo ""
     colors
 end
