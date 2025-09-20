@@ -63,7 +63,7 @@ class Borders(Window):
         style = StyleManager.get_default().style
         x = style.borders.size
         y = style.borders.size
-        r = style.borders.radius
+        r = style.borders.size + style.borders.gap
         ctx.arc(x+r, y+r, r, 180*deg_2_rad, 270*deg_2_rad)
 
     def draw_topright_corner(self, widget, ctx, width, height):
@@ -71,7 +71,7 @@ class Borders(Window):
         x = style.borders.size
         y = style.borders.size
         w = width - style.borders.size - x
-        r = style.borders.radius
+        r = style.borders.size + style.borders.gap
         ctx.arc(x+w-r, y+r, r, -90*deg_2_rad, 0*deg_2_rad)
 
     def draw_bottomright_corner(self, widget, ctx, width, height):
@@ -80,7 +80,7 @@ class Borders(Window):
         y = style.borders.size
         w = width - style.borders.size - x
         h = height - style.borders.size - y
-        r = style.borders.radius
+        r = style.borders.size + style.borders.gap
         ctx.arc(x+w-r, y+h-r, r, 0*deg_2_rad, 90*deg_2_rad)
 
     def draw_bottomleft_corner(self, widget, ctx, width, height):
@@ -89,7 +89,7 @@ class Borders(Window):
         y = style.borders.size
         w = width - style.borders.size - x
         h = height - style.borders.size - y
-        r = style.borders.radius
+        r = style.borders.size + style.borders.gap
         ctx.arc(x+r, y+h-r, r, 90*deg_2_rad, 180*deg_2_rad)
 
     def draw_shape(self, widget, ctx: cairo.Context, width, height):

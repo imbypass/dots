@@ -38,7 +38,7 @@ slider,
 }
 
 #search {
-    background: @base02;
+    background: @base01;
     border: 2px solid @base02;
     border-radius: 8px;
     padding: 8px;
