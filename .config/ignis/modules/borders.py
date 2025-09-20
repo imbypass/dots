@@ -7,7 +7,7 @@ import cairo
 pi = 3.14
 deg_2_rad = pi/180
 
-StyleManager.get_default().initialize("/home/bypass/.config/ignis/style.json")
+StyleManager.get_default().initialize("/home/bypass/.config/ignis/config.json")
 
 class Borders(Window):
     def __init__(self):
