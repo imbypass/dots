@@ -1,7 +1,7 @@
 // Zed settings
 {
   "base_keymap": "VSCode",
-  "icon_theme": "Zed (Default)",
+  "icon_theme": "Bearded Icon Theme",
   "agent": {
     "always_allow_tool_actions": true,
     "default_model": {

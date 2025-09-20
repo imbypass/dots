@@ -1,7 +1,6 @@
 from ignis import widgets
 from ignis import utils
 from ignis.services.audio import AudioService
-from ..shared_widgets import MaterialVolumeSlider
 
 audio = AudioService.get_default()
 
@@ -22,7 +21,10 @@ class OSD(widgets.Window):
                         style="margin-right: 0.5rem;",
                         image=audio.speaker.bind("icon_name"),
                     ),
-                    MaterialVolumeSlider(stream=audio.speaker, sensitive=False),
+                    widgets.Label(
+                        label=str(audio.speaker.bind("volume")),
+                        style="margin-right: 0.5rem;",
+                    ),
                 ],
             ),
         )

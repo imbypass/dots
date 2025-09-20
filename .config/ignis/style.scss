@@ -3,12 +3,14 @@
 @import "./scss/apps.scss";
 @import "./scss/launcher.scss";
 @import "./scss/menu.scss";
+@import "./scss/workspaces.scss";
 
 * {
     all: unset;
     font-weight: 600;
     font-family: "SF Pro Rounded", sans-serif;
     transition: color 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 tooltip {

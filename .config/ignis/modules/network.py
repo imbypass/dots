@@ -47,7 +47,7 @@ class EthernetIcon(NetworkIndicatorIcon):
     def __init__(self):
         super().__init__(device_type=network.ethernet, other_device_type=network.wifi)
 
-class NetworkIndicator(widgets.EventBox):
+class Network(widgets.EventBox):
     def __init__(self):
         super().__init__(
             css_classes=["indicators"],

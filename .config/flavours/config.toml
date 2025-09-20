@@ -128,6 +128,12 @@ file = "~/.config/foot/colors.ini"
 template = "foot"
 rewrite = true
 
+### GHOSTTY TERMINAL ###
+[[items]]
+file = "~/.config/ghostty/themes/base.conf"
+template = "ghostty"
+rewrite = true
+
 ### TMUX ###
 [[items]]
 file = "~/.config/tmux/base16.conf"

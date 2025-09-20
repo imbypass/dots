@@ -6,6 +6,15 @@
     /* padding-right: 2px; */
 }
 
+.harmony-icon {
+    font-size: 2rem;
+    padding: 0;
+    margin-top: 1rem;
+    margin-bottom: -0.25rem;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+}
+
 .system-tray {
     margin-bottom: 0.25rem;
     margin-left: 1.2rem;
@@ -26,7 +35,7 @@
     margin-left: 0.57rem;
     font-family: "JetBrainsMono Nerd Font Mono";
     font-size: 22px;
-    color: $base04;
+    color: $base02;
 }
 .indicators-power:hover {
     color: $base08;

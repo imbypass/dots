@@ -22,7 +22,9 @@ from modules.apps import Apps
 from modules.battery import Battery
 from modules.borders import Borders
 from modules.launcher import Launcher
-from modules.network import NetworkIndicator
+from modules.network import Network
+from modules.workspaces import Workspaces
+from modules.osd import OSD
 
 css_manager = CssManager.get_default()
 audio = AudioService.get_default()
@@ -165,33 +167,34 @@ def tray():
     return tray_box
 
 
-def left() -> widgets.Box:
+def left(monitor_name: str) -> widgets.Box:
     left = widgets.Box(
         child=[
             harmony_icon(),
-            Apps(),
+            Workspaces(monitor_name),
         ],
         spacing=10
     )
     left.set_orientation(1)
     return left
 
-def center() -> widgets.Box:
+def center(monitor_name: str) -> widgets.Box:
     center_box = widgets.Box(
         child=[
+            Apps(),
         ],
         spacing=10,
     )
     center_box.set_orientation(1)
     return center_box
 
-def right() -> widgets.Box:
+def right(monitor_name: str) -> widgets.Box:
     right = widgets.Box(
         child=[
             tray(),
             speaker_volume(),
             microphone_volume(),
-            NetworkIndicator(),
+            Network(),
             Battery(),
             clock(),
             power_icon(),
@@ -202,11 +205,12 @@ def right() -> widgets.Box:
     return right
 
 def bar(monitor_id: int = 0) -> widgets.Window:
+    monitor_name = utils.get_monitor(monitor_id).get_connector()  # type: ignore
     widget_box = widgets.CenterBox(
         css_classes=["bar"],
-        start_widget=left(),  # type: ignore
-        center_widget=center(),
-        end_widget=right(),
+        start_widget=left(monitor_name),  # type: ignore
+        center_widget=center(monitor_name),
+        end_widget=right(monitor_name),
     )
     widget_box.set_orientation(1)
     return widgets.Window(
@@ -226,5 +230,6 @@ def bar(monitor_id: int = 0) -> widgets.Window:
 for i in range(utils.get_n_monitors()):
     bar(i)
 
+OSD()
 Launcher()
 Borders()

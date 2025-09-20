@@ -37,7 +37,10 @@ class Borders(Window):
         right = style.borders.size + style.borders.gap
         left = style.borders.size + style.borders.gap
         bottom = style.borders.gap + style.borders.gap - 3
+        radius = style.borders.gap - style.borders.size
 
+        HyprlandService.get_default().send_command(
+            f"keyword decoration:rounding {radius}")
         HyprlandService.get_default().send_command(
             f"keyword general:gaps_out {top},{right},{bottom},{left}")
 
