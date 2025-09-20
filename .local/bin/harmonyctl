@@ -588,8 +588,11 @@ set_wallpaper() {
 	cp /home/bypass/.local/share/wallpapers/.wallpaper /home/bypass/.local/share/wallpapers/wallpaper.jpg
 
 	# set wallpaper
+	yinctl --pause
+	yinctl --color 030305
 	notify-send -u low -a Hyprland -t 750 "Harmony" "Setting wallpaper.." -i ~/.local/share/harmony/logo.svg
 	yinctl --img $1
+	yinctl --play
 
 	# update dynamic color scheme
 	update_colors
