@@ -1,28 +1,4 @@
-// start colors
-/*
-*
-* Base16 Marble Dark
-* Author: Aylur
-*
-*/
-
-$base00: #0a0a0c;
-$base01: #121215;
-$base02: #1f1f21;
-$base03: #363638;
-$base04: #4d4d4f;
-$base05: #b2b5b3;
-$base06: #eaeaea;
-$base07: #e7e7e7;
-$base08: #ff5454;
-$base09: #ff985a;
-$base0A: #f6c177;
-$base0B: #6bc174;
-$base0C: #9ccfd8;
-$base0D: #70abff;
-$base0E: #ff72ff;
-$base0F: #c175ff;
-// end colors
+@import "_base16.scss";
 
 $surface-strongest: $base00;
 $surface-strong: $base01;

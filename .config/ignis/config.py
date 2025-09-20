@@ -67,12 +67,20 @@ def harmony_icon() -> widgets.Button:
 
 def clock() -> widgets.EventBox:
     clock_box = widgets.EventBox(
+        css_classes=["clock"],
         child=[
             widgets.Label(
-                css_classes=["clock"],
+                css_classes=["clock-hours"],
                 justify="center",
                 label=utils.Poll(
-                    1_000, lambda self: datetime.datetime.now().strftime("%I\n%M")
+                    1_000, lambda self: datetime.datetime.now().strftime("%I")
+                ).bind("output"),
+            ),
+            widgets.Label(
+                css_classes=["clock-minutes"],
+                justify="center",
+                label=utils.Poll(
+                    1_000, lambda self: datetime.datetime.now().strftime("%M")
                 ).bind("output"),
             )
        ],

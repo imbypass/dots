@@ -1,0 +1,38 @@
+@import "./base16.scss";
+
+$workspace: $base0D;
+
+.workspaces {
+    border-radius: 1rem;
+    margin-left: 0.85rem;
+    background-color: $base01;
+    padding: 0.35rem;
+    margin-top: 0.5rem;
+    border: 2px solid $base01;
+    transition: 0.3s all ease;
+}
+.workspaces:hover {
+    border-color: $base02;
+}
+.workspace {
+    border-radius: 1rem;
+    padding: 0.25rem;
+    margin: 0.15rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    transition: 0.3s;
+    background-color: $base03;
+    transition: 0.3s all ease;
+}
+
+.workspace:hover {
+    background-color: $base05;
+}
+
+.workspace.active {
+    background-color: $workspace;
+    color: $base00;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    transition: 0.3s all ease;
+}

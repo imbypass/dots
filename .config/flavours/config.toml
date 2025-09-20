@@ -10,11 +10,9 @@ rewrite = true
 
 ### PHOCUS GTK THEME ###
 [[items]]
-file = "~/.themes/phocus/scss/gtk-3.0/_colors.scss"
+file = "~/.themes/phocus/scss/gtk-3.0/_base16.scss"
 template = "phocus"
-rewrite = false
-start = "// start colors"
-end = "// end colors"
+rewrite = true
 hook = "~/.local/bin/harmonyctl reload gtk"
 
 ### GTK 4.0 THEME ###

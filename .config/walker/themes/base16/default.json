@@ -78,6 +78,7 @@
           }
         },
         "search": {
+          "enabled": true,
           "clear": {
             "h_align": "center",
             "icon": "edit-clear",

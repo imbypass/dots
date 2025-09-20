@@ -167,7 +167,7 @@
             "transformCompoundSentence": false
         },
         "FakeProfileThemes": {
-            "enabled": true,
+            "enabled": false,
             "nitroFirst": false
         },
         "FavoriteEmojiFirst": {
@@ -829,7 +829,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1758312985362
+        "settingsSyncVersion": 1758390066529
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false
