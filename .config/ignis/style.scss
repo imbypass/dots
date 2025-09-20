@@ -1,22 +1,10 @@
-@import "./scss/base16.scss";
-@import "./scss/bar.scss";
-@import "./scss/apps.scss";
-@import "./scss/launcher.scss";
-@import "./scss/menu.scss";
-@import "./scss/workspaces.scss";
+@import "scss/base16.scss";
 
-* {
-    all: unset;
-    font-weight: 600;
-    font-family: "SF Pro Rounded", sans-serif;
-    transition: 0.15s all ease-in-out;
-}
+@import "scss/index.scss";
+@import "scss/dialog-menus.scss";
+@import "scss/launcher.scss";
 
-tooltip {
-    background: $base00;
-    border: 2px solid $base02;
-    color: $base06;
-    padding: 0.75rem;
-    border-radius: 0.5rem;
-    font-size: 0.95rem;
-}
+@import "scss/bar/index.scss";
+@import "scss/bar/indicators.scss";
+@import "scss/bar/pinned-apps.scss";
+@import "scss/bar/workspaces.scss";

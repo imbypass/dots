@@ -1,6 +1,4 @@
-@import "./base16.scss";
-
-$workspace: $base0D;
+$workspace: $base0F;
 
 .workspaces {
     border-radius: 1rem;
@@ -26,7 +24,7 @@ $workspace: $base0D;
 }
 
 .workspace:hover {
-    background-color: $base05;
+    background-color: $base06;
 }
 
 .workspace.active {

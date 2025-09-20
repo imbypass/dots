@@ -1,0 +1,20 @@
+.indicators {
+    padding: 0;
+    margin-left: 1.14rem;
+    margin-bottom: 3px;
+    font-weight: 700;
+    color: $base05;
+}
+.indicators:hover {
+    color: $base0E;
+}
+.indicators-power {
+    margin-bottom: 0.5rem;
+    margin-left: 0.57rem;
+    font-family: "JetBrainsMono Nerd Font Mono";
+    font-size: 22px;
+    color: $base02;
+}
+.indicators-power:hover {
+    color: $base08;
+}
