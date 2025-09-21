@@ -36,7 +36,7 @@ class Borders(Window):
         top = style.borders.size + style.borders.gap
         right = style.borders.size + style.borders.gap
         left = style.borders.size + style.borders.gap - 2
-        bottom = style.borders.gap + style.borders.gap
+        bottom = style.borders.gap + style.borders.gap - 3
 
         radius = style.borders.gap - style.borders.size
 
