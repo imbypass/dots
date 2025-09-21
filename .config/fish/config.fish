@@ -6,7 +6,7 @@ if status is-interactive
     set fish_tmux_autoname_session true
     echo ""
     harmonyctl logo
-    not_small_enough
+    greeting
     echo ""
     colors
 end
