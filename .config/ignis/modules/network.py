@@ -55,5 +55,5 @@ class Network(widgets.EventBox):
                 WifiIcon(),
                 EthernetIcon()
             ],
-            on_right_click=lambda x: asyncio.create_task(utils.exec_sh_async("nm-connection-editor"))
+            on_click=lambda x: asyncio.create_task(utils.exec_sh_async("nm-connection-editor"))
         )

@@ -1,0 +1,65 @@
+.notification-popup {
+    font-family: "SF Compact Rounded";
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 0 4px 2px #00000009;
+    border: 2px solid $base02;
+    margin: 0.5rem;
+    min-width: 25rem;
+    font-size: 0.95rem;
+
+    & .notification-summary {
+        font-size: 1.05rem;
+        margin-bottom: 0.2rem;
+        font-weight: 700;
+    }
+
+    & .notification-body {
+        font-size: 0.95rem;
+        font-weight: 400;
+    }
+
+    & .notification-close {
+        background-color: $base01;
+        border-radius: 4px;
+        padding: 0.2rem;
+        &:hover {
+            background-color: $base02;
+        }
+    }
+
+    & .notification-action {
+        padding: 0.5rem;
+        border-radius: 6px;
+        background-color: $base01;
+        &:hover {
+            background-color: $base02;
+        }
+    }
+}
+.notification-popup:hover {
+    opacity: 1;
+}
+.urgency-0 {
+    background-color: $base00;
+    color: $base04;
+}
+.urgency-1 {
+    background-color: $base00;
+    color: $base05;
+}
+.urgency-2 {
+    background-color: $base00;
+    border: 2px solid $base08;
+    color: $base08;
+
+    & .notification-close {
+        color: $base08;
+        background-color: $base00;
+        &:hover {
+            color: $base00;
+            background-color: $base08;
+        }
+    }
+}

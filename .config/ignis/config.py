@@ -23,6 +23,7 @@ from modules.battery import Battery
 from modules.borders import Borders
 from modules.launcher import Launcher
 from modules.network import Network
+from modules.notifications import Notifications
 from modules.workspaces import Workspaces
 from modules.osd import OSD
 
@@ -34,6 +35,7 @@ mpris = MprisService.get_default()
 network = NetworkService.get_default()
 window_manager = WindowManager.get_default()
 upower = UPowerService.get_default()
+
 
 css_manager.apply_css(
     CssInfoPath(
@@ -237,6 +239,10 @@ def bar(monitor_id: int = 0) -> widgets.Window:
 # this will display bar on all monitors
 for i in range(utils.get_n_monitors()):
     bar(i)
+
+
+for monitor in range(utils.get_n_monitors()):
+    Notifications(monitor)
 
 OSD()
 Launcher()

@@ -35,8 +35,8 @@ class Borders(Window):
         style = StyleManager.get_default().style
         top = style.borders.size + style.borders.gap
         right = style.borders.size + style.borders.gap
-        left = style.borders.size + style.borders.gap
-        bottom = style.borders.gap + style.borders.gap - 3
+        left = style.borders.size + style.borders.gap - 4
+        bottom = style.borders.gap + style.borders.gap
         radius = style.borders.gap - style.borders.size
 
         HyprlandService.get_default().send_command(
@@ -64,7 +64,7 @@ class Borders(Window):
 
     def draw_topleft_corner(self, widget, ctx, width, height):
         style = StyleManager.get_default().style
-        x = style.borders.size
+        x = 2
         y = style.borders.size
         r = style.borders.size + style.borders.gap
         ctx.arc(x+r, y+r, r, 180*deg_2_rad, 270*deg_2_rad)
@@ -88,7 +88,7 @@ class Borders(Window):
 
     def draw_bottomleft_corner(self, widget, ctx, width, height):
         style = StyleManager.get_default().style
-        x = style.borders.size
+        x = 2
         y = style.borders.size
         w = width - style.borders.size - x
         h = height - style.borders.size - y
