@@ -60,11 +60,30 @@ def harmony_icon() -> widgets.Button:
     return widgets.Button(
         child=widgets.Icon(
             image="/home/bypass/.local/share/harmony/logo.svg",
-            pixel_size=26,
+            pixel_size=30,
             css_classes=["harmony-icon"],
         ),
         on_click=lambda x: create_exec_task("walker"),
         on_right_click=lambda x: create_exec_task("~/.local/bin/harmonyctl expose"),
+    )
+
+def power_icon() -> widgets.Box:
+    return widgets.EventBox(
+        css_classes=["indicators", "indicators-power"],
+        on_click=lambda x: create_exec_task("walker -H -m mainmenu"),
+        tooltip_text="Power Menu",
+        child=[
+            widgets.Label(
+                css_classes=["indicators-power"],
+                label='',
+                use_markup=False,
+                justify='left',
+                wrap=True,
+                wrap_mode='word',
+                ellipsize='end',
+                max_width_chars=1
+            )
+        ]
     )
 
 def clock() -> widgets.EventBox:
@@ -89,26 +108,6 @@ def clock() -> widgets.EventBox:
     )
     clock_box.set_orientation(1)
     return clock_box
-
-
-def power_icon() -> widgets.Box:
-    return widgets.EventBox(
-        css_classes=["indicators", "indicators-power"],
-        on_click=lambda x: create_exec_task("walker -H -m mainmenu"),
-        tooltip_text="Power Menu",
-        child=[
-            widgets.Label(
-                css_classes=["indicators-power"],
-                label='',
-                use_markup=False,
-                justify='left',
-                wrap=True,
-                wrap_mode='word',
-                ellipsize='end',
-                max_width_chars=1
-            )
-        ]
-    )
 
 def speaker_volume() -> widgets.Box:
     return widgets.EventBox(
