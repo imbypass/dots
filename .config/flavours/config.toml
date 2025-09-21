@@ -45,7 +45,7 @@ rewrite = true
 
 ### IGNIS BORDERS ###
 [[items]]
-file = "~/.config/ignis/style.json"
+file = "~/.config/ignis/config.json"
 template = "ignis-border"
 rewrite = true
 hook = "~/.local/bin/harmonyctl reload ignis"

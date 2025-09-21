@@ -1,16 +1,10 @@
 from ignis import widgets
 from ignis import utils
 from ignis.services.notifications import Notification, NotificationService
-from .notification.widget import NotificationWidget
+from .notification.layout import NotificationWidget
 
 
 notifications = NotificationService.get_default()
-
-
-class NotificationUrgency(int):
-    LOW = 0
-    NORMAL = 1
-    CRITICAL = 2
 
 class Popup(widgets.Box):
     def __init__(
@@ -77,5 +71,5 @@ class Notifications(widgets.Window):
             visible=False,
             dynamic_input_region=True,
             css_classes=["rec-unset"],
-            style="min-width: 29rem;margin-right: 10px;margin-top: 10px;",
+            style="min-width: 29rem;margin-right: 10px;margin-bottom: 10px;",
         )

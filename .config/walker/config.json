@@ -267,7 +267,7 @@
         {
           "label": "Pick Wallpaper",
           "icon": "livewallpaper",
-          "exec": "harmonyctl wp $(zenity --file-selection --title='Select Wallpaper')"
+          "exec": "walker -m wallpaper"
         },
         {
           "label": "Color Scheme",

@@ -35,8 +35,9 @@ class Borders(Window):
         style = StyleManager.get_default().style
         top = style.borders.size + style.borders.gap
         right = style.borders.size + style.borders.gap
-        left = style.borders.size + style.borders.gap - 4
+        left = style.borders.size + style.borders.gap - 2
         bottom = style.borders.gap + style.borders.gap
+
         radius = style.borders.gap - style.borders.size
 
         HyprlandService.get_default().send_command(

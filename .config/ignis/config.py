@@ -116,7 +116,7 @@ def speaker_volume() -> widgets.Box:
         on_scroll_up=lambda x: scroll_volume("up"),
         on_scroll_down=lambda x: scroll_volume("down"),
         on_click=lambda x: create_exec_task("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),
-        on_right_click=lambda x: create_exec_task("GTK_THEME=FOURdotZERO pavucontrol"),
+        on_right_click=lambda x: create_exec_task("GTK_THEME=FOURdotZERO pavucontrol -t 3"),
         tooltip_text=audio.speaker.bind("volume", transform=lambda value: "Volume: " + str(value) + "%"),
         child=[
             widgets.Icon(

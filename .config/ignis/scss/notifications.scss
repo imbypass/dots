@@ -3,7 +3,7 @@
     font-weight: 500;
     border-radius: 10px;
     padding: 1rem;
-    box-shadow: 0 0 4px 2px #00000009;
+    box-shadow: 0 0 6px #000000ff;
     border: 2px solid $base02;
     margin: 0.5rem;
     min-width: 25rem;
@@ -17,11 +17,12 @@
 
     & .notification-body {
         font-size: 0.95rem;
-        font-weight: 400;
+        font-weight: 500;
     }
 
     & .notification-close {
         background-color: $base01;
+        color: $base04;
         border-radius: 4px;
         padding: 0.2rem;
         &:hover {

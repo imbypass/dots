@@ -17,10 +17,12 @@ BOLD='\033[1m'
 UNDERLINE='\033[4m'
 RESET='\033[0m'
 
+ACCENT=$BLUE
+
 print_logo() {
 
   printf "
-${BLUE}██╗  ██╗ █████╗ ██████╗ ███╗   ███╗ ██████╗ ███╗   ██╗██╗   ██╗
+${ACCENT}██╗  ██╗ █████╗ ██████╗ ███╗   ███╗ ██████╗ ███╗   ██╗██╗   ██╗
 ██║  ██║██╔══██╗██╔══██╗████╗ ████║██╔═══██╗████╗  ██║╚██╗ ██╔╝
 ███████║███████║██████╔╝██╔████╔██║██║   ██║██╔██╗ ██║ ╚████╔╝
 ██╔══██║██╔══██║██╔══██╗██║╚██╔╝██║██║   ██║██║╚██╗██║  ╚██╔╝
@@ -41,24 +43,24 @@ print_help() {
   # print_logo
   printf "usage: harmonyctl <command> [args...|--help]\n\n"
   printf "commands:\n"
-  printf "  ${BLUE}clean\t\t ${RESET}->\tRemove orphaned packages from the system.\n"
-  printf "  ${BLUE}dock\t\t ${RESET}->\tToggle the visibility of the application dock.\n"
-  printf "  ${BLUE}edit <value>\t ${RESET}->\tEdit parts of HARMONY.\n"
-  printf "  ${BLUE}expose\t ${RESET}->\tDisplay the desktop expose.\n"
-  printf "  ${BLUE}float\t\t ${RESET}->\tToggle floating window mode for HARMONY.\n"
-  printf "  ${BLUE}fonts\t\t ${RESET}->\tPrint all installed fonts.\n"
-  printf "  ${BLUE}gamemode\t ${RESET}->\tToggle game mode for HARMONY.\n"
-  printf "  ${BLUE}help\t\t ${RESET}->\tDisplay this help prompt.\n"
-  printf "  ${BLUE}list <value>\t ${RESET}->\tList available edit/reload values for HARMONY.\n"
-  printf "  ${BLUE}mirrors\t ${RESET}->\tUpdate Arch repository mirror list using REFLECTOR.\n"
-  printf "  ${BLUE}ram\t\t ${RESET}->\tForcibly frees cached RAM.\n"
-  printf "  ${BLUE}reload <value> ${RESET}->\tReload parts of HARMONY's interface.\n"
-  printf "  ${BLUE}upload\t ${RESET}->\tUpload the clipboard to 0x0.st and copy the result.\n"
-  printf "  ${BLUE}version\t ${RESET}->\tDisplay the current version of HARMONY\n"
+  printf "  ${ACCENT}clean\t\t ${RESET}->\tRemove orphaned packages from the system.\n"
+  printf "  ${ACCENT}dock\t\t ${RESET}->\tToggle the visibility of the application dock.\n"
+  printf "  ${ACCENT}edit <value>\t ${RESET}->\tEdit parts of HARMONY.\n"
+  printf "  ${ACCENT}expose\t ${RESET}->\tDisplay the desktop expose.\n"
+  printf "  ${ACCENT}float\t\t ${RESET}->\tToggle floating window mode for HARMONY.\n"
+  printf "  ${ACCENT}fonts\t\t ${RESET}->\tPrint all installed fonts.\n"
+  printf "  ${ACCENT}gamemode\t ${RESET}->\tToggle game mode for HARMONY.\n"
+  printf "  ${ACCENT}help\t\t ${RESET}->\tDisplay this help prompt.\n"
+  printf "  ${ACCENT}list <value>\t ${RESET}->\tList available edit/reload values for HARMONY.\n"
+  printf "  ${ACCENT}mirrors\t ${RESET}->\tUpdate Arch repository mirror list using REFLECTOR.\n"
+  printf "  ${ACCENT}ram\t\t ${RESET}->\tForcibly frees cached RAM.\n"
+  printf "  ${ACCENT}reload <value> ${RESET}->\tReload parts of HARMONY's interface.\n"
+  printf "  ${ACCENT}upload\t ${RESET}->\tUpload the clipboard to 0x0.st and copy the result.\n"
+  printf "  ${ACCENT}version\t ${RESET}->\tDisplay the current version of HARMONY\n"
 }
 print_version() {
   print_logo
-  printf "${RESET}A Hyprland rice by ${BLUE}@imbypass_\t\t${RESET}${UTIL_VERSION}"
+  printf "${RESET}A Hyprland rice by ${ACCENT}@imbypass_\t\t${RESET}${UTIL_VERSION}"
   printf "\n"
 }
 print_lists() {
@@ -351,7 +353,7 @@ popout_prompt() {
 
 file_upload() {
   wl-paste | up -t $1 | wl-copy
-  notify-send -u normal -a hyprshot -t 750 "0x0.st" "Image uploaded and copied to clipboard." -i ~/.local/share/harmony/logo.svg
+  notify-send -u normal -a hyprshot -t 3500 "0x0.st" "Image uploaded and copied to clipboard." -i ~/.local/share/harmony/logo.svg
 }
 free_cache() {
   printf "${BOLD}${BLUE}:: ${RESET}Freeing cached RAM..\n"
@@ -432,7 +434,7 @@ toggle_dock() {
 }
 toggle_floatwindows() {
   printf "${BOLD}${BLUE}:: ${RESET}Toggling all floating windows..\n"
-  notify-send -u normal -a Hyprland -t 750 "Harmony" "Toggled Window Tiling" -i ~/.local/share/harmony/logo.svg
+  notify-send -u normal -a Hyprland -t 3500 "Harmony" "Toggled Window Tiling" -i ~/.local/share/harmony/logo.svg
   hyprctl dispatch workspaceopt allfloat >/dev/null
 }
 toggle_gamemode() {
@@ -440,7 +442,7 @@ toggle_gamemode() {
   HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
   OS=$(cat /etc/os-release | grep -E '^PRETTY_NAME=' | cut -d'"' -f2 | cut -d'=' -f2)
   if [ "$HYPRGAMEMODE" = 1 ]; then
-    notify-send -u normal -a Hyprland -t 750 "Harmony" "Game Mode Enabled" -i ~/.local/share/harmony/logo.svg
+    notify-send -u normal -a Hyprland -t 3500 "Harmony" "Game Mode Enabled" -i ~/.local/share/harmony/logo.svg
     hyprctl --batch "\
                 keyword animations:enabled 0;\
                 keyword decoration:drop_shadow 0;\
@@ -451,7 +453,7 @@ toggle_gamemode() {
                 keyword decoration:rounding 0" >/dev/null
     exit
   else
-    notify-send -u normal -a Hyprland -t 750 "Harmony" "Game Mode Disabled" -i ~/.local/share/harmony/logo.svg
+    notify-send -u normal -a Hyprland -t 3500 "Harmony" "Game Mode Disabled" -i ~/.local/share/harmony/logo.svg
   fi
   hyprctl reload >/dev/null
   hyprshade on vibrance >/dev/null
@@ -532,12 +534,12 @@ update_packages() {
   paru
   printf " ${YELLOW}==> ${NC}Checking for flatpak updates..${RESET}\n"
   flatpak update
-  notify-send -u low -a Hyprland -t 750 "Harmony" "System update completed!" -i ~/.local/share/harmony/logo.svg
+  notify-send -u low -a Hyprland -t 3500 "Harmony" "System update completed!" -i ~/.local/share/harmony/logo.svg
 }
 update_mirrors() {
   printf "${BOLD}${BLUE}:: ${RESET}Updating mirrors..\n"
   sudo reflector --verbose --country US --latest 8 --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist >/dev/null
-  notify-send -u low -a Hyprland -t 750 "Harmony" "Mirrors updated!" -i ~/.local/share/harmony/logo.svg
+  notify-send -u low -a Hyprland -t 3500 "Harmony" "Mirrors updated!" -i ~/.local/share/harmony/logo.svg
 }
 update_colors() {
   printf "${BOLD}${BLUE}:: ${RESET}Generating colorscheme from wallpaper..\n"
@@ -591,12 +593,14 @@ set_wallpaper() {
 	# set wallpaper
 	yinctl --pause
 	yinctl --color 030305
-	notify-send -u low -a Hyprland -t 750 "Harmony" "Setting wallpaper.." -i ~/.local/share/harmony/logo.svg
+	notify-send -u low -a Hyprland -t 3500 "Harmony" "Setting wallpaper.." -i ~/.local/share/harmony/logo.svg
 	yinctl --img $1
 	yinctl --play
 
 	# update dynamic color scheme
 	update_colors
+	reload_prompt "ignis"
+	reload_prompt "walker"
 }
 
 
