@@ -455,6 +455,7 @@ toggle_gamemode() {
   fi
   hyprctl reload >/dev/null
   hyprshade on vibrance >/dev/null
+  reload_prompt "ignis"
 }
 toggle_gnome_buttons() {
   printf "${BOLD}${BLUE}:: ${RESET}Toggling GNOME buttons..\n"
