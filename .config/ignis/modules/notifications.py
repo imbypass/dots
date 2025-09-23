@@ -71,5 +71,5 @@ class Notifications(widgets.Window):
             visible=False,
             dynamic_input_region=True,
             css_classes=["rec-unset"],
-            style="min-width: 29rem;margin-right: 10px;margin-bottom: 10px;",
+            style="min-width: 30rem;margin-right: 10px;margin-bottom: 10px;",
         )

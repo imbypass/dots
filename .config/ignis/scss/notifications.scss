@@ -10,6 +10,7 @@
     font-size: 0.95rem;
 
     & .notification-summary {
+        margin-top: 0.2rem;
         font-size: 1.05rem;
         margin-bottom: 0.2rem;
         font-weight: 700;
@@ -43,9 +44,17 @@
     opacity: 1;
 }
 .urgency-0 {
-    background-color: $base00;
-    color: $base04;
+    & .notification-summary {
+        font-size: 0.95rem;
+        font-weight: 400;
+    }
+
+    & .notification-body {
+        font-size: 0.85rem;
+        font-weight: 300;
+    }
 }
+.urgency-0,
 .urgency-1 {
     background-color: $base00;
     color: $base05;
@@ -63,4 +72,9 @@
             background-color: $base08;
         }
     }
+}
+.notification-icon {
+    margin-left: -2px;
+    margin-top: 2px;
+    border-radius: 8px;
 }

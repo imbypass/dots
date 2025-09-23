@@ -12,6 +12,7 @@ class ScreenshotLayout(widgets.Box):
             child=[
                 widgets.Picture(
                     image=notification.icon,
+                    css_classes=["notification-icon"],
                     content_fit="cover",
                     width=1920 // 7,
                     height=1080 // 7,
@@ -52,7 +53,9 @@ class NormalLayout(widgets.Box):
                             image=notification.icon
                             if notification.icon
                             else None,
+                            css_classes=["notification-icon"],
                             pixel_size=48 if notification.icon else 0,
+                            style="border-radius: 6px;",
                             halign="start",
                             valign="start",
                         ),
