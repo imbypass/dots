@@ -21,10 +21,11 @@ y='\033[0;33m'
 m='\033[0;35m'
 w='\033[0;38m'
 
-harmonyctl logo
 printf "
               ${r}wm   ${w}${wm}
    (\\ /)      ${y}kr   ${w}${kr}
    ( . .)     ${g}sh   ${w}${sh}
    c(${r}\"${w})(${r}\"${w})    ${m}rs   ${w}${rs}
+
 "
+colors

@@ -24,10 +24,10 @@ class ScreenshotLayout(widgets.Box):
                     spacing=10,
                     child=[
                         widgets.Button(
-                            child=widgets.Label(label="Open"),
+                            child=widgets.Label(label="Upload"),
                             css_classes=["notification-action"],
                             on_click=lambda x: asyncio.create_task(
-                                utils.exec_sh_async(f"xdg-open {notification.icon}")
+                                utils.exec_sh_async(f"harmonyctl upload {notification.icon}")
                             ),
                         ),
                         widgets.Button(

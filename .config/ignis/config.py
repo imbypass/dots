@@ -36,7 +36,6 @@ network = NetworkService.get_default()
 window_manager = WindowManager.get_default()
 upower = UPowerService.get_default()
 
-
 css_manager.apply_css(
     CssInfoPath(
         name="main",

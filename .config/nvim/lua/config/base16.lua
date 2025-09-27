@@ -1,21 +1,21 @@
 require('base16-colorscheme').setup({
     -- start colors
--- Marble Dark scheme by Aylur
-base00 = '#0a0a0c',
-base01 = '#121215',
-base02 = '#0a0a0c',
-base03 = '#363638',
-base04 = '#4d4d4f',
-base05 = '#b2b5b3',
-base06 = '#eaeaea',
-base07 = '#e7e7e7',
-base08 = '#f7768e',
-base09 = '#eda987',
-base0A = '#e0af68',
-base0B = '#9ece6a',
-base0C = '#4abaaf',
-base0D = '#7aa2f7',
-base0E = '#bb9af7',
-base0F = '#9a7ecc',
+-- Omarchy Void (Port) scheme by vyrx-dev
+base00 = '#05010c',
+base01 = '#0c041a',
+base02 = '#05010c',
+base03 = '#422e66',
+base04 = '#6b578f',
+base05 = '#c7cac2',
+base06 = '#b5aafa',
+base07 = '#d1bff7',
+base08 = '#f07178',
+base09 = '#c2b8ff',
+base0A = '#ddccff',
+base0B = '#bb9af7',
+base0C = '#b49ae6',
+base0D = '#a6b8ff',
+base0E = '#deccff',
+base0F = '#c3aaf0',
     -- end colors
 })

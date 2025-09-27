@@ -120,6 +120,22 @@ start = "/* start flavours */"
 end = "/* end flavours */"
 hook = "~/.local/bin/harmonyctl reload walker"
 
+### ROFI ###
+[[items]]
+file = "~/.config/rofi/colors/base16.rasi"
+template = "rofi"
+rewrite = true
+subtemplate = "colors"
+
+### WALKER ###
+[[items]]
+file = "~/.config/walker/themes/base16/colors.css"
+template = "walker"
+rewrite = false
+start = "/* start flavours */"
+end = "/* end flavours */"
+hook = "~/.local/bin/harmonyctl reload walker"
+
 ### FOOT TERMINAL ###
 [[items]]
 file = "~/.config/foot/colors.ini"

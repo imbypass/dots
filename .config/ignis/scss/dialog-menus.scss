@@ -1,14 +1,19 @@
+popover {
+}
 popover.menu {
     background-color: transparent;
+    font-weight: 500;
 
     contents {
+        background: $base00;
+        background: $base08;
         border: 2px solid $base03;
         color: $base05;
         padding: 0.35rem;
-        border-radius: 0.8rem;
+        border-radius: 12px;
 
         modelbutton {
-            transition: 0.3s;
+            transition: 0.1s;
             border-radius: 0.6rem;
             padding: 0.55rem 1rem;
         }

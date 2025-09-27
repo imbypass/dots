@@ -3,6 +3,8 @@ from gi.repository import Gtk # pyright: ignore[reportMissingModuleSource]
 from ignis.services.hyprland import HyprlandService
 from .border_style.style_manager import StyleManager
 import cairo
+import gi,os, datetime, asyncio
+from ignis import utils
 
 pi = 3.14
 deg_2_rad = pi/180
@@ -16,7 +18,7 @@ class Borders(Window):
             anchor=["top", "left", "right", "bottom"],
             exclusivity="normal",
             layer="top",
-            css_classes=["bg-none", "borders"]
+            css_classes=["bg-none", "borders"],
         )
 
         self.input_width = 1

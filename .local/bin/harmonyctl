@@ -17,7 +17,7 @@ BOLD='\033[1m'
 UNDERLINE='\033[4m'
 RESET='\033[0m'
 
-ACCENT=$BLUE
+ACCENT=$GREEN
 
 print_logo() {
 
@@ -519,8 +519,9 @@ change_rounding() {
 }
 
 change_colorscheme() {
-    flavours -c ~/.config/flavours/papirus-icons.toml apply $1
     flavours apply $1
+    flavours -c ~/.config/flavours/papirus-icons.toml apply $1
+    notify-send -u normal -a hyprland -t 3550 \"Harmony\" \"Theme changed to:  $1\" -i ~/.local/share/harmony/logo.svg
 }
 
 
@@ -576,7 +577,6 @@ update_prompt() {
 }
 
 set_wallpaper() {
-
 	# save the wallpaper to the global wallpaper file
 	if [[ $1 == *.mp4 ]]; then
 		 ffmpeg -i $1 -ss 00:00:01.000 -vframes 1 /home/bypass/.local/share/wallpapers/tmp.png

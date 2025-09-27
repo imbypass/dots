@@ -1,17 +1,18 @@
 /**
  *
- * Author : Aditya Shakya (adi1090x)
- * Github : @adi1090x
+ * Theme Author: @bypass_
+ * Github: imbypass
+ * Colors: Omarchy Void (Port)
+ * Colors Author: vyrx-dev
  *
- * Colors
  **/
 
 * {
-    background:     #181515FF;
-    background-alt: #221e1eFF;
-    foreground:     #b6a8a5FF;
-    selected:       #423939FF;
-    active:         #ABE9B3FF;
-    urgent:         #F28FADFF;
-    border-color:   #433939FF;
+    background:     #05010cFF;
+    background-alt: #0c041aFF;
+    foreground:     #c7cac2FF;
+    selected:       #251442FF;
+    active:         #ddccffFF;
+    urgent:         #f07178FF;
+    border-color:   #251442FF;
 }

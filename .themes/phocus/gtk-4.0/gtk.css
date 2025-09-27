@@ -1,27 +1,27 @@
 /* start colors */
 /*
 *
-* Base16 Marble Dark
-* Author: Aylur
+* Base16 Omarchy Void (Port)
+* Author: vyrx-dev
 *
 */
 
-@define-color base00 #0a0a0c;
-@define-color base01 #121215;
-@define-color base02 #1f1f21;
-@define-color base03 #363638;
-@define-color base04 #4d4d4f;
-@define-color base05 #b2b5b3;
-@define-color base06 #eaeaea;
-@define-color base07 #e7e7e7;
-@define-color base08 #f7768e;
-@define-color base09 #eda987;
-@define-color base0A #e0af68;
-@define-color base0B #9ece6a;
-@define-color base0C #4abaaf;
-@define-color base0D #7aa2f7;
-@define-color base0E #bb9af7;
-@define-color base0F #9a7ecc;
+@define-color base00 #05010c;
+@define-color base01 #0c041a;
+@define-color base02 #251442;
+@define-color base03 #422e66;
+@define-color base04 #6b578f;
+@define-color base05 #c7cac2;
+@define-color base06 #b5aafa;
+@define-color base07 #d1bff7;
+@define-color base08 #f07178;
+@define-color base09 #c2b8ff;
+@define-color base0A #ddccff;
+@define-color base0B #bb9af7;
+@define-color base0C #b49ae6;
+@define-color base0D #a6b8ff;
+@define-color base0E #deccff;
+@define-color base0F #c3aaf0;
 /* end colors */
 
 @define-color surface-strongest @base00;
