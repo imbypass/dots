@@ -2,17 +2,17 @@
  *
  * Theme Author: @bypass_
  * Github: imbypass
- * Colors: Omarchy Void (Port)
- * Colors Author: vyrx-dev
+ * Colors: Omarchy Sakura (Port)
+ * Colors Author: bjarneo
  *
  **/
 
 * {
-    background:     #05010cFF;
-    background-alt: #0c041aFF;
+    background:     #0d0509FF;
+    background-alt: #2e1622FF;
     foreground:     #c7cac2FF;
-    selected:       #251442FF;
-    active:         #ddccffFF;
-    urgent:         #f07178FF;
-    border-color:   #251442FF;
+    selected:       #452536FF;
+    active:         #d4a882FF;
+    urgent:         #ef6374FF;
+    border-color:   #452536FF;
 }

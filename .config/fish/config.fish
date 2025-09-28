@@ -5,7 +5,7 @@ if status is-interactive
     set fish_tmux_autostart true
     set fish_tmux_autoname_session true
     echo ""
-    harmonyctl logo
+    harmony-show-logo
     harmony-greeting
     echo ""
     harmony-colors

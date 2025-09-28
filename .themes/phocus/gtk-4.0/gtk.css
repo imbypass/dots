@@ -1,27 +1,27 @@
 /* start colors */
 /*
 *
-* Base16 Omarchy Void (Port)
-* Author: vyrx-dev
+* Base16 Omarchy Sakura (Port)
+* Author: bjarneo
 *
 */
 
-@define-color base00 #05010c;
-@define-color base01 #0c041a;
-@define-color base02 #251442;
-@define-color base03 #422e66;
-@define-color base04 #6b578f;
+@define-color base00 #0d0509;
+@define-color base01 #2e1622;
+@define-color base02 #452536;
+@define-color base03 #6b4659;
+@define-color base04 #856173;
 @define-color base05 #c7cac2;
 @define-color base06 #b5aafa;
-@define-color base07 #f1fff7;
-@define-color base08 #f07178;
-@define-color base09 #c2b8ff;
-@define-color base0A #ddccff;
-@define-color base0B #bb9af7;
-@define-color base0C #b49ae6;
-@define-color base0D #a6b8ff;
-@define-color base0E #deccff;
-@define-color base0F #c3aaf0;
+@define-color base07 #d1bff7;
+@define-color base08 #ef6374;
+@define-color base09 #e85f6f;
+@define-color base0A #d4a882;
+@define-color base0B #f29b9a;
+@define-color base0C #d1b399;
+@define-color base0D #d9a56c;
+@define-color base0E #e8c099;
+@define-color base0F #f0eaed;
 /* end colors */
 
 @define-color surface-strongest @base00;

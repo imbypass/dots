@@ -24,7 +24,7 @@ slider,
 }
 
 #window {
-    color: @base05;
+    color: @base04;
     opacity: 0.98;
 }
 
@@ -32,7 +32,7 @@ slider,
     border-radius: 0px;
     background: @base00;
     padding: 32px;
-    border: 2px solid @base03;
+    border: 2px solid @base0A;
     box-shadow: 0 0 6px #000000ff;
 }
 

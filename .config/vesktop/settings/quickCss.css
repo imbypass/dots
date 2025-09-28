@@ -1,25 +1,25 @@
 /*
 *
-* Base16 Omarchy Void (Port)
-* Author: vyrx-dev
+* Base16 Omarchy Sakura (Port)
+* Author: bjarneo
 *
 */
 
 :root {
-    --base00: #05010c;
-    --base01: #0c041a;
-    --base02: #251442;
-    --base03: #422e66;
-    --base04: #6b578f;
+    --base00: #0d0509;
+    --base01: #2e1622;
+    --base02: #452536;
+    --base03: #6b4659;
+    --base04: #856173;
     --base05: #c7cac2;
     --base06: #b5aafa;
-    --base07: #f1fff7;
-    --base08: #f07178;
-    --base09: #c2b8ff;
-    --base0A: #ddccff;
-    --base0B: #bb9af7;
-    --base0C: #b49ae6;
-    --base0D: #a6b8ff;
-    --base0E: #deccff;
-    --base0F: #c3aaf0;
+    --base07: #d1bff7;
+    --base08: #ef6374;
+    --base09: #e85f6f;
+    --base0A: #d4a882;
+    --base0B: #f29b9a;
+    --base0C: #d1b399;
+    --base0D: #d9a56c;
+    --base0E: #e8c099;
+    --base0F: #f0eaed;
 }

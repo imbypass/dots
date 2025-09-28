@@ -276,6 +276,11 @@
           "exec": "walker -n -m themes"
         },
         {
+          "label": "    About",
+          "icon2": "boot",
+          "exec": "foot -e bash -c harmony-about"
+        },
+        {
           "label": "⏻    System",
           "icon2": "boot",
           "exec": "walker -H -m power"

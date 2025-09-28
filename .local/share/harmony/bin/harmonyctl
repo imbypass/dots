@@ -17,29 +17,14 @@ BOLD='\033[1m'
 UNDERLINE='\033[4m'
 RESET='\033[0m'
 
-ACCENT=$GREEN
-
-print_logo() {
-
-  printf "${ACCENT}██╗  ██╗ █████╗ ██████╗ ███╗   ███╗ ██████╗ ███╗   ██╗██╗   ██╗
-██║  ██║██╔══██╗██╔══██╗████╗ ████║██╔═══██╗████╗  ██║╚██╗ ██╔╝
-███████║███████║██████╔╝██╔████╔██║██║   ██║██╔██╗ ██║ ╚████╔╝
-██╔══██║██╔══██║██╔══██╗██║╚██╔╝██║██║   ██║██║╚██╗██║  ╚██╔╝
-██║  ██║██║  ██║██║  ██║██║ ╚═╝ ██║╚██████╔╝██║ ╚████║   ██║
-╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝
-${RESET}"
-}
-
 aur_git() {
   git clone --single-branch --branch $1 https://github.com/archlinux/aur.git ~/Documents/aur_packages/$1
   cd ~/Documents/aur_packages/$1
   makepkg -si
 }
 
-
-
 print_help() {
-  # print_logo
+  # harmony-show-logo
   printf "usage: harmonyctl <command> [args...|--help]\n\n"
   printf "commands:\n"
   printf "  ${ACCENT}clean\t\t ${RESET}->\tRemove orphaned packages from the system.\n"
@@ -58,7 +43,7 @@ print_help() {
   printf "  ${ACCENT}version\t ${RESET}->\tDisplay the current version of HARMONY\n"
 }
 print_version() {
-  print_logo
+  harmony-show-logo
   printf "${RESET}A Hyprland rice by ${ACCENT}@imbypass_\t\t${RESET}${UTIL_VERSION}"
   printf "\n"
 }
@@ -527,7 +512,7 @@ change_colorscheme() {
 
 
 update_packages() {
-  print_logo
+  harmony-show-logo
   printf "${BOLD}${BLUE}:: ${RESET}Running system update..\n"
   printf " ${YELLOW}==> ${NC}Checking for official package updates..${RESET}\n"
   sudo pacman -Syu
@@ -635,7 +620,7 @@ elif [[ $1 == "h" ]]; then
   print_help
 
 elif [[ $1 == "logo" ]]; then
-  print_logo
+  harmony-show-logo
 
 elif [[ $1 == "aur" ]]; then
   aur_git $2
