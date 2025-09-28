@@ -59,7 +59,7 @@ def harmony_icon() -> widgets.Button:
     return widgets.Button(
         child=widgets.Icon(
             image="/home/bypass/.local/share/harmony/logo.svg",
-            pixel_size=30,
+            pixel_size=20,
             css_classes=["harmony-icon"],
         ),
         on_click=lambda x: create_exec_task("walker -n"),

@@ -2,8 +2,8 @@
     <title>harmony logo (Omarchy Sakura (Port) by bjarneo)</title>
     <defs>
         <linearGradient gradientUnits="userSpaceOnUse" id="s0" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0" stop-color="#d4a882" stop-opacity="0.9" />
-            <stop offset="1" stop-color="#d1b399" stop-opacity="0.9" />
+            <stop offset="0" stop-color="#ef6374" stop-opacity="0.9" />
+            <stop offset="1" stop-color="#f0eaed" stop-opacity="0.9" />
         </linearGradient>
     </defs>
     <style>

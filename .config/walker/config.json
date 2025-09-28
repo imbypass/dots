@@ -261,7 +261,7 @@
       "show_icon_when_single": true,
       "entries": [
         {
-          "label": "    Record Screen",
+          "label": "    Record",
           "icon2": "gpu-screen-recorder",
           "exec": "walker -H -m record"
         },

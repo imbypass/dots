@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo ""
 harmony-show-logo
 harmony-greeting
 harmony-show-done

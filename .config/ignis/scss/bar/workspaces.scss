@@ -1,6 +1,7 @@
 .workspaces {
-    border-radius: 2px; // 1rem
-    margin-left: 0.8rem;
+    border-radius: 0px; // 1rem
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
     background-color: $base01;
     padding: 0.35rem;
     margin-top: 0.5rem;
@@ -12,7 +13,7 @@
 }
 
 .workspace {
-    border-radius: 2px; // 1rem
+    border-radius: 1px; // 1rem
     padding: 0.25rem;
     margin: 0.15rem;
     margin-top: 0.25rem;

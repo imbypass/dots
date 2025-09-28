@@ -28,7 +28,6 @@ print_help() {
   printf "usage: harmonyctl <command> [args...|--help]\n\n"
   printf "commands:\n"
   printf "  ${ACCENT}clean\t\t ${RESET}->\tRemove orphaned packages from the system.\n"
-  printf "  ${ACCENT}dock\t\t ${RESET}->\tToggle the visibility of the application dock.\n"
   printf "  ${ACCENT}edit <value>\t ${RESET}->\tEdit parts of HARMONY.\n"
   printf "  ${ACCENT}expose\t ${RESET}->\tDisplay the desktop expose.\n"
   printf "  ${ACCENT}float\t\t ${RESET}->\tToggle floating window mode for HARMONY.\n"
@@ -279,7 +278,7 @@ reload_prompt() {
     sleep 2 && cd ~/.local/share/adwaita-steam/ && ./install.py \
       --color-theme base16 \
       --extras library/hide_whats_new \
-      --font sfcompact \
+      --font zedmono \
       --custom-css
     ;;
   esac
@@ -521,6 +520,7 @@ update_packages() {
   printf " ${YELLOW}==> ${NC}Checking for flatpak updates..${RESET}\n"
   flatpak update
   notify-send -u low -a Hyprland -t 3500 "Harmony" "System update completed!" -i ~/.local/share/harmony/logo.svg
+  harmony-show-done
 }
 update_mirrors() {
   printf "${BOLD}${BLUE}:: ${RESET}Updating mirrors..\n"
@@ -618,9 +618,6 @@ elif [[ $1 == "help" ]]; then
   print_help
 elif [[ $1 == "h" ]]; then
   print_help
-
-elif [[ $1 == "logo" ]]; then
-  harmony-show-logo
 
 elif [[ $1 == "aur" ]]; then
   aur_git $2
