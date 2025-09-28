@@ -4,7 +4,6 @@ from ignis.services.audio import AudioService
 
 audio = AudioService.get_default()
 
-
 class OSD(widgets.Window):
     def __init__(self):
         super().__init__(

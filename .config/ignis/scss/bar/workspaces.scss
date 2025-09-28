@@ -1,5 +1,5 @@
 .workspaces {
-    border-radius: 1rem;
+    border-radius: 2px; // 1rem
     margin-left: 0.8rem;
     background-color: $base01;
     padding: 0.35rem;
@@ -10,14 +10,15 @@
 .workspaces:hover {
     border-color: $base02;
 }
+
 .workspace {
-    border-radius: 1rem;
+    border-radius: 2px; // 1rem
     padding: 0.25rem;
     margin: 0.15rem;
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
     transition: 0.3s;
-    background-color: $base03;
+    background-color: $base02;
     transition: 0.3s all ease;
 }
 

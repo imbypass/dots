@@ -183,7 +183,7 @@
       "hidden": true,
       "name": "xdphpicker",
       "placeholder": "Screen/Window Picker",
-      "theme": "base16/default",
+      "theme": "base16/default_slim",
       "show_sub_when_single": true,
       "switcher_only": true,
       "weight": 5
@@ -244,7 +244,7 @@
     {
       "name": "themes",
       "placeholder": "Color Schemes",
-      "theme": "base16/default",
+      "theme": "base16/default_slim",
       "switcher_only": false,
       "refresh": true,
       "src": "bash -c ~/.local/share/harmony/scripts/walker/themes.sh",
@@ -252,58 +252,60 @@
     },
     {
       "name": "mainmenu",
-      "placeholder": "Search",
-      "theme": "base16/default",
+      "search": false,
+      "placeholder": "Go..",
+      "theme": "base16/default_slim",
       "switcher_only": true,
       "keep_sort": true,
       "recalculate_score": true,
       "show_icon_when_single": true,
       "entries": [
         {
-          "label": "Record Screen",
-          "icon": "gpu-screen-recorder",
+          "label": "   Record Screen",
+          "icon2": "gpu-screen-recorder",
           "exec": "walker -H -m record"
         },
         {
-          "label": "Pick Wallpaper",
-          "icon": "livewallpaper",
+          "label": "󰸉   Wallpaper",
+          "icon2": "livewallpaper",
           "exec": "walker -m wallpaper"
         },
         {
-          "label": "Color Scheme",
-          "icon": "gnome-color-manager",
+          "label": "   Style",
+          "icon2": "gnome-color-manager",
           "exec": "walker -n -m themes"
         },
         {
-          "label": "Power Menu",
-          "icon": "boot",
+          "label": "⏻   System",
+          "icon2": "boot",
           "exec": "walker -H -m power"
         }
       ]
     },
     {
       "name": "record",
-      "theme": "base16/default",
+      "theme": "base16/default_slim",
+      "search": false,
       "switcher_only": true,
       "keep_sort": true,
       "recalculate_score": true,
       "show_icon_when_single": true,
       "entries": [
         {
-          "label": "Start Recording",
-          "icon": "media-playback-start",
-          "exec": "~/.local/bin/record start --noaudio"
+          "label": "   Start Recording",
+          "icon2": "media-playback-start",
+          "exec": "~/.local/share/harmony/bin/harmony-record start --noaudio"
         },
         {
-          "label": "Stop Recording",
-          "icon": "media-playback-stop",
-          "exec": "~/.local/bin/record stop"
+          "label": "   Stop Recording",
+          "icon2": "media-playback-stop",
+          "exec": "~/.local/share/harmony/bin/harmony-record stop"
         }
       ]
     },
     {
       "name": "power",
-      "theme": "base16/default",
+      "theme": "base16/default_slim",
       "switcher_only": true,
       "keep_sort": true,
       "search": false,
@@ -311,23 +313,23 @@
       "show_icon_when_single": true,
       "entries": [
         {
-          "label": "Shutdown",
-          "icon": "system-shutdown",
+          "label": "   Shutdown",
+          "icon2": "system-shutdown",
           "exec": "shutdown now"
         },
         {
-          "label": "Reboot (Full)",
-          "icon": "system-reboot",
+          "label": "󰜉   Restart (Full)",
+          "icon2": "system-reboot",
           "exec": "reboot"
         },
         {
-          "label": "Reboot (Soft)",
-          "icon": "system-reboot",
+          "label": "󰜉   Restart (Soft)",
+          "icon2": "system-reboot",
           "exec": "systemctl soft-reboot"
         },
         {
-          "label": "Lock Screen",
-          "icon": "system-log-out",
+          "label": "   Lock Screen",
+          "icon2": "system-log-out",
           "exec": "hyprlock"
         }
       ]

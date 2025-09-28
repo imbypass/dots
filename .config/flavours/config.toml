@@ -13,7 +13,7 @@ rewrite = true
 file = "~/.themes/phocus/scss/gtk-3.0/_base16.scss"
 template = "phocus"
 rewrite = true
-hook = "~/.local/bin/harmonyctl reload gtk"
+hook = "~/.local/share/harmony/bin/harmonyctl reload gtk"
 
 ### GTK 4.0 THEME ###
 [[items]]
@@ -23,7 +23,7 @@ template = "gtk4"
 rewrite = false
 start = "/* start colors */"
 end = "/* end colors */"
-hook = "~/.local/bin/harmonyctl reload gtk"
+hook = "~/.local/share/harmony/bin/harmonyctl reload gtk"
 
 ### QT6 THEME ###
 [[items]]
@@ -48,7 +48,7 @@ rewrite = true
 file = "~/.config/ignis/config.json"
 template = "ignis-border"
 rewrite = true
-hook = "~/.local/bin/harmonyctl reload ignis"
+hook = "~/.local/share/harmony/bin/harmonyctl reload ignis"
 
 ### NCSPOT ###
 [[items]]
@@ -84,7 +84,7 @@ end = "# end colors"
 file = "~/.local/share/adwaita-steam/adwaita/colorthemes/base16/base16.css"
 template = "steam"
 rewrite = true
-hook = "~/.local/bin/harmonyctl reload steam"
+hook = "~/.local/share/harmony/bin/harmonyctl reload steam"
 
 ### ZED EDITOR ###
 [[items]]
@@ -109,7 +109,7 @@ rewrite = true
 file = "~/.config/mako/colors"
 template = "mako"
 rewrite = true
-hook = "~/.local/bin/harmonyctl reload mako"
+hook = "~/.local/share/harmony/bin/harmonyctl reload mako"
 
 ### WALKER ###
 [[items]]
@@ -118,7 +118,7 @@ template = "walker"
 rewrite = false
 start = "/* start flavours */"
 end = "/* end flavours */"
-hook = "~/.local/bin/harmonyctl reload walker"
+hook = "~/.local/share/harmony/bin/harmonyctl reload walker"
 
 ### ROFI ###
 [[items]]
@@ -134,7 +134,7 @@ template = "walker"
 rewrite = false
 start = "/* start flavours */"
 end = "/* end flavours */"
-hook = "~/.local/bin/harmonyctl reload walker"
+hook = "~/.local/share/harmony/bin/harmonyctl reload walker"
 
 ### FOOT TERMINAL ###
 [[items]]
@@ -179,7 +179,7 @@ rewrite = true
 file = "~/.config/spicetify/Themes/base16/color.ini"
 template = "spotify"
 rewrite = true
-hook = "~/.local/bin/harmonyctl update spotify"
+hook = "~/.local/share/harmony/bin/harmonyctl update spotify"
 light = false
 
 ### NEOVIM ###
@@ -209,4 +209,4 @@ rewrite = true
 file = "~/.config/waybar/base16.css"
 template = "waybar"
 rewrite = true
-hook = "sleep .5 &&  ~/.local/bin/harmonyctl reload waybar"
+hook = "sleep .5 &&  ~/.local/share/harmony/bin/harmonyctl reload waybar"

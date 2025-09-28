@@ -1,7 +1,7 @@
 from ignis.widgets.window import Window
 from gi.repository import Gtk # pyright: ignore[reportMissingModuleSource]
 from ignis.services.hyprland import HyprlandService
-from .border_style.style_manager import StyleManager
+from .border.style_manager import StyleManager
 import cairo
 import gi,os, datetime, asyncio
 from ignis import utils

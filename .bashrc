@@ -2,6 +2,14 @@
 # ~/.bashrc
 #
 
+add_paths() {
+  for d in "$@"; do
+    [[ -d "$d" && ! "$PATH" =~ (^|:)$d(:|$) ]] && PATH="$PATH:$d"
+  done
+}
+
+add_paths ~/bin ~/.local/share/harmony/bin
+
 PS1='[\u@\h \W]\$ '
 
 # Initialization - Homebrew

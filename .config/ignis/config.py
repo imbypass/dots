@@ -62,8 +62,8 @@ def harmony_icon() -> widgets.Button:
             pixel_size=30,
             css_classes=["harmony-icon"],
         ),
-        on_click=lambda x: create_exec_task("walker"),
-        on_right_click=lambda x: create_exec_task("~/.local/bin/harmonyctl expose"),
+        on_click=lambda x: create_exec_task("walker -n"),
+        on_right_click=lambda x: create_exec_task("~/.local/share/harmony/bin/harmonyctl expose"),
     )
 
 def power_icon() -> widgets.Box:
@@ -141,8 +141,6 @@ def microphone_volume() -> widgets.Box:
     )
 
 
-
-
 def tray_item(item: SystemTrayItem) -> widgets.Button:
     if item.menu:
         menu = item.menu.copy()
@@ -189,7 +187,7 @@ def left(monitor_name: str) -> widgets.Box:
 def center(monitor_name: str) -> widgets.Box:
     center_box = widgets.Box(
         child=[
-            Apps(),
+            # Apps(),
         ],
         spacing=10,
     )
@@ -244,4 +242,4 @@ for monitor in range(utils.get_n_monitors()):
 
 OSD()
 Launcher()
-Borders()
+# Borders()

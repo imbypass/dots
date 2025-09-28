@@ -26,11 +26,12 @@ slider,
 #window {
     color: @base05;
     margin-right: 6px;
+    opacity: 0.98;
 }
 
 #box {
+    border-radius: 0px;
     margin-left: 4px;
-    border-radius: 10px;
     background: @base00;
     padding: 8px;
     border: 2px solid @base02;
@@ -43,9 +44,9 @@ slider,
 }
 
 #search {
-    background: @base02;
-    border: 2px solid @base02;
-    border-radius: 8px;
+    border-radius: 0px; /* box radius - 2 */
+    background: @base00;
+    border: 0px solid @base02;
     padding: 4px;
     margin-bottom: 6px;
 }
@@ -93,7 +94,7 @@ child {
     margin-top: 3px;
     margin-right: 4px;
     margin-bottom: 3px;
-    border-radius: 8px;
+    border-radius: 0px;
 }
 
 child:selected,

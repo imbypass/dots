@@ -1,10 +1,11 @@
 @import "base16.scss";
 $taskbar_accent_color: $base0B;
 
-@import "index.scss";
-@import "dialog-menus.scss";
-@import "launcher.scss";
-@import "notifications.scss";
+@import "components/_global.scss";
+@import "components/_menus.scss";
+@import "components/_launcher.scss";
+@import "components/_notifications.scss";
+@import "components/_tooltip.scss";
 
 @import "bar/bar.scss";
 @import "bar/clock.scss";

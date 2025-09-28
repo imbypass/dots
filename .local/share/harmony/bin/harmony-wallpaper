@@ -1,0 +1,4 @@
+#!/bin/bash
+# walker wallpaper picker script
+
+walker -n --modules wallpaper

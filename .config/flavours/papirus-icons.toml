@@ -1,0 +1,1490 @@
+# Configuration for flavours
+
+shell = "fish -c '{}'"
+
+### PAPIRUS ICONS 22x22 ###
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16.svg"
+template = "papirus"
+subtemplate = "folder-base16"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-activities.svg"
+template = "papirus"
+subtemplate = "folder-base16-activities"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-android.svg"
+template = "papirus"
+subtemplate = "folder-base16-android"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-apple.svg"
+template = "papirus"
+subtemplate = "folder-base16-apple"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-applications.svg"
+template = "papirus"
+subtemplate = "folder-base16-applications"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-arduino.svg"
+template = "papirus"
+subtemplate = "folder-base16-arduino"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/user-base16-desktop.svg"
+template = "papirus"
+subtemplate = "user-base16-desktop"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/user-base16-home-open.svg"
+template = "papirus"
+subtemplate = "user-base16-home-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/user-base16-home.svg"
+template = "papirus"
+subtemplate = "user-base16-home"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-backup.svg"
+template = "papirus"
+subtemplate = "folder-base16-backup"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-books.svg"
+template = "papirus"
+subtemplate = "folder-base16-books"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-cd.svg"
+template = "papirus"
+subtemplate = "folder-base16-cd"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-code.svg"
+template = "papirus"
+subtemplate = "folder-base16-code"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-desktop.svg"
+template = "papirus"
+subtemplate = "folder-base16-desktop"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-development.svg"
+template = "papirus"
+subtemplate = "folder-base16-development"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-docker.svg"
+template = "papirus"
+subtemplate = "folder-base16-docker"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-documents-open.svg"
+template = "papirus"
+subtemplate = "folder-base16-documents-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-documents.svg"
+template = "papirus"
+subtemplate = "folder-base16-documents"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-download-open.svg"
+template = "papirus"
+subtemplate = "folder-base16-download-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-download.svg"
+template = "papirus"
+subtemplate = "folder-base16-download"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-drag-accept.svg"
+template = "papirus"
+subtemplate = "folder-base16-drag-accept"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-dropbox.svg"
+template = "papirus"
+subtemplate = "folder-base16-dropbox"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-favorites.svg"
+template = "papirus"
+subtemplate = "folder-base16-favorites"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-games.svg"
+template = "papirus"
+subtemplate = "folder-base16-games"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-git.svg"
+template = "papirus"
+subtemplate = "folder-base16-git"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-github.svg"
+template = "papirus"
+subtemplate = "folder-base16-github"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-gitlab.svg"
+template = "papirus"
+subtemplate = "folder-base16-gitlab"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-gnome.svg"
+template = "papirus"
+subtemplate = "folder-base16-gnome"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-google-drive.svg"
+template = "papirus"
+subtemplate = "folder-base16-google-drive"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-image-people.svg"
+template = "papirus"
+subtemplate = "folder-base16-image-people"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-important.svg"
+template = "papirus"
+subtemplate = "folder-base16-important"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-java.svg"
+template = "papirus"
+subtemplate = "folder-base16-java"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-kde.svg"
+template = "papirus"
+subtemplate = "folder-base16-kde"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-linux.svg"
+template = "papirus"
+subtemplate = "folder-base16-linux"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-locked.svg"
+template = "papirus"
+subtemplate = "folder-base16-locked"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-mail-cloud.svg"
+template = "papirus"
+subtemplate = "folder-base16-mail-cloud"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-mail.svg"
+template = "papirus"
+subtemplate = "folder-base16-mail"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-mega.svg"
+template = "papirus"
+subtemplate = "folder-base16-mega"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-meocloud.svg"
+template = "papirus"
+subtemplate = "folder-base16-meocloud"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-music-open.svg"
+template = "papirus"
+subtemplate = "folder-base16-music-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-music.svg"
+template = "papirus"
+subtemplate = "folder-base16-music"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-network.svg"
+template = "papirus"
+subtemplate = "folder-base16-network"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-nextcloud.svg"
+template = "papirus"
+subtemplate = "folder-base16-nextcloud"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-notes.svg"
+template = "papirus"
+subtemplate = "folder-base16-notes"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-obsidian.svg"
+template = "papirus"
+subtemplate = "folder-base16-obsidian"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-onedrive.svg"
+template = "papirus"
+subtemplate = "folder-base16-onedrive"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-open.svg"
+template = "papirus"
+subtemplate = "folder-base16-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-owncloud.svg"
+template = "papirus"
+subtemplate = "folder-base16-owncloud"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-pcloud.svg"
+template = "papirus"
+subtemplate = "folder-base16-pcloud"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-photo.svg"
+template = "papirus"
+subtemplate = "folder-base16-photo"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-pictures-open.svg"
+template = "papirus"
+subtemplate = "folder-base16-pictures-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-pictures.svg"
+template = "papirus"
+subtemplate = "folder-base16-pictures"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-print.svg"
+template = "papirus"
+subtemplate = "folder-base16-print"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-private.svg"
+template = "papirus"
+subtemplate = "folder-base16-private"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-projects.svg"
+template = "papirus"
+subtemplate = "folder-base16-projects"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-publicshare-open.svg"
+template = "papirus"
+subtemplate = "folder-base16-publicshare-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-recent.svg"
+template = "papirus"
+subtemplate = "folder-base16-recent"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-remote-open.svg"
+template = "papirus"
+subtemplate = "folder-base16-remote-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-remote.svg"
+template = "papirus"
+subtemplate = "folder-base16-remote"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-script.svg"
+template = "papirus"
+subtemplate = "folder-base16-script"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-snap.svg"
+template = "papirus"
+subtemplate = "folder-base16-snap"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-steam.svg"
+template = "papirus"
+subtemplate = "folder-base16-steam"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-sync.svg"
+template = "papirus"
+subtemplate = "folder-base16-sync"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-syncthing.svg"
+template = "papirus"
+subtemplate = "folder-base16-syncthing"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-systemd.svg"
+template = "papirus"
+subtemplate = "folder-base16-systemd"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-tar.svg"
+template = "papirus"
+subtemplate = "folder-base16-tar"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-templates-open.svg"
+template = "papirus"
+subtemplate = "folder-base16-templates-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-templates.svg"
+template = "papirus"
+subtemplate = "folder-base16-templates"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-torrent.svg"
+template = "papirus"
+subtemplate = "folder-base16-torrent"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-unlocked.svg"
+template = "papirus"
+subtemplate = "folder-base16-unlocked"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-vbox.svg"
+template = "papirus"
+subtemplate = "folder-base16-vbox"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-video.svg"
+template = "papirus"
+subtemplate = "folder-base16-video"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-videos-open.svg"
+template = "papirus"
+subtemplate = "folder-base16-videos-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-visiting.svg"
+template = "papirus"
+subtemplate = "folder-base16-visiting"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-vmware.svg"
+template = "papirus"
+subtemplate = "folder-base16-vmware"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-wifi.svg"
+template = "papirus"
+subtemplate = "folder-base16-wifi"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-wine.svg"
+template = "papirus"
+subtemplate = "folder-base16-wine"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16-yandex-disk.svg"
+template = "papirus"
+subtemplate = "folder-base16-yandex-disk"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/folder-base16.svg"
+template = "papirus"
+subtemplate = "folder-base16"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/user-base16-desktop.svg"
+template = "papirus"
+subtemplate = "user-base16-desktop"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/user-base16-home-open.svg"
+template = "papirus"
+subtemplate = "user-base16-home-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/22x22/places/user-base16-home.svg"
+template = "papirus"
+subtemplate = "user-base16-home"
+rewrite = true
+
+
+
+
+### PAPIRUS ICONS 48x48 ###
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16.svg"
+template = "papirus"
+subtemplate = "folder-base16"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-activities.svg"
+template = "papirus"
+subtemplate = "folder-base16-activities"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-android.svg"
+template = "papirus"
+subtemplate = "folder-base16-android"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-apple.svg"
+template = "papirus"
+subtemplate = "folder-base16-apple"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-applications.svg"
+template = "papirus"
+subtemplate = "folder-base16-applications"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-arduino.svg"
+template = "papirus"
+subtemplate = "folder-base16-arduino"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/user-base16-desktop.svg"
+template = "papirus"
+subtemplate = "user-base16-desktop"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/user-base16-home-open.svg"
+template = "papirus"
+subtemplate = "user-base16-home-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/user-base16-home.svg"
+template = "papirus"
+subtemplate = "user-base16-home"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-backup.svg"
+template = "papirus"
+subtemplate = "folder-base16-backup"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-books.svg"
+template = "papirus"
+subtemplate = "folder-base16-books"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-cd.svg"
+template = "papirus"
+subtemplate = "folder-base16-cd"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-code.svg"
+template = "papirus"
+subtemplate = "folder-base16-code"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-desktop.svg"
+template = "papirus"
+subtemplate = "folder-base16-desktop"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-development.svg"
+template = "papirus"
+subtemplate = "folder-base16-development"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-docker.svg"
+template = "papirus"
+subtemplate = "folder-base16-docker"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-documents-open.svg"
+template = "papirus"
+subtemplate = "folder-base16-documents-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-documents.svg"
+template = "papirus"
+subtemplate = "folder-base16-documents"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-download-open.svg"
+template = "papirus"
+subtemplate = "folder-base16-download-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-download.svg"
+template = "papirus"
+subtemplate = "folder-base16-download"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-drag-accept.svg"
+template = "papirus"
+subtemplate = "folder-base16-drag-accept"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-dropbox.svg"
+template = "papirus"
+subtemplate = "folder-base16-dropbox"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-favorites.svg"
+template = "papirus"
+subtemplate = "folder-base16-favorites"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-games.svg"
+template = "papirus"
+subtemplate = "folder-base16-games"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-git.svg"
+template = "papirus"
+subtemplate = "folder-base16-git"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-github.svg"
+template = "papirus"
+subtemplate = "folder-base16-github"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-gitlab.svg"
+template = "papirus"
+subtemplate = "folder-base16-gitlab"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-gnome.svg"
+template = "papirus"
+subtemplate = "folder-base16-gnome"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-google-drive.svg"
+template = "papirus"
+subtemplate = "folder-base16-google-drive"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-image-people.svg"
+template = "papirus"
+subtemplate = "folder-base16-image-people"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-important.svg"
+template = "papirus"
+subtemplate = "folder-base16-important"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-java.svg"
+template = "papirus"
+subtemplate = "folder-base16-java"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-kde.svg"
+template = "papirus"
+subtemplate = "folder-base16-kde"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-linux.svg"
+template = "papirus"
+subtemplate = "folder-base16-linux"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-locked.svg"
+template = "papirus"
+subtemplate = "folder-base16-locked"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-mail-cloud.svg"
+template = "papirus"
+subtemplate = "folder-base16-mail-cloud"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-mail.svg"
+template = "papirus"
+subtemplate = "folder-base16-mail"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-mega.svg"
+template = "papirus"
+subtemplate = "folder-base16-mega"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-meocloud.svg"
+template = "papirus"
+subtemplate = "folder-base16-meocloud"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-music-open.svg"
+template = "papirus"
+subtemplate = "folder-base16-music-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-music.svg"
+template = "papirus"
+subtemplate = "folder-base16-music"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-network.svg"
+template = "papirus"
+subtemplate = "folder-base16-network"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-nextcloud.svg"
+template = "papirus"
+subtemplate = "folder-base16-nextcloud"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-notes.svg"
+template = "papirus"
+subtemplate = "folder-base16-notes"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-obsidian.svg"
+template = "papirus"
+subtemplate = "folder-base16-obsidian"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-onedrive.svg"
+template = "papirus"
+subtemplate = "folder-base16-onedrive"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-open.svg"
+template = "papirus"
+subtemplate = "folder-base16-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-owncloud.svg"
+template = "papirus"
+subtemplate = "folder-base16-owncloud"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-pcloud.svg"
+template = "papirus"
+subtemplate = "folder-base16-pcloud"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-photo.svg"
+template = "papirus"
+subtemplate = "folder-base16-photo"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-pictures-open.svg"
+template = "papirus"
+subtemplate = "folder-base16-pictures-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-pictures.svg"
+template = "papirus"
+subtemplate = "folder-base16-pictures"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-print.svg"
+template = "papirus"
+subtemplate = "folder-base16-print"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-private.svg"
+template = "papirus"
+subtemplate = "folder-base16-private"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-projects.svg"
+template = "papirus"
+subtemplate = "folder-base16-projects"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-publicshare-open.svg"
+template = "papirus"
+subtemplate = "folder-base16-publicshare-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-recent.svg"
+template = "papirus"
+subtemplate = "folder-base16-recent"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-remote-open.svg"
+template = "papirus"
+subtemplate = "folder-base16-remote-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-remote.svg"
+template = "papirus"
+subtemplate = "folder-base16-remote"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-script.svg"
+template = "papirus"
+subtemplate = "folder-base16-script"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-snap.svg"
+template = "papirus"
+subtemplate = "folder-base16-snap"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-steam.svg"
+template = "papirus"
+subtemplate = "folder-base16-steam"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-sync.svg"
+template = "papirus"
+subtemplate = "folder-base16-sync"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-syncthing.svg"
+template = "papirus"
+subtemplate = "folder-base16-syncthing"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-systemd.svg"
+template = "papirus"
+subtemplate = "folder-base16-systemd"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-tar.svg"
+template = "papirus"
+subtemplate = "folder-base16-tar"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-templates-open.svg"
+template = "papirus"
+subtemplate = "folder-base16-templates-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-templates.svg"
+template = "papirus"
+subtemplate = "folder-base16-templates"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-torrent.svg"
+template = "papirus"
+subtemplate = "folder-base16-torrent"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-unlocked.svg"
+template = "papirus"
+subtemplate = "folder-base16-unlocked"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-vbox.svg"
+template = "papirus"
+subtemplate = "folder-base16-vbox"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-video.svg"
+template = "papirus"
+subtemplate = "folder-base16-video"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-videos-open.svg"
+template = "papirus"
+subtemplate = "folder-base16-videos-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-visiting.svg"
+template = "papirus"
+subtemplate = "folder-base16-visiting"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-vmware.svg"
+template = "papirus"
+subtemplate = "folder-base16-vmware"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-wifi.svg"
+template = "papirus"
+subtemplate = "folder-base16-wifi"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-wine.svg"
+template = "papirus"
+subtemplate = "folder-base16-wine"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16-yandex-disk.svg"
+template = "papirus"
+subtemplate = "folder-base16-yandex-disk"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/folder-base16.svg"
+template = "papirus"
+subtemplate = "folder-base16"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/user-base16-desktop.svg"
+template = "papirus"
+subtemplate = "user-base16-desktop"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/user-base16-home-open.svg"
+template = "papirus"
+subtemplate = "user-base16-home-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/48x48/places/user-base16-home.svg"
+template = "papirus"
+subtemplate = "user-base16-home"
+rewrite = true
+
+
+
+
+
+### PAPIRUS ICONS 64x64 ###
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16.svg"
+template = "papirus"
+subtemplate = "folder-base16"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-activities.svg"
+template = "papirus"
+subtemplate = "folder-base16-activities"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-android.svg"
+template = "papirus"
+subtemplate = "folder-base16-android"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-apple.svg"
+template = "papirus"
+subtemplate = "folder-base16-apple"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-applications.svg"
+template = "papirus"
+subtemplate = "folder-base16-applications"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-arduino.svg"
+template = "papirus"
+subtemplate = "folder-base16-arduino"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/user-base16-desktop.svg"
+template = "papirus"
+subtemplate = "user-base16-desktop"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/user-base16-home-open.svg"
+template = "papirus"
+subtemplate = "user-base16-home-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/user-base16-home.svg"
+template = "papirus"
+subtemplate = "user-base16-home"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-backup.svg"
+template = "papirus"
+subtemplate = "folder-base16-backup"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-books.svg"
+template = "papirus"
+subtemplate = "folder-base16-books"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-cd.svg"
+template = "papirus"
+subtemplate = "folder-base16-cd"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-code.svg"
+template = "papirus"
+subtemplate = "folder-base16-code"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-desktop.svg"
+template = "papirus"
+subtemplate = "folder-base16-desktop"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-development.svg"
+template = "papirus"
+subtemplate = "folder-base16-development"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-docker.svg"
+template = "papirus"
+subtemplate = "folder-base16-docker"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-documents-open.svg"
+template = "papirus"
+subtemplate = "folder-base16-documents-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-documents.svg"
+template = "papirus"
+subtemplate = "folder-base16-documents"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-download-open.svg"
+template = "papirus"
+subtemplate = "folder-base16-download-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-download.svg"
+template = "papirus"
+subtemplate = "folder-base16-download"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-drag-accept.svg"
+template = "papirus"
+subtemplate = "folder-base16-drag-accept"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-dropbox.svg"
+template = "papirus"
+subtemplate = "folder-base16-dropbox"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-favorites.svg"
+template = "papirus"
+subtemplate = "folder-base16-favorites"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-games.svg"
+template = "papirus"
+subtemplate = "folder-base16-games"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-git.svg"
+template = "papirus"
+subtemplate = "folder-base16-git"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-github.svg"
+template = "papirus"
+subtemplate = "folder-base16-github"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-gitlab.svg"
+template = "papirus"
+subtemplate = "folder-base16-gitlab"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-gnome.svg"
+template = "papirus"
+subtemplate = "folder-base16-gnome"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-google-drive.svg"
+template = "papirus"
+subtemplate = "folder-base16-google-drive"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-image-people.svg"
+template = "papirus"
+subtemplate = "folder-base16-image-people"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-important.svg"
+template = "papirus"
+subtemplate = "folder-base16-important"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-java.svg"
+template = "papirus"
+subtemplate = "folder-base16-java"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-kde.svg"
+template = "papirus"
+subtemplate = "folder-base16-kde"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-linux.svg"
+template = "papirus"
+subtemplate = "folder-base16-linux"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-locked.svg"
+template = "papirus"
+subtemplate = "folder-base16-locked"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-mail-cloud.svg"
+template = "papirus"
+subtemplate = "folder-base16-mail-cloud"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-mail.svg"
+template = "papirus"
+subtemplate = "folder-base16-mail"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-mega.svg"
+template = "papirus"
+subtemplate = "folder-base16-mega"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-meocloud.svg"
+template = "papirus"
+subtemplate = "folder-base16-meocloud"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-music-open.svg"
+template = "papirus"
+subtemplate = "folder-base16-music-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-music.svg"
+template = "papirus"
+subtemplate = "folder-base16-music"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-network.svg"
+template = "papirus"
+subtemplate = "folder-base16-network"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-nextcloud.svg"
+template = "papirus"
+subtemplate = "folder-base16-nextcloud"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-notes.svg"
+template = "papirus"
+subtemplate = "folder-base16-notes"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-obsidian.svg"
+template = "papirus"
+subtemplate = "folder-base16-obsidian"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-onedrive.svg"
+template = "papirus"
+subtemplate = "folder-base16-onedrive"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-open.svg"
+template = "papirus"
+subtemplate = "folder-base16-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-owncloud.svg"
+template = "papirus"
+subtemplate = "folder-base16-owncloud"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-pcloud.svg"
+template = "papirus"
+subtemplate = "folder-base16-pcloud"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-photo.svg"
+template = "papirus"
+subtemplate = "folder-base16-photo"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-pictures-open.svg"
+template = "papirus"
+subtemplate = "folder-base16-pictures-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-pictures.svg"
+template = "papirus"
+subtemplate = "folder-base16-pictures"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-print.svg"
+template = "papirus"
+subtemplate = "folder-base16-print"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-private.svg"
+template = "papirus"
+subtemplate = "folder-base16-private"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-projects.svg"
+template = "papirus"
+subtemplate = "folder-base16-projects"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-publicshare-open.svg"
+template = "papirus"
+subtemplate = "folder-base16-publicshare-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-recent.svg"
+template = "papirus"
+subtemplate = "folder-base16-recent"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-remote-open.svg"
+template = "papirus"
+subtemplate = "folder-base16-remote-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-remote.svg"
+template = "papirus"
+subtemplate = "folder-base16-remote"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-script.svg"
+template = "papirus"
+subtemplate = "folder-base16-script"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-snap.svg"
+template = "papirus"
+subtemplate = "folder-base16-snap"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-steam.svg"
+template = "papirus"
+subtemplate = "folder-base16-steam"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-sync.svg"
+template = "papirus"
+subtemplate = "folder-base16-sync"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-syncthing.svg"
+template = "papirus"
+subtemplate = "folder-base16-syncthing"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-systemd.svg"
+template = "papirus"
+subtemplate = "folder-base16-systemd"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-tar.svg"
+template = "papirus"
+subtemplate = "folder-base16-tar"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-templates-open.svg"
+template = "papirus"
+subtemplate = "folder-base16-templates-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-templates.svg"
+template = "papirus"
+subtemplate = "folder-base16-templates"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-torrent.svg"
+template = "papirus"
+subtemplate = "folder-base16-torrent"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-unlocked.svg"
+template = "papirus"
+subtemplate = "folder-base16-unlocked"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-vbox.svg"
+template = "papirus"
+subtemplate = "folder-base16-vbox"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-video.svg"
+template = "papirus"
+subtemplate = "folder-base16-video"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-videos-open.svg"
+template = "papirus"
+subtemplate = "folder-base16-videos-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-visiting.svg"
+template = "papirus"
+subtemplate = "folder-base16-visiting"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-vmware.svg"
+template = "papirus"
+subtemplate = "folder-base16-vmware"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-wifi.svg"
+template = "papirus"
+subtemplate = "folder-base16-wifi"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-wine.svg"
+template = "papirus"
+subtemplate = "folder-base16-wine"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16-yandex-disk.svg"
+template = "papirus"
+subtemplate = "folder-base16-yandex-disk"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/folder-base16.svg"
+template = "papirus"
+subtemplate = "folder-base16"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/user-base16-desktop.svg"
+template = "papirus"
+subtemplate = "user-base16-desktop"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/user-base16-home-open.svg"
+template = "papirus"
+subtemplate = "user-base16-home-open"
+rewrite = true
+
+[[items]]
+file = "~/.local/share/icons/Papirus-Dark/64x64/places/user-base16-home.svg"
+template = "papirus"
+subtemplate = "user-base16-home"
+rewrite = true

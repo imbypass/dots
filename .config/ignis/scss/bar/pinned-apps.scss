@@ -1,6 +1,6 @@
 .pinned-app {
     padding: 0.3rem;
-    border-radius: 8px;
+    border-radius: 0; //8px;
     border: 2px solid $base01;
     background-color: $base01;
     transition: border-color 0.1s ease;

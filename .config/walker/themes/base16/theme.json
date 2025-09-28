@@ -68,11 +68,11 @@
           "input": {
             "h_align": "fill",
             "h_expand": true,
-            "icons": true
+            "icons": false
           },
           "prompt": {
             "h_align": "center",
-            "icon": "edit-find",
+            "icon": "",
             "name": "prompt",
             "pixel_size": 18,
             "theme": "",

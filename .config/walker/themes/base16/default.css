@@ -25,20 +25,21 @@ slider,
 
 #window {
     color: @base05;
+    opacity: 0.98;
 }
 
 #box {
-    border-radius: 10px;
+    border-radius: 0px;
     background: @base00;
     padding: 32px;
-    border: 2px solid @base01;
+    border: 2px solid @base03;
     box-shadow: 0 0 6px #000000ff;
 }
 
 #search {
-    background: @base01;
-    border: 2px solid @base02;
-    border-radius: 8px;
+    border-radius: 0px; /* box radius - 2 */
+    background: @base00;
+    border: 0px solid @base02;
     padding: 8px;
     margin-bottom: 16px;
 }
@@ -80,14 +81,15 @@ slider,
 }
 
 child {
-    padding: 10px;
-    border-radius: 8px;
+    padding: 12px;
+    border-radius: 0px;
+    color: @base04;
 }
 
 child:selected,
 child:hover {
-    background: @base01;
-    color: @base05;
+    /*background: @base01;*/
+    color: @base0A;
 }
 
 #icon {
@@ -100,7 +102,7 @@ child:hover {
 }
 
 #sub {
-    font-size: 0.925em;
+    font-size: 0; /* 0.925em; */
 }
 
 .activation #activationlabel {

@@ -63,7 +63,7 @@ class PopupBox(widgets.Box):
 class Notifications(widgets.Window):
     def __init__(self, monitor: int):
         super().__init__(
-            anchor=["right", "bottom"],
+            anchor=["right", "bottom", "top"],
             monitor=monitor,
             namespace=f"ignis_NOTIFICATION_POPUP_{monitor}",
             layer="top",
@@ -71,5 +71,5 @@ class Notifications(widgets.Window):
             visible=False,
             dynamic_input_region=True,
             css_classes=["rec-unset"],
-            style="min-width: 30rem;margin-right: 10px;margin-bottom: 10px;",
+            style="min-width: 30rem;margin-right: 10px;margin-top: 10px;",
         )

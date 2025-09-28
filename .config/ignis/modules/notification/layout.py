@@ -16,7 +16,7 @@ class ScreenshotLayout(widgets.Box):
                     content_fit="cover",
                     width=1920 // 7,
                     height=1080 // 7,
-                    style="border-radius: 1rem; background-color: black;",
+                    style="border-radius: 0rem; background-color: black;",
                 ),
                 widgets.Box(
                     homogeneous=True,
@@ -24,14 +24,14 @@ class ScreenshotLayout(widgets.Box):
                     spacing=10,
                     child=[
                         widgets.Button(
-                            child=widgets.Label(label="Upload"),
+                            child=widgets.Label(label="Upload to 0x0.st"),
                             css_classes=["notification-action"],
                             on_click=lambda x: asyncio.create_task(
                                 utils.exec_sh_async(f"harmonyctl upload {notification.icon}")
                             ),
                         ),
                         widgets.Button(
-                            child=widgets.Label(label="Close"),
+                            child=widgets.Label(label="Dismiss"),
                             css_classes=["notification-action"],
                             on_click=lambda x: notification.close(),
                         ),

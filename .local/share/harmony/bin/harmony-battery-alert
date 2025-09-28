@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+while true; do
+
+    BATTERY=$(cat /sys/class/power_supply/BAT0/capacity)
+    CHARGING=$(cat /sys/class/power_supply/BAT0/status)
+
+    if [ $BATTERY -lt 25 ] && [ $CHARGING == "Discharging" ]; then
+        notify-send -u normal "Low Battery (${BATTERY}%)" "Please connect to a charger to avoid\nany interruptions." -i ~/.local/share/harmony/logo.svg
+    fi
+    sleep 10
+
+done
