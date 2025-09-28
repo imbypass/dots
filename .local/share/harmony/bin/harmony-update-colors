@@ -8,4 +8,5 @@ printf "${BOLD}${BLUE}:: ${RESET}Generating colorscheme from wallpaper..\n"
 
 sleep 0.5
 
+harmony-reload spotify
 harmony-reload walker
