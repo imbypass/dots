@@ -261,22 +261,22 @@
       "show_icon_when_single": true,
       "entries": [
         {
-          "label": "   Record Screen",
+          "label": "    Record Screen",
           "icon2": "gpu-screen-recorder",
           "exec": "walker -H -m record"
         },
         {
-          "label": "󰸉   Wallpaper",
+          "label": "󰸉    Wallpaper",
           "icon2": "livewallpaper",
           "exec": "walker -n -m wallpaper"
         },
         {
-          "label": "   Style",
+          "label": "    Style",
           "icon2": "gnome-color-manager",
           "exec": "walker -n -m themes"
         },
         {
-          "label": "⏻   System",
+          "label": "⏻    System",
           "icon2": "boot",
           "exec": "walker -H -m power"
         }

@@ -14,9 +14,9 @@
         "base16.theme.css",
         "snippets.theme.css",
         "base16-system24.theme.css",
-        "base16-discord.theme.css",
         "base16-discord.extras.css",
-        "visual-refresh.theme.css"
+        "visual-refresh.theme.css",
+        "base16-discord.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": true,
@@ -832,7 +832,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1759021430016
+        "settingsSyncVersion": 1759040416147
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false

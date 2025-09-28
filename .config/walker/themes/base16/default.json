@@ -54,7 +54,7 @@
           "list": {
             "item": {
               "activation_label": {
-                "hide": false,
+                "hide": true,
                 "h_align": "fill",
                 "v_align": "fill",
                 "width": 20,
@@ -62,14 +62,14 @@
                 "y_align": 0.5
               },
               "icon": {
-                "pixel_size": 26,
+                "pixel_size": 28,
                 "theme": ""
               }
             },
             "margins": {
               "top": 8
             },
-            "max_height": 308,
+            "max_height": 320,
             "max_width": 250,
             "min_width": 250,
             "width": 250,

@@ -544,9 +544,19 @@ update_mirrors() {
 }
 update_colors() {
   printf "${BOLD}${BLUE}:: ${RESET}Generating colorscheme from wallpaper..\n"
-  /usr/bin/wal -sti ~/.local/share/wallpapers/wallpaper.png >/dev/null &
+  /usr/bin/wal -sti ~/.local/share/wallpapers/wallpaper.png --cols16 >/dev/null &
   /usr/bin/flavours generate dark ~/.local/share/wallpapers/wallpaper.png -s match-wallpaper >/dev/null &
   /usr/bin/flavours generate dark ~/.local/share/wallpapers/wallpaper.jpg -s match-wallpaper >/dev/null &
+
+  sleep 0.5
+  if [[ $(flavours current) = "pywal" ]]; then
+      change_colorscheme "pywal"
+  fi
+  if [[ $(flavours current) = "match-wallpaper" ]]; then
+      change_colorscheme "match-wallpaper"
+  fi
+
+
   reload_prompt "walker"
 }
 update_spotify() {

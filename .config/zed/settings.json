@@ -14,9 +14,9 @@
   "features": {
     "edit_prediction_provider": "zed"
   },
-  "ui_font_size": 15,
-  "buffer_font_size": 14,
-  "ui_font_family": "SF Compact Rounded",
+  "ui_font_size": 14,
+  "buffer_font_size": 13,
+  "ui_font_family": "Iosevka Nerd Font Propo",
   "buffer_font_family": "Iosevka Nerd Font Propo",
   "buffer_line_height": {
     "custom": 1.525

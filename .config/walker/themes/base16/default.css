@@ -93,11 +93,11 @@ child:hover {
 }
 
 #icon {
-    margin-right: 12px;
+    margin-right: 2rem;
 }
 
 #label {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
 }
 
