@@ -7,7 +7,7 @@ from ignis import utils
 class ScreenshotLayout(widgets.Box):
     def upload(self, notification: Notification):
         asyncio.create_task(
-            utils.exec_sh_async(f"harmonyctl upload {notification.icon}")
+            utils.exec_sh_async(f"harmony-upload {notification.icon}")
         )
         notification.close()
 
