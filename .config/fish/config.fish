@@ -8,7 +8,7 @@ if status is-interactive
     harmony-show-logo
     harmony-greeting
     echo ""
-    harmony-colors
+    harmony-show-colors
 end
 
 # Tab to complete a line

@@ -1,4 +1,5 @@
 #!/bin/bash
+source harmony-color-codes
 
 os=$(cat /etc/os-release | grep -E '^PRETTY_NAME=' | cut -d'"' -f2 | cut -d'=' -f2)
 

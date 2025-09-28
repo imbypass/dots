@@ -1,0 +1,11 @@
+#!/bin/bash
+source harmony-color-codes
+
+printf "${BOLD}${BLUE}:: ${RESET}Toggling blur..\n"
+HYPRBLUR=$(hyprctl getoption decoration:blur:enabled | awk 'NR==1{print $2}')
+if [ "$HYPRBLUR" = 0 ]; then
+    hyprctl keyword decoration:blur:enabled yes
+else
+    hyprctl keyword decoration:blur:enabled no
+fi
+hyprshade on vibrance >/dev/null

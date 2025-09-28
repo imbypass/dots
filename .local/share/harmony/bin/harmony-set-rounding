@@ -1,0 +1,12 @@
+#!/bin/bash
+source harmony-color-codes
+
+CONFIG="$HOME/.config/hypr/core/decoration/rounding.conf"
+
+if [[ ! "$1" =~ ^[0-9]+$ ]]; then
+    echo "Usage: $0 <number>"
+    echo "Example: $0 12"
+    exit 1
+fi
+
+sed -i "1s/^\$corner_radius = [0-9]*$/\$corner_radius = $1/" "$CONFIG"

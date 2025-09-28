@@ -1,0 +1,6 @@
+#!/bin/bash
+source harmony-color-codes
+
+git clone --single-branch --branch $1 https://github.com/archlinux/aur.git ~/Documents/aur_packages/$1
+cd ~/Documents/aur_packages/$1
+makepkg -si

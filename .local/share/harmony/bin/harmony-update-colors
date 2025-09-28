@@ -1,0 +1,17 @@
+#!/bin/bash
+source harmony-color-codes
+
+printf "${BOLD}${BLUE}:: ${RESET}Generating colorscheme from wallpaper..\n"
+/usr/bin/wal -sti ~/.local/share/wallpapers/wallpaper.png --cols16 >/dev/null &
+/usr/bin/flavours generate dark ~/.local/share/wallpapers/wallpaper.png -s match-wallpaper >/dev/null &
+/usr/bin/flavours generate dark ~/.local/share/wallpapers/wallpaper.jpg -s match-wallpaper >/dev/null &
+
+sleep 0.5
+if [[ $(flavours current) = "pywal" ]]; then
+    harmony-set-colors pywal
+fi
+if [[ $(flavours current) = "match-wallpaper" ]]; then
+    harmony-set-colors match-wallpaper
+fi
+
+harmony-reload walker

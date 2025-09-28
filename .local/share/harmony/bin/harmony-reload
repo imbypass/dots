@@ -1,0 +1,102 @@
+#!/bin/bash
+source harmony-color-codes
+
+case "$1" in
+    "")
+        printf "${BOLD}${BLUE}:: ${RESET}No service specified. Exiting..\n"
+    ;;
+    "all")
+        harmony-reload "gtk"
+        harmony-reload "hypr"
+        harmony-reload "ignis"
+        harmony-reload "walker"
+        harmony-reload "spotify"
+        harmony-reload "steam"
+        harmony-reload "nautilus"
+    ;;
+    "bongocat")
+        printf "${BOLD}${BLUE}:: ${RESET}Reloading bongocat..\n"
+        killall -9 bongocat >/dev/null
+        ~/.local/bin/bongocat & disown
+        harmony-reload "waybar"
+    ;;
+    "waybar")
+        if [ "$2" = "full" ]; then
+        printf "${BOLD}${BLUE}:: ${RESET}Reloading waybar (full)..\n"
+        killall -9 waybar >/dev/null
+        waybar &
+        disown
+        else
+        printf "${BOLD}${BLUE}:: ${RESET}Reloading waybar (partial)..\n"
+        killall -USR2 waybar >/dev/null
+        fi
+    ;;
+    "walker")
+        printf "${BOLD}${BLUE}:: ${RESET}Reloading walker service..\n"
+        killall -9 walker >/dev/null
+        walker --gapplication-service & disown
+    ;;
+    "nautilus")
+        printf "${BOLD}${BLUE}:: ${RESET}Reloading Nautilus..\n"
+        nautilus -q & disown
+    ;;
+    "mako")
+        printf "${BOLD}${BLUE}:: ${RESET}Reloading mako..\n"
+        sleep .5 && makoctl reload >/dev/null
+    ;;
+    "hypr")
+        printf "${BOLD}${BLUE}:: ${RESET}Reloading Hyprland..\n"
+        hyprctl reload >/dev/null
+    ;;
+    "swaync")
+        printf "${BOLD}${BLUE}:: ${RESET}Reloading swaync..\n"
+        swaync-client -rs >/dev/null
+    ;;
+    "hyprpanel")
+        printf "${BOLD}${BLUE}:: ${RESET}Reloading HyprPanel..\n"
+        killall -9 gjs >/dev/null
+        hyprpanel & disown
+    ;;
+    "ignis")
+        printf "${BOLD}${BLUE}:: ${RESET}Reloading Ignis..\n"
+        killall -9 ignis >/dev/null
+        ignis init & disown
+    ;;
+    "ghostty")
+        printf "${BOLD}${BLUE}:: ${RESET}Reloading Ghostty..\n"
+        killall -9 ghostty >/dev/null
+        ghostty \
+        --gtk-single-instance=true \
+        --quit-after-last-window-closed=false \
+        --initial-window=false & disown
+    ;;
+    "mconnect")
+        printf "${BOLD}${BLUE}:: ${RESET}Reloading mconnect..\n"
+        killall -9 mconnect >/dev/null
+        mconnect -d & disown
+    ;;
+    "gtk")
+    printf "${BOLD}${BLUE}:: ${RESET}Reloading gtk..\n"
+        cd ~/.themes/phocus && npm run build >/dev/null
+        gsettings set org.gnome.desktop.interface gtk-theme phocus_refresh >/dev/null
+        gsettings set org.gnome.desktop.interface gtk-theme phocus >/dev/null
+    ;;
+    "spotify")
+        printf "${BOLD}${BLUE}:: ${RESET}Reloading spicetify..\n"
+        killall -9 spotify > /dev/null
+        spicetify apply >/dev/null
+    ;;
+    "pcmanfm")
+        printf "${BOLD}${BLUE}:: ${RESET}Reloading pcmanfm..\n"
+        killall -9 pcmanfm-qt >/dev/null
+        pcmanfm-qt --desktop & disown
+    ;;
+    "steam")
+        printf "${BOLD}${BLUE}:: ${RESET}Reloading Steam..\n"
+        sleep 2 && cd ~/.local/share/adwaita-steam/ && ./install.py \
+        --color-theme base16 \
+        --extras library/hide_whats_new \
+        --font zedmono \
+        --custom-css
+    ;;
+esac

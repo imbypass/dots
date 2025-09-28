@@ -1,0 +1,17 @@
+#!/bin/bash
+source harmony-color-codes
+
+clear
+echo ""
+harmony-show-logo
+
+printf "${BOLD}${BLUE}:: ${RESET}Running system update..\n"
+printf " ${YELLOW}==> ${NC}Checking for official package updates..${RESET}\n"
+sudo pacman -Syu --noconfirm
+printf " ${YELLOW}==> ${NC}Checking for AUR updates..${RESET}\n"
+paru --noconfirm
+printf " ${YELLOW}==> ${NC}Checking for flatpak updates..${RESET}\n"
+yes | flatpak update
+notify-send -u low -a Hyprland -t 3500 "Harmony" "System update completed!" -i ~/.local/share/harmony/logo.svg
+
+harmony-show-done

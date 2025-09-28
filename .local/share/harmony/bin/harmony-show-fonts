@@ -1,0 +1,5 @@
+#!/bin/bash
+source harmony-color-codes
+
+printf "${BOLD}${BLUE}:: ${RESET}Listing installed fonts..\n"
+fc-list | grep -ioE ": [^:]*$1[^:]+:" | sed -E 's/(^: |:)//g' | tr , \\n | sort | uniq

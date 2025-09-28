@@ -1,0 +1,6 @@
+#!/bin/bash
+source harmony-color-codes
+
+printf "${BOLD}${BLUE}:: ${RESET}Toggling all floating windows..\n"
+notify-send -u normal -a Hyprland -t 3500 "Harmony" "Toggled Window Tiling" -i ~/.local/share/harmony/logo.svg
+hyprctl dispatch workspaceopt allfloat >/dev/null

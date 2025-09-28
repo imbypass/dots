@@ -43,13 +43,7 @@
       "theme": "base16/applications"
     },
     "bookmarks": {
-      "entries": [
-        {
-          "keywords": ["walker", "github"],
-          "label": "Walker",
-          "url": "https://github.com/abenz1267/walker"
-        }
-      ],
+      "entries": [],
       "icon": "bookmark",
       "name": "bookmarks",
       "placeholder": "Bookmarks",
@@ -160,11 +154,6 @@
         {
           "name": "Google",
           "url": "https://www.google.com/search?q=%TERM%"
-        },
-        {
-          "name": "Elden Ring Wiki",
-          "switcher_only": true,
-          "url": "https://eldenring.wiki.fextralife.com/Elden+Ring+Wiki#gsc.tab=0&gsc.q=%TERM%&gsc.sort="
         }
       ],
       "icon": "applications-internet",
@@ -276,14 +265,41 @@
           "exec": "walker -n -m themes"
         },
         {
+          "label": "󰚰    Update",
+          "icon2": "boot",
+          "exec": "walker -n -m update"
+        },
+        {
           "label": "    About",
           "icon2": "boot",
-          "exec": "foot -e bash -c harmony-about"
+          "exec": "foot -a Harmony -e bash -c harmony-about"
         },
         {
           "label": "⏻    System",
           "icon2": "boot",
           "exec": "walker -H -m power"
+        }
+      ]
+    },
+    {
+      "name": "update",
+      "search": false,
+      "placeholder": "Go..",
+      "theme": "base16/default_slim",
+      "switcher_only": true,
+      "keep_sort": true,
+      "recalculate_score": true,
+      "show_icon_when_single": true,
+      "entries": [
+        {
+          "label": "󰚰    System",
+          "icon2": "boot",
+          "exec": "foot -a Harmony -e bash -c harmony-update-system"
+        },
+        {
+          "label": "    Mirrors",
+          "icon2": "boot",
+          "exec": "foot -a Harmony -e bash -c harmony-update-mirrors"
         }
       ]
     },
@@ -317,6 +333,11 @@
       "recalculate_score": true,
       "show_icon_when_single": true,
       "entries": [
+        {
+          "label": "󰑓   Reload",
+          "icon2": "system-shutdown",
+          "exec": "harmony-reload all"
+        },
         {
           "label": "   Shutdown",
           "icon2": "system-shutdown",

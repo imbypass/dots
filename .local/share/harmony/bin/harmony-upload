@@ -1,0 +1,5 @@
+#!/bin/bash
+source harmony-color-codes
+
+wl-paste | up -t $1 | wl-copy
+notify-send -u normal -a hyprshot -t 3500 "0x0.st" "Image uploaded and copied to clipboard." -i ~/.local/share/harmony/logo.svg

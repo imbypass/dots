@@ -11,5 +11,5 @@ while walls= read -r path; do
   name=${name//-/ }
   name=${name//   / }
 
-  printf "image=$path;label=${name};exec=harmonyctl wp $path &;\n"
+  printf "image=$path;label=${name};exec=harmony-set-wallpaper $path &;\n"
 done <<<"$list"

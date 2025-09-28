@@ -1,0 +1,27 @@
+#!/bin/bash
+source harmony-color-codes
+
+# save the wallpaper to the global wallpaper file
+if [[ $1 == *.mp4 ]]; then
+	 ffmpeg -i $1 -ss 00:00:01.000 -vframes 1 /home/bypass/.local/share/wallpapers/tmp.png
+	 mv /home/bypass/.local/share/wallpapers/tmp.png /home/bypass/.local/share/wallpapers/.wallpaper
+	 rm /home/bypass/.local/share/wallpapers/tmp.png
+else
+	cp $1 /home/bypass/.local/share/wallpapers/.wallpaper
+fi
+
+# create visible versions with extensions for other tools
+cp /home/bypass/.local/share/wallpapers/.wallpaper /home/bypass/.local/share/wallpapers/wallpaper.png
+cp /home/bypass/.local/share/wallpapers/.wallpaper /home/bypass/.local/share/wallpapers/wallpaper.jpg
+
+# set wallpaper
+yinctl --pause
+yinctl --color 030305
+notify-send -u normal -a Hyprland -t 3500 "Harmony" "Setting wallpaper.." -i ~/.local/share/harmony/logo.svg
+yinctl --img $1
+yinctl --play
+
+# update dynamic color scheme
+harmony-update-colors
+harmony-reload "ignis"
+harmony-reload "walker"

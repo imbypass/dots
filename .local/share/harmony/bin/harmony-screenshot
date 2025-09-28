@@ -1,0 +1,33 @@
+#!/bin/bash
+source harmony-color-codes
+
+TIMESTAMP=$(date +%d%m%Y_%H%M%S)
+FILENAME="screenshot_${TIMESTAMP}.png"
+
+case "$1" in
+    "")
+        hyprshot -m region -z -f ${FILENAME}
+    ;;
+    "region")
+        hyprshot -m region -z -f ${FILENAME}
+    ;;
+    "--region")
+        hyprshot -m region -z -f ${FILENAME}
+    ;;
+    "screen")
+        hyprshot -m output -z -f ${FILENAME}
+    ;;
+    "--screen")
+        hyprshot -m output -z -f ${FILENAME}
+    ;;
+    "window")
+        hyprshot -m window -z -f ${FILENAME}
+    ;;
+    "--window")
+        hyprshot -m window -z -f ${FILENAME}
+    ;;
+esac
+
+if [[ -f "${SCREENSHOTS_DIR}/${FILENAME}" ]]; then
+    canberra-gtk-play -i camera-shutter
+fi

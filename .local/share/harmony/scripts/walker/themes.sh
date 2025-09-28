@@ -10,5 +10,5 @@ while themes= read -r theme; do
     disp=($name);
     name=${disp[@]^};
 
-    printf "label=${name};exec=harmonyctl colors $theme\n"
+    printf "label=${name};exec=harmony-set-colors $theme\n"
 done <<< "$list"

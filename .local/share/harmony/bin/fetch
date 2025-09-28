@@ -28,4 +28,4 @@ printf "
    c(${r}\"${w})(${r}\"${w})    ${m}rs   ${w}${rs}
 
 "
-harmony-colors
+harmony-show-colors

@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/bash
+source harmony-color-codes
 
 s='\e[0;7m';  e='\e[0;m'; d='  ';
 r='\e[0;31m'; g='\e[0;32m'; b='\e[0;34m';

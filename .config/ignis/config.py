@@ -69,7 +69,7 @@ def harmony_icon() -> widgets.Button:
 def power_icon() -> widgets.Box:
     return widgets.EventBox(
         css_classes=["indicators", "indicators-power"],
-        on_click=lambda x: create_exec_task("walker -H -m mainmenu"),
+        on_click=lambda x: create_exec_task("walker -m mainmenu"),
         tooltip_text="Power Menu",
         child=[
             widgets.Label(

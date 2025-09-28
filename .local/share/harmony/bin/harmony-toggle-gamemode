@@ -1,0 +1,23 @@
+#!/bin/bash
+source harmony-color-codes
+
+printf "${BOLD}${BLUE}:: ${RESET}Toggling game mode..\n"
+HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
+OS=$(cat /etc/os-release | grep -E '^PRETTY_NAME=' | cut -d'"' -f2 | cut -d'=' -f2)
+if [ "$HYPRGAMEMODE" = 1 ]; then
+    notify-send -u normal -a Hyprland -t 3500 "Harmony" "Game Mode Enabled" -i ~/.local/share/harmony/logo.svg
+    hyprctl --batch "\
+                keyword animations:enabled 0;\
+                keyword decoration:drop_shadow 0;\
+                keyword decoration:blur:enabled 0;\
+                keyword general:gaps_in 0;\
+                keyword general:gaps_out 0;\
+                keyword general:border_size 1;\
+                keyword decoration:rounding 0" >/dev/null
+    exit
+else
+    notify-send -u normal -a Hyprland -t 3500 "Harmony" "Game Mode Disabled" -i ~/.local/share/harmony/logo.svg
+fi
+
+hyprctl reload >/dev/null
+harmony-reload ignis

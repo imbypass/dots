@@ -1,0 +1,12 @@
+#!/bin/bash
+source harmony-color-codes
+
+clear
+echo ""
+harmony-show-logo
+
+printf "${BOLD}${BLUE}:: ${RESET}Updating mirrors..\n"
+sudo reflector --verbose --country US --latest 8 --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist >/dev/null
+notify-send -u low -a Hyprland -t 3500 "Harmony" "Mirrors updated!" -i ~/.local/share/harmony/logo.svg
+
+harmony-show-done

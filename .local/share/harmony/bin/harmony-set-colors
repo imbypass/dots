@@ -1,0 +1,7 @@
+#!/bin/bash
+source harmony-color-codes
+
+harmony-show-logo
+flavours apply $1
+flavours -c ~/.config/flavours/papirus-icons.toml apply $1
+notify-send -u normal -i ~/.local/share/harmony/logo.svg -a hyprland -t 3550 Harmony "Theme changed!"
