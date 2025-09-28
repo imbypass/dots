@@ -268,7 +268,7 @@
         {
           "label": "󰸉   Wallpaper",
           "icon2": "livewallpaper",
-          "exec": "walker -m wallpaper"
+          "exec": "walker -n -m wallpaper"
         },
         {
           "label": "   Style",
