@@ -2,9 +2,8 @@ pyenv init - fish | source
 
 # Interactive shell settings
 if status is-interactive
-    set fish_tmux_autostart true
+    set fish_tmux_autostart false
     set fish_tmux_autoname_session true
-    echo ""
     harmony-show-logo
     harmony-greeting
     echo ""

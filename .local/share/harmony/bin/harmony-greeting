@@ -29,8 +29,7 @@ y='\033[0;33m'
 m='\033[0;35m'
 w='\033[0;38m'
 
-printf "
-           ${c}${USER}@${HOSTNAME}
+printf "           ${c}${USER}@${HOSTNAME}
            ${r}os  ${w}${os}
  (\\ /)     ${g}wm  ${w}${wm}
  (. .)/    ${y}sh  ${w}${sh}
