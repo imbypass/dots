@@ -15,8 +15,8 @@
 - Notifications → [mako](https://github.com/imbypass/dots/tree/main/.config/mako)
 
 ## Preview
-![image](https://0x0.st/KHvn.png)
-![image](https://0x0.st/KHv5.png)
-![image](https://0x0.st/KHvR.png)
+![image](https://0x0.st/KBP8.png)
+![image](https://0x0.st/KBPM.png)
+![image](https://0x0.st/KBPQ.png)
 
 ###### There is no real work done to make this installable. Your best off just downloading and using individual parts.

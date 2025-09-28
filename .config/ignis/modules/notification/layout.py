@@ -5,6 +5,13 @@ from ignis import utils
 
 
 class ScreenshotLayout(widgets.Box):
+    def upload(self, notification: Notification):
+        asyncio.create_task(
+            utils.exec_sh_async(f"harmonyctl upload {notification.icon}")
+        )
+        notification.close()
+
+
     def __init__(self, notification: Notification) -> None:
         super().__init__(
             vertical=True,
@@ -26,9 +33,7 @@ class ScreenshotLayout(widgets.Box):
                         widgets.Button(
                             child=widgets.Label(label="Upload to 0x0.st"),
                             css_classes=["notification-action"],
-                            on_click=lambda x: asyncio.create_task(
-                                utils.exec_sh_async(f"harmonyctl upload {notification.icon}")
-                            ),
+                            on_click=lambda x: self.upload(notification),
                         ),
                         widgets.Button(
                             child=widgets.Label(label="Dismiss"),

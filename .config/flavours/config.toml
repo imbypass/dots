@@ -210,3 +210,11 @@ file = "~/.config/waybar/base16.css"
 template = "waybar"
 rewrite = true
 hook = "sleep .5 &&  ~/.local/share/harmony/bin/harmonyctl reload waybar"
+
+### CAVA ###
+[[items]]
+file = "~/.config/cava/config"
+template = "cava"
+rewrite = false
+start = "[color]"
+end = "[smoothing]"
