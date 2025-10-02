@@ -25,8 +25,9 @@ slider,
 
 #window {
     color: @base05;
-    margin-left: 49px;
-    margin-bottom: 8px;
+    opacity: 0.98;
+    /*margin-left: 49px;
+    margin-bottom: 8px;*/
 }
 
 #box {
@@ -34,7 +35,7 @@ slider,
     border-radius: 0px;
     background: @base00;
     padding: 8px;
-    border: 2px solid @base02;
+    border: 2px solid @base0B;
     box-shadow:
         0px 1px 1px rgba(0, 0, 0, 0.2),
         0px 1px 1px rgba(0, 0, 0, 0.2);
@@ -44,11 +45,11 @@ slider,
 }
 
 #search {
-    background: @base02;
-    border: 2px solid @base02;
-    border-radius: 0px;
-    padding: 4px;
+    padding: 8px;
     margin: 4px;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 0px; /* box radius - 2 */
+    border: 0px solid @base02;
 }
 
 #prompt {
@@ -84,7 +85,7 @@ slider,
 }
 
 #input placeholder {
-    opacity: 0.5;
+    opacity: 0.75;
     color: @base05;
 }
 
@@ -121,6 +122,7 @@ child:hover {
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 200px;
+    color: @base05;
 }
 
 #sub {

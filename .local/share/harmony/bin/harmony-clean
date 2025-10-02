@@ -1,8 +1,0 @@
-#!/bin/bash
-source harmony-color-codes
-
-printf "${BOLD}${BLUE}:: ${RESET}Removing orphaned packages..\n"
-sudo pacman -Rns $(pacman -Qdtq) --noconfirm >/dev/null
-
-printf "${BOLD}${BLUE}:: ${RESET}Clearing package cache..\n"
-yes | paru -Sc --noconfirm > /dev/null

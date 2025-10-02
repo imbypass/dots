@@ -1,12 +1,10 @@
 #!/bin/bash
 source harmony-color-codes
 
-printf "${BOLD}${BLUE}:: ${RESET}Generating colorscheme from wallpaper..\n"
-/usr/bin/wal -sti ~/.local/share/wallpapers/wallpaper.png --cols16 >/dev/null &
-/usr/bin/flavours generate dark ~/.local/share/wallpapers/wallpaper.png -s match-wallpaper >/dev/null &
-/usr/bin/flavours generate dark ~/.local/share/wallpapers/wallpaper.jpg -s match-wallpaper >/dev/null &
+/usr/bin/wal -nsti ~/.local/share/wallpapers/wallpaper.png --cols16 > /dev/null 2>&1
+/usr/bin/flavours generate dark ~/.local/share/wallpapers/wallpaper.png -s match-wallpaper > /dev/null 2>&1
+/usr/bin/flavours generate dark ~/.local/share/wallpapers/wallpaper.jpg -s match-wallpaper > /dev/null 2>&1
+
+harmony-reload walker
 
 sleep 0.5
-
-harmony-reload spotify
-harmony-reload walker

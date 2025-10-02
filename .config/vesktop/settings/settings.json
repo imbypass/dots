@@ -12,11 +12,10 @@
         "EmojiReplace.theme.css",
         "settings-icons.theme.css",
         "base16.theme.css",
-        "snippets.theme.css",
         "base16-system24.theme.css",
         "base16-discord.extras.css",
-        "visual-refresh.theme.css",
-        "base16-discord.theme.css"
+        "base16-discord.pywal.css",
+        "snippets.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": true,
@@ -255,10 +254,10 @@
             "ignoreSelf": true,
             "ignoreUsers": "786906691639050250,673256656733339668,261292198979436544,953042156984086588",
             "ignoreChannels": "",
-            "ignoreGuilds": "",
+            "ignoreGuilds": "399812551963049995",
             "logEdits": true,
             "logDeletes": true,
-            "collapseDeleted": false,
+            "collapseDeleted": true,
             "inlineEdits": true
         },
         "MessageTags": {
@@ -583,7 +582,7 @@
             "enabled": false
         },
         "VencordToolbox": {
-            "enabled": true
+            "enabled": false
         },
         "ViewIcons": {
             "enabled": true,
@@ -832,7 +831,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1759040416147
+        "settingsSyncVersion": 1759367909902
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false

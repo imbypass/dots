@@ -10,7 +10,7 @@ from ignis import utils
 from ignis.app import IgnisApp
 from ignis.css_manager import CssManager, CssInfoPath
 from ignis.menu_model import IgnisMenuModel, IgnisMenuItem, IgnisMenuSeparator
-from ignis.services.audio import AudioService
+from ignis.services.audio import AudioService, Stream
 from ignis.services.system_tray import SystemTrayService, SystemTrayItem
 from ignis.services.hyprland import HyprlandService, HyprlandWorkspace
 from ignis.services.mpris import MprisService, MprisPlayer
@@ -21,20 +21,21 @@ from ignis.services.upower import UPowerService
 from modules.apps import Apps
 from modules.battery import Battery
 from modules.borders import Borders
-from modules.launcher import Launcher
+# from modules.launcher import Launcher
 from modules.network import Network
 from modules.notifications import Notifications
 from modules.workspaces import Workspaces
-from modules.osd import OSD
+from modules.osd_speaker import OSD_Speaker
+from modules.osd_microphone import OSD_Microphone
 
-css_manager = CssManager.get_default()
 audio = AudioService.get_default()
-system_tray = SystemTrayService.get_default()
+css_manager = CssManager.get_default()
 hyprland = HyprlandService.get_default()
 mpris = MprisService.get_default()
 network = NetworkService.get_default()
-window_manager = WindowManager.get_default()
+# system_tray = SystemTrayService.get_default()
 upower = UPowerService.get_default()
+window_manager = WindowManager.get_default()
 
 css_manager.apply_css(
     CssInfoPath(
@@ -47,14 +48,6 @@ css_manager.apply_css(
 def create_exec_task(cmd: str) -> None:
     asyncio.create_task(utils.exec_sh_async(cmd))
 
-def scroll_volume(direction: str) -> None:
-    if direction == "up":
-        create_exec_task("pamixer -d 1")
-    elif direction == "down":
-        create_exec_task("pamixer -i 1")
-    else:
-        raise ValueError("Invalid direction")
-
 def harmony_icon() -> widgets.Button:
     return widgets.Button(
         child=widgets.Icon(
@@ -63,7 +56,7 @@ def harmony_icon() -> widgets.Button:
             css_classes=["harmony-icon"],
         ),
         on_click=lambda x: create_exec_task("walker -n"),
-        on_right_click=lambda x: create_exec_task("~/.local/share/harmony/bin/harmonyctl expose"),
+        on_right_click=lambda x: create_exec_task("harmony-expose"),
     )
 
 def power_icon() -> widgets.Box:
@@ -107,6 +100,15 @@ def clock() -> widgets.EventBox:
     )
     clock_box.set_orientation(1)
     return clock_box
+
+
+def scroll_volume(direction: str) -> None:
+    if direction == "up":
+        create_exec_task("pamixer -d 1")
+    elif direction == "down":
+        create_exec_task("pamixer -i 1")
+    else:
+        raise ValueError("Invalid direction")
 
 def speaker_volume() -> widgets.Box:
     return widgets.EventBox(
@@ -173,6 +175,9 @@ def tray():
     return tray_box
 
 
+
+
+
 def left(monitor_name: str) -> widgets.Box:
     left = widgets.Box(
         child=[
@@ -233,13 +238,13 @@ def bar(monitor_id: int = 0) -> widgets.Window:
 
 
 # this will display bar on all monitors
-for i in range(utils.get_n_monitors()):
-    bar(i)
-
+# for i in range(utils.get_n_monitors()):
+    # bar(i)
 
 for monitor in range(utils.get_n_monitors()):
     Notifications(monitor)
 
-OSD()
-Launcher()
+# Launcher()
+OSD_Speaker()
+OSD_Microphone()
 # Borders()

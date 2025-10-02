@@ -12,7 +12,7 @@
     background-alt: #2e1622FF;
     foreground:     #c7cac2FF;
     selected:       #452536FF;
-    active:         #d4a882FF;
+    active:         #f29b9aFF;
     urgent:         #ef6374FF;
     border-color:   #452536FF;
 }

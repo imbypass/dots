@@ -1,0 +1,77 @@
+#!/bin/bash
+source harmony-color-codes
+
+if [ -z "$1" ]; then
+  exit 1
+fi
+
+CONFIG_FILE="$1"
+FILE_PARENT_FOLDER=$(dirname "$CONFIG_FILE")
+PARENT_FOLDER_NAME=$(basename "$FILE_PARENT_FOLDER")
+
+config_parse_color() {
+    local key="$1"
+    grep "^$key" "$CONFIG_FILE" | \
+        head -1 | \
+        awk -F'=' '{print $2}' | \
+        tr -d ' ' | \
+        sed 's/^#//'
+}
+
+fg=$(config_parse_color "foreground")
+bg=$(config_parse_color "background")
+
+color0=$(grep "^palette = 0=" "$CONFIG_FILE" | awk -F'=' '{print $3}' | tr -d ' ' | sed 's/^#//')
+color1=$(grep "^palette = 1=" "$CONFIG_FILE" | awk -F'=' '{print $3}' | tr -d ' ' | sed 's/^#//')
+color2=$(grep "^palette = 2=" "$CONFIG_FILE" | awk -F'=' '{print $3}' | tr -d ' ' | sed 's/^#//')
+color3=$(grep "^palette = 3=" "$CONFIG_FILE" | awk -F'=' '{print $3}' | tr -d ' ' | sed 's/^#//')
+color4=$(grep "^palette = 4=" "$CONFIG_FILE" | awk -F'=' '{print $3}' | tr -d ' ' | sed 's/^#//')
+color5=$(grep "^palette = 5=" "$CONFIG_FILE" | awk -F'=' '{print $3}' | tr -d ' ' | sed 's/^#//')
+color6=$(grep "^palette = 6=" "$CONFIG_FILE" | awk -F'=' '{print $3}' | tr -d ' ' | sed 's/^#//')
+color7=$(grep "^palette = 7=" "$CONFIG_FILE" | awk -F'=' '{print $3}' | tr -d ' ' | sed 's/^#//')
+color8=$(grep "^palette = 8=" "$CONFIG_FILE" | awk -F'=' '{print $3}' | tr -d ' ' | sed 's/^#//')
+color9=$(grep "^palette = 9=" "$CONFIG_FILE" | awk -F'=' '{print $3}' | tr -d ' ' | sed 's/^#//')
+color10=$(grep "^palette = 10=" "$CONFIG_FILE" | awk -F'=' '{print $3}' | tr -d ' ' | sed 's/^#//')
+color11=$(grep "^palette = 11=" "$CONFIG_FILE" | awk -F'=' '{print $3}' | tr -d ' ' | sed 's/^#//')
+color12=$(grep "^palette = 12=" "$CONFIG_FILE" | awk -F'=' '{print $3}' | tr -d ' ' | sed 's/^#//')
+color13=$(grep "^palette = 13=" "$CONFIG_FILE" | awk -F'=' '{print $3}' | tr -d ' ' | sed 's/^#//')
+color14=$(grep "^palette = 14=" "$CONFIG_FILE" | awk -F'=' '{print $3}' | tr -d ' ' | sed 's/^#//')
+color15=$(grep "^palette = 15=" "$CONFIG_FILE" | awk -F'=' '{print $3}' | tr -d ' ' | sed 's/^#//')
+
+base00=${bg:-000000}
+base01=${color8:-000000}
+base02=${color0:-000000}
+base03=${color8:-808080}
+base04=${color7:-808080}
+base05=${fg:-ffffff}
+base06=${color15:-ffffff}
+base07=${color15:-ffffff}
+base08=${color1:-ff0000}
+base09=${color9:-ff8800}
+base0A=${color3:-ffff00}
+base0B=${color2:-00ff00}
+base0C=${color6:-00ffff}
+base0D=${color4:-0000ff}
+base0E=${color5:-ff00ff}
+base0F=${color13:-ff0088}
+
+cat << EOF
+scheme: "$PARENT_FOLDER_NAME"
+author: "Omarchy Theme Port (Ghostty)"
+base00: "${base00}"
+base01: "${base01}"
+base02: "${base02}"
+base03: "${base03}"
+base04: "${base04}"
+base05: "${base05}"
+base06: "${base06}"
+base07: "${base07}"
+base08: "${base08}"
+base09: "${base09}"
+base0A: "${base0A}"
+base0B: "${base0B}"
+base0C: "${base0C}"
+base0D: "${base0D}"
+base0E: "${base0E}"
+base0F: "${base0F}"
+EOF

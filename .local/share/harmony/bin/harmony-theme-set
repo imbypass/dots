@@ -1,7 +1,6 @@
 #!/bin/bash
 source harmony-color-codes
 
-harmony-show-logo
 flavours apply $1
 flavours -c ~/.config/flavours/papirus-icons.toml apply $1
 harmony-update-colors

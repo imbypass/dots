@@ -32,7 +32,7 @@ slider,
     border-radius: 0px;
     background: @base00;
     padding: 32px;
-    border: 2px solid @base0A;
+    border: 2px solid @base0B;
     box-shadow: 0 0 6px #000000ff;
 }
 
@@ -90,7 +90,7 @@ child:selected,
 child:hover {
     /*background: @base01;*/
 
-    color: @base0A;
+    color: @base0B;
 }
 
 #icon {

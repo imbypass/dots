@@ -18,7 +18,7 @@ cp /home/bypass/.local/share/wallpapers/.wallpaper /home/bypass/.local/share/wal
 yinctl --pause
 yinctl --color 030305
 notify-send -u normal -a Hyprland -t 3500 "Harmony" "Setting wallpaper.." -i ~/.local/share/harmony/logo.svg
-yinctl --img $1
+yinctl --img $1 > /dev/null 2>&1
 yinctl --play
 
 # update dynamic color scheme

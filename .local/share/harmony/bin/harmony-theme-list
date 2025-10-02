@@ -1,0 +1,3 @@
+#!/bin/bash
+
+flavours list | tr ' ' '\n' | grep -v '^$' | sort

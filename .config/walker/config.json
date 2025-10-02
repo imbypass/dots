@@ -4,6 +4,8 @@
   },
   "app_launch_prefix": "",
   "as_window": false,
+  "hotreload_theme": true,
+  "force_keyboard_focus": true,
   "builtins": {
     "ai": {
       "anthropic": {
@@ -33,14 +35,15 @@
       "hide_actions_with_empty_query": true,
       "history": true,
       "name": "applications",
-      "placeholder": "Applications",
-      "prioritize_new": true,
+      "placeholder": " Search...",
+      "icon": "",
+      "prioritize_new": false,
       "refresh": true,
       "show_generic": true,
       "show_icon_when_single": true,
       "show_sub_when_single": true,
       "weight": 5,
-      "theme": "base16/applications"
+      "theme": "base16/default"
     },
     "bookmarks": {
       "entries": [],
@@ -64,10 +67,11 @@
       "image_height": 300,
       "max_entries": 3000,
       "name": "clipboard",
-      "placeholder": "Clipboard",
+      "placeholder": " Search...",
+      "icon": "",
       "switcher_only": true,
       "weight": 5,
-      "theme": "base16/popup"
+      "theme": "base16/default_wide"
     },
     "commands": {
       "icon": "utilities-terminal",
@@ -85,7 +89,8 @@
     "dmenu": {
       "hidden": true,
       "name": "dmenu",
-      "placeholder": "Dmenu",
+      "placeholder": " Search...",
+      "icon": "",
       "switcher_only": true,
       "weight": 5
     },
@@ -94,7 +99,8 @@
       "history": true,
       "name": "emojis",
       "theme": "base16/popup",
-      "placeholder": "Emojis",
+      "placeholder": " Search...",
+      "icon": "",
       "show_unqualified": false,
       "switcher_only": true,
       "typeahead": true,
@@ -113,7 +119,9 @@
       "weight": 5
     },
     "hyprland_keybinds": {
-      "path": "~/.config/hypr/core/binds.conf"
+      "path": "~/.config/hypr/core/binds.conf",
+      "placeholder": " Search...",
+      "icon": ""
     },
     "runner": {
       "generic_entry": false,
@@ -187,8 +195,6 @@
     "on_query_change": "",
     "on_selection": ""
   },
-  "force_keyboard_focus": true,
-  "hotreload_theme": false,
   "keys": {
     "accept_typeahead": ["tab"],
     "activation_modifiers": {
@@ -223,7 +229,8 @@
   "plugins": [
     {
       "name": "wallpaper",
-      "placeholder": "Wallpapers",
+      "placeholder": " Search...",
+      "icon": "",
       "theme": "base16/wallpaper",
       "switcher_only": false,
       "refresh": true,
@@ -232,7 +239,8 @@
     },
     {
       "name": "themes",
-      "placeholder": "Color Schemes",
+      "placeholder": " Search...",
+      "icon": "",
       "theme": "base16/default_slim",
       "switcher_only": false,
       "refresh": true,
@@ -240,9 +248,20 @@
       "parser": "kv"
     },
     {
+      "name": "fonts",
+      "placeholder": " Search...",
+      "icon": "",
+      "theme": "base16/default_slim",
+      "switcher_only": false,
+      "refresh": true,
+      "src": "bash -c ~/.local/share/harmony/scripts/walker/fonts.sh",
+      "parser": "kv"
+    },
+    {
       "name": "mainmenu",
       "search": false,
       "placeholder": "Go..",
+      "icon": "",
       "theme": "base16/default_slim",
       "switcher_only": true,
       "keep_sort": true,
@@ -250,34 +269,57 @@
       "show_icon_when_single": true,
       "entries": [
         {
-          "label": "    Record",
-          "icon2": "gpu-screen-recorder",
-          "exec": "walker -H -m record"
+          "label": "    Apps",
+          "exec": "walker -m applications"
         },
         {
-          "label": "󰸉    Wallpaper",
-          "icon2": "livewallpaper",
-          "exec": "walker -n -m wallpaper"
+          "label": "    Record",
+          "exec": "harmony-record"
         },
         {
           "label": "    Style",
-          "icon2": "gnome-color-manager",
-          "exec": "walker -n -m themes"
+          "exec": "walker -n -m style"
         },
         {
           "label": "󰚰    Update",
-          "icon2": "boot",
           "exec": "walker -n -m update"
         },
         {
           "label": "    About",
-          "icon2": "boot",
           "exec": "foot -a Harmony -e bash -c harmony-about"
         },
         {
           "label": "⏻    System",
-          "icon2": "boot",
           "exec": "walker -H -m power"
+        }
+      ]
+    },
+    {
+      "name": "style",
+      "search": false,
+      "placeholder": "Go..",
+      "icon": "",
+      "theme": "base16/default_slim",
+      "switcher_only": true,
+      "keep_sort": true,
+      "recalculate_score": true,
+      "show_icon_when_single": true,
+      "entries": [
+        {
+          "label": "󰸉    Wallpaper",
+          "exec": "walker -n -m wallpaper"
+        },
+        {
+          "label": "    Theme",
+          "exec": "walker -n -m themes"
+        },
+        {
+          "label": "    Font",
+          "exec": "walker -n -m fonts"
+        },
+        {
+          "label": "    Install",
+          "exec": "foot -a Harmony -e bash -c harmony-theme-install"
         }
       ]
     },
@@ -285,6 +327,7 @@
       "name": "update",
       "search": false,
       "placeholder": "Go..",
+      "icon": "",
       "theme": "base16/default_slim",
       "switcher_only": true,
       "keep_sort": true,
@@ -293,34 +336,11 @@
       "entries": [
         {
           "label": "󰚰    System",
-          "icon2": "boot",
           "exec": "foot -a Harmony -e bash -c harmony-update-system"
         },
         {
           "label": "    Mirrors",
-          "icon2": "boot",
           "exec": "foot -a Harmony -e bash -c harmony-update-mirrors"
-        }
-      ]
-    },
-    {
-      "name": "record",
-      "theme": "base16/default_slim",
-      "search": false,
-      "switcher_only": true,
-      "keep_sort": true,
-      "recalculate_score": true,
-      "show_icon_when_single": true,
-      "entries": [
-        {
-          "label": "   Start Recording",
-          "icon2": "media-playback-start",
-          "exec": "~/.local/share/harmony/bin/harmony-record start --noaudio"
-        },
-        {
-          "label": "   Stop Recording",
-          "icon2": "media-playback-stop",
-          "exec": "~/.local/share/harmony/bin/harmony-record stop"
         }
       ]
     },
@@ -335,27 +355,22 @@
       "entries": [
         {
           "label": "󰑓   Reload",
-          "icon2": "system-shutdown",
           "exec": "harmony-reload all"
         },
         {
           "label": "   Shutdown",
-          "icon2": "system-shutdown",
           "exec": "shutdown now"
         },
         {
           "label": "󰜉   Restart (Full)",
-          "icon2": "system-reboot",
           "exec": "reboot"
         },
         {
           "label": "󰜉   Restart (Soft)",
-          "icon2": "system-reboot",
           "exec": "systemctl soft-reboot"
         },
         {
           "label": "   Lock Screen",
-          "icon2": "system-log-out",
           "exec": "hyprlock"
         }
       ]

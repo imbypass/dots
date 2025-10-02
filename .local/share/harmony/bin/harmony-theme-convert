@@ -1,0 +1,57 @@
+#!/bin/bash
+source harmony-color-codes
+
+THEME_NAME="$1"
+THEMES_DIR="$HOME/.config/harmony/themes"
+THEME_PATH="$THEMES_DIR/$THEME_NAME"
+
+if [ -z "$THEME_NAME" ]; then
+  echo "No theme name provided. Exiting.."
+  exit 1
+fi
+
+if [ ! -d "$THEME_PATH" ]; then
+  echo "Theme not found. Exiting.."
+  exit 1
+fi
+
+USABLE_FILES=("alacritty.toml" "kitty.conf" "ghostty.conf")
+for file in "${USABLE_FILES[@]}"; do
+    if [ -f "$THEME_PATH/$file" ]; then
+        NEW_NAME="omarchy-$THEME_NAME"
+
+        if [ "$file" == "ghostty.conf" ]; then
+            harmony-theme-parse-ghostty "$THEME_PATH/$file" > "$HOME/.local/share/flavours/base16/schemes/omarchy/${NEW_NAME}.yaml"
+            break
+        elif [ "$file" == "kitty.conf" ]; then
+            harmony-theme-parse-kitty "$THEME_PATH/$file" > "$HOME/.local/share/flavours/base16/schemes/omarchy/${NEW_NAME}.yaml"
+            break
+        elif [ "$file" == "alacritty.toml" ]; then
+            harmony-theme-parse-alacritty "$THEME_PATH/$file" > "$HOME/.local/share/flavours/base16/schemes/omarchy/${NEW_NAME}.yaml"
+            break
+        fi
+    fi
+done
+
+FIRST_WALLPAPER=""
+for file in "$THEME_PATH/backgrounds"/*; do
+    if [ -f "$file" ]; then
+        if [ "$FIRST_WALLPAPER" == "" ]; then
+            FIRST_WALLPAPER=$(basename "$file")
+        fi
+
+        FILE_NAME=$(basename "$file")
+        cp -f "$file" "$HOME/.local/share/wallpapers/omarchy/omarchy-$THEME_NAME-$FILE_NAME"
+    fi
+done
+
+rm -rf "$THEME_PATH"
+
+if [ -v FIRST_WALLPAPER ]; then
+    harmony-theme-set-wallpaper "$HOME/.local/share/wallpapers/omarchy/omarchy-$THEME_NAME-$FIRST_WALLPAPER"
+fi
+
+harmony-theme-set "$NEW_NAME"
+harmony-show-done
+
+exit 0

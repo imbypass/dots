@@ -1,5 +1,4 @@
 #!/bin/bash
 source harmony-color-codes
 
-fastfetch
-harmony-show-done
+harmony-reload walker

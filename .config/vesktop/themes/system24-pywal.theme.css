@@ -45,8 +45,8 @@ body {
     /* dms button options */
     --custom-dms-icon: off; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
     --dms-icon-svg-url: url("https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg"); /* icon svg url. MUST BE A SVG. */
-    --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
-    --dms-icon-color-before: var(--base05); /* normal icon color */
+    --dms-icon-svg-size: 80%; /* size of the svg (css mask-size property) */
+    --dms-icon-color-before: var(--base03); /* normal icon color */
     --dms-icon-color-after: var(
         --base01
     ); /* icon color when button is hovered/selected */
@@ -66,7 +66,7 @@ body {
 
     /* transparency/blur options */
     /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
-    --transparency-tweaks: off; /* off: no changes, on: remove some elements for better transparency */
+    --transparency-tweaks: on; /* off: no changes, on: remove some elements for better transparency */
     --remove-bg-layer: off; /* off: no changes, on: remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
     --panel-blur: off; /* off: no changes, on: blur the background of panels */
     --blur-amount: 12px; /* amount of blur */
@@ -82,11 +82,11 @@ body {
 
     /* styling options */
     --custom-spotify-bar: on; /* off: default, on: custom text-like spotify progress bar */
-    --ascii-titles: on; /* off: default, on: use ascii font for titles at the start of a channel */
+    --ascii-titles: off; /* off: default, on: use ascii font for titles at the start of a channel */
     --ascii-loader: system24; /* off: default, system24: use system24 ascii loader, cats: use cats loader */
 
     /* panel labels */
-    --panel-labels: on; /* off: default, on: add labels to panels */
+    --panel-labels: off; /* off: default, on: add labels to panels */
     --label-color: var(--text-muted); /* color of labels */
     --label-font-weight: 500; /* font weight of labels */
 }
@@ -96,17 +96,17 @@ body {
     --colors: on; /* off: discord default colors, on: midnight custom colors */
 
     /* text colors */
-    --text-0: var(--base03); /* text on colored elements */
+    --text-0: var(--base02); /* text on colored elements */
     --text-1: var(--base05); /* other normally white text */
     --text-2: var(--base04); /* headings and important text */
     --text-3: var(--base05); /* normal text */
-    --text-4: var(--base03); /* icon buttons and channels */
+    --text-4: var(--base02); /* icon buttons and channels */
     --text-5: var(--base01); /* muted channels/chats and timestamps */
 
     /* background and dark colors */
     --bg-1: var(--base01); /* dark buttons when clicked */
     --bg-2: var(--base02); /* dark buttons */
-    --bg-3: var(--base02); /* spacing, secondary elements */
+    --bg-3: var(--base03); /* spacing, secondary elements */
     --bg-4: var(--base00); /* main background color */
     --hover: var(--base01); /* channels and buttons when hovered */
     --active: var(--base03); /* channels and buttons when clicked or selected */
@@ -114,14 +114,12 @@ body {
     --message-hover: var(--base01); /* messages when hovered */
 
     /* accent colors */
-    --accent-1: hsl(2, 65%, 88%); /* links and other accent text */
+    --accent-1: var(--base03); /* links and other accent text */
     --accent-2: var(--base03); /* small accent elements */
     --accent-3: var(--base03); /* accent buttons */
     --accent-4: var(--base03); /* accent buttons when hovered */
     --accent-5: var(--base03); /* accent buttons when clicked */
-    --accent-new: var(
-        --base08
-    ); /* stuff that's normally red like mute/deafen buttons */
+    --accent-new: var(--base08); /* red buttons */
 
     --mention: linear-gradient(
         to right,
@@ -169,6 +167,12 @@ body {
     --red-4: var(--base08);
     --red-5: var(--base08);
 
+    --yellow-1: var(--base0A);
+    --yellow-2: var(--base0A);
+    --yellow-3: var(--base0A);
+    --yellow-4: var(--base0A);
+    --yellow-5: var(--base0A);
+
     --green-1: var(--base0B);
     --green-2: var(--base0B);
     --green-3: var(--base0B);
@@ -181,15 +185,9 @@ body {
     --blue-4: var(--base0D);
     --blue-5: var(--base0D);
 
-    --yellow-1: var(--base0A);
-    --yellow-2: var(--base0A);
-    --yellow-3: var(--base0A);
-    --yellow-4: var(--base0A);
-    --yellow-5: var(--base0A);
-
-    --purple-1: hsl(267, 57%, 83%);
-    --purple-2: #c4a7e7;
-    --purple-3: #c4a7e7;
-    --purple-4: hsl(267, 57%, 73%);
-    --purple-5: hsl(267, 57%, 68%);
+    --purple-1: var(--base0F);
+    --purple-2: var(--base0F);
+    --purple-3: var(--base0F);
+    --purple-4: var(--base0F);
+    --purple-5: var(--base0F);
 }

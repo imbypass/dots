@@ -4,10 +4,6 @@ pyenv init - fish | source
 if status is-interactive
     set fish_tmux_autostart false
     set fish_tmux_autoname_session true
-    harmony-show-logo
-    harmony-greeting
-    echo ""
-    harmony-show-colors
 end
 
 # Tab to complete a line

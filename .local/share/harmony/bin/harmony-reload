@@ -15,88 +15,83 @@ case "$1" in
         harmony-reload "nautilus"
     ;;
     "bongocat")
-        printf "${BOLD}${BLUE}:: ${RESET}Reloading bongocat..\n"
-        killall -9 bongocat >/dev/null
+
+        killall -9 bongocat > /dev/null 2>&1
         ~/.local/bin/bongocat & disown
         harmony-reload "waybar"
     ;;
     "waybar")
         if [ "$2" = "full" ]; then
-        printf "${BOLD}${BLUE}:: ${RESET}Reloading waybar (full)..\n"
-        killall -9 waybar >/dev/null
-        waybar &
-        disown
+
+            killall -9 waybar > /dev/null 2>&1
+            waybar > /dev/null 2>&1 &
+            disown
         else
-        printf "${BOLD}${BLUE}:: ${RESET}Reloading waybar (partial)..\n"
-        killall -USR2 waybar >/dev/null
+
+            killall -USR2 waybar > /dev/null 2>&1
         fi
     ;;
     "walker")
-        printf "${BOLD}${BLUE}:: ${RESET}Reloading walker service..\n"
-        killall -9 walker >/dev/null
-        walker --gapplication-service & disown
+
+        killall -9 walker > /dev/null 2>&1
+        walker --gapplication-service > /dev/null 2>&1 & disown
     ;;
     "nautilus")
-        printf "${BOLD}${BLUE}:: ${RESET}Reloading Nautilus..\n"
-        nautilus -q & disown
+
+        nautilus -q > /dev/null 2>&1 & disown
     ;;
     "mako")
-        printf "${BOLD}${BLUE}:: ${RESET}Reloading mako..\n"
-        sleep .5 && makoctl reload >/dev/null
+
+        sleep .5 && makoctl reload > /dev/null 2>&1
     ;;
     "hypr")
-        printf "${BOLD}${BLUE}:: ${RESET}Reloading Hyprland..\n"
-        hyprctl reload >/dev/null
+
+        hyprctl reload > /dev/null 2>&1
     ;;
     "swaync")
-        printf "${BOLD}${BLUE}:: ${RESET}Reloading swaync..\n"
-        swaync-client -rs >/dev/null
-    ;;
-    "hyprpanel")
-        printf "${BOLD}${BLUE}:: ${RESET}Reloading HyprPanel..\n"
-        killall -9 gjs >/dev/null
-        hyprpanel & disown
+
+        swaync-client -rs > /dev/null 2>&1
     ;;
     "ignis")
-        printf "${BOLD}${BLUE}:: ${RESET}Reloading Ignis..\n"
-        killall -9 ignis >/dev/null
-        ignis init & disown
+
+        killall -9 ignis > /dev/null 2>&1
+        ignis init > /dev/null 2>&1 & disown
     ;;
     "ghostty")
-        printf "${BOLD}${BLUE}:: ${RESET}Reloading Ghostty..\n"
-        killall -9 ghostty >/dev/null
+
+        killall -9 ghostty > /dev/null 2>&1
         ghostty \
         --gtk-single-instance=true \
         --quit-after-last-window-closed=false \
         --initial-window=false & disown
     ;;
     "mconnect")
-        printf "${BOLD}${BLUE}:: ${RESET}Reloading mconnect..\n"
-        killall -9 mconnect >/dev/null
+
+        killall -9 mconnect > /dev/null 2>&1
         mconnect -d & disown
     ;;
     "gtk")
-    printf "${BOLD}${BLUE}:: ${RESET}Reloading gtk..\n"
-        cd ~/.themes/phocus && npm run build >/dev/null
-        gsettings set org.gnome.desktop.interface gtk-theme phocus_refresh >/dev/null
-        gsettings set org.gnome.desktop.interface gtk-theme phocus >/dev/null
+
+        cd ~/.themes/phocus && npm run build > /dev/null 2>&1
+        gsettings set org.gnome.desktop.interface gtk-theme phocus_refresh > /dev/null 2>&1
+        gsettings set org.gnome.desktop.interface gtk-theme phocus > /dev/null 2>&1
     ;;
     "spotify")
-        printf "${BOLD}${BLUE}:: ${RESET}Reloading spicetify..\n"
-        killall -9 spotify > /dev/null
-        spicetify apply >/dev/null
+
+        killall -9 spotify > /dev/null 2>&1
+        spicetify apply > /dev/null 2>&1
     ;;
     "pcmanfm")
-        printf "${BOLD}${BLUE}:: ${RESET}Reloading pcmanfm..\n"
-        killall -9 pcmanfm-qt >/dev/null
-        pcmanfm-qt --desktop & disown
+
+        killall -9 pcmanfm-qt > /dev/null 2>&1
+        pcmanfm-qt --desktop & disown > /dev/null 2>&1
     ;;
     "steam")
-        printf "${BOLD}${BLUE}:: ${RESET}Reloading Steam..\n"
+
         sleep 2 && cd ~/.local/share/adwaita-steam/ && ./install.py \
         --color-theme base16 \
         --extras library/hide_whats_new \
         --font zedmono \
-        --custom-css
+        --custom-css > /dev/null 2>&1
     ;;
 esac

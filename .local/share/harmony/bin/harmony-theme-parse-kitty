@@ -1,0 +1,77 @@
+#!/bin/bash
+source harmony-color-codes
+
+if [ -z "$1" ]; then
+  exit 1
+fi
+
+CONFIG_FILE="$1"
+FILE_PARENT_FOLDER=$(dirname "$CONFIG_FILE")
+PARENT_FOLDER_NAME=$(basename "$FILE_PARENT_FOLDER")
+
+config_parse_color() {
+    local key="$1"
+    grep "^$key" "$CONFIG_FILE" | \
+        head -1 | \
+        awk '{print $2}' | \
+        sed 's/^#//'
+}
+
+fg=$(config_parse_color "foreground")
+bg=$(config_parse_color "background")
+
+color0=$(config_parse_color "color0")
+color1=$(config_parse_color "color1")
+color2=$(config_parse_color "color2")
+color3=$(config_parse_color "color3")
+color4=$(config_parse_color "color4")
+color5=$(config_parse_color "color5")
+color6=$(config_parse_color "color6")
+color7=$(config_parse_color "color7")
+
+color8=$(config_parse_color "color8")
+color9=$(config_parse_color "color9")
+color10=$(config_parse_color "color10")
+color11=$(config_parse_color "color11")
+color12=$(config_parse_color "color12")
+color13=$(config_parse_color "color13")
+color14=$(config_parse_color "color14")
+color15=$(config_parse_color "color15")
+
+base00=${bg:-000000}
+base01=${color8:-000000}
+base02=${color0:-000000}
+base03=${color8:-808080}
+base04=${color7:-808080}
+base05=${fg:-ffffff}
+base06=${color15:-ffffff}
+base07=${color15:-ffffff}
+base08=${color1:-ff0000}
+base09=${color9:-ff8800}
+base0A=${color3:-ffff00}
+base0B=${color2:-00ff00}
+base0C=${color6:-00ffff}
+base0D=${color4:-0000ff}
+base0E=${color5:-ff00ff}
+base0F=${color13:-ff0088}
+
+cat << EOF
+scheme: "$PARENT_FOLDER_NAME"
+author: "Omarchy Theme Port (Kitty)"
+base00: "${base00}"
+base01: "${base01}"
+base02: "${base02}"
+base03: "${base03}"
+base04: "${base04}"
+base05: "${base05}"
+base06: "${base06}"
+base07: "${base07}"
+base08: "${base08}"
+base09: "${base09}"
+base0A: "${base0A}"
+base0B: "${base0B}"
+base0C: "${base0C}"
+base0D: "${base0D}"
+base0E: "${base0E}"
+base0F: "${base0F}"
+EOF

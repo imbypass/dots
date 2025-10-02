@@ -2,4 +2,4 @@
 source harmony-color-codes
 
 echo
-gum spin --spinner "globe" --title "Done! Press any key to close..." -- bash -c 'read -n 1 -s'
+gum spin --spinner="dot" --spinner.width=1 --spinner.bold --spinner.foreground="208" --title "Done! Press any key to close..." -- bash -c 'read -n 1 -s'

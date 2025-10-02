@@ -1,0 +1,64 @@
+#!/bin/bash
+
+font_name="$1"
+
+if [[ -n "$font_name" && "$font_name" != "CNCLD" ]]; then
+  if fc-list | grep -iq "$font_name"; then
+
+    # alacritty
+    if [[ -f ~/.config/alacritty/alacritty.toml ]]; then
+      sed -i "s/family = \".*\"/family = \"$font_name\"/g" ~/.config/alacritty/alacritty.toml
+    fi
+
+    # kitty
+    if [[ -f ~/.config/kitty/kitty.conf ]]; then
+      sed -i "s/^font_family .*/font_family $font_name/g" ~/.config/kitty/kitty.conf
+      pkill -USR1 kitty
+    fi
+
+    # ghostty
+    if [[ -f ~/.config/ghostty/config ]]; then
+      sed -i "s/font-family = \".*\"/font-family = \"$font_name\"/g" ~/.config/ghostty/config
+      pkill -SIGUSR2 ghostty
+    fi
+
+    # foot
+    if [[ -f ~/.config/foot/foot.ini ]]; then
+      sed -i "s/font=.*:size=9.5/font=$font_name:size=9.5/g" ~/.config/foot/foot.ini
+    fi
+
+    # vesktop
+    if [[ -f ~/.config/vesktop/themes/fonts.theme.css ]]; then
+        sed -i "s/--font: \".*\";/--font: \"$font_name\";/g" ~/.config/vesktop/themes/fonts.theme.css
+        sed -i "s/--font-code: \".*\";/--font-code: \"$font_name\";/g" ~/.config/vesktop/themes/fonts.theme.css
+    fi
+
+    # waybar
+    sed -i "s/font-family: .*/font-family: '$font_name';/g" ~/.config/waybar/style.css
+
+    # ignis
+    sed -i "s/font-family: \".*\"/font-family: \"$font_name\"/g" ~/.config/ignis/scss/components/_global.scss
+
+    # swayosd
+    sed -i "s/font-family: .*/font-family: '$font_name';/g" ~/.config/swayosd/style.css
+
+    # qt6ct
+    xmlstarlet ed -L \
+      -u '//match[@target="pattern"][test/string="monospace"]/edit[@name="family"]/string' \
+      -v "$font_name" \
+      ~/.config/fontconfig/fonts.conf
+
+    # dconf
+    gsettings set org.gnome.desktop.interface monospace-font-name "$font_name 10"
+    gsettings set org.gnome.desktop.interface font-name "$font_name 10"
+
+    harmony-restart-ignis
+    harmony-restart-waybar
+    harmony-restart-walker
+  else
+    echo "Font '$font_name' not found."
+    exit 1
+  fi
+else
+  echo "Usage: harmony-font-set <font-name>"
+fi

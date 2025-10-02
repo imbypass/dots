@@ -1,0 +1,80 @@
+#!/bin/bash
+source harmony-color-codes
+
+if [ -z "$1" ]; then
+  exit 1
+fi
+
+CONFIG_FILE="$1"
+FILE_PARENT_FOLDER=$(dirname "$CONFIG_FILE")
+PARENT_FOLDER_NAME=$(basename "$FILE_PARENT_FOLDER")
+
+config_parse_color() {
+    local section="$1"
+    local key="$2"
+    grep -A 50 "^\[colors\.$section\]" "$CONFIG_FILE" | \
+        grep "^$key" | \
+        head -1 | \
+        sed -E "s/^$key\s*=\s*['\"]?(#?[0-9a-fA-F]{6})['\"]?.*/\1/" | \
+        sed 's/^0x//' | \
+        sed 's/^#//'
+}
+
+fg=$(config_parse_color "primary" "foreground")
+bg=$(config_parse_color "primary" "background")
+
+black=$(config_parse_color "normal" "black")
+red=$(config_parse_color "normal" "red")
+green=$(config_parse_color "normal" "green")
+yellow=$(config_parse_color "normal" "yellow")
+blue=$(config_parse_color "normal" "blue")
+magenta=$(config_parse_color "normal" "magenta")
+cyan=$(config_parse_color "normal" "cyan")
+white=$(config_parse_color "normal" "white")
+
+bright_black=$(config_parse_color "bright" "black")
+bright_red=$(config_parse_color "bright" "red")
+bright_green=$(config_parse_color "bright" "green")
+bright_yellow=$(config_parse_color "bright" "yellow")
+bright_blue=$(config_parse_color "bright" "blue")
+bright_magenta=$(config_parse_color "bright" "magenta")
+bright_cyan=$(config_parse_color "bright" "cyan")
+bright_white=$(config_parse_color "bright" "white")
+
+base00=${bg:-#000000}
+base01=${black:-#000000}
+base02=${bright_black:-#000000}
+base03=${bright_black:-#808080}
+base04=${white:-#808080}
+base05=${fg:-#ffffff}
+base06=${bright_white:-#ffffff}
+base07=${bright_white:-#ffffff}
+base08=${red:-#ff0000}
+base09=${bright_red:-#ff8800}
+base0A=${yellow:-#ffff00}
+base0B=${green:-#00ff00}
+base0C=${cyan:-#00ffff}
+base0D=${blue:-#0000ff}
+base0E=${magenta:-#ff00ff}
+base0F=${bright_magenta:-#ff0088}
+
+cat << EOF
+scheme: "$PARENT_FOLDER_NAME"
+author: "Omarchy Theme Port (Alacritty)"
+base00: "${base00}"
+base01: "${base01}"
+base02: "${base02}"
+base03: "${base03}"
+base04: "${base04}"
+base05: "${base05}"
+base06: "${base06}"
+base07: "${base07}"
+base08: "${base08}"
+base09: "${base09}"
+base0A: "${base0A}"
+base0B: "${base0B}"
+base0C: "${base0C}"
+base0D: "${base0D}"
+base0E: "${base0E}"
+base0F: "${base0F}"
+EOF
