@@ -1,37 +1,37 @@
-# Base16 Omarchy Sakura (Port) - fish color config
-# bjarneo
+# Base16 Marquina Black - fish color config
+# Bepi (@bypass)
 
-fish_color_normal c7cac2
-fish_color_command d9a56c
-fish_color_keyword d1b399
-fish_color_quote e85f6f
-fish_color_redirection d4a882
-fish_color_end 856173
-fish_color_error ef6374
-fish_color_param f29b9a
-fish_color_comment 856173
+fish_color_normal b2b5b3
+fish_color_command 7aa2f7
+fish_color_keyword 4abaaf
+fish_color_quote eda987
+fish_color_redirection 9ece6a
+fish_color_end 4d4d4f
+fish_color_error f7768e
+fish_color_param e0af68
+fish_color_comment 4d4d4f
 fish_color_selection --reverse
-fish_color_operator c7cac2
-fish_color_escape d4a882
-fish_color_autosuggestion 856173
-fish_color_cwd f29b9a
-fish_color_user e85f6f
-fish_color_host d1b399
-fish_color_host_remote d9a56c
-fish_color_cancel c7cac2
-fish_color_search_match --background=0d0509
+fish_color_operator b2b5b3
+fish_color_escape 9ece6a
+fish_color_autosuggestion 4d4d4f
+fish_color_cwd e0af68
+fish_color_user eda987
+fish_color_host 4abaaf
+fish_color_host_remote 7aa2f7
+fish_color_cancel b2b5b3
+fish_color_search_match --background=0a0a0c
 fish_color_valid_path
 
-fish_pager_color_progress f29b9a
-fish_pager_color_background --background=2e1622
-fish_pager_color_prefix d1b399
-fish_pager_color_completion 856173
-fish_pager_color_description 856173
+fish_pager_color_progress e0af68
+fish_pager_color_background --background=121215
+fish_pager_color_prefix 4abaaf
+fish_pager_color_completion 4d4d4f
+fish_pager_color_description 4d4d4f
 fish_pager_color_secondary_background
 fish_pager_color_secondary_prefix
 fish_pager_color_secondary_completion
 fish_pager_color_secondary_description
-fish_pager_color_selected_background --background=452536
-fish_pager_color_selected_prefix d1b399
-fish_pager_color_selected_completion c7cac2
-fish_pager_color_selected_description c7cac2
+fish_pager_color_selected_background --background=1f1f21
+fish_pager_color_selected_prefix 4abaaf
+fish_pager_color_selected_completion b2b5b3
+fish_pager_color_selected_description b2b5b3

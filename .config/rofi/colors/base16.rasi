@@ -2,17 +2,17 @@
  *
  * Theme Author: @bypass_
  * Github: imbypass
- * Colors: Omarchy Sakura (Port)
- * Colors Author: bjarneo
+ * Colors: Marquina Black
+ * Colors Author: Bepi (@bypass)
  *
  **/
 
 * {
-    background:     #0d0509FF;
-    background-alt: #2e1622FF;
-    foreground:     #c7cac2FF;
-    selected:       #452536FF;
-    active:         #f29b9aFF;
-    urgent:         #ef6374FF;
-    border-color:   #452536FF;
+    background:     #0a0a0cFF;
+    background-alt: #121215FF;
+    foreground:     #b2b5b3FF;
+    selected:       #1f1f21FF;
+    active:         #e0af68FF;
+    urgent:         #f7768eFF;
+    border-color:   #1f1f21FF;
 }

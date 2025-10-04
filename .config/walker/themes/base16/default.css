@@ -32,7 +32,7 @@ slider,
     border-radius: 0px;
     background: @base00;
     padding: 32px;
-    border: 2px solid @base0B;
+    border: 2px solid @base0F;
     box-shadow: 0 0 6px #000000ff;
 }
 
@@ -89,7 +89,7 @@ child {
 child:selected,
 child:hover {
     /*background: @base01;*/
-    color: @base0B;
+    color: @base0F;
 }
 
 #icon {
@@ -97,7 +97,7 @@ child:hover {
 }
 
 #label {
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 500;
 }
 

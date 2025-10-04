@@ -336,7 +336,7 @@
       "entries": [
         {
           "label": "󰚰    System",
-          "exec": "foot -a Harmony -e bash -c harmony-update-system"
+          "exec": "foot -a Harmony -e bash -c harmony-update"
         },
         {
           "label": "    Mirrors",
@@ -346,6 +346,7 @@
     },
     {
       "name": "power",
+      "icon": "",
       "theme": "base16/default_slim",
       "switcher_only": true,
       "keep_sort": true,
@@ -383,5 +384,7 @@
   },
   "terminal_title_flag": "",
   "theme": "base16/default",
-  "timeout": 0
+  "timeout": 0,
+
+  "icon": ""
 }

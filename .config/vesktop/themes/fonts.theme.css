@@ -12,10 +12,7 @@
 :root {
     --font: "Iosevka Nerd Font Mono";
     --font-code: "Iosevka Nerd Font Mono";
-
-    /*--font-weight-light: 500;
-    --font-weight-normal: 600;
-    --font-weight-medium: 700;
-    --font-weight-semibold: 800;
-    --font-weight-bold: 900;*/
+    --font-primary: var(--font);
+    --font-display: var(--font);
+    --font-heading: var(--font);
 }

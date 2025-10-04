@@ -1,6 +1,6 @@
 /* Clean up the styling for the DM categores */
 [class^="headerText"] {
     text-transform: capitalize !important;
-    font-size: small !important;
-    color: var(--base04) !important;
+    font-size: x-small !important;
+    color: var(--channels-default) !important;
 }

@@ -22,11 +22,11 @@ body {
 
     .wrapper__44b0c,
     .container__1ce5d {
-        --online-2: var(--base0B);
-        --dnd-2: var(--base08);
-        --idle-2: var(--base09);
-        --offline-2: var(--base03);
-        --streaming-2: var(--base0F);
+        --online-2: #43a25a;
+        --dnd-2: #d83a41;
+        --idle-2: #ca9654;
+        --offline-2: #82838b;
+        --streaming-2: #9147ff;
     }
     .wrapper__44b0c:has(rect)::after,
     .container__1ce5d:has(.status_a423bd)::after {

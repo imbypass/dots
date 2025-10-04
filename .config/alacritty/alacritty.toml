@@ -1,6 +1,6 @@
 [general]
 import = [
-    "~/.cache/wal/colors-alacritty.toml"
+    # "~/.cache/wal/colors-alacritty.toml"
 ]
 
 [font]
@@ -27,4 +27,3 @@ padding = { x = 20, y = 10 }
 title = "Terminal"
 dynamic_title = false
 dynamic_padding = true
-

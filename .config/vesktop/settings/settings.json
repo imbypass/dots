@@ -4,18 +4,16 @@
     "useQuickCss": true,
     "themeLinks": [],
     "enabledThemes": [
-        "icons-recolor.theme.css",
-        "userpfp.theme.css",
         "base16.extras.css",
         "patches.theme.css",
+        "base16.theme.css",
+        "base16-system24.theme.css",
         "fonts.theme.css",
         "EmojiReplace.theme.css",
         "settings-icons.theme.css",
-        "base16.theme.css",
-        "base16-system24.theme.css",
-        "base16-discord.extras.css",
-        "base16-discord.pywal.css",
-        "snippets.theme.css"
+        "icons-recolor.theme.css",
+        "snippets.theme.css",
+        "base16-discord.pywal.css"
     ],
     "enableReactDevtools": false,
     "frameless": true,
@@ -254,7 +252,7 @@
             "ignoreSelf": true,
             "ignoreUsers": "786906691639050250,673256656733339668,261292198979436544,953042156984086588",
             "ignoreChannels": "",
-            "ignoreGuilds": "399812551963049995",
+            "ignoreGuilds": "399812551963049995,1390012484194275541",
             "logEdits": true,
             "logDeletes": true,
             "collapseDeleted": true,
@@ -831,7 +829,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1759367909902
+        "settingsSyncVersion": 1759519112194
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false

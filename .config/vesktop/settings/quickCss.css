@@ -1,25 +1,25 @@
 /*
 *
-* Base16 Omarchy Sakura (Port)
-* Author: bjarneo
+* Base16 Marquina Black
+* Author: Bepi (@bypass)
 *
 */
 
 :root {
-    --base00: #0d0509;
-    --base01: #2e1622;
-    --base02: #452536;
-    --base03: #6b4659;
-    --base04: #856173;
-    --base05: #c7cac2;
-    --base06: #e1e3de;
-    --base07: #f6f3f4;
-    --base08: #ef6374;
-    --base09: #e85f6f;
-    --base0A: #f29b9a;
-    --base0B: #d4a882;
-    --base0C: #d1b399;
-    --base0D: #d9a56c;
-    --base0E: #e8c099;
-    --base0F: #f0eaed;
+    --base00: #0a0a0c;
+    --base01: #121215;
+    --base02: #1f1f21;
+    --base03: #363638;
+    --base04: #4d4d4f;
+    --base05: #b2b5b3;
+    --base06: #eaeaea;
+    --base07: #e7e7e7;
+    --base08: #f7768e;
+    --base09: #eda987;
+    --base0A: #e0af68;
+    --base0B: #9ece6a;
+    --base0C: #4abaaf;
+    --base0D: #7aa2f7;
+    --base0E: #bb9af7;
+    --base0F: #9a7ecc;
 }

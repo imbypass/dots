@@ -21,7 +21,7 @@ mode = viewer
 # Window position (parent or absolute coordinates, e.g. 100,200)
 position = parent
 # Window size (fullscreen/parent/image, or absolute size, e.g. 800,600)
-size = parent
+size = image
 # Use window decoration (yes/no)
 decoration = no
 # Action performed by SIGUSR1 signal (same format as for key bindings)
@@ -36,7 +36,7 @@ app_id = swayimg
 ################################################################################
 [viewer]
 # Window background color (RGBA)
-window = 0d0509FF
+window = 0a0a0cFF
 # Background for transparent images (grid/RGBA)
 transparency = grid
 # Default image scale (optimal/fit/width/height/fill/real)

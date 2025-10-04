@@ -212,3 +212,10 @@ template = "cava"
 rewrite = false
 start = "[color]"
 end = "[smoothing]"
+
+
+### MICRO EDITOR ###
+[[items]]
+file = "~/.cache/wal/schemes/flavours.json"
+template = "pywal"
+rewrite = true
