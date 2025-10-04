@@ -1,0 +1,4 @@
+#!/bin/bash
+source harmony-color-codes
+
+harmony-reload hypr

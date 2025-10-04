@@ -65,6 +65,9 @@ case "$1" in
         --quit-after-last-window-closed=false \
         --initial-window=false & disown
     ;;
+    "fish")
+        source ~/.cache/wal/colors.fish
+    ;;
     "mconnect")
 
         killall -9 mconnect > /dev/null 2>&1

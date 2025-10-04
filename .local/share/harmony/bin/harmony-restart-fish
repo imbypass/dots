@@ -1,0 +1,4 @@
+#!/bin/bash
+source harmony-color-codes
+
+/usr/bin/wal --theme ~/.cache/wal/schemes/flavours.json

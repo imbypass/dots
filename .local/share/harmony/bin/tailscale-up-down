@@ -1,0 +1,2 @@
+#! /bin/bash
+echo '{"percentage" : 100,"text": "some text","tooltip": ""}'
