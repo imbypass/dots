@@ -13,7 +13,7 @@ screenrecording_active() {
 
 screenrecording_start() {
     notify-send -u normal -a wl-recorder -t 2750 "Screen Recorder" "Recording started!"
-    cd "/home/${USER}/Videos/Screen Recordings/" && wf-recorder -c libx264 -p crf=23 -p preset=medium -p movflags=+faststart -f "${TIMESTAMP}.mp4" &
+    cd "/home/${USER}/Videos/Screen Recordings/" && wf-recorder -c libx264 -p crf=23 -p preset=medium -x yuv444p -f "${TIMESTAMP}.mp4" &
 
     screenrecording_toggle_indicator
 }

@@ -3,7 +3,7 @@ source harmony-color-codes
 
 case "$1" in
     "")
-        printf "${BOLD}${BLUE}:: ${RESET}No service specified. Exiting..\n"
+        exit 1
     ;;
     "all")
         harmony-reload "gtk"
@@ -32,7 +32,6 @@ case "$1" in
         fi
     ;;
     "walker")
-
         killall -9 walker > /dev/null 2>&1
         walker --gapplication-service > /dev/null 2>&1 & disown
     ;;
@@ -53,7 +52,7 @@ case "$1" in
         swaync-client -rs > /dev/null 2>&1
     ;;
     "ignis")
-
+        exit 0
         killall -9 ignis > /dev/null 2>&1
         ignis init > /dev/null 2>&1 & disown
     ;;
@@ -97,4 +96,10 @@ case "$1" in
         --font zedmono \
         --custom-css > /dev/null 2>&1
     ;;
+    *)
+        exit 1
+    ;;
 esac
+
+echo "ok"
+exit 0

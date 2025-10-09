@@ -1,29 +1,20 @@
-[general]
-import = [
-    # "~/.cache/wal/colors-alacritty.toml"
-]
+general.import = [ "~/.config/omarchy/current/theme/alacritty.toml" ]
+
+[env]
+TERM = "xterm-256color"
 
 [font]
-size = 11
-
-[font.bold]
-family = "Iosevka Nerd Font Mono"
-style = "Bold"
-
-[font.bold_italic]
-family = "Iosevka Nerd Font Mono"
-style = "Bold Italic"
-
-[font.italic]
-family = "Iosevka Nerd Font Mono"
-style = "Italic"
-
-[font.normal]
-family = "Iosevka Nerd Font Mono"
-style = "Regular"
+normal = { family = "Iosevka", style = "Regular" }
+bold = { family = "Iosevka", style = "Bold" }
+italic = { family = "Iosevka", style = "Italic" }
+size = 10.5
 
 [window]
-padding = { x = 20, y = 10 }
-title = "Terminal"
-dynamic_title = false
-dynamic_padding = true
+padding.x = 14
+padding.y = 14
+decorations = "None"
+
+[keyboard]
+bindings = [
+{ key = "F11", action = "ToggleFullscreen" }
+]

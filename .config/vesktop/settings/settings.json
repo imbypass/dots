@@ -8,12 +8,13 @@
         "patches.theme.css",
         "base16.theme.css",
         "base16-system24.theme.css",
+        "settings-icons.theme.css",
         "fonts.theme.css",
         "EmojiReplace.theme.css",
-        "settings-icons.theme.css",
         "icons-recolor.theme.css",
+        "base16-discord.css",
         "snippets.theme.css",
-        "base16-discord.pywal.css"
+        "vencord.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": true,
@@ -240,7 +241,7 @@
             "enableDoubleClickToReply": true
         },
         "MessageLinkEmbeds": {
-            "enabled": true,
+            "enabled": false,
             "automodEmbeds": "never",
             "listMode": "blacklist",
             "idList": ""
@@ -829,7 +830,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1759519112194
+        "settingsSyncVersion": 1759955570450
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false

@@ -20,4 +20,3 @@ else
 fi
 
 hyprctl reload >/dev/null
-harmony-reload ignis

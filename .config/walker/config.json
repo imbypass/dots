@@ -98,7 +98,7 @@
       "exec": "wl-copy",
       "history": true,
       "name": "emojis",
-      "theme": "base16/popup",
+      "theme": "base16/default_slim",
       "placeholder": " Search...",
       "icon": "",
       "show_unqualified": false,
@@ -289,7 +289,7 @@
           "exec": "foot -a Harmony -e bash -c harmony-about"
         },
         {
-          "label": "⏻    System",
+          "label": "⏻   System",
           "exec": "walker -H -m power"
         }
       ]
@@ -307,7 +307,7 @@
       "entries": [
         {
           "label": "󰸉    Wallpaper",
-          "exec": "walker -n -m wallpaper"
+          "exec": "omarchy-theme-bg-next"
         },
         {
           "label": "    Theme",

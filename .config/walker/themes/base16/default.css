@@ -1,4 +1,5 @@
-@import url("base16/colors.css");
+/*@import url("base16/colors.css");*/
+@import url("file://~/.config/omarchy/current/theme/walker.css");
 
 #window,
 #box,
@@ -24,22 +25,21 @@ slider,
 }
 
 #window {
-    color: @base04;
-    opacity: 0.98;
+    color: @text;
+    opacity: 0.9;
 }
 
 #box {
     border-radius: 0px;
-    background: @base00;
+    background: @background;
     padding: 32px;
-    border: 2px solid @base0F;
+    border: 2px solid @border;
     box-shadow: 0 0 6px #000000ff;
 }
 
 #search {
     border-radius: 0px; /* box radius - 2 */
-    background: rgba(0, 0, 0, 0.45);
-    border: 0px solid @base02;
+    background: rgba(1, 1, 1, 0.18);
     padding: 12px;
     margin-bottom: 16px;
 }
@@ -47,12 +47,12 @@ slider,
 #prompt {
     margin-left: 4px;
     margin-right: 12px;
-    color: @base05;
+    color: @text;
     opacity: 0.2;
 }
 
 #clear {
-    color: @base05;
+    color: @text;
     opacity: 0.8;
 }
 
@@ -72,7 +72,7 @@ slider,
 }
 
 #typeahead {
-    color: @base05;
+    color: @text;
     opacity: 0.8;
 }
 
@@ -83,13 +83,13 @@ slider,
 child {
     padding: 12px;
     border-radius: 0px;
-    color: @base04;
+    color: @text;
 }
 
 child:selected,
 child:hover {
     /*background: @base01;*/
-    color: @base0F;
+    color: @selected-text;
 }
 
 #icon {
@@ -106,7 +106,7 @@ child:hover {
 }
 
 .activation #activationlabel {
-    color: @base0D;
+    color: @text;
 }
 
 .activation #text,
@@ -118,8 +118,8 @@ child:hover {
 .aiItem {
     padding: 10px;
     border-radius: 8px;
-    color: @base05;
-    background: @base00;
+    color: @text;
+    background: @background;
 }
 
 .aiItem.user {
@@ -128,5 +128,5 @@ child:hover {
 }
 
 .aiItem.assistant {
-    background: @base01;
+    background: @background;
 }

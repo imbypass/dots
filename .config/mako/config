@@ -1,25 +1,18 @@
-include=~/.config/mako/colors
+include=~/.local/share/omarchy/default/mako/core.ini
+include=~/.config/omarchy/current/theme/mako.ini
 
-format=<b>%s</b>\n%b
-sort=-time
-layer=overlay
-width=400
-height=550
+width=420
+height=250
+padding=10
 border-size=2
-border-radius=12
-icons=1
-outer-margin=12
-margin=10
-padding=15
-icon-location=right
-markup=1
-actions=1
-history=1
-anchor=top-center
-max-icon-size=48
-default-timeout=3500
-ignore-timeout=1
-on-button-left=invoke-default-action
+anchor=top-right
+outer-margin=20
+default-timeout=5000
+max-icon-size=32
+font=Iosevka 10.5
 
-font=Iosevka Nerd Font Propo Medium 11
-font=SF Compact Rounded Medium 10
+[mode=do-not-disturb]
+invisible=true
+
+[mode=do-not-disturb app-name=notify-send]
+invisible=false
