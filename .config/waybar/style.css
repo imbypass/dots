@@ -6,10 +6,16 @@
     font-family: "Iosevka";
 
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 600;
     opacity: 1;
     border-radius: 0;
     min-height: 0;
+}
+window#waybar {
+    opacity: 0.94;
+}
+tooltip {
+    padding: 4px;
 }
 
 .modules-left {
@@ -22,8 +28,12 @@
 
 #workspaces button {
     all: initial;
-    padding: 0 6px;
-    margin: 0 1.5px;
+    padding: 0 2px;
+    margin: 0 0.5rem;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     min-width: 9px;
 }
 
@@ -53,7 +63,6 @@
 
 #clock {
     margin-right: 1rem;
-    font-weight: 800;
 }
 
 #custom-glorious {
@@ -62,6 +71,7 @@
 
 #custom-harmony {
     font-size: 14px;
+    margin-right: 1.25rem;
 }
 
 #custom-spotify {
@@ -79,10 +89,6 @@
 #custom-expand-icon {
     margin-right: 5px;
     font-size: 12px;
-}
-
-tooltip {
-    padding: 4px;
 }
 
 #custom-update {

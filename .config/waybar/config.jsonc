@@ -29,17 +29,28 @@
     "on-scroll-down": "hyprctl dispatch workspace e-1",
     "on-click": "activate",
     "format": "{icon}",
+    "window-rewrite-default": "",
+    "window-rewrite": {
+      "title<.*YouTube.*>": " ", // Windows whose titles contain "youtube"
+      "class<firefox>": " ", // Windows whose classes are "firefox"
+      "class<alacritty>": " ",
+      "class<foot>": " ",
+      "class<dev.zed.Zed>": " 󰨞",
+      "class<vesktop>": " ",
+      "class<chromium>": " ",
+      "class<org.gnome.Nautilus>": "",
+    },
     "format-icons": {
       "default": "",
-      "1": "1",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
-      "6": "6",
-      "7": "7",
-      "8": "8",
-      "9": "9",
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九",
       "active": "󱓻",
     },
     "persistent-workspaces": {
@@ -74,7 +85,7 @@
   },
   "clock": {
     "format": "{:L%I:%M %p}",
-    "format-alt": "{:L%A, %B %d, %Y}",
+    "tooltip-format": "{:L%A, %B %d, %Y}",
     "tooltip": true,
   },
   "network": {
@@ -149,7 +160,7 @@
     "timeout": 30.5,
   },
   "custom/harmony": {
-    "format": "",
+    "format": "",
     "format-omarchy": "<span font='omarchy'>\ue900</span>",
     "on-click": "walker -m mainmenu",
     "on-click-right": "harmony-expose",
@@ -172,9 +183,9 @@
     "exec": "python3 $HOME/.local/share/harmony/scripts/waybar/media-player.py --player spotify",
     "format": "{}",
     "return-type": "json",
-    "on-click": "playerctl play-pause -p spotify",
+    "on-click": "spotify",
+    "on-click-right": "playerctl play-pause -p spotify",
     "on-scroll-up": "playerctl previous -p spotify",
     "on-scroll-down": "playerctl next -p spotify",
-    "on-click-right": "spotify",
   },
 }

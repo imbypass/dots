@@ -4,17 +4,16 @@
     "useQuickCss": true,
     "themeLinks": [],
     "enabledThemes": [
-        "base16.extras.css",
         "patches.theme.css",
         "base16.theme.css",
         "base16-system24.theme.css",
         "settings-icons.theme.css",
         "fonts.theme.css",
-        "EmojiReplace.theme.css",
         "icons-recolor.theme.css",
         "base16-discord.css",
+        "vencord.theme.css",
         "snippets.theme.css",
-        "vencord.theme.css"
+        "EmojiReplace.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": true,
@@ -508,7 +507,7 @@
             "useSpotifyUris": false
         },
         "SpotifyCrack": {
-            "enabled": false,
+            "enabled": true,
             "noSpotifyAutoPause": true,
             "keepSpotifyActivityOnIdle": false
         },
@@ -830,7 +829,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1759973319641
+        "settingsSyncVersion": 1760280214286
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false

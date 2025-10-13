@@ -8,7 +8,6 @@
  * @authorId 148201667085598720
  * @discord bypass_
  **/
-
 @import url(./snippets/clean-chatbar.css);
 @import url(./snippets/clean-direct-messages.css);
 @import url(./snippets/clean-dm-categories.css);
@@ -22,6 +21,9 @@
 @import url(./snippets/swap-clantag-roleicon.css);
 @import url(./snippets/no-message-hover-emojis.css);
 @import url(./snippets/no-border-radius.css);
+@import url(./snippets/discord-top-border.css);
+@import url(./snippets/remove-gradient-glow.css);
+/*@import url("https://rinlovesyou.github.io/Couve/snippets/couve-profile-popout.css");*/
 
 /* === [ DISABLED SNIPPETS ] === */
 /*@import url(./snippets/hide-pluralkit-messages.css);*/

@@ -10,8 +10,8 @@
  **/
 
 :root {
-    --font: "Iosevka Nerd Font Mono";
-    --font-code: "Iosevka Nerd Font Mono";
+    --font: "Iosevka";
+    --font-code: "Iosevka";
     --font-primary: var(--font);
     --font-display: var(--font);
     --font-heading: var(--font);

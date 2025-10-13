@@ -2,8 +2,12 @@
 *,
 html,
 body {
-    font-family: "Iosevka Nerd Font Mono" !important;
+    font-family: "Iosevka" !important;
     border-radius: 0 !important;
+}
+
+body {
+    border-top: 3px solid var(--spice-text);
 }
 
 /* Recolor Spotify UI */

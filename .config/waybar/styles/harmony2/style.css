@@ -190,6 +190,9 @@ menuitem:hover {
     min-width: 25px;
     transition: all 0.3s ease-in-out;
 }
+#workspaces button.empty {
+    opacity: 0.35;
+}
 
 #workspaces button label {
     font-size: 0px;

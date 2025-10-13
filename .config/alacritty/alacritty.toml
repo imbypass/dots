@@ -4,9 +4,9 @@ general.import = [ "~/.config/omarchy/current/theme/alacritty.toml" ]
 TERM = "xterm-256color"
 
 [font]
-normal = { family = "Iosevka", style = "Regular" }
-bold = { family = "Iosevka", style = "Bold" }
-italic = { family = "Iosevka", style = "Italic" }
+normal = { family = "Iosevka" }
+bold = { family = "Iosevka" }
+italic = { family = "Iosevka" }
 size = 10.5
 
 [window]
