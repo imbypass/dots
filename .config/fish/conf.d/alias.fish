@@ -13,7 +13,6 @@ alias cp="cp -irv"
 alias ducks="du -cks * | sort -rn | head"
 alias edit="zed ."
 alias ex="exit"
-alias fetch="harmony-fetch"
 alias f="fetch"
 alias ff="fastfetch"
 alias fl="flavours"
@@ -22,6 +21,7 @@ alias fontview="magick display $1"
 alias g="git"
 alias grep="rg"
 alias hc="harmony-theme-set"
+alias hd="copy-helpdoc"
 alias hl="hyprctl"
 alias hrl="harmony-reload"
 alias hpm="hyprpm"
@@ -42,8 +42,9 @@ alias moviebox="ssh schaefer@10.0.0.196"
 alias mxw="sudo -n mxw"
 alias nano="micro"
 alias ncmp="ncmpcpp"
-alias o.="open . & disown"
-alias o="open "
+alias owner="pacman -Qo $1"
+alias o="open"
+alias o.="open ."
 alias q="exit"
 alias run0="run0 --background=00 "
 alias si="swayimg"
@@ -61,3 +62,37 @@ alias ytdl="yt-dlp --format \"bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4]\" $1"
 alias z.="z ."
 alias z="zeditor"
 alias ⏲️="date"
+
+
+alias ls='eza -lh --group-directories-first --icons=auto'
+alias lsa='ls -a'
+alias lt='eza --tree --level=2 --long --icons --git'
+alias lta='lt -a'
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
+
+function open
+    xdg-open $argv >/dev/null 2>&1 &
+end
+
+# Directories
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+# Tools
+alias d='docker'
+alias r='rails'
+
+function n
+    if test (count $argv) -eq 0
+        nvim .
+    else
+        nvim $argv
+    end
+end
+
+# Git
+alias g='git'
+alias gcm='git commit -m'
+alias gcam='git commit -a -m'
+alias gcad='git commit -a --amend'

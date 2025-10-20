@@ -9,11 +9,11 @@
         "base16-system24.theme.css",
         "settings-icons.theme.css",
         "fonts.theme.css",
-        "icons-recolor.theme.css",
         "base16-discord.css",
-        "vencord.theme.css",
         "snippets.theme.css",
-        "EmojiReplace.theme.css"
+        "EmojiReplace.theme.css",
+        "icons-recolor.theme.css",
+        "vencord.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": true,
@@ -114,7 +114,7 @@
             "format": "stopwatch"
         },
         "ClearURLs": {
-            "enabled": true
+            "enabled": false
         },
         "ClientTheme": {
             "enabled": false,
@@ -178,7 +178,7 @@
             "enabled": true
         },
         "FixSpotifyEmbeds": {
-            "enabled": true
+            "enabled": false
         },
         "ForceOwnerCrown": {
             "enabled": false
@@ -401,7 +401,7 @@
             "enabled": true
         },
         "PlatformIndicators": {
-            "enabled": true,
+            "enabled": false,
             "colorMobileIndicator": true,
             "list": true,
             "badges": true,
@@ -493,7 +493,7 @@
             "autoDisable": true
         },
         "SilentTyping": {
-            "enabled": false,
+            "enabled": true,
             "isEnabled": true,
             "showIcon": false,
             "contextMenu": true
@@ -554,7 +554,7 @@
             "showAvatars": true
         },
         "Unindent": {
-            "enabled": true
+            "enabled": false
         },
         "UnsuppressEmbeds": {
             "enabled": false
@@ -614,7 +614,7 @@
             "enabled": true
         },
         "DisableCallIdle": {
-            "enabled": true
+            "enabled": false
         },
         "NewGuildSettings": {
             "enabled": false,
@@ -667,7 +667,7 @@
         },
         "CustomIdle": {
             "enabled": true,
-            "idleTimeout": 4.910328365308126,
+            "idleTimeout": 5.020327743226884,
             "remainInIdle": false
         },
         "ImageLink": {
@@ -829,7 +829,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1760280214286
+        "settingsSyncVersion": 1760914238757
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false

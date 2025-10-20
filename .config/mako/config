@@ -7,9 +7,10 @@ padding=10
 border-size=2
 anchor=top-right
 outer-margin=20
-default-timeout=5000
+default-timeout=10000
 max-icon-size=32
 font=Iosevka 10.5
+border-radius=6
 
 [mode=do-not-disturb]
 invisible=true

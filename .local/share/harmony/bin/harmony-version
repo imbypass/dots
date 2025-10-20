@@ -1,6 +1,6 @@
 #! /bin/bash
 source harmony-color-codes
 
-HARMONY_VERSION=2.0.0
+HARMONY_VERSION=3.1.0
 
-printf "v%s" $HARMONY_VERSION
+printf "%s" $HARMONY_VERSION

@@ -1,5 +1,3 @@
-pyenv init - fish | source
-
 # Interactive shell settings
 if status is-interactive
     set fish_tmux_autostart false

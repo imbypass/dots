@@ -19,6 +19,7 @@
 }
 [class^="headerText"] > span:has(> [class^="newMemberBadge"]) {
     order: 6;
+    display: none;
 }
 [class^="headerText"] > span:is([class^="botTag"]) {
     order: 7;

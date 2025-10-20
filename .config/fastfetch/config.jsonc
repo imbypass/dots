@@ -2,15 +2,16 @@
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
     "type": "file",
-    "source": "~/local/share/harmony/logo.txt",
+    "source": "~/.local/share/harmony/logo.txt",
     "color": { "1": "green" },
     "padding": {
-      "top": 4,
+      "top": 2,
       "right": 6,
       "left": 2,
     },
   },
   "modules": [
+    "break",
     "break",
     {
       "type": "custom",
@@ -66,7 +67,13 @@
       "type": "command",
       "key": "\ue900 OS",
       "keyColor": "blue",
-      "text": "version=$(harmony-version); echo \"Harmony $version\"",
+      "text": "version=$(harmony-version); echo \"Omarchy $version\"",
+    },
+    {
+      "type": "command",
+      "key": "│ ├",
+      "keyColor": "blue",
+      "text": "echo \"master\"",
     },
     {
       "type": "kernel",
@@ -133,6 +140,5 @@
       "type": "custom",
       "format": "\u001b[90m└────────────────────────────────────────────────────┘",
     },
-    "break",
   ],
 }

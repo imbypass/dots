@@ -1,21 +1,10 @@
 @import "../omarchy/current/theme/waybar.css";
 
 * {
-    background-color: @background;
-    color: @foreground;
     font-family: "Iosevka";
-
-    font-size: 12px;
+    background: transparent;
     font-weight: 600;
-    opacity: 1;
-    border-radius: 0;
     min-height: 0;
-}
-window#waybar {
-    opacity: 0.94;
-}
-tooltip {
-    padding: 4px;
 }
 
 .modules-left {
@@ -26,19 +15,91 @@ tooltip {
     margin-right: 8px;
 }
 
-#workspaces button {
-    all: initial;
-    padding: 0 2px;
-    margin: 0 0.5rem;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    min-width: 9px;
+#waybar {
+    background-color: @background;
+    color: @foreground;
+    opacity: 0.94;
+    border-radius: 8px;
+    border: 2px solid #49375e;
 }
 
+menu {
+    background: transparent;
+    background-color: @background;
+    border-radius: 8px;
+    color: @foreground;
+    padding: 8px;
+}
+
+menuitem {
+    border-radius: 0px;
+    padding: 7px;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 13px;
+    opacity: 0.35;
+}
+
+menuitem:hover {
+    background: @background;
+    color: @color4;
+    opacity: 1;
+}
+
+tooltip {
+    padding: 4px;
+    background: @background;
+    font-size: 12px;
+}
+
+#taskbar button {
+    background: transparent;
+    margin: 4px;
+    padding: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 6px;
+}
+
+#workspaces {
+    background: transparent;
+    margin: 3px 0px;
+    padding: 15px 6px;
+    margin-left: -6px;
+    margin-top: 4px;
+    border-radius: 26px;
+}
+
+#workspaces button {
+    min-width: 5px;
+    min-height: 4px;
+    padding: 0;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: @color8;
+    transition: all 0.15s ease-in-out;
+}
+
+#workspaces button.active,
+#workspaces button:hover {
+    background-color: @foreground;
+    border-radius: 20px;
+    min-width: 25px;
+    transition: all 0.15s ease-in-out;
+}
 #workspaces button.empty {
-    opacity: 0.5;
+    opacity: 0.35;
+}
+
+#workspaces button label {
+    font-size: 0px;
+}
+
+#workspaces button,
+#clock,
+#custom-spotify {
+    font-size: 12px;
+    color: @foreground;
 }
 
 #tray,
@@ -61,8 +122,19 @@ tooltip {
     font-size: 12px;
 }
 
+#idle_inhibitor {
+    font-size: 12px;
+    margin-left: 3px;
+    margin-right: 8px;
+}
+
+#cpu {
+    margin-left: 10px;
+}
+
 #clock {
     margin-right: 1rem;
+    margin-left: 8.75px;
 }
 
 #custom-glorious {
@@ -78,10 +150,6 @@ tooltip {
     margin-left: 1rem;
 }
 
-#idle_inhibitor {
-    font-size: 12px;
-}
-
 #custom-weather {
     font-size: 12px;
 }
@@ -95,28 +163,26 @@ tooltip {
     font-size: 10px;
 }
 
-#clock {
-    margin-left: 8.75px;
-}
-
 .hidden {
     opacity: 0;
 }
 
 #custom-screenrecording-indicator {
     min-width: 12px;
-    margin-top: -0.1rem;
+    margin-top: 0.1rem;
     margin-left: 8.75px;
     font-size: 7px;
+}
 
+#custom-screenrecording-indicator {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    color: transparent;
 }
 
 #custom-screenrecording-indicator.active {
     color: #f7768e;
-
     animation-name: blink-recording;
     animation-duration: 0.5s;
 }
@@ -125,14 +191,4 @@ tooltip {
     to {
         color: @background;
     }
-}
-
-#taskbar button {
-    background: transparent;
-    color: @foreground;
-    margin: 4px;
-    padding: 4px;
-    padding-left: 6px;
-    padding-right: 6px;
-    border-radius: 6px;
 }

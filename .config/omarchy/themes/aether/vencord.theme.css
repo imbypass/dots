@@ -7,23 +7,23 @@
 **/
 
 /* import the parent */
-@import url("https://imbypass.github.io/base16-discord/omarchy-discord.theme.css");
+@import url('https://imbypass.github.io/base16-discord/omarchy-discord.theme.css');
 
 :root {
-    --color00: #1e1e24;
-    --color01: #ccb2b5;
-    --color02: #d6c1be;
-    --color03: #b9b6c2;
-    --color04: #d2bbc5;
-    --color05: #d6c8cc;
-    --color06: #edd4d5;
-    --color07: #c6c6c8;
-    --color08: #636379;
-    --color09: #f5eff0;
-    --color10: #fdfdfd;
-    --color11: #eeeef0;
-    --color12: #fbf8f9;
-    --color13: #ffffff;
-    --color14: #ffffff;
-    --color15: #fafafa;
+    --color00: #160d20;
+    --color01: #9B2463;
+    --color02: #CB2D5F;
+    --color03: #A15159;
+    --color04: #E55A62;
+    --color05: #F6AC67;
+    --color06: #394E8D;
+    --color07: #c4c2c7;
+    --color08: #665d71;
+    --color09: #d64f96;
+    --color10: #e27c9c;
+    --color11: #c79196;
+    --color12: #f3b2b6;
+    --color13: #fce1c7;
+    --color14: #6980c3;
+    --color15: #f7f7f8;
 }
