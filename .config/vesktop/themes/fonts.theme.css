@@ -16,11 +16,14 @@
     --font-display: var(--font);
     --font-heading: var(--font);
 
+    --font-weight-light: 500;
+    --font-weight-normal: 550;
+
     --font-weight-normal: 600;
-    /*--font-weight-light: 500;
+    --font-weight-light: 500;
     --font-weight-medium: 600;
     --font-weight-semibold: 800;
-    --font-weight-bold: 900;*/
+    --font-weight-bold: 900;
 }
 
 .messageContent_c19a55 {

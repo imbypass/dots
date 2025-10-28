@@ -11,8 +11,8 @@ return {
   ·▀▀▀▀   ▀ • .▀    ▀  ▀  ▀▀▀▀  ▀▀▀▀
       ]]
 
-            local base16 = require("base16-colorscheme")
-            local colors = base16.colors or {}
+            -- local base16 = require("base16-colorscheme")
+            -- local colors = base16.colors or {}
 
             local opts = {
                 theme = "doom",
@@ -61,13 +61,13 @@ return {
         dependencies = { { "nvim-tree/nvim-web-devicons" } },
         config = function(_, opts)
             -- Apply base16 colors to dashboard highlights
-            local base16 = require("base16-colorscheme")
-            local colors = base16.colors or {}
+            -- local base16 = require("base16-colorscheme")
+            -- local colors = base16.colors or {}
 
-            vim.api.nvim_set_hl(0, "DashboardHeader", { fg = colors.base0D })
-            vim.api.nvim_set_hl(0, "DashboardCenter", { fg = colors.base0B })
-            vim.api.nvim_set_hl(0, "DashboardShortcut", { fg = colors.base0B })
-            vim.api.nvim_set_hl(0, "DashboardFooter", { fg = colors.base03 })
+            -- vim.api.nvim_set_hl(0, "DashboardHeader", { fg = colors.base0D })
+            -- vim.api.nvim_set_hl(0, "DashboardCenter", { fg = colors.base0B })
+            -- vim.api.nvim_set_hl(0, "DashboardShortcut", { fg = colors.base0B })
+            -- vim.api.nvim_set_hl(0, "DashboardFooter", { fg = colors.base03 })
 
             require("dashboard").setup(opts)
         end,
@@ -82,11 +82,11 @@ return {
             },
             picker = {
                 enabled = true,
-                theme = "base16", -- Use base16 theme instead of tokyonight
+                -- theme = "base16", -- Use base16 theme instead of tokyonight
             },
             -- Apply base16 theme to all other snacks components
             styles = {
-                base16 = true, -- Use base16 colors for all UI components
+                -- base16 = true, -- Use base16 colors for all UI components
             },
         },
     },

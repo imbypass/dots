@@ -24,3 +24,8 @@
 [class^="headerText"] > span:is([class^="botTag"]) {
     order: 7;
 }
+
+.nitroAuthorBadgeContainer_c19a55 {
+    margin-right: 4px !important;
+    margin-left: -10px;
+}

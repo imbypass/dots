@@ -21,11 +21,11 @@
 @import url(./snippets/swap-clantag-roleicon.css);
 @import url(./snippets/no-message-hover-emojis.css);
 @import url(./snippets/remove-gradient-glow.css);
-@import url(./snippets/hide-blocked-messages.css);
+/*@import url(./snippets/hide-blocked-messages.css);*/
 
 /* === [ DISABLED SNIPPETS ] === */
 /*@import url(./snippets/hide-pluralkit-messages.css);*/
-/* @import url(./snippets/discord-top-border.css); */
+/*@import url(./snippets/discord-top-border.css);*/
 /*@import url(./snippets/no-border-radius.css);*/
 
 /* === [ BASE16-SPECIFIC SNIPPETS ] === */

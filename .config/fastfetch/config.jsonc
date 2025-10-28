@@ -67,7 +67,7 @@
       "type": "command",
       "key": "\ue900 OS",
       "keyColor": "blue",
-      "text": "version=$(harmony-version); echo \"Omarchy $version\"",
+      "text": "version=$(omarchy-version); echo \"Omarchy $version\"",
     },
     {
       "type": "command",

@@ -32,8 +32,11 @@ case "$1" in
         fi
     ;;
     "walker")
+        killall -9 elephant > /dev/null 2>&1
         killall -9 walker > /dev/null 2>&1
-        walker --gapplication-service > /dev/null 2>&1 & disown
+
+        hyprctl dispatch exec elephant
+        hyprctl dispatch exec "walker --gapplication-service"
     ;;
     "nautilus")
 

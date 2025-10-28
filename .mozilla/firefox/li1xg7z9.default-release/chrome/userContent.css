@@ -1,5 +1,24 @@
 /* base16_firefox - userContent */
-@import url("./base16.css");
+@import url("./colors.css");
+
+:root {
+    --base00: var(--color00);
+    --base01: color-mix(in srgb, var(--color00) 98%, white);
+    --base02: color-mix(in srgb, var(--color00) 94%, white);
+    --base03: var(--color03);
+    --base04: var(--color04);
+    --base05: var(--color05);
+    --base06: var(--color06);
+    --base07: var(--color07);
+    --base08: var(--color08);
+    --base09: var(--color09);
+    --base0A: var(--color0A);
+    --base0B: var(--color0B);
+    --base0C: var(--color0C);
+    --base0D: var(--color0D);
+    --base0E: var(--color0E);
+    --base0F: var(--color0F);
+}
 
 :root {
     --color-accent-primary-active: var(--base0D) !important;

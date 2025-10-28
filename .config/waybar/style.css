@@ -16,19 +16,20 @@
 }
 
 #waybar {
-    background-color: @background;
+    background-color: alpha(@background, 0.85);
     color: @foreground;
-    opacity: 0.94;
-    border-radius: 8px;
-    border: 2px solid #49375e;
+    border-radius: 0px;
+    border: 0px solid alpha(@foreground, 0.64);
+    border-bottom-width: 2px;
 }
 
 menu {
     background: transparent;
     background-color: @background;
-    border-radius: 8px;
+    border-radius: 0;
     color: @foreground;
     padding: 8px;
+    border: 2px solid alpha(@foreground, 0.64);
 }
 
 menuitem {
@@ -37,19 +38,24 @@ menuitem {
     padding-left: 2px;
     padding-right: 2px;
     font-size: 13px;
-    opacity: 0.35;
+    border: 0;
+    color: @foreground;
+    opacity: 0.65;
 }
 
 menuitem:hover {
     background: @background;
-    color: @color4;
+    color: @foreground;
     opacity: 1;
 }
 
 tooltip {
+    color: @foreground;
     padding: 4px;
     background: @background;
     font-size: 12px;
+    border: 2px solid alpha(@foreground, 0.64);
+    border-radius: 8px;
 }
 
 #taskbar button {
@@ -64,19 +70,20 @@ tooltip {
 #workspaces {
     background: transparent;
     margin: 3px 0px;
-    padding: 15px 6px;
+    padding: 14px 6px;
     margin-left: -6px;
-    margin-top: 4px;
+    margin-top: 2px;
+    margin-bottom: 4px;
     border-radius: 26px;
 }
 
 #workspaces button {
-    min-width: 5px;
+    min-width: 4px;
     min-height: 4px;
     padding: 0;
     margin: 0 5px;
     border-radius: 50%;
-    background-color: @color8;
+    background-color: alpha(@foreground, 0.75);
     transition: all 0.15s ease-in-out;
 }
 
@@ -88,7 +95,7 @@ tooltip {
     transition: all 0.15s ease-in-out;
 }
 #workspaces button.empty {
-    opacity: 0.35;
+    opacity: 0.45;
 }
 
 #workspaces button label {
@@ -98,8 +105,11 @@ tooltip {
 #workspaces button,
 #clock,
 #custom-spotify {
-    font-size: 12px;
+    margin-top: 1px;
+    margin-bottom: -1px;
+    font-size: 12.5px;
     color: @foreground;
+    font-weight: 800;
 }
 
 #tray,
@@ -122,9 +132,13 @@ tooltip {
     font-size: 12px;
 }
 
+#pulseaudio.microphone {
+    margin-right: 1rem;
+}
+
 #idle_inhibitor {
     font-size: 12px;
-    margin-left: 3px;
+    margin-left: 0px;
     margin-right: 8px;
 }
 
@@ -137,25 +151,24 @@ tooltip {
     margin-left: 8.75px;
 }
 
-#custom-glorious {
-    font-size: 12px;
+#custom-harmony {
+    font-size: 16px;
+    font-size: 14px;
+    font-weight: 900;
+    margin-right: 1.5rem;
+    margin-left: 1rem;
 }
 
-#custom-harmony {
-    font-size: 14px;
-    margin-right: 1.25rem;
+#custom-glorious {
+    font-size: 12px;
 }
 
 #custom-spotify {
     margin-left: 1rem;
 }
 
-#custom-weather {
-    font-size: 12px;
-}
-
 #custom-expand-icon {
-    margin-right: 5px;
+    margin-right: 0.5rem;
     font-size: 12px;
 }
 

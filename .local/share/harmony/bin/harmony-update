@@ -13,5 +13,3 @@ paru -Syu --noconfirm
 printf " ${YELLOW}==> ${NC}Checking for flatpak updates..${RESET}\n"
 flatpak update -y
 notify-send -u low -a Hyprland -t 3500 "Harmony" "System update completed!" -i ~/.local/share/harmony/logo.svg
-
-harmony-show-done

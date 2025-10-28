@@ -7,11 +7,11 @@
         "patches.theme.css",
         "base16.theme.css",
         "base16-system24.theme.css",
-        "settings-icons.theme.css",
         "fonts.theme.css",
         "base16-discord.css",
-        "snippets.theme.css",
         "EmojiReplace.theme.css",
+        "settings-icons.theme.css",
+        "snippets.theme.css",
         "icons-recolor.theme.css",
         "vencord.theme.css"
     ],
@@ -358,7 +358,8 @@
             "enabled": false
         },
         "PictureInPicture": {
-            "enabled": true
+            "enabled": true,
+            "loop": true
         },
         "PinDMs": {
             "enabled": true,
@@ -383,6 +384,20 @@
                             "1015718332109955112",
                             "294685587401605132",
                             "1336483990953136188"
+                        ]
+                    },
+                    {
+                        "id": "92phqldt64",
+                        "name": "Linux",
+                        "color": 10070709,
+                        "collapsed": false,
+                        "channels": [
+                            "1424989754591547452",
+                            "1421313952536858799",
+                            "1431234816258474087",
+                            "1373346998241198191",
+                            "1429655160640241794",
+                            "1424514407169523896"
                         ]
                     },
                     {
@@ -524,7 +539,7 @@
             "enabled": false
         },
         "ThemeAttributes": {
-            "enabled": true
+            "enabled": false
         },
         "TimeBarAllActivities": {
             "enabled": false
@@ -829,7 +844,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1760914238757
+        "settingsSyncVersion": 1761512617087
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false

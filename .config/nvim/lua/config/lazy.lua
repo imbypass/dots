@@ -27,7 +27,7 @@ require("lazy").setup({
             lazy = false,
         },
         {
-            "RRethy/base16-nvim",
+            "bjarneo/aether.nvim",
             priority = 1000,
             lazy = false,
             config = function() end,

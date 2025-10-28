@@ -1,12 +1,12 @@
-@import "../../../omarchy/current/theme/walker.css";
+@import "../../../../.config/omarchy/current/theme/walker.css";
 
 * {
     all: unset;
 }
 
 * {
-    font-family: Iosevka;
-    font-size: 18px;
+    font-family: "Iosevka";
+    font-size: 15.5px;
     color: @text;
 }
 
@@ -26,7 +26,6 @@ scrollbar {
     background: alpha(@base, 0.95);
     padding: 20px;
     border: 2px solid @border;
-    border-radius: 8px;
 }
 
 .preview-box {
@@ -116,3 +115,5 @@ child:selected .item-box * {
 .preview {
     background: @background;
 }
+
+@import "../../custom.css";

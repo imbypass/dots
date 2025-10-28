@@ -1,5 +1,6 @@
 // Zed settings
 {
+  "show_completions_on_input": false,
   "language_servers": ["!eslint"],
   "base_keymap": "VSCode",
   "agent": {
@@ -10,16 +11,16 @@
     }
   },
   "vim_mode": false,
-  "theme": "Base16 Flavours",
+  "theme": "pywal",
   "features": {
     "edit_prediction_provider": "zed"
   },
-  "ui_font_size": 14,
-  "ui_font_weight": 600,
-  "ui_font_family": "Iosevka Nerd Font Propo",
+  "ui_font_size": 15.0,
+  "ui_font_weight": 510.0,
+  "ui_font_family": "Iosevka",
   "buffer_font_size": 13,
-  "buffer_font_weight": 400,
-  "buffer_font_family": "Iosevka Nerd Font Propo",
+  "buffer_font_weight": 500.0,
+  "buffer_font_family": "Iosevka",
   "buffer_line_height": {
     "custom": 1.525
   },

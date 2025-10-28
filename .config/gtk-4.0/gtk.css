@@ -1,28 +1,22 @@
-/**
- * Aether Theme with Sharp Corners (Hyprland-inspired)
- * GTK4/Adwaita Custom Styling
- */
+@define-color background #131515;
+@define-color foreground #F1E4C2;
 
-/* Dynamic color palette from Aether */
-@define-color background #160d20;
-@define-color foreground #f7f7f8;
-
-@define-color black #160d20;
-@define-color red #9B2463;
-@define-color green #CB2D5F;
-@define-color yellow #A15159;
-@define-color blue #E55A62;
-@define-color magenta #F6AC67;
-@define-color cyan #394E8D;
-@define-color white #c4c2c7;
-@define-color bright_black #665d71;
-@define-color bright_red #d64f96;
-@define-color bright_green #e27c9c;
-@define-color bright_yellow #c79196;
-@define-color bright_blue #f3b2b6;
-@define-color bright_magenta #fce1c7;
-@define-color bright_cyan #6980c3;
-@define-color bright_white #f7f7f8;
+@define-color black          #131515;
+@define-color red            #f16e65;
+@define-color green          #b6c36f;
+@define-color yellow         #ef944d;
+@define-color blue           #a5cab8;
+@define-color magenta        #e9869a;
+@define-color cyan           #8ecd84;
+@define-color white          #e5d5b1;
+@define-color bright_black   #393939;
+@define-color bright_red     #eb7a73;
+@define-color bright_green   #b9c675;
+@define-color bright_yellow  #efbe71;
+@define-color bright_blue    #8dbba3;
+@define-color bright_magenta #e396a4;
+@define-color bright_cyan    #99c792;
+@define-color bright_white   #F1E4C2;
 
 /* Adwaita Color Overrides */
 @define-color accent_bg_color @blue;
@@ -185,6 +179,5 @@ toast button.circular.flat.image-button:hover {
 
 /* Sharp corners, Hyprland-inspired */
 * {
-    border-radius: 0;
+    /*border-radius: 0;*/
 }
-
