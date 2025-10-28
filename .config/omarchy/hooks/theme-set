@@ -1,0 +1,12 @@
+#!/bin/bash
+source harmony-color-codes
+
+if [[ -d ~/.config/omarchy/hooks/theme-set.d ]]; then
+  for hook in ~/.config/omarchy/hooks/theme-set.d/*.sh; do
+    if [[ -f "$hook" && -x "$hook" ]]; then
+      if ! "$hook"; then
+          printf "${RED}[ERROR]${WHITE}: Hook $(basename "$hook") failed!${RESET}\n" >&2
+      fi
+    fi
+  done
+fi
