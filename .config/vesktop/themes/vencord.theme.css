@@ -1,0 +1,29 @@
+/**
+* @name Everpuccin (Omarchy)
+* @author @bypass_
+* @version 0.1.0
+* @description Dark, warm, pastel.
+* @source https://github.com/imbypass/base16-Discord
+**/
+
+/* import the parent */
+@import url("https://imbypass.github.io/base16-discord/omarchy-discord.theme.css");
+
+:root {
+    --color00: #131515;
+    --color01: #131515;
+    --color02: #131515;
+    --color03: #e5d5b1;
+    --color04: #e5d5b1;
+    --color05: #e5d5b1;
+    --color06: #e5d5b1;
+    --color07: #e5d5b1;
+    --color08: #e5d5b1;
+    --color09: #ef944d;
+    --color10: #efbe71;
+    --color11: #b6c36f;
+    --color12: #8ecd84;
+    --color13: #a5cab8;
+    --color14: #e9869a;
+    --color15: #f1e4c2;
+}
