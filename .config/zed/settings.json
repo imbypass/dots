@@ -11,7 +11,7 @@
     }
   },
   "vim_mode": false,
-  "theme": "pywal",
+  "theme": "Omarchy",
   "features": {
     "edit_prediction_provider": "zed"
   },

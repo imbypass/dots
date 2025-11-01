@@ -46,6 +46,7 @@ x-scheme-handler/trash=org.gnome.Nautilus.desktop;
 image/gif=com.interversehq.qView.desktop;imv.desktop;
 text/javascript=micro.desktop;
 application/x-theme=micro.desktop;
+application/pdf=helium-browser.desktop;
 
 [Default Applications]
 application/json=dev.zed.Zed.desktop
@@ -105,3 +106,4 @@ application/vnd.microsoft.portable-executable=wine.desktop
 text/javascript=micro.desktop
 application/x-theme=micro.desktop
 application/x-ms-dos-executable;application/x-wine-extension-msp;application/x-msi;application/x-msdos-program;text/win-bat;=PortProton.desktop
+application/pdf=helium-browser.desktop

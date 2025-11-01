@@ -18,6 +18,7 @@
   "modules-center": ["wlr/taskbar"],
   "modules-right": [
     "group/tray-expander",
+    "custom/update",
     "network",
     "pulseaudio",
     "cpu",
@@ -28,7 +29,7 @@
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
     "on-click": "activate",
-    "format": "{icon}",
+    "format": "{icon} {windows}",
     "window-rewrite-default": "",
     "window-rewrite": {
       "title<.*YouTube.*>": " ", // Windows whose titles contain "youtube"
@@ -159,7 +160,7 @@
       "tray",
       "custom/glorious",
       "pulseaudio#microphone",
-      "idle_inhibitor",
+      "custom/theme-selector",
     ],
   },
   "custom/expand-icon": {
@@ -180,8 +181,8 @@
     "tooltip": false,
   },
   "custom/harmony": {
-    "format-nomarchy": "",
-    "format": "<span font='omarchy'>\ue900</span>",
+    "format": "",
+    "format-nomarchy": "<span font='omarchy'>\ue900</span>",
     "on-click": "fish -c \"omarchy-menu\"",
     "on-click-right": "harmony-expose",
     "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space",
@@ -199,6 +200,11 @@
     "escape": true,
     "exec": "$HOME/.local/share/harmony/scripts/waybar/glorious-mouse.sh",
   },
+  "custom/theme-selector": {
+    "format": "󰏘",
+    "on-click": "fish -c \"omarchy-menu-themes\"",
+    "tooltip-format": "Change Theme\n\nSuper + Shift + T",
+  },
   "custom/spotify": {
     "exec": "python3 $HOME/.local/share/harmony/scripts/waybar/media-player.py --player spotify",
     "format": "{}",
@@ -207,5 +213,13 @@
     "on-click-right": "playerctl play-pause -p spotify",
     "on-scroll-up": "playerctl previous -p spotify",
     "on-scroll-down": "playerctl next -p spotify",
+  },
+  "custom/update": {
+    "format": "",
+    "exec": "harmony-update-available",
+    "on-click": "foot -a Harmony -e bash -c omarchy-update",
+    "tooltip-format": "System update available",
+    "signal": 7,
+    "interval": 21600,
   },
 }

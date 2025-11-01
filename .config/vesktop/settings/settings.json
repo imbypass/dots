@@ -397,7 +397,9 @@
                             "1431234816258474087",
                             "1373346998241198191",
                             "1429655160640241794",
-                            "1424514407169523896"
+                            "1424514407169523896",
+                            "1432849624153985188",
+                            "1433103553978961971"
                         ]
                     },
                     {
@@ -416,7 +418,7 @@
             "enabled": true
         },
         "PlatformIndicators": {
-            "enabled": false,
+            "enabled": true,
             "colorMobileIndicator": true,
             "list": true,
             "badges": true,
@@ -508,7 +510,7 @@
             "autoDisable": true
         },
         "SilentTyping": {
-            "enabled": true,
+            "enabled": false,
             "isEnabled": true,
             "showIcon": false,
             "contextMenu": true
@@ -844,7 +846,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1761512617087
+        "settingsSyncVersion": 1762005554299
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false

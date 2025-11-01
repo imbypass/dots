@@ -1,11 +1,65 @@
 #!/bin/bash
-source harmony-color-codes
+#
+error() {
+    echo -e "\e[31m[ERROR]\e[0m $1"
+    exit 1
+}
 
-if [[ -d ~/.config/omarchy/hooks/theme-set.d ]]; then
-  for hook in ~/.config/omarchy/hooks/theme-set.d/*.sh; do
-    if [[ -f "$hook" && -x "$hook" ]]; then
-      if ! "$hook"; then
-          printf "${RED}[ERROR]${WHITE}: Hook $(basename "$hook") failed!${RESET}\n" >&2
+colors_file="$HOME/.config/omarchy/current/theme/colors.json"
+theme_file="$HOME/.config/omarchy/current/theme/alacritty.toml"
+
+clean_color() {
+    echo "$1" | sed "s/['\"]//g" | sed 's/#//g' | sed 's/0x//g' | sed 's/0X//g'
+}
+
+extract_color() {
+    local section="$1"
+    local color_name="$2"
+    awk -v section="[$section]" -v color="$color_name" '
+        $0 == section { in_section=1; next }
+        /^\[/ { in_section=0 }
+        in_section && $1 == color {
+            if (match($0, /(#|0x)([0-9a-fA-F]{6})/)) {
+                hex_part = substr($0, RSTART + (substr($0, RSTART, 2) == "0x" ? 2 : 1), 6)
+                print "#" hex_part
+                exit
+            }
+        }
+    ' "$theme_file"
+}
+
+colors=(black red green yellow blue magenta cyan white)
+declare -A normal_colors bright_colors
+
+primary_background=$(clean_color "$(extract_color "colors.primary" "background")")
+primary_foreground=$(clean_color "$(extract_color "colors.primary" "foreground")")
+normal_black=$(clean_color "$(extract_color "colors.normal" "black")")
+normal_red=$(clean_color "$(extract_color "colors.normal" "red")")
+normal_green=$(clean_color "$(extract_color "colors.normal" "green")")
+normal_yellow=$(clean_color "$(extract_color "colors.normal" "yellow")")
+normal_blue=$(clean_color "$(extract_color "colors.normal" "blue")")
+normal_magenta=$(clean_color "$(extract_color "colors.normal" "magenta")")
+normal_cyan=$(clean_color "$(extract_color "colors.normal" "cyan")")
+normal_white=$(clean_color "$(extract_color "colors.normal" "white")")
+bright_black=$(clean_color "$(extract_color "colors.bright" "black")")
+bright_red=$(clean_color "$(extract_color "colors.bright" "red")")
+bright_green=$(clean_color "$(extract_color "colors.bright" "green")")
+bright_yellow=$(clean_color "$(extract_color "colors.bright" "yellow")")
+bright_blue=$(clean_color "$(extract_color "colors.bright" "blue")")
+bright_magenta=$(clean_color "$(extract_color "colors.bright" "magenta")")
+bright_cyan=$(clean_color "$(extract_color "colors.bright" "cyan")")
+bright_white=$(clean_color "$(extract_color "colors.bright" "white")")
+font=$(omarchy-font-current)
+export primary_background primary_foreground font
+export normal_black normal_red normal_green normal_yellow normal_blue normal_magenta normal_cyan normal_white
+export bright_black bright_red bright_green bright_yellow bright_blue bright_magenta bright_cyan bright_white
+
+# execute local recipe recipes (these shouldn't exist and are purely for testing)
+if [[ -d $HOME/.config/omarchy/hooks/theme-set.d/ ]]; then
+  for recipe in $HOME/.config/omarchy/hooks/theme-set.d/*.sh; do
+    if [[ -f "$recipe" && -x "$recipe" ]]; then
+      if ! "$recipe" "$@"; then
+          error "$(basename "$recipe") failed!" >&2
       fi
     fi
   done
