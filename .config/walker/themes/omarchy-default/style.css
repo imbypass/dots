@@ -1,4 +1,4 @@
-@import "../../../../.config/omarchy/current/theme/walker.css";
+@import "../../../omarchy/current/theme/walker.css";
 
 * {
     all: unset;
@@ -91,7 +91,7 @@ child:selected .item-box * {
 }
 
 .item-subtext {
-    font-size: 11px;
+    font-size: 0px;
     min-height: 0px;
     margin: 0px;
     padding: 0px;

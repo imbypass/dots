@@ -7,12 +7,11 @@
         "patches.theme.css",
         "base16.theme.css",
         "base16-system24.theme.css",
-        "fonts.theme.css",
         "base16-discord.css",
+        "base16.extras.css",
         "EmojiReplace.theme.css",
-        "settings-icons.theme.css",
-        "snippets.theme.css",
         "icons-recolor.theme.css",
+        "snippets.theme.css",
         "vencord.theme.css"
     ],
     "enableReactDevtools": false,
@@ -399,7 +398,10 @@
                             "1429655160640241794",
                             "1424514407169523896",
                             "1432849624153985188",
-                            "1433103553978961971"
+                            "1433103553978961971",
+                            "1434298771130552393",
+                            "1437085273849729137",
+                            "1439262183446810847"
                         ]
                     },
                     {
@@ -846,7 +848,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1762005554299
+        "settingsSyncVersion": 1763301784757
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false

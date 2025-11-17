@@ -7,3 +7,5 @@ pyenv init - fish | source
 
 # Disable fish greeting
 set fish_greeting
+
+fetch

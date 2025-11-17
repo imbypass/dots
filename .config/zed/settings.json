@@ -10,6 +10,7 @@
       "model": "claude-sonnet-4"
     }
   },
+  "format_on_save": "off",
   "vim_mode": false,
   "theme": "Omarchy",
   "features": {

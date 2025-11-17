@@ -7,7 +7,7 @@ result=""
 
 # shamelessly stolen from uwsm/uuctl
 if [ "$#" -le "1" ]; then
-    dmenu_candidates="walker fuzzel wofi rofi tofi bemenu wmenu dmenu"
+    dmenu_candidates="vicinae walker fuzzel wofi rofi tofi bemenu wmenu dmenu"
 
     if [ "$#" = "1" ]; then
         case " $dmenu_candidates " in
@@ -30,6 +30,9 @@ if [ "$#" -le "1" ]; then
     case "$dmenu_candidate" in
     walker)
         set -- walker -d -p
+        ;;
+    vicinae)
+        set -- vicinae dmenu -p
         ;;
     fuzzel)
         set -- fuzzel --dmenu -R --log-no-syslog --log-level=warning -p

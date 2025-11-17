@@ -10,24 +10,28 @@ case "$1" in
         harmony-reload "hypr"
         harmony-reload "ignis"
         harmony-reload "walker"
-        harmony-reload "spotify"
         harmony-reload "steam"
         harmony-reload "nautilus"
     ;;
     "bongocat")
-
         killall -9 bongocat > /dev/null 2>&1
         ~/.local/bin/bongocat & disown
         harmony-reload "waybar"
     ;;
+    "dock")
+        if [ "$2" = "toggle" ]; then
+            killall -SIGUSR1 nwg-dock-hyprland
+        else
+            killall nwg-dock-hyprland
+            nwg-dock-hyprland -r -mb 10 -mt 5 -i 38 -x -nolauncher & disown
+        fi
+    ;;
     "waybar")
         if [ "$2" = "full" ]; then
-
             killall -9 waybar > /dev/null 2>&1
             waybar > /dev/null 2>&1 &
             disown
         else
-
             killall -USR2 waybar > /dev/null 2>&1
         fi
     ;;
@@ -39,19 +43,15 @@ case "$1" in
         hyprctl dispatch exec "walker --gapplication-service"
     ;;
     "nautilus")
-
         nautilus -q > /dev/null 2>&1 & disown
     ;;
     "mako")
-
         sleep .5 && makoctl reload > /dev/null 2>&1
     ;;
     "hypr")
-
         hyprctl reload > /dev/null 2>&1
     ;;
     "swaync")
-
         swaync-client -rs > /dev/null 2>&1
     ;;
     "ignis")
@@ -60,7 +60,6 @@ case "$1" in
         ignis init > /dev/null 2>&1 & disown
     ;;
     "ghostty")
-
         killall -9 ghostty > /dev/null 2>&1
         ghostty \
         --gtk-single-instance=true \
@@ -71,15 +70,8 @@ case "$1" in
         source ~/.cache/wal/colors.fish
     ;;
     "mconnect")
-
         killall -9 mconnect > /dev/null 2>&1
         mconnect -d & disown
-    ;;
-    "gtk")
-
-        cd ~/.themes/phocus && npm run build > /dev/null 2>&1
-        gsettings set org.gnome.desktop.interface gtk-theme phocus_refresh > /dev/null 2>&1
-        gsettings set org.gnome.desktop.interface gtk-theme phocus > /dev/null 2>&1
     ;;
     "spotify")
 
@@ -87,17 +79,12 @@ case "$1" in
         spicetify apply > /dev/null 2>&1
     ;;
     "pcmanfm")
-
         killall -9 pcmanfm-qt > /dev/null 2>&1
         pcmanfm-qt --desktop & disown > /dev/null 2>&1
     ;;
-    "steam")
-
-        sleep 2 && cd ~/.local/share/adwaita-steam/ && ./install.py \
-        --color-theme base16 \
-        --extras library/hide_whats_new \
-        --font zedmono \
-        --custom-css > /dev/null 2>&1
+    "vicinae")
+        killall vicinae > /dev/null 2>&1
+        vicinae server > /dev/null 2>&1 & disown
     ;;
     *)
         exit 1

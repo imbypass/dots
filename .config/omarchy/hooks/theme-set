@@ -1,18 +1,56 @@
 #!/bin/bash
-#
+
+input_file="$HOME/.config/omarchy/current/theme/alacritty.toml"
+
+success() {
+    echo -e "\e[32m[SUCCESS]\e[0m $1"
+}
+
+skipped() {
+    echo -e "\033[0;34m[SKIPPED]\e[0m $1 not found. Skipping.."
+    exit 0
+}
+
+warning() {
+    echo -e "\033[0;33m[WARNING]\e[0m $1"
+}
+
 error() {
     echo -e "\e[31m[ERROR]\e[0m $1"
     exit 1
 }
 
-colors_file="$HOME/.config/omarchy/current/theme/colors.json"
-theme_file="$HOME/.config/omarchy/current/theme/alacritty.toml"
-
-clean_color() {
-    echo "$1" | sed "s/['\"]//g" | sed 's/#//g' | sed 's/0x//g' | sed 's/0X//g'
+hex2rgb() {
+    hex_input=$1
+    r=$((16#${hex_input:0:2}))
+    g=$((16#${hex_input:2:2}))
+    b=$((16#${hex_input:4:2}))
+    echo "$r, $g, $b"
 }
 
-extract_color() {
+rgb2hex() {
+    r=$1
+    g=$2
+    b=$3
+    printf "%02x%02x%02x" $r $g $b
+}
+
+change_shade() {
+    local hex_color=$1
+    local shade=$2
+    hex_input=$1
+    r=$((16#${hex_input:0:2}))
+    g=$((16#${hex_input:2:2}))
+    b=$((16#${hex_input:4:2}))
+
+    r=$((r + shade))
+    g=$((g + shade))
+    b=$((b + shade))
+
+    rgb2hex $r $g $b
+}
+
+extract_from_section() {
     local section="$1"
     local color_name="$2"
     awk -v section="[$section]" -v color="$color_name" '
@@ -21,45 +59,67 @@ extract_color() {
         in_section && $1 == color {
             if (match($0, /(#|0x)([0-9a-fA-F]{6})/)) {
                 hex_part = substr($0, RSTART + (substr($0, RSTART, 2) == "0x" ? 2 : 1), 6)
-                print "#" hex_part
+                print hex_part
                 exit
             }
         }
-    ' "$theme_file"
+    ' "$input_file"
 }
 
-colors=(black red green yellow blue magenta cyan white)
-declare -A normal_colors bright_colors
+primary_foreground=$(extract_from_section "colors.primary" "foreground")
+primary_background=$(extract_from_section "colors.primary" "background")
+normal_black=$(extract_from_section "colors.normal" "black")
+normal_red=$(extract_from_section "colors.normal" "red")
+normal_green=$(extract_from_section "colors.normal" "green")
+normal_yellow=$(extract_from_section "colors.normal" "yellow")
+normal_blue=$(extract_from_section "colors.normal" "blue")
+normal_magenta=$(extract_from_section "colors.normal" "magenta")
+normal_cyan=$(extract_from_section "colors.normal" "cyan")
+normal_white=$(extract_from_section "colors.normal" "white")
+bright_black=$(extract_from_section "colors.bright" "black")
+bright_red=$(extract_from_section "colors.bright" "red")
+bright_green=$(extract_from_section "colors.bright" "green")
+bright_yellow=$(extract_from_section "colors.bright" "yellow")
+bright_blue=$(extract_from_section "colors.bright" "blue")
+bright_magenta=$(extract_from_section "colors.bright" "magenta")
+bright_cyan=$(extract_from_section "colors.bright" "cyan")
+bright_white=$(extract_from_section "colors.bright" "white")
 
-primary_background=$(clean_color "$(extract_color "colors.primary" "background")")
-primary_foreground=$(clean_color "$(extract_color "colors.primary" "foreground")")
-normal_black=$(clean_color "$(extract_color "colors.normal" "black")")
-normal_red=$(clean_color "$(extract_color "colors.normal" "red")")
-normal_green=$(clean_color "$(extract_color "colors.normal" "green")")
-normal_yellow=$(clean_color "$(extract_color "colors.normal" "yellow")")
-normal_blue=$(clean_color "$(extract_color "colors.normal" "blue")")
-normal_magenta=$(clean_color "$(extract_color "colors.normal" "magenta")")
-normal_cyan=$(clean_color "$(extract_color "colors.normal" "cyan")")
-normal_white=$(clean_color "$(extract_color "colors.normal" "white")")
-bright_black=$(clean_color "$(extract_color "colors.bright" "black")")
-bright_red=$(clean_color "$(extract_color "colors.bright" "red")")
-bright_green=$(clean_color "$(extract_color "colors.bright" "green")")
-bright_yellow=$(clean_color "$(extract_color "colors.bright" "yellow")")
-bright_blue=$(clean_color "$(extract_color "colors.bright" "blue")")
-bright_magenta=$(clean_color "$(extract_color "colors.bright" "magenta")")
-bright_cyan=$(clean_color "$(extract_color "colors.bright" "cyan")")
-bright_white=$(clean_color "$(extract_color "colors.bright" "white")")
-font=$(omarchy-font-current)
-export primary_background primary_foreground font
+rgb_primary_foreground=$(hex2rgb $primary_foreground)
+rgb_primary_background=$(hex2rgb $primary_background)
+rgb_normal_black=$(hex2rgb $normal_black)
+rgb_normal_red=$(hex2rgb $normal_red)
+rgb_normal_green=$(hex2rgb $normal_green)
+rgb_normal_yellow=$(hex2rgb $normal_yellow)
+rgb_normal_blue=$(hex2rgb $normal_blue)
+rgb_normal_magenta=$(hex2rgb $normal_magenta)
+rgb_normal_cyan=$(hex2rgb $normal_cyan)
+rgb_normal_white=$(hex2rgb $normal_white)
+rgb_bright_black=$(hex2rgb $bright_black)
+rgb_bright_red=$(hex2rgb $bright_red)
+rgb_bright_green=$(hex2rgb $bright_green)
+rgb_bright_yellow=$(hex2rgb $bright_yellow)
+rgb_bright_blue=$(hex2rgb $bright_blue)
+rgb_bright_magenta=$(hex2rgb $bright_magenta)
+rgb_bright_cyan=$(hex2rgb $bright_cyan)
+rgb_bright_white=$(hex2rgb $bright_white)
+
+export -f success warning error skipped
+export -f rgb2hex hex2rgb change_shade
+
+export primary_background primary_foreground
 export normal_black normal_red normal_green normal_yellow normal_blue normal_magenta normal_cyan normal_white
 export bright_black bright_red bright_green bright_yellow bright_blue bright_magenta bright_cyan bright_white
 
-# execute local recipe recipes (these shouldn't exist and are purely for testing)
-if [[ -d $HOME/.config/omarchy/hooks/theme-set.d/ ]]; then
-  for recipe in $HOME/.config/omarchy/hooks/theme-set.d/*.sh; do
-    if [[ -f "$recipe" && -x "$recipe" ]]; then
-      if ! "$recipe" "$@"; then
-          error "$(basename "$recipe") failed!" >&2
+export rgb_primary_foreground rgb_primary_background
+export rgb_normal_black rgb_normal_red rgb_normal_green rgb_normal_yellow rgb_normal_blue rgb_normal_magenta rgb_normal_cyan rgb_normal_white
+export rgb_bright_black rgb_bright_red rgb_bright_green rgb_bright_yellow rgb_bright_blue rgb_bright_magenta rgb_bright_cyan rgb_bright_white
+
+if [[ -d ~/.config/omarchy/hooks/theme-set.d ]]; then
+  for hook in ~/.config/omarchy/hooks/theme-set.d/*.sh; do
+    if [[ -f "$hook" && -x "$hook" ]]; then
+      if ! "$hook" "$@"; then
+          error "Hook $(basename "$hook") failed!" >&2
       fi
     fi
   done

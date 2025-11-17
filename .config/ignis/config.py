@@ -33,7 +33,7 @@ css_manager = CssManager.get_default()
 hyprland = HyprlandService.get_default()
 mpris = MprisService.get_default()
 network = NetworkService.get_default()
-# system_tray = SystemTrayService.get_default()
+system_tray = SystemTrayService.get_default()
 upower = UPowerService.get_default()
 window_manager = WindowManager.get_default()
 
@@ -238,8 +238,8 @@ def bar(monitor_id: int = 0) -> widgets.Window:
 
 
 # this will display bar on all monitors
-# for i in range(utils.get_n_monitors()):
-    # bar(i)
+for i in range(utils.get_n_monitors()):
+    bar(i)
 
 for monitor in range(utils.get_n_monitors()):
     Notifications(monitor)

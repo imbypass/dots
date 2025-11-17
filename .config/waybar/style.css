@@ -20,17 +20,17 @@
     background-color: alpha(@background, 0.85);
     color: @foreground;
     border-radius: 0px;
-    border: 0px solid alpha(@foreground, 0.64);
+    border: 0px solid alpha(@foreground, 0.14);
     border-bottom-width: 2px;
 }
 
 menu {
     background: transparent;
     background-color: @background;
-    border-radius: 0;
     color: @foreground;
     padding: 8px;
     border: 2px solid alpha(@foreground, 0.64);
+    border-radius: 6px;
 }
 
 menuitem {
@@ -51,12 +51,14 @@ menuitem:hover {
 }
 
 tooltip {
-    color: @foreground;
-    padding: 4px;
+    padding: 2px;
     background: @background;
     font-size: 12px;
     border: 2px solid alpha(@foreground, 0.64);
-    border-radius: 8px;
+    border-radius: 6px;
+}
+tooltip label {
+    color: @foreground;
 }
 
 #taskbar button {
@@ -187,8 +189,8 @@ tooltip {
 }
 
 #custom-update {
-    font-size: 10px;
-    margin-right: 10px;
+    font-size: 13px;
+    margin-right: 8px;
     font-weight: 800;
 }
 
