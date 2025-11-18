@@ -202,7 +202,7 @@
   },
   "custom/theme-selector": {
     "format": "󰏘",
-    "on-click": "fish -c \"omarchy-menu-themes\"",
+    "on-click": "fish -c \"~/.config/walker/scripts/theme_picker.sh\"",
     "tooltip-format": "Change Theme\n\nSuper + Shift + T",
   },
   "custom/spotify": {
