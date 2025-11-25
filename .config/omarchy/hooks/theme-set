@@ -2,6 +2,22 @@
 
 input_file="$HOME/.config/omarchy/current/theme/alacritty.toml"
 
+extract_from_section() {
+    local section="$1"
+    local color_name="$2"
+    awk -v section="[$section]" -v color="$color_name" '
+        $0 == section { in_section=1; next }
+        /^\[/ { in_section=0 }
+        in_section && $1 == color {
+            if (match($0, /(#|0x)([0-9a-fA-F]{6})/)) {
+                hex_part = substr($0, RSTART + (substr($0, RSTART, 2) == "0x" ? 2 : 1), 6)
+                print hex_part
+                exit
+            }
+        }
+    ' "$input_file"
+}
+
 success() {
     echo -e "\e[32m[SUCCESS]\e[0m $1"
 }
@@ -19,6 +35,8 @@ error() {
     echo -e "\e[31m[ERROR]\e[0m $1"
     exit 1
 }
+
+export -f success warning error skipped
 
 hex2rgb() {
     hex_input=$1
@@ -50,21 +68,14 @@ change_shade() {
     rgb2hex $r $g $b
 }
 
-extract_from_section() {
-    local section="$1"
-    local color_name="$2"
-    awk -v section="[$section]" -v color="$color_name" '
-        $0 == section { in_section=1; next }
-        /^\[/ { in_section=0 }
-        in_section && $1 == color {
-            if (match($0, /(#|0x)([0-9a-fA-F]{6})/)) {
-                hex_part = substr($0, RSTART + (substr($0, RSTART, 2) == "0x" ? 2 : 1), 6)
-                print hex_part
-                exit
-            }
-        }
-    ' "$input_file"
+restart_scripts=()
+restart_file=$(mktemp)
+export restart_file
+require_restart() {
+    echo "$1" >> "$restart_file"
 }
+
+export -f rgb2hex hex2rgb change_shade require_restart
 
 primary_foreground=$(extract_from_section "colors.primary" "foreground")
 primary_background=$(extract_from_section "colors.primary" "background")
@@ -85,6 +96,10 @@ bright_magenta=$(extract_from_section "colors.bright" "magenta")
 bright_cyan=$(extract_from_section "colors.bright" "cyan")
 bright_white=$(extract_from_section "colors.bright" "white")
 
+export primary_background primary_foreground
+export normal_black normal_red normal_green normal_yellow normal_blue normal_magenta normal_cyan normal_white
+export bright_black bright_red bright_green bright_yellow bright_blue bright_magenta bright_cyan bright_white
+
 rgb_primary_foreground=$(hex2rgb $primary_foreground)
 rgb_primary_background=$(hex2rgb $primary_background)
 rgb_normal_black=$(hex2rgb $normal_black)
@@ -104,23 +119,37 @@ rgb_bright_magenta=$(hex2rgb $bright_magenta)
 rgb_bright_cyan=$(hex2rgb $bright_cyan)
 rgb_bright_white=$(hex2rgb $bright_white)
 
-export -f success warning error skipped
-export -f rgb2hex hex2rgb change_shade
-
-export primary_background primary_foreground
-export normal_black normal_red normal_green normal_yellow normal_blue normal_magenta normal_cyan normal_white
-export bright_black bright_red bright_green bright_yellow bright_blue bright_magenta bright_cyan bright_white
-
 export rgb_primary_foreground rgb_primary_background
 export rgb_normal_black rgb_normal_red rgb_normal_green rgb_normal_yellow rgb_normal_blue rgb_normal_magenta rgb_normal_cyan rgb_normal_white
 export rgb_bright_black rgb_bright_red rgb_bright_green rgb_bright_yellow rgb_bright_blue rgb_bright_magenta rgb_bright_cyan rgb_bright_white
 
 if [[ -d ~/.config/omarchy/hooks/theme-set.d ]]; then
-  for hook in ~/.config/omarchy/hooks/theme-set.d/*.sh; do
-    if [[ -f "$hook" && -x "$hook" ]]; then
-      if ! "$hook" "$@"; then
-          error "Hook $(basename "$hook") failed!" >&2
-      fi
+    for hook in ~/.config/omarchy/hooks/theme-set.d/*.sh; do
+        if [[ -f "$hook" && -x "$hook" ]]; then
+            if ! "$hook" "$@"; then
+                error "Hook $(basename "$hook") failed!" >&2
+            fi
+        fi
+    done
+
+    if [[ -f "$restart_file" ]]; then
+        mapfile -t restart_scripts < "$restart_file"
+        rm "$restart_file"
     fi
-  done
+    if [[ ${#restart_scripts[@]} -gt 0 ]]; then
+        running=()
+        for app in "${restart_scripts[@]}"; do
+            echo $app
+            if pgrep -x "$app" > /dev/null; then
+                running+=("${app^}")
+            fi
+        done
+        if [[ ${#running[@]} -gt 0 ]]; then
+            apps=""
+            for app in "${running[@]}"; do
+                apps+="- $app"$'\n'
+            done
+            notify-send "Omarchy Theme Hook" "The following apps require a restart to apply theme:\n\n$apps"
+        fi
+    fi
 fi

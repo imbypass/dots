@@ -8,35 +8,20 @@
     @import url("https://imbypass.github.io/base16-discord/omarchy-discord.theme.css");
 
     :root {
-        --color00: #16161A;
-        --color01: #16161A;
-        --color02: #16161A;
-        --color03: #9595AB;
-        --color04: #E9ECF2;
-        --color05: #E9ECF2;
-        --color06: #E9ECF2;
-        --color07: #E9ECF2;
-        --color08: #E9ECF2;
-        --color09: #FF9C6A;
-        --color10: #ffad85;
-        --color11: #75BD7D;
-        --color12: #B87AFF;
-        --color13: #7AAAFF;
-        --color14: #FF7AF1;
-        --color15: #FF9C6A;
-
-        --font: "Iosevka";
-        --font-code: var(--font);
-        --font-primary: var(--font);
-        --font-display: var(--font);
-        --font-heading: var(--font);
-
-        --font-weight-light: 500;
-        --font-weight-normal: 550;
-
-        --font-weight-normal: 600;
-        --font-weight-light: 500;
-        --font-weight-medium: 600;
-        --font-weight-semibold: 800;
-        --font-weight-bold: 900;
+        --color00: #141414;
+        --color01: #141414;
+        --color02: #141414;
+        --color03: #9b9b9b;
+        --color04: #c7c7c7;
+        --color05: #c7c7c7;
+        --color06: #c7c7c7;
+        --color07: #c7c7c7;
+        --color08: #c7c7c7;
+        --color09: #edd89a;
+        --color10: #fae5a7;
+        --color11: #95cc8f;
+        --color12: #78ccb7;
+        --color13: #88b4df;
+        --color14: #b0638a;
+        --color15: #edd89a;
     }

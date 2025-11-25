@@ -9,7 +9,7 @@
  * @discord bypass_
  **/
 @import url(./snippets/addfriends-button.css);
-@import url(./snippets/bubble-usernames.css);
+/*@import url(./snippets/bubble-usernames.css);*/
 @import url(./snippets/clean-chatbar.css);
 @import url(./snippets/clean-direct-messages.css);
 @import url(./snippets/clean-dm-categories.css);

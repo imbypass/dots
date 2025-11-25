@@ -9,7 +9,7 @@ anchor=top-center
 outer-margin=20
 default-timeout=10000
 max-icon-size=32
-font=Iosevka Medium 10.5
+font=DankMono Nerd Font Medium 10
 border-radius=6
 
 [mode=do-not-disturb]

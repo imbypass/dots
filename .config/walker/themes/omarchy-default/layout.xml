@@ -12,7 +12,7 @@
         <style>
           <class name="box-wrapper"></class>
         </style>
-        <property name="width-request">400</property>
+        <property name="width-request">770</property>
         <property name="overflow">hidden</property>
         <property name="orientation">horizontal</property>
         <property name="valign">center</property>
@@ -112,9 +112,10 @@
                 </child>
               </object>
             </child>
-            <!-- <child>
+            <child>
               <object class="GtkBox" id="KeybindsWrapper">
                 <property name="hexpand">true</property>
+                    <property name="visible">false</property>
                 <style>
                   <class name="keybinds-wrapper"></class>
                 </style>
@@ -123,8 +124,20 @@
                     <property name="hexpand">true</property>
                     <property name="spacing">10</property>
                     <property name="margin-top">10</property>
+                    <property name="visible">false</property>
                     <style>
                       <class name="global-keybinds"></class>
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox" id="ItemKeybinds">
+                    <property name="hexpand">true</property>
+                    <property name="spacing">10</property>
+                    <property name="margin-top">10</property>
+                    <property name="visible">false</property>
+                    <style>
+                      <class name="item-keybinds"></class>
                     </style>
                   </object>
                 </child>
@@ -134,13 +147,14 @@
                     <property name="halign">end</property>
                     <property name="spacing">10</property>
                     <property name="margin-top">10</property>
+                    <property name="visible">false</property>
                     <style>
                       <class name="keybinds"></class>
                     </style>
                   </object>
                 </child>
               </object>
-            </child> -->
+            </child>
             <child>
               <object class="GtkLabel" id="Error">
                 <style>

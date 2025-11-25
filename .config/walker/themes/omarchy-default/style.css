@@ -15,17 +15,17 @@ scrollbar {
 }
 
 .normal-icons {
-    -gtk-icon-size: 16px;
+    -gtk-icon-size: 18px;
 }
 
 .large-icons {
-    -gtk-icon-size: 32px;
+    -gtk-icon-size: 26px;
 }
 
 .box-wrapper {
     background: alpha(@base, 0.95);
     padding: 20px;
-    border: 2px solid @border;
+    border: 1px solid @border;
 }
 
 .preview-box {
@@ -84,10 +84,11 @@ child:selected .item-box * {
 
 .item-text-box {
     all: unset;
-    padding: 14px 0;
+    padding: 10px 0;
 }
 
 .item-text {
+    font-weight: normal;
 }
 
 .item-subtext {
@@ -95,6 +96,7 @@ child:selected .item-box * {
     min-height: 0px;
     margin: 0px;
     padding: 0px;
+    background: red;
 }
 
 .item-image {

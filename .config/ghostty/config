@@ -2,16 +2,20 @@
 config-file = ?"~/.config/ghostty/themes/omarchy.conf"
 
 # Font
+font-feature = dlig ss05 liga
 font-style = Regular
-font-size = 9
+font-size = 10
+font-thicken = true
+adjust-cell-height = 0
 
 # Window
-window-theme = ghostty
-window-padding-x = 14
-window-padding-y = 14
-confirm-close-surface=false
+window-theme = system
+window-padding-x = 15
+window-padding-y = 8,5
+confirm-close-surface = false
 resize-overlay = never
 gtk-toolbar-style = flat
+window-padding-balance = false
 
 # Cursor styling
 cursor-style = "block"
@@ -19,7 +23,9 @@ cursor-style-blink = false
 
 # Cursor styling + SSH session terminfo
 # (all shell integration options must be passed together)
+shell-integration = fish
 shell-integration-features = no-cursor,ssh-env
+mouse-hide-while-typing = true
 
 # Keyboard bindings
 keybind = shift+insert=paste_from_clipboard

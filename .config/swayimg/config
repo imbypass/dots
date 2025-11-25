@@ -19,9 +19,9 @@
 # Mode at startup (viewer/gallery)
 mode = viewer
 # Window position (parent or absolute coordinates, e.g. 100,200)
-position = parent
+position = free
 # Window size (fullscreen/parent/image, or absolute size, e.g. 800,600)
-size = image
+size = parent
 # Use window decoration (yes/no)
 decoration = no
 # Action performed by SIGUSR1 signal (same format as for key bindings)

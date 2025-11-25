@@ -2,6 +2,7 @@
 source harmony-color-codes
 
 TIMESTAMP=$(date +%Y-%m-%d_%H-%M-%S)
+RECORDING="/home/bypass/Videos/Screen Recordings/${TIMESTAMP}.mp4"
 
 screenrecording_toggle_indicator() {
     pkill -RTMIN+8 waybar
@@ -17,7 +18,7 @@ screenrecording_start() {
 
     gpu-screen-recorder -w HDMI-A-1 -c mp4 -k h264 -ac opus -f 60 -cursor no \
         -restore-portal-session yes -cr limited -encoder cpu -q very_high -a device:default_output \
-        -o "/home/bypass/Videos/Screen Recordings/${TIMESTAMP}.mp4" &
+        -o $RECORDING &
 
     screenrecording_toggle_indicator
 }
