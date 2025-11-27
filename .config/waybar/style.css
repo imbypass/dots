@@ -1,10 +1,10 @@
 @import "../omarchy/current/theme/waybar.css";
 
 * {
-    font-family: "DankMono Nerd Font";
+    font-family: "Dank Mono";
     background: transparent;
     min-height: 0;
-    font-weight: 900;
+    font-weight: bold;
 }
 
 .modules-left {
@@ -52,9 +52,9 @@ menuitem:hover {
 tooltip {
     padding: 2px;
     background: @background;
-    font-size: 11.5px;
+    font-size: 13px;
     border: 2px solid alpha(@foreground, 0.15);
-    border-radius: 6px;
+    border-radius: 10px;
 }
 tooltip label {
     color: @foreground;
@@ -109,7 +109,7 @@ tooltip label {
     margin-bottom: -1px;
     font-size: 12.75px;
     color: @foreground;
-    font-weight: 800;
+    font-weight: bold;
 }
 
 #tray,
@@ -131,7 +131,7 @@ tooltip label {
 #custom-spotify-controls-next {
     min-width: 12px;
     margin: 0 8px;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 800;
 }
 
@@ -160,15 +160,12 @@ tooltip label {
 }
 
 #custom-harmony {
-    font-size: 16px;
-    font-weight: 400;
-    margin-right: 1.5rem;
-    margin-left: 1rem;
-    color: @foreground;
-    transition: color 0.3s ease;
-}
-#custom-harmony:hover {
-    color: alpha(#81AAD3, 1.0);
+    font-size: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("/home/bypass/.config/omarchy/current/theme/waybar-logo.png");
+    margin: -3px 8px -3px .5rem; /* top right bottom left */
 }
 
 #custom-theme-selector {
@@ -191,7 +188,7 @@ tooltip label {
 }
 
 #custom-update {
-    font-size: 13px;
+    font-size: 10px;
     font-weight: 800;
 }
 

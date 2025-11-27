@@ -20,8 +20,6 @@
     "custom/screenrecording-indicator",
     "group/tray-expander",
     "custom/update",
-    "custom/glorious",
-    "pulseaudio#microphone",
     "network",
     "pulseaudio",
     "cpu",
@@ -157,7 +155,7 @@
     "orientation": "inherit",
     "drawer": {
       "transition-duration": 350,
-      "click-to-reveal": true,
+      "click-to-reveal": false,
       "children-class": "tray-group-item",
     },
     "modules": [
@@ -165,6 +163,8 @@
       "tray",
       "custom/theme-selector",
       "custom/screenrecording",
+      "custom/glorious",
+      "pulseaudio#microphone",
     ],
   },
   "custom/expand-icon": {
@@ -172,7 +172,7 @@
     "tooltip": false,
   },
   "tray": {
-    "icon-size": 12,
+    "icon-size": 14,
     "spacing": 13,
   },
   "idle_inhibitor": {
@@ -185,7 +185,7 @@
     "tooltip": false,
   },
   "custom/harmony": {
-    "format": "<span font='Omarchy-Round'>\ue900</span>",
+    "format": "  ",
     "format-nomarchy": "<span font='omarchy'>\ue900</span>",
     "on-click": "fish -c omarchy-menu",
     "on-click-right": "vicinae vicinae://extensions/vicinae/wm/switch-windows",
@@ -231,7 +231,7 @@
     "on-scroll-down": "playerctl next -p spotify",
   },
   "custom/update": {
-    "format": "󰏖",
+    "format": "",
     "exec": "checkupdates | wc -l",
     "exec-if": "if [[ $(checkupdates | wc -l) -gt 0 ]]; then exit 0; fi; exit 1",
     "on-click": "fish -c \"foot -a Harmony -e bash -c omarchy-update\"",

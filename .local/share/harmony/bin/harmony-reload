@@ -23,7 +23,7 @@ case "$1" in
             killall -SIGUSR1 nwg-dock-hyprland
         else
             killall nwg-dock-hyprland
-            nwg-dock-hyprland -r -mb 10 -mt 5 -i 38 -x -nolauncher & disown
+            nwg-dock-hyprland -mb 10 -mt 10 -i 22 -x -d -nolauncher & disown
         fi
     ;;
     "waybar")

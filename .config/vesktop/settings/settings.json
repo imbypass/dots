@@ -8,11 +8,11 @@
         "Catppuccin Mocha.css",
         "bepi.css",
         "midnight-bepi.css",
+        "vencord.theme.css",
         "icons-recolor.theme.css",
         "EmojiReplace.theme.css",
-        "snippets.theme.css",
         "base16.extras.css",
-        "vencord.theme.css"
+        "snippets.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": false,
@@ -71,7 +71,7 @@
             "file": true
         },
         "AnonymiseFileNames": {
-            "enabled": false,
+            "enabled": true,
             "anonymiseByDefault": false,
             "method": 0,
             "randomisedLength": 7,
@@ -103,7 +103,7 @@
             "enabled": false
         },
         "BiggerStreamPreview": {
-            "enabled": true
+            "enabled": false
         },
         "BlurNSFW": {
             "enabled": false
@@ -123,13 +123,15 @@
             "enabled": false
         },
         "ConsoleShortcuts": {
-            "enabled": true
+            "enabled": false
         },
         "CopyUserURLs": {
             "enabled": false
         },
         "CrashHandler": {
-            "enabled": true
+            "enabled": true,
+            "attemptToPreventCrashes": true,
+            "attemptToNavigateToHome": false
         },
         "CustomRPC": {
             "enabled": false,
@@ -171,7 +173,8 @@
             "enabled": false
         },
         "FixSpotifyEmbeds": {
-            "enabled": true
+            "enabled": true,
+            "volume": 10
         },
         "ForceOwnerCrown": {
             "enabled": true
@@ -181,7 +184,8 @@
         },
         "GameActivityToggle": {
             "enabled": false,
-            "oldIcon": false
+            "oldIcon": false,
+            "location": "PANEL"
         },
         "GifPaste": {
             "enabled": false
@@ -198,7 +202,7 @@
         "ImageZoom": {
             "enabled": false,
             "size": 100,
-            "zoom": 3.629068234636266,
+            "zoom": 17.96153846153846,
             "nearestNeighbour": false,
             "square": true,
             "saveZoomValues": true,
@@ -215,7 +219,7 @@
             "enabled": false
         },
         "LoadingQuotes": {
-            "enabled": true,
+            "enabled": false,
             "replaceEvents": true,
             "enablePluginPresetQuotes": true,
             "enableDiscordPresetQuotes": false,
@@ -226,9 +230,7 @@
             "enabled": false
         },
         "MessageClickActions": {
-            "enabled": true,
-            "requireModifier": false,
-            "enableDoubleClickToEdit": true
+            "enabled": false
         },
         "MessageLinkEmbeds": {
             "enabled": false
@@ -312,7 +314,7 @@
             "enabled": true
         },
         "OnePingPerDM": {
-            "enabled": true,
+            "enabled": false,
             "channelToAffect": "group_dm",
             "allowMentions": true,
             "allowEveryone": true
@@ -329,19 +331,20 @@
             "itunes": true
         },
         "PermissionFreeWill": {
-            "enabled": true,
+            "enabled": false,
             "lockout": true,
             "onboarding": true
         },
         "PermissionsViewer": {
-            "enabled": true,
+            "enabled": false,
             "permissionsSortOrder": 0
         },
         "petpet": {
             "enabled": false
         },
         "PictureInPicture": {
-            "enabled": true
+            "enabled": true,
+            "loop": true
         },
         "PinDMs": {
             "enabled": true,
@@ -365,23 +368,6 @@
                             "980292879798902824",
                             "1015718332109955112",
                             "294685587401605132"
-                        ]
-                    },
-                    {
-                        "id": "7l5lhghfujx",
-                        "name": "Linux",
-                        "color": 10070709,
-                        "collapsed": false,
-                        "channels": [
-                            "1424989754591547452",
-                            "1440563469501075511",
-                            "1432849624153985188",
-                            "1437085273849729137",
-                            "1439262183446810847",
-                            "1421313952536858799",
-                            "1336483990953136188",
-                            "1433103553978961971",
-                            "1434298771130552393"
                         ]
                     },
                     {
@@ -441,7 +427,7 @@
             "notifyReviews": true
         },
         "RoleColorEverywhere": {
-            "enabled": true,
+            "enabled": false,
             "chatMentions": true,
             "memberList": true,
             "voiceUsers": true,
@@ -456,19 +442,20 @@
             "enabled": false
         },
         "ServerListIndicators": {
-            "enabled": true,
+            "enabled": false,
             "mode": 2
         },
         "ShikiCodeblocks": {
             "enabled": false,
             "useDevIcon": "GREYSCALE",
-            "theme": "https://raw.githubusercontent.com/shikijs/shiki/0b28ad8ccfbf2615f2d9d38ea8255416b8ac3043/packages/shiki/themes/dark-plus.json"
+            "theme": "https://raw.githubusercontent.com/shikijs/shiki/0b28ad8ccfbf2615f2d9d38ea8255416b8ac3043/packages/shiki/themes/dark-plus.json",
+            "tryHljs": "SECONDARY"
         },
         "ShowAllMessageButtons": {
             "enabled": false
         },
         "ShowConnections": {
-            "enabled": false,
+            "enabled": true,
             "iconSpacing": 1,
             "iconSize": 32
         },
@@ -482,7 +469,9 @@
             "enabled": false
         },
         "SilentMessageToggle": {
-            "enabled": false
+            "enabled": true,
+            "persistState": false,
+            "autoDisable": true
         },
         "SilentTyping": {
             "enabled": false,
@@ -559,7 +548,7 @@
         },
         "USRBG": {
             "enabled": true,
-            "voiceBackground": false,
+            "voiceBackground": true,
             "nitroFirst": true
         },
         "ValidUser": {
@@ -572,10 +561,11 @@
             "enabled": false
         },
         "VencordToolbox": {
-            "enabled": false
+            "enabled": false,
+            "showPluginMenu": true
         },
         "ViewIcons": {
-            "enabled": true,
+            "enabled": false,
             "format": "webp",
             "imgSize": "1024"
         },
@@ -690,10 +680,10 @@
             "enabled": true
         },
         "VoiceDownload": {
-            "enabled": true
+            "enabled": false
         },
         "ServerInfo": {
-            "enabled": true
+            "enabled": false
         },
         "MessageUpdaterAPI": {
             "enabled": true
@@ -743,7 +733,7 @@
             "addBack": true
         },
         "MentionAvatars": {
-            "enabled": true,
+            "enabled": false,
             "showAtSymbol": true
         },
         "YoutubeAdblock": {
@@ -812,7 +802,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1764025879207
+        "settingsSyncVersion": 1764224918798
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false,

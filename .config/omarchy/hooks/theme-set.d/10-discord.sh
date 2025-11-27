@@ -47,12 +47,12 @@ EOF
     for path in "${possible_paths[@]}"; do
         if [ -d "$path" ]; then
 
-            if [[ -f "$path/themes/vencord.theme.css" ]]; then
-                rm "$path/themes/vencord.theme.css"
+            if [[ -f "$path/vencord.theme.css" ]]; then
+                rm "$path/vencord.theme.css"
             fi
-            cp "$output_file" "$path/themes/vencord.theme.css"
+            cp "$output_file" "$path/vencord.theme.css"
 
-            for file in "$path"/themes/*; do
+            for file in "$path"/*; do
                 if [ -f "$file" ]; then
                     touch "$file"
                 fi
