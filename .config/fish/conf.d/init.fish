@@ -11,5 +11,3 @@ source ~/.config/omarchy/current/theme/fzf.fish
 
 # Disable fish greeting
 set fish_greeting
-
-fetch

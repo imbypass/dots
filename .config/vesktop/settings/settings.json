@@ -8,13 +8,13 @@
         "Catppuccin Mocha.css",
         "bepi.css",
         "midnight-bepi.css",
-        "vencord.theme.css",
-        "icons-recolor.theme.css",
         "EmojiReplace.theme.css",
+        "icons-recolor.theme.css",
+        "snippets.theme.css",
         "base16.extras.css",
-        "snippets.theme.css"
+        "vencord.theme.css"
     ],
-    "enableReactDevtools": false,
+    "enableReactDevtools": true,
     "frameless": false,
     "transparent": false,
     "winCtrlQ": false,
@@ -230,7 +230,11 @@
             "enabled": false
         },
         "MessageClickActions": {
-            "enabled": false
+            "enabled": true,
+            "enableDeleteOnClick": true,
+            "enableDoubleClickToEdit": true,
+            "enableDoubleClickToReply": true,
+            "requireModifier": false
         },
         "MessageLinkEmbeds": {
             "enabled": false
@@ -519,7 +523,8 @@
             "receivedOutput": "en",
             "sentInput": "auto",
             "sentOutput": "en",
-            "showAutoTranslateTooltip": true
+            "showAutoTranslateTooltip": true,
+            "deeplApiKey": ""
         },
         "TypingIndicator": {
             "enabled": true,
@@ -565,12 +570,12 @@
             "showPluginMenu": true
         },
         "ViewIcons": {
-            "enabled": false,
+            "enabled": true,
             "format": "webp",
             "imgSize": "1024"
         },
         "ViewRaw": {
-            "enabled": true,
+            "enabled": false,
             "clickMethod": "Left"
         },
         "VoiceMessages": {
@@ -802,12 +807,16 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1764224918798
+        "settingsSyncVersion": 1765861428022
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false,
     "uiElements": {
-        "chatBarButtons": {},
+        "chatBarButtons": {
+            "SilentMessageToggle": {
+                "enabled": false
+            }
+        },
         "messagePopoverButtons": {}
     }
 }

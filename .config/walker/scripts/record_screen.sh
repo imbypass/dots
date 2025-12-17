@@ -6,7 +6,7 @@ recording_active() {
 
 menu_cmd() {
   # walker -kHn --dmenu -t omarchy-default --width 285 --minheight 1 --maxheight 600
-  vicinae dmenu -p "Select Option"
+  vicinae dmenu --no-quick-look -p "Select Option"
 }
 
 if recording_active; then

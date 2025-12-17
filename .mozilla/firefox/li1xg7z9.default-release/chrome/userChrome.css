@@ -91,7 +91,6 @@ toolbarbutton {
 /* Url Bar  */
 #urlbar-input {
     accent-color: var(--base0D) !important;
-    letter-spacing: -1px !important;
 }
 #urlbar-input-container {
     background-color: var(--base01) !important;
@@ -174,7 +173,4 @@ splitter#sidebar-tools-and-extensions-splitter {
     --toolbarbutton-border-radius: 6px !important;
     --in-content-page-background: var(--base01) !important;
     --input-text-background-color: var(--base02) !important;
-}
-*{
-    letter-spacing: -1px !important;
 }

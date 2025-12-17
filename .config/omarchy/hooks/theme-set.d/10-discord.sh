@@ -33,7 +33,7 @@ create_dynamic_theme() {
         --color05: #${bright_white};
         --color06: #${bright_white};
         --color07: #${bright_white};
-        --color08: #${bright_white};
+        --color08: #${normal_red};
         --color09: #${normal_yellow};
         --color10: #${bright_yellow};
         --color11: #${normal_green};

@@ -9,7 +9,9 @@ printf "${BOLD}${BLUE}:: ${RESET}Running system update..\n"
 printf " ${YELLOW}==> ${NC}Checking for official package updates..${RESET}\n"
 sudo pacman -Syu --noconfirm
 printf " ${YELLOW}==> ${NC}Checking for AUR updates..${RESET}\n"
-paru -Syu --noconfirm
+yay -Syu --noconfirm
 printf " ${YELLOW}==> ${NC}Checking for flatpak updates..${RESET}\n"
 flatpak update -y
 notify-send -u low -a Omarchy -t 3500 "Software Update" "Update completed successfully!" -i ~/.config/omarchy/current/theme/waybar-logo.png
+
+harmony-show-done

@@ -5,11 +5,11 @@ width=420
 height=250
 padding=10
 border-size=2
-anchor=top-center
+anchor=top-right
 outer-margin=20
 default-timeout=10000
 max-icon-size=32
-font=DankMono Nerd Font 10
+font=JetBrainsMono Nerd Font 10
 border-radius=6
 
 [mode=do-not-disturb]

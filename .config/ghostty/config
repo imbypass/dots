@@ -1,5 +1,5 @@
 # Dynamic theme colors
-config-file = ?"~/.config/ghostty/themes/omarchy.conf"
+config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
 
 # Font
 font-feature = dlig ss05 liga

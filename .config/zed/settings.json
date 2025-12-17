@@ -17,12 +17,12 @@
   "features": {
     "edit_prediction_provider": "zed"
   },
-  "ui_font_size": 15.0,
+  "ui_font_size": 14.0,
   "ui_font_weight": 900.0,
-  "ui_font_family": "DankMono Nerd Font",
-  "buffer_font_size": 13.0,
+  "ui_font_family": "VictorMono Nerd Font Mono",
+  "buffer_font_size": 12.0,
   "buffer_font_weight": 600.0,
-  "buffer_font_family": "DankMono Nerd Font",
+  "buffer_font_family": "VictorMono Nerd Font Mono",
   "buffer_line_height": {
     "custom": 1.525
   },

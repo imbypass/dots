@@ -1,10 +1,11 @@
 /* Hide various chatbar buttons */
 div[aria-label="Send a gift"],
 div[aria-label="Open sticker picker"],
+div[aria-label="Open GIF picker"],
 div[aria-label="Select emoji"],
 button[aria-label="Apps"] {
     display: none !important;
 }
 .has-webkit-scrollbar .buttons__74017 {
-    margin-right: -55px !important;
+    margin-right: -35px !important;
 }

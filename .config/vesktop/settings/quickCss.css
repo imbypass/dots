@@ -1,16 +1,8 @@
-* {
-    letter-spacing: -1px !important;
-    font-weight: 900 !important;
-}
 
 :root {
-    --font: "Dank Mono";
+    --font: "JetBrainsMono Nerd Font Propo";
     --font-primary: var(--font);
     --font-header: var(--font);
     --font-display: var(--font);
-    --font-code: "Dank Mono";
-}
-
-* { 
-    font-weight: bold !important;
+    --font-code: var(--font);
 }

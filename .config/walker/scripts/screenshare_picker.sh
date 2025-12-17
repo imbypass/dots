@@ -32,7 +32,7 @@ if [ "$#" -le "1" ]; then
         set -- walker -d -p
         ;;
     vicinae)
-        set -- vicinae dmenu -p
+        set -- vicinae dmenu --no-quick-look -p
         ;;
     fuzzel)
         set -- fuzzel --dmenu -R --log-no-syslog --log-level=warning -p

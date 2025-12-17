@@ -4,7 +4,7 @@
   "position": "top",
   "gtk-layer-shell": true,
   "spacing": 0,
-  "height": 32,
+  "height": 26,
   "margin-top": 0,
   "margin-left": 0,
   "margin-right": 0,
@@ -12,18 +12,21 @@
   "modules-left": [
     "custom/harmony",
     "hyprland/workspaces",
+    "custom/privacy-indicator",
   ],
   "modules-center": [
-    "clock",
   ],
   "modules-right": [
     "custom/screenrecording-indicator",
     "group/tray-expander",
     "custom/update",
+    "pulseaudio#microphone",
+    "bluetooth",
     "network",
     "pulseaudio",
     "cpu",
     "battery",
+    "clock",
   ],
   "hyprland/workspaces": {
     "on-scroll-up": "hyprctl dispatch workspace e+1",
@@ -43,11 +46,11 @@
     },
     "format-icons": {
       "default": "",
-      "1": "<span font='Bypass-Icons'>\ue914</span>",
-      "2": "<span font='Bypass-Icons'>\ue907</span>",
-      "3": "<span font='Bypass-Icons'>\ue913</span>",
-      "4": "<span font='Bypass-Icons'>\ue912</span>",
-      "5": "<span font='Bypass-Icons'>\ue915</span>",
+      "1": "<span font='Bypass-Icons'>\ue91d</span>",
+      "2": "<span font='Bypass-Icons'>\ue91e</span>",
+      "3": "<span font='Bypass-Icons'>\ue91f</span>",
+      "4": "<span font='Bypass-Icons'>\ue920</span>",
+      "5": "<span font='Bypass-Icons'>\ue921</span>",
       "6": "<span font='Bypass-Icons'>\ue916</span>",
       "7": "<span font='Bypass-Icons'>\ue917</span>",
       "8": "<span font='Bypass-Icons'>\ue918</span>",
@@ -112,6 +115,15 @@
     "tooltip-format": "{:L%A, %B %d, %Y}",
     "tooltip": true,
   },
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "󰂲",
+    "format-connected": "󰂱",
+    "format-no-controller": "",
+    "tooltip-format": "Devices connected: {num_connections}",
+    "on-click": "foot -a Harmony -e bash -c bluetui",
+    "on-click-right": "foot -a Harmony -e bash -c bluetui",
+  },
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "format-ethernet": "󰀂",
@@ -123,8 +135,8 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "spacing": 1,
-    "on-click": "nm-connection-editor",
-    "on-click-right": "nm-connection-editor",
+    "on-click": "foot -a Harmony -e bash -c gazelle",
+    "on-click-right": "foot -a Harmony -e bash -c gazelle",
   },
   "pulseaudio": {
     "format": "{icon}",
@@ -155,53 +167,29 @@
     "orientation": "inherit",
     "drawer": {
       "transition-duration": 350,
-      "click-to-reveal": false,
+      "click-to-reveal": true,
       "children-class": "tray-group-item",
     },
     "modules": [
       "custom/expand-icon",
       "tray",
-      "custom/theme-selector",
       "custom/screenrecording",
       "custom/glorious",
-      "pulseaudio#microphone",
     ],
   },
   "custom/expand-icon": {
     "format": " ",
-    "tooltip": false,
+    "tooltip": false
   },
   "tray": {
-    "icon-size": 14,
+    "icon-size": 13,
     "spacing": 13,
   },
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "󰒳",
-      "deactivated": "󰒲",
-    },
-    "timeout": 30.5,
-    "tooltip": false,
-  },
   "custom/harmony": {
-    "format": "  ",
-    "format-nomarchy": "<span font='omarchy'>\ue900</span>",
+    "format": "<span font='Bypass-Icons'>\ue922</span>",
     "on-click": "fish -c omarchy-menu",
     "on-click-right": "vicinae vicinae://extensions/vicinae/wm/switch-windows",
-    "tooltip-format": "<span font='Omarchy-Round'>\ue900</span> Omarchy Menu\n\nSuper + Alt + Space",
-  },
-  "custom/round-omarchy": {
-    "format": "<span font='Omarchy-Round'>\ue900</span>",
-    "format-nomarchy": "<span font='omarchy'>\ue900</span>",
-    "on-click": "fish -c omarchy-menu",
-    "on-click-right": "vicinae vicinae://extensions/vicinae/wm/switch-windows",
-    "tooltip-format": "<span font='Omarchy-Round'>\ue900</span> Omarchy Menu\n\nSuper + Alt + Space",
-  },
-  "custom/screenrecording": {
-    "format": "",
-    "on-double-click": "/home/bypass/.config/walker/scripts/record_screen.sh",
-    "tooltip-format": "Record Screen\n\nSuper + Alt + Backslash",
+    "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space",
   },
   "custom/screenrecording-indicator": {
     "on-click": "harmony-record",
@@ -216,20 +204,6 @@
     "escape": true,
     "exec": "$HOME/.local/share/harmony/scripts/waybar/glorious-mouse.sh",
   },
-  "custom/theme-selector": {
-    "format": "󰏘",
-    "on-click": "fish -c \"~/.config/walker/scripts/theme_picker.sh\"",
-    "tooltip-format": "Change Theme\n\nSuper + Shift + T",
-  },
-  "custom/spotify": {
-    "exec": "python3 $HOME/.local/share/harmony/scripts/waybar/media-player.py --player spotify",
-    "format": "{}",
-    "return-type": "json",
-    "on-click": "spotify",
-    "on-click-right": "playerctl play-pause -p spotify",
-    "on-scroll-up": "playerctl previous -p spotify",
-    "on-scroll-down": "playerctl next -p spotify",
-  },
   "custom/update": {
     "format": "",
     "exec": "checkupdates | wc -l",
@@ -239,4 +213,13 @@
     "signal": 7,
     "interval": 21600,
   },
+  "custom/privacy-indicator": {
+      "exec": "$HOME/.local/share/harmony/scripts/waybar/privacy-indicator.sh",
+      "return-type": "json",
+      "interval": 3,
+      "format": "{text}",
+      "tooltip": true,
+      "escape": false,
+      "markup": "pango"
+  }
 }

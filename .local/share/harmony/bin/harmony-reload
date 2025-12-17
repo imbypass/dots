@@ -23,16 +23,18 @@ case "$1" in
             killall -SIGUSR1 nwg-dock-hyprland
         else
             killall nwg-dock-hyprland
-            nwg-dock-hyprland -mb 10 -mt 10 -i 22 -x -d -nolauncher & disown
+            nwg-dock-hyprland -mb 10 -mt 10 -i 32 -x -r -nolauncher & disown
         fi
     ;;
     "waybar")
-        if [ "$2" = "full" ]; then
+        if [ "$2" = "rl" ]; then
+            killall -USR2 waybar > /dev/null 2>&1
+        elif [ "$2" = "toggle" ]; then
+            killall -USR1 waybar > /dev/null 2>&1
+        else
             killall -9 waybar > /dev/null 2>&1
             waybar > /dev/null 2>&1 &
             disown
-        else
-            killall -USR2 waybar > /dev/null 2>&1
         fi
     ;;
     "walker")

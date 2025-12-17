@@ -3,7 +3,9 @@
   "logo": {
     "type": "file",
     "source": "~/.local/share/harmony/logo.txt",
-    "color": { "1": "green" },
+    "color": {
+      "1": "cyan",
+    },
     "padding": {
       "top": 2,
       "right": 6,
