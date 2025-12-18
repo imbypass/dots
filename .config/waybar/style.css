@@ -51,7 +51,8 @@ menuitem:hover {
 tooltip {
     padding: 2px;
     background: @background;
-    font-size: 13px;
+    font-size: 12px;
+    font-weight: 600;
     border: 2px solid alpha(@foreground, 0.15);
     border-radius: 10px;
 }
