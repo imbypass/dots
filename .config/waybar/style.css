@@ -149,7 +149,8 @@ tooltip label {
 }
 
 #cpu {
-    font-size: 13px;
+    font-size: 15px;
+    margin-top: -1px;
     font-weight: bold;
     margin-left: 10px;
 }

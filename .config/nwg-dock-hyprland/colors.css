@@ -1,16 +1,16 @@
 window {
-    background: rgba(22, 22, 22, 0.90); /* base01 */
-    border-color: #212121; /* base02 */
-    border: 2px solid #212121;
+    background: #1A1C22; /* base01 */
+    border-color: #212126; /* base02 */
+    border: 2px solid #212126;
 }
 
 button,
 image {
-    color: #E9E9E9; /* base07 */
+    color: #E9ECF2; /* base07 */
 }
 
 button {
-    color: #959595; /* base05 */
+    color: #9595AB; /* base05 */
     padding: 3px;
 }
 

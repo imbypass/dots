@@ -32,6 +32,14 @@
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
     "on-click": "activate",
+    "workspace-taskbar": {
+      "enable": true,
+      "format": "{icon}",
+      "icon-size": 18,
+      "orientation": "horizontal"
+    },
+    "show-special": false,
+    "expand": true,
     "format": "{icon}",
     "window-rewrite-default": "",
     "window-rewrite": {
@@ -47,8 +55,8 @@
     "format-icons": {
       "default": "",
       "1": "<span font='Bypass-Icons'>\ue91d</span>",
-      "2": "<span font='Bypass-Icons'>\ue91e</span>",
-      "3": "<span font='Bypass-Icons'>\ue91f</span>",
+      "2": "<span font='Bypass-Icons'>\ue923</span>",
+      "3": "<span font='Bypass-Icons'>\ue925</span>",
       "4": "<span font='Bypass-Icons'>\ue920</span>",
       "5": "<span font='Bypass-Icons'>\ue921</span>",
       "6": "<span font='Bypass-Icons'>\ue916</span>",
@@ -63,7 +71,7 @@
       "3": [],
       "4": [],
       "5": [],
-    },
+    }
   },
   "hyprland/window": {
     "format": "{}",
@@ -107,7 +115,7 @@
   },
   "cpu": {
     "interval": 5,
-    "format": "󰍛",
+    "format": "<span font='Bypass-Icons'>\ue927</span>",
     "on-click": "$TERMINAL -e btop",
   },
   "clock": {
@@ -135,13 +143,14 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "spacing": 1,
-    "on-click": "foot -a Harmony -e bash -c gazelle",
-    "on-click-right": "foot -a Harmony -e bash -c gazelle",
+    "on-click": "foot -a wifi -e gazelle",
+    "on-click-right": "foot -a wifi -e gazelle",
   },
   "pulseaudio": {
     "format": "{icon}",
-    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-    "on-click-right": "foot -a Harmony -e bash -c \"wiremix --tab playback\"",
+    "on-click-toggle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click": "foot -a sinkswitch -e harmony-switch-sink",
+    "on-click-right": "foot -a Harmony -e wiremix --tab playback",
     "on-scroll-up": "pamixer -i 5",
     "on-scroll-down": "pamixer -d 5",
     "tooltip-format": "Playing at {volume}%",
@@ -158,7 +167,7 @@
     "tooltip": true,
     "tooltip-format": "Input gain at {volume}%",
     "on-click": "pamixer --default-source -t",
-    "on-click-right": "foot -a Harmony -e bash -c \"wiremix --tab input\"",
+    "on-click-right": "foot -a Harmony -e wiremix --tab input",
     "on-scroll-up": "pamixer --default-source -i 5",
     "on-scroll-down": "pamixer --default-source -d 5",
     "scroll-step": 5,
@@ -208,7 +217,7 @@
     "format": "",
     "exec": "checkupdates | wc -l",
     "exec-if": "if [[ $(checkupdates | wc -l) -gt 0 ]]; then exit 0; fi; exit 1",
-    "on-click": "fish -c \"foot -a Harmony -e bash -c omarchy-update\"",
+    "on-click": "fish -c \"foot -a Harmony -e omarchy-update\"",
     "tooltip-format": "{text} updates available",
     "signal": 7,
     "interval": 21600,

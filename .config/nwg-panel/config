@@ -3,7 +3,7 @@
     "name": "panel-top",
     "output": "",
     "layer": "bottom",
-    "position": "top",
+    "position": "bottom",
     "controls": "right",
     "width": "auto",
     "height": 30,
@@ -14,7 +14,7 @@
     "padding-vertical": 0,
     "spacing": 0,
     "items-padding": 0,
-    "icons": "light",
+    "icons": "dark",
     "css-name": "panel-top",
     "modules-left": [
       "button-sample",
@@ -55,19 +55,19 @@
         "items": [
           {
             "name": "Lock",
-            "cmd": "swaylock -f -c 000000"
+            "cmd": "omarchy-lock-screen"
           },
           {
             "name": "Logout",
-            "cmd": "swaymsg exit"
+            "cmd": "omarchy-state clear relaunch-required && hyprctl dispatch exit"
           },
           {
             "name": "Reboot",
-            "cmd": "systemctl reboot"
+            "cmd": "pre-shutdown && omarchy-state clear re*-required && systemctl reboot --no-wall"
           },
           {
             "name": "Shutdown",
-            "cmd": "systemctl -i poweroff"
+            "cmd": "pre-shutdown && omarchy-state clear re*-required && systemctl poweroff --no-wall"
           }
         ]
       }

@@ -1,26 +1,30 @@
+* {
+    border-radius: 4px;
+}
+
 window {
-    background-color: #151519;
-    border: 2px solid #2a2a31;
+    background-color: #13161C;
+    border: 1px solid #2F333B;
     color: #b2b5b3;
-    border-radius: 10px;
+    border-radius: 6px;
 }
 
 list {
     background: none;
-    border-radius: 10px;
+    border-radius: 6px;
 }
 
 /* SEARCH BAR */
 entry {
-    background: #212127;
-    border: 2px solid #2a2a31;
+    background: #0e1014;
+    border: 2px solid #2F333B;
 }
 
 button {
-    background: #212127;
+    background: #0e1014;
     border: none;
 }
 
 button:hover {
-    background-color: #2a2a31;
+    background-color: #2F333B;
 }

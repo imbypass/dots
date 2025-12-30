@@ -10,8 +10,8 @@
         "midnight-bepi.css",
         "EmojiReplace.theme.css",
         "icons-recolor.theme.css",
-        "snippets.theme.css",
         "base16.extras.css",
+        "snippets.theme.css",
         "vencord.theme.css"
     ],
     "enableReactDevtools": true,
@@ -240,7 +240,7 @@
             "enabled": false
         },
         "MessageLogger": {
-            "enabled": false,
+            "enabled": true,
             "deleteStyle": "text",
             "ignoreBots": true,
             "ignoreSelf": false,
@@ -473,12 +473,12 @@
             "enabled": false
         },
         "SilentMessageToggle": {
-            "enabled": true,
+            "enabled": false,
             "persistState": false,
             "autoDisable": true
         },
         "SilentTyping": {
-            "enabled": false,
+            "enabled": true,
             "isEnabled": true,
             "showIcon": false,
             "contextMenu": true
@@ -795,6 +795,9 @@
         },
         "DisableDeepLinks": {
             "enabled": true
+        },
+        "MoreQuickReactions": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -807,7 +810,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1765861428022
+        "settingsSyncVersion": 1767077759552
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false,

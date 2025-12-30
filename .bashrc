@@ -51,7 +51,7 @@ alias q="exit"
 alias hyprlockfix='hyprctl --instance 0 "dispatch exec hyprlock"'
 
 # Start Hyprland if not already running
-pidof Hyprland >/dev/null || Hyprland &
+pidof Hyprland >/dev/null || start-hyprland &
 disown
 
 # If not running interactively, don't do anything

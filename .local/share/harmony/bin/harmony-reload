@@ -26,6 +26,10 @@ case "$1" in
             nwg-dock-hyprland -mb 10 -mt 10 -i 32 -x -r -nolauncher & disown
         fi
     ;;
+    "taskbar")
+        killall -9 waybar > /dev/null 2>&1
+        waybar -c ~/.config/waybar/styles/kde/config.jsonc -s ~/.config/waybar/styles/kde/style.css -b 1 & disown
+    ;;
     "waybar")
         if [ "$2" = "rl" ]; then
             killall -USR2 waybar > /dev/null 2>&1
@@ -33,8 +37,7 @@ case "$1" in
             killall -USR1 waybar > /dev/null 2>&1
         else
             killall -9 waybar > /dev/null 2>&1
-            waybar > /dev/null 2>&1 &
-            disown
+            waybar > /dev/null 2>&1 & disown
         fi
     ;;
     "walker")
