@@ -1,0 +1,272 @@
+@import "../../../omarchy/current/theme/waybar.css";
+
+* {
+    transition: all 0.3s ease;
+    font-size: 13px;
+    font-family: "Rethink Sans";
+    font-weight: 600;
+}
+
+window {
+    color: @foreground;
+    background: @background;
+    border-radius: 6px;
+    /*box-shadow: 0px 0px 2px rgba(0, 0, 0, 1);*/
+    /*border-top: 2px solid #1f232b;*/
+    opacity: 0.94;
+    border: 1px solid rgba(255, 255, 255, 0.075);
+}
+
+tooltip {
+    padding: 2px;
+    background: @background;
+    opacity: 1;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid alpha(@foreground, 0.15);
+    border-radius: 6px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+}
+tooltip label {
+    color: @foreground;
+    font-size: 12px;
+}
+
+menu {
+    background: none;
+    background-color: @background;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    color: @foreground;
+    padding: 8px;
+}
+menuitem {
+    background: none;
+    border-radius: 8px;
+    padding: 7px;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 8px;
+}
+menuitem:hover {
+    background: rgba(255, 255, 255, 0.075);
+    color: @foreground;
+}
+
+#clock,
+#battery,
+#network,
+#bluetooth,
+#cpu,
+#memory,
+#pulseaudio,
+#pulseaudio.sink,
+#pulseaudio.source,
+#pulseaudio.microphone,
+#custom-weather,
+#custom-logo,
+#custom-spotify,
+#custom-expose,
+#custom-notifications,
+#custom-glorious,
+#custom-pacman,
+#custom-power,
+#custom-systray,
+#workspaces button,
+#custom-scratchpad,
+#tray {
+    background: transparent;
+    color: @foreground;
+    text-shadow: 0px 0px 4px rgba(1, 1, 1, 0.3);
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 0px;
+}
+
+#taskbar {
+    margin-left: -2px;
+}
+#taskbar button {
+    background: transparent;
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    border-radius: 0px;
+    border-top: 3px solid transparent;
+}
+#taskbar button.active {
+    border-top: 3px solid @blue;
+}
+#taskbar button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid transparent;
+    border-top: 3px solid transparent;
+}
+#taskbar button.active:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid transparent;
+    border-top: 3px solid @blue;
+}
+
+/* ===[ SYSTEM TRAY ]=== */
+#tray {
+    margin-right: 6px;
+    margin-left: 16px;
+}
+
+/* ===[ BATTERY ]=== */
+#battery {
+    font-size: 13px;
+    margin-right: 10px;
+    margin-left: 8px;
+    margin-bottom: 0;
+}
+
+/* ===[ NETWORK ]=== */
+#network {
+    font-size: 16px;
+    margin-right: 12px;
+    margin-left: 12px;
+    font-weight: 300;
+}
+#network:hover {
+    color: @base06;
+}
+
+/* ===[ BLUETOOTH ]=== */
+#bluetooth {
+    font-size: 13px;
+    margin-right: 12px;
+    margin-left: 10px;
+}
+#bluetooth:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* ===[ CLOCK ]=== */
+#clock {
+    margin-left: 10px;
+    margin-right: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    color: @foreground;
+}
+
+/* ===[ PULSEAUDIO ]=== */
+#pulseaudio {
+    font-size: 13.75px;
+    border: none;
+    margin-right: 10px;
+    margin-left: 8px;
+    margin-bottom: 0;
+}
+#pulseaudio:hover {
+    color: @base06;
+}
+
+#pulseaudio.microphone {
+    color: @foreground;
+    margin-right: 6px;
+    margin-left: 6px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+#pulseaudio.microphone.source-muted {
+    color: @base08;
+    padding-left: 2px;
+    margin-right: 8px;
+}
+
+/* ===[ SYSTEM TRAY GROUP ]=== */
+#custom-tray {
+    padding-left: 18px;
+    color: @foreground;
+    margin-right: 8px;
+    margin-left: 0px;
+    margin-bottom: -1px;
+    font-size: 20px;
+}
+
+/* ===[ APPLICATIONS ICON ]=== */
+#custom-logo {
+    font-size: 55px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("/home/bypass/.config/waybar/styles/kde/logo.svg");
+    margin: -15px 12px -15px 16px; /* top right bottom left */
+    color: @foreground;
+}
+#custom-scratchpad {
+    font-size: 17px;
+    font-weight: 300;
+    margin-left: -4px;
+    margin-right: 24px;
+}
+
+/* ===[ GLORIOUS MODEL O- INDICATOR ]=== */
+#custom-glorious {
+    font-size: 14px;
+    margin-left: 11px;
+    margin-right: 11px;
+    color: white;
+}
+
+/* ===[ WEATHER INDICATOR ]=== */
+#custom-weather_icon {
+    font-size: 22px;
+    margin-left: 14px;
+    margin-bottom: -3px;
+    margin-right: 0;
+}
+#custom-weather {
+    font-size: 11.5px;
+    color: @foreground;
+    margin-right: 0;
+}
+
+#custom-update {
+    font-size: 12px;
+    margin-right: 8px;
+    font-weight: 800;
+}
+
+#custom-screenrecording-indicator {
+    margin-top: 0;
+    margin-right: 14px;
+    font-size: 10px;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+#custom-screenrecording-indicator {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    color: transparent;
+}
+
+#custom-screenrecording-indicator.active {
+    color: #f7768e;
+    animation-name: blink-recording;
+    animation-duration: 0.5s;
+}
+
+@keyframes blink-recording {
+    to {
+        color: @background;
+    }
+}
+
+#custom-privacy-indicator {
+    font-size: 11px;
+    letter-spacing: 0px;
+    margin: 4px 14px 4px 15px;
+    border-radius: 8px;
+}

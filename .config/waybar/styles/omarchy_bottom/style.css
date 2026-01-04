@@ -1,0 +1,262 @@
+@import "../../../omarchy/current/theme/waybar.css";
+
+* {
+    font-family: "Iosevka";
+
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 1;
+    border-radius: 0;
+    min-height: 0;
+}
+
+.modules-left {
+    margin-left: 8px;
+}
+
+.modules-right {
+    margin-right: 8px;
+}
+
+#tray,
+#cpu,
+#battery,
+#network,
+#bluetooth,
+#idle_inhibitor,
+#pulseaudio,
+#pulseaudio.microphone,
+#custom-harmony,
+#custom-glorious,
+#custom-weather,
+#custom-screenrecording-indicator,
+#custom-update,
+#custom-spotify-controls-prev,
+#custom-spotify-controls-next {
+    min-width: 12px;
+    margin: 0 7.5px;
+    font-size: 14px;
+    background: transparent;
+    color: @foreground;
+}
+
+#custom-harmony {
+    font-size: 16px;
+    margin-right: 1.25rem;
+}
+
+window {
+    color: @foreground;
+    background: @background;
+    border-radius: 0;
+}
+
+tooltip {
+    color: @foreground;
+    background: @background;
+}
+
+menu {
+    /* background: transparent; */
+    background-color: @base02;
+    border-radius: 12px;
+    border: 1px solid @background;
+    color: @foreground;
+    padding: 8px;
+}
+menuitem {
+    border-radius: 8px;
+    padding: 7px;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 8px;
+}
+menuitem:hover {
+    background: @base01;
+    color: @foreground;
+}
+
+#taskbar button {
+    color: @background;
+    margin: 2px;
+    padding: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 6px;
+}
+
+/* ===[ SYSTEM TRAY ]=== */
+#tray {
+    padding-right: 6px;
+}
+
+/* ===[ BATTERY ]=== */
+#battery {
+    font-size: 13px;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+/* ===[ NETWORK ]=== */
+#network {
+    font-size: 13px;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+#network:hover {
+    color: @base06;
+}
+
+/* ===[ BLUETOOTH ]=== */
+#bluetooth {
+    font-size: 13px;
+    margin-right: 15px;
+    margin-left: 10px;
+}
+#bluetooth:hover {
+    color: @base06;
+}
+
+/* ===[ CLOCK ]=== */
+#clock {
+    margin-left: 4px;
+    margin-right: 16px;
+    font-size: 12px;
+    color: @base07;
+}
+
+/* ===[ PULSEAUDIO ]=== */
+#pulseaudio {
+    font-size: 13.75px;
+    border: none;
+}
+#pulseaudio:hover {
+    color: @base06;
+}
+#pulseaudio.sink-muted,
+#pulseaudio.source-muted {
+    color: @base08;
+}
+
+/* ===[ WORKSPACES ]=== */
+
+#workspaces {
+    background: transparent;
+    margin: 3px 0px;
+    padding: 15px 6px;
+    margin-left: 10px;
+    margin-top: 4px;
+    border-radius: 16px;
+    border: solid 0px red;
+}
+
+#workspaces button {
+    min-width: 6px;
+    min-height: 4px;
+    padding: 0;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: @foreground;
+    color: red;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.45;
+}
+
+#workspaces button.active,
+#workspaces button:hover {
+    color: @foreground;
+    background-color: @foreground;
+    border-radius: 20px;
+    min-width: 25px;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+}
+#workspaces button.empty {
+    opacity: 0.15;
+}
+
+#workspaces button label {
+    font-size: 0px;
+}
+
+#clock {
+    margin-right: 1rem;
+}
+
+#custom-glorious {
+    font-size: 12px;
+    margin-left: 0;
+}
+
+#custom-harmony {
+    font-size: 14px;
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+}
+
+#custom-spotify {
+    margin-left: 1rem;
+}
+
+#idle_inhibitor {
+    font-size: 12px;
+}
+
+#custom-weather {
+    font-size: 12px;
+}
+
+#custom-expand-icon {
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+tooltip {
+    padding: 4px;
+}
+
+#custom-update {
+    font-size: 10px;
+}
+
+#clock {
+    margin-left: 8.75px;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+#custom-screenrecording-indicator {
+    min-width: 12px;
+    margin-top: -0.1rem;
+    margin-left: 8.75px;
+    font-size: 7px;
+
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-screenrecording-indicator.active {
+    color: #f7768e;
+
+    animation-name: blink-recording;
+    animation-duration: 0.5s;
+}
+
+@keyframes blink-recording {
+    to {
+        color: @background;
+    }
+}
+
+#taskbar button {
+    background: transparent;
+    color: @foreground;
+    margin: 4px;
+    padding: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 6px;
+}

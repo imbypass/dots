@@ -1,0 +1,214 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "margin-top": 0,
+  "margin-right": 5,
+  "margin-left": 5,
+  "margin-bottom": 5,
+  "height": 44,
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  "reload_style_on_change": true,
+
+  // ==========[ ENABLED WAYBAR MODULES ]=========== //
+  "modules-left": ["custom/logo", "wlr/taskbar"],
+  "modules-center": [],
+  "modules-right": [
+    "custom/screenrecording-indicator",
+    "custom/privacy-indicator",
+    "custom/update",
+    "group/systray",
+    "pulseaudio",
+    "network",
+    "battery",
+    "clock",
+    "custom/scratchpad"
+  ],
+
+  // ==========[ STANDARD WAYBAR MODULES ]========== //
+  "hyprland/workspaces": {
+    "format": "{}",
+    "active-only": false,
+    "persistent-workspaces": {
+      "*": [1, 2],
+    },
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "on-click-right": "harmonyctl expose",
+  },
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 26,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "sort-by-app-id": true,
+    "ignore-list": [
+      "",
+      "Bluetooth Devices",
+      "Network Connections",
+      "Picture-in-Picture",
+      "Volume Control",
+      "Windscribe",
+      "dojo-voice",
+    ],
+  },
+  "clock": {
+    "justify": "center",
+    // "format": " {:%I:%M %p}",
+    "format": "{:%I:%M %p\n%m/%d/%Y}",
+    "tooltip-format": "{:%a, %b %e, %Y}",
+    "on-click-right": "walker -m mainmenu",
+  },
+  "battery": {
+    "format-icons": ["", "", "", "", ""],
+    "format": "{icon}",
+    "tooltip": true,
+    "tooltip-format": "Battery: {capacity}%\nTime Remaining: {time}",
+  },
+  "network": {
+    "format": "󰖩",
+    "format-wifi": "󰖩",
+    "format-ethernet2": "",
+    "format-ethernet": "󰖩",
+    "format-disconnected": "", // hides on empty
+    "tooltip-format": "󰖩   {essid}",
+    "tooltip-format-wifi": "󰖩   {essid}",
+    "tooltip-format-ethernet": "    Ethernet",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50,
+    "on-click": "foot -a wifi -e gazelle",
+    "on-click-right": "foot -a wifi -e gazelle",
+  },
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "󰂲", // an empty format will hide the module
+    "format-connected": "",
+    "tooltip": false,
+    "tooltip-format": "   {controller_alias}",
+    "tooltip-format-connected": "{controller_alias} ({num_connections} device)",
+    "tooltip-format-enumerate-connected": "{device_alias}\t({device_address})",
+    "on-click": "blueman-manager",
+    "on-click-right": "blueman-manager",
+  },
+  "pulseaudio": {
+    "format": "{icon}",
+    "on-click-toggle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click": "foot -a sinkswitch -e harmony-switch-sink",
+    "on-click-right": "foot -a Harmony -e wiremix --tab playback",
+    "on-scroll-up": "pamixer -i 5",
+    "on-scroll-down": "pamixer -d 5",
+    "tooltip-format": "Playing at {volume}%",
+    "scroll-step": 5,
+    "format-muted": "",
+    "format-icons": {
+      "default": ["", "", ""],
+    },
+  },
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": "",
+    "format-source-muted": "",
+    "tooltip": true,
+    "tooltip-format": "Input gain at {volume}%",
+    "on-click": "pamixer --default-source -t",
+    "on-click-right": "foot -a Harmony -e wiremix --tab input",
+    "on-scroll-up": "pamixer --default-source -i 5",
+    "on-scroll-down": "pamixer --default-source -d 5",
+    "scroll-step": 5,
+  },
+
+  // ==========[ SYSTEM TRAY HOVER GROUP ]========== //
+  "group/systray": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 350,
+      "children-class": "not-power",
+      "click-to-reveal": true,
+      "transition-left-to-right": false,
+    },
+    "modules": [
+      "custom/tray",
+      "tray",
+      "custom/glorious",
+      "pulseaudio#microphone",
+    ],
+  },
+
+  "tray": {
+    "icon-size": 15,
+    "spacing": 13,
+  },
+
+  // ==========[ CUSTOM WAYBAR MODULES ]========== //
+  "custom/tray": {
+    "tooltip": false,
+    "format": "",
+  },
+  "custom/logo": {
+    "tooltip": true,
+    "tooltip-format": "Applications",
+    "format": "  ",
+   //  "on-click": "nwg-menu -k -t -fm nautilus -wm hyprland -ml 5 -iss 16 -isl 32",
+    "on-click-right": "vicinae toggle",
+    "on-click": "vicinae toggle",
+  },
+  "custom/power": {
+    "tooltip": true,
+    "tooltip-format": "System Menu",
+    "format": "",
+    "on-click-right": "walker -m mainmenu",
+    "on-click": "walker -m mainmenu",
+  },
+  "hyprland/window": {
+    "format": "{}",
+    "separate-outputs": false,
+  },
+  "custom/spotify": {
+    "tooltip": false,
+    "tooltip-format": "{}",
+    "format": "{}",
+    "escape": true,
+    "exec": "$HOME/.local/share/harmony/scripts/waybar/mediaplayer.sh",
+    "on-click": "playerctl play-pause",
+    "on-click-right": "activate",
+  },
+  "custom/screenrecording-indicator": {
+    "on-click": "harmony-record",
+    "exec": "~/.local/share/harmony/scripts/waybar/recording-indicator.sh",
+    "signal": 8,
+    "return-type": "json",
+  },
+  "custom/glorious": {
+    "tooltip": true,
+    "tooltip-format": "Glorious Model O- ({})",
+    "format": "󰍽",
+    "escape": true,
+    "exec": "$HOME/.local/share/harmony/scripts/waybar/glorious-mouse.sh",
+  },
+  "custom/update": {
+    "format": "",
+    "exec": "checkupdates | wc -l",
+    "exec-if": "if [[ $(checkupdates | wc -l) -gt 0 ]]; then exit 0; fi; exit 1",
+    "on-click": "fish -c \"foot -a Harmony -e omarchy-update\"",
+    "tooltip-format": "{text} updates available",
+    "signal": 7,
+    "interval": 21600,
+  },
+  "custom/privacy-indicator": {
+      "exec": "$HOME/.local/share/harmony/scripts/waybar/privacy-indicator.sh",
+      "return-type": "json",
+      "interval": 3,
+      "format": "{text}",
+      "tooltip": true,
+      "escape": false,
+      "markup": "pango"
+  },
+  "custom/scratchpad": {
+    "tooltip": true,
+    "tooltip-format": "Applications",
+    "format": "",
+    "on-click": "hyprctl dispatch workspace special:discord",
+  }
+}
