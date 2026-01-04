@@ -196,6 +196,7 @@ tooltip label {
 #custom-update {
     font-size: 10px;
     font-weight: 800;
+    margin-right: 8px;
 }
 
 #custom-screenrecording-indicator {

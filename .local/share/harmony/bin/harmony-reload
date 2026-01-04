@@ -23,12 +23,18 @@ case "$1" in
             killall -SIGUSR1 nwg-dock-hyprland
         else
             killall nwg-dock-hyprland
-            nwg-dock-hyprland -mb 10 -mt 10 -i 32 -x -r -nolauncher & disown
+            nwg-dock-hyprland -mb 5 -mt 0 -i 30 -x -r -nolauncher & disown
         fi
     ;;
     "taskbar")
+        killall -9 nwg-dock-hyprland > /dev/null 2>&1
         killall -9 waybar > /dev/null 2>&1
         waybar -c ~/.config/waybar/styles/kde/config.jsonc -s ~/.config/waybar/styles/kde/style.css -b 1 & disown
+    ;;
+    "end4")
+        killall -9 waybar > /dev/null 2>&1
+        waybar -c ~/.config/waybar/styles/end_4/config.jsonc -s ~/.config/waybar/styles/end_4/style.css -b 1 & disown
+        sleep .5 && harmony-reload "dock"
     ;;
     "waybar")
         if [ "$2" = "rl" ]; then

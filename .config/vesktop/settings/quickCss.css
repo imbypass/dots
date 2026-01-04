@@ -1,8 +1,8 @@
 
 :root {
-    --font: "JetBrainsMono Nerd Font Propo";
+    --font: "Rethink Sans";
     --font-primary: var(--font);
     --font-header: var(--font);
     --font-display: var(--font);
-    --font-code: var(--font);
+    --font-code: "JetBrainsMono Nerd Font Propo";
 }

@@ -82,7 +82,11 @@ def date_widget() -> widgets.EventBox:
 def clock(monitor_id: int = 0) -> widgets.Window:
     widget_box = widgets.Box(
         css_classes=["widget"],
-        child=[clock_widget(), date_widget()])
+        child=[
+            clock_widget(),
+            date_widget(),
+        ]
+    )
     widget_box.vertical = True
     return widgets.Window(
         namespace=f"ignis_clock_{monitor_id}",

@@ -10,7 +10,6 @@
         "midnight-bepi.css",
         "EmojiReplace.theme.css",
         "icons-recolor.theme.css",
-        "base16.extras.css",
         "snippets.theme.css",
         "vencord.theme.css"
     ],
@@ -271,8 +270,8 @@
             "enabled": false
         },
         "NoBlockedMessages": {
-            "enabled": false,
-            "ignoreMessages": false,
+            "enabled": true,
+            "ignoreMessages": true,
             "applyToIgnoredUsers": true
         },
         "NoDevtoolsWarning": {
@@ -810,7 +809,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1767077759552
+        "settingsSyncVersion": 1767110848230
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false,

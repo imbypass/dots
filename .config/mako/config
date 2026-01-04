@@ -9,7 +9,7 @@ anchor=top-right
 outer-margin=20
 default-timeout=10000
 max-icon-size=32
-font=JetBrainsMono Nerd Font 10
+font=Rethink Sans Medium 11
 border-radius=6
 
 [mode=do-not-disturb]
