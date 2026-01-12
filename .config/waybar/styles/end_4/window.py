@@ -7,7 +7,7 @@ import subprocess
 import html
 
 # Configuration
-MAX_TITLE_LEN = 50
+MAX_TITLE_LEN = 60
 
 def get_hyprland_data(command):
     try:

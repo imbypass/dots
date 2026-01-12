@@ -13,19 +13,19 @@ screenrecording_active() {
 
 screenrecording_start() {
     notify-send -u normal -a gpu-screen-recorder -t 2750 "Screen Recorder" "Recording started!"
-    # cd "/home/${USER}/Videos/Screen Recordings/" && \
-    #     wf-recorder -c libx264 -p crf=23 -p preset=medium -x yuv444p -f "${TIMESTAMP}.mp4" &
+    cd "/home/${USER}/Videos/Screen Recordings/" && \
+        wf-recorder -c libx264 -p crf=23 -p preset=medium -x yuv444p -f "${TIMESTAMP}.mp4" &
 
-    gpu-screen-recorder -w HDMI-A-1 -c mp4 -k h264 -ac opus -f 60 -cursor no \
-        -restore-portal-session yes -cr limited -encoder cpu -q very_high -a device:default_output \
-        -o $RECORDING &
+    # gpu-screen-recorder -w HDMI-A-1 -c mp4 -k h264 -ac opus -f 60 -cursor no \
+    #     -restore-portal-session yes -cr limited -encoder cpu -q very_high -a device:default_output \
+    #     -o $RECORDING &
 
     screenrecording_toggle_indicator
 }
 
 screenrecording_stop() {
-    # kill -s INT $(pidof wf-recorder)
-    kill -s INT $(pidof gpu-screen-recorder)
+    kill -s INT $(pidof wf-recorder)
+    # kill -s INT $(pidof gpu-screen-recorder)
     notify-send -u normal -a gpu-screen-recorder -t 2750 "Screen Recorder" "Recording stopped!\nRecording saved as: ${TIMESTAMP}.mp4"
 
     sleep 0.2

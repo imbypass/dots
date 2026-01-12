@@ -3,7 +3,7 @@ config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
 
 # Font
 font-feature = dlig ss05 liga
-font-style = Regular
+font-style = Medium
 font-size = 9.5
 font-thicken = true
 adjust-cell-height = 0

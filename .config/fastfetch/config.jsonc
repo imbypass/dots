@@ -7,13 +7,12 @@
       "1": "cyan",
     },
     "padding": {
-      "top": 2,
+      "top": 1,
       "right": 6,
       "left": 2,
     },
   },
   "modules": [
-    "break",
     "break",
     {
       "type": "custom",
@@ -69,13 +68,7 @@
       "type": "command",
       "key": "\ue900 OS",
       "keyColor": "blue",
-      "text": "version=$(omarchy-version); echo \"Omarchy $version\"",
-    },
-    {
-      "type": "command",
-      "key": "│ ├",
-      "keyColor": "blue",
-      "text": "echo \"master\"",
+      "text": "version=$(omarchy-version); echo \"Harmony $version\"",
     },
     {
       "type": "kernel",

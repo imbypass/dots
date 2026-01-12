@@ -2,22 +2,25 @@
 
 # save the wallpaper to the global wallpaper file
 if [[ $1 == *.mp4 ]]; then
-	 ffmpeg -i $1 -ss 00:00:01.000 -vframes 1 /home/bypass/.local/share/wallpapers/tmp.png
-	 mv /home/bypass/.local/share/wallpapers/tmp.png /home/bypass/.local/share/wallpapers/.wallpaper
-	 rm /home/bypass/.local/share/wallpapers/tmp.png
-	rm -rf /home/bypass/.cache/yin/*
+    ffmpeg -i $1 -ss 00:00:01.000 -vframes 1 $HOME/.local/share/wallpapers/tmp.png
+    mv $HOME/.local/share/wallpapers/tmp.png $HOME/.local/share/wallpapers/.wallpaper
+	rm -rf $HOME/.cache/yin/*
 else
-	cp $1 /home/bypass/.local/share/wallpapers/.wallpaper
+	cp $1 $HOME/.local/share/wallpapers/.wallpaper
 fi
 
 # create visible versions with extensions for other tools
-cp /home/bypass/.local/share/wallpapers/.wallpaper /home/bypass/.local/share/wallpapers/wallpaper.png
-cp /home/bypass/.local/share/wallpapers/.wallpaper /home/bypass/.local/share/wallpapers/wallpaper.jpg
+cp $HOME/.local/share/wallpapers/.wallpaper $HOME/.local/share/wallpapers/wallpaper.png
+cp $HOME/.local/share/wallpapers/.wallpaper $HOME/.local/share/wallpapers/wallpaper.jpg
+ln -nsf "$HOME/.local/share/wallpapers/.wallpaper" "$HOME/.config/omarchy/current/background"
 
 
 # set wallpaper
 yinctl --pause
-yinctl --color 030305
-notify-send -u normal -a Hyprland -t 3500 "Setting wallpaper.."
+yinctl --img "$HOME/.local/share/wallpapers/.wallpaper"
+
+if [[ $1 == *.mp4 ]]; then
+    notify-send -u normal -a Hyprland -t 3500 "Rendering wallpaper.." "$1" -i ~/.config/omarchy/current/theme/waybar-logo.png
+fi
 yinctl --img "$1" > /dev/null 2>&1
 yinctl --play

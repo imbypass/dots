@@ -2,17 +2,22 @@
   "layer": "top",
   "position": "top",
   "margin-top": 5,
-  "margin-right": 5,
-  "margin-left": 5,
+  "margin-right": 6,
+  "margin-left": 6,
   "margin-bottom": 0,
   "exclusive": true,
   "passthrough": false,
   "gtk-layer-shell": true,
   "reload_style_on_change": true,
 
-  // ==========[ ENABLED WAYBAR MODULES ]=========== //
-  "modules-left": ["custom/logo", "custom/windowtitle", "custom/privacy-indicator"],
-  "modules-center": ["hyprland/workspaces"],
+  "modules-left": [
+    "custom/logo",
+    "custom/windowtitle",
+    "custom/privacy-indicator"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
   "modules-right": [
     "custom/screenrecording-indicator",
     "group/systray",
@@ -25,79 +30,38 @@
     "clock"
   ],
 
-  // ==========[ STANDARD WAYBAR MODULES ]========== //
-  "hyprland/window": {
-    "format": "{}",
-    "rewrite": {
-      "\\s*(.*)\\s+": "$1",
-      "\\s*": " ",
-      "(\\d\\. )?(.*)- VLC media player": " $2",
-      "(\\d\\. )?(.*)— Mozilla Firefox": "Firefox",
-      ".*Mozilla Firefox.*": "Firefox",
-      "(\\d\\. )?(.*)- Google Chrome": "Chrome",
-      "(\\d\\. )?(.*)foot": "Terminal",
-      ".*Discord.*": "Discord",
-      "(\\d\\. )?(.*)Spotify": "Spotify",
-      "(\\d\\. )?(.*)Spotify Premium": "Spotify",
-      "(\\d\\. )?(.*)ncspot": "Spotify",
-      "(\\d\\. )?(.*)Steam": "Steam",
-      "(\\d\\. )?(.*)Minecraft": "Minecraft",
-      "(.*)[Ll]unar [Cc]lient": "Minecraft",
-      "(\\d\\. )?(.*)Code - OSS": "Code",
-      "Search(.*)": "Search",
-    },
-    "separate-outputs": false,
-  },
   "hyprland/workspaces": {
-      "on-scroll-up": "hyprctl dispatch workspace e+1",
-      "on-scroll-down": "hyprctl dispatch workspace e-1",
-      "on-click": "activate",
-      "format": "{icon}",
-      "active-only": false,
-      "window-rewrite-default": " ",
-      "window-rewrite": {
-        "title<.*YouTube.*>": " ",
-        "class<firefox>": " ",
-        "class<alacritty>": " ",
-        "class<foot>": " ",
-        "class<dev.zed.Zed>": " 󰨞",
-        "class<vesktop>": " ",
-        "class<chromium>": " ",
-        "class<org.gnome.Nautilus>": "",
-      },
-      "format-icons": {
-        "default": "",
-        "active": "",
-      },
-      "persistent-workspaces": {
-        "1": [],
-        "2": [],
-        "3": [],
-        "4": [],
-        "5": [],
-        "6": [],
-        "7": [],
-        "8": [],
-        "9": [],
-      },
-    },
-  "wlr/taskbar": {
-    "format": "{icon}",
-    "icon-size": 20,
-    // "icon-theme": "tela dark",
-    "tooltip-format": "{title}",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
     "on-click": "activate",
-    "on-click-middle": "close",
-    "sort-by-app-id": true,
-    "ignore-list": [
-      "",
-      "Bluetooth Devices",
-      "Network Connections",
-      "Picture-in-Picture",
-      "Volume Control",
-      "Windscribe",
-      "dojo-voice",
-    ],
+    "format": "{icon}",
+    "active-only": false,
+    "window-rewrite-default": "",
+    "window-rewrite": {
+      "title<.*YouTube.*>": " ",
+      "class<firefox>": " ",
+      "class<alacritty>": " ",
+      "class<foot>": " ",
+      "class<dev.zed.Zed>": " 󰨞",
+      "class<vesktop>": " ",
+      "class<chromium>": " ",
+      "class<org.gnome.Nautilus>": "",
+    },
+    "format-icons": {
+      "default": "",
+      "active": "",
+    },
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [],
+      "9": [],
+    },
   },
   "battery": {
     "format": " {}%",
@@ -156,7 +120,7 @@
     "on-scroll-down": "pamixer --default-source -d 5",
     "scroll-step": 5,
   },
-  // ==========[ SYSTEM TRAY HOVER GROUP ]========== //
+
   "group/systray": {
     "orientation": "inherit",
     "drawer": {
@@ -165,44 +129,34 @@
       "click-to-reveal": true,
       "transition-left-to-right": false,
     },
-    "modules": ["custom/tray", "tray"],
+    "modules": ["custom/tray", "tray", "custom/glorious"],
   },
-
   "tray": {
     "icon-size": 14,
     "spacing": 12,
   },
-
-  // ==========[ CUSTOM WAYBAR MODULES ]========== //
   "custom/tray": {
     "tooltip": false,
     "format": "",
   },
+
   "custom/logo": {
     "tooltip": true,
-    "format": "",
+    "format": "<span font='Bypass-Icons'>\ue900</span>",
     "on-click": "vicinae toggle",
     "on-click-right": "vicinae vicinae://extensions/vicinae/wm/switch-windows",
     "tooltip-format": "System Menu\n\nSuper + Alt + Space",
   },
-  "custom/weather": {
-    "format": "{}°",
-    "tooltip": true,
-    "interval": 3600,
-    "on-click": "gnome-weather",
-    "exec": "wttrbar --mph --fahrenheit --lang en --ampm --hide-conditions --location 32735",
-    "return-type": "json",
-  },
   "custom/windowtitle": {
     "format": "{}",
-    "exec": "~/.config/waybar/styles/end_4/window.py",
+    "exec": "~/.config/waybar/scripts/window-title.py",
     "return-type": "json",
     "restart-interval": 0,
     "align": 0,
     "justify": "left"
   },
   "custom/screenrecording-indicator": {
-    "on-click": "harmony-record",
+    "on-click": "harmony-record stop",
     "exec": "~/.local/share/harmony/scripts/waybar/recording-indicator.sh",
     "signal": 8,
     "return-type": "json",
