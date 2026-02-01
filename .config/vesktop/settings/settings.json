@@ -370,7 +370,8 @@
                             "1112190218670440448",
                             "980292879798902824",
                             "1015718332109955112",
-                            "294685587401605132"
+                            "294685587401605132",
+                            "1466217757275324478"
                         ]
                     },
                     {
@@ -730,7 +731,8 @@
             "enabled": true
         },
         "WebScreenShareFixes": {
-            "enabled": true
+            "enabled": true,
+            "experimentalAV1Support": false
         },
         "WebContextMenus": {
             "enabled": true,
@@ -809,7 +811,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1767497381944
+        "settingsSyncVersion": 1769815890767
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false,

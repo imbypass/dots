@@ -55,8 +55,7 @@
     ],
   },
   "clock": {
-    "justify": "center",
-    // "format": " {:%I:%M %p}",
+    "justify": "right",
     "format": "{:%I:%M %p\n%m/%d/%Y}",
     "tooltip-format": "{:%a, %b %e, %Y}",
     "on-click-right": "walker -m mainmenu",

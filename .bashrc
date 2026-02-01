@@ -33,6 +33,7 @@ export TERM='xterm-256color'
 export NIXPKGS_ALLOW_UNFREE=1
 export WINEDEBUG=fixme-all
 export MANPAGER='nvim +Man!'
+export PYTHONPATH=$PYTHONPATH:/usr/lib/python3.13/site-packages
 
 # Aliases - Configuration
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'

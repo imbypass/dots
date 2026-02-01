@@ -1,38 +1,39 @@
 @import url("../../base16.css");
+@import "../../../omarchy/current/theme/waybar.css";
 
 * {
-    font-weight: 400;
+    font-weight: 600;
+    font-size: 12.5px;
     font-family: "Iosevka NFP";
 }
 
 window {
-    color: @base05;
-    background: @base00;
+    color: @foreground;
+    background: @background;
     border-radius: 0;
     border: 0;
 }
 
 tooltip {
-    color: @base06;
-    background: @base00;
-    border: 1px solid @base02;
-    border-radius: 8px;
+    color: @foreground;
+    background: @background;
+    border: 1px solid alpha(white, 0.2);
+    border-radius: 0;
+    padding: 0;
 }
 
 menu {
-    /* background: transparent; */
-    background-color: @base02;
+    background-color: @background;
     border-radius: 12px;
-    border: 1px solid @base00;
+    border: 1px solid @background;
     color: @base05;
     padding: 8px;
 }
 menuitem {
-    border-radius: 8px;
+    border-radius: 0;
     padding: 7px;
     padding-left: 2px;
     padding-right: 2px;
-    font-size: 8px;
 }
 menuitem:hover {
     background: @base01;
@@ -43,54 +44,46 @@ menuitem:hover {
 #custom-glorious,
 #workspaces button {
     background: transparent;
-    color: @base05;
+    color: @foreground;
     margin-left: 12px;
     margin-right: 12px;
 }
 
-/* ===[ CLOCK ]=== */
 #clock {
-    color: @base0E;
-    margin-right: 6px;
+    color: @foreground;
+    margin-right: 12px;
+    margin-left: 6px;
 }
 
-/* ===[ PULSEAUDIO ]=== */
 #pulseaudio {
     border: none;
-    color: @base0E;
-    margin-right: -3px;
-}
-#pulseaudio.sink-muted,
-#pulseaudio.source-muted {
-    color: @base08;
+    color: @foreground;
 }
 
-/* ===[ MODEL O BATTERY INDICATOR ]=== */
 #custom-glorious {
-    color: @base09;
     margin-right: 8px;
+    margin-left: 8px;
 }
 
-/* ===[ WORKSPACES ]=== */
 #workspaces {
     padding: 0;
-    color: @base07;
+    color: white;
 }
 #workspaces button {
     border-radius: 0px;
     border: 0px;
-    color: @base06;
+    color: white;
     padding: 0 7px 0 7px;
     margin: 0;
 }
 #workspaces button:hover {
-    color: @base00;
-    background-color: @base0E;
+    color: @background;
+    background-color: @foreground;
 }
 #workspaces button.active {
-    color: @base00;
-    background-color: @base0E;
+    color: @background;
+    background-color: @foreground;
 }
 #workspaces button.urgent {
-    color: @base0A;
+    color: @red;
 }

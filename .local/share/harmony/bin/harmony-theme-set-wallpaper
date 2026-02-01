@@ -9,18 +9,20 @@ else
 	cp $1 $HOME/.local/share/wallpapers/.wallpaper
 fi
 
+# set wallpaper
+yinctl --pause
+yinctl --img "$HOME/.local/share/wallpapers/.wallpaper"
+
 # create visible versions with extensions for other tools
 cp $HOME/.local/share/wallpapers/.wallpaper $HOME/.local/share/wallpapers/wallpaper.png
 cp $HOME/.local/share/wallpapers/.wallpaper $HOME/.local/share/wallpapers/wallpaper.jpg
 ln -nsf "$HOME/.local/share/wallpapers/.wallpaper" "$HOME/.config/omarchy/current/background"
 
-
 # set wallpaper
-yinctl --pause
-yinctl --img "$HOME/.local/share/wallpapers/.wallpaper"
+yinctl --img "$1" > /dev/null 2>&1
+yinctl --play
 
+# rendering alert (if mp4)
 if [[ $1 == *.mp4 ]]; then
     notify-send -u normal -a Hyprland -t 3500 "Rendering wallpaper.." "$1" -i ~/.config/omarchy/current/theme/waybar-logo.png
 fi
-yinctl --img "$1" > /dev/null 2>&1
-yinctl --play

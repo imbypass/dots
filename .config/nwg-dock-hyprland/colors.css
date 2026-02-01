@@ -1,19 +1,18 @@
 window {
-    background: #161616; /* base01 */
-    border-color: #212121; /* base02 */
-    border: 2px solid #212121;
+    background: rgba(19, 21, 21, 0.90); /* base01 */
+    border: 2px solid rgba(24, 26, 26, 0.90);
 }
 
 button,
 image {
-    color: #E9E9E9; /* base07 */
+    color: #F1E4C2; /* base07 */
 }
 
 button {
-    color: #959595; /* base05 */
+    color: #e5d5b1; /* base05 */
     padding: 3px;
 }
 
 button:hover {
-    background-color: rgba(33, 33, 33, 0.5); /* base02 */
+    background-color: rgba(57, 57, 57, 0.5); /* base02 */
 }

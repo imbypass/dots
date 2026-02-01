@@ -1,6 +1,6 @@
 // Zed settings
 {
-  "icon_theme": "Bearded Icon Theme",
+  "icon_theme": "JetBrains New UI Icons (Dark)",
   "show_completions_on_input": false,
   "language_servers": ["!eslint"],
   "base_keymap": "VSCode",

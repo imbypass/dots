@@ -1,6 +1,7 @@
 #!/bin/bash
 
 output_file="$HOME/.config/omarchy/current/theme/gtk.css"
+light_file="$HOME/.config/omarchy/current/theme/light.mode"
 gtk3_dir="$HOME/.config/gtk-3.0"
 gtk4_dir="$HOME/.config/gtk-4.0"
 gtk3_file="$gtk3_dir/gtk.css"
@@ -200,8 +201,16 @@ else
     cp "$output_file" "$gtk4_file"
 fi
 
-gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-tmp
-gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3
+if [ -f "$light_file" ]; then
+    gsettings set org.gnome.desktop.interface color-scheme "prefer-light"
+    gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-tmp
+    gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3
+else
+    gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
+    gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-tmp-dark
+    gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark
+fi
+
 pkill -f xdg-desktop-portal-gtk
 
 require_restart "nautilus"
