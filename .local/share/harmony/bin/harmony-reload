@@ -102,6 +102,10 @@ case "$1" in
         killall vicinae > /dev/null 2>&1
         vicinae server > /dev/null 2>&1 & disown
     ;;
+    "voxtype")
+        killall voxtype > /dev/null 2>&1
+        voxtype daemon > /dev/null 2>&1 & disown
+    ;;
     *)
         exit 1
     ;;

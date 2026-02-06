@@ -19,10 +19,10 @@
   },
   "ui_font_size": 14.0,
   "ui_font_weight": 600.0,
-  "ui_font_family": "Rethink Sans",
+  "ui_font_family": "Iosevka",
   "buffer_font_size": 12.0,
   "buffer_font_weight": 400.0,
-  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_family": "Iosevka",
   "buffer_line_height": {
     "custom": 1.525
   },

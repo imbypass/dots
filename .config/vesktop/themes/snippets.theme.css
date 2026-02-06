@@ -9,11 +9,13 @@
  * @discord bypass_
  **/
 @import url(./snippets/addfriends-button.css);
-/*@import url(./snippets/bubble-usernames.css);*/
 @import url(./snippets/clean-chatbar.css);
 @import url(./snippets/clean-direct-messages.css);
 @import url(./snippets/clean-dm-categories.css);
 @import url(./snippets/clean-topbar.css);
+@import url(./snippets/clean-voice-buttons.css);
+@import url(./snippets/compact-member-list.css);
+@import url(./snippets/compact-search-box.css);
 @import url(./snippets/custom-is-typing.css);
 @import url(./snippets/disable-vc-animations.css);
 @import url(./snippets/fix-usrbg.css);
@@ -21,17 +23,8 @@
 @import url(./snippets/hide-discover.css);
 @import url(./snippets/hide-new-messages-bar.css);
 @import url(./snippets/hide-social-links.css);
+@import url(./snippets/no-border-radius.css);
 @import url(./snippets/no-message-hover-emojis.css);
 @import url(./snippets/remove-gradient-glow.css);
 @import url(./snippets/swap-clantag-roleicon.css);
 @import url(./snippets/user-activity-redesign.css);
-
-/* === [ DISABLED SNIPPETS ] === */
-/*@import url(./snippets/chatbar-context-menu.css);*/
-/*@import url(./snippets/discord-top-border.css);*/
-/*@import url(./snippets/hide-pluralkit-messages.css);*/
-/*@import url(./snippets/no-border-radius.css);*/
-
-/* === [ BASE16-SPECIFIC SNIPPETS ] === */
-/*@import url(./snippets/animated-message-options.css);*/
-/*@import url(./snippets/recolor-deletions.css);*/

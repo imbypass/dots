@@ -582,7 +582,7 @@
             "enabled": false
         },
         "VolumeBooster": {
-            "enabled": true,
+            "enabled": false,
             "multiplier": 2
         },
         "WhoReacted": {
@@ -811,7 +811,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1769815890767
+        "settingsSyncVersion": 1770331740107
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false,

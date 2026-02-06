@@ -11,9 +11,20 @@ if [ "$gamemode" = 1 ]; then
                 keyword general:border_size 1;\
                 keyword decoration:rounding 0" >/dev/null
     notify-send -u low -a Omarchy -t 3500 "Game Mode" "Toggled On" -i ~/.config/omarchy/current/theme/waybar-logo.png
+
+    killall yin > /dev/null
+    killall yinctl > /dev/null
+
     exit
 else
     notify-send -u low -a Omarchy -t 3500 "Game Mode" "Toggled Off" -i ~/.config/omarchy/current/theme/waybar-logo.png
+
+    killall yin > /dev/null
+    yin & disown > /dev/null
+
+    bg_color=$(cat $HOME/.config/omarchy/current/theme/background.color)
+    yinctl --color $bg_color > /dev/null
+    yinctl --restore > /dev/null
 fi
 
 hyprctl reload >/dev/null

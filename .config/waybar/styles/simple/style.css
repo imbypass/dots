@@ -1,10 +1,10 @@
-@import url("../../base16.css");
 @import "../../../omarchy/current/theme/waybar.css";
 
 * {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 12.5px;
     font-family: "Iosevka NFP";
+    border-radius: 0;
 }
 
 window {
@@ -12,6 +12,7 @@ window {
     background: @background;
     border-radius: 0;
     border: 0;
+    border-bottom: 1px solid alpha(white, 0.2);
 }
 
 tooltip {
@@ -24,10 +25,13 @@ tooltip {
 
 menu {
     background-color: @background;
-    border-radius: 12px;
-    border: 1px solid @background;
-    color: @base05;
+    border-radius: 0;
+    border: 1px solid @black;
+    color: @foreground;
     padding: 8px;
+}
+menu * {
+    border-radius: 0;
 }
 menuitem {
     border-radius: 0;
@@ -36,17 +40,18 @@ menuitem {
     padding-right: 2px;
 }
 menuitem:hover {
-    background: @base01;
-    color: @base05;
+    background: @black;
+    color: @foreground;
+    border-radius: 3px;
 }
 
-#clock #pulseaudio,
-#custom-glorious,
+#clock,
+#pulseaudio,
+#memory,
 #workspaces button {
     background: transparent;
     color: @foreground;
-    margin-left: 12px;
-    margin-right: 12px;
+    margin: 0;
 }
 
 #clock {
@@ -55,14 +60,20 @@ menuitem:hover {
     margin-left: 6px;
 }
 
+#memory {
+    color: @foreground;
+    margin-left: 6px;
+}
+
+#network {
+    color: @foreground;
+    margin-right: 6px;
+    margin-left: 0px;
+}
+
 #pulseaudio {
     border: none;
     color: @foreground;
-}
-
-#custom-glorious {
-    margin-right: 8px;
-    margin-left: 8px;
 }
 
 #workspaces {
@@ -85,5 +96,98 @@ menuitem:hover {
     background-color: @foreground;
 }
 #workspaces button.urgent {
-    color: @red;
+    color: @bright_yellow;
+}
+
+#custom-logo {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0;
+    margin-top: 0px;
+    margin-bottom: -0px;
+    font-size: 20px;
+}
+#custom-logo:hover {
+    background-color: @foreground;
+    color: @background;
+}
+
+#custom-tray {
+    font-size: 10px;
+    color: alpha(white, 0.65);
+    font-weight: 300;
+    margin-right: 10px;
+    margin-left: 8px;
+    margin-top: -1px;
+}
+
+#custom-update {
+    color: @foreground;
+    margin-right: 8px;
+    margin-left: 0px;
+    margin-top: -1px;
+}
+
+#custom-glorious {
+    color: @bright_white;
+    font-size: 14px;
+    margin-top: -1px;
+    margin-left: 14px;
+    margin-right: 10px;
+}
+
+#custom-screenrecording-indicator {
+    margin-top: -2px;
+    margin-left: 0px;
+    font-size: 7px;
+}
+#custom-screenrecording-indicator {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    color: transparent;
+}
+#custom-screenrecording-indicator.active {
+    color: @bright_red;
+    animation-name: fade;
+    animation-duration: 0.5s;
+}
+
+#custom-privacy-indicator {
+    font-size: 7px;
+    letter-spacing: 0px;
+    border-radius: 8px;
+    margin-right: -4px;
+    margin-left: 8px;
+    margin-top: -3px;
+}
+
+#custom-lyrics {
+    color: white;
+}
+
+#custom-voxtype-indicator {
+    margin-left: 8px;
+    margin-top: -2px;
+    font-size: 7.25px;
+}
+
+@keyframes fade {
+    to {
+        color: @background;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+        color: @bright_yellow;
+    }
+    50% {
+        opacity: 1;
+        color: white;
+    }
+    100% {
+        opacity: 1;
+    }
 }

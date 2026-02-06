@@ -1,18 +1,16 @@
-
 :root {
-    --font: "Rethink Sans";
+    --font: "Iosevka";
     --font-primary: var(--font);
     --font-header: var(--font);
     --font-display: var(--font);
-    --font-code: "JetBrainsMono Nerd Font Propo";
+    --font-code: "Iosevka Nerd Font Propo";
 }
 
-._752971923a1e6683-markup em {
-    font-style: normal;
-}
-
-div[class*="numberBadge"],
-div[class*="textBadge"],
-div[class*="guildBadge"] {
-    color: var(--base05) !important;
+div[class*=-micButtonParent] {
+  button[role="switch"] {
+    border-radius: var(--radius-sm) !important;
+    ~ button {
+      display: none;
+    }
+  }
 }

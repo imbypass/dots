@@ -5,41 +5,49 @@
   "margin-right": 0,
   "margin-left": 0,
   "margin-bottom": 0,
-  "height": 22,
   "exclusive": true,
   "passthrough": false,
   "gtk-layer-shell": true,
   "reload_style_on_change": true,
 
-  // ==========[ ENABLED WAYBAR MODULES ]=========== //
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": [],
+  "modules-left": [
+    "hyprland/workspaces",
+    "custom/privacy-indicator",
+    "custom/screenrecording-indicator",
+    "custom/voxtype-indicator"
+  ],
+  "modules-center": [
+    "custom/lyrics"
+  ],
   "modules-right": [
+    "group/systray",
+    "custom/update",
+    "network",
     "pulseaudio",
     "pulseaudio#microphone",
+    "memory",
     "clock"
   ],
 
-  // ==========[ STANDARD WAYBAR MODULES ]========== //
   "hyprland/workspaces": {
     "format": "{icon}",
     "active-only": false,
-    "persistent-workspaces": { "*": 9 },
+    "persistent-workspaces": { "*": 5 },
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
   },
   "clock": {
     "format": "TIME <span color=\"#ffffff\">{:%I:%M %p}</span>",
-    "tooltip-format": "{:%a, %b %e, %Y}",
+    "tooltip-format": "{:%a, %b%e, %Y}",
   },
   "pulseaudio": {
-    "format": "VOLUME <span color=\"#ffffff\">{volume}%</span> <span color=\"#ffffff\">| </span>",
-    "format-muted": "VOLUME <span color=\"#ffffff\">MUTED</span> <span color=\"#ffffff\">| </span>",
+    "format": "OUTPUT <span color=\"#ffffff\">{volume}%</span> <span color=\"#ffffff\">| </span>",
+    "format-muted": "OUTPUT <span color=\"#ffffff\">MUTED</span> <span color=\"#ffffff\">| </span>",
     "tooltip": true,
-    "tooltip-format": "{desc} at {volume}%",
+    "tooltip-format": "{desc} @ {volume}%",
     "on-click-toggle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "on-click": "foot -a sinkswitch -e harmony-switch-sink",
-    "on-click-right": "foot -a Harmony -e wiremix --tab playback",
+    "on-click-right": "foot -a float -e wiremix --tab playback",
     "on-scroll-up": "pamixer -i 5",
     "on-scroll-down": "pamixer -d 5",
     "scroll-step": 5,
@@ -58,18 +66,18 @@
     "format-source": "INPUT <span color=\"#ffffff\">{volume}%</span> <span color=\"#ffffff\">|</span>",
     "format-source-muted": "INPUT <span color=\"#ffffff\">MUTED</span> <span color=\"#ffffff\">|</span>",
     "tooltip": true,
-    "tooltip-format": "Input gain at {volume}%",
+    "tooltip-format": "INPUT GAIN @ {volume}%",
     "on-click": "pamixer --default-source -t",
-    "on-click-right": "foot -a Harmony -e wiremix --tab input",
+    "on-click-right": "foot -a float -e wiremix --tab input",
     "on-scroll-up": "pamixer --default-source -i 5",
     "on-scroll-down": "pamixer --default-source -d 5",
     "scroll-step": 5,
   },
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-    "format-ethernet": "󰀂",
-    "format-disconnected": "󰤮",
-    "format": "{icon}",
+    "format-ethernet": "NETWORK <span color=\"#ffffff\">WIRED</span> <span color=\"#ffffff\">|</span>",
+    "format-disconnected": "NETWORK <span color=\"#ff0000\">NONE</span> <span color=\"#ffffff\">|</span>",
+    "format": "NETWORK <span color=\"#ffffff\">WIFI</span> <span color=\"#ffffff\">|</span>",
     "format-wifi": "{icon}",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣ {bandwidthDownBytes}  ⇡ {bandwidthUpBytes}",
@@ -78,6 +86,13 @@
     "spacing": 1,
     "on-click": "foot -a wifi -e gazelle",
     "on-click-right": "foot -a wifi -e gazelle",
+  },
+  "memory": {
+    "interval": 1,
+    "format": "RAM <span color=\"#ffffff\">{used:0.0f}GB/{total:0.0f}GB</span> <span color=\"#ffffff\">|</span>",
+    "on-click": "foot -a float -e btop",
+    "tooltip": true,
+    "tooltip-format": "{used:0.1f}GB USED",
   },
   "group/systray": {
     "orientation": "inherit",
@@ -100,18 +115,10 @@
 
   "custom/logo": {
     "tooltip": true,
-    "format": "<span font='Bypass-Icons'>\ue900</span>",
+    "format": "<span font='Bypass-Icons'>\ue925</span>",
     "on-click": "vicinae toggle",
     "on-click-right": "vicinae vicinae://extensions/vicinae/wm/switch-windows",
-    "tooltip-format": "System Menu\n\nSuper + Alt + Space",
-  },
-  "custom/windowtitle": {
-    "format": "{}",
-    "exec": "~/.config/waybar/scripts/window-title.py",
-    "return-type": "json",
-    "restart-interval": 0,
-    "align": 0,
-    "justify": "left"
+    "tooltip-format": "SYSTEM MENU\n\nSUPER + ALT + SPACE",
   },
   "custom/screenrecording-indicator": {
     "on-click": "harmony-record stop",
@@ -122,16 +129,16 @@
   "custom/glorious": {
     "tooltip": true,
     "tooltip-format": "Glorious Model O- ({})",
-    "format": "MOUSE <span color=\"#ffffff\">| </span>",
+    "format": "󰍽",
     "escape": true,
     "exec": "$HOME/.local/share/harmony/scripts/waybar/glorious-mouse.sh",
   },
   "custom/update": {
-    "format": "",
+    "format": "UPDATES <span color=\"#ffffff\">{text}</span> <span color=\"#ffffff\">|</span>",
     "exec": "checkupdates | wc -l",
     "exec-if": "if [[ $(checkupdates | wc -l) -gt 0 ]]; then exit 0; fi; exit 1",
-    "on-click": "fish -c \"foot -a Harmony -e omarchy-update\"",
-    "tooltip-format": "{text} updates available",
+    "on-click": "fish -c \"foot -a float -e omarchy-update\"",
+    "tooltip-format": "{text} UPDATES AVAILABLE",
     "signal": 7,
     "interval": 21600,
   },
@@ -143,5 +150,24 @@
       "tooltip": true,
       "escape": false,
       "markup": "pango"
-  }
+  },
+  "custom/voxtype-indicator": {
+    "exec": "$HOME/.local/share/harmony/scripts/waybar/voxtype-indicator.sh",
+    "return-type": "json",
+    "format": "{icon}",
+    "format-icons": {
+      "idle": "",
+      "recording": "<span foreground=\"#CA3F3F\">󰝤</span>",
+      "transcribing": "<span foreground=\"#C45497\">󰝤</span>"
+    },
+    "tooltip": true,
+    "on-click": "fish -c \"foot -a float -e voxtype setup model\"",
+  },
+  "custom/lyrics": {
+    "format": "{}",
+    "exec": "/home/bypass/Documents/aur_packages/wayspot-lyrics/bin/python /home/bypass/Documents/aur_packages/wayspot-lyrics/wayspot-lyrics.py",
+    "return-type": "json",
+    "restart-interval": 0,
+    "align": 0
+  },
 }

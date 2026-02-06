@@ -111,3 +111,4 @@ application/pdf=helium-browser.desktop
 application/toml=dev.zed.Zed.desktop
 x-scheme-handler/terminal=foot.desktop
 x-scheme-handler/aether=aether-protocol-handler.desktop
+x-scheme-handler/mailto=chromium.desktop

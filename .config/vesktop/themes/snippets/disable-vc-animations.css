@@ -1,5 +1,6 @@
 /* Disable voice channel pulsing animations */
-.sphere__11664 {
+.sphere__11664,
+.pulseGradient__11664 {
     animation: none !important;
     animation-play-state: paused !important;
     display: none !important;
@@ -11,4 +12,7 @@
 /* Hide Voice Channel Tile Gradients */
 :where(.visual-refresh) .singleUserRoot__4ad81 {
     background: none !important;
+}
+.pulseGradient__11664 {
+    display: none !important;
 }

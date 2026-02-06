@@ -1,7 +1,7 @@
 {
     "discordBranch": "stable",
     "minimizeToTray": true,
-    "arRPC": true,
+    "arRPC": false,
     "splashColor": "rgb(244, 230, 210)",
     "splashBackground": "rgb(24, 21, 21)",
     "spellCheckLanguages": [
