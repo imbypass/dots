@@ -5,12 +5,3 @@
     --font-display: var(--font);
     --font-code: "Iosevka Nerd Font Propo";
 }
-
-div[class*=-micButtonParent] {
-  button[role="switch"] {
-    border-radius: var(--radius-sm) !important;
-    ~ button {
-      display: none;
-    }
-  }
-}

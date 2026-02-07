@@ -19,9 +19,8 @@ case "$1" in
     ;;
     "wp")
         printf "${BOLD}${BLUE}:: ${RESET}Initializing wallpaper daemon..\n"
-        killall yin > /dev/null 2>&1 &
-        sleep .5 && yin &
-        sleep .5 && yinctl --color 141111 &
+        killall awww-daemon > /dev/null 2>&1 &
+        sleep .5 && awww-daemon &
     ;;
     "gnome")
         printf "${BOLD}${BLUE}:: ${RESET}Initializing GNOME settings..\n"

@@ -23,8 +23,6 @@
 @import url(./snippets/hide-discover.css);
 @import url(./snippets/hide-new-messages-bar.css);
 @import url(./snippets/hide-social-links.css);
-@import url(./snippets/no-border-radius.css);
+/*@import url(./snippets/no-border-radius.css);*/
 @import url(./snippets/no-message-hover-emojis.css);
 @import url(./snippets/remove-gradient-glow.css);
-@import url(./snippets/swap-clantag-roleicon.css);
-@import url(./snippets/user-activity-redesign.css);

@@ -1,16 +1,14 @@
 #!/bin/bash
 
+killall yin
+
 # save the wallpaper to the global wallpaper file
 if [[ $1 == *.mp4 ]]; then
     ffmpeg -i $1 -ss 00:00:01.000 -vframes 1 $HOME/.local/share/wallpapers/tmp.png
     mv $HOME/.local/share/wallpapers/tmp.png $HOME/.local/share/wallpapers/.wallpaper
-	rm -rf $HOME/.cache/yin/*
 else
 	cp $1 $HOME/.local/share/wallpapers/.wallpaper
 fi
-
-# clear existing wallpaper
-awww clear 000000
 
 # create visible versions with extensions for other tools
 cp $HOME/.local/share/wallpapers/.wallpaper $HOME/.local/share/wallpapers/wallpaper.png
@@ -18,15 +16,19 @@ cp $HOME/.local/share/wallpapers/.wallpaper $HOME/.local/share/wallpapers/wallpa
 ln -nsf "$HOME/.local/share/wallpapers/.wallpaper" "$HOME/.config/omarchy/current/background"
 
 # set wallpaper
-awww img "$1" \
+awww img "$HOME/.local/share/wallpapers/wallpaper.png" \
     -t random \
-    --resize fit \
     --transition-fps 120 \
     --transition-duration 1 \
     --transition-step 45 \
-> /dev/null 2>&1
+   > /dev/null 2>&1
+
+
 
 # rendering alert (if mp4)
 if [[ $1 == *.mp4 ]]; then
-    notify-send -u normal -a Hyprland -t 3500 "Rendering wallpaper.." "$1" -i ~/.config/omarchy/current/theme/waybar-logo.png
+    echo "Rendering video wallpaper..."
+    killall yin > /dev/null 2>&1
+    yin & disown > /dev/null 2>&1
+    yinctl --img $1
 fi

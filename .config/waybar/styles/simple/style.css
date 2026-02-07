@@ -1,5 +1,7 @@
 @import "../../../omarchy/current/theme/waybar.css";
 
+@define-color accent @white;
+
 * {
     font-weight: 700;
     font-size: 12.5px;
@@ -8,7 +10,7 @@
 }
 
 window {
-    color: @foreground;
+    color: @accent;
     background: @background;
     border-radius: 0;
     border: 0;
@@ -16,7 +18,7 @@ window {
 }
 
 tooltip {
-    color: @foreground;
+    color: @accent;
     background: @background;
     border: 1px solid alpha(white, 0.2);
     border-radius: 0;
@@ -27,7 +29,7 @@ menu {
     background-color: @background;
     border-radius: 0;
     border: 1px solid @black;
-    color: @foreground;
+    color: @accent;
     padding: 8px;
 }
 menu * {
@@ -41,7 +43,7 @@ menuitem {
 }
 menuitem:hover {
     background: @black;
-    color: @foreground;
+    color: @accent;
     border-radius: 3px;
 }
 
@@ -50,30 +52,30 @@ menuitem:hover {
 #memory,
 #workspaces button {
     background: transparent;
-    color: @foreground;
+    color: @accent;
     margin: 0;
 }
 
 #clock {
-    color: @foreground;
+    color: @accent;
     margin-right: 12px;
     margin-left: 6px;
 }
 
 #memory {
-    color: @foreground;
+    color: @accent;
     margin-left: 6px;
 }
 
 #network {
-    color: @foreground;
+    color: @accent;
     margin-right: 6px;
     margin-left: 0px;
 }
 
 #pulseaudio {
     border: none;
-    color: @foreground;
+    color: @accent;
 }
 
 #workspaces {
@@ -89,11 +91,11 @@ menuitem:hover {
 }
 #workspaces button:hover {
     color: @background;
-    background-color: @foreground;
+    background-color: @accent;
 }
 #workspaces button.active {
     color: @background;
-    background-color: @foreground;
+    background-color: @accent;
 }
 #workspaces button.urgent {
     color: @bright_yellow;
@@ -108,7 +110,7 @@ menuitem:hover {
     font-size: 20px;
 }
 #custom-logo:hover {
-    background-color: @foreground;
+    background-color: @accent;
     color: @background;
 }
 
@@ -122,7 +124,7 @@ menuitem:hover {
 }
 
 #custom-update {
-    color: @foreground;
+    color: @accent;
     margin-right: 8px;
     margin-left: 0px;
     margin-top: -1px;
@@ -172,6 +174,18 @@ menuitem:hover {
     font-size: 7.25px;
 }
 
+#custom-game-mode-indicator {
+    margin-left: 8px;
+    margin-top: -2px;
+    font-size: 14px;
+    color: @bright_white;
+}
+#custom-game-mode-indicator {
+    animation-name: blink;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+}
+
 @keyframes fade {
     to {
         color: @background;
@@ -180,14 +194,12 @@ menuitem:hover {
 
 @keyframes blink {
     0% {
-        opacity: 1;
-        color: @bright_yellow;
+        color: @bright_white;
     }
     50% {
-        opacity: 1;
-        color: white;
+        color: @yellow;
     }
     100% {
-        opacity: 1;
+        color: @bright_white;
     }
 }

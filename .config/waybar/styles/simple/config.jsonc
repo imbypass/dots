@@ -14,7 +14,8 @@
     "hyprland/workspaces",
     "custom/privacy-indicator",
     "custom/screenrecording-indicator",
-    "custom/voxtype-indicator"
+    "custom/voxtype-indicator",
+    "custom/game-mode-indicator"
   ],
   "modules-center": [
     "custom/lyrics"
@@ -74,7 +75,7 @@
     "scroll-step": 5,
   },
   "network": {
-    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format-icons": [""],
     "format-ethernet": "NETWORK <span color=\"#ffffff\">WIRED</span> <span color=\"#ffffff\">|</span>",
     "format-disconnected": "NETWORK <span color=\"#ff0000\">NONE</span> <span color=\"#ffffff\">|</span>",
     "format": "NETWORK <span color=\"#ffffff\">WIFI</span> <span color=\"#ffffff\">|</span>",
@@ -162,6 +163,12 @@
     },
     "tooltip": true,
     "on-click": "fish -c \"foot -a float -e voxtype setup model\"",
+  },
+  "custom/game-mode-indicator": {
+    "exec": "$HOME/.local/share/harmony/scripts/waybar/game-mode-indicator.sh",
+    "return-type": "json",
+    "format": "{text}",
+    "tooltip": true,
   },
   "custom/lyrics": {
     "format": "{}",
