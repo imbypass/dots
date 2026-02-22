@@ -4,13 +4,13 @@ include=~/.config/omarchy/current/theme/mako.ini
 width=420
 height=250
 padding=10
-border-size=1
+border-size=2
 anchor=top-right
 outer-margin=20
 default-timeout=10000
 max-icon-size=32
 font=Iosevka Semibold 10
-border-radius=6
+border-radius=0
 
 [mode=do-not-disturb]
 invisible=true
