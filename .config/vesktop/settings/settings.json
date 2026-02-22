@@ -245,7 +245,7 @@
             "ignoreSelf": false,
             "ignoreUsers": "",
             "ignoreChannels": "",
-            "ignoreGuilds": "",
+            "ignoreGuilds": "399812551963049995",
             "logEdits": true,
             "logDeletes": true,
             "collapseDeleted": false,
@@ -287,7 +287,7 @@
             "enabled": false
         },
         "NoProfileThemes": {
-            "enabled": false
+            "enabled": true
         },
         "NoRPC": {
             "enabled": false
@@ -371,7 +371,8 @@
                             "980292879798902824",
                             "1015718332109955112",
                             "294685587401605132",
-                            "1466217757275324478"
+                            "1466217757275324478",
+                            "1450299467541512316"
                         ]
                     },
                     {
@@ -811,7 +812,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1770339099327
+        "settingsSyncVersion": 1771377144770
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false,

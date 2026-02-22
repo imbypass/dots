@@ -1,9 +1,8 @@
 @import "../../../omarchy/current/theme/waybar.css";
-
-@define-color accent @white;
+@import "colors.css";
 
 * {
-    font-weight: 700;
+    font-weight: 800;
     font-size: 12.5px;
     font-family: "Iosevka NFP";
     border-radius: 0;
@@ -64,10 +63,16 @@ menuitem:hover {
 
 #memory {
     color: @accent;
-    margin-left: 6px;
+    margin-left: 2px;
 }
 
 #network {
+    color: @accent;
+    margin-right: 6px;
+    margin-left: 0px;
+}
+
+#bluetooth {
     color: @accent;
     margin-right: 6px;
     margin-left: 0px;
@@ -81,6 +86,7 @@ menuitem:hover {
 #workspaces {
     padding: 0;
     color: white;
+    margin-right: 4px;
 }
 #workspaces button {
     border-radius: 0px;
@@ -102,12 +108,12 @@ menuitem:hover {
 }
 
 #custom-logo {
-    padding-left: 10px;
+    padding-left: 9px;
     padding-right: 10px;
     margin: 0;
-    margin-top: 0px;
+    margin-top: -1px;
     margin-bottom: -0px;
-    font-size: 20px;
+    font-size: 15px;
 }
 #custom-logo:hover {
     background-color: @accent;
@@ -124,6 +130,13 @@ menuitem:hover {
 }
 
 #custom-update {
+    color: @accent;
+    margin-right: 8px;
+    margin-left: 0px;
+    margin-top: -1px;
+}
+
+#custom-tailscale {
     color: @accent;
     margin-right: 8px;
     margin-left: 0px;
@@ -177,29 +190,12 @@ menuitem:hover {
 #custom-game-mode-indicator {
     margin-left: 8px;
     margin-top: -2px;
-    font-size: 14px;
-    color: @bright_white;
-}
-#custom-game-mode-indicator {
-    animation-name: blink;
-    animation-duration: 3.5s;
-    animation-iteration-count: infinite;
+    font-size: 7px;
+    color: @cyan;
 }
 
 @keyframes fade {
     to {
         color: @background;
-    }
-}
-
-@keyframes blink {
-    0% {
-        color: @bright_white;
-    }
-    50% {
-        color: @yellow;
-    }
-    100% {
-        color: @bright_white;
     }
 }

@@ -11,6 +11,7 @@
   "reload_style_on_change": true,
 
   "modules-left": [
+    "custom/logo",
     "hyprland/workspaces",
     "custom/privacy-indicator",
     "custom/screenrecording-indicator",
@@ -22,10 +23,11 @@
   ],
   "modules-right": [
     "group/systray",
+    "custom/tailscale",
     "custom/update",
     "network",
+    "bluetooth",
     "pulseaudio",
-    "pulseaudio#microphone",
     "memory",
     "clock"
   ],
@@ -33,7 +35,7 @@
   "hyprland/workspaces": {
     "format": "{icon}",
     "active-only": false,
-    "persistent-workspaces": { "*": 5 },
+    "persistent-workspaces": { "*": 1 },
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
   },
@@ -42,8 +44,8 @@
     "tooltip-format": "{:%a, %b%e, %Y}",
   },
   "pulseaudio": {
-    "format": "OUTPUT <span color=\"#ffffff\">{volume}%</span> <span color=\"#ffffff\">| </span>",
-    "format-muted": "OUTPUT <span color=\"#ffffff\">MUTED</span> <span color=\"#ffffff\">| </span>",
+    "format": "VOLUME <span color=\"#ffffff\">{volume}%</span> <span color=\"#ffffff\">| </span>",
+    "format-muted": "VOLUME <span color=\"#ffffff\">MUTED</span> <span color=\"#ffffff\">| </span>",
     "tooltip": true,
     "tooltip-format": "{desc} @ {volume}%",
     "on-click-toggle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
@@ -88,6 +90,17 @@
     "on-click": "foot -a wifi -e gazelle",
     "on-click-right": "foot -a wifi -e gazelle",
   },
+  "bluetooth": {
+    "format-off": "BLUETOOTH <span color=\"#ffffff\">OFF</span> <span color=\"#ffffff\">|</span>",
+    "format-on": "BLUETOOTH <span color=\"#ffffff\">ON</span> <span color=\"#ffffff\">|</span>",
+    "format-connected": "BLUETOOTH <span color=\"#ffffff\">{num_connections} DEVICE(S)</span> <span color=\"#ffffff\">|</span>",
+    "format-disconnected": "BLUETOOTH <span color=\"#ffffff\">ON</span> <span color=\"#ffffff\">|</span>",
+    "format-disabled": "BLUETOOTH <span color=\"#ffffff\">DISABLED</span> <span color=\"#ffffff\">|</span>",
+    "interval": 3,
+    "spacing": 1,
+    "on-click": "foot -a bluetooth -e bluetui",
+    "on-click-right": "foot -a bluetooth -e bluetui",
+  },
   "memory": {
     "interval": 1,
     "format": "RAM <span color=\"#ffffff\">{used:0.0f}GB/{total:0.0f}GB</span> <span color=\"#ffffff\">|</span>",
@@ -116,7 +129,7 @@
 
   "custom/logo": {
     "tooltip": true,
-    "format": "<span font='Bypass-Icons'>\ue925</span>",
+    "format": "<span font='bypass-logo'>\ue930</span>",
     "on-click": "vicinae toggle",
     "on-click-right": "vicinae vicinae://extensions/vicinae/wm/switch-windows",
     "tooltip-format": "SYSTEM MENU\n\nSUPER + ALT + SPACE",
@@ -177,4 +190,17 @@
     "restart-interval": 0,
     "align": 0
   },
+  "custom/tailscale" : {
+      "exec": "$HOME/.local/share/harmony/scripts/waybar/tailscale-indicator.sh",
+      "on-click": "fish -c \"foot -a float -e tsui\"",
+      "on-click-right": "exec $HOME/.local/share/harmony/scripts/waybar/tailscale-indicator.sh --toggle",
+      "exec-on-event": true,
+      "format": "TAILSCALE <span color=\"#ffffff\">{icon}</span> <span color=\"#ffffff\">|</span>",
+      "format-icons": {
+          "connected": "ON",
+          "stopped": "OFF"
+      },
+      "tooltip": true,
+      "return-type": "json"
+  }
 }

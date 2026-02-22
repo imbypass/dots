@@ -1,2 +1,10 @@
 #!/bin/bash
-omarchy-show-logo
+
+LOGO="$HOME/.local/share/omarchy/logo.txt"
+
+clear
+echo -e "\033[29m"
+while IFS= read -r line; do
+    harmony-echo-center "$line"
+done < "$LOGO"
+echo -e "\033[0m"

@@ -99,6 +99,7 @@ case "$1" in
         pcmanfm-qt --desktop & disown > /dev/null 2>&1
     ;;
     "vicinae")
+        killall vicinae-server > /dev/null 2>&1
         killall vicinae > /dev/null 2>&1
         vicinae server > /dev/null 2>&1 & disown
     ;;

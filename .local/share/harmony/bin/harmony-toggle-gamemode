@@ -12,11 +12,11 @@ if [ "$gamemode" = 1 ]; then
                 keyword decoration:rounding 0" >/dev/null
 
     killall awww-daemon > /dev/null
-    notify-send -u low -a Omarchy -t 3500 "Game Mode" "Toggled On" -i ~/.config/omarchy/current/theme/round-logo.svg
+    notify-send -u low -a Harmony -t 3500 "Game Mode" "Toggled On" -i ~/.config/omarchy/current/theme/round-logo.svg
     exit 0
 else
     awww-daemon & disown > /dev/null
-    notify-send -u low -a Omarchy -t 3500 "Game Mode" "Toggled Off" -i ~/.config/omarchy/current/theme/round-logo.svg
+    notify-send -u low -a Harmony -t 3500 "Game Mode" "Toggled Off" -i ~/.config/omarchy/current/theme/round-logo.svg
 fi
 
 hyprctl reload >/dev/null

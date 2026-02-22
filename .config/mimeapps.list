@@ -112,3 +112,6 @@ application/toml=dev.zed.Zed.desktop
 x-scheme-handler/terminal=foot.desktop
 x-scheme-handler/aether=aether-protocol-handler.desktop
 x-scheme-handler/mailto=chromium.desktop
+x-scheme-handler/opendeck=opendeck-handler.desktop
+x-scheme-handler/openaction=opendeck-handler.desktop
+x-scheme-handler/streamdeck=opendeck-handler.desktop

@@ -1,7 +1,6 @@
 # Interactive shell settings
 if status is-interactive
-    set fish_tmux_autostart false
-    set fish_tmux_autoname_session true
+
 end
 
 # Tab to complete a line

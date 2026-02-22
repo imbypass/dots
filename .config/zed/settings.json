@@ -1,5 +1,8 @@
 // Zed settings
 {
+  "edit_predictions": {
+    "provider": "zed"
+  },
   "icon_theme": "JetBrains New UI Icons (Dark)",
   "show_completions_on_input": false,
   "language_servers": ["!eslint"],
@@ -14,15 +17,12 @@
   "format_on_save": "off",
   "vim_mode": false,
   "theme": "Omarchy",
-  "features": {
-    "edit_prediction_provider": "zed"
-  },
   "ui_font_size": 14.0,
   "ui_font_weight": 600.0,
-  "ui_font_family": "Iosevka",
+  "ui_font_family": "Iosevka NF",
   "buffer_font_size": 12.0,
   "buffer_font_weight": 400.0,
-  "buffer_font_family": "Iosevka",
+  "buffer_font_family": "Iosevka NF",
   "buffer_line_height": {
     "custom": 1.525
   },

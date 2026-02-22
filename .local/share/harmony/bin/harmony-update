@@ -1,9 +1,13 @@
 #!/bin/bash
 source harmony-color-codes
 
+sleep 0.5
 clear
 echo ""
 harmony-show-logo
+harmony-echo-center "Checking for updates.."
+echo ""
+echo ""
 
 printf "${BOLD}${BLUE}:: ${RESET}Running system update..\n"
 printf " ${YELLOW}==> ${NC}Checking for official package updates..${RESET}\n"
@@ -12,6 +16,6 @@ printf " ${YELLOW}==> ${NC}Checking for AUR updates..${RESET}\n"
 yay -Syu --noconfirm
 printf " ${YELLOW}==> ${NC}Checking for flatpak updates..${RESET}\n"
 flatpak update -y
-notify-send -u low -a Omarchy -t 3500 "Software Update" "Update completed successfully!" -i ~/.config/omarchy/current/theme/waybar-logo.png
+notify-send -u low -a Omarchy -t 3500 "Software Update" "Update completed successfully!" -i ~/.config/omarchy/current/theme/round-logo.svg
 
 harmony-show-done
