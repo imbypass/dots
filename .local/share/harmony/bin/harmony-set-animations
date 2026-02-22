@@ -1,0 +1,5 @@
+#!/bin/bash
+source harmony-color-codes
+
+CONFIG="$HOME/.config/hypr/core/decoration/animations.conf"
+sed -i "s/\(source = \.\.\/animations\/\)[^.]*\(\.conf\)/\1$1\2/" "$CONFIG"

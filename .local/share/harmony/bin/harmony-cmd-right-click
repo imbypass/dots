@@ -1,0 +1,6 @@
+#!/bin/bash
+
+ACTIVE_WINDOW=$(hyprctl activewindow -j | jq -r '.class')
+if [ -z "$ACTIVE_WINDOW" ] || [ "$ACTIVE_WINDOW" = "null" ]; then
+    fish -c $HOME/.local/bin/omarchy-menu
+fi

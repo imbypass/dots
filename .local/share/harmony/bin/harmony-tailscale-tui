@@ -1,0 +1,563 @@
+#!/bin/bash
+
+# --- Configuration ---
+
+# ANSI Colors for direct terminal output formatting
+readonly ANSI_RESET=$(printf '\033[0m')
+readonly ANSI_BOLD=$(printf '\033[1m')
+readonly ANSI_RED=$(printf '\033[31m')
+readonly ANSI_GREEN=$(printf '\033[32m')
+readonly ANSI_YELLOW=$(printf '\033[33m')
+readonly ANSI_BLUE=$(printf '\033[34m')
+readonly ANSI_MAGENTA=$(printf '\033[35m')
+readonly ANSI_CYAN=$(printf '\033[36m')
+readonly ANSI_WHITE=$(printf '\033[37m')
+readonly ANSI_GRAY=$(printf '\033[90m') # Often used for muted/faint text
+
+# --- ASCII Art Header Color Schemes ---
+# Customize these ANSI color sequences for different section headers.
+# Format: COLOR_COMPONENT_SECTIONNAME
+
+# Default (Main Menu)
+readonly COLOR_O_DEFAULT=$ANSI_BLUE
+readonly COLOR_STAR_DEFAULT=$ANSI_YELLOW
+readonly COLOR_TEXT_DEFAULT=$ANSI_CYAN
+
+# Status Section
+readonly COLOR_O_STATUS=$ANSI_CYAN
+readonly COLOR_STAR_STATUS=$ANSI_WHITE
+readonly COLOR_TEXT_STATUS=$ANSI_GREEN
+
+# Action Sections (Enable, Disable, Restart, Set, Clear)
+readonly COLOR_O_ACTION=$ANSI_GREEN
+readonly COLOR_STAR_ACTION=$ANSI_YELLOW
+readonly COLOR_TEXT_ACTION=$ANSI_WHITE
+
+# Exit Node Selection Section
+readonly COLOR_O_EXITNODE=$ANSI_MAGENTA
+readonly COLOR_STAR_EXITNODE=$ANSI_CYAN
+readonly COLOR_TEXT_EXITNODE=$ANSI_YELLOW
+
+# IP Check Section
+readonly COLOR_O_IPCHECK=$ANSI_WHITE
+readonly COLOR_STAR_IPCHECK=$ANSI_BLUE
+readonly COLOR_TEXT_IPCHECK=$ANSI_CYAN
+
+# Search Section
+readonly COLOR_O_SEARCH=$ANSI_GRAY
+readonly COLOR_STAR_SEARCH=$ANSI_WHITE
+readonly COLOR_TEXT_SEARCH=$ANSI_YELLOW
+
+# --- Additional Color Schemes (Optional Use) ---
+# Error Section
+readonly COLOR_O_ERROR=$ANSI_RED
+readonly COLOR_STAR_ERROR=$ANSI_YELLOW
+readonly COLOR_TEXT_ERROR=$ANSI_WHITE
+
+# Warning Section
+readonly COLOR_O_WARN=$ANSI_YELLOW
+readonly COLOR_STAR_WARN=$ANSI_RED
+readonly COLOR_TEXT_WARN=$ANSI_WHITE
+
+# Info Section
+readonly COLOR_O_INFO=$ANSI_BLUE
+readonly COLOR_STAR_INFO=$ANSI_WHITE
+readonly COLOR_TEXT_INFO=$ANSI_CYAN
+
+# --- Gum UI Colors ---
+# These use Gum's color numbering (0-255) for Gum-specific elements.
+readonly GUM_COLOR_FG_SUCCESS=10   # Green
+readonly GUM_COLOR_FG_ERROR=9      # Red
+readonly GUM_COLOR_FG_WARN=11      # Yellow
+readonly GUM_COLOR_FG_INFO=12      # Blue
+readonly GUM_COLOR_FG_MUTED=240    # Grey
+readonly GUM_COLOR_FG_HIGHLIGHT=33 # Bright blue
+
+# Timeout for network operations like curl (in seconds)
+readonly CURL_TIMEOUT=7
+
+# --- Helper Functions ---
+
+# Clears the terminal viewport.
+# Uses escape codes to move cursor to home and clear from cursor down.
+# Note: Behavior regarding scrollback history can vary between terminals.
+clear_viewport() {
+  printf '\033[H\033[J'
+}
+
+# Checks if a command exists in the PATH. Exits script if not found.
+# Arguments:
+#   $1: Command name to check (e.g., "gum")
+#   $2: Installation URL or instruction message
+check_dependency() {
+  local cmd=$1
+  local install_url=$2
+  if ! command -v "$cmd" &>/dev/null; then
+    # Use direct echo with ANSI colors as Gum might be the missing dependency
+    echo "${ANSI_BOLD}${ANSI_RED}${cmd} could not be found.${ANSI_RESET}" >&2
+    echo "Please install it first: ${install_url}" >&2
+    exit 1
+  fi
+}
+
+# Displays the standard ASCII Art Header with specified colors and title.
+# Arguments:
+#   $1: The title text to display
+#   $2: ANSI color code for the 'o' characters (defaults to COLOR_O_DEFAULT)
+#   $3: ANSI color code for the '*' characters (defaults to COLOR_STAR_DEFAULT)
+#   $4: ANSI color code for the title text (defaults to COLOR_TEXT_DEFAULT)
+display_ascii_header() {
+  local title="$1"
+  local color_o="${2:-$COLOR_O_DEFAULT}"
+  local color_star="${3:-$COLOR_STAR_DEFAULT}"
+  local color_text="${4:-$COLOR_TEXT_DEFAULT}"
+
+  echo "" # Minimal top margin
+  echo -e "  ${color_o}o${ANSI_RESET} ${color_o}o${ANSI_RESET} ${color_o}o${ANSI_RESET}"
+  echo -e "  ${color_star}*${ANSI_RESET} ${color_star}*${ANSI_RESET} ${color_star}*${ANSI_RESET}   ${ANSI_BOLD}${color_text}${title}${ANSI_RESET}"
+  echo -e "  ${color_o}o${ANSI_RESET} ${color_star}*${ANSI_RESET} ${color_o}o${ANSI_RESET}"
+  echo "" # Bottom margin for spacing
+}
+
+# Displays a short message (like success or error) using Gum styling.
+# Arguments:
+#   $1: Gum foreground color code (e.g., GUM_COLOR_FG_SUCCESS)
+#   $@: The message text
+display_message() {
+  local color="$1"
+  shift
+  local message="$@"
+  # Apply margin for slight indentation
+  gum style --margin "0 0 0 2" --bold --foreground "$color" "$message"
+  sleep 1 # Brief pause for user to read
+}
+
+# Executes a command with a Gum spinner for visual feedback.
+# Displays a success or error message based on the command's exit status.
+# Arguments:
+#   $1: Text to display next to the spinner
+#   $2: Message to display on success
+#   $3: Message to display on failure
+#   $@: The command and its arguments to execute
+run_with_spinner() {
+  local title="$1"
+  local success_msg="$2"
+  local failure_msg="$3"
+  shift 3
+  local cmd=("${@}")
+
+  echo "" # Spacing before spinner
+  # Show command output during spinner execution using --show-output
+  if gum spin --spinner dot --title "$title" --show-output -- "${cmd[@]}"; then
+    echo "" # Spacing after spinner output
+    display_message "$GUM_COLOR_FG_SUCCESS" "$success_msg"
+    return 0 # Indicate success
+  else
+    echo "" # Spacing after spinner output
+    display_message "$GUM_COLOR_FG_ERROR" "$failure_msg"
+    return 1 # Indicate failure
+  fi
+}
+
+# Pauses script execution until the user presses Enter. Uses Gum for input.
+press_enter_to_continue() {
+  echo "" # Spacing before prompt
+  # Use Gum input with a placeholder and indented prompt
+  gum input --placeholder="Press Enter to return..." --prompt="  " >/dev/null
+}
+
+# Fetches public IP information from ipinfo.io using curl with a timeout.
+# Displays the formatted information (JSON if jq is available, plain otherwise).
+# !! IMPORTANT: This function intentionally DOES NOT clear the screen by itself !!
+#                 to allow displaying IP info after other actions.
+fetch_and_display_ip_info() {
+  local ip_info
+  local curl_exit_code
+
+  # Use Gum spinner for the curl network request
+  ip_info=$(gum spin --spinner dot --title "  Fetching public IP info (max ${CURL_TIMEOUT}s)..." -- \
+    curl -s --max-time "$CURL_TIMEOUT" ipinfo.io)
+  curl_exit_code=$?
+
+  echo # Newline after spinner completes
+
+  # Check if curl succeeded and returned non-empty data
+  if [[ $curl_exit_code -eq 0 ]] && [ -n "$ip_info" ]; then
+    # Display heading using Gum style with indentation
+    gum style --margin "0 0 0 2" --bold --foreground "$GUM_COLOR_FG_HIGHLIGHT" "Public IP Information (ipinfo.io):"
+    echo "" # Spacing before IP details
+    # Check if jq is available for pretty-printing JSON
+    if command -v jq &>/dev/null; then
+      # Pipe JSON output through jq for coloring, then sed for indentation
+      echo "$ip_info" | jq --color-output . | sed 's/^/  /'
+    else
+      # Fallback: Indent plain text output using sed
+      echo "$ip_info" | sed 's/^/  /' | while IFS= read -r line; do echo -e "${ANSI_CYAN}$line${ANSI_RESET}"; done
+    fi
+    echo ""  # Spacing after IP details
+    return 0 # Indicate success
+  # Handle curl timeout error specifically
+  elif [[ $curl_exit_code -eq 28 ]]; then
+    display_message "$GUM_COLOR_FG_ERROR" "Error: Could not fetch IP info (timeout after ${CURL_TIMEOUT}s)."
+    return 1 # Indicate failure
+  # Handle other curl errors
+  else
+    display_message "$GUM_COLOR_FG_ERROR" "Error: Failed to fetch IP info (curl exit code: $curl_exit_code)."
+    return 1 # Indicate failure
+  fi
+}
+
+# --- Main Logic Functions ---
+
+# Displays the current Tailscale status, including nodes, their status,
+# and the currently active exit node (if any). Allows searching the status.
+show_status() {
+  clear_viewport
+  display_ascii_header "Tailscale Status" "$COLOR_O_STATUS" "$COLOR_STAR_STATUS" "$COLOR_TEXT_STATUS"
+
+  # Fetch status output once to avoid multiple calls
+  local status_output
+  status_output=$(tailscale status)
+  # Extract the line indicating the currently active exit node
+  local current_exit_node_line=$(echo "$status_output" | grep 'exit node; direct' | grep -v 'offers exit node')
+
+  # Display details about the active exit node if one is found
+  if [ -n "$current_exit_node_line" ]; then
+    local exit_node_name=$(echo "$current_exit_node_line" | awk '{print $2}')
+    # Extract public IP, handle potential missing info gracefully
+    local public_ip=$(echo "$current_exit_node_line" | grep -oE 'direct [^,;]+' | awk '{print $2}')
+
+    echo "  ${ANSI_BOLD}${ANSI_WHITE}Current Active Exit Node:${ANSI_RESET}"
+    echo "    ${ANSI_CYAN}${current_exit_node_line}${ANSI_RESET}"
+    if [ -n "$public_ip" ]; then
+      echo "    ${ANSI_BLUE}Public IP via ${exit_node_name}: ${public_ip}${ANSI_RESET}"
+    fi
+    echo "" # Spacing
+  fi
+
+  # Process and display the full status list with numbering and colors
+  local counter=1
+  local online_count=0
+  local offline_count=0
+  local term_width=$(tput cols)
+  # Calculate usable width for folding long lines, ensuring a minimum width
+  local status_width=$((term_width > 15 ? term_width - 10 : term_width - 5))
+  [[ $status_width -lt 20 ]] && status_width=20
+
+  # First pass: Count online/offline devices
+  while IFS= read -r line; do
+    [[ -z "$line" ]] && continue # Skip empty lines
+    if [[ "$line" == *"offline"* ]]; then ((offline_count++)); else ((online_count++)); fi
+  done <<<"$status_output"
+
+  # Second pass: Print formatted lines
+  echo "$status_output" | while IFS= read -r line; do
+    [[ -z "$line" ]] && continue # Skip empty lines
+    # Determine color based on keywords in the line
+    local color="$ANSI_GREEN" # Default online/other
+    if [[ "$line" == *"offline"* ]]; then
+      color="$ANSI_RED"
+    elif [[ "$line" == *"exit node; direct"* && ! "$line" == *"offers exit node"* ]]; then
+      color="$ANSI_CYAN" # Active exit node
+    elif [[ "$line" == *"offers exit node"* ]]; then
+      color="$ANSI_YELLOW" # Available exit node
+    fi
+    # Fold long lines, indent, add number and color code using sed
+    echo "$line" | fold -w "$status_width" -s | sed "1s/^/  ${color}$(printf "%3d." "$counter") /; 2,\$s/^/      /; s/$/${ANSI_RESET}/"
+    ((counter++))
+  done
+
+  echo "" # Spacing
+  # Display online/offline counts using Gum join for layout
+  local online_msg=$(gum style --margin "0 0 0 2" --foreground "$GUM_COLOR_FG_SUCCESS" "Online: $online_count")
+  local offline_msg=$(gum style --margin "0 0 0 2" --foreground "$GUM_COLOR_FG_ERROR" "Offline: $offline_count")
+  gum join --align left --vertical "$online_msg" "$offline_msg"
+  echo "" # Spacing
+
+  # Prompt for search or return
+  gum style --margin "0 0 0 2" --foreground "$GUM_COLOR_FG_MUTED" "Press '/' to search, or Enter to return..."
+  read -n 1 -s key # Read single character without echoing
+
+  # Handle search input
+  if [ "$key" = "/" ]; then
+    clear_viewport
+    display_ascii_header "Search Status" "$COLOR_O_SEARCH" "$COLOR_STAR_SEARCH" "$COLOR_TEXT_SEARCH"
+    local search_term
+    search_term=$(gum input --placeholder="Enter search term..." --prompt="  > ")
+
+    # If search term provided, display filtered results
+    if [ -n "$search_term" ]; then
+      clear_viewport
+      display_ascii_header "Results: $search_term" "$COLOR_O_SEARCH" "$COLOR_STAR_SEARCH" "$COLOR_TEXT_SEARCH"
+      # Filter status output and apply coloring logic again
+      tailscale status | grep -Ei "$search_term" | while IFS= read -r line; do
+        local color="$ANSI_GREEN"
+        if [[ "$line" == *"offline"* ]]; then
+          color="$ANSI_RED"
+        elif [[ "$line" == *"exit node; direct"* && ! "$line" == *"offers exit node"* ]]; then
+          color="$ANSI_CYAN"
+        elif [[ "$line" == *"offers exit node"* ]]; then color="$ANSI_YELLOW"; fi
+        echo -e "  ${color}${line}${ANSI_RESET}" # Indent results
+      done
+      press_enter_to_continue # Wait before returning to menu
+    else
+      main_menu # If search is empty, just go back
+    fi
+  elif [ -z "$key" ]; then # Handle pressing Enter directly
+    :                      # Do nothing, main_menu will be called next
+  fi
+
+  main_menu # Return to main menu after status display or search
+}
+
+# Enables Tailscale by running 'tailscale up'.
+enable_tailscale() {
+  clear_viewport
+  display_ascii_header "Enable Tailscale" "$COLOR_O_ACTION" "$COLOR_STAR_ACTION" "$COLOR_TEXT_ACTION"
+  # Use spinner for the command execution
+  run_with_spinner "  Running tailscale up..." \
+    "Tailscale enabled successfully!" \
+    "Failed to enable Tailscale." \
+    tailscale up
+  sleep 1 # Short pause after message
+  main_menu
+}
+
+# Disables Tailscale by running 'tailscale down'.
+disable_tailscale() {
+  clear_viewport
+  display_ascii_header "Disable Tailscale" "$COLOR_O_ACTION" "$COLOR_STAR_ACTION" "$COLOR_TEXT_ACTION"
+  run_with_spinner "  Running tailscale down..." \
+    "Tailscale disabled successfully!" \
+    "Failed to disable Tailscale." \
+    tailscale down
+  sleep 1
+  main_menu
+}
+
+# Restarts Tailscale by running 'tailscale down && tailscale up'.
+restart_tailscale() {
+  clear_viewport
+  display_ascii_header "Restart Tailscale" "$COLOR_O_ACTION" "$COLOR_STAR_ACTION" "$COLOR_TEXT_ACTION"
+  
+  # First get sudo credentials without spinner
+  echo "  ${ANSI_CYAN}Please enter sudo password if prompted:${ANSI_RESET}"
+  if sudo -v; then
+    # Now run the restart command with spinner, sudo won't prompt again
+    run_with_spinner "  Restarting Tailscale service..." \
+      "Tailscale restarted successfully!" \
+      "Failed to restart Tailscale." \
+      sudo systemctl restart tailscaled.service
+  else
+    display_message "$GUM_COLOR_FG_ERROR" "Failed to get sudo access."
+  fi
+  sleep 1
+  main_menu
+}
+
+
+# Allows the user to select and set a Tailscale exit node from available online nodes.
+set_exit_node() {
+  clear_viewport
+  display_ascii_header "Set Exit Node" "$COLOR_O_EXITNODE" "$COLOR_STAR_EXITNODE" "$COLOR_TEXT_EXITNODE"
+
+  # Display the currently active exit node first for context
+  echo "  ${ANSI_BOLD}${ANSI_WHITE}Checking current active exit node...${ANSI_RESET}"
+  local active_node_line
+  active_node_line=$(tailscale status | grep 'exit node; direct' | grep -v 'offers exit node')
+
+  if [ -n "$active_node_line" ]; then
+    echo -e "    ${ANSI_BLUE}Currently Active: ${active_node_line}${ANSI_RESET}"
+  else
+    echo "    ${ANSI_GRAY}Currently: No exit node actively routing traffic.${ANSI_RESET}"
+  fi
+  echo ""
+  echo "  ------------------------------------" # Visual separator
+  echo ""
+
+  # Get list of online nodes that offer exit node capability
+  local exit_nodes_raw
+  exit_nodes_raw=$(tailscale status | grep 'offers exit node' | grep -v "offline" | awk '{printf "%s %s (%s)\n", $1, $2, $3}')
+
+  # Check if any exit nodes are available
+  if [ -z "$exit_nodes_raw" ]; then
+    display_message "$GUM_COLOR_FG_WARN" "No online exit nodes available to select."
+    sleep 1
+    main_menu
+    return
+  fi
+
+  # Ask user if they want LAN access
+  local allow_lan
+  allow_lan=$(gum confirm "Allow LAN access through exit node?" --affirmative="Yes, allow LAN" --negative="No, don't allow LAN" && echo "--exit-node-allow-lan-access" || echo "")
+
+  # Prepare choices for Gum filter, adding special options
+  local choices=$(
+    echo "$exit_nodes_raw"
+    echo "[ Clear exit node ]"
+    echo "[ Back to menu ]"
+  )
+
+  # Prompt user to select a node using Gum filter (supports searching)
+  local selected
+  selected=$(echo "$choices" | gum filter --header="  Select Available Node:" --placeholder="Type to search..." --height=15 --prompt="  > ")
+
+  # Handle user selection
+  case "$selected" in
+  "[ Back to menu ]" | "") # Handle Back, ESC or empty selection
+    main_menu
+    return
+    ;;
+  "[ Clear exit node ]")
+    clear_exit_node # Delegate to the clear function
+    return
+    ;;
+  esac
+
+  # Extract IP and Name from the selected node string
+  local exit_node_ip=$(echo "$selected" | awk '{print $1}')
+  local exit_node_name=$(echo "$selected" | awk '{print $2}')
+
+  # Proceed to set the selected node
+  clear_viewport
+  display_ascii_header "Setting Exit Node" "$COLOR_O_ACTION" "$COLOR_STAR_ACTION" "$COLOR_TEXT_ACTION"
+  # Run the 'tailscale set' command with spinner
+  if run_with_spinner "  Setting exit node to $exit_node_name ($exit_node_ip) ${allow_lan:+with LAN access}..." \
+    "Exit node set successfully!" \
+    "Failed to set exit node." \
+    tailscale set --exit-node="$exit_node_ip" $allow_lan; then
+
+    # After successfully setting, verify and show IP info (without clearing)
+    echo ""
+    echo "  ${ANSI_BOLD}${ANSI_WHITE}Verifying new exit node status...${ANSI_RESET}"
+    sleep 1 # Allow time for Tailscale service to update
+    local new_exit_info=$(tailscale status | grep "$exit_node_ip.*exit node; direct")
+    local ip_fetch_successful=1 # Flag to track if IP info was shown
+
+    if [ -n "$new_exit_info" ]; then
+      echo "    ${ANSI_CYAN}${new_exit_info}${ANSI_RESET}" # Show status line
+      echo ""
+      # Fetch and display IP info; update flag on success
+      if fetch_and_display_ip_info; then ip_fetch_successful=0; fi
+    else
+      # Warn if status verification fails, but still attempt IP check
+      display_message "$GUM_COLOR_FG_WARN" "Could not immediately verify exit node status via 'tailscale status'."
+      echo ""
+      if fetch_and_display_ip_info; then ip_fetch_successful=0; fi
+    fi
+
+    # Pause only if IP info was successfully displayed
+    if [ "$ip_fetch_successful" -eq 0 ]; then
+      press_enter_to_continue
+    else
+      sleep 2 # Brief pause if IP fetch failed
+    fi
+  else
+    # Pause if 'tailscale set' command itself failed
+    sleep 2
+  fi
+
+  main_menu # Return to main menu
+}
+
+# Clears the currently configured Tailscale exit node.
+clear_exit_node() {
+  clear_viewport
+  display_ascii_header "Clear Exit Node" "$COLOR_O_ACTION" "$COLOR_STAR_ACTION" "$COLOR_TEXT_ACTION"
+  # Run 'tailscale set --exit-node=' with spinner
+  run_with_spinner "  Running tailscale set --exit-node= ..." \
+    "Exit node cleared successfully!" \
+    "Failed to clear exit node." \
+    tailscale set --exit-node=
+  sleep 1
+  main_menu
+}
+
+# Checks and displays the current public IP address using ipinfo.io.
+check_public_ip() {
+  clear_viewport # Clear screen before checking IP
+  display_ascii_header "Check Public IP" "$COLOR_O_IPCHECK" "$COLOR_STAR_IPCHECK" "$COLOR_TEXT_IPCHECK"
+  # Fetch and display IP info (this function doesn't clear screen)
+  if fetch_and_display_ip_info; then
+    # Pause only if IP fetch was successful
+    press_enter_to_continue
+  else
+    # Brief pause if IP fetch failed
+    sleep 2
+  fi
+  main_menu
+}
+
+# Displays the main menu and handles user selection.
+main_menu() {
+  clear_viewport # Clear screen for the main menu display
+  # Display the main header using default colors
+  display_ascii_header "TailScaleTUI" "$COLOR_O_DEFAULT" "$COLOR_STAR_DEFAULT" "$COLOR_TEXT_DEFAULT"
+
+  local choice
+  # Use Gum choose for the interactive menu
+  choice=$(gum choose --header="  Select an option:" --height=10 --cursor="  > " \
+    " Status" \
+    " Enable Tailscale" \
+    " Disable Tailscale" \
+    " RRestart Tailscale (systemctl)" \
+    "󰤪 Set Exit Node" \
+    "󰤭 Clear Exit Node" \
+    "󰩟 Check Public IP" \
+    "󰈆 Exit")
+
+  # Route to the appropriate function based on user choice
+  case "$choice" in
+  " Status") show_status ;;
+  " Enable Tailscale") enable_tailscale ;;
+  " Disable Tailscale") disable_tailscale ;;
+  " RRestart Tailscale (systemctl)") restart_tailscale ;;
+  "󰤪 Set Exit Node") set_exit_node ;;
+  "󰤭 Clear Exit Node") clear_exit_node ;;
+  "󰩟 Check Public IP") check_public_ip ;;
+  "󰈆 Exit")
+    echo ""
+    gum style --margin "0 0 0 2" --bold --foreground "$GUM_COLOR_FG_INFO" "Exiting TailScaleTUI."
+    tput cnorm # Ensure cursor is visible on exit
+    exit 0
+    ;;
+  *) # Handle ESC key or unexpected empty selection
+    echo ""
+    gum style --margin "0 0 0 2" --bold --foreground "$GUM_COLOR_FG_INFO" "Exiting TailScaleTUI."
+    tput cnorm # Ensure cursor is visible on exit
+    exit 0
+    ;;
+  esac
+}
+
+# --- Script Entry Point ---
+
+# Ensure essential dependencies are installed before proceeding
+check_dependency "gum" "https://github.com/charmbracelet/gum"
+check_dependency "tailscale" "https://tailscale.com/download"
+check_dependency "tput" "Part of ncurses, usually pre-installed."
+check_dependency "awk" "Standard Unix utility, usually pre-installed."
+check_dependency "fold" "Standard Unix utility, usually pre-installed."
+check_dependency "curl" "Standard utility, usually pre-installed."
+check_dependency "grep" "Standard utility, usually pre-installed."
+check_dependency "sed" "Standard Unix utility, usually pre-installed."
+
+# Hide the terminal cursor for a cleaner TUI look during script execution
+tput civis
+
+# Set up a trap to restore cursor visibility upon script exit (normal or interrupted)
+# This ensures the user's terminal cursor isn't left hidden
+trap 'tput cnorm; exit' INT TERM EXIT # Handles Ctrl+C, termination signals, and normal exit
+
+# Optionally check for 'jq' and inform the user if it's missing
+if ! command -v jq &>/dev/null; then
+  echo "" # Ensure message is on a new line
+  echo "  ${ANSI_YELLOW}Optional:${ANSI_RESET} 'jq' not found. IP info output will be plain text."
+  sleep 2 # Brief pause for visibility
+  # No screen clear here, let main_menu handle the first clear
+fi
+
+# Start the main application loop
+while true; do
+  main_menu
+done

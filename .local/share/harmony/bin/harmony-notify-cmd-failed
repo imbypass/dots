@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+read notification
+notify-send "Command Failed" "$notification" "$@" -t 3500 -u critical

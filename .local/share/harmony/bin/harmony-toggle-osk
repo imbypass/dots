@@ -1,0 +1,16 @@
+#!/bin/bash
+
+MONITOR_WIDTH=$(hyprctl monitors -j | jq '.[] | select(.focused == true) | .width')
+
+# Check if wf-osk is already running
+if pgrep -x "wf-osk" > /dev/null; then
+    killall wf-osk
+    exit 0
+fi
+
+wf-osk \
+-w $(($MONITOR_WIDTH - 100)) \
+-a bottom \
+-b 22 & disown
+
+exit 0

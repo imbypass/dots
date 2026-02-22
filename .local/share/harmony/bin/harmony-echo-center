@@ -1,0 +1,15 @@
+#!/bin/bash
+
+center() {
+  declare -i cols=${COLUMNS:-$(tput cols)}
+  local string="$1"
+  declare -i indent=$(( (cols - ${#string}) / 2 ))
+
+  if (( indent > 0 )); then
+    printf "%${indent}s%s\n" "" "$string"
+  else
+    echo "$string"
+  fi
+}
+
+center "$1"

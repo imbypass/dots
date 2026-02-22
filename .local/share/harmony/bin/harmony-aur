@@ -1,0 +1,24 @@
+#!/bin/bash
+
+check_aur() {
+    if curl -s --max-time 5 "https://aur.archlinux.org" > /dev/null 2>&1; then
+        return 0
+    else
+        return 1
+    fi
+}
+
+install_aur_package() {
+    mkdir -p ~/.aur_packages
+    git clone --single-branch --branch $1 https://github.com/archlinux/aur.git ~/.aur_packages/$1
+    cd ~/.aur_packages/$
+    makepkg -si --no-confirm
+    cd ..
+    rm -rf ~/.aur_packages/$1
+}
+
+if check_aur; then
+    yay -S "$@"
+else
+    install_aur_package "$@"
+fi

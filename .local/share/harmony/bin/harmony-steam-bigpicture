@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if pgrep -x "steam" > /dev/null; then
+    pkill -x steam
+    sleep 5
+fi
+
+xdg-open steam://open/gamepadui
