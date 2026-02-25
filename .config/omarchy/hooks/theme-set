@@ -148,7 +148,7 @@ if [[ -d ~/.config/omarchy/hooks/theme-set.d ]]; then
             for app in "${running[@]}"; do
                 apps+="- $app"$'\n'
             done
-            notify-send "Omarchy Theme Hook" "The following apps require a restart to apply theme:\n\n$apps"
+            # notify-send "Omarchy Theme Hook" "The following apps require a restart to apply theme:\n\n$apps"
         fi
     fi
 fi

@@ -3,7 +3,7 @@
 SETUVAR --export BAT_THEME:base16
 SETUVAR --export EDITOR:helix
 SETUVAR --export FATE_KEY:nM3tHBcGhIsu
-SETUVAR --export FZF_DEFAULT_OPTS:\x20\x2d\x2dcolor\x3dbg\x2b\x3a\x230f0f0f\x2cbg\x3a\x230f0f0f\x2cspinner\x3a\x2394e2d5\x2chl\x3a\x23f5c2e7\x20\x2d\x2dcolor\x3dfg\x3a\x23b4b4b4\x2cheader\x3a\x23f5c2e7\x2cinfo\x3a\x23a6e3a1\x2cpointer\x3a\x2394e2d5\x20\x2d\x2dcolor\x3dmarker\x3a\x2394e2d5\x2cfg\x2b\x3a\x2394e2d5\x2cprompt\x3a\x23a6e3a1\x2chl\x2b\x3a\x23f5c2e7
+SETUVAR --export FZF_DEFAULT_OPTS:\x20\x2d\x2dcolor\x3dbg\x2b\x3a\x231b1b21\x2cbg\x3a\x231b1b21\x2cspinner\x3a\x23c5c4dd\x2chl\x3a\x23e8b9d4\x20\x2d\x2dcolor\x3dfg\x3a\x23e1e0ff\x2cheader\x3a\x23e8b9d4\x2cinfo\x3a\x23bfc1ff\x2cpointer\x3a\x23c5c4dd\x20\x2d\x2dcolor\x3dmarker\x3a\x23c5c4dd\x2cfg\x2b\x3a\x23c5c4dd\x2cprompt\x3a\x23bfc1ff\x2chl\x2b\x3a\x23e8b9d4
 SETUVAR --export NNN_COLORS:\x2304020301\x3b4231
 SETUVAR --export NNN_FCOLORS:030304020705050801060301
 SETUVAR --export PYENV_ROOT:/home/bypass/\x2epyenv
@@ -14,25 +14,25 @@ SETUVAR _fisher_budimanjojo_2F_tmux_2E_fish_files:\x7e/\x2econfig/fish/conf\x2ed
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
 SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ebudimanjojo/tmux\x2efish
 SETUVAR _fisher_upgraded_to_4_4:\x1d
-SETUVAR background:\x230f0f0f
+SETUVAR background:\x23131318
 SETUVAR base16_theme:nova
-SETUVAR color0:\x230f0f0f
-SETUVAR color1:\x23f38ba8
-SETUVAR color10:\x23a6e3a1
-SETUVAR color11:\x23f9e2af
-SETUVAR color12:\x2389b4fa
-SETUVAR color13:\x23f5c2e7
-SETUVAR color14:\x2394e2d5
-SETUVAR color15:\x23f4f4f4
-SETUVAR color2:\x23a6e3a1
-SETUVAR color3:\x23f9e2af
-SETUVAR color4:\x2389b4fa
-SETUVAR color5:\x23f5c2e7
-SETUVAR color6:\x2394e2d5
-SETUVAR color7:\x23b4b4b4
-SETUVAR color8:\x231f1f1f
-SETUVAR color9:\x23f38ba8
-SETUVAR cursor:\x23d4d4d4
+SETUVAR color0:\x231b1b21
+SETUVAR color1:\x23ffb4ab
+SETUVAR color10:\x23bfc1ff
+SETUVAR color11:\x23565992
+SETUVAR color12:\x23bfc1ff
+SETUVAR color13:\x23e8b9d4
+SETUVAR color14:\x23c5c4dd
+SETUVAR color15:\x23e1e0f9
+SETUVAR color2:\x23bfc1ff
+SETUVAR color3:\x23565992
+SETUVAR color4:\x23bfc1ff
+SETUVAR color5:\x23e8b9d4
+SETUVAR color6:\x23c5c4dd
+SETUVAR color7:\x23e1e0ff
+SETUVAR color8:\x232a292f
+SETUVAR color9:\x23ffb4ab
+SETUVAR cursor:\x23e4e1e9
 SETUVAR fish_color_command:green
 SETUVAR fish_color_history_current:\x2d\x2dbold
 SETUVAR fish_color_normal:normal
@@ -41,4 +41,4 @@ SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:efbe71\x1eyellow
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_user_paths:/home/bypass/\x2elocal/share/harmony/bin\x1e/opt/android\x2dsdk/platform\x2dtools\x1e/home/bypass/\x2elocal/bin\x1e/home/linuxbrew/\x2elinuxbrew/bin\x1e/home/bypass/\x2econfig/scripts\x1e/home/bypass/dotfiles/scripts\x1e/home/bypass/\x2espicetify
-SETUVAR foreground:\x23d4d4d4
+SETUVAR foreground:\x23e4e1e9

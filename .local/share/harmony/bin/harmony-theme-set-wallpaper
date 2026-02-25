@@ -15,4 +15,6 @@ awww img "$HOME/.local/share/wallpapers/wallpaper.png" \
     --transition-step 45 \
     > /dev/null 2>&1
 
+omarchy-hook matugen "$1"
+
 $HOME/.local/share/harmony/scripts/set-border-colors.sh

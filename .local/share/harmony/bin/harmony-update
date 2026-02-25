@@ -16,6 +16,6 @@ printf " ${YELLOW}==> ${NC}Checking for AUR updates..${RESET}\n"
 yay -Syu --noconfirm
 printf " ${YELLOW}==> ${NC}Checking for flatpak updates..${RESET}\n"
 flatpak update -y
-notify-send -u low -a Omarchy -t 3500 "Software Update" "Update completed successfully!" -i ~/.config/omarchy/current/theme/round-logo.svg
+notify-send -u low -a Harmony -t 3500 "Software Update" "Update completed successfully!" -i ~/.config/omarchy/current/theme/round-logo.svg
 
 harmony-show-done

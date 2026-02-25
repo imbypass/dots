@@ -10,8 +10,8 @@
         "midnight-bepi.css",
         "EmojiReplace.theme.css",
         "icons-recolor.theme.css",
-        "vencord.theme.css",
-        "snippets.theme.css"
+        "snippets.theme.css",
+        "vencord.theme.css"
     ],
     "enableReactDevtools": true,
     "frameless": false,
@@ -812,7 +812,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1771774568538
+        "settingsSyncVersion": 1771964544395
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false,

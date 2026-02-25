@@ -81,6 +81,7 @@ done
 
 # Displays the fzf menu
 selected=$(printf '%s\n' "${fzf_input[@]}" | fzf \
+  --color=16 \
   --delimiter='|' \
   --with-nth=2.. \
   --prompt="🎵 Output Audio to:" \

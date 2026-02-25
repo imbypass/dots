@@ -13,8 +13,8 @@ alias cp="cp -irv"
 alias ducks="du -cks * | sort -rn | head"
 alias edit="zed ."
 alias ex="exit"
-alias f="fresh"
-alias f.="f ."
+alias f="fetch"
+alias f.="fresh ."
 alias ff="fastfetch"
 alias fl="flavours"
 alias fp="flatpak"
@@ -64,12 +64,14 @@ alias z.="z ."
 alias z="zeditor"
 alias ⏲️="date"
 
+alias htsw="harmony-theme-set-wallpaper"
+
 
 alias ls='eza -lh --group-directories-first --icons=auto'
 alias lsa='ls -a'
 alias lt='eza --tree --level=2 --long --icons --git'
 alias lta='lt -a'
-alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
+alias ff="fzf --color=16 --preview 'bat --style=numbers {}'"
 
 function open
     xdg-open $argv >/dev/null 2>&1 &

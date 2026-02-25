@@ -7,6 +7,6 @@ harmony-show-logo
 
 printf "${BOLD}${BLUE}:: ${RESET}Updating mirrors..\n"
 sudo reflector --verbose --country US --latest 8 --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist >/dev/null
-notify-send -u low -a Hyprland -t 3500 "Harmony" "Mirrors updated!" -i ~/.local/share/harmony/logo.svg
+notify-send -u low -a Harmony -t 3500 "Repository Mirrors" "Update completed successfully!" -i ~/.config/omarchy/current/theme/round-logo.svg
 
 harmony-show-done
