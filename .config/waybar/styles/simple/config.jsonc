@@ -23,7 +23,6 @@
   ],
   "modules-right": [
     "group/systray",
-    "custom/tailscale",
     "custom/update",
     "network",
     "bluetooth",
@@ -116,7 +115,7 @@
       "click-to-reveal": true,
       "transition-left-to-right": false,
     },
-    "modules": ["custom/tray", "tray", "custom/glorious"],
+    "modules": ["custom/tray", "tray", "custom/glorious", "custom/tailscale"],
   },
   "tray": {
     "icon-size": 14,
@@ -196,6 +195,7 @@
       "on-click-right": "exec $HOME/.local/share/harmony/scripts/waybar/tailscale-indicator.sh --toggle",
       "exec-on-event": true,
       "format": "TAILSCALE <span color=\"#ffffff\">{icon}</span> <span color=\"#ffffff\">|</span>",
+      "format": "󰖂",
       "format-icons": {
           "connected": "ON",
           "stopped": "OFF"

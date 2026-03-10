@@ -2,13 +2,16 @@
     "discordBranch": "stable",
     "minimizeToTray": true,
     "arRPC": false,
-    "splashColor": "rgb(166, 173, 200)",
-    "splashBackground": "rgb(22, 18, 23)",
+    "splashColor": "rgb(225, 224, 249)",
+    "splashBackground": "rgb(19, 19, 24)",
     "spellCheckLanguages": [
         "en-US",
         "en"
     ],
     "hardwareVideoAcceleration": true,
     "hardwareAcceleration": true,
-    "enableTaskbarFlashing": true
+    "enableTaskbarFlashing": true,
+    "staticTitle": true,
+    "customTitleBar": false,
+    "disableSmoothScroll": true
 }

@@ -16,10 +16,10 @@ create_dynamic_theme() {
 
 cat > "$output_file" << EOF
     /**
-    * @name Omarchy
+    * @name System Theme
     * @author @bypass_
     * @version 0.1.0
-    * @description Match Omarchy system theme.
+    * @description Match your system theme.
     * @source https://github.com/imbypass/base16-Discord
     **/
     @import url("https://imbypass.github.io/base16-discord/omarchy-discord.theme.css");
@@ -46,7 +46,6 @@ EOF
 
     for path in "${possible_paths[@]}"; do
         if [ -d "$path" ]; then
-
             if [[ -f "$path/vencord.theme.css" ]]; then
                 rm "$path/vencord.theme.css"
             fi
@@ -82,6 +81,7 @@ check_for_theme() {
     fi
 }
 
-check_for_theme
+# check_for_theme
+create_dynamic_theme
 success "Discord theme updated!"
 exit 0

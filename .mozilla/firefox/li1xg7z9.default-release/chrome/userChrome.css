@@ -174,3 +174,7 @@ splitter#sidebar-tools-and-extensions-splitter {
     --in-content-page-background: var(--base01) !important;
     --input-text-background-color: var(--base02) !important;
 }
+
+* {
+	border-radius: 0 !important;
+}

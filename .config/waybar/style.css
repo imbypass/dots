@@ -1,236 +1,202 @@
 @import "../omarchy/current/theme/waybar.css";
+@import "colors.css";
 
 * {
-    font-family: "JetBrainsMono Nerd Font Propo";
-    background: transparent;
-    min-height: 0;
+    font-weight: 800;
+    font-size: 12.5px;
+    font-family: "Iosevka NFP";
+    border-radius: 0;
 }
 
-.modules-left {
-    margin-left: 8px;
-}
-
-.modules-right {
-    margin-right: 8px;
-}
-
-#waybar {
-    background-color: alpha(@background, 0.90);
-    color: @foreground;
-    border-radius: 0px;
-    border: 0px solid alpha(@foreground, 0.15);
-    border-bottom-width: 1px;
-}
-
-menu {
-    background: transparent;
-    background-color: @background;
-    color: @foreground;
-    padding: 8px;
-    border: 2px solid alpha(@foreground, 0.64);
-    border-radius: 6px;
-}
-
-menuitem {
-    border-radius: 0px;
-    padding: 7px;
-    padding-left: 2px;
-    padding-right: 2px;
-    font-size: 13px;
-    border: 0;
-    color: @foreground;
-    opacity: 0.65;
-}
-
-menuitem:hover {
+window {
+    color: @accent;
     background: @background;
-    color: @foreground;
-    opacity: 1;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid alpha(white, 0.2);
 }
 
 tooltip {
-    padding: 2px;
+    color: @accent;
     background: @background;
-    font-size: 12px;
-    font-weight: 600;
-    border: 2px solid alpha(@foreground, 0.15);
-    border-radius: 10px;
-}
-tooltip label {
-    color: @foreground;
+    border: 1px solid alpha(white, 0.2);
+    border-radius: 0;
+    padding: 0;
 }
 
-#taskbar button {
-    background: transparent;
-    margin: 4px;
-    padding: 4px;
-    padding-left: 6px;
-    padding-right: 6px;
-    border-radius: 6px;
+menu {
+    background-color: @background;
+    border-radius: 0;
+    border: 1px solid @black;
+    color: @accent;
+    padding: 8px;
+}
+menu * {
+    border-radius: 0;
+}
+menuitem {
+    border-radius: 0;
+    padding: 7px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+menuitem:hover {
+    background: @black;
+    color: @accent;
+    border-radius: 3px;
 }
 
-#workspaces button label {
-     font-weight: 100;
-     font-size: 17px;
-     margin-top: -1px;
- }
- #workspaces button.active label {
-     font-size: 12px;
-     margin-top: -2px;
-     margin-left: 4px;
-     margin-right: 4px;
-     color: @foreground;
- }
-#workspaces button {
-  all: initial;
-  padding: 0 5px;
-  margin: 0 1.5px;
-  min-width: 9px;
-}
-#workspaces button.empty {
-  opacity: 0.4;
-}
-#workspaces button label {
-    transition: color 0.2s ease-in-out;
-    color: alpha(@foreground, 1.0);
-}
-#workspaces button.empty label {
-    color: @foreground;
-}
-#workspaces button:hover label {
-    color: alpha(#81AAD3, 1.0);
-}
-
-
-#workspaces button,
 #clock,
-#custom-spotify {
-    margin-top: 1px;
-    margin-bottom: -1px;
-    font-size: 11.5px;
-    color: @foreground;
-    font-weight: bold;
-}
-
-#tray,
-#cpu,
-#battery,
-#network,
-#bluetooth,
-#idle_inhibitor,
 #pulseaudio,
-#pulseaudio.microphone,
-#custom-harmony,
-#custom-glorious,
-#custom-theme-selector,
-#custom-weather,
-#custom-screenrecording,
-#custom-screenrecording-indicator,
-#custom-update,
-#custom-spotify-controls-prev,
-#custom-spotify-controls-next {
-    min-width: 12px;
-    margin: 0 8px;
-    font-size: 12px;
-    font-weight: 800;
+#memory,
+#workspaces button {
+    background: transparent;
+    color: @accent;
+    margin: 0;
 }
 
-#pulseaudio.microphone {
-    margin-right: 8px;
-    margin-left: 8px;
-    font-size: 11px;
-    font-weight: bold;
+#clock {
+    color: @accent;
+    margin-right: 12px;
+    margin-left: 6px;
 }
 
-#idle_inhibitor {
-    font-size: 12px;
+#memory {
+    color: @accent;
+    margin-left: 2px;
+}
+
+#network {
+    color: @accent;
+    margin-right: 6px;
     margin-left: 0px;
-    margin-right: 8px;
-}
-
-#cpu {
-    font-size: 15px;
-    margin-top: -1px;
-    font-weight: bold;
-    margin-left: 10px;
 }
 
 #bluetooth {
-    font-size: 13px;
-}
-#clock {
-    margin-right: 0.5rem;
-    margin-left: 9px;
-    margin-top: 0px;
-    font-weight: 700;
+    color: @accent;
+    margin-right: 6px;
+    margin-left: 0px;
 }
 
-#custom-harmony {
-    font-size: 21px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    /*background-image: url("/home/bypass/.config/omarchy/current/theme/round-logo.svg");*/
-    margin: -2px 12px -3px .5rem; /* top right bottom left */
+#pulseaudio {
+    border: none;
+    color: @accent;
 }
 
-#custom-theme-selector {
-    font-size: 13px;
-    margin-right: 8px;
+#workspaces {
+    padding: 0;
+    color: white;
+    margin-right: 4px;
+}
+#workspaces button {
+    border-radius: 0px;
+    border: 0px;
+    color: white;
+    padding: 0 7px 0 7px;
+    margin: 0;
+}
+#workspaces button:hover {
+    color: @background;
+    background-color: @accent;
+}
+#workspaces button.active {
+    color: @background;
+    background-color: @accent;
+}
+#workspaces button.urgent {
+    color: @bright_yellow;
 }
 
-#custom-glorious {
-    font-size: 11px;
+#custom-logo {
+    padding-left: 9px;
+    padding-right: 10px;
+    margin: 0;
+    margin-top: -1px;
+    margin-bottom: -0px;
+    font-size: 15px;
+}
+#custom-logo:hover {
+    background-color: @accent;
+    color: @background;
+}
+
+#custom-tray {
+    font-size: 10px;
+    color: alpha(white, 0.65);
+    font-weight: 300;
+    margin-right: 10px;
     margin-left: 8px;
-}
-
-#custom-spotify {
-    margin-left: 1rem;
-}
-
-#custom-expand-icon {
-    margin-right: 0.5rem;
-    font-size: 11px;
+    margin-top: -1px;
 }
 
 #custom-update {
-    font-size: 10px;
-    font-weight: 800;
+    color: @accent;
     margin-right: 8px;
+    margin-left: 0px;
+    margin-top: -1px;
+}
+
+#custom-tailscale {
+    color: @accent;
+    margin-right: 8px;
+    margin-left: 4px;
+    margin-top: -1px;
+    font-size: 16px;
+}
+
+#custom-glorious {
+    color: @accent;
+    font-size: 14px;
+    margin-top: -1px;
+    margin-left: 14px;
+    margin-right: 10px;
 }
 
 #custom-screenrecording-indicator {
-    margin-top: 0;
-    margin-right: 14px;
-    font-size: 10px;
+    margin-top: -2px;
+    margin-left: 0px;
+    font-size: 7px;
 }
-
-.hidden {
-    opacity: 0;
-}
-
 #custom-screenrecording-indicator {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     color: transparent;
 }
-
 #custom-screenrecording-indicator.active {
-    color: #f7768e;
-    animation-name: blink-recording;
+    color: @bright_red;
+    animation-name: fade;
     animation-duration: 0.5s;
 }
 
-@keyframes blink-recording {
+#custom-privacy-indicator {
+    font-size: 7px;
+    letter-spacing: 0px;
+    border-radius: 8px;
+    margin-right: -4px;
+    margin-left: 8px;
+    margin-top: -3px;
+}
+
+#custom-lyrics {
+    color: white;
+}
+
+#custom-voxtype-indicator {
+    margin-left: 8px;
+    margin-top: -2px;
+    font-size: 7.25px;
+}
+
+#custom-game-mode-indicator {
+    margin-left: 8px;
+    margin-top: -2px;
+    font-size: 7px;
+    color: @cyan;
+}
+
+@keyframes fade {
     to {
         color: @background;
     }
-}
-
-#custom-privacy-indicator {
-    font-size: 9px;
-    letter-spacing: 0px;
-    margin: 4px 20px 4px 15px;
-    border-radius: 8px;
 }

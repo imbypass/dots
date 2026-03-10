@@ -139,8 +139,9 @@ menuitem:hover {
 #custom-tailscale {
     color: @accent;
     margin-right: 8px;
-    margin-left: 0px;
+    margin-left: 4px;
     margin-top: -1px;
+    font-size: 16px;
 }
 
 #custom-glorious {

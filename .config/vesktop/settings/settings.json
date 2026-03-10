@@ -10,8 +10,8 @@
         "midnight-bepi.css",
         "EmojiReplace.theme.css",
         "icons-recolor.theme.css",
-        "snippets.theme.css",
-        "vencord.theme.css"
+        "vencord.theme.css",
+        "snippets.theme.css"
     ],
     "enableReactDevtools": true,
     "frameless": false,
@@ -516,7 +516,7 @@
             "enabled": false
         },
         "Translate": {
-            "enabled": false,
+            "enabled": true,
             "autoTranslate": false,
             "showChatBarButton": true,
             "service": "google",
@@ -812,7 +812,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1771964544395
+        "settingsSyncVersion": 1773106982954
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false,
