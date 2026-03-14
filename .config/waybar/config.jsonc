@@ -150,7 +150,7 @@
     "format": "UPDATES <span color=\"#ffffff\">{text}</span> <span color=\"#ffffff\">|</span>",
     "exec": "checkupdates | wc -l",
     "exec-if": "if [[ $(checkupdates | wc -l) -gt 0 ]]; then exit 0; fi; exit 1",
-    "on-click": "fish -c \"foot -a float -e omarchy-update\"",
+    "on-click": "fish -c \"foot -a float-no-pin -e omarchy-update\"",
     "tooltip-format": "{text} UPDATES AVAILABLE",
     "signal": 7,
     "interval": 21600,

@@ -251,9 +251,6 @@
             "collapseDeleted": false,
             "inlineEdits": true
         },
-        "MessageTags": {
-            "enabled": false
-        },
         "MoreCommands": {
             "enabled": false
         },
@@ -576,7 +573,7 @@
             "imgSize": "1024"
         },
         "ViewRaw": {
-            "enabled": false,
+            "enabled": true,
             "clickMethod": "Left"
         },
         "VoiceMessages": {
@@ -800,6 +797,9 @@
         },
         "MoreQuickReactions": {
             "enabled": false
+        },
+        "CustomCommands": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -812,7 +812,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1773106982954
+        "settingsSyncVersion": 1773430079839
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false,
