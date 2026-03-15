@@ -2,10 +2,11 @@
 @import "colors.css";
 
 * {
-    font-weight: 800;
-    font-size: 12.5px;
-    font-family: "Iosevka NFP";
+    font-weight: 600;
+    font-size: 11.5px;
+    font-family: "GeistMono Nerd Font";
     border-radius: 0;
+    margin-top: 0px;
 }
 
 window {

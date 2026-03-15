@@ -8,7 +8,9 @@
   "language_servers": ["!eslint"],
   "base_keymap": "VSCode",
   "agent": {
-    "always_allow_tool_actions": true,
+    "tool_permissions": {
+      "default": "allow"
+    },
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-sonnet-4"
@@ -17,12 +19,12 @@
   "format_on_save": "off",
   "vim_mode": false,
   "theme": "Omarchy",
-  "ui_font_size": 14.0,
+  "ui_font_size": 12.5,
   "ui_font_weight": 600.0,
-  "ui_font_family": "Iosevka NF",
-  "buffer_font_size": 12.0,
+  "ui_font_family": "GeistMono Nerd Font Mono",
+  "buffer_font_size": 11.25,
   "buffer_font_weight": 400.0,
-  "buffer_font_family": "Iosevka NF",
+  "buffer_font_family": "GeistMono Nerd Font Mono",
   "buffer_line_height": {
     "custom": 1.525
   },

@@ -1,7 +1,7 @@
 :root {
-    --font: "Iosevka";
+    --font: "GeistMono Nerd Font";
     --font-primary: var(--font);
     --font-header: var(--font);
     --font-display: var(--font);
-    --font-code: "Iosevka Nerd Font Propo";
+    --font-code: var(--font);
 }
