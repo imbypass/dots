@@ -48,6 +48,7 @@ text/javascript=micro.desktop;
 application/x-theme=micro.desktop;
 application/pdf=helium-browser.desktop;
 application/toml=dev.zed.Zed.desktop;
+video/webm=mpv.desktop;
 
 [Default Applications]
 application/json=dev.zed.Zed.desktop
@@ -86,7 +87,7 @@ text/vnd.trolltech.linguist=micro.desktop
 text/x-csrc=micro.desktop
 text/x-lua=dev.zed.Zed.desktop
 text/x-python=micro.desktop
-video/mp4=vlc.desktop
+video/mp4=mpv.desktop
 video/quicktime=mpv.desktop
 video/x-matroska=mpv.desktop
 x-scheme-handler/chrome=chromium.desktop
@@ -115,3 +116,4 @@ x-scheme-handler/mailto=chromium.desktop
 x-scheme-handler/opendeck=opendeck-handler.desktop
 x-scheme-handler/openaction=opendeck-handler.desktop
 x-scheme-handler/streamdeck=opendeck-handler.desktop
+video/webm=mpv.desktop

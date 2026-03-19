@@ -8,20 +8,20 @@
     @import url("https://imbypass.github.io/base16-discord/omarchy-discord.theme.css");
 
     :root {
-        --color00: #131318;
-        --color01: #131318;
-        --color02: #131318;
-        --color03: #e1e0ff;
-        --color04: #e1e0f9;
-        --color05: #e1e0f9;
-        --color06: #e1e0f9;
-        --color07: #e1e0f9;
+        --color00: #0f1417;
+        --color01: #0f1417;
+        --color02: #0f1417;
+        --color03: #c5e7ff;
+        --color04: #d2e5f4;
+        --color05: #d2e5f4;
+        --color06: #d2e5f4;
+        --color07: #d2e5f4;
         --color08: #ffb4ab;
-        --color09: #565992;
-        --color10: #565992;
-        --color11: #bfc1ff;
-        --color12: #c5c4dd;
-        --color13: #bfc1ff;
-        --color14: #e8b9d4;
-        --color15: #565992;
+        --color09: #1f6587;
+        --color10: #1f6587;
+        --color11: #91cef4;
+        --color12: #b6c9d8;
+        --color13: #91cef4;
+        --color14: #cbc1e9;
+        --color15: #1f6587;
     }
