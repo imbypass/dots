@@ -35,8 +35,8 @@
     "format": "{icon}",
     "active-only": false,
     "persistent-workspaces": { "*": 1 },
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "on-scroll-up": "hyprctl eval 'hl.dispatch(hl.dsp.focus({ workspace = \"e+1\" }))'",
+    "on-scroll-down": "hyprctl eval 'hl.dispatch(hl.dsp.focus({ workspace = \"e-1\" }))'",
   },
   "clock": {
     "format": "TIME <span color=\"#ffffff\">{:%I:%M %p}</span>",

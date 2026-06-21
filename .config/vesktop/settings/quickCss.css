@@ -1,7 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Outfit:wght@100..900&display=swap');
+
 :root {
-    --font: "GeistMono Nerd Font";
-    --font-primary: var(--font);
-    --font-header: var(--font);
-    --font-display: var(--font);
-    --font-code: var(--font);
+    --font: "JetBrains Mono";
+    --font-display: var(--font, "gg sans") !important;
+    --font-headline: var("Outfit", "gg sans") !important;
+    --font-header: var("Outfit", "gg sans") !important;
+    --font-primary: var(--font, "gg sans") !important;
+}
+* {
+    letter-spacing: -1px;
+}   
+
+:disabled {
+    --color00: #101010 !important;
+    --color01: #252525 !important;
+    --color02: #303030 !important;
+    --color03: #505050 !important;
+    --color04: #b0b0b0 !important;
+    --color05: #d0d0d0 !important;
+    --color06: #e0e0e0 !important;
+    --color07: #f5f5f5 !important;
+    --color08: #fb9fb1 !important;
+    --color09: #eda987 !important;
+    --color10: #ddb26f !important;
+    --color11: #acc267 !important;
+    --color12: #12cfc0 !important;
+    --color13: #6fc2ef !important;
+    --color14: #e1a3ee !important;
+    --color15: #deaf8f !important;
+
 }

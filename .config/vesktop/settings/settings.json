@@ -2,7 +2,10 @@
     "autoUpdate": true,
     "autoUpdateNotification": true,
     "useQuickCss": true,
-    "themeLinks": [],
+    "themeLinks": [
+        "https://raw.githubusercontent.com/imbypass/dots/refs/heads/main/.config/vesktop/themes/vencord.theme.css",
+        "https://raw.githubusercontent.com/imbypass/dots/refs/heads/main/.config/vesktop/themes/snippets.theme.css"
+    ],
     "enabledThemes": [
         "catppuccin.theme.css",
         "Catppuccin Mocha.css",
@@ -10,8 +13,8 @@
         "midnight-bepi.css",
         "EmojiReplace.theme.css",
         "icons-recolor.theme.css",
-        "vencord.theme.css",
-        "snippets.theme.css"
+        "snippets.theme.css",
+        "vencord.theme.css"
     ],
     "enableReactDevtools": true,
     "frameless": false,
@@ -56,7 +59,8 @@
         },
         "Settings": {
             "enabled": true,
-            "settingsLocation": "belowActivity"
+            "settingsLocation": "belowActivity",
+            "includeVencordInfoWhenCopying": true
         },
         "SupportHelper": {
             "enabled": true
@@ -354,6 +358,15 @@
             "userBasedCategoryList": {
                 "148201667085598720": [
                     {
+                        "id": "9is5ky8j46e",
+                        "name": "Scratch Pad",
+                        "color": 10070709,
+                        "collapsed": false,
+                        "channels": [
+                            "1190873777211449414"
+                        ]
+                    },
+                    {
                         "id": "pxyf4amj7vi",
                         "name": "Close Friends",
                         "color": 10070709,
@@ -361,24 +374,27 @@
                         "channels": [
                             "975514265832284170",
                             "588193248305217537",
-                            "1189261309636771891",
                             "289876249378160640",
                             "1038627479818096702",
                             "1112190218670440448",
                             "980292879798902824",
-                            "1015718332109955112",
                             "294685587401605132",
                             "1466217757275324478",
-                            "1450299467541512316"
+                            "1450299467541512316",
+                            "1479342968774070383",
+                            "773335059402326037"
                         ]
                     },
                     {
-                        "id": "9is5ky8j46e",
-                        "name": "Scratch Pad",
-                        "color": 10070709,
+                        "id": "jl6rpyfgzvk",
+                        "name": "GameBounty",
+                        "color": 15105570,
                         "collapsed": false,
                         "channels": [
-                            "1190873777211449414"
+                            "1508164301678968882",
+                            "1509320365334331446",
+                            "1509970548799705290",
+                            "1509690314242261112"
                         ]
                     }
                 ]
@@ -401,7 +417,9 @@
             "enabled": false
         },
         "QuickReply": {
-            "enabled": false
+            "enabled": false,
+            "shouldMention": 2,
+            "ignoreBlockedAndIgnored": true
         },
         "ReactErrorDecoder": {
             "enabled": false
@@ -477,8 +495,8 @@
         },
         "SilentTyping": {
             "enabled": true,
-            "isEnabled": true,
-            "showIcon": false,
+            "isEnabled": false,
+            "showIcon": true,
             "contextMenu": true
         },
         "SortFriendRequests": {
@@ -574,7 +592,8 @@
         },
         "ViewRaw": {
             "enabled": true,
-            "clickMethod": "Left"
+            "clickMethod": "Left",
+            "messageContextMenu": false
         },
         "VoiceMessages": {
             "enabled": false
@@ -800,6 +819,15 @@
         },
         "CustomCommands": {
             "enabled": false
+        },
+        "CharacterCounter": {
+            "enabled": false
+        },
+        "NoMiddleClickPaste": {
+            "enabled": false
+        },
+        "ConcatenatedComponentExtractor": {
+            "enabled": true
         }
     },
     "notifications": {
@@ -812,7 +840,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1773430079839
+        "settingsSyncVersion": 1782005448891
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false,
@@ -823,5 +851,6 @@
             }
         },
         "messagePopoverButtons": {}
-    }
+    },
+    "windowsMaterial": "none"
 }

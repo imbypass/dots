@@ -171,9 +171,10 @@ cat > "$output_file" << EOF
         background-color: @red;
     }
 
-    * {
-        border-radius: 0;
-    }
+    /* .svg-icon {
+        filter: invert(79%) sepia(18%) saturate(611%) hue-rotate(192deg)
+            brightness(103%) contrast(94%);
+    } */
 EOF
 }
 
@@ -184,9 +185,21 @@ if [ ! -d "$gtk4_dir" ]; then
     mkdir -p "$gtk4_dir"
 fi
 
-create_dynamic_theme
-cp "$output_file" "$gtk3_file"
-cp "$output_file" "$gtk4_file"
+if [ -f "$output_file" ]; then
+    if [ ! -f "$gtk3_dir/gtk.css.backup" ]; then
+        cp "$gtk3_file" "$gtk3_dir/gtk.css.backup"
+    fi
+    cp -f "$output_file" "$gtk3_file"
+
+    if [ ! -f "$gtk4_dir/gtk.css.backup" ]; then
+        cp "$gtk4_file" "$gtk4_dir/gtk.css.backup"
+    fi
+    cp -f "$output_file" "$gtk4_file"
+else
+    create_dynamic_theme
+    cp "$output_file" "$gtk3_file"
+    cp "$output_file" "$gtk4_file"
+fi
 
 if [ -f "$light_file" ]; then
     gsettings set org.gnome.desktop.interface color-scheme "prefer-light"
