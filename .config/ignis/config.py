@@ -23,23 +23,33 @@ def clock_widget() -> widgets.EventBox:
                 css_classes=["clock-hours"],
                 justify="center",
                 label=utils.Poll(
-                    10_000, lambda self: datetime.datetime.now().strftime("%-I")
+                    10_000, lambda self: datetime.datetime.now().strftime("%-I:%M")
                 ).bind("output"),
             ),
-            widgets.Label(
-                css_classes=["clock-discrim"],
-                justify="center",
-                label=utils.Poll(
-                    1_000, lambda self: ":"
-                ).bind("output"),
-            ),
-            widgets.Label(
-                css_classes=["clock-minutes"],
-                justify="center",
-                label=utils.Poll(
-                    1_000, lambda self: datetime.datetime.now().strftime("%M")
-                ).bind("output"),
-            ),
+
+
+# widgets.Label(
+#     css_classes=["clock-hours"],
+#     justify="center",
+#     label=utils.Poll(
+#         10_000, lambda self: datetime.datetime.now().strftime("%-I")
+#     ).bind("output"),
+# ),
+# widgets.Label(
+#     css_classes=["clock-discrim"],
+#     justify="center",
+#     label=utils.Poll(
+#         1_000, lambda self: ":"
+#     ).bind("output"),
+# ),
+# widgets.Label(
+#     css_classes=["clock-minutes"],
+#     justify="center",
+#     label=utils.Poll(
+#         1_000, lambda self: datetime.datetime.now().strftime("%M")
+#     ).bind("output"),
+# ),
+
             widgets.Label(
                 css_classes=["clock-ampm"],
                 justify="center",
@@ -99,5 +109,5 @@ def clock(monitor_id: int = 0) -> widgets.Window:
         margin_top=0,
         margin_right=0
     )
-for i in range(utils.get_n_monitors()):
-    clock(i)
+#for i in range(utils.get_n_monitors()):
+clock(0)

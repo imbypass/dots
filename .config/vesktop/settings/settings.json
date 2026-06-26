@@ -2,10 +2,7 @@
     "autoUpdate": true,
     "autoUpdateNotification": true,
     "useQuickCss": true,
-    "themeLinks": [
-        "https://raw.githubusercontent.com/imbypass/dots/refs/heads/main/.config/vesktop/themes/vencord.theme.css",
-        "https://raw.githubusercontent.com/imbypass/dots/refs/heads/main/.config/vesktop/themes/snippets.theme.css"
-    ],
+    "themeLinks": [],
     "enabledThemes": [
         "catppuccin.theme.css",
         "Catppuccin Mocha.css",
@@ -247,7 +244,7 @@
             "deleteStyle": "text",
             "ignoreBots": true,
             "ignoreSelf": false,
-            "ignoreUsers": "",
+            "ignoreUsers": "148201667085598720",
             "ignoreChannels": "",
             "ignoreGuilds": "399812551963049995",
             "logEdits": true,
@@ -840,7 +837,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1782005448891
+        "settingsSyncVersion": 1782433141427
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false,

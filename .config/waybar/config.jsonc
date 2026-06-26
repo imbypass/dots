@@ -15,11 +15,9 @@
     "hyprland/workspaces",
     "custom/privacy-indicator",
     "custom/screenrecording-indicator",
-    "custom/voxtype-indicator",
     "custom/game-mode-indicator"
   ],
   "modules-center": [
-    "custom/lyrics"
   ],
   "modules-right": [
     "group/systray",
@@ -80,7 +78,7 @@
     "format-ethernet": "NET <span color=\"#ffffff\">CAT6</span> <span color=\"#ffffff66\">|</span>",
     "format-disconnected": "NET <span color=\"#ff0000\">NONE</span> <span color=\"#ffffff66\">|</span>",
     "format": "NET <span color=\"#ffffff\">WIFI</span> <span color=\"#ffffff66\">|</span>",
-    "format-wifi": "{icon}",
+    "format-wifi": "NET <span color=\"#ffffff\">WIFI</span> <span color=\"#ffffff66\">|</span>",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣ {bandwidthDownBytes}  ⇡ {bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
@@ -130,7 +128,7 @@
     "tooltip": true,
     "format": "<span font='bypass-logo'>\ue930</span>",
     "on-click": "vicinae toggle",
-    "on-click-right": "vicinae vicinae://extensions/vicinae/wm/switch-windows",
+    "on-click-right": "vicinae vicinae://launch/wm/switch-windows",
     "tooltip-format": "SYSTEM MENU - SUPER + SPACE\nSWITCH WINDOWS - SUPER + ESCAPE",
   },
   "custom/screenrecording-indicator": {

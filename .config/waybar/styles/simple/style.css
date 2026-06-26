@@ -2,10 +2,11 @@
 @import "colors.css";
 
 * {
-    font-weight: 800;
+    font-weight: 700;
     font-size: 12.5px;
-    font-family: "Iosevka NFP";
+    font-family: "JetBrains Mono NFP";
     border-radius: 0;
+    letter-spacing: -1px;
 }
 
 window {
@@ -41,7 +42,7 @@ menuitem {
     padding-right: 2px;
 }
 menuitem:hover {
-    background: @black;
+    background: @bright_black;
     color: @accent;
     border-radius: 3px;
 }

@@ -2,19 +2,23 @@
 
 -- Source: decoration/animations.conf — convert this file to Lua and ensure it is on Lua's package.path.
 require("core.decoration.animations")
--- Source: decoration/rounding.conf — convert this file to Lua and ensure it is on Lua's package.path.
-require("core.decoration.rounding")
+
+require("core.decoration.blur")
 
 hl.config({
     decoration = {
-        rounding = corner_radius,
+        rounding = 10,
         rounding_power = 2,
         dim_inactive = false,
         shadow = {
-            enabled = false,
+            enabled = true,
             render_power = 16,
             range = 10,
             color = "rgba(00000090)",
+        },
+        blur = {
+            enabled = true,
+
         },
     },
 })

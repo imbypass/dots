@@ -1,5 +1,13 @@
 #!/bin/bash
 
+MONITOR_NAME=$2
+MONITOR_STRING=""
+if [[ -n $MONITOR_NAME ]]; then
+	MONITOR_STRING="-o $MONITOR_NAME"
+fi
+
+echo $MONITOR_STRING
+
 cp $1 $HOME/.local/share/wallpapers/.wallpaper
 
 # create visible versions with extensions for other tools
@@ -13,6 +21,7 @@ awww img "$HOME/.local/share/wallpapers/wallpaper.png" \
     --transition-fps 120 \
     --transition-duration 1 \
     --transition-step 45 \
+    $MONITOR_STRING \
     > /dev/null 2>&1
 
 omarchy-hook matugen "$1"

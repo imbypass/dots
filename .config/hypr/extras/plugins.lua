@@ -3,24 +3,6 @@
 -- hyprlang2lua polyfills — runtime helpers reproducing
 -- hyprlang behaviour the typed Lua API doesn't expose directly.
 
-local function hl_source_glob(pattern)
-    -- 'source = path/*.conf' had hyprlang glob and inline-expand the
-    -- matches. require() can't glob, so we shell out to ls (matching
-    -- the user's brace-expansion behaviour) and dofile each result.
-    -- Paths with spaces or shell metacharacters in the directory
-    -- portion will misparse; typical ~/.config/hypr/ layouts don't
-    -- hit this. Swap to lfs.dir() or find -name if you need fancier.
-    local p = io.popen("ls " .. pattern .. " 2>/dev/null")
-    if not p then return end
-    for f in p:lines() do
-        local chunk, err = loadfile(f)
-        if chunk then chunk()
-        else io.stderr:write("hl_source_glob: " .. tostring(err) .. "\n") end
-    end
-    p:close()
-end
-
--- Source: plugins/* (glob; resolved at runtime). Each matched .conf must be converted to .lua.
-hl_source_glob("plugins/*")
-
+require("extras.plugins.borders-plus-plus")
+require("extras.plugins.colors")
 require("extras.plugins.hyprbars")

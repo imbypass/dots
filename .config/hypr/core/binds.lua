@@ -54,8 +54,7 @@ hl.bind("ALT + TAB", hl.dsp.window.bring_to_top(), { description = "Reveal activ
 hl.bind("ALT + SHIFT + TAB", hl.dsp.window.bring_to_top(), { description = "Reveal active window on top" })
 
 -- Screen Capture
-hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("fish -c \"omarchy-cmd-screenshot smart pipe\""), { locked = true, dont_inhibit = true, description = "Take a screenshot of a selected area" })
-hl.bind("SUPER + ALT + S", hl.dsp.exec_cmd("fish -c \"omarchy-cmd-screenshot smart\""), { locked = true, dont_inhibit = true, description = "Take a screenshot of the active window" })
+hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("fish -c \"harmony-screenshot --region\""), { locked = true, dont_inhibit = true, description = "Take a screenshot of a selected area" })
 
 -- Notifications
 hl.bind("SUPER + COMMA", hl.dsp.exec_cmd("makoctl dismiss"), { description = "Dismiss last notification" })
@@ -74,7 +73,7 @@ hl.bind("SUPER + SHIFT + Q", hl.dsp.window.close(), { description = "Kill Active
 hl.bind("SUPER + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }), { description = "Toggle Fullscreen" })
 hl.bind("SUPER + SHIFT + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }), { description = "Toggle Exclusive Fullscreen" })
 hl.bind("SUPER + C", hl.dsp.window.float({ action = "toggle" }), { description = "Float Active Window" })
-hl.bind("SUPER + Z", hl.dsp.layout("swapwithmaster master"), { description = "Toggle Window Split Orientation" })
+hl.bind("SUPER + Z", hl.dsp.layout("togglesplit"), { description = "Toggle Window Split Orientation" })
 
 -- Window Navigation
 hl.bind("SUPER + H", hl.dsp.focus({ direction = "left" }), { description = "Navigate Window Focus Left" })
@@ -145,4 +144,3 @@ hl.config({
     -- Push-to-Talk button
     -- bindelp = , F9, exec, echo -ne '\007' && pamixer --default-source -t
 })
-

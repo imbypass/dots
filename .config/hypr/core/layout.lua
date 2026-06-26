@@ -7,14 +7,10 @@ hl.config({
     dwindle = {
         preserve_split = true,
     },
-    master = {
-        smart_resizing = true,
-        drop_at_cursor = true,
-    },
     general = {
         layout = "dwindle",
-        gaps_in = 1,
-        gaps_out = 1,
+        gaps_in = 4,
+        gaps_out = 8,
         resize_on_border = false,
         border_size = 1,
         snap = {
@@ -22,4 +18,3 @@ hl.config({
         },
     },
 })
-

@@ -3,27 +3,10 @@
 -- hyprlang2lua polyfills — runtime helpers reproducing
 -- hyprlang behaviour the typed Lua API doesn't expose directly.
 
-local function hl_source_glob(pattern)
-    -- 'source = path/*.conf' had hyprlang glob and inline-expand the
-    -- matches. require() can't glob, so we shell out to ls (matching
-    -- the user's brace-expansion behaviour) and dofile each result.
-    -- Paths with spaces or shell metacharacters in the directory
-    -- portion will misparse; typical ~/.config/hypr/ layouts don't
-    -- hit this. Swap to lfs.dir() or find -name if you need fancier.
-    local p = io.popen("ls " .. pattern .. " 2>/dev/null")
-    if not p then return end
-    for f in p:lines() do
-        local chunk, err = loadfile(f)
-        if chunk then chunk()
-        else io.stderr:write("hl_source_glob: " .. tostring(err) .. "\n") end
-    end
-    p:close()
-end
-
 -- Source: rules/dialogs.conf — convert this file to Lua and ensure it is on Lua's package.path.
 require("extras.rules.dialogs")
 -- Source: rules/idleinhibit.conf — convert this file to Lua and ensure it is on Lua's package.path.
---  require("extras.rules.idleinhibit")
+--require("extras.rules.idleinhibit")
 -- Source: rules/layerrule.conf — convert this file to Lua and ensure it is on Lua's package.path.
 require("extras.rules.layerrule")
 -- Source: rules/opacity.conf — convert this file to Lua and ensure it is on Lua's package.path.
@@ -32,9 +15,55 @@ require("extras.rules.opacity")
 require("extras.rules.miscellaneous")
 
 -- Source: rules/no-gap-if-solo.conf — convert this file to Lua and ensure it is on Lua's package.path.
-require("extras.rules.no-gap-if-solo")
+-- require("extras.rules.no-gap-if-solo")
 -- Source: rules/picture-in-picture.conf — convert this file to Lua and ensure it is on Lua's package.path.
 require("extras.rules.picture-in-picture")
 
--- Source: rules/apps/* (glob; resolved at runtime). Each matched .conf must be converted to .lua.
-hl_source_glob("rules/apps/*")
+
+require("extras.rules.apps.8bitdo")
+require("extras.rules.apps.ardb-app")
+require("extras.rules.apps.audacious")
+require("extras.rules.apps.battlenet")
+require("extras.rules.apps.blockbench")
+require("extras.rules.apps.blueman")
+require("extras.rules.apps.bottles")
+require("extras.rules.apps.cartridges")
+require("extras.rules.apps.cloud-gaming")
+require("extras.rules.apps.cstrike")
+require("extras.rules.apps.curseforge")
+require("extras.rules.apps.discord")
+require("extras.rules.apps.file-roller")
+require("extras.rules.apps.firefox")
+require("extras.rules.apps.foot")
+require("extras.rules.apps.gamebounty")
+require("extras.rules.apps.gamescope")
+require("extras.rules.apps.hytale")
+require("extras.rules.apps.james-dsp")
+require("extras.rules.apps.localsend")
+require("extras.rules.apps.mgba")
+require("extras.rules.apps.minecraft")
+require("extras.rules.apps.mxw-ui")
+require("extras.rules.apps.nautilus")
+require("extras.rules.apps.nemo")
+require("extras.rules.apps.nerdfonts")
+require("extras.rules.apps.nm-connection-editor")
+require("extras.rules.apps.nmgui")
+require("extras.rules.apps.nwg-dock-hyprland")
+require("extras.rules.apps.pavucontrol")
+require("extras.rules.apps.pcmanfm")
+require("extras.rules.apps.photopea")
+require("extras.rules.apps.pika-backup")
+require("extras.rules.apps.protontricks")
+require("extras.rules.apps.protonup")
+require("extras.rules.apps.proton-vpn")
+require("extras.rules.apps.scrcpy")
+require("extras.rules.apps.sgdboop")
+require("extras.rules.apps.showtime")
+require("extras.rules.apps.spotify")
+require("extras.rules.apps.steam")
+require("extras.rules.apps.system-monitor")
+require("extras.rules.apps.tagged-windows")
+require("extras.rules.apps.waybar")
+require("extras.rules.apps.windscribe")
+require("extras.rules.apps.winetricks")
+require("extras.rules.apps.wootility")

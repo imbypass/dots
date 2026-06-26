@@ -9,9 +9,7 @@ hl.window_rule({
     pin = true,
     size = "400 120",
     opacity = "1 1",
-    move = "1512 904",
-    move = "1512 30",
-    rounding = 0,
+    move = "2082 34",
 })
 
 hl.window_rule({
@@ -24,8 +22,7 @@ hl.window_rule({
     size = "400 488",
     opacity = "1 1",
     move = "1500 306",
-    move = "1290 30",
-    rounding = 0,
+    move = "1890 34",
 })
 
 hl.window_rule({
@@ -37,9 +34,8 @@ hl.window_rule({
     pin = true,
     size = "400 488",
     opacity = "1 1",
-    move = "1512 306",
-    move = "1390 30",
-    rounding = 0,
+    move = "2082 306",
+    move = "2000 34",
 })
 
 hl.window_rule({
@@ -51,7 +47,6 @@ hl.window_rule({
     pin = true,
     size = "375 220",
     opacity = "1 1",
-    rounding = 0,
 })
 
 hl.window_rule({
@@ -62,7 +57,6 @@ hl.window_rule({
     float = true,
     pin = true,
     opacity = "1 1",
-    rounding = 0,
 })
 
 hl.window_rule({
@@ -73,7 +67,6 @@ hl.window_rule({
     float = true,
     pin = false,
     opacity = "1 1",
-    rounding = 0,
 })
 
 hl.window_rule({
@@ -87,11 +80,9 @@ hl.window_rule({
     size = "592 269",
     opacity = "1 1",
     border_size = 3,
-    rounding = 0,
     keep_aspect_ratio = false,
     no_initial_focus = true,
     decorate = true,
     float = true,
     pin = true,
 })
-

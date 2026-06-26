@@ -3,12 +3,14 @@
 
 :root {
     --font: "JetBrains Mono";
+    --font: "Outfit";
     --font-display: var(--font, "gg sans") !important;
     --font-headline: var("Outfit", "gg sans") !important;
     --font-header: var("Outfit", "gg sans") !important;
     --font-primary: var(--font, "gg sans") !important;
+    --font-code: "JetBrains Mono";
 }
-* {
+*.disabled {
     letter-spacing: -1px;
 }   
 
@@ -30,4 +32,8 @@
     --color14: #e1a3ee !important;
     --color15: #deaf8f !important;
 
+}
+
+.wrapper__0d616 {
+    height: 0 !important;
 }
