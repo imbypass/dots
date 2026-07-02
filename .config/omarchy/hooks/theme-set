@@ -124,13 +124,25 @@ export rgb_normal_black rgb_normal_red rgb_normal_green rgb_normal_yellow rgb_no
 export rgb_bright_black rgb_bright_red rgb_bright_green rgb_bright_yellow rgb_bright_blue rgb_bright_magenta rgb_bright_cyan rgb_bright_white
 
 if [[ -d ~/.config/omarchy/hooks/theme-set.d ]]; then
-    for hook in ~/.config/omarchy/hooks/theme-set.d/*.sh; do
-        if [[ -f "$hook" && -x "$hook" ]]; then
-            if ! "$hook" "$@"; then
-                error "Hook $(basename "$hook") failed!" >&2
-            fi
-        fi
-    done
+	if [[ ! -z $2 ]]; then
+	    for hook in ~/.config/omarchy/hooks/theme-set.d/*.sh; do
+		    hook_name=$(basename "$hook" .sh)
+            hook_name=${hook_name#*-}
+	        if [[ -f "$hook" && -x "$hook" && "$hook_name" == "$2" ]]; then
+	            if ! "$hook" "$@"; then
+	                error "Hook $(basename "$hook") failed!" >&2
+	            fi
+	        fi
+	    done
+	else
+	    for hook in ~/.config/omarchy/hooks/theme-set.d/*.sh; do
+	        if [[ -f "$hook" && -x "$hook" ]]; then
+	            if ! "$hook" "$@"; then
+	                error "Hook $(basename "$hook") failed!" >&2
+	            fi
+	        fi
+	    done
+	fi
 
     if [[ -f "$restart_file" ]]; then
         mapfile -t restart_scripts < "$restart_file"
@@ -148,7 +160,7 @@ if [[ -d ~/.config/omarchy/hooks/theme-set.d ]]; then
             for app in "${running[@]}"; do
                 apps+="- $app"$'\n'
             done
-            notify-send "Omarchy Theme Hook" "The following apps require a restart to apply theme:\n\n$apps"
+            notify-send "Theme Hook" "The following apps require a restart to apply theme:\n\n$apps"
         fi
     fi
 fi

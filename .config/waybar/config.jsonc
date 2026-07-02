@@ -103,7 +103,7 @@
     "format": "RAM <span color=\"#ffffff\">{used:0.0f}GB</span> <span color=\"#ffffff66\">|</span>",
     "on-click": "foot -a float -e btop",
     "tooltip": true,
-    "tooltip-format": "{used:0.1f}GB USED",
+    "tooltip-format": "{used:0.1f}GB/{total:0.1f}GB",
   },
   "group/systray": {
     "orientation": "inherit",

@@ -4,17 +4,18 @@
 * {
     font-weight: 700;
     font-size: 12.5px;
-    font-family: "JetBrains Mono NFP";
     border-radius: 0;
-    letter-spacing: -1px;
 }
 
 window {
+    font-family: "JetBrains Mono NFP";
     color: @accent;
     background: @background;
     border-radius: 0;
     border: 0;
-    border-bottom: 1px solid alpha(white, 0.2);
+    border-bottom: 1px solid #030303;
+    box-shadow: 0px -1px 1px #000000;
+    letter-spacing: -1px;
 }
 
 tooltip {
@@ -31,6 +32,8 @@ menu {
     border: 1px solid @black;
     color: @accent;
     padding: 8px;
+    font-family: "Outfit";
+    letter-spacing: 0px;
 }
 menu * {
     border-radius: 0;
@@ -155,7 +158,7 @@ menuitem:hover {
 
 #custom-screenrecording-indicator {
     margin-top: -2px;
-    margin-left: 0px;
+    margin-left: 8px;
     font-size: 7px;
 }
 #custom-screenrecording-indicator {

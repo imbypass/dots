@@ -117,3 +117,4 @@ x-scheme-handler/opendeck=opendeck-handler.desktop
 x-scheme-handler/openaction=opendeck-handler.desktop
 x-scheme-handler/streamdeck=opendeck-handler.desktop
 video/webm=mpv.desktop
+x-scheme-handler/fdm=freedownloadmanager_fdm_up.desktop

@@ -8,9 +8,9 @@ border-size=2
 anchor=top-right
 outer-margin=20
 default-timeout=10000
-max-icon-size=32
-font=JetBrainsMono Nerd Font 10
-border-radius=0
+max-icon-size=30
+font=Space Grotesk Bold 12
+border-radius=14
 
 [mode=do-not-disturb]
 invisible=true

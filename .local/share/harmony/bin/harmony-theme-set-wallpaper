@@ -17,10 +17,10 @@ ln -nsf "$HOME/.local/share/wallpapers/.wallpaper" "$HOME/.config/omarchy/curren
 
 # set wallpaper
 awww img "$HOME/.local/share/wallpapers/wallpaper.png" \
-    -t random \
-    --transition-fps 120 \
+    -t fade \
+    --transition-fps 144 \
     --transition-duration 1 \
-    --transition-step 45 \
+    --transition-step 1 \
     $MONITOR_STRING \
     > /dev/null 2>&1
 

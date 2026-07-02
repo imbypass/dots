@@ -1,39 +1,45 @@
 @import "../omarchy/current/theme/waybar.css";
-@define-color accent @bright_white;
 
 * {
-    font-weight: 700;
-    font-size: 11.5px;
-    font-family: "JetbrainsMono Nerd Font";
     border-radius: 0;
     margin-top: 0px;
 }
 
 window {
-    color: @accent;
+    color: @white;
     background: @background;
     border-radius: 0;
     border: 0;
-    border-bottom: 1px solid alpha(white, 0.2);
+    border-bottom: 1px solid #090909;
+    font-family: "Space Grotesk";
+    font-size: 13.5px;
+    font-weight: 600;
 }
 
 tooltip {
-    color: @accent;
+    color: @bright_white;
     background: @background;
     border: 1px solid alpha(white, 0.2);
     border-radius: 0;
     padding: 0;
+}
+tooltip * {
+    font-family: "Space Grotesk";
+    font-weight: 800
 }
 
 menu {
     background-color: @background;
     border-radius: 0;
     border: 1px solid @black;
-    color: @accent;
+    color: @white;
     padding: 8px;
+    font-size: 14px;
+    font-family: "Space Grotesk";
 }
 menu * {
     border-radius: 0;
+    font-weight: 600;
 }
 menuitem {
     border-radius: 0;
@@ -42,9 +48,13 @@ menuitem {
     padding-right: 2px;
 }
 menuitem:hover {
-    background: @black;
-    color: @accent;
+    background: @bright_black;
+    color: @white;
     border-radius: 3px;
+}
+
+#tray {
+    color: white;
 }
 
 #clock,
@@ -52,36 +62,36 @@ menuitem:hover {
 #memory,
 #workspaces button {
     background: transparent;
-    color: @accent;
+    color: @bright_blue;
     margin: 0;
 }
 
 #clock {
-    color: @accent;
+    color: @bright_blue;
     margin-right: 12px;
     margin-left: 6px;
 }
 
 #memory {
-    color: @accent;
+    color: @bright_blue;
     margin-left: 2px;
 }
 
 #network {
-    color: @accent;
+    color: @bright_blue;
     margin-right: 6px;
     margin-left: 0px;
 }
 
 #bluetooth {
-    color: @accent;
+    color: @bright_blue;
     margin-right: 6px;
     margin-left: 0px;
 }
 
 #pulseaudio {
     border: none;
-    color: @accent;
+    color: @bright_blue;
 }
 
 #workspaces {
@@ -98,11 +108,11 @@ menuitem:hover {
 }
 #workspaces button:hover {
     color: @background;
-    background-color: @accent;
+    background-color: @bright_blue;
 }
 #workspaces button.active {
     color: @background;
-    background-color: @accent;
+    background-color: @bright_blue;
 }
 #workspaces button.urgent {
     color: @bright_yellow;
@@ -114,10 +124,10 @@ menuitem:hover {
     margin: 0;
     margin-top: -1px;
     margin-bottom: -0px;
-    font-size: 15px;
+    font-size: 16px;
 }
 #custom-logo:hover {
-    background-color: @accent;
+    background-color: @bright_blue;
     color: @background;
 }
 
@@ -131,14 +141,14 @@ menuitem:hover {
 }
 
 #custom-update {
-    color: @accent;
+    color: @bright_blue;
     margin-right: 8px;
     margin-left: 0px;
     margin-top: -1px;
 }
 
 #custom-tailscale {
-    color: @accent;
+    color: @bright_white;
     margin-right: 8px;
     margin-left: 4px;
     margin-top: -1px;
@@ -146,7 +156,7 @@ menuitem:hover {
 }
 
 #custom-glorious {
-    color: @accent;
+    color: @bright_white;
     font-size: 14px;
     margin-top: -1px;
     margin-left: 14px;
