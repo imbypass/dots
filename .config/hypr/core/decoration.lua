@@ -1,16 +1,9 @@
 require("core.decoration.animations")
 require("core.decoration.blur")
+require("core.decoration.borders")
+
 
 hl.config({
-    general = {
-        col = {
-            active_border = "rgba(121212ff)",
-            inactive_border = "rgba(101010ff)",
-        },
-    },
-    animations = {
-        enabled = true,
-    },
     decoration = {
         rounding = 14,
         rounding_power = 2,
@@ -23,7 +16,6 @@ hl.config({
         },
         blur = {
             enabled = true,
-
         },
     },
 })

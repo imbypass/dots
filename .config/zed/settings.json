@@ -45,7 +45,7 @@
   "ui_font_family": "Space Grotesk",
   "buffer_font_size": 13.0,
   "buffer_font_weight": 600.0,
-  "buffer_font_family": "SpaceMono Nerd Font Propo",
+  "buffer_font_family": "SpaceMono Nerd Font",
   "buffer_line_height": {
     "custom": 1.525
   },

@@ -10,7 +10,6 @@ hl.config({
         gaps_in = 4,
         gaps_out = 8,
         resize_on_border = false,
-        border_size = 1,
         snap = {
             enabled = false,
         },

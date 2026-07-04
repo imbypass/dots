@@ -10,7 +10,7 @@ outer-margin=20
 default-timeout=10000
 max-icon-size=30
 font=Space Grotesk Bold 12
-border-radius=14
+border-radius=12
 
 [mode=do-not-disturb]
 invisible=true

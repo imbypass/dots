@@ -1,7 +1,8 @@
 @import "../omarchy/current/theme/waybar.css";
+@define-color accent @bright_blue;
 
 * {
-    border-radius: 0;
+    border-radius: 0px;
     margin-top: 0px;
 }
 
@@ -62,36 +63,36 @@ menuitem:hover {
 #memory,
 #workspaces button {
     background: transparent;
-    color: @bright_blue;
+    color: @accent;
     margin: 0;
 }
 
 #clock {
-    color: @bright_blue;
+    color: @accent;
     margin-right: 12px;
     margin-left: 6px;
 }
 
 #memory {
-    color: @bright_blue;
+    color: @accent;
     margin-left: 2px;
 }
 
 #network {
-    color: @bright_blue;
+    color: @accent;
     margin-right: 6px;
     margin-left: 0px;
 }
 
 #bluetooth {
-    color: @bright_blue;
+    color: @accent;
     margin-right: 6px;
     margin-left: 0px;
 }
 
 #pulseaudio {
     border: none;
-    color: @bright_blue;
+    color: @accent;
 }
 
 #workspaces {
@@ -108,11 +109,11 @@ menuitem:hover {
 }
 #workspaces button:hover {
     color: @background;
-    background-color: @bright_blue;
+    background-color: @accent;
 }
 #workspaces button.active {
     color: @background;
-    background-color: @bright_blue;
+    background-color: @accent;
 }
 #workspaces button.urgent {
     color: @bright_yellow;
@@ -127,7 +128,7 @@ menuitem:hover {
     font-size: 16px;
 }
 #custom-logo:hover {
-    background-color: @bright_blue;
+    background-color: @accent;
     color: @background;
 }
 
@@ -141,7 +142,7 @@ menuitem:hover {
 }
 
 #custom-update {
-    color: @bright_blue;
+    color: @accent;
     margin-right: 8px;
     margin-left: 0px;
     margin-top: -1px;
