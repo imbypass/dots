@@ -49,12 +49,13 @@ application/x-theme=micro.desktop;
 application/pdf=helium-browser.desktop;
 application/toml=dev.zed.Zed.desktop;
 video/webm=mpv.desktop;
+application/vnd.apple.keynote=org.xfce.mousepad.desktop;
 
 [Default Applications]
 application/json=dev.zed.Zed.desktop
 application/octet-stream=micro.desktop
 application/schema+json=dev.zed.Zed.desktop
-application/vnd.rar=org.gnome.FileRoller.desktop
+application/vnd.rar=peazip.desktop
 application/x-extension-htm=chromium.desktop
 application/x-extension-html=chromium.desktop
 application/x-extension-shtml=chromium.desktop

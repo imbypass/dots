@@ -20,7 +20,7 @@ case "$1" in
     "wp")
         printf "${BOLD}${BLUE}:: ${RESET}Initializing wallpaper daemon..\n"
         killall awww-daemon > /dev/null 2>&1 &
-        sleep .5 && awww-daemon &
+        sleep .5 && awww-daemon --format xrgb &
     ;;
     "gnome")
         printf "${BOLD}${BLUE}:: ${RESET}Initializing GNOME settings..\n"

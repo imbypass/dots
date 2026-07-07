@@ -8,6 +8,14 @@ hl.window_rule({
 
 hl.window_rule({
     match = {
+        title = "^(Steam Big Picture Mode)$",
+        class = "^(steam)$",
+    },
+    fullscreen = true,
+})
+
+hl.window_rule({
+    match = {
         title = "^(Friends List)$",
     },
     float = true,

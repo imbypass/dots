@@ -1,30 +1,14 @@
 hl.window_rule({
     match = {
         title = "^(Picture-in-Picture)$",
-    },
-    tag = "+pip",
-})
-
-hl.window_rule({
-    match = {
         title = "^(Picture in picture)$",
     },
-    tag = "+pip",
-})
-
-hl.window_rule({
-    match = {
-        tag = "pip",
-    },
     min_size = "1 1",
-    move = "1323 28",
-    size = "592 269",
-    move = "1436 28",
-    move = "1436 3",
     size = "480 270",
+    move = "2068 32",
     opacity = "1 1",
     border_size = 1,
-    rounding = 0,
+    rounding = 10,
     keep_aspect_ratio = false,
     no_initial_focus = true,
     decorate = true,
