@@ -12,7 +12,6 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("udiskie -an &")
     hl.exec_cmd("mpd > ~/.logs/mpd.log &")
     hl.exec_cmd("wl-clip-persist --clipboard both &")
-    hl.exec_cmd("~/.local/bin/audio-fix &")
 
     -- TRAY INDICATORS
     hl.exec_cmd("kdeconnectd &")
@@ -35,4 +34,5 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("sleep 4 && hyprctl dispatch 'hl.dsp.exec_cmd(\"harmony-reload vicinae\")'")
     hl.exec_cmd("sleep 6 && vesktop &")
     hl.exec_cmd("sleep 10 && steam &")
+    hl.exec_cmd("~/.local/bin/audio-fix &")
 end)

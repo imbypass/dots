@@ -13,5 +13,6 @@
     "enableTaskbarFlashing": true,
     "staticTitle": true,
     "customTitleBar": false,
-    "disableSmoothScroll": true
+    "disableSmoothScroll": true,
+    "splashPixelated": false
 }
