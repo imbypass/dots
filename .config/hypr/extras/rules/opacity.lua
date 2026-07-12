@@ -1,7 +1,7 @@
 -- Source: ../../core/decoration/opacity.conf — convert this file to Lua and ensure it is on Lua's package.path.
 
-local opFocus = 1
-local opUnfocus = 1
+local opFocus = 0.93
+local opUnfocus = 0.93
 
 -- Window Rules - Transparency
 hl.window_rule({

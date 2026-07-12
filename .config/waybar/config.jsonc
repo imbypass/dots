@@ -26,6 +26,7 @@
     "bluetooth",
     "pulseaudio",
     "memory",
+    "custom/storage",
     "clock"
   ],
 
@@ -143,6 +144,13 @@
     "format": "󰍽",
     "escape": true,
     "exec": "$HOME/.local/share/harmony/scripts/waybar/glorious-mouse.sh",
+  },
+  "custom/storage": {
+    "format": "DSK <span color=\"#ffffff\">{text}</span> <span color=\"#ffffff66\">|</span>",
+    "exec": "show-free-space",
+    "on-click": "fish -c \"foot -a float-no-pin -e dua i ~\"",
+    "tooltip-format": "Free Storage Space: {}",
+    "interval": 1000,
   },
   "custom/update": {
     "format": "PKG <span color=\"#ffffff\">{text}</span> <span color=\"#ffffff66\">|</span>",

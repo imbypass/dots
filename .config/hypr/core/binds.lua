@@ -5,6 +5,7 @@ local FILEMANAGER_GUI = "xdg-open ~"
 -- Date/Time Popups
 hl.bind("SUPER + T", hl.dsp.exec_cmd("notify-send -t 3500 \"Current Time: $(date +\"%I:%M %p\")\""), { description = "Show Time" })
 hl.bind("SUPER + D", hl.dsp.exec_cmd("notify-send -t 3500 \"Current Date: $(date +\"%A, %B %d, %Y\")\""), { description = "Show Date" })
+hl.bind("SUPER + S", hl.dsp.exec_cmd("notify-send -t 3500 \"Free Space: $(~/.local/bin/show-free-space)\""), { description = "Show Free Space" })
 
 -- Toggle Waybar
 hl.bind("SUPER + SHIFT + Space", hl.dsp.exec_cmd("harmony-reload waybar toggle"), { description = "Toggle Dock" })

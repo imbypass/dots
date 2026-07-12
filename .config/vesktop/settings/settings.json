@@ -520,7 +520,23 @@
             "enabled": false
         },
         "TextReplace": {
-            "enabled": false
+            "enabled": false,
+            "stringRules": [
+                {
+                    "find": "",
+                    "replace": "",
+                    "onlyIfIncludes": "",
+                    "id": "8c4c0237-1621-4381-b68a-12d63ec7af76"
+                }
+            ],
+            "regexRules": [
+                {
+                    "find": "",
+                    "replace": "",
+                    "onlyIfIncludes": "",
+                    "id": "d2e86676-f9df-416a-88d6-8c7427441188"
+                }
+            ]
         },
         "ThemeAttributes": {
             "enabled": false
@@ -597,7 +613,7 @@
             "enabled": false
         },
         "VolumeBooster": {
-            "enabled": false,
+            "enabled": true,
             "multiplier": 2
         },
         "WhoReacted": {
@@ -838,7 +854,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1783460603449
+        "settingsSyncVersion": 1783878287214
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false,

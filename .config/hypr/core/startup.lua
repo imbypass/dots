@@ -25,8 +25,8 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("swayosd-server &")
 
     -- INTERFACE
-    hl.exec_cmd("~/.local/share/harmony/bin/harmony-reload waybar &")
-    hl.exec_cmd("~/.local/bin/mxw-low-battery-alert &")
+    hl.exec_cmd("sleep 3 && ~/.local/share/harmony/bin/harmony-reload waybar &")
+    -- hl.exec_cmd("~/.local/bin/mxw-low-battery-alert &")
     hl.exec_cmd("ignis init &")
 
     -- APPLICATIONS
