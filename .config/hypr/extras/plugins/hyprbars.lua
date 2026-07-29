@@ -11,12 +11,12 @@ hl.config({
         hyprbars = {
             enabled = true,
             bar_color = "rgba(0a0a0aff)",
-            bar_height = 30,
+            bar_height = 34,
             bar_blur = false,
             bar_title_enabled = true,
-            bar_text_size = 15,
+            bar_text_size = 14,
             bar_text_weight =  bold,
-            bar_text_font = "Outfit",
+            bar_text_font = "Space Grotesk SemiBold",
             bar_text_align = "left",
             bar_buttons_alignment = "right",
             bar_part_of_window = true,
@@ -28,13 +28,19 @@ hl.config({
     },
 })
 
+hl.window_rule({
+    name = "no-hyprbars-on-tiled",
+    match = { float = false },
+    ["hyprbars:no_bar"] = true,
+})
+
 
 hl.plugin.hyprbars.add_button({
     bg_color = "rgba(00000000)",
     fg_color = "rgba(ffffffff)",
     size = 28,
     icon = "󰅖",
-    action = "hyprctl dispatch killactive",
+    action = "hyprctl dispatch 'hl.dsp.window.close()'",
 
 })
 
@@ -43,7 +49,7 @@ hl.plugin.hyprbars.add_button({
     fg_color = "rgba(ffffffff)",
     size = 21,
     icon = "󱓼",
-    action = "hyprctl dispatch fullscreen 1",
+    action = "hyprctl dispatch 'hl.dsp.window.fullscreen({ mode = 1 })'",
 })
 
 hl.plugin.hyprbars.add_button({
@@ -51,5 +57,5 @@ hl.plugin.hyprbars.add_button({
     fg_color = "rgba(ffffffff)",
     size = 24,
     icon = "",
-    action = "hyprctl dispatch movetoworkspace special",
+    action = "hyprctl dispatch 'hl.dsp.window.move({ workspace = \"special:discord\", follow = false })'",
 })

@@ -61,8 +61,7 @@ hl.bind("SUPER + SHIFT + ALT + S", hl.dsp.exec_cmd("fish -c \"grim - | wl-copy &
 -- Notifications
 hl.bind("SUPER + COMMA", hl.dsp.exec_cmd("makoctl dismiss"), { description = "Dismiss last notification" })
 hl.bind("SUPER + SHIFT + COMMA", hl.dsp.exec_cmd("makoctl dismiss --all"), { description = "Dismiss all notifications" })
-hl.bind("SUPER + CTRL + COMMA", hl.dsp.exec_cmd("makoctl mode -t do-not-disturb && makoctl mode | grep -q 'do-not-disturb' && notify-send \"Silenced notifications\" || notify-send \"Enabled notifications\""), { description = "Toggle silencing notifications" })
-hl.bind("SUPER + ALT + COMMA", hl.dsp.exec_cmd("makoctl invoke"), { description = "Invoke last notification" })
+hl.bind("SUPER + ALT + COMMA", hl.dsp.exec_cmd("makoctl restore"), { description = "Invoke last notification" })
 
 -- Special Workspaces (Hidden)
 hl.bind("SUPER + SHIFT + Backspace", hl.dsp.window.move({ workspace = "special:discord", follow = false }), { dont_inhibit = true, description = "Move to Special Workspace" })
