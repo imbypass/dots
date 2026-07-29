@@ -1,14 +1,15 @@
 #!/bin/bash
 
-MONITOR_NAME=$2
+MONITOR_NAME=$1
 MONITOR_STRING=""
 if [[ -n $MONITOR_NAME ]]; then
 	MONITOR_STRING="-o $MONITOR_NAME"
+	echo $MONITOR_STRING
 fi
 
-echo $MONITOR_STRING
+WP_EXTENSION="${2##*.}"
 
-cp $1 $HOME/.local/share/wallpapers/.wallpaper
+cp $2 $HOME/.local/share/wallpapers/.wallpaper
 
 # create visible versions with extensions for other tools
 cp $HOME/.local/share/wallpapers/.wallpaper $HOME/.local/share/wallpapers/wallpaper.png
@@ -16,11 +17,28 @@ cp $HOME/.local/share/wallpapers/.wallpaper $HOME/.local/share/wallpapers/wallpa
 ln -nsf "$HOME/.local/share/wallpapers/.wallpaper" "$HOME/.config/omarchy/current/background"
 
 # set wallpaper
-awww img "$HOME/.local/share/wallpapers/wallpaper.png" \
-    -t fade \
-    --transition-fps 30 \
-    --transition-duration 0.3 \
-    $MONITOR_STRING \
-    > /dev/null 2>&1
 
-omarchy-hook matugen "$1"
+echo "$2" > ~/.local/share/wallpapers/.wallpaper_path
+
+if [[ $WP_EXTENSION != "mp4" ]]; then
+    killall -9 mpvpaper > /dev/null 2>&1
+    awww img "$HOME/.local/share/wallpapers/wallpaper.png" \
+        -t fade \
+        --transition-fps 30 \
+        --transition-duration 0.3 \
+        $MONITOR_STRING \
+        > /dev/null 2>&1
+else
+	echo "Video detected!"
+    killall -9 mpvpaper > /dev/null 2>&1
+    
+    mpvpaper \
+    -o "no-audio loop" \
+    --auto-mode "FULL" \
+    --auto-pause \
+    "$MONITOR_NAME" \
+    "$2" \
+    & disown
+fi
+
+omarchy-hook matugen "$2"

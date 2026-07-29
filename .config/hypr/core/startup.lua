@@ -3,8 +3,9 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("sleep 3 && /usr/bin/mpv --no-video --volume=50 /usr/share/sounds/startup.wav 2>/dev/null")
 
     -- ESSENTIAL INIT
-    hl.exec_cmd("~/.local/share/harmony/bin/harmony-initialize xdg")
     hl.exec_cmd("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
+    hl.exec_cmd("~/.local/share/harmony/bin/harmony-initialize xdg")
+    hl.exec_cmd("~/.local/share/harmony/bin/harmony-initialize dbus")
     hl.exec_cmd("~/.local/share/harmony/bin/harmony-initialize wp")
 
     -- QOL INIT
@@ -17,7 +18,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("kdeconnectd &")
     hl.exec_cmd("kdeconnect-indicator &")
     hl.exec_cmd("jamesdsp --tray &")
-    hl.exec_cmd("nm-applet &")
+--     hl.exec_cmd("nm-applet &")
 
     -- POPUPS
     hl.exec_cmd("vicinae server &")
@@ -25,7 +26,6 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("swayosd-server &")
 
     -- INTERFACE
-    hl.exec_cmd("sleep 3 && ~/.local/share/harmony/bin/harmony-reload waybar &")
     -- hl.exec_cmd("~/.local/bin/mxw-low-battery-alert &")
     hl.exec_cmd("ignis init &")
 
@@ -35,4 +35,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("sleep 6 && vesktop &")
     hl.exec_cmd("sleep 10 && steam &")
     hl.exec_cmd("~/.local/bin/audio-fix &")
+
+    hl.exec_cmd("~/.local/bin/Wooting.Background.Service_0.5.0_amd64.AppImage &")
+    hl.exec_cmd("sleep 8 && fish -c \"~/.local/share/harmony/bin/harmony-reload waybar &\"")
 end)

@@ -1,2 +1,2 @@
 require("extras.plugins.colors")
--- require("extras.plugins.hyprbars")
+require("extras.plugins.hyprbars")

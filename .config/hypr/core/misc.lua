@@ -13,7 +13,7 @@ hl.config({
         on_focus_under_fullscreen = false,
         allow_session_lock_restore = true,
         initial_workspace_tracking = true,
-        font_family = "SpaceMono",
+        font_family = "Space Grotesk",
     },
     render = {
         direct_scanout = true,

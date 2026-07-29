@@ -5,7 +5,7 @@ hl.window_rule({
     float = true,
     center = true,
     immediate = true,
-    size = "400 600",
+    size = "462 700",
 })
 
 -- # windowrule =  decorate off

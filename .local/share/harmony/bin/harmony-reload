@@ -70,6 +70,10 @@ case "$1" in
     "swaync")
         swaync-client -rs > /dev/null 2>&1
     ;;
+    "swayosd")
+        killall -9 swayosd-server > /dev/null 2>&1
+        swayosd-server > /dev/null 2>&1 & disown
+    ;;
     "ignis")
         exit 0
         killall -9 ignis > /dev/null 2>&1

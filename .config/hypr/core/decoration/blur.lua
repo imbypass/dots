@@ -1,11 +1,11 @@
 hl.config({
     decoration = {
         blur = {
-            enabled = true,
-            size = 8,
-            passes = 4,
+            enabled = no,
+            size = 6,
+            passes = 3,
             new_optimizations = true,
-            xray = false,
+            xray = no,
             vibrancy = 0.33,
             noise = 0,
         },

@@ -24,6 +24,7 @@ hl.layer_rule({
         namespace = "swayosd",
         namespace = "vicinae",
         namespace = "nwg-dock",
+        namespace = "*",
     },
     blur = true,
 })

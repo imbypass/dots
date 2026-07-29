@@ -24,5 +24,6 @@ dmenu_cmd() {
 WALLPAPER=$(find_wallpapers | dmenu_cmd)
 
 if [ -n "$WALLPAPER" ]; then
-    harmony-theme-set-wallpaper "$WALLPAPER"
+    harmony-theme-set-wallpaper "HDMI-A-1" "$WALLPAPER"
+    harmony-theme-set-wallpaper "DP-1" "$WALLPAPER"
 fi

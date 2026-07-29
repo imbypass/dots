@@ -31,9 +31,12 @@
   ],
 
   "hyprland/workspaces": {
+    "workspace-taskbar": true,
+    "show-special": false,
+    "all-outputs": false,
     "format": "{icon}",
     "active-only": false,
-    "persistent-workspaces": { "*": 1 },
+    "persistent-workspaces": { "HDMI-A-1": 1 },
     "on-scroll-up": "hyprctl eval 'hl.dispatch(hl.dsp.focus({ workspace = \"e+1\" }))'",
     "on-scroll-down": "hyprctl eval 'hl.dispatch(hl.dsp.focus({ workspace = \"e-1\" }))'",
   },

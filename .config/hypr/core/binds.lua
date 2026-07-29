@@ -7,9 +7,6 @@ hl.bind("SUPER + T", hl.dsp.exec_cmd("notify-send -t 3500 \"Current Time: $(date
 hl.bind("SUPER + D", hl.dsp.exec_cmd("notify-send -t 3500 \"Current Date: $(date +\"%A, %B %d, %Y\")\""), { description = "Show Date" })
 hl.bind("SUPER + S", hl.dsp.exec_cmd("notify-send -t 3500 \"Free Space: $(~/.local/bin/show-free-space)\""), { description = "Show Free Space" })
 
--- Toggle Waybar
-hl.bind("SUPER + SHIFT + Space", hl.dsp.exec_cmd("harmony-reload waybar toggle"), { description = "Toggle Dock" })
-
 -- Session Actions
 hl.bind("SUPER + ALT + L", hl.dsp.exec_cmd("hyprlock"), { dont_inhibit = true, description = "Lock screen" })
 hl.bind("SUPER + F1", hl.dsp.exec_cmd("harmony-toggle-gamemode"), { dont_inhibit = true, description = "Toggle Game Mode" })
@@ -32,13 +29,17 @@ hl.bind("SUPER + E", hl.dsp.exec_cmd(FILEMANAGER_GUI), { description = "Open Nau
 hl.bind("SUPER + SHIFT + E", hl.dsp.exec_cmd(TERMINAL .. " -a float-no-pin -e fish -c yazi"), { description = "Open yazi" })
 
 -- Web Apps
-hl.bind("SUPER + SHIFT + Z", hl.dsp.exec_cmd("zeditor"), { description = "Open Zed" })
-hl.bind("SUPER + SHIFT + C", hl.dsp.exec_cmd("fish -c \"omarchy-launch-webapp https://claude.ai\""), { description = "Open Claude" })
-hl.bind("SUPER + SHIFT + N", hl.dsp.exec_cmd("fish -c \"omarchy-launch-webapp https://ardb.app\""), { dont_inhibit = true, description = "Open ARDB" })
-hl.bind("SUPER + SHIFT + R", hl.dsp.exec_cmd("fish -c \"omarchy-launch-webapp https://reddit.com/r/omarchy\""), { description = "Open Reddit" })
-hl.bind("SUPER + SHIFT + M", hl.dsp.exec_cmd("fish -c \"omarchy-launch-webapp https://mail.google.com\""), { description = "Open Gmail" })
-hl.bind("SUPER + SHIFT + P", hl.dsp.exec_cmd("fish -c \"omarchy-launch-webapp https://app.plex.tv/desktop/"), { description = "Open Plex" })
-hl.bind("SUPER + SHIFT + G", hl.dsp.exec_cmd("fish -c \"chromium --profile-directory=Default --app=\"https://play.geforcenow.com/mall/\" %U\""), { description = "Open GeForce Now" })
+
+local function launch_webapp(key, url)
+    return hl.dsp.exec_cmd("fish -c \"omarchy-launch-webapp " .. url .. "\"")
+end
+hl.bind("SUPER + SHIFT + Z", launch_webapp("Z", "https://zed.dev"), { description = "Open Zed" })
+hl.bind("SUPER + SHIFT + C", launch_webapp("C", "https://claude.ai"), { description = "Open Claude" })
+hl.bind("SUPER + SHIFT + N", launch_webapp("N", "https://ardb.app"), { dont_inhibit = true, description = "Open ARDB" })
+hl.bind("SUPER + SHIFT + R", launch_webapp("R", "https://reddit.com/r/omarchy"), { description = "Open Reddit" })
+hl.bind("SUPER + SHIFT + M", launch_webapp("M", "https://mail.google.com"), { description = "Open Gmail" })
+hl.bind("SUPER + SHIFT + P", launch_webapp("P", "https://app.plex.tv/desktop"), { description = "Open Plex" })
+hl.bind("SUPER + SHIFT + G", launch_webapp("G", "https://play.geforcenow.com/mall"), { description = "Open GeForce Now" })
 
 -- Wayscriber Bind
 hl.bind("SUPER + SHIFT + P", hl.dsp.exec_cmd("pkill -SIGUSR1 wayscriber discord"), { description = "Open Wayscriber" })
@@ -48,13 +49,14 @@ hl.bind("SUPER + TAB", hl.dsp.focus({ workspace = "e+1" }), { dont_inhibit = tru
 hl.bind("SUPER + SHIFT + TAB", hl.dsp.focus({ workspace = "e-1" }), { dont_inhibit = true, description = "Tab Between Workspaces" })
 
 -- Alt-Tab Functionality - Cycle Through Windows
-hl.bind("ALT + TAB", hl.dsp.window.cycle_next({ next = true }), { description = "Cycle to next window" })
-hl.bind("ALT + SHIFT + TAB", hl.dsp.window.cycle_next({ prev = true }), { description = "Cycle to previous window" })
 hl.bind("ALT + TAB", hl.dsp.window.bring_to_top(), { description = "Reveal active window on top" })
 hl.bind("ALT + SHIFT + TAB", hl.dsp.window.bring_to_top(), { description = "Reveal active window on top" })
+hl.bind("ALT + TAB", hl.dsp.window.cycle_next({ next = true }), { description = "Cycle to next window" })
+hl.bind("ALT + SHIFT + TAB", hl.dsp.window.cycle_next({ prev = true }), { description = "Cycle to previous window" })
 
 -- Screen Capture
 hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("fish -c \"harmony-screenshot --region\""), { locked = true, dont_inhibit = true, description = "Take a screenshot of a selected area" })
+hl.bind("SUPER + SHIFT + ALT + S", hl.dsp.exec_cmd("fish -c \"grim - | wl-copy && notify-send -a Harmony -t 3500 Screenshot 'Screenshot copied to clipboard!'\""), { locked = true, dont_inhibit = true, description = "Take a screenshot of ALL monitors" })
 
 -- Notifications
 hl.bind("SUPER + COMMA", hl.dsp.exec_cmd("makoctl dismiss"), { description = "Dismiss last notification" })
@@ -91,17 +93,35 @@ hl.bind("SUPER + SHIFT + K", hl.dsp.window.move({ direction = "u" }), { descript
 hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), { description = "Move Window" })
 hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { description = "Resize Window" })
 
+
 -- Workspace Navigation
-hl.bind("SUPER + 1", hl.dsp.focus({ workspace = 1 }), { dont_inhibit = true, description = "Switch to Workspace 1" })
-hl.bind("SUPER + 2", hl.dsp.focus({ workspace = 2 }), { dont_inhibit = true, description = "Switch to Workspace 2" })
-hl.bind("SUPER + 3", hl.dsp.focus({ workspace = 3 }), { dont_inhibit = true, description = "Switch to Workspace 3" })
-hl.bind("SUPER + 4", hl.dsp.focus({ workspace = 4 }), { dont_inhibit = true, description = "Switch to Workspace 4" })
-hl.bind("SUPER + 5", hl.dsp.focus({ workspace = 5 }), { dont_inhibit = true, description = "Switch to Workspace 5" })
-hl.bind("SUPER + 6", hl.dsp.focus({ workspace = 6 }), { dont_inhibit = true, description = "Switch to Workspace 6" })
-hl.bind("SUPER + 7", hl.dsp.focus({ workspace = 7 }), { dont_inhibit = true, description = "Switch to Workspace 7" })
-hl.bind("SUPER + 8", hl.dsp.focus({ workspace = 8 }), { dont_inhibit = true, description = "Switch to Workspace 8" })
-hl.bind("SUPER + 9", hl.dsp.focus({ workspace = 9 }), { dont_inhibit = true, description = "Switch to Workspace 9" })
-hl.bind("SUPER + 0", hl.dsp.focus({ workspace = 10 }), { dont_inhibit = true, description = "Switch to Workspace 10" })
+local function monitor_aware_ws_bind(key, primary_ws, secondary_ws)
+    hl.bind("SUPER + " .. key, function()
+        local mon = hl.get_active_monitor()
+        if mon and mon.name == "DP-1" then
+            hl.dispatch(hl.dsp.focus({ workspace = secondary_ws }))
+        else
+            hl.dispatch(hl.dsp.focus({ workspace = primary_ws }))
+        end
+    end, { dont_inhibit = true, description = "Switch to Workspace " .. primary_ws .. "/" .. secondary_ws })
+end
+monitor_aware_ws_bind(1, 1, 6)
+monitor_aware_ws_bind(2, 2, 7)
+monitor_aware_ws_bind(3, 3, 8)
+monitor_aware_ws_bind(4, 4, 9)
+monitor_aware_ws_bind(5, 5, 10)
+
+-- OUTDATED Workspace Navigation
+-- hl.bind("SUPER + 1", hl.dsp.focus({ workspace = 1 }), { dont_inhibit = true, description = "Switch to Workspace 1" })
+-- hl.bind("SUPER + 2", hl.dsp.focus({ workspace = 2 }), { dont_inhibit = true, description = "Switch to Workspace 2" })
+-- hl.bind("SUPER + 3", hl.dsp.focus({ workspace = 3 }), { dont_inhibit = true, description = "Switch to Workspace 3" })
+-- hl.bind("SUPER + 4", hl.dsp.focus({ workspace = 4 }), { dont_inhibit = true, description = "Switch to Workspace 4" })
+-- hl.bind("SUPER + 5", hl.dsp.focus({ workspace = 5 }), { dont_inhibit = true, description = "Switch to Workspace 5" })
+-- hl.bind("SUPER + 6", hl.dsp.focus({ workspace = 6 }), { dont_inhibit = true, description = "Switch to Workspace 6" })
+-- hl.bind("SUPER + 7", hl.dsp.focus({ workspace = 7 }), { dont_inhibit = true, description = "Switch to Workspace 7" })
+-- hl.bind("SUPER + 8", hl.dsp.focus({ workspace = 8 }), { dont_inhibit = true, description = "Switch to Workspace 8" })
+-- hl.bind("SUPER + 9", hl.dsp.focus({ workspace = 9 }), { dont_inhibit = true, description = "Switch to Workspace 9" })
+-- hl.bind("SUPER + 0", hl.dsp.focus({ workspace = 10 }), { dont_inhibit = true, description = "Switch to Workspace 10" })
 
 -- Workspace Management
 hl.bind("SUPER + SHIFT + 1", hl.dsp.window.move({ workspace = 1, follow = false }), { dont_inhibit = true, description = "Move window to Workspace 1" })
@@ -133,8 +153,9 @@ hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(osdclient .. " --brightness +5"),
 hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(osdclient .. " --brightness -5"), { locked = true, repeating = true, dont_inhibit = true })
 
 -- Screen Zoom
-hl.bind("SUPER + ALT + mouse_down", hl.dsp.exec_cmd("hyprctl -q keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor -j | jq '.float * 1.1')"), { dont_inhibit = true })
-hl.bind("SUPER + ALT + mouse_up", hl.dsp.exec_cmd("hyprctl -q keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor -j | jq '(.float * 0.9) | if . < 1 then 1 else . end')"), { dont_inhibit = true })
+
+hl.bind("SUPER + ALT + mouse_up", hl.dsp.exec_cmd("/home/bypass/.local/share/harmony/scripts/hypr-zoom.sh in"), { dont_inhibit = true })
+hl.bind("SUPER + ALT + mouse_down", hl.dsp.exec_cmd("/home/bypass/.local/share/harmony/scripts/hypr-zoom.sh out"), { dont_inhibit = true })
 
 hl.bind("F9", hl.dsp.pass({ window = "class:^(vesktop)$" }), { locked = true, transparent = true, dont_inhibit = true })
 hl.config({

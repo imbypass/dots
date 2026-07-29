@@ -5,7 +5,7 @@
   "margin-right": 5,
   "margin-left": 5,
   "margin-bottom": 5,
-  "height": 44,
+  "height": 46,
   "exclusive": true,
   "passthrough": false,
   "gtk-layer-shell": true,
@@ -22,8 +22,7 @@
     "pulseaudio",
     "network",
     "battery",
-    "clock",
-    "custom/scratchpad"
+    "clock"
   ],
 
   // ==========[ STANDARD WAYBAR MODULES ]========== //
@@ -190,7 +189,8 @@
     "format": "",
     "exec": "checkupdates | wc -l",
     "exec-if": "if [[ $(checkupdates | wc -l) -gt 0 ]]; then exit 0; fi; exit 1",
-    "on-click": "fish -c \"foot -a Harmony -e omarchy-update\"",
+    "on-click-right": "fish -c \"foot -a Harmony -e omarchy-update\"",
+    "on-click": "fish -c \"shelly-ui\""
     "tooltip-format": "{text} updates available",
     "signal": 7,
     "interval": 21600,

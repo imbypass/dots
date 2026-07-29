@@ -2,7 +2,7 @@
 -- # windowrule = match:floating:0, decorate off
 
 -- Hide Hyprbars on specific windows
--- windowrule = match:title ^(winetricks)$, hyprbars:nobar yes
+-- windowrule = match:title ^(winetricks)$, hyprbars:nobar true
 -- windowrule = match:class ^(ONLYOFFICE.*)$, decorate off
 -- windowrule = match:title:^(Wootility Web)$, decorate off
 -- windowrule = match:class ^(Google-chrome)$, decorate off

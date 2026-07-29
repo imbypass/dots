@@ -22,6 +22,12 @@ require("workspaces")
 -- Source: vicinae.conf — convert this file to Lua and ensure it is on Lua's package.path.
 require("vicinae")
 
+hl.config({
+    decoration = {
+        screen_shader = "/home/bypass/.config/hypr/shaders/ultra-vib.glsl",
+    }
+})
+
 hl.on("hyprland.start", function()
     hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
 end)

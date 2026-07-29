@@ -9,5 +9,5 @@ hl.window_rule({
     match = {
         class = "^(org.gnome.FileRoller)",
     },
-    rounding = 0,
+    rounding = 18,
 })

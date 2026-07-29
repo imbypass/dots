@@ -2,6 +2,7 @@
 config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
 
 # Font
+font = "SpaceMono"
 font-feature = dlig ss05 liga
 font-style = Medium
 font-size = 9.5

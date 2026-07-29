@@ -10,7 +10,7 @@ hl.window_rule({
     match = {
         class = "^(org.gnome.Nautilus) title ^(.*)$",
     },
-    rounding = 0,
+    rounding = 18,
 })
 
 -- windowrule = bordercolor $base02 $base02, class:^(org.gnome.Nautilus)$

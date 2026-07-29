@@ -14,9 +14,6 @@ hl.bind("SUPER + Period", hl.dsp.exec_cmd("vicinae vicinae://launch/core/search-
 -- TODO: manual review — 'unbind = SUPER, Escape'. In Lua, capture the result of hl.bind(...) and call :remove(). See hl.meta.lua.
 hl.bind("SUPER + Escape", hl.dsp.exec_cmd("vicinae vicinae://launch/wm/switch-windows"), { dont_inhibit = true, description = "Switch windows" })
 
--- Hyprland Keybinds List
-hl.bind("SUPER + ALT + K", hl.dsp.exec_cmd("fish -c omarchy-menu-keybindings"), { dont_inhibit = true, description = "Open Keybindings Menu" })
-
 -- Screen Recording Picker
 hl.bind("SUPER + ALT + Backslash", hl.dsp.exec_cmd("fish -c ~/.config/walker/scripts/record_screen.sh"), { dont_inhibit = true, description = "Open Screen Recording Menu" })
 

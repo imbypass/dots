@@ -151,7 +151,7 @@ menuitem:hover {
 #clock {
     margin-left: 10px;
     margin-right: 20px;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 500;
     color: @foreground;
 }
@@ -197,7 +197,7 @@ menuitem:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url("/home/bypass/.config/waybar/styles/kde/logo.svg");
+    background-image: url("/home/bypass/.config/waybar/styles/kde/logo.png");
     margin: -15px 12px -15px 16px; /* top right bottom left */
     color: @foreground;
 }

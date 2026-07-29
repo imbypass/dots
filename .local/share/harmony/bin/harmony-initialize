@@ -6,6 +6,10 @@ case "$1" in
         printf "${BOLD}${BLUE}:: ${RESET}Initializing miscellaneous setup files..\n"
         gsettings set org.gnome.desktop.wm.preferences button-layout ":"
     ;;
+    "dbus")
+        printf "${BOLD}${BLUE}:: ${RESET}Initializing dbus..\n"
+        dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+    ;;
     "xdg")
         printf "${BOLD}${BLUE}:: ${RESET}Initializing xdg-desktop-portal..\n"
         sleep 1
@@ -21,6 +25,8 @@ case "$1" in
         printf "${BOLD}${BLUE}:: ${RESET}Initializing wallpaper daemon..\n"
         killall awww-daemon > /dev/null 2>&1 &
         sleep .5 && awww-daemon --format xrgb &
+
+        sleep 1 && harmony-theme-set-wallpaper HDMI-A-1 $(cat ~/.local/share/wallpapers/.wallpaper_path)
     ;;
     "gnome")
         printf "${BOLD}${BLUE}:: ${RESET}Initializing GNOME settings..\n"
