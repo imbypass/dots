@@ -3,7 +3,8 @@ hl.window_rule({
         class = "^(steam)$",
     },
     min_size = "1 1",
-    workspace = "2",
+    workspace = "3",
+    float = true,
 })
 
 hl.window_rule({
@@ -38,6 +39,13 @@ hl.window_rule({
 hl.window_rule({
     match = {
         class = "^(steam_app_0)$",
+    },
+    opacity = "1 1",
+    workspace = "4",
+})
+hl.window_rule({
+    match = {
+        class = "^(steam_app_.*)$",
     },
     opacity = "1 1",
     workspace = "4",

@@ -10,7 +10,7 @@ hl.config({
     plugin = {
         hyprbars = {
             enabled = true,
-            bar_color = "rgba(0a0a0aff)",
+            bar_color = "rgba(0f0f0fff)",
             bar_height = 34,
             bar_blur = false,
             bar_title_enabled = true,

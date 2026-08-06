@@ -7,3 +7,12 @@ hl.window_rule({
     content = "game",
     workspace = "4",
 })
+hl.window_rule({
+    match = {
+        class = "^(cs2)$",
+    },
+    immediate = true,
+    render_unfocused = true,
+    content = "game",
+    workspace = "4",
+})

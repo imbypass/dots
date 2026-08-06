@@ -2,6 +2,9 @@
 local TERMINAL = "foot"
 local FILEMANAGER_GUI = "xdg-open ~"
 
+hl.bind("SUPER + Super_R", hl.dsp.exec_cmd("noctalia msg panel-toggle launcher"), { description = "Open App Launcher" })
+-- hl.bind("SUPER + Super_L", hl.dsp.exec_cmd("vicinae toggle"), { description = "Open App Launcher" })
+
 -- Date/Time Popups
 hl.bind("SUPER + T", hl.dsp.exec_cmd("notify-send -t 3500 \"Current Time: $(date +\"%I:%M %p\")\""), { description = "Show Time" })
 hl.bind("SUPER + D", hl.dsp.exec_cmd("notify-send -t 3500 \"Current Date: $(date +\"%A, %B %d, %Y\")\""), { description = "Show Date" })
@@ -55,13 +58,18 @@ hl.bind("ALT + TAB", hl.dsp.window.cycle_next({ next = true }), { description = 
 hl.bind("ALT + SHIFT + TAB", hl.dsp.window.cycle_next({ prev = true }), { description = "Cycle to previous window" })
 
 -- Screen Capture
-hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("fish -c \"harmony-screenshot --region\""), { locked = true, dont_inhibit = true, description = "Take a screenshot of a selected area" })
+-- hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("fish -c \"harmony-screenshot --region\""), { locked = true, dont_inhibit = true, description = "Take a screenshot of a selected area" })
 hl.bind("SUPER + SHIFT + ALT + S", hl.dsp.exec_cmd("fish -c \"grim - | wl-copy && notify-send -a Harmony -t 3500 Screenshot 'Screenshot copied to clipboard!'\""), { locked = true, dont_inhibit = true, description = "Take a screenshot of ALL monitors" })
 
+hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("fish -c \"noctalia msg screenshot-region\""), { locked = true, dont_inhibit = true, description = "" })
+hl.bind("SUPER + SHIFT + ALT + S", hl.dsp.exec_cmd("fish -c \"noctalia msg screenshot-fullscreen all\""), { locked = true, dont_inhibit = true, description = "" })
+
 -- Notifications
-hl.bind("SUPER + COMMA", hl.dsp.exec_cmd("makoctl dismiss"), { description = "Dismiss last notification" })
-hl.bind("SUPER + SHIFT + COMMA", hl.dsp.exec_cmd("makoctl dismiss --all"), { description = "Dismiss all notifications" })
-hl.bind("SUPER + ALT + COMMA", hl.dsp.exec_cmd("makoctl restore"), { description = "Invoke last notification" })
+-- hl.bind("SUPER + COMMA", hl.dsp.exec_cmd("makoctl dismiss"), { description = "Dismiss last notification" })
+-- hl.bind("SUPER + SHIFT + COMMA", hl.dsp.exec_cmd("makoctl dismiss --all"), { description = "Dismiss all notifications" })
+-- hl.bind("SUPER + ALT + COMMA", hl.dsp.exec_cmd("makoctl restore"), { description = "Invoke last notification" })
+hl.bind("SUPER + COMMA", hl.dsp.exec_cmd("noctalia msg panel-toggle control-center notifications"), { description = "Open Notifications Panel" })
+
 
 -- Special Workspaces (Hidden)
 hl.bind("SUPER + SHIFT + Backspace", hl.dsp.window.move({ workspace = "special:discord", follow = false }), { dont_inhibit = true, description = "Move to Special Workspace" })
@@ -94,33 +102,33 @@ hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { description = "Resize Win
 
 
 -- Workspace Navigation
-local function monitor_aware_ws_bind(key, primary_ws, secondary_ws)
-    hl.bind("SUPER + " .. key, function()
-        local mon = hl.get_active_monitor()
-        if mon and mon.name == "DP-1" then
-            hl.dispatch(hl.dsp.focus({ workspace = secondary_ws }))
-        else
-            hl.dispatch(hl.dsp.focus({ workspace = primary_ws }))
-        end
-    end, { dont_inhibit = true, description = "Switch to Workspace " .. primary_ws .. "/" .. secondary_ws })
-end
-monitor_aware_ws_bind(1, 1, 6)
-monitor_aware_ws_bind(2, 2, 7)
-monitor_aware_ws_bind(3, 3, 8)
-monitor_aware_ws_bind(4, 4, 9)
-monitor_aware_ws_bind(5, 5, 10)
+-- local function monitor_aware_ws_bind(key, primary_ws, secondary_ws)
+--     hl.bind("SUPER + " .. key, function()
+--         local mon = hl.get_active_monitor()
+--         if mon and mon.name == "DP-1" then
+--             hl.dispatch(hl.dsp.focus({ workspace = secondary_ws }))
+--         else
+--             hl.dispatch(hl.dsp.focus({ workspace = primary_ws }))
+--         end
+--     end, { dont_inhibit = true, description = "Switch to Workspace " .. primary_ws .. "/" .. secondary_ws })
+-- end
+-- monitor_aware_ws_bind(1, 1, 6)
+-- monitor_aware_ws_bind(2, 2, 7)
+-- monitor_aware_ws_bind(3, 3, 8)
+-- monitor_aware_ws_bind(4, 4, 9)
+-- monitor_aware_ws_bind(5, 5, 10)
 
 -- OUTDATED Workspace Navigation
--- hl.bind("SUPER + 1", hl.dsp.focus({ workspace = 1 }), { dont_inhibit = true, description = "Switch to Workspace 1" })
--- hl.bind("SUPER + 2", hl.dsp.focus({ workspace = 2 }), { dont_inhibit = true, description = "Switch to Workspace 2" })
--- hl.bind("SUPER + 3", hl.dsp.focus({ workspace = 3 }), { dont_inhibit = true, description = "Switch to Workspace 3" })
--- hl.bind("SUPER + 4", hl.dsp.focus({ workspace = 4 }), { dont_inhibit = true, description = "Switch to Workspace 4" })
--- hl.bind("SUPER + 5", hl.dsp.focus({ workspace = 5 }), { dont_inhibit = true, description = "Switch to Workspace 5" })
--- hl.bind("SUPER + 6", hl.dsp.focus({ workspace = 6 }), { dont_inhibit = true, description = "Switch to Workspace 6" })
--- hl.bind("SUPER + 7", hl.dsp.focus({ workspace = 7 }), { dont_inhibit = true, description = "Switch to Workspace 7" })
--- hl.bind("SUPER + 8", hl.dsp.focus({ workspace = 8 }), { dont_inhibit = true, description = "Switch to Workspace 8" })
--- hl.bind("SUPER + 9", hl.dsp.focus({ workspace = 9 }), { dont_inhibit = true, description = "Switch to Workspace 9" })
--- hl.bind("SUPER + 0", hl.dsp.focus({ workspace = 10 }), { dont_inhibit = true, description = "Switch to Workspace 10" })
+hl.bind("SUPER + 1", hl.dsp.focus({ workspace = 1 }), { dont_inhibit = true, description = "Switch to Workspace 1" })
+hl.bind("SUPER + 2", hl.dsp.focus({ workspace = 2 }), { dont_inhibit = true, description = "Switch to Workspace 2" })
+hl.bind("SUPER + 3", hl.dsp.focus({ workspace = 3 }), { dont_inhibit = true, description = "Switch to Workspace 3" })
+hl.bind("SUPER + 4", hl.dsp.focus({ workspace = 4 }), { dont_inhibit = true, description = "Switch to Workspace 4" })
+hl.bind("SUPER + 5", hl.dsp.focus({ workspace = 5 }), { dont_inhibit = true, description = "Switch to Workspace 5" })
+hl.bind("SUPER + 6", hl.dsp.focus({ workspace = 6 }), { dont_inhibit = true, description = "Switch to Workspace 6" })
+hl.bind("SUPER + 7", hl.dsp.focus({ workspace = 7 }), { dont_inhibit = true, description = "Switch to Workspace 7" })
+hl.bind("SUPER + 8", hl.dsp.focus({ workspace = 8 }), { dont_inhibit = true, description = "Switch to Workspace 8" })
+hl.bind("SUPER + 9", hl.dsp.focus({ workspace = 9 }), { dont_inhibit = true, description = "Switch to Workspace 9" })
+hl.bind("SUPER + 0", hl.dsp.focus({ workspace = 10 }), { dont_inhibit = true, description = "Switch to Workspace 10" })
 
 -- Workspace Management
 hl.bind("SUPER + SHIFT + 1", hl.dsp.window.move({ workspace = 1, follow = false }), { dont_inhibit = true, description = "Move window to Workspace 1" })
@@ -139,17 +147,25 @@ hl.bind("SUPER + mouse_down", hl.dsp.focus({ workspace = "e-1" }), { dont_inhibi
 hl.bind("SUPER + mouse_up", hl.dsp.focus({ workspace = "e+1" }), { dont_inhibit = true, description = "Scroll Active Workspace Up" })
 
 -- Media Keys (Function Keys)
-local osdclient = "swayosd-client --monitor \"$(hyprctl monitors -j | jq -r '.[] | select(.focused == true).name')\""
-hl.bind("XF86AudioPlay", hl.dsp.exec_cmd(osdclient .. " --playerctl=play-pause"), { locked = true, repeating = true, dont_inhibit = true })
-hl.bind("XF86AudioPause", hl.dsp.exec_cmd(osdclient .. " --playerctl=pause"), { locked = true, repeating = true, dont_inhibit = true })
-hl.bind("XF86AudioNext", hl.dsp.exec_cmd(osdclient .. " --playerctl=next"), { locked = true, repeating = true, dont_inhibit = true })
-hl.bind("XF86AudioPrev", hl.dsp.exec_cmd(osdclient .. " --playerctl=previous"), { locked = true, repeating = true, dont_inhibit = true })
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(osdclient .. " --output-volume raise"), { locked = true, repeating = true, dont_inhibit = true, description = "Volume up" })
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(osdclient .. " --output-volume lower"), { locked = true, repeating = true, dont_inhibit = true, description = "Volume down" })
-hl.bind("XF86AudioMute", hl.dsp.exec_cmd(osdclient .. " --output-volume mute-toggle"), { locked = true, repeating = true, dont_inhibit = true, description = "Mute" })
-hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd(osdclient .. " --input-volume mute-toggle"), { locked = true, repeating = true, dont_inhibit = true })
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(osdclient .. " --brightness +5"), { locked = true, repeating = true, dont_inhibit = true })
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(osdclient .. " --brightness -5"), { locked = true, repeating = true, dont_inhibit = true })
+-- local osdclient = "swayosd-client --monitor \"$(hyprctl monitors -j | jq -r '.[] | select(.focused == true).name')\""
+-- hl.bind("XF86AudioPlay", hl.dsp.exec_cmd(osdclient .. " --playerctl=play-pause"), { locked = true, repeating = true, dont_inhibit = true })
+-- hl.bind("XF86AudioPause", hl.dsp.exec_cmd(osdclient .. " --playerctl=pause"), { locked = true, repeating = true, dont_inhibit = true })
+-- hl.bind("XF86AudioNext", hl.dsp.exec_cmd(osdclient .. " --playerctl=next"), { locked = true, repeating = true, dont_inhibit = true })
+-- hl.bind("XF86AudioPrev", hl.dsp.exec_cmd(osdclient .. " --playerctl=previous"), { locked = true, repeating = true, dont_inhibit = true })
+-- hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(osdclient .. " --output-volume raise"), { locked = true, repeating = true, dont_inhibit = true, description = "Volume up" })
+-- hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(osdclient .. " --output-volume lower"), { locked = true, repeating = true, dont_inhibit = true, description = "Volume down" })
+-- hl.bind("XF86AudioMute", hl.dsp.exec_cmd(osdclient .. " --output-volume mute-toggle"), { locked = true, repeating = true, dont_inhibit = true, description = "Mute" })
+-- hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd(osdclient .. " --input-volume mute-toggle"), { locked = true, repeating = true, dont_inhibit = true })
+-- hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(osdclient .. " --brightness +5"), { locked = true, repeating = true, dont_inhibit = true })
+-- hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(osdclient .. " --brightness -5"), { locked = true, repeating = true, dont_inhibit = true })
+
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"), { repeating = true })
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"), { repeating = true })
+hl.bind("XF86AudioMute",        hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), { locked = true })
+hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
+hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
+hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"),       { locked = true })
+
 
 -- Screen Zoom
 

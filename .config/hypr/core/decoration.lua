@@ -5,7 +5,7 @@ require("core.decoration.borders")
 
 hl.config({
     decoration = {
-        rounding = 16,
+        rounding = 10,
         rounding_power = 2,
         dim_inactive = false,
         shadow = {

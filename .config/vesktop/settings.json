@@ -9,7 +9,7 @@
         "en"
     ],
     "hardwareVideoAcceleration": true,
-    "hardwareAcceleration": true,
+    "hardwareAcceleration": false,
     "enableTaskbarFlashing": true,
     "staticTitle": true,
     "customTitleBar": false,

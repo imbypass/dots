@@ -1,0 +1,49 @@
+@import "./colors.scss";
+
+* {
+    all: unset;
+    font-family: "Space Grotesk";
+    letter-spacing: -3px;
+    transition: 0.1s all ease;
+    color: $accent;
+    opacity: 0.925;
+    text-shadow: 0px 0px 12px rgba(0, 0, 0, .75);
+}
+
+.clock {
+    margin-right: 8rem;
+    margin-top: 12rem;
+    font-size: 6.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.clock-ampm {
+    margin-left: 1rem;
+}
+.clock-discrim {
+    font-size: 6rem;
+    margin-right: 0rem;
+    margin-left: 0rem;
+    margin-bottom: 8px;
+    letter-spacing: 0px;
+}
+.clock-hours {
+    letter-spacing: 0px;
+}
+
+
+.date {
+    margin-right: 8.2rem;
+    margin-top: -0.8rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 0px;
+}
+.date-discrim {
+    margin-right: -0.2rem;
+    letter-spacing: 0px;
+}
+.date-day {
+    margin-right: -0.2rem;
+    letter-spacing: 0px;
+}

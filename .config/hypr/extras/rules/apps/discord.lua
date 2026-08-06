@@ -3,7 +3,7 @@ hl.window_rule({
         class = "^(vesktop)$",
     },
     render_unfocused = true,
-    workspace = "1",
+    workspace = "6",
 })
 
 hl.window_rule({

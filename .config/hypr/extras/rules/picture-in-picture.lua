@@ -5,7 +5,7 @@ hl.window_rule({
     },
     min_size = "1 1",
     size = "480 270",
-    move = "2068 32",
+    move = "2062 52",
     opacity = "1 1",
     border_size = 1,
     rounding = 10,
@@ -14,4 +14,5 @@ hl.window_rule({
     decorate = true,
     float = true,
     pin = true,
+    ["hyprbars:no_bar"] = true,
 })
