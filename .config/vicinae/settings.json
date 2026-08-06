@@ -1,0 +1,219 @@
+// This configuration is merged with the default vicinae configuration file, which you can obtain by running the `vicinae config default` command.
+// Every item defined in this file takes precedence over the values defined in the default config or any other imported file.
+//
+// You can make manual edits to this file, however you should keep in mind that this file may be written to by vicinae when a configuration change is made through the GUI.
+// When that happens, any custom comments or formatting will be lost.
+//
+// If you want to maintain a configuration file with your own comments and formatting, you should create a separate file and add it to the 'imports' array.
+//
+// Learn more about configuration at https://docs.vicinae.com/config
+
+{
+   "$schema": "https://vicinae.com/schemas/config.json",
+   "close_on_focus_loss": false,
+   "pop_to_root_on_close": true,
+   "pop_on_backspace": true,
+   "escape_key_behavior": "",
+   "favicon_service": "google",
+   "search_files_in_root": false,
+   "font": {
+      "rendering": "qt",
+      "normal": {
+         "family": "Space Grotesk SemiBold",
+         "size": 11
+      }
+   },
+   "theme": {
+      "light": {
+         "name": "omarchy"
+      },
+      "dark": {
+         "name": "system",
+         "icon_theme": "Papirus-Dark"
+      }
+   },
+   "launcher_window": {
+      "rounding": 16,
+      "opacity": 0.965,
+      "client_side_decorations": {
+         "enabled": true,
+         "rounding": 18,
+         "border_width": 1,
+         "shadow_size": 18
+      },
+      "compact_mode": {
+         "enabled": true
+      }
+   },
+   "favorites": [
+      "applications:steam",
+      "applications:com.spotify.Client",
+      "applications:spotify-launcher",
+      "applications:wootility",
+      "applications:pinned-app-2",
+      "applications:chrome-mdjpfbokiopdhidmalnpnmekjbajopld-Default",
+      "applications:chromium",
+      "applications:foot",
+      "applications:vesktop",
+      "applications:org.gnome.Nautilus",
+      "applications:spotify",
+      "applications:chrome-play.geforcenow.com__mall_-Default"
+   ],
+   "fallbacks": [
+      "shortcuts:78cd8644-3d45-48ed-881c-0e30a372eec2",
+      "files:search"
+   ],
+   "providers": {
+      "@gebeto/store.raycast.translate": {
+         "entrypoints": {
+            "instant-translate-copy": {
+               "enabled": false
+            },
+            "instant-translate-paste": {
+               "enabled": false
+            },
+            "instant-translate-view": {
+               "enabled": false
+            },
+            "translate": {
+               "enabled": false
+            },
+            "translate-form": {
+               "enabled": false
+            }
+         }
+      },
+      "applications": {
+         "preferences": {
+            "paths": [
+               "/home/bypass/.local/share/applications",
+               "/home/bypass/.local/share/flatpak/exports/share/applications",
+               "/var/lib/flatpak/exports/share/applications",
+               "/usr/local/share/applications",
+               "/usr/share/applications"
+            ]
+         }
+      },
+      "core": {
+         "entrypoints": {
+            "about": {
+               "enabled": false
+            },
+            "documentation": {
+               "enabled": false
+            },
+            "prune-memory": {
+               "enabled": false
+            },
+            "refresh-apps": {
+               "enabled": false
+            },
+            "report-bug": {
+               "enabled": false
+            },
+            "settings": {
+               "alias": "vc",
+               "enabled": true
+            },
+            "sponsor": {
+               "enabled": false
+            }
+         }
+      },
+      "developer": {
+         "enabled": false,
+         "entrypoints": {
+            "create": {
+               "enabled": false
+            }
+         }
+      },
+      "files": {
+         "enabled": false,
+         "preferences": {
+            "autoIndexing": false,
+            "excludedIndexingPaths": [],
+            "indexingPaths": [
+               "/home/bypass"
+            ]
+         },
+         "entrypoints": {
+            "rebuild-index": {
+               "enabled": false
+            },
+            "search": {
+               "enabled": false
+            }
+         }
+      },
+      "font": {
+         "enabled": false
+      },
+      "scripts": {
+         "preferences": {
+            "customDirs": [
+               "/home/bypass/.local/bin"
+            ]
+         }
+      },
+      "shortcuts": {
+         "entrypoints": {
+            "2c6ab20b-94f8-47c5-aa4a-916749bcc4fe": {
+               "alias": "pdb"
+            },
+            "2eb129a2-7ce7-425b-a619-9cbb1c721032": {
+               "alias": "sr"
+            },
+            "37bd1116-8fc9-4645-802e-3ab2680d383e": {
+               "alias": "aur"
+            },
+            "406ba923-03bf-4270-a5c1-90a8fe71b710": {
+               "alias": "aw"
+            },
+            "4ea4e441-830e-4a8e-a007-bebcac1aff3a": {
+               "alias": "tpb"
+            },
+            "572c2c7d-3df0-40fe-9c02-738030e6c0b7": {
+               "alias": "ar"
+            },
+            "78cd8644-3d45-48ed-881c-0e30a372eec2": {
+               "alias": "goog"
+            },
+            "9074a523-a9ae-43c8-806f-dbc1b596c77a": {
+               "alias": "cb"
+            },
+            "9db89e0a-7380-42dc-9c7f-e83423d3699f": {
+               "alias": "1337"
+            },
+            "b0e0a81d-3bc8-4b30-85a5-c04fbbdb3957": {
+               "enabled": false
+            },
+            "sct-06799ed459ee": {
+               "alias": "gby"
+            },
+            "sct-1ce7ed4fb6d9": {
+               "alias": "sdb"
+            },
+            "sct-6665d2ca9f56": {
+               "alias": "/d"
+            },
+            "sct-9fe657d74c51": {
+               "alias": "ofme"
+            },
+            "sct-be79b5a15212": {
+               "alias": "sgdb"
+            }
+         }
+      },
+      "system": {
+         "entrypoints": {
+            "run": {
+               "alias": ">"
+            }
+         }
+      },
+      "theme": {
+         "enabled": false
+      }
+   }
+}
