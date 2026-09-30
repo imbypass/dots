@@ -4,10 +4,22 @@
 -- windowrule = match:class ^(steam_app_0)$ title:^(World of Warcraft)$, fullscreen on
 hl.window_rule({
     match = {
-        class = "^(steam_app_0)$ title:^(World of Warcraft)$",
+        title = "^(World of Warcraft)$",
     },
     immediate = true,
     render_unfocused = true,
     content = "game",
-    workspace = "8",
+    workspace = "4",
+    fullscreen = true,
+})
+hl.window_rule({
+    match = {
+        title = "^(Battle.net.*)$",
+    },
+    immediate = true,
+    render_unfocused = true,
+    content = "game",
+    workspace = "3",
+    fullscreen = false,
+    center = true,
 })

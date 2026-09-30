@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
 :root {
-    --font-mono: "SpaceMono Nerd Font Propo";
-    --font-head: "Space Grotesk";
+    --font-mono: "JetBrainsMono Nerd Font Propo";
+    --font-head: "Inter";
     --font-main: "Outfit";
 
     --font-display: var(--font-head, "gg sans") !important;
@@ -15,7 +16,7 @@
 }
 
 *.disabled {
-    letter-spacing: -1px;
+    letter-spacing: -1.25px;
 }   
 
 :disabled {
@@ -40,4 +41,34 @@
 
 .wrapper__0d616 {
     height: 0 !important;
+}
+
+
+/* Custom "is typing..." indicator */
+.typingDots_b88801 > .ellipsis_b88801 + .text_b88801 {
+    font-size: 0;
+    height: 16px;
+    > strong {
+        font-size: 12px;
+        &::after {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        &:last-child::after {
+            content: " is yapping...";
+        }
+        &:last-child:not(:first-child)::after {
+            content: " are yapping...";
+        }
+        &:nth-last-child(2)::after {
+            content: " and ";
+        }
+        &:nth-last-child(3)::after {
+            content: ", ";
+        }
+    }
+    &:not(:has(> strong))::after {
+        font-size: 12px;
+        content: "Several people are yapping...";
+    }
 }

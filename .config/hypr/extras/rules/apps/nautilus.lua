@@ -3,6 +3,8 @@ hl.window_rule({
         class = "^(org.gnome.Nautilus)$",
     },
     min_size = "1 1",
+
+    ["hyprbars:bar_color"] = "rgba(0f0f0fff)",
 })
 
 -- windowrule = match:class ^(org.gnome.Nautilus), decorate off

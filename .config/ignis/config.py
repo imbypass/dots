@@ -19,36 +19,36 @@ def clock_widget() -> widgets.EventBox:
     clock_box = widgets.EventBox(
         css_classes=["clock"],
         child=[
-            widgets.Label(
-                css_classes=["clock-hours"],
-                justify="center",
-                label=utils.Poll(
-                    10_000, lambda self: datetime.datetime.now().strftime("%-I:%M")
-                ).bind("output"),
-            ),
+#             widgets.Label(
+#                 css_classes=["clock-hours"],
+#                 justify="center",
+#                 label=utils.Poll(
+#                     10_000, lambda self: datetime.datetime.now().strftime("%-I:%M")
+#                 ).bind("output"),
+#             ),
+# 
 
-
-# widgets.Label(
-#     css_classes=["clock-hours"],
-#     justify="center",
-#     label=utils.Poll(
-#         10_000, lambda self: datetime.datetime.now().strftime("%-I")
-#     ).bind("output"),
-# ),
-# widgets.Label(
-#     css_classes=["clock-discrim"],
-#     justify="center",
-#     label=utils.Poll(
-#         1_000, lambda self: ":"
-#     ).bind("output"),
-# ),
-# widgets.Label(
-#     css_classes=["clock-minutes"],
-#     justify="center",
-#     label=utils.Poll(
-#         1_000, lambda self: datetime.datetime.now().strftime("%M")
-#     ).bind("output"),
-# ),
+widgets.Label(
+    css_classes=["clock-hours"],
+    justify="center",
+    label=utils.Poll(
+        10_000, lambda self: datetime.datetime.now().strftime("%-I")
+    ).bind("output"),
+),
+widgets.Label(
+    css_classes=["clock-discrim"],
+    justify="center",
+    label=utils.Poll(
+        1_000, lambda self: ":"
+    ).bind("output"),
+),
+widgets.Label(
+    css_classes=["clock-minutes"],
+    justify="center",
+    label=utils.Poll(
+        1_000, lambda self: datetime.datetime.now().strftime("%M")
+    ).bind("output"),
+),
 
             widgets.Label(
                 css_classes=["clock-ampm"],

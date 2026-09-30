@@ -17,4 +17,5 @@ hl.env("XDG_UTILS_FILEMANAGER", "nautilus")
 
 hl.env("HYPRSHOT_DIR", "/home/bypass/Pictures/Screenshots/")
 
-hl.env("ARRPC_BRIDGE_PORT", "1337")
+hl.env("ARRPC_BRIDGE_PORT", "1347")
+hl.env("MOCHI_NATIVE_WAYLAND", "1")

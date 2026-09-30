@@ -11,12 +11,14 @@ hl.config({
         hyprbars = {
             enabled = true,
             bar_color = "rgba(0f0f0fff)",
-            bar_height = 34,
+            bar_height = 36,
             bar_blur = false,
             bar_title_enabled = true,
-            bar_text_size = 14,
+            bar_text_size = 13,
+            -- bar_text_size = 12,
             bar_text_weight =  bold,
-            bar_text_font = "Space Grotesk SemiBold",
+            bar_text_font = "Inter Display SemiBold",
+            -- bar_text_font = "JetBrainsMono Nerd Font Mono",
             bar_text_align = "left",
             bar_buttons_alignment = "right",
             bar_part_of_window = true,
@@ -34,28 +36,38 @@ hl.window_rule({
     ["hyprbars:no_bar"] = true,
 })
 
-
+-- CLOSE BUTTON
 hl.plugin.hyprbars.add_button({
     bg_color = "rgba(00000000)",
     fg_color = "rgba(ffffffff)",
-    size = 28,
+    size = 22,
     icon = "󰅖",
     action = "hyprctl dispatch 'hl.dsp.window.close()'",
 
 })
-
+-- FULLSCREEN BUTTON
 hl.plugin.hyprbars.add_button({
     bg_color = "rgba(00000000)",
     fg_color = "rgba(ffffffff)",
-    size = 21,
-    icon = "󱓼",
+    size = 20,
+    icon = "",
     action = "hyprctl dispatch 'hl.dsp.window.fullscreen({ mode = 1 })'",
 })
 
-hl.plugin.hyprbars.add_button({
-    bg_color = "rgba(00000000)",
-    fg_color = "rgba(ffffffff)",
-    size = 24,
-    icon = "",
-    action = "hyprctl dispatch 'hl.dsp.window.move({ workspace = \"special:discord\", follow = false })'",
-})
+-- -- FULLSCREEN BUTTON
+-- hl.plugin.hyprbars.add_button({
+--     bg_color = "rgba(00000000)",
+--     fg_color = "rgba(ffffffff)",
+--     size = 21,
+--     icon = "󱓼",
+--     action = "hyprctl dispatch 'hl.dsp.window.fullscreen({ mode = 1 })'",
+-- })
+
+-- -- HIDE WINDOW BUTTON
+-- hl.plugin.hyprbars.add_button({
+--     bg_color = "rgba(00000000)",
+--     fg_color = "rgba(ffffffff)",
+--     size = 24,
+--     icon = "",
+--     action = "hyprctl dispatch 'hl.dsp.window.move({ workspace = \"special:discord\", follow = false })'",
+-- })

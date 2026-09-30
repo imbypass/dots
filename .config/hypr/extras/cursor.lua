@@ -1,5 +1,5 @@
-hl.env("HYPRCURSOR_THEME", "Qogir")
-hl.env("XCURSOR_THEME", "Qogir")
+hl.env("HYPRCURSOR_THEME", "Phinger Cursors (dark)")
+hl.env("XCURSOR_THEME", "Phinger Cursors (dark)")
 hl.env("HYPRCURSOR_SIZE", "24")
 hl.env("XCURSOR_SIZE", "24")
 

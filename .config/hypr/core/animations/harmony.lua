@@ -46,20 +46,6 @@ hl.animation({
     bezier = "md3_decel",
 })
 hl.animation({
-    leaf = "layersIn",
-    enabled = true,
-    speed = 3,
-    bezier = "menu_decel",
-    style = "popin 60%",
-})
-hl.animation({
-    leaf = "layersOut",
-    enabled = true,
-    speed = 1.6,
-    bezier = "menu_accel",
-    style = "popout 60%",
-})
-hl.animation({
     leaf = "fadeLayersIn",
     enabled = true,
     speed = 2,

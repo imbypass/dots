@@ -9,20 +9,20 @@ fi
 
 WP_EXTENSION="${2##*.}"
 
-cp $2 $HOME/.local/share/wallpapers/.wallpaper
+cp $2 $HOME/.local/share/wallpapers/.${MONITOR_NAME}
 
 # create visible versions with extensions for other tools
-cp $HOME/.local/share/wallpapers/.wallpaper $HOME/.local/share/wallpapers/wallpaper.png
-cp $HOME/.local/share/wallpapers/.wallpaper $HOME/.local/share/wallpapers/wallpaper.jpg
-ln -nsf "$HOME/.local/share/wallpapers/.wallpaper" "$HOME/.config/omarchy/current/background"
+cp $HOME/.local/share/wallpapers/.${MONITOR_NAME} $HOME/.local/share/wallpapers/${MONITOR_NAME}.png
+cp $HOME/.local/share/wallpapers/.${MONITOR_NAME} $HOME/.local/share/wallpapers/${MONITOR_NAME}.jpg
+ln -nsf "$HOME/.local/share/wallpapers/.${MONITOR_NAME}" "$HOME/.config/omarchy/current/background"
 
 # set wallpaper
 
-echo "$2" > ~/.local/share/wallpapers/.wallpaper_path
+echo "$2" > ~/.local/share/wallpapers/.${MONITOR_NAME}_path
 
 if [[ $WP_EXTENSION != "mp4" ]]; then
     killall -9 mpvpaper > /dev/null 2>&1
-    awww img "$HOME/.local/share/wallpapers/wallpaper.png" \
+    awww img "$HOME/.local/share/wallpapers/${MONITOR_NAME}.png" \
         -t fade \
         --transition-fps 30 \
         --transition-duration 0.3 \
@@ -31,7 +31,7 @@ if [[ $WP_EXTENSION != "mp4" ]]; then
 else
 	echo "Video detected!"
     killall -9 mpvpaper > /dev/null 2>&1
-    
+
     mpvpaper \
     -o "no-audio loop" \
     --auto-mode "FULL" \

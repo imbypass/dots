@@ -1,4 +1,4 @@
-require("core.animations.end4")
+require("core.animations.omarchy")
 
 hl.config({
     animations = {

@@ -8,8 +8,8 @@ alias c="config"
 alias cat="bat -p"
 alias cfg="config"
 alias cl="clear"
+alias clear="/usr/bin/clear && fastfetch"
 alias clock="tty-clock -t -c -b -B -C 7"
-alias cp="cp -irv"
 alias ducks="du -cks * | sort -rn | head"
 alias edit="zed ."
 alias ex="exit"
@@ -56,13 +56,19 @@ alias th="thctl"
 alias unset="set --erase"
 alias vpn="protonvpn"
 alias vote="ssh aur@aur.archlinux.org vote $1"
-alias vps="ssh root@imbypass.pw"
+alias vps="ssh root@ssh.imbypass.pw"
 alias wg++="x86_64-w64-mingw32-g++"
 alias x="exit"
 alias ytdl="yt-dlp --format \"bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4]\" $1"
 alias z.="z ."
 alias z="zeditor"
 alias ⏲️="date"
+alias cp="cp -irv"
+
+# Replace cp/mv/rm with zap
+alias cp="zap -c "
+alias mv="zap -m"
+alias rm="zap -d"
 
 alias htsw="harmony-theme-set-wallpaper"
 
@@ -71,7 +77,6 @@ alias ls='eza -lh --group-directories-first --icons=auto'
 alias lsa='ls -a'
 alias lt='eza --tree --level=2 --long --icons --git'
 alias lta='lt -a'
-alias ff="fzf --color=16 --preview 'bat --style=numbers {}'"
 
 function open
     xdg-open $argv >/dev/null 2>&1 &

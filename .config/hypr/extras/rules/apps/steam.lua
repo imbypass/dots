@@ -3,8 +3,10 @@ hl.window_rule({
         class = "^(steam)$",
     },
     min_size = "1 1",
-    workspace = "3",
+    workspace = "2 silent",
     float = true,
+    border_size = 1,
+    ["hyprbars:no_bar"] = true,
 })
 
 hl.window_rule({
@@ -39,16 +41,17 @@ hl.window_rule({
 hl.window_rule({
     match = {
         class = "^(steam_app_0)$",
-    },
-    opacity = "1 1",
-    workspace = "4",
-})
-hl.window_rule({
-    match = {
         class = "^(steam_app_.*)$",
     },
+
     opacity = "1 1",
     workspace = "4",
+    immediate = true,
+    render_unfocused = true,
+    fullscreen = true,
+    content = "game",
+    workspace = "4",
+    ["hyprbars:no_bar"] = true,
 })
 
 hl.window_rule({
@@ -60,4 +63,6 @@ hl.window_rule({
     fullscreen = true,
     content = "game",
     workspace = "4",
+    border_size = 1,
+    ["hyprbars:no_bar"] = true,
 })

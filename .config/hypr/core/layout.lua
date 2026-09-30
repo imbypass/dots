@@ -7,8 +7,8 @@ hl.config({
     },
     general = {
         layout = "dwindle",
-        gaps_in = 4,
-        gaps_out = 8,
+        gaps_in = 5,
+        gaps_out = 10,
         resize_on_border = false,
         snap = {
             enabled = false,

@@ -13,13 +13,17 @@
    "close_on_focus_loss": false,
    "pop_to_root_on_close": true,
    "pop_on_backspace": true,
+   "wrap_navigation": true,
    "escape_key_behavior": "",
    "favicon_service": "google",
    "search_files_in_root": false,
+   "tray": {
+      "enabled": false
+   },
    "font": {
       "rendering": "qt",
       "normal": {
-         "family": "Space Grotesk SemiBold",
+         "family": "Inter Display SemiBold",
          "size": 11
       }
    },
@@ -29,21 +33,25 @@
       },
       "dark": {
          "name": "system",
-         "icon_theme": "Papirus-Dark"
+         "icon_theme": "Win11-dark"
       }
    },
+   "telemetry": {
+      "system_info": false
+   },
    "launcher_window": {
-      "rounding": 16,
-      "opacity": 0.965,
+      "rounding": 12,
+      "opacity": 0.865,
       "client_side_decorations": {
          "enabled": true,
          "rounding": 18,
-         "border_width": 1,
+         "border_width": 2,
          "shadow_size": 18
       },
       "compact_mode": {
          "enabled": true
-      }
+      },
+      "material": "blur"
    },
    "favorites": [
       "applications:steam",

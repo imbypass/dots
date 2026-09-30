@@ -30,6 +30,7 @@ hl.bind("SUPER + SHIFT + ALT + Return", hl.dsp.exec_cmd(TERMINAL .. " -a float")
 hl.bind("SUPER + SHIFT + Escape", hl.dsp.exec_cmd(TERMINAL .. " -e btop"), { description = "Open btop" })
 hl.bind("SUPER + E", hl.dsp.exec_cmd(FILEMANAGER_GUI), { description = "Open Nautilus" })
 hl.bind("SUPER + SHIFT + E", hl.dsp.exec_cmd(TERMINAL .. " -a float-no-pin -e fish -c yazi"), { description = "Open yazi" })
+hl.bind("CTRL + SHIFT + Escape", hl.dsp.exec_cmd("~/.local/bin/session-menu"), { description = "Open Session Menu" })
 
 -- Web Apps
 
@@ -143,8 +144,52 @@ hl.bind("SUPER + SHIFT + 9", hl.dsp.window.move({ workspace = 9, follow = false 
 hl.bind("SUPER + SHIFT + 0", hl.dsp.window.move({ workspace = 10, follow = false }), { dont_inhibit = true, description = "Move window to Workspace 10" })
 
 -- Workspace Naviation (Scroll Wheel)
-hl.bind("SUPER + mouse_down", hl.dsp.focus({ workspace = "e-1" }), { dont_inhibit = true, description = "Scroll Active Workspace Down" })
-hl.bind("SUPER + mouse_up", hl.dsp.focus({ workspace = "e+1" }), { dont_inhibit = true, description = "Scroll Active Workspace Up" })
+-- hl.bind("SUPER + mouse_down", hl.dsp.focus({ workspace = "e-1" }), { dont_inhibit = true, description = "Scroll Active Workspace Down" })
+-- hl.bind("SUPER + mouse_up", hl.dsp.focus({ workspace = "e+1" }), { dont_inhibit = true, description = "Scroll Active Workspace Up" })
+
+local function scrollWorkspace(dir)
+  return function()
+    local mon = hl.get_active_monitor()
+    local ws = hl.get_active_workspace()
+
+    local min, max
+    if mon.name == "HDMI-A-1" then
+      min, max = 1, 4
+    elseif mon.name == "DP-1" then
+      min, max = 6, 7
+    else
+      return -- unknown monitor, do nothing
+    end
+
+    local id = ws.id
+    if id < min or id > max then
+      id = min -- current ws is outside the expected range, snap to start
+    end
+
+    local next
+    if dir == "up" then
+      next = id + 1
+      if next > max then next = min end
+    else
+      next = id - 1
+      if next < min then next = max end
+    end
+
+    hl.dispatch(hl.dsp.focus({ workspace = next }))
+  end
+end
+
+hl.bind("SUPER + mouse_down", scrollWorkspace("down"), { dont_inhibit = true, description = "Scroll Active Workspace Down" })
+hl.bind("SUPER + mouse_up", scrollWorkspace("up"), { dont_inhibit = true, description = "Scroll Active Workspace Up" })
+
+
+
+
+
+
+
+
+
 
 -- Media Keys (Function Keys)
 -- local osdclient = "swayosd-client --monitor \"$(hyprctl monitors -j | jq -r '.[] | select(.focused == true).name')\""

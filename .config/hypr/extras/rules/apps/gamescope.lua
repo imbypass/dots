@@ -9,3 +9,11 @@ hl.window_rule({
     content = "game",
     workspace = "4",
 })
+
+-- hl.window_rule({
+--     match = {
+--         class = "^(.*)$",
+--         fullscreen = 1, -- Or "1" depending on your target fullscreen state
+--     },
+--     confine_pointer = true,
+-- })

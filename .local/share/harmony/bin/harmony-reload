@@ -61,6 +61,13 @@ case "$1" in
     "nautilus")
         nautilus -q > /dev/null 2>&1 & disown
     ;;
+    "noctalia")
+        killall -9 noctalia > /dev/null 2>&1
+        sleep 0.5
+        noctalia & disown
+        sleep 1
+        ~/.local/bin/ujust hide-secondary-sidebar
+    ;;
     "mako")
         sleep .5 && makoctl reload > /dev/null 2>&1
     ;;

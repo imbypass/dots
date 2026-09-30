@@ -16,6 +16,6 @@ end
 
 # Disable fish greeting
 function fish_greeting
-    greeting
-    fetch
+    # greeting
+    fastfetch
 end

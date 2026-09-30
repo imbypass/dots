@@ -65,6 +65,7 @@ hl.window_rule({
     float = true,
     pin = false,
     opacity = "1 1",
+    size = "855 535",
 })
 
 hl.window_rule({

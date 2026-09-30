@@ -2,14 +2,14 @@
 config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
 
 # Font
-font = "SpaceMono"
 font-feature = dlig ss05 liga
 font-style = Medium
-font-size = 9.5
+font-size = 10
 font-thicken = true
 adjust-cell-height = 0
 
 # Window
+gtk-single-instance = true
 window-theme = system
 window-padding-x = 15
 window-padding-y = 8,5
