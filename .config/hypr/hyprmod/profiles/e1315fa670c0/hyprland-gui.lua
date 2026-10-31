@@ -14,7 +14,7 @@ hl.config({
             popups = false,
         },
         inactive_opacity = 0.95,
-        rounding = 6,
+        rounding = 8,
         rounding_power = 3.0,
         shadow = {
             range = 10,

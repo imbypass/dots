@@ -1,6 +1,10 @@
 @import "../omarchy/current/theme/waybar.css";
 @define-color accent rgba(255, 255, 255, 0.6);
 @define-color bright_accent rgba(255, 255, 255, 1.0);
+
+@define-color accent rgba(180, 172, 230, 0.8);
+@define-color bright_accent rgba(180, 172, 230, 1.0);
+
 @define-color bg rgba(12, 12, 12, 0.9);
 
 * {
@@ -14,10 +18,10 @@ window {
     border-radius: 0;
     border: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    font-family: "JetBrainsMono NF";
-    letter-spacing: -1px;
-    font-size: 13.5px;
-    font-weight: 700;
+    font-family: "Space Grotesk";
+    /* letter-spacing: -1px; */
+    font-size: 12px;
+    font-weight: 600;
 }
 
 tooltip {
@@ -61,6 +65,7 @@ menuitem:hover {
 
 #tray {
     color: white;
+    margin-right: 8px;
 }
 
 #clock,
@@ -131,7 +136,7 @@ menuitem:hover {
     background-color: transparent;
     font-size: 16px;
     opacity: 1;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.0);
 }
 #workspaces button.urgent {
     color: @bright_yellow;
@@ -161,25 +166,9 @@ menuitem:hover {
 
 #custom-update {
     color: @accent;
-    margin-right: 8px;
+    margin-right: 6px;
     margin-left: 0px;
     margin-top: -1px;
-}
-
-#custom-tailscale {
-    color: @bright_white;
-    margin-right: 8px;
-    margin-left: 4px;
-    margin-top: -1px;
-    font-size: 16px;
-}
-
-#custom-glorious {
-    color: @bright_white;
-    font-size: 14px;
-    margin-top: -1px;
-    margin-left: 14px;
-    margin-right: 10px;
 }
 
 #custom-screenrecording-indicator {

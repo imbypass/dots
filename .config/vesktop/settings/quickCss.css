@@ -5,7 +5,7 @@
 
 :root {
     --font-mono: "JetBrainsMono Nerd Font Propo";
-    --font-head: "Inter Display Medium";
+    --font-head: "Inter Display";
     --font-main: "Inter Display Bold";
 
     --font-display: var(--font-head, "gg sans") !important;

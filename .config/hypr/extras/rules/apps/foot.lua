@@ -3,7 +3,6 @@ hl.window_rule({
         class = "^(foot)$",
         class = "^(float-no-pin)$",
     },
-    no_blur = false,
     render_unfocused = true,
     immediate = true,
 })

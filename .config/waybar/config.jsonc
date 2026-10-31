@@ -1,4 +1,5 @@
 {
+  "height": 34,
   "layer": "top",
   "position": "top",
   "margin-top": 0,
@@ -84,10 +85,10 @@
   },
   "network": {
     "format-icons": [""],
-    "format-ethernet": "NET <span color=\"#ffffff\">CAT6</span> <span color=\"#ffffff66\">|</span>",
-    "format-disconnected": "NET <span color=\"#ff0000\">NONE</span> <span color=\"#ffffff66\">|</span>",
-    "format": "NET <span color=\"#ffffff\">WIFI</span> <span color=\"#ffffff66\">|</span>",
-    "format-wifi": "NET <span color=\"#ffffff\">WIFI</span> <span color=\"#ffffff66\">|</span>",
+    "format-ethernet": "NET <span color=\"#ffffff\">CAT6</span> <span color=\"#ffffff66\"> |</span>",
+    "format-disconnected": "NET <span color=\"#ff0000\">NONE</span> <span color=\"#ffffff66\"> |</span>",
+    "format": "NET <span color=\"#ffffff\">WIFI</span> <span color=\"#ffffff66\"> |</span>",
+    "format-wifi": "NET <span color=\"#ffffff\">WIFI</span> <span color=\"#ffffff66\"> |</span>",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣ {bandwidthDownBytes}  ⇡ {bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
@@ -125,8 +126,8 @@
     "modules": ["custom/tray", "tray"],
   },
   "tray": {
-    "icon-size": 14,
-    "spacing": 12,
+    "icon-size": 16,
+    "spacing": 10,
   },
   "custom/tray": {
     "tooltip": false,
@@ -161,7 +162,7 @@
     "interval": 1000,
   },
   "custom/update": {
-    "format": "PKG <span color=\"#ffffff\">{text}</span> <span color=\"#ffffff66\">|</span>",
+    "format": "PKG <span color=\"#ffffff\">{text}</span> <span color=\"#ffffff66\"> |</span>",
     "exec": "checkupdates | wc -l",
     "exec-if": "if [[ $(checkupdates | wc -l) -gt 0 ]]; then exit 0; fi; exit 1",
     // "on-click": "fish -c \"foot -a float-no-pin -e omarchy-update\"",

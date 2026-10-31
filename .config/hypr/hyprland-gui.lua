@@ -26,7 +26,7 @@ hl.config({
     },
     general = {
         allow_tearing = true,
-        border_size = 2,
+        border_size = 1,
         snap = {
             enabled = false,
         },
