@@ -6,54 +6,56 @@
 
 local colors = require("extras.plugins.hyprbars_colors")
 
-hl.config({
-    plugin = {
-        hyprbars = {
-            enabled = true,
-            bar_color = "rgba(0f0f0fff)",
-            bar_height = 36,
-            bar_blur = false,
-            bar_title_enabled = true,
-            bar_text_size = 13,
-            -- bar_text_size = 12,
-            bar_text_weight =  bold,
-            bar_text_font = "Inter Display SemiBold",
-            -- bar_text_font = "JetBrainsMono Nerd Font Mono",
-            bar_text_align = "left",
-            bar_buttons_alignment = "right",
-            bar_part_of_window = true,
-            bar_precedence_over_border = true,
-            bar_padding = 14,
-            bar_button_padding = 12,
-            icon_on_hover = false,
+if os.getenv("HYPR_NO_PLUGINS") ~= "1" and hl.plugin.hyprbars ~= nil then
+    hl.config({
+        plugin = {
+            hyprbars = {
+                enabled = true,
+                bar_color = "rgba(0f0f0fff)",
+                bar_height = 36,
+                bar_blur = false,
+                bar_title_enabled = true,
+                -- bar_text_size = 13,
+                bar_text_size = 12,
+                bar_text_weight =  bold,
+                -- bar_text_font = "Inter Display SemiBold",
+                bar_text_font = "JetBrainsMono Nerd Font Propo",
+                bar_text_align = "left",
+                bar_buttons_alignment = "right",
+                bar_part_of_window = true,
+                bar_precedence_over_border = true,
+                bar_padding = 14,
+                bar_button_padding = 12,
+                icon_on_hover = false,
+            },
         },
-    },
-})
+    })
 
-hl.window_rule({
-    name = "no-hyprbars-on-tiled",
-    match = { float = false },
-    ["hyprbars:no_bar"] = true,
-})
+    hl.window_rule({
+        name = "no-hyprbars-on-tiled",
+        match = { float = false },
+        ["hyprbars:no_bar"] = true,
+    })
 
--- CLOSE BUTTON
-hl.plugin.hyprbars.add_button({
-    bg_color = "rgba(00000000)",
-    fg_color = "rgba(ffffffff)",
-    size = 22,
-    icon = "󰅖",
-    action = "hyprctl dispatch 'hl.dsp.window.close()'",
+    -- CLOSE BUTTON
+    hl.plugin.hyprbars.add_button({
+        bg_color = "rgba(00000000)",
+        fg_color = "rgba(ffffffff)",
+        size = 22,
+        icon = "󰅖",
+        action = "hyprctl dispatch 'hl.dsp.window.close()'",
 
-})
--- FULLSCREEN BUTTON
-hl.plugin.hyprbars.add_button({
-    bg_color = "rgba(00000000)",
-    fg_color = "rgba(ffffffff)",
-    size = 20,
-    icon = "",
-    action = "hyprctl dispatch 'hl.dsp.window.fullscreen({ mode = 1 })'",
-})
+    })
+    -- FULLSCREEN BUTTON
+    hl.plugin.hyprbars.add_button({
+        bg_color = "rgba(00000000)",
+        fg_color = "rgba(ffffffff)",
+        size = 20,
+        icon = "",
+        action = "hyprctl dispatch 'hl.dsp.window.fullscreen({ mode = 1 })'",
+    })
 
+end
 -- -- FULLSCREEN BUTTON
 -- hl.plugin.hyprbars.add_button({
 --     bg_color = "rgba(00000000)",

@@ -3,6 +3,7 @@ config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
 
 # Font
 font-feature = dlig ss05 liga
+font-family = "JetBrainsMono NF"
 font-style = Medium
 font-size = 10
 font-thicken = true
@@ -10,6 +11,8 @@ adjust-cell-height = 0
 
 # Window
 gtk-single-instance = true
+quit-after-last-window-closed = false
+initial-window = false
 window-theme = system
 window-padding-x = 15
 window-padding-y = 8,5
@@ -31,3 +34,4 @@ mouse-hide-while-typing = true
 # Keyboard bindings
 keybind = shift+insert=paste_from_clipboard
 keybind = control+insert=copy_to_clipboard
+

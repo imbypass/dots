@@ -21,10 +21,10 @@
       "enabled": false
    },
    "font": {
-      "rendering": "qt",
+      "rendering": "native",
       "normal": {
          "family": "Inter Display SemiBold",
-         "size": 11
+         "size": 10.5
       }
    },
    "theme": {
@@ -33,20 +33,20 @@
       },
       "dark": {
          "name": "system",
-         "icon_theme": "Win11-dark"
+         "icon_theme": "Papirus-Dark"
       }
    },
    "telemetry": {
       "system_info": false
    },
    "launcher_window": {
-      "rounding": 12,
+      "rounding": 8,
       "opacity": 0.865,
       "client_side_decorations": {
          "enabled": true,
          "rounding": 18,
-         "border_width": 2,
-         "shadow_size": 18
+         "border_width": 1,
+         "shadow_size": 9
       },
       "compact_mode": {
          "enabled": true
@@ -54,14 +54,20 @@
       "material": "blur"
    },
    "favorites": [
+      "applications:com.mitchellh.ghostty",
+      "applications:AnyPS5-Studio-1.1.5",
+      "applications:io.github.bluemancz.hyprmod",
+      "applications:gamebounty",
+      "applications:ai.storyteller.photocraft",
+      "applications:amethyst-mod-manager",
+      "applications:spotifast",
+      "applications:pro.tuxcore.Lightforge",
+      "applications:xodus-nexus",
       "applications:steam",
       "applications:com.spotify.Client",
       "applications:spotify-launcher",
-      "applications:wootility",
-      "applications:pinned-app-2",
       "applications:chrome-mdjpfbokiopdhidmalnpnmekjbajopld-Default",
       "applications:chromium",
-      "applications:foot",
       "applications:vesktop",
       "applications:org.gnome.Nautilus",
       "applications:spotify",

@@ -5,8 +5,8 @@
 
 :root {
     --font-mono: "JetBrainsMono Nerd Font Propo";
-    --font-head: "Inter";
-    --font-main: "Outfit";
+    --font-head: "Inter Display Medium";
+    --font-main: "Inter Display Bold";
 
     --font-display: var(--font-head, "gg sans") !important;
     --font-headline: var(--font-head, "gg sans") !important;
@@ -15,8 +15,8 @@
     --font-code: var(--font-mono, "Hack") !important;
 }
 
-*.disabled {
-    letter-spacing: -1.25px;
+* {
+    /* letter-spacing: -1.25px; */
 }   
 
 :disabled {

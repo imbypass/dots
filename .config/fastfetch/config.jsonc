@@ -30,20 +30,20 @@
     },
     {
       "type": "kernel",
-      "format": "{2}"
+      "format": "{1} {#bright_black}({2}){#white}"
     },
     "de",
     {
       "type": "wm",
-      "format": "{1} ({5})"
+      "format": "{1} {#bright_black}({5}){#white}"
     },
     {
       "type": "terminal",
-      "format": "{1} ({6})"
+      "format": "{1} {#bright_black}({6}){#white}"
     },
     {
       "type": "shell",
-      "format": "{1} ({4})"
+      "format": "{1} {#bright_black}({4}){#white}"
     },
     {
       "type": "cpu",
@@ -65,7 +65,7 @@
     {
       "type": "command",
       "key": " ",
-      "text": "char=\"✖\"; echo -e \"\\e[0;90m${char} \\e[0;37m  ${char} \\e[0;31m  ${char} \\e[0;33m  ${char} \\e[0;32m  ${char} \\e[0;34m  ${char} \\e[0;36m  ${char} \\e[0;35m  ${char} \""
+      "text": "char=\"✖\"; echo -e \"\\e[0;90m${char} \\e[0;37m  ${char} \\e[0;31m  ${char} \\e[0;33m  ${char} \\e[0;32m  ${char} \\e[0;34m  ${char} \\e[0;36m  ${char} \\e[0;35m  ${char}\\e[0;37m   \""
     },
     "break"
   ]

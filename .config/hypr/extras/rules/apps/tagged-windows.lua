@@ -24,6 +24,20 @@ hl.window_rule({
 })
 
 hl.window_rule({
+    name = "calendar",
+    match = {
+        class = "^(calendar)$",
+    },
+    float = true,
+    pin = true,
+    size = "685 452",
+    opacity = "1 1",
+    move = "1500 306",
+    move = "1860 34",
+})
+
+
+hl.window_rule({
     name = "bluetooth-switcher",
     match = {
         class = "^(bluetooth)$",
@@ -48,19 +62,20 @@ hl.window_rule({
 })
 
 hl.window_rule({
-    name = "floating-window",
+    name = "float",
     match = {
-        class = "^(float)$",
+        class = "^(window.float)$",
     },
     float = true,
     pin = true,
     opacity = "1 1",
+    size = "855 535",
 })
 
 hl.window_rule({
-    name = "floating-no-pin",
+    name = "float-no-pin",
     match = {
-        class = "^(float-no-pin)$",
+        class = "^(window.float-no-pin)$",
     },
     float = true,
     pin = false,
@@ -85,3 +100,30 @@ hl.window_rule({
     float = true,
     pin = true,
 })
+
+if os.getenv("HYPR_NO_PLUGINS") ~= "1" and hl.plugin.hyprbars ~= nil then
+    hl.window_rule({
+        match = {
+            class = "^(sinkswitch)$",
+        },
+        ["hyprbars:no_bar"] = true,
+    })
+    hl.window_rule({
+        match = {
+            class = "^(wifi)$",
+        },
+        ["hyprbars:no_bar"] = true,
+    })
+    hl.window_rule({
+        match = {
+            class = "^(bluetooth)$",
+        },
+        ["hyprbars:no_bar"] = true,
+    })
+    hl.window_rule({
+        match = {
+            class = "^(sinkswitch)$",
+        },
+        ["hyprbars:no_bar"] = true,
+    })
+end

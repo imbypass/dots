@@ -9,6 +9,7 @@ hl.layer_rule({
         namespace = "no_anim",
         namespace = "walker",
         namespace = "vicinae",
+        namespace = "ignis.*",
     },
     no_anim = true,
 })
@@ -20,7 +21,6 @@ hl.layer_rule({
         namespace = "launcher",
         namespace = "waybar",
         namespace = "walker",
-        namespace = "ignis.*",
         namespace = "swayosd",
         namespace = "vicinae",
         namespace = "nwg-dock",
@@ -34,9 +34,9 @@ hl.layer_rule({
     match = {
         namespace = "notifications",
         namespace = "walker",
-        namespace = "ignis.*",
         namespace = "nwg-dock",
         namespace = "vicinae",
+        namespace = "ignis.*",
     },
     ignore_alpha = 0.5,
 })
@@ -48,6 +48,7 @@ hl.layer_rule({
     },
     ignore_alpha = 0,
 })
+
 
 hl.layer_rule({
     name = "lockscreen",

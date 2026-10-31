@@ -1,5 +1,5 @@
 background-color=#0a0a0c
-border-color=#121215
+border-color=#121212
 text-color=#eaeaea
 
 [urgency=low]
@@ -7,7 +7,7 @@ border-color=#1f1f21
 text-color=#b2b5b3
 
 [urgency=normal]
-border-color=#1f1f21
+border-color=#1f1f1f
 
 [urgency=critical]
 background-color=#0a0a0c

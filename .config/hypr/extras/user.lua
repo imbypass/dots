@@ -1,12 +1,13 @@
 hl.env("WINEDEBUG", "fixme-all")
-hl.env("MANPAGER", "nvim +Man!")
+hl.env("MANROFFOPT", "-c")
+hl.env("MANPAGER", "/home/bypass/.local/bin/manpager")
 hl.env("BAT_THEME", "base16")
 hl.env("ANI_CLI_MODE", "dub")
 hl.env("TERM", "xterm-256color")
 
 hl.env("SHELL", "/usr/bin/fish")
-hl.env("VISUAL", "nvim")
-hl.env("EDITOR", "nvim")
+hl.env("VISUAL", "msedit")
+hl.env("EDITOR", "msedit")
 
 hl.env("TERMINAL", "xdg-terminal-exec")
 hl.env("XDG_UTILS_TERMINAL", "xdg-terminal-exec")

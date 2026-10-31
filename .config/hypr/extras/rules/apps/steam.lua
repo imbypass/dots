@@ -3,18 +3,16 @@ hl.window_rule({
         class = "^(steam)$",
     },
     min_size = "1 1",
-    workspace = "2 silent",
+    workspace = "7 silent",
     float = true,
-    border_size = 1,
-    ["hyprbars:no_bar"] = true,
 })
 
 hl.window_rule({
     match = {
         title = "^(Steam Big Picture Mode)$",
-        class = "^(steam)$",
     },
-    fullscreen = true,
+    fullscreen = false,
+    size = "1920 1080",
 })
 
 hl.window_rule({
@@ -41,17 +39,23 @@ hl.window_rule({
 hl.window_rule({
     match = {
         class = "^(steam_app_0)$",
+    },
+
+    opacity = "1 1",
+    immediate = true,
+    render_unfocused = true,
+    content = "game",
+})
+
+hl.window_rule({
+    match = {
         class = "^(steam_app_.*)$",
     },
 
     opacity = "1 1",
-    workspace = "4",
     immediate = true,
     render_unfocused = true,
-    fullscreen = true,
     content = "game",
-    workspace = "4",
-    ["hyprbars:no_bar"] = true,
 })
 
 hl.window_rule({
@@ -63,6 +67,39 @@ hl.window_rule({
     fullscreen = true,
     content = "game",
     workspace = "4",
-    border_size = 1,
-    ["hyprbars:no_bar"] = true,
 })
+
+if os.getenv("HYPR_NO_PLUGINS") ~= "1" and hl.plugin.hyprbars ~= nil then
+    hl.window_rule({
+        match = {
+            class = "^(steam)$",
+        },
+        ["hyprbars:no_bar"] = true,
+    })
+    hl.window_rule({
+        match = {
+            title = "^(Steam Big Picture Mode)$",
+        },
+        ["hyprbars:no_bar"] = true,
+    })
+
+    hl.window_rule({
+        match = {
+            class = "^(steam_app_0)$",
+        },
+        ["hyprbars:no_bar"] = true,
+    })
+    hl.window_rule({
+        match = {
+            class = "^(steam_app_.*)$",
+        },
+        ["hyprbars:no_bar"] = true,
+    })
+
+    hl.window_rule({
+        match = {
+            class = "*(steam)$",
+        },
+        ["hyprbars:no_bar"] = true,
+    })
+end

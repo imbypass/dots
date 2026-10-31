@@ -18,30 +18,30 @@ hl.on("hyprland.start", function()
     -- TRAY INDICATORS
     -- hl.exec_cmd("kdeconnectd &")
     -- hl.exec_cmd("kdeconnect-indicator &")
---     hl.exec_cmd("nm-applet &")
+    -- hl.exec_cmd("nm-applet &")
 
     -- POPUPS
-    -- hl.exec_cmd("mako &")
-    -- hl.exec_cmd("swayosd-server &")
+    hl.exec_cmd("mako &")
 
     -- INTERFACE
     -- hl.exec_cmd("~/.local/bin/mxw-low-battery-alert &")
-    -- hl.exec_cmd("sleep 8 && fish -c \"~/.local/share/harmony/bin/harmony-reload waybar &\"")
+    hl.exec_cmd("sleep 3 && fish -c \"~/.local/share/harmony/bin/harmony-reload waybar &\"")
 
     -- LOCK SCREEN
-    hl.exec_cmd("sleep .5 && hyprlock &")
+    -- hl.exec_cmd("sleep .5 && hyprlock &")
 
     -- SHELL
     hl.exec_cmd("vicinae server &")
-    hl.exec_cmd("noctalia --daemon &")
+    -- hl.exec_cmd("noctalia --daemon &")
     hl.exec_cmd("ignis init &")
 
     -- APPLICATIONS
+    -- hl.exec_cmd("ghostty --initial-window=false &")
     hl.exec_cmd("~/.local/bin/audio-fix &")
+    hl.exec_cmd("~/.local/bin/ujust hide-sidebar-sec &")
     hl.exec_cmd("sleep 3 && fish -c arrpc &")
+    hl.exec_cmd("sleep 4 && hyprctl dispatch 'hl.dsp.exec_cmd(\"MOCHI_NATIVE_WAYLAND=1 /home/bypass/.local/bin/mochi &\")'")
     hl.exec_cmd("sleep 4 && hyprctl dispatch 'hl.dsp.exec_cmd(\"harmony-reload vicinae\")'")
-    hl.exec_cmd("sleep 6 && vesktop &")
-    hl.exec_cmd("sleep 8 && steam -silent &")
-    hl.exec_cmd("sleep 9 && ~/.local/bin/ujust hide-secondary-sidebar")
-    hl.exec_cmd("MOCHI_NATIVE_WAYLAND=1 mochi &")
+    hl.exec_cmd("sleep 6 && steam -silent &")
+    hl.exec_cmd("sleep 8 && hyprctl dispatch 'hl.dsp.exec_cmd(\"vesktop --ozone-platform-hint=auto &\")'")
 end)

@@ -1,10 +1,10 @@
 #!/bin/bash
 
-LOGO="$HOME/.local/share/omarchy/logo.txt"
+LOGO="$HOME/.config/fastfetch/logo2.txt"
 
 clear
 echo -e "\033[29m"
 while IFS= read -r line; do
-    harmony-echo-center "$line"
+    echo "$line"
 done < "$LOGO"
 echo -e "\033[0m"

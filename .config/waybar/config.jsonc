@@ -35,6 +35,9 @@
     "show-special": false,
     "all-outputs": false,
     "format": "{icon}",
+    "format-icons": {
+        "active": "󱓻"
+    },
     "active-only": false,
     "persistent-workspaces": { "HDMI-A-1": 1 },
     "on-scroll-up": "hyprctl eval 'hl.dispatch(hl.dsp.focus({ workspace = \"e+1\" }))'",
@@ -42,7 +45,9 @@
   },
   "clock": {
     "format": "UTC-4 <span color=\"#ffffff\">{:%I:%M %p}</span>",
-    "tooltip-format": "{:%a, %b%e, %Y}",
+    "tooltip-format": "{:%A, %b. %e, %Y}",
+    "on-click": "foot -a calendar -e chroncal",
+    "on-click-right": "foot -a calendar -e chroncal",
   },
   "pulseaudio": {
     "format": "VOL <span color=\"#ffffff\">{volume}%</span> <span color=\"#ffffff66\">| </span>",
@@ -117,7 +122,7 @@
       "click-to-reveal": true,
       "transition-left-to-right": false,
     },
-    "modules": ["custom/tray", "tray", "custom/glorious", "custom/tailscale"],
+    "modules": ["custom/tray", "tray"],
   },
   "tray": {
     "icon-size": 14,

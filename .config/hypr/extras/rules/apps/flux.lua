@@ -20,5 +20,13 @@ hl.window_rule({
     no_shadow = true,
     no_blur = true,
     decorate = false,
-    ["hyprbars:no_bar"] = true,
 })
+
+if os.getenv("HYPR_NO_PLUGINS") ~= "1" and hl.plugin.hyprbars ~= nil then
+    hl.window_rule({
+        match = {
+            class = "^(flux-screen)$",
+        },
+        ["hyprbars:no_bar"] = true,
+    })
+end

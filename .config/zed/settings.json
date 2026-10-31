@@ -1,6 +1,35 @@
 // Zed settings
 {
+  "ssh_connections": [
+    {
+      "host": "144.217.13.245",
+      "username": "root",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/var/www/html"
+          ]
+        }
+      ]
+    }
+  ],
   "agent_servers": {
+    "grok-build": {
+      "type": "registry"
+    },
+    "gemini": {
+      "type": "registry"
+    },
+    "cursor": {
+      "type": "registry"
+    },
+    "github-copilot-cli": {
+      "type": "registry"
+    },
+    "codex-acp": {
+      "type": "registry"
+    },
     "claude-acp": {
       "type": "registry"
     }
@@ -33,8 +62,8 @@
     "default_model": {
       "effort": "high",
       "enable_thinking": true,
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-6"
+      "provider": "anthropic",
+      "model": "claude-sonnet-5-5"
     }
   },
   "format_on_save": "off",

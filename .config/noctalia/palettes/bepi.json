@@ -1,11 +1,11 @@
 {
   "dark": {
     "mPrimary": "#aaaaaa",
-    "mOnPrimary": "#111111",
+    "mOnPrimary": "#0F0F0F",
     "mSecondary": "#a7a7a7",
-    "mOnSecondary": "#111111",
+    "mOnSecondary": "#0F0F0F",
     "mTertiary": "#cccccc",
-    "mOnTertiary": "#111111",
+    "mOnTertiary": "#0F0F0F",
     "mError": "#dddddd",
     "mOnError": "#111111",
     "mSurface": "#111111",

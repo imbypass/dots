@@ -5,7 +5,6 @@ hl.window_rule({
     immediate = true,
     render_unfocused = true,
     float = true,
-    ["hyprbars:no_bar"] = true,
     border_size = 0,
     no_shadow = true,
     no_blur = true,
@@ -21,7 +20,6 @@ hl.window_rule({
     immediate = true,
     render_unfocused = true,
     float = true,
-    ["hyprbars:no_bar"] = true,
     center = true,
     rounding = 16,
     pin = true,
@@ -29,3 +27,18 @@ hl.window_rule({
     focus_on_activate = true,
     stay_focused = true,
 })
+
+if os.getenv("HYPR_NO_PLUGINS") ~= "1" and hl.plugin.hyprbars ~= nil then
+    hl.window_rule({
+        match = {
+            class = "^(io.github.mochi_desktop.Mochi)$",
+        },
+        ["hyprbars:no_bar"] = true,
+    })
+    hl.window_rule({
+        match = {
+            class = "^(mochi)$",
+        },
+        ["hyprbars:no_bar"] = true,
+    })
+end

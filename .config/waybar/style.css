@@ -1,6 +1,7 @@
 @import "../omarchy/current/theme/waybar.css";
-@define-color accent @blue;
-@define-color bg rgba(16, 16, 16, 0.55);
+@define-color accent rgba(255, 255, 255, 0.6);
+@define-color bright_accent rgba(255, 255, 255, 1.0);
+@define-color bg rgba(12, 12, 12, 0.9);
 
 * {
     border-radius: 0px;
@@ -12,10 +13,11 @@ window {
     background: @bg;
     border-radius: 0;
     border: 0;
-    /*border-bottom: 1px solid @bg;*/
-    font-family: "Space Grotesk";
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-family: "JetBrainsMono NF";
+    letter-spacing: -1px;
     font-size: 13.5px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 tooltip {
@@ -26,7 +28,8 @@ tooltip {
     padding: 0;
 }
 tooltip * {
-    font-family: "Space Grotesk";
+    font-family: "JetBrainsMono NF";
+    font-size: 14px;
     font-weight: 800
 }
 
@@ -37,7 +40,8 @@ menu {
     color: @white;
     padding: 8px;
     font-size: 14px;
-    font-family: "Space Grotesk";
+    font-family: "JetBrainsMono NF";
+    font-weight: 800;
 }
 menu * {
     border-radius: 0;
@@ -111,16 +115,23 @@ menuitem:hover {
     border-radius: 0px;
     border: 0px;
     color: white;
-    padding: 0 7px 0 7px;
+    padding: 0 6px 0 6px;
+    font-size: 13px;
     margin: 0;
+    color: #ffffff;
+    opacity: 0.5;
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
 }
 #workspaces button:hover {
     color: @background;
     background-color: @accent;
 }
 #workspaces button.active {
-    color: @background;
-    background-color: @accent;
+    color: @bright_white;
+    background-color: transparent;
+    font-size: 16px;
+    opacity: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 #workspaces button.urgent {
     color: @bright_yellow;
@@ -132,7 +143,7 @@ menuitem:hover {
     margin: 0;
     margin-top: -1px;
     margin-bottom: -0px;
-    font-size: 16px;
+    font-size: 15px;
 }
 #custom-logo:hover {
     background-color: @accent;

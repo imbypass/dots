@@ -6,25 +6,25 @@ FILENAME="screenshot_${TIMESTAMP}.png"
 
 case "$1" in
     "")
-        hyprshot -m region -z -f ${FILENAME}
+        hyprshot -m region -f ${FILENAME}
     ;;
     "region")
-        hyprshot -m region -z -f ${FILENAME}
+        hyprshot -m region -f ${FILENAME}
     ;;
     "--region")
-        hyprshot -m region -z -f ${FILENAME}
+        hyprshot -m region -f ${FILENAME}
     ;;
     "screen")
-        hyprshot -m output -z -f ${FILENAME}
+        hyprshot -m output -f ${FILENAME}
     ;;
     "--screen")
-        hyprshot -m output -z -f ${FILENAME}
+        hyprshot -m output -f ${FILENAME}
     ;;
     "window")
-        hyprshot -m window -z -f ${FILENAME}
+        hyprshot -m window -f ${FILENAME}
     ;;
     "--window")
-        hyprshot -m window -z -f ${FILENAME}
+        hyprshot -m window -f ${FILENAME}
     ;;
 esac
 

@@ -94,6 +94,10 @@ cat > "$output_file" << EOF
     @define-color content_view_bg @black;
     @define-color text_view_bg @black;
 
+	*.disabled {
+		letter-spacing: -1px;
+	}
+
     messagedialog {
         background-color: @dialog_bg_color;
     }
@@ -169,6 +173,10 @@ cat > "$output_file" << EOF
     toast button.circular.flat.image-button:hover {
         color: @background;
         background-color: @red;
+    }
+    
+    window {
+      backdrop-filter: blur(20px);
     }
 
     /* .svg-icon {

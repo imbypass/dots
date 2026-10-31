@@ -57,3 +57,9 @@ pidof Hyprland >/dev/null || start-hyprland & disown
 # If not running interactively, don't do anything
 #[[ $- != *i* ]] && return
 #fish
+# >>> Photon CLI >>>
+case ":$PATH:" in
+  *:'/home/bypass/.photon/bin':*) ;;
+  *) export PATH="$PATH":'/home/bypass/.photon/bin' ;;
+esac
+# <<< Photon CLI <<<

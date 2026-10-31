@@ -13,6 +13,15 @@ hl.window_rule({
     no_initial_focus = true,
     decorate = true,
     float = true,
-    pin = true,
-    ["hyprbars:no_bar"] = true,
+    pin = true
 })
+
+if os.getenv("HYPR_NO_PLUGINS") ~= "1" and hl.plugin.hyprbars ~= nil then
+    hl.window_rule({
+        match = {
+            title = "^(Picture-in-Picture)$",
+            title = "^(Picture in picture)$",
+        },
+        ["hyprbars:no_bar"] = true
+    })
+end

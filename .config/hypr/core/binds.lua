@@ -2,7 +2,6 @@
 local TERMINAL = "foot"
 local FILEMANAGER_GUI = "xdg-open ~"
 
-hl.bind("SUPER + Super_R", hl.dsp.exec_cmd("noctalia msg panel-toggle launcher"), { description = "Open App Launcher" })
 -- hl.bind("SUPER + Super_L", hl.dsp.exec_cmd("vicinae toggle"), { description = "Open App Launcher" })
 
 -- Date/Time Popups
@@ -25,25 +24,23 @@ hl.bind("SUPER + ALT + P", hl.dsp.exec_cmd("harmony-install-aur"), { dont_inhibi
 hl.bind("SUPER + B", hl.dsp.exec_cmd("$BROWSER"), { description = "Open Browser" })
 hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd("$BROWSER --private-window --incognito"), { description = "Open Private Browser" })
 hl.bind("SUPER + Return", hl.dsp.exec_cmd(TERMINAL), { description = "Open Terminal" })
-hl.bind("SUPER + SHIFT + Return", hl.dsp.exec_cmd(TERMINAL .. " -a float-no-pin"), { description = "Open Terminal" })
-hl.bind("SUPER + SHIFT + ALT + Return", hl.dsp.exec_cmd(TERMINAL .. " -a float"), { description = "Open Terminal" })
+hl.bind("SUPER + SHIFT + Return", hl.dsp.exec_cmd(TERMINAL .. " --class=window.float-no-pin"), { description = "Open Terminal" })
+hl.bind("SUPER + SHIFT + ALT + Return", hl.dsp.exec_cmd(TERMINAL .. " --class=window.float"), { description = "Open Terminal" })
 hl.bind("SUPER + SHIFT + Escape", hl.dsp.exec_cmd(TERMINAL .. " -e btop"), { description = "Open btop" })
-hl.bind("SUPER + E", hl.dsp.exec_cmd(FILEMANAGER_GUI), { description = "Open Nautilus" })
-hl.bind("SUPER + SHIFT + E", hl.dsp.exec_cmd(TERMINAL .. " -a float-no-pin -e fish -c yazi"), { description = "Open yazi" })
+hl.bind("SUPER + E", hl.dsp.exec_cmd(FILEMANAGER_GUI), { description = "Open File Manager" })
+hl.bind("SUPER + SHIFT + E", hl.dsp.exec_cmd(TERMINAL .. " --class=window.float-no-pin -e fish -c tfm"), { description = "Open Terminal File Manager" })
 hl.bind("CTRL + SHIFT + Escape", hl.dsp.exec_cmd("~/.local/bin/session-menu"), { description = "Open Session Menu" })
 
 -- Web Apps
 
 local function launch_webapp(key, url)
-    return hl.dsp.exec_cmd("fish -c \"omarchy-launch-webapp " .. url .. "\"")
+    return hl.dsp.exec_cmd("fish -c \"launch-webapp " .. url .. "\"")
 end
-hl.bind("SUPER + SHIFT + Z", launch_webapp("Z", "https://zed.dev"), { description = "Open Zed" })
 hl.bind("SUPER + SHIFT + C", launch_webapp("C", "https://claude.ai"), { description = "Open Claude" })
-hl.bind("SUPER + SHIFT + N", launch_webapp("N", "https://ardb.app"), { dont_inhibit = true, description = "Open ARDB" })
-hl.bind("SUPER + SHIFT + R", launch_webapp("R", "https://reddit.com/r/omarchy"), { description = "Open Reddit" })
+hl.bind("SUPER + SHIFT + R", launch_webapp("R", "https://reddit.com/"), { description = "Open Reddit" })
 hl.bind("SUPER + SHIFT + M", launch_webapp("M", "https://mail.google.com"), { description = "Open Gmail" })
 hl.bind("SUPER + SHIFT + P", launch_webapp("P", "https://app.plex.tv/desktop"), { description = "Open Plex" })
-hl.bind("SUPER + SHIFT + G", launch_webapp("G", "https://play.geforcenow.com/mall"), { description = "Open GeForce Now" })
+hl.bind("SUPER + SHIFT + G", launch_webapp("G", "https://gemini.google.com/app"), { description = "Open GeForce Now" })
 
 -- Wayscriber Bind
 hl.bind("SUPER + SHIFT + P", hl.dsp.exec_cmd("pkill -SIGUSR1 wayscriber discord"), { description = "Open Wayscriber" })
@@ -59,11 +56,11 @@ hl.bind("ALT + TAB", hl.dsp.window.cycle_next({ next = true }), { description = 
 hl.bind("ALT + SHIFT + TAB", hl.dsp.window.cycle_next({ prev = true }), { description = "Cycle to previous window" })
 
 -- Screen Capture
--- hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("fish -c \"harmony-screenshot --region\""), { locked = true, dont_inhibit = true, description = "Take a screenshot of a selected area" })
+hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("fish -c \"harmony-screenshot --region\""), { locked = true, dont_inhibit = true, description = "Take a screenshot of a selected area" })
 hl.bind("SUPER + SHIFT + ALT + S", hl.dsp.exec_cmd("fish -c \"grim - | wl-copy && notify-send -a Harmony -t 3500 Screenshot 'Screenshot copied to clipboard!'\""), { locked = true, dont_inhibit = true, description = "Take a screenshot of ALL monitors" })
 
-hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("fish -c \"noctalia msg screenshot-region\""), { locked = true, dont_inhibit = true, description = "" })
-hl.bind("SUPER + SHIFT + ALT + S", hl.dsp.exec_cmd("fish -c \"noctalia msg screenshot-fullscreen all\""), { locked = true, dont_inhibit = true, description = "" })
+-- hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("fish -c \"noctalia msg screenshot-region\""), { locked = true, dont_inhibit = true, description = "" })
+-- hl.bind("SUPER + SHIFT + ALT + S", hl.dsp.exec_cmd("fish -c \"noctalia msg screenshot-fullscreen all\""), { locked = true, dont_inhibit = true, description = "" })
 
 -- Notifications
 -- hl.bind("SUPER + COMMA", hl.dsp.exec_cmd("makoctl dismiss"), { description = "Dismiss last notification" })
