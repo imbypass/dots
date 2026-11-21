@@ -26,20 +26,20 @@ format = "[\ue0b6](fg:bright-black)[ 󰔚 $duration ](bg:bright-black fg:bright-
 "Developer" = " 󰲋 Developer"
 
 [directory]
-style = "blue"
+style = "yellow"
 home_symbol = " "
 truncation_length = 3
 truncation_symbol = ""
 truncate_to_repo = false
 read_only = ""
-format = "[\ue0b6](fg:bright-blue)[󰉋 → $path](bg:bright-blue fg:black)[\ue0b4](fg:bright-blue)"
+format = "[\ue0b6](fg:yellow)[󰉋 → $path](bg:yellow fg:black)[\ue0b4](fg:yellow)"
 
 [character]
-success_symbol = "[ ](bright-blue) [  ](bright-blue)"
-error_symbol = "[ ](bright-red) [  ](bright-blue)"
+success_symbol = "[ ](yellow) [  ](yellow)"
+error_symbol = "[ ](bright-red) [  ](yellow)"
 
 [git_branch]
-format = "[$branch]($style)"
+format = " [$branch]($style)"
 style = "bright-black"
 
 [git_status]

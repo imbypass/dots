@@ -9,7 +9,7 @@ anchor=top-right
 outer-margin=20
 default-timeout=10000
 max-icon-size=30
-font=Space Grotesk Bold 12
+font=Allo Variable 11
 border-radius=8
 
 [mode=do-not-disturb]

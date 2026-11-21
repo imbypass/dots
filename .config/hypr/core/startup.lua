@@ -1,8 +1,10 @@
--- Setup XDG
 hl.on("hyprland.start", function()
+
+    -- STARTUP SOUND
     hl.exec_cmd("sleep 3 && /usr/bin/mpv --no-video --volume=150 /home/bypass/.local/share/startup.mp3 2>/dev/null")
 
     -- ESSENTIAL INIT
+    hl.exec_cmd("~/.local/bin/keyring-unlock.sh")
     hl.exec_cmd("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
     hl.exec_cmd("~/.local/share/harmony/bin/harmony-initialize xdg")
     hl.exec_cmd("~/.local/share/harmony/bin/harmony-initialize dbus")
@@ -15,33 +17,27 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("mpd &")
     hl.exec_cmd("wl-clip-persist --clipboard both &")
 
-    -- TRAY INDICATORS
-    -- hl.exec_cmd("kdeconnectd &")
-    -- hl.exec_cmd("kdeconnect-indicator &")
-    -- hl.exec_cmd("nm-applet &")
+    -- FREE CLAUDE
+    hl.exec_cmd("~/.local/bin/fcc-server &")
 
     -- POPUPS
     hl.exec_cmd("mako &")
 
     -- INTERFACE
-    -- hl.exec_cmd("~/.local/bin/mxw-low-battery-alert &")
     hl.exec_cmd("sleep 3 && fish -c \"~/.local/share/harmony/bin/harmony-reload waybar &\"")
+    hl.exec_cmd("~/.local/bin/audio-fix &")
 
-    -- LOCK SCREEN
-    -- hl.exec_cmd("sleep .5 && hyprlock &")
-
-    -- SHELL
+    -- LAUNCHER
     hl.exec_cmd("vicinae server &")
-    -- hl.exec_cmd("noctalia --daemon &")
-    hl.exec_cmd("ignis init &")
+    hl.exec_cmd("sleep 4 && hyprctl dispatch 'hl.dsp.exec_cmd(\"harmony-reload vicinae\")'")
 
     -- APPLICATIONS
-    -- hl.exec_cmd("ghostty --initial-window=false &")
-    hl.exec_cmd("~/.local/bin/audio-fix &")
-    hl.exec_cmd("~/.local/bin/ujust hide-sidebar-sec &")
-    hl.exec_cmd("sleep 3 && fish -c arrpc &")
-    hl.exec_cmd("sleep 4 && hyprctl dispatch 'hl.dsp.exec_cmd(\"MOCHI_NATIVE_WAYLAND=1 /home/bypass/.local/bin/mochi &\")'")
-    hl.exec_cmd("sleep 4 && hyprctl dispatch 'hl.dsp.exec_cmd(\"harmony-reload vicinae\")'")
     hl.exec_cmd("sleep 6 && steam -silent &")
-    hl.exec_cmd("sleep 8 && hyprctl dispatch 'hl.dsp.exec_cmd(\"vesktop --ozone-platform-hint=auto &\")'")
+    hl.exec_cmd("sleep 6 && spotifast --start-hidden &")
+    hl.exec_cmd("sleep 6 && /home/bypass/.local/bin/launch-webapp \"https://discord.com/app\" &")
+
+    -- BACKGROUND SERVICES
+    hl.exec_cmd("sleep 6 && /home/bypass/Applications/openmouse_bridge.appimage")
+    hl.exec_cmd("sleep 7 && /home/bypass/.local/bin/Wooting.Background.Service_0.5.0_amd64.AppImage")
+
 end)

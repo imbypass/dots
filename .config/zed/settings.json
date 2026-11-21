@@ -1,5 +1,6 @@
 // Zed settings
 {
+  "agent_ui_font_size": 15.0,
   "ssh_connections": [
     {
       "host": "144.217.13.245",
@@ -15,23 +16,15 @@
     }
   ],
   "agent_servers": {
-    "grok-build": {
-      "type": "registry"
-    },
     "gemini": {
-      "type": "registry"
-    },
-    "cursor": {
-      "type": "registry"
-    },
-    "github-copilot-cli": {
       "type": "registry"
     },
     "codex-acp": {
       "type": "registry"
     },
     "claude-acp": {
-      "type": "registry"
+      "type": "custom",
+      "command": "/home/bypass/.local/bin/fcc-claude"
     }
   },
   "cli_default_open_behavior": "existing_window",
@@ -50,7 +43,11 @@
   "edit_predictions": {
     "provider": "zed"
   },
-  "icon_theme": "JetBrains New UI Icons (Dark)",
+  "icon_theme": {
+    "mode": "system",
+    "light": "JetBrains New UI Icons (Dark)",
+    "dark": "JetBrains New UI Icons (Dark)"
+  },
   "show_completions_on_input": false,
   "language_servers": ["!eslint"],
   "base_keymap": "VSCode",
@@ -61,7 +58,7 @@
     },
     "default_model": {
       "effort": "high",
-      "enable_thinking": true,
+      "enable_thinking": false,
       "provider": "anthropic",
       "model": "claude-sonnet-5-5"
     }
@@ -69,9 +66,9 @@
   "format_on_save": "off",
   "vim_mode": false,
   "theme": "Omarchy",
-  "ui_font_size": 16.5,
-  "ui_font_weight": 600.0,
-  "ui_font_family": "Space Grotesk",
+  "ui_font_size": 15.0,
+  "ui_font_weight": 500.0,
+  "ui_font_family": "Allo Variable",
   "buffer_font_size": 13.0,
   "buffer_font_weight": 600.0,
   "buffer_font_family": "JetBrainsMono Nerd Font Propo",

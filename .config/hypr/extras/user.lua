@@ -20,3 +20,5 @@ hl.env("HYPRSHOT_DIR", "/home/bypass/Pictures/Screenshots/")
 
 hl.env("ARRPC_BRIDGE_PORT", "1347")
 hl.env("MOCHI_NATIVE_WAYLAND", "1")
+
+hl.env("EMOJI_FONT", "Fluent Emoji Color")

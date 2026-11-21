@@ -1,4 +1,4 @@
-require("core.animations.omarchy")
+require("core.animations.vertical")
 
 hl.config({
     animations = {

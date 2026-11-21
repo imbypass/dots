@@ -23,7 +23,7 @@
    "font": {
       "rendering": "native",
       "normal": {
-         "family": "Inter Display SemiBold",
+         "family": "Allo Medium",
          "size": 10.5
       }
    },
@@ -32,7 +32,7 @@
          "name": "omarchy"
       },
       "dark": {
-         "name": "system",
+         "name": "leonida",
          "icon_theme": "Papirus-Dark"
       }
    },
@@ -40,7 +40,7 @@
       "system_info": false
    },
    "launcher_window": {
-      "rounding": 8,
+      "rounding": 12,
       "opacity": 0.865,
       "client_side_decorations": {
          "enabled": true,
@@ -49,27 +49,26 @@
          "shadow_size": 9
       },
       "compact_mode": {
-         "enabled": true
+         "enabled": false
       },
       "material": "blur"
    },
    "favorites": [
       "applications:com.mitchellh.ghostty",
       "applications:AnyPS5-Studio-1.1.5",
-      "applications:io.github.bluemancz.hyprmod",
-      "applications:gamebounty",
-      "applications:ai.storyteller.photocraft",
-      "applications:amethyst-mod-manager",
+      "applications:chromium",
+      "applications:org.gnome.Nautilus",
+      "applications:cz.viceverse.serein",
       "applications:spotifast",
-      "applications:pro.tuxcore.Lightforge",
-      "applications:xodus-nexus",
       "applications:steam",
+      "applications:pro.tuxcore.Lightforge",
+      "applications:ai.storyteller.photocraft",
+      "applications:io.github.nobledoodle.ferricone",
+      "applications:xodus-nexus",
       "applications:com.spotify.Client",
       "applications:spotify-launcher",
       "applications:chrome-mdjpfbokiopdhidmalnpnmekjbajopld-Default",
-      "applications:chromium",
       "applications:vesktop",
-      "applications:org.gnome.Nautilus",
       "applications:spotify",
       "applications:chrome-play.geforcenow.com__mall_-Default"
    ],
@@ -97,6 +96,26 @@
             }
          }
       },
+      "@ozer-01/store.vicinae.aria2-manager": {
+         "enabled": false
+      },
+      "ai": {
+         "enabled": false,
+         "entrypoints": {
+            "chat": {
+               "enabled": false
+            },
+            "conversations": {
+               "enabled": false
+            },
+            "last-chat": {
+               "enabled": false
+            },
+            "quick": {
+               "enabled": false
+            }
+         }
+      },
       "applications": {
          "preferences": {
             "paths": [
@@ -108,6 +127,32 @@
             ]
          }
       },
+      "browser-extension": {
+         "enabled": false
+      },
+      "calculator": {
+         "entrypoints": {
+            "history": {
+               "enabled": false
+            },
+            "refresh-rates": {
+               "enabled": false
+            }
+         }
+      },
+      "clipboard": {
+         "entrypoints": {
+            "clear": {
+               "enabled": false
+            },
+            "clear-history": {
+               "enabled": false
+            },
+            "history": {
+               "enabled": false
+            }
+         }
+      },
       "core": {
          "entrypoints": {
             "about": {
@@ -116,20 +161,47 @@
             "documentation": {
                "enabled": false
             },
+            "list-extensions": {
+               "enabled": false
+            },
+            "manage-fallback": {
+               "enabled": false
+            },
+            "open-config-file": {
+               "enabled": false
+            },
+            "open-default-config": {
+               "enabled": false
+            },
             "prune-memory": {
                "enabled": false
             },
             "refresh-apps": {
                "enabled": false
             },
+            "reload-scripts": {
+               "enabled": false
+            },
             "report-bug": {
+               "enabled": false
+            },
+            "search-emojis": {
+               "enabled": false
+            },
+            "search-tray": {
                "enabled": false
             },
             "settings": {
                "alias": "vc",
                "enabled": true
             },
+            "show-logs": {
+               "enabled": false
+            },
             "sponsor": {
+               "enabled": false
+            },
+            "store": {
                "enabled": false
             }
          }
@@ -141,6 +213,9 @@
                "enabled": false
             }
          }
+      },
+      "dictation": {
+         "enabled": false
       },
       "files": {
          "enabled": false,
@@ -161,6 +236,45 @@
          }
       },
       "font": {
+         "enabled": false
+      },
+      "manage-shortcuts": {
+         "entrypoints": {
+            "create": {
+               "enabled": false
+            },
+            "manage": {
+               "enabled": false
+            }
+         }
+      },
+      "media": {
+         "enabled": false
+      },
+      "power": {
+         "entrypoints": {
+            "hibernate": {
+               "enabled": false
+            },
+            "lock": {
+               "enabled": true,
+               "preferences": {
+                  "confirm": false,
+                  "customProgram": "hyprlock"
+               }
+            },
+            "logout": {
+               "enabled": false
+            },
+            "sleep": {
+               "enabled": false
+            },
+            "suspend": {
+               "enabled": false
+            }
+         }
+      },
+      "raycast-compat": {
          "enabled": false
       },
       "scripts": {
@@ -219,14 +333,35 @@
             }
          }
       },
+      "snippets": {
+         "enabled": false,
+         "preferences": {
+            "enabled": true,
+            "undo": true,
+            "layout": "",
+            "prePasteDelay": "0",
+            "keyDelay": "2"
+         }
+      },
       "system": {
+         "enabled": false,
          "entrypoints": {
             "run": {
-               "alias": ">"
+               "alias": ">",
+               "enabled": false
+            },
+            "set-default-browser": {
+               "enabled": false
+            },
+            "set-default-terminal": {
+               "enabled": false
             }
          }
       },
       "theme": {
+         "enabled": false
+      },
+      "wm": {
          "enabled": false
       }
    }

@@ -3,17 +3,19 @@
 -- Environment
 hl.env("XCURSOR_THEME", "Bibata-Modern-Classic")
 hl.env("XCURSOR_SIZE", "22")
+hl.env("GTK_THEME", "Adw-dark")
 
 -- Settings
 hl.config({
     decoration = {
-        active_opacity = 0.95,
+        active_opacity = 1.0,
         blur = {
+            enabled = true,
             noise = 0.05,
             passes = 4,
             popups = false,
         },
-        inactive_opacity = 0.95,
+        inactive_opacity = 1.0,
         rounding = 8,
         rounding_power = 3.0,
         shadow = {
@@ -26,7 +28,6 @@ hl.config({
     },
     general = {
         allow_tearing = true,
-        border_size = 1,
         snap = {
             enabled = false,
         },

@@ -24,7 +24,7 @@ require("vicinae")
 
 hl.config({
     decoration = {
-        screen_shader = "/home/bypass/.config/hypr/shaders/ultra-vib.glsl",
+        -- screen_shader = "/home/bypass/.config/hypr/shaders/ultra-vib.glsl",
     }
 })
 

@@ -7,7 +7,7 @@ hl.window_rule({
     pin = true,
     size = "400 120",
     opacity = "1 1",
-    move = "2082 34",
+    move = "2082 42",
 })
 
 hl.window_rule({
@@ -20,7 +20,7 @@ hl.window_rule({
     size = "400 488",
     opacity = "1 1",
     move = "1500 306",
-    move = "1890 34",
+    move = "1890 42",
 })
 
 hl.window_rule({
@@ -33,7 +33,7 @@ hl.window_rule({
     size = "685 452",
     opacity = "1 1",
     move = "1500 306",
-    move = "1860 34",
+    move = "1864 42",
 })
 
 
@@ -47,7 +47,7 @@ hl.window_rule({
     size = "400 488",
     opacity = "1 1",
     move = "2082 306",
-    move = "2000 34",
+    move = "2000 42",
 })
 
 hl.window_rule({

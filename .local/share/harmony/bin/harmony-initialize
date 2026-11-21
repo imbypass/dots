@@ -8,7 +8,7 @@ case "$1" in
     ;;
     "dbus")
         printf "${BOLD}${BLUE}:: ${RESET}Initializing dbus..\n"
-        dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+        dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=Hyprland
     ;;
     "xdg")
         printf "${BOLD}${BLUE}:: ${RESET}Initializing xdg-desktop-portal..\n"

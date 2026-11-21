@@ -15,7 +15,7 @@
     "custom/logo",
     "hyprland/workspaces",
     "custom/privacy-indicator",
-    "custom/screenrecording-indicator",
+    // "custom/screenrecording-indicator",
     "custom/game-mode-indicator"
   ],
   "modules-center": [
@@ -37,7 +37,7 @@
     "all-outputs": false,
     "format": "{icon}",
     "format-icons": {
-        "active": "󱓻"
+        "reactive": "󱓻"
     },
     "active-only": false,
     "persistent-workspaces": { "HDMI-A-1": 1 },
@@ -57,7 +57,7 @@
     "tooltip-format": "{desc} @ {volume}%",
     "on-click-toggle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "on-click": "foot -a sinkswitch -e harmony-switch-sink",
-    "on-click-right": "foot -a float -e wiremix --tab playback",
+    "on-click-right": "foot -a window.float -e wiremix --tab playback",
     "on-scroll-up": "pamixer -i 5",
     "on-scroll-down": "pamixer -d 5",
     "scroll-step": 5,
@@ -139,7 +139,7 @@
     "format": "<span font='bypass-logo'>\ue930</span>",
     "on-click": "vicinae toggle",
     "on-click-right": "vicinae vicinae://launch/wm/switch-windows",
-    "tooltip-format": "SYSTEM MENU - SUPER + SPACE\nSWITCH WINDOWS - SUPER + ESCAPE",
+    "tooltip-format": "System Menu - SUPER + Space\nSwitch Windows - SUPER + Escape",
   },
   "custom/screenrecording-indicator": {
     "on-click": "harmony-record stop",

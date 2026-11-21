@@ -4,10 +4,7 @@
     "useQuickCss": true,
     "themeLinks": [],
     "enabledThemes": [
-        "catppuccin.theme.css",
-        "Catppuccin Mocha.css",
         "bepi.css",
-        "midnight-bepi.css",
         "EmojiReplace.theme.css",
         "icons-recolor.theme.css",
         "vencord.theme.css",
@@ -875,6 +872,9 @@
         },
         "ExpressionManager": {
             "enabled": false
+        },
+        "MutedServersActivityBadge": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -887,7 +887,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1793330412619
+        "settingsSyncVersion": 1794176315976
     },
     "notifyAboutUpdates": true,
     "eagerPatches": false,

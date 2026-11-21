@@ -9,6 +9,7 @@ alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 # Aliases - System Tools
 alias ani="ani-cli --dub --skip"
 alias cl="clear"
+alias claude="fcc-claude"
 alias clear="/usr/bin/clear && fastfetch"
 alias clock="tty-clock -t -c -b -B -C 7"
 alias ducks="du -cks * | sort -rn | head"

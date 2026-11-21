@@ -12,5 +12,14 @@ hl.monitor({
     output = "HDMI-A-1",
     mode = "2560x1440@144.01",
     position = "1080x427",
-    scale = 1.0
+    scale = 1.0,
+    bitdepth = 10,
+    cm = "srgb",
 })
+
+hl.config({
+  render = {
+    cm_auto_hdr = 0,
+  },
+})
+

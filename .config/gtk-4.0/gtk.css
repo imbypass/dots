@@ -1,169 +1,445 @@
-@define-color background     #0f0f0f;
-@define-color foreground     #d4d4d4;
-@define-color black          #0f0f0f;
-@define-color red            #f38ba8;
-@define-color green          #a6e3a1;
-@define-color yellow         #f9e2af;
-@define-color blue           #89b4fa;
-@define-color magenta        #f5c2e7;
-@define-color cyan           #94e2d5;
-@define-color white          #b4b4b4;
-@define-color bright_black   #1f1f1f;
-@define-color bright_red     #f38ba8;
-@define-color bright_green   #a6e3a1;
-@define-color bright_yellow  #f9e2af;
-@define-color bright_blue    #89b4fa;
-@define-color bright_magenta #f5c2e7;
-@define-color bright_cyan    #94e2d5;
-@define-color bright_white   #f4f4f4;
+/* ==========================================================================
+   Mica-Adwaita: DARK (deep neutrals)
+   ========================================================================== */
 
-@define-color accent_bg_color @blue;
-@define-color accent_fg_color @background;
-@define-color accent_color @cyan;
+@define-color mica_stroke            rgba(255, 255, 255, 0.0698);
+@define-color mica_stroke_strong     rgba(255, 255, 255, 0.0698);
+@define-color mica_surface_stroke    rgba(255, 255, 255, 0.0837);  /* was black; invisible on deep neutrals */
+@define-color mica_control           rgba(255, 255, 255, 0.0605);
+@define-color mica_control_hover     rgba(255, 255, 255, 0.0837);
+@define-color mica_control_active    rgba(255, 255, 255, 0.0326);
+@define-color mica_entry_underline   rgba(255, 255, 255, 0.5442);
+@define-color mica_subtle_hover      rgba(255, 255, 255, 0.0605);
+@define-color mica_subtle_selected   rgba(255, 255, 255, 0.0837);
 
-@define-color window_bg_color @background;
-@define-color window_fg_color @foreground;
+/* ---- Neutral ramp (darkest -> lightest) ---------------------------------
+   #0c0c0c  window / headerbar
+   #0f0f0f  content views / sidebar
+   #161616  cards / dialogs
+   #1a1a1a  popovers
+   #222222  thumbnails
+   ------------------------------------------------------------------------ */
 
-@define-color view_bg_color @black;
-@define-color view_fg_color @foreground;
-@define-color sidebar_bg_color @black;
-@define-color sidebar_fg_color @foreground;
-@define-color sidebar_backdrop_color @black;
-@define-color sidebar_shade_color @black;
+@define-color window_bg_color        #1E192A;
+@define-color window_fg_color        #ffffff;
 
-@define-color headerbar_bg_color @background;
-@define-color headerbar_fg_color @foreground;
-@define-color headerbar_backdrop_color @black;
-@define-color headerbar_shade_color @black;
-@define-color card_bg_color @background;
-@define-color card_fg_color @foreground;
+@define-color view_bg_color          #1E192A;
+@define-color view_fg_color          #ffffff;
 
-@define-color popover_bg_color @black;
-@define-color popover_fg_color @foreground;
+@define-color headerbar_bg_color     #231E30;
+@define-color headerbar_fg_color     #ffffff;
+@define-color headerbar_border_color rgba(255, 255, 255, 0.0698);
+@define-color headerbar_backdrop_color #0c0c0c;
+/* libadwaita draws the headerbar bottom line from the shade color without
+   changing the widget's size, so both headerbars stay the same height. */
+@define-color headerbar_shade_color  rgba(255, 255, 255, 0.0698);
 
-@define-color destructive_bg_color @red;
-@define-color destructive_fg_color @background;
+@define-color sidebar_bg_color       #231E30;
+@define-color sidebar_fg_color       #ffffff;
+@define-color sidebar_backdrop_color #231E30;
+@define-color sidebar_shade_color    rgba(255, 255, 255, 0.0698);
+@define-color secondary_sidebar_bg_color #0c0c0c;
 
-@define-color success_bg_color @green;
-@define-color success_fg_color @background;
+@define-color card_bg_color          #161616;
+@define-color card_fg_color          #ffffff;
+@define-color card_shade_color       rgba(0, 0, 0, 0.5);
 
-@define-color warning_bg_color @yellow;
-@define-color warning_fg_color @background;
+@define-color dialog_bg_color        #161616;
+@define-color dialog_fg_color        #ffffff;
 
-@define-color error_bg_color @red;
-@define-color error_fg_color @background;
+@define-color popover_bg_color       #231E30;
+@define-color popover_fg_color       #ffffff;
+@define-color popover_shade_color    rgba(0, 0, 0, 0.5);
+@define-color popover_border_color   #231E30;  /* darker than popover_bg_color (#1a1a1a) */
 
-@define-color dialog_bg_color @background;
-@define-color dialog_fg_color @foreground;
+@define-color thumbnail_bg_color     #222222;
+@define-color thumbnail_fg_color     #ffffff;
 
-@define-color borders alpha(@foreground, 0.1);
+@define-color accent_bg_color        #9a9add;
+@define-color accent_fg_color        #000000;
+@define-color accent_color           #9a9add;
 
-@define-color theme_fg_color @foreground;
-@define-color theme_text_color @foreground;
-@define-color theme_bg_color @background;
-@define-color theme_base_color @black;
-@define-color theme_selected_bg_color @blue;
-@define-color theme_selected_fg_color @background;
-@define-color insensitive_bg_color @background;
-@define-color insensitive_fg_color @bright_black;
-@define-color insensitive_base_color @black;
-@define-color theme_unfocused_fg_color @foreground;
-@define-color theme_unfocused_text_color @foreground;
-@define-color theme_unfocused_bg_color @background;
-@define-color theme_unfocused_base_color @black;
-@define-color theme_unfocused_selected_bg_color @blue;
-@define-color theme_unfocused_selected_fg_color @background;
-@define-color unfocused_insensitive_color @bright_black;
-@define-color unfocused_borders alpha(@foreground, 0.1);
-@define-color warning_color @yellow;
-@define-color error_color @red;
-@define-color success_color @green;
-@define-color destructive_color @red;
+@define-color destructive_bg_color   #ff99a4;
+@define-color destructive_fg_color   #000000;
+@define-color destructive_color      #ff99a4;
+@define-color success_bg_color       #6ccb5f;
+@define-color success_fg_color       #000000;
+@define-color success_color          #6ccb5f;
+@define-color warning_bg_color       #fce100;
+@define-color warning_fg_color       #000000;
+@define-color warning_color          #fce100;
+@define-color error_bg_color         #ff99a4;
+@define-color error_fg_color         #000000;
+@define-color error_color            #ff99a4;
 
-@define-color content_view_bg @black;
-@define-color text_view_bg @black;
-
-*.disabled {
-    letter-spacing: -1px;
+/* Dark-mode tweaks */
+popover > contents {
+  box-shadow: 0 4px 8px alpha(black, 0.4);
 }
 
-messagedialog {
-    background-color: @dialog_bg_color;
+/* ==========================================================================
+   Shape: Fluent radii. 8px = windows/flyouts/cards, 4px = controls.
+   ========================================================================== */
+
+/* ---- Window ------------------------------------------------------------- */
+window.csd,
+window.csd decoration {
+  border-radius: 8px;
 }
 
-messagedialog label {
-    color: @dialog_fg_color;
-    font-size: 14pt;
-    font-weight: bold;
+window.csd.maximized,
+window.csd.fullscreen,
+window.csd.tiled,
+window.csd.maximized decoration,
+window.csd.fullscreen decoration,
+window.csd.tiled decoration {
+  border-radius: 0;
 }
 
-messagedialog .secondary-text {
-    font-size: 10pt;
-    font-style: italic;
+/* Headerbar separator comes from @headerbar_shade_color / @sidebar_shade_color
+   (see top of file). Do NOT add a CSS border-bottom here: it adds 1px to the
+   widget height and misaligns the sidebar and content headers. */
+
+/* ---- Buttons: standard buttons only; everything else stays stock -------- */
+button:not(.flat):not(.circular):not(.pill):not(.suggested-action):not(.destructive-action):not(.osd) {
+  border-radius: 4px;
+  border: 1px solid @mica_stroke;
 }
 
-messagedialog button {
-    background-color: @black;
-    color: @foreground;
-    border: 1px solid @bright_black;
-    padding: 10px;
+/* Toolbar-style buttons (Nautilus top bar, tab bars) stay borderless */
+headerbar button:not(.flat):not(.circular):not(.pill):not(.suggested-action):not(.destructive-action):not(.osd),
+tabbar button:not(.flat):not(.circular):not(.pill):not(.suggested-action):not(.destructive-action):not(.osd) {
+  border: none;
 }
 
-messagedialog button:hover {
-    background-color: @blue;
+/* ---- Text entries: Fluent's accent underline on focus ------------------- */
+entry,
+spinbutton,
+searchbar > revealer > box entry {
+  border-radius: 4px;
+  border: 1px solid @mica_stroke;
+  border-bottom-color: @mica_entry_underline;
+  background-color: @mica_control;
+  box-shadow: none;
 }
 
-banner revealer widget {
-    background: @bright_black;
-    padding: 5px;
-    color: @foreground;
+entry:focus-within,
+spinbutton:focus-within {
+  outline: none;
+  background-color: @view_bg_color;
+  border-bottom-color: @accent_bg_color;
+  /* 2px underline without shifting layout */
+  box-shadow: inset 0 -1px 0 0 @accent_bg_color;
 }
 
-alertdialog.background {
-    background-color: @dialog_bg_color;
-    color: @dialog_fg_color;
+/* ---- Nautilus path bar: match the entry it turns into ------------------- */
+/* The selector list is deliberately broad because the exact node differs
+   between Nautilus versions. Use the GTK Inspector to confirm which one
+   applies, then trim the list. */
+pathbar,
+.pathbar,
+.path-bar,
+.path-bar-box,
+.path-bar-box.background,
+headerbar .path-bar-box,
+headerbar pathbar {
+  border-radius: 4px;
+  border: 1px solid @mica_stroke;
+  border-bottom-color: @mica_entry_underline;
+  background-color: @mica_control;
+  background-image: none;
+  box-shadow: none;
 }
 
-alertdialog .titlebar {
-    background-color: @headerbar_bg_color;
-    color: @headerbar_fg_color;
+/* Segments inside: nest the radius (outer 4px minus 1px border) */
+pathbar button,
+.pathbar button,
+.path-bar button,
+.path-bar-box button,
+.path-bar-box button.flat {
+  border-radius: 3px;
+  border: none;
 }
 
-alertdialog box {
-    background-color: @dialog_bg_color;
+/* ---- Cards and boxed lists ---------------------------------------------- */
+.card,
+list.boxed-list,
+.boxed-list {
+  border-radius: 8px;
+  border: 1px solid @mica_surface_stroke;
+  box-shadow: none;
 }
 
-alertdialog label {
-    color: @dialog_fg_color;
+/* Inner radius = outer 8px minus 1px border, so rows sit flush inside it */
+list.boxed-list > row:first-child { border-top-left-radius: 7px; border-top-right-radius: 7px; }
+list.boxed-list > row:last-child  { border-bottom-left-radius: 7px; border-bottom-right-radius: 7px; }
+
+/* ---- Popovers / menus / flyouts ----------------------------------------- */
+popover > contents {
+  border-radius: 8px;
+  border: 1px solid @popover_border_color;
 }
 
-filechooser .dialog-action-box {
-    border-top: 1px solid @bright_black;
+popover modelbutton,
+popover.menu modelbutton {
+  border-radius: 4px;
 }
 
-filechooser .dialog-action-box:backdrop {
-    border-top-color: @black;
+popover modelbutton:hover,
+popover.menu modelbutton:hover {
+  background-color: @mica_subtle_hover;
 }
 
-filechooser #pathbarbox {
-    border-bottom: 1px solid @bright_black;
+/* ---- Dialogs ------------------------------------------------------------ */
+window.dialog.message,
+window.dialog.message decoration {
+  border-radius: 8px;
 }
 
-filechooserbutton:drop(active) {
-    box-shadow: none;
-    border-color: transparent;
+/* ---- Navigation sidebar: Fluent NavigationView style -------------------- */
+.navigation-sidebar > row,
+.navigation-sidebar > row.activatable {
+  border-radius: 4px;
 }
 
-toast {
-    background-color: @black;
-    color: @foreground;
+.navigation-sidebar > row:hover {
+  background-color: @mica_subtle_hover;
 }
 
-toast button.circular.flat.image-button:hover {
-    color: @background;
-    background-color: @red;
+.navigation-sidebar > row:selected {
+  background-color: @mica_subtle_selected;
+  box-shadow: none;
+  /* Fluent selection pill: 3x16px, vertically centered, inset 4px from the left.
+     SVG fill is #9a9add (the current accent); regenerate the base64 if you
+     change @accent_bg_color. */
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSczJyBoZWlnaHQ9JzE2JyB2aWV3Qm94PScwIDAgMyAxNic+PHJlY3Qgd2lkdGg9JzMnIGhlaWdodD0nMTYnIHJ4PScxLjUnIGZpbGw9JyM5YTlhZGQnLz48L3N2Zz4=");
+  background-repeat: no-repeat;
+  background-size: 3px 16px;
+  background-position: 4px 50%;
 }
 
-window {
-  backdrop-filter: blur(20px);
+/* ---- Tabs --------------------------------------------------------------- */
+tabbar tab,
+tabbar .box tab {
+  border-radius: 4px;
+}
+
+/* ---- Switches, checks, progress ----------------------------------------- */
+/* Fluent checkbox + radio (sizes/spacing stay stock) */
+check,
+radio {
+  background-color: alpha(white, 0.0419);
+  border: 1px solid alpha(white, 0.5442);
+  box-shadow: none;
+  color: @accent_fg_color;               /* check mark / radio dot color */
+}
+
+check { border-radius: 4px; }
+radio { border-radius: 99px; }
+
+check:hover,
+radio:hover,
+checkbutton:hover check,
+checkbutton:hover radio {
+  background-color: alpha(white, 0.0837);
+}
+
+check:active,
+radio:active {
+  background-color: alpha(white, 0.0326);
+  border-color: alpha(white, 0.4);
+}
+
+/* Checked / indeterminate: solid accent, no visible border */
+check:checked,
+check:indeterminate,
+radio:checked {
+  background-color: @accent_bg_color;
+  border-color: @accent_bg_color;
+  color: @accent_fg_color;
+}
+
+check:checked:hover,
+check:indeterminate:hover,
+radio:checked:hover,
+checkbutton:hover check:checked,
+checkbutton:hover check:indeterminate,
+checkbutton:hover radio:checked {
+  background-color: alpha(@accent_bg_color, 0.9);
+}
+
+check:checked:active,
+check:indeterminate:active,
+radio:checked:active {
+  background-color: alpha(@accent_bg_color, 0.8);
+}
+
+/* Disabled */
+check:disabled,
+radio:disabled {
+  background-color: transparent;
+  border-color: alpha(white, 0.2);
+}
+
+check:checked:disabled,
+check:indeterminate:disabled,
+radio:checked:disabled {
+  background-color: alpha(white, 0.1581);
+  border-color: transparent;
+  color: alpha(white, 0.5302);
+}
+
+progressbar trough,
+progressbar progress {
+  border-radius: 99px;
+}
+
+/* ---- Switch: Fluent toggle (small knob, black when on) ------------------ */
+/* Stock libadwaita slider footprint is ~18px (20px with -1px margins).
+   Knob 14px + 2px margins = 18px, so the track keeps its stock size. */
+switch {
+  border-radius: 99px;
+  background-color: transparent;
+  background-image: none;
+  border-color: transparent;
+  box-shadow: inset 0 0 0 1px alpha(white, 0.5442);   /* outline without changing size */
+}
+
+switch:hover {
+  background-color: alpha(white, 0.0837);
+}
+
+switch slider {
+  min-width: 14px;
+  min-height: 14px;
+  margin: 2px;
+  border-radius: 99px;
+  background-color: alpha(white, 0.7725);
+  background-image: none;
+  border: none;
+  box-shadow: none;
+}
+
+switch:checked {
+  background-color: @accent_bg_color;
+  box-shadow: inset 0 0 0 1px @accent_bg_color;
+}
+
+switch:checked:hover {
+  background-color: alpha(@accent_bg_color, 0.9);
+}
+
+switch:checked:active {
+  background-color: alpha(@accent_bg_color, 0.8);
+}
+
+switch:checked slider {
+  background-color: #000000;
+}
+
+switch:disabled {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px alpha(white, 0.2);
+}
+
+switch:disabled slider {
+  background-color: alpha(white, 0.3);
+}
+
+switch:checked:disabled {
+  background-color: alpha(white, 0.1581);
+  box-shadow: none;
+}
+
+switch:checked:disabled slider {
+  background-color: alpha(white, 0.5302);
+}
+
+/* ---- Scrollbars --------------------------------------------------------- */
+scrollbar slider {
+  border-radius: 99px;
+}
+
+/* ---- Tooltips ----------------------------------------------------------- */
+tooltip,
+tooltip.background {
+  border-radius: 4px;
+  border: 1px solid @mica_surface_stroke;
+}
+
+/* ---- Nautilus: selected file active border ---------------------------------
+   Adds a 1px solid accent border around selected files (on click/active).
+   List view gets a subtle radius; grid/icon views keep default. */
+listview row:selected {
+  border: 1px solid @accent_bg_color;
+  border-radius: 4px;               /* subtle radius for list rows */
+  box-sizing: border-box;
+}
+
+/* Non-selected list rows: invisible border for consistent spacing */
+listview row:not(:selected) {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Grid view (modern Nautilus) */
+gridview row:selected,
+gridview > listitem:selected,
+gridview > gridlistitem:selected {
+  border: 2px solid @accent_bg_color;
+  /* inherits widget's border-radius (usually 8px for grid items) */
+  box-sizing: border-box;
+}
+
+gridview row:hover:not(:selected),
+gridview > listitem:hover:not(:selected),
+gridview > gridlistitem:hover:not(:selected) {
+  border: 2px solid @accent_bg_color;
+  box-sizing: border-box;
+}
+
+/* Icon view / legacy canvas (older Nautilus or fallback) */
+.nautilus-canvas-item:selected,
+.icon-view .canvas-item:selected,
+.nautilus-icon-container:selected {
+  border: 2px solid @accent_bg_color;
+  box-sizing: border-box;
+}
+
+.nautilus-canvas-item:hover:not(:selected),
+.icon-view .canvas-item:hover:not(:selected),
+.nautilus-icon-container:hover:not(:selected) {
+  border: 2px solid @accent_bg_color;
+  box-sizing: border-box;
+}
+
+/* Fallback: any selected child inside grid/icon view containers */
+gridview :selected,
+.icon-view :selected,
+[class*="icon"] :selected,
+[class*="grid"] :selected {
+  border: 2px solid @accent_bg_color;
+  box-sizing: border-box;
+}
+
+/* nautilus-view-cell (exact class from GTK Inspector) */
+
+/* Default: transparent border for consistent spacing */
+.nautilus-view-cell {
+  border: 2px solid transparent;
+  border-radius: 9px;               /* increased from 6px */
+  box-sizing: border-box;
+}
+
+/* Selected: accent border (always visible, even when not hovered) */
+.nautilus-view-cell:selected {
+  border: 2px solid @accent_bg_color;
+  border-radius: 9px;               /* ensure radius applies to selected state */
+}
+
+/* Hover (unselected): accent border */
+.nautilus-view-cell:hover:not(:selected) {
+  border: 2px solid @accent_bg_color;
+  border-radius: 9px;               /* ensure radius applies to hover state */
 }

@@ -3,8 +3,6 @@ hl.window_rule({
         class = "^(steam)$",
     },
     min_size = "1 1",
-    workspace = "7 silent",
-    float = true,
 })
 
 hl.window_rule({
@@ -34,6 +32,7 @@ hl.window_rule({
         title = "^(Friends List)$",
     },
     size = "300 700",
+    float = true,
 })
 
 hl.window_rule({
@@ -66,7 +65,29 @@ hl.window_rule({
     render_unfocused = true,
     fullscreen = true,
     content = "game",
-    workspace = "4",
+})
+
+
+hl.window_rule({
+    match = {
+        class = "^(steam)$",
+        title = "Steam Settings",
+    },
+    rounding = 0,
+})
+hl.window_rule({
+    match = {
+        class = "^(steam)$",
+        title = "Friends List",
+    },
+    rounding = 0,
+})
+hl.window_rule({
+    match = {
+        class = "^(steam)$",
+        title = "Add Non-Steam Game",
+    },
+    rounding = 0,
 })
 
 if os.getenv("HYPR_NO_PLUGINS") ~= "1" and hl.plugin.hyprbars ~= nil then
@@ -99,6 +120,37 @@ if os.getenv("HYPR_NO_PLUGINS") ~= "1" and hl.plugin.hyprbars ~= nil then
     hl.window_rule({
         match = {
             class = "*(steam)$",
+        },
+        ["hyprbars:no_bar"] = true,
+    })
+end
+
+if os.getenv("HYPR_NO_PLUGINS") ~= "1" and hl.plugin.hyprbars ~= nil then
+    hl.window_rule({
+        match = {
+            class = "^(steam)$",
+        },
+        ["hyprbars:no_bar"] = false,
+        ["hyprbars:bar_color"] = "#0D0D0Dff",
+    })
+    hl.window_rule({
+        match = {
+            class = "^(steam)$",
+            title = "Steam Settings",
+        },
+        ["hyprbars:no_bar"] = true,
+    })
+    hl.window_rule({
+        match = {
+            class = "^(steam)$",
+            title = "Friends List",
+        },
+        ["hyprbars:no_bar"] = true,
+    })
+    hl.window_rule({
+        match = {
+            class = "^(steam)$",
+            title = "Add Non-Steam Game",
         },
         ["hyprbars:no_bar"] = true,
     })

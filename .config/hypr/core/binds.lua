@@ -11,39 +11,30 @@ hl.bind("SUPER + S", hl.dsp.exec_cmd("notify-send -t 3500 \"Free Space: $(~/.loc
 
 -- Session Actions
 hl.bind("SUPER + ALT + L", hl.dsp.exec_cmd("hyprlock"), { dont_inhibit = true, description = "Lock screen" })
-hl.bind("SUPER + F1", hl.dsp.exec_cmd("harmony-toggle-gamemode"), { dont_inhibit = true, description = "Toggle Game Mode" })
-hl.bind("SUPER + CTRL + Space", hl.dsp.exec_cmd("~/.local/bin/omarchy-theme-bg-next"), { dont_inhibit = true, description = "Cycle wallpaper" })
 hl.bind("SUPER + SHIFT + I", hl.dsp.exec_cmd("hyprpicker -f hex -a -n"), { dont_inhibit = true, description = "Open Color Picker" })
 hl.bind("SUPER + SHIFT + O", hl.dsp.exec_cmd("harmony-toggle-osk"), { dont_inhibit = true, description = "Open On-Screen Keyboard" })
-hl.bind("SUPER + F2", hl.dsp.exec_cmd("harmony-toggle-tiling"), { description = "Toggle Window Tiling" })
-hl.bind("SUPER + SHIFT + W", hl.dsp.exec_cmd("fish -c \"harmony-theme-set-wallpaper $(zenity --file-selection --title='Select Wallpaper' --file-filter='*.jpg *.png *.jpeg')\""), { dont_inhibit = true, description = "Open Wallpaper Picker" })
-hl.bind("SUPER + ALT + O", hl.dsp.exec_cmd("harmony-install"), { dont_inhibit = true, description = "Show Desktop Expose" })
-hl.bind("SUPER + ALT + P", hl.dsp.exec_cmd("harmony-install-aur"), { dont_inhibit = true, description = "Show Desktop Expose" })
+
 
 -- Applications
 hl.bind("SUPER + B", hl.dsp.exec_cmd("$BROWSER"), { description = "Open Browser" })
-hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd("$BROWSER --private-window --incognito"), { description = "Open Private Browser" })
+hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd("helium-browser --private-window --incognito"), { description = "Open Private Browser" })
 hl.bind("SUPER + Return", hl.dsp.exec_cmd(TERMINAL), { description = "Open Terminal" })
-hl.bind("SUPER + SHIFT + Return", hl.dsp.exec_cmd(TERMINAL .. " --class=window.float-no-pin"), { description = "Open Terminal" })
-hl.bind("SUPER + SHIFT + ALT + Return", hl.dsp.exec_cmd(TERMINAL .. " --class=window.float"), { description = "Open Terminal" })
+hl.bind("SUPER + SHIFT + Return", hl.dsp.exec_cmd(TERMINAL .. " -a window.float-no-pin"), { description = "Open Terminal" })
+hl.bind("SUPER + SHIFT + ALT + Return", hl.dsp.exec_cmd(TERMINAL .. " -a window.float"), { description = "Open Terminal" })
 hl.bind("SUPER + SHIFT + Escape", hl.dsp.exec_cmd(TERMINAL .. " -e btop"), { description = "Open btop" })
 hl.bind("SUPER + E", hl.dsp.exec_cmd(FILEMANAGER_GUI), { description = "Open File Manager" })
-hl.bind("SUPER + SHIFT + E", hl.dsp.exec_cmd(TERMINAL .. " --class=window.float-no-pin -e fish -c tfm"), { description = "Open Terminal File Manager" })
-hl.bind("CTRL + SHIFT + Escape", hl.dsp.exec_cmd("~/.local/bin/session-menu"), { description = "Open Session Menu" })
+hl.bind("SUPER + SHIFT + E", hl.dsp.exec_cmd(TERMINAL .. " -a window.float-no-pin -e fish -c tfm"), { description = "Open Terminal File Manager" })
+hl.bind("SUPER + SHIFT + P", hl.dsp.exec_cmd("plezy"), { dont_inhibit = true, description = "Open Plex Desktop" })
 
 -- Web Apps
 
-local function launch_webapp(key, url)
+local function launch_webapp(url)
     return hl.dsp.exec_cmd("fish -c \"launch-webapp " .. url .. "\"")
 end
-hl.bind("SUPER + SHIFT + C", launch_webapp("C", "https://claude.ai"), { description = "Open Claude" })
-hl.bind("SUPER + SHIFT + R", launch_webapp("R", "https://reddit.com/"), { description = "Open Reddit" })
-hl.bind("SUPER + SHIFT + M", launch_webapp("M", "https://mail.google.com"), { description = "Open Gmail" })
-hl.bind("SUPER + SHIFT + P", launch_webapp("P", "https://app.plex.tv/desktop"), { description = "Open Plex" })
-hl.bind("SUPER + SHIFT + G", launch_webapp("G", "https://gemini.google.com/app"), { description = "Open GeForce Now" })
-
--- Wayscriber Bind
-hl.bind("SUPER + SHIFT + P", hl.dsp.exec_cmd("pkill -SIGUSR1 wayscriber discord"), { description = "Open Wayscriber" })
+hl.bind("SUPER + SHIFT + C", launch_webapp("https://claude.ai"), { description = "Open Claude" })
+hl.bind("SUPER + SHIFT + M", launch_webapp("https://moviebox.tail24af82.ts.net/?admin"), { description = "Open Plex Admin" })
+hl.bind("SUPER + SHIFT + G", launch_webapp("https://mail.google.com"), { description = "Open GMail" })
+hl.bind("SUPER + SHIFT + D", launch_webapp("https://discord.com/app"), { description = "Open Discord" })
 
 -- Super-Tab Functionality - Tab Between Workspaces
 hl.bind("SUPER + TAB", hl.dsp.focus({ workspace = "e+1" }), { dont_inhibit = true, description = "Tab Between Workspaces" })
@@ -64,9 +55,9 @@ hl.bind("SUPER + SHIFT + ALT + S", hl.dsp.exec_cmd("fish -c \"grim - | wl-copy &
 
 -- Notifications
 -- hl.bind("SUPER + COMMA", hl.dsp.exec_cmd("makoctl dismiss"), { description = "Dismiss last notification" })
--- hl.bind("SUPER + SHIFT + COMMA", hl.dsp.exec_cmd("makoctl dismiss --all"), { description = "Dismiss all notifications" })
--- hl.bind("SUPER + ALT + COMMA", hl.dsp.exec_cmd("makoctl restore"), { description = "Invoke last notification" })
-hl.bind("SUPER + COMMA", hl.dsp.exec_cmd("noctalia msg panel-toggle control-center notifications"), { description = "Open Notifications Panel" })
+hl.bind("SUPER + ALT + COMMA", hl.dsp.exec_cmd("makoctl dismiss"), { description = "Dismiss all notifications" })
+hl.bind("SUPER + COMMA", hl.dsp.exec_cmd("makoctl restore"), { description = "Invoke last notification" })
+-- hl.bind("SUPER + COMMA", hl.dsp.exec_cmd("noctalia msg panel-toggle control-center notifications"), { description = "Open Notifications Panel" })
 
 
 -- Special Workspaces (Hidden)

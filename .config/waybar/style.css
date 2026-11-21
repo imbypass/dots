@@ -1,11 +1,14 @@
-@import "../omarchy/current/theme/waybar.css";
+/* @import "../omarchy/current/theme/waybar.css"; */
+
 @define-color accent rgba(255, 255, 255, 0.6);
 @define-color bright_accent rgba(255, 255, 255, 1.0);
-
-@define-color accent rgba(180, 172, 230, 0.8);
-@define-color bright_accent rgba(180, 172, 230, 1.0);
-
+@define-color accent rgba(154, 154, 221, 1.0);
+@define-color bright_accent rgba(204, 204, 271, 1.0);
 @define-color bg rgba(12, 12, 12, 0.9);
+
+@define-color accent #FFC080;
+@define-color bright_accent #FFCB96;
+@define-color bg rgba(30, 25, 42, 0.99);
 
 * {
     border-radius: 0px;
@@ -18,34 +21,38 @@ window {
     border-radius: 0;
     border: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.025);
     font-family: "Space Grotesk";
+    font-family: "SF Pro Display";
+    font-family: "Allo";
     /* letter-spacing: -1px; */
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 tooltip {
     color: @bright_white;
-    background: @background;
+    background: @bg;
     border: 1px solid alpha(white, 0.2);
     border-radius: 0;
     padding: 0;
 }
 tooltip * {
-    font-family: "JetBrainsMono NF";
-    font-size: 14px;
-    font-weight: 800
+    font-family: "Space Grotesk";
+    font-family: "Allo";
+    font-size: 13px;
+    font-weight: 700
 }
 
 menu {
-    background-color: @background;
+    background-color: @bg;
     border-radius: 0;
     border: 1px solid @black;
     color: @white;
     padding: 8px;
-    font-size: 14px;
-    font-family: "JetBrainsMono NF";
-    font-weight: 800;
+    font-size: 13px;
+    font-family: "Space Grotesk";
+    font-family: "Allo";
 }
 menu * {
     border-radius: 0;
@@ -58,9 +65,9 @@ menuitem {
     padding-right: 2px;
 }
 menuitem:hover {
-    background: @bright_black;
+    background: rgba(255, 255, 255, 0.05);
     color: @white;
-    border-radius: 3px;
+    border-radius: 4px;
 }
 
 #tray {
@@ -117,24 +124,25 @@ menuitem:hover {
     margin-right: 4px;
 }
 #workspaces button {
-    border-radius: 0px;
+    border-radius: 4px;
     border: 0px;
     color: white;
-    padding: 0 6px 0 6px;
+    padding: 0 4px;
     font-size: 13px;
-    margin: 0;
-    color: #ffffff;
-    opacity: 0.5;
+    margin: 4px 2px;
+    color: #a4a4fd;
+    opacity: 0.4;
     border-bottom: 1px solid rgba(255, 255, 255, 0);
 }
 #workspaces button:hover {
-    color: @background;
-    background-color: @accent;
+    color: @accent;
+    background-color: transparent;
+    opacity: 1.0;
 }
 #workspaces button.active {
-    color: @bright_white;
+    color: @bright_accent;
     background-color: transparent;
-    font-size: 16px;
+    font-size: 13px;
     opacity: 1;
     border-bottom: 1px solid rgba(255, 255, 255, 0.0);
 }
@@ -152,7 +160,7 @@ menuitem:hover {
 }
 #custom-logo:hover {
     background-color: @accent;
-    color: @background;
+    color: @bg;
 }
 
 #custom-tray {
@@ -217,6 +225,6 @@ menuitem:hover {
 
 @keyframes fade {
     to {
-        color: @background;
+        color: @bg;
     }
 }
